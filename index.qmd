@@ -1,6 +1,6 @@
 ---
-title: "STA 199: Introduction to Data Science"
-subtitle: "Section 1 - Dr. Mine Çetinkaya-Rundel"
+title: "SOCIOL 333: Quantitative Analaysis of Sociological Data"
+subtitle: "Instructor: Aidan Combs"
 execute:
   freeze: false
 ---
@@ -9,11 +9,11 @@ This page contains an outline of the topics, content, and assignments for the se
 Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(googlesheets4)
+library(readxl)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1GCwNNWDK0yJPBraWtfZ-tmtXJsgvkLhYTCVtk6c_6js/edit?usp=sharing", sheet = "sec1-mine")
+d <- read_excel("schedule.xlsx")
 ```
 
 ::: column-screen-right
