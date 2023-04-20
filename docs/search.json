@@ -2284,9 +2284,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "STA 199: Introduction to Data Science",
+    "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      ae_sa\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n  \n  \n    1\nM\nAug 29\nLab\nNo lab\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nAug 30\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nSep 1\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\n\n\n    2\nM\nSep 5\nLab 0\nHello R!\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 0\n    \nT\nSep 6\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nSep 8\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\nRelease: HW 1\n    \nF\nSep 9\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 0 + AE 1\n    \nSu\nSep 11\n\n\n\n\n\n\n\n\n\n\n\n\nDue: AE 2\n    3\nM\nSep 12\nLab 1\nData visualization\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 1\n    \nT\nSep 13\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nSep 15\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\nDue: HW 1 / Release: HW 2\n    \nF\nSep 16\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 1\n    4\nM\nSep 19\nLab 2\nData wrangling\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 2\n    \nT\nSep 20\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nSep 22\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\nDue HW 2\n    \nF\nSep 23\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 2\n    5\nM\nSep 26\nLab 3\nData tidying\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 3\n    \nT\nSep 27\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nSep 29\nLec 10\nExam 1 Review\n\n\n\n\n\n\n\n\n\n\nRelease: Exam 1 at 12pm\n    \nF\nSep 30\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 3\n    6\nM\nOct 3\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\n\n\n\nDue: Exam 1 at 2pm\n    \nT\nOct 4\nLec 11\nData science ethics - Misrepresentation\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nOct 6\nLec 12\nData science ethics - Algorithmic bias + data privacy\n\n\n\n\n\n\n\n\n\n\nRelease: HW 3\n    7\nM\nOct 10\nLab\nNo lab - Fall break\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nOct 11\nLecture\nNo Lec - Fall break\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nOct 13\nLec 13\nWeb scraping\n\n\n\n\n\n\n\n\n\n\nDue: HW 3\n    8\nM\nOct 17\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nOct 18\nLec 14\nFunctions + iteration\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nOct 20\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nOct 21\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Project proposal\n    9\nM\nOct 24\nLab 4\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 4\n    \nT\nOct 25\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nOct 27\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\n\nRelease: HW 4\n    \nF\nOct 28\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 4\n    10\nM\nOct 31\nLab 5\nPredicting a numerical outcome\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 5\n    \nT\nNov 1\nLec 18\nModels with multiple predictors + Overfitting\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nNov 3\nLec 19\nLogistic regression\n\n\n\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n    \nF\nNov 4\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 5 / Release: HW 6\n    \nS\nNov 5\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Team peer evaluations 1\n    11\nM\nNov 7\nLab\nWork on project draft\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nNov 8\nLec 20\nQuantifying uncertainty with bootstrap intervals\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nNov 10\nLec 21\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\n\nDue: HW 5\n    \nF\nNov 11\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Project draft 1\n    12\nM\nNov 14\nLab 6\nPrediction + Bootstrapping\n\n\n\n\n\n\n\n\n\n\nRelease: Lab 6\n    \nT\nNov 15\nLec 22\nInference overview\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nNov 17\nLec 23\nExam 2 Review\n\n\n\n\n\n\n\n\n\n\nRelease: Exam 2 at 12pm\n    \nF\nNov 18\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Lab 6\n    13\nM\nNov 21\nLab\nNo lab - Work on Exam 2\n\n\n\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n    \nT\nNov 22\nLec 24\nNo lecture - Work on projects\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nNov 24\nLecture\nNo lecture - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nNov 25\n\n\n\n\n\n\n\n\n\n\n\n\nRelease: Exam retake (optional)\n    \nSu\nNov 27\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Project draft 2 (optional)\n    14\nM\nNov 28\nLab\nWork on project peer review\n\n\n\n\n\n\n\n\n\n\nDue: Project peer review\n    \nT\nNov 29\nLec 25\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\nDue: Team peer evaluations 2\n    \nTh\nDec 1\nLec 26\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n    15\nM\nDec 5\nLab\nProject presentations\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nDec 6\nLec 25\nLooking further: Text analysis\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nDec 8\nLec 26\nLooking further: Interactive web applications with Shiny\n\n\n\n\n\n\n\n\n\n\nDue: Project everything\n    \nF\nDec 9\n\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience\n    16\nTh\nDec 15\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Exam retake (optional)"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n    \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      ae_sa\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n  \n  \n    1\nW\nMay 17\nClass 1\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nMay 18\nClass 2\n\n\n\n\n\n\n\n\n\n\n\n\n    2\nM\nMay 22\nClass 3\n\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nMay 23\nClass 4\n\n\n\n\n\n\n\n\n\n\n\n\n    \nW\nMay 24\nClass 5\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nMay 25\nClass 6\n\n\n\n\n\n\n\n\n\n\n\n\n    3\nM\nMay 29\nClass 7\n\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nMay 30\nClass 8\n\n\n\n\n\n\n\n\n\n\n\n\n    \nW\nMay 31\nClass 9\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nJun 1\nClass 10\n\n\n\n\n\n\n\n\n\n\n\nBring: project proposal\n    4\nM\nJun 5\nClass 11\n\n\n\n\n\n\n\n\n\n\n\nDue: Project proposal\n    \nT\nJun 6\nClass 12\n\n\n\n\n\n\n\n\n\n\n\n\n    \nW\nJun 7\nClass 13\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nJun 8\nClass 14\n\n\n\n\n\n\n\n\n\n\n\n\n    5\nM\nJun 12\nClass 15\n\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nJun 13\nClass 16\n\n\n\n\n\n\n\n\n\n\n\n\n    \nW\nJun 14\nClass 17\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nJun 15\nClass 18\n\n\n\n\n\n\n\n\n\n\n\n\n    6\nM\nJun 19\nClass 19\n\n\n\n\n\n\n\n\n\n\n\n\n    \nT\nJun 20\nClass 20\n\n\n\n\n\n\n\n\n\n\n\n\n    \nW\nJun 21\nClass 21\n\n\n\n\n\n\n\n\n\n\n\n\n    \nR\nJun 22\nClass 22\n\n\n\n\n\n\n\n\n\n\n\nBring: Final project draft\n    7\nM\nJun 26\nClass 23\n\n\n\n\n\n\n\n\n\n\n\nFinal project presentations\n    \nR\nJun 29\n\n\n\n\n\n\n\n\n\n\n\n\nDue: Final project"
   },
   {
     "objectID": "course-team.html",
@@ -2349,7 +2349,7 @@
     "href": "slides/25-quarto.html#the-presentation",
     "title": "Customizing Quarto reports and presentations",
     "section": "The presentation",
-    "text": "The presentation\n\nOption 1: Make your slides not in Quarto but make sure they’re available in your Quarto project website.\nOption 2: Make your slides with Quarto.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "The presentation\n\nOption 1: Make your slides not in Quarto but make sure they’re available in your Quarto project website.\nOption 2: Make your slides with Quarto."
   },
   {
     "objectID": "slides/15-language-of-models.html#while-you-wait-for-class-to-begin",
@@ -2461,7 +2461,7 @@
     "href": "slides/15-language-of-models.html#ae-12",
     "title": "The language of models",
     "section": "ae-12",
-    "text": "ae-12\n\n\n\nGo to the course GitHub org and find your ae-12 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-12\n\n\n\nGo to the course GitHub org and find your ae-12 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/26-text-analysis.html#while-you-wait",
@@ -2517,7 +2517,7 @@
     "href": "slides/26-text-analysis.html#ae-21",
     "title": "Looking further: Text analysis",
     "section": "ae-21",
-    "text": "ae-21\n\n\n\nGo to the course GitHub org and find your ae-21 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-21\n\n\n\nGo to the course GitHub org and find your ae-21 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/08-data-types-classes.html#while-you-wait-for-class-to-begin",
@@ -2762,7 +2762,7 @@
     "href": "slides/14-functions-iteration.html#ae-11",
     "title": "Functions and iteration",
     "section": "ae-11",
-    "text": "ae-11\n\n\n\nGo to the course GitHub org and find your ae-11 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-11\n\n\n\nGo to the course GitHub org and find your ae-11 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/01-welcome-199.html#meet-the-prof",
@@ -2902,7 +2902,7 @@
     "href": "slides/01-welcome-199.html#course-toolkit",
     "title": "Welcome to STA 199",
     "section": "Course toolkit",
-    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-f22-1\nRStudio containers: cmgr.oit.duke.edu/containers\nCommunication: Slack\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\nReserve an RStudio Container (titled STA 198-199) before lab on Monday!"
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-f22-1\nRStudio containers: cmgr.oit.duke.edu/containers\nCommunication: Slack\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\n\nReserve an RStudio Container (titled STA 198-199) before lab on Monday!"
   },
   {
     "objectID": "slides/01-welcome-199.html#activities-prepare-participate-practice-perform",
@@ -3021,7 +3021,7 @@
     "href": "slides/01-welcome-199.html#its-the-r-community",
     "title": "Welcome to STA 199",
     "section": "It’s the R community! 💛",
-    "text": "It’s the R community! 💛\n\n\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "It’s the R community! 💛"
   },
   {
     "objectID": "slides/07-tidying-data.html#while-you-wait-for-class-to-begin",
@@ -3070,7 +3070,7 @@
     "href": "slides/07-tidying-data.html#recap-of-ae",
     "title": "Tidying data",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nData sets can’t be labeled as wide or long but they can be made wider or longer for a certain analysis that requires a certain format\nWhen pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the pivot_longer() function.\nYou can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nData sets can’t be labeled as wide or long but they can be made wider or longer for a certain analysis that requires a certain format\nWhen pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the pivot_longer() function.\nYou can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate."
   },
   {
     "objectID": "slides/23-exam-2-review.html#announcements",
@@ -3126,7 +3126,7 @@
     "href": "slides/23-exam-2-review.html#ae-19",
     "title": "Exam 2 review",
     "section": "ae-19",
-    "text": "ae-19\n\n\nGo to the course GitHub org and find your ae-19 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nYou should have already pushed updates on Tuesday, so you should be good for submission.\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-19\n\n\nGo to the course GitHub org and find your ae-19 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nYou should have already pushed updates on Tuesday, so you should be good for submission."
   },
   {
     "objectID": "slides/12-dse-bias-privacy.html#while-you-wait-for-class-to-begin",
@@ -3266,7 +3266,7 @@
     "href": "slides/12-dse-bias-privacy.html#ae-09---part-2",
     "title": "Data science ethics: Algorithmic bias + Data privacy",
     "section": "ae-09 - Part 2",
-    "text": "ae-09 - Part 2\n\n\nGo to the course GitHub org and find your ae-09 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nWork on Part 2 - Predicting ethnicity\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-09 - Part 2\n\n\nGo to the course GitHub org and find your ae-09 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nWork on Part 2 - Predicting ethnicity\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/04-visualizing-various-types-of-data.html#announcements",
@@ -3315,7 +3315,7 @@
     "href": "slides/04-visualizing-various-types-of-data.html#recap-of-ae",
     "title": "Visualizing various types of data",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nCreate plots with multiple geoms, and pay attention to order.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nCreate plots with multiple geoms, and pay attention to order."
   },
   {
     "objectID": "slides/18-more-models-multiple-predictors.html#while-you-wait-for-class-to-begin",
@@ -3350,7 +3350,7 @@
     "href": "slides/18-more-models-multiple-predictors.html#recap",
     "title": "Models with multiple predictors",
     "section": "Recap",
-    "text": "Recap\n\n\nWhat is the practical difference between a model with parallel and non-parallel lines?\nWhat is the definition of R-squared?\nWhy do we choose models based on adjusted R-squared and not R-squared?\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap\n\n\nWhat is the practical difference between a model with parallel and non-parallel lines?\nWhat is the definition of R-squared?\nWhy do we choose models based on adjusted R-squared and not R-squared?"
   },
   {
     "objectID": "slides/17-models-multiple-predictors.html#while-you-wait-for-class-to-begin",
@@ -3378,7 +3378,7 @@
     "href": "slides/17-models-multiple-predictors.html#ae-14",
     "title": "Models with multiple predictors",
     "section": "ae-14",
-    "text": "ae-14\n\n\n\nGo to the course GitHub org and find your ae-14 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-14\n\n\n\nGo to the course GitHub org and find your ae-14 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/13-web-scraping.html#while-you-wait-for-class-to-begin",
@@ -3511,7 +3511,7 @@
     "href": "slides/13-web-scraping.html#workflow-screen-scraping-vs.-apis",
     "title": "Web scraping",
     "section": "Workflow: Screen scraping vs. APIs",
-    "text": "Workflow: Screen scraping vs. APIs\nTwo different scenarios for web scraping:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy)\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Workflow: Screen scraping vs. APIs\nTwo different scenarios for web scraping:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy)\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files"
   },
   {
     "objectID": "slides/16-models-single-predictor.html#while-you-wait-for-class-to-begin",
@@ -3616,7 +3616,7 @@
     "href": "slides/16-models-single-predictor.html#residuals",
     "title": "Models with a single predictor",
     "section": "Residuals",
-    "text": "Residuals\n\n\\[\\text{residual} = \\text{observed} - \\text{predicted} = y - \\hat{y}\\]"
+    "text": "Residuals\n\n\n\n\n\n\n\n\n\n\\[\\text{residual} = \\text{observed} - \\text{predicted} = y - \\hat{y}\\]"
   },
   {
     "objectID": "slides/16-models-single-predictor.html#least-squares-line",
@@ -3665,7 +3665,7 @@
     "href": "slides/16-models-single-predictor.html#ae-13",
     "title": "Models with a single predictor",
     "section": "ae-13",
-    "text": "ae-13\n\n\n\nGo to the course GitHub org and find your ae-13 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-13\n\n\n\nGo to the course GitHub org and find your ae-13 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/22-inference-overview.html#while-you-wait-for-class-to-begin",
@@ -3707,7 +3707,7 @@
     "href": "slides/22-inference-overview.html#ae-19",
     "title": "Inference overview",
     "section": "ae-19",
-    "text": "ae-19\n\n\nGo to the course GitHub org and find your ae-19 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-19\n\n\nGo to the course GitHub org and find your ae-19 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/10-exam-1-review.html#while-you-wait-for-class-to-begin",
@@ -3728,7 +3728,7 @@
     "href": "slides/10-exam-1-review.html#continue-from-last-time-ae-07",
     "title": "Exam 1 Review",
     "section": "Continue from last time: ae-07",
-    "text": "Continue from last time: ae-07\n\n\nGo to your container and open your ae-07 project.\nRender, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\nYou might see an error. Read it and do as it says!\n\n\n\n\nPull.\nOnce again, render, commit, and push."
+    "text": "Continue from last time: ae-07\n\n\nGo to your container and open your ae-07 project.\nRender, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou might see an error. Read it and do as it says!\n\n\n\nPull.\nOnce again, render, commit, and push."
   },
   {
     "objectID": "slides/10-exam-1-review.html#logistics-questions",
@@ -3784,14 +3784,14 @@
     "href": "slides/10-exam-1-review.html#interpreting-data-visualizations-i",
     "title": "Exam 1 Review",
     "section": "Interpreting data visualizations I",
-    "text": "Interpreting data visualizations I\n\nProvide a 1-2 sentence interpretation of the relationship between city and highway mileage of cars.\n\n\n\nggplot(\n  mpg,\n  aes(x = cty, y = hwy)\n) +\n  geom_jitter(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"City MPG\", \n    y = \"Highway MPG\"\n  )"
+    "text": "Interpreting data visualizations I\n\nProvide a 1-2 sentence interpretation of the relationship between city and highway mileage of cars.\n\n\nggplot(\n  mpg,\n  aes(x = cty, y = hwy)\n) +\n  geom_jitter(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"City MPG\", \n    y = \"Highway MPG\"\n  )"
   },
   {
     "objectID": "slides/10-exam-1-review.html#interpreting-data-visualizations-ii",
     "href": "slides/10-exam-1-review.html#interpreting-data-visualizations-ii",
     "title": "Exam 1 Review",
     "section": "Interpreting data visualizations II",
-    "text": "Interpreting data visualizations II\n\nProvide a 1-2 sentence interpretation of the relationship between city and highway mileage of cars, taking into consideration whether they’re 4 wheel drive, front wheel drive, or rear wheel drive.\n\n\n\nggplot(\n  mpg,\n  aes(x = cty, y = hwy, color = drv)\n) +\n  geom_jitter(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"City MPG\", \n    y = \"Highway MPG\"\n  )"
+    "text": "Interpreting data visualizations II\n\nProvide a 1-2 sentence interpretation of the relationship between city and highway mileage of cars, taking into consideration whether they’re 4 wheel drive, front wheel drive, or rear wheel drive.\n\n\nggplot(\n  mpg,\n  aes(x = cty, y = hwy, color = drv)\n) +\n  geom_jitter(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(\n    x = \"City MPG\", \n    y = \"Highway MPG\"\n  )"
   },
   {
     "objectID": "slides/10-exam-1-review.html#geom_jitter-vs.-geom_point",
@@ -3840,7 +3840,7 @@
     "href": "slides/10-exam-1-review.html#pivoting-and-joining",
     "title": "Exam 1 Review",
     "section": "Pivoting and joining",
-    "text": "Pivoting and joining\nLet’s visit https://www.garrickadenbuie.com/project/tidyexplain!\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Pivoting and joining\nLet’s visit https://www.garrickadenbuie.com/project/tidyexplain!"
   },
   {
     "objectID": "slides/24-communicate.html#announcements",
@@ -3889,7 +3889,7 @@
     "href": "slides/24-communicate.html#recap",
     "title": "Communicating data science results effectively",
     "section": "Recap",
-    "text": "Recap\n\n\nRepresent percentages as parts of a whole\nPlace variables representing time on the x-axis when possible\nPay attention to data types, e.g., represent time as time on a continuous scale, not years as levels of a categorical variable\nPrefer direct labeling over legends\nUse accessible colors\nUse color to draw attention\nPick a purpose and label, color, annotate for that purpose\nCommunicate your main message directly in the plot labels\nSimplify before you call it done (a.k.a. “Before you leave the house, look in the mirror and take one thing off”)\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap\n\n\nRepresent percentages as parts of a whole\nPlace variables representing time on the x-axis when possible\nPay attention to data types, e.g., represent time as time on a continuous scale, not years as levels of a categorical variable\nPrefer direct labeling over legends\nUse accessible colors\nUse color to draw attention\nPick a purpose and label, color, annotate for that purpose\nCommunicate your main message directly in the plot labels\nSimplify before you call it done (a.k.a. “Before you leave the house, look in the mirror and take one thing off”)"
   },
   {
     "objectID": "slides/03-grammar-of-graphics.html#announcements",
@@ -3924,7 +3924,7 @@
     "href": "slides/03-grammar-of-graphics.html#recap-of-ae",
     "title": "Grammar of graphics",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nConstruct plots with ggplot().\nLayers of ggplots are separated by +s.\nThe formula is (almost) always as follows:\n\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n\nAesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user, e.g. color = binary vs. color = \"pink\".\nUse facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nConstruct plots with ggplot().\nLayers of ggplots are separated by +s.\nThe formula is (almost) always as follows:\n\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n\nAesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user, e.g. color = binary vs. color = \"pink\".\nUse facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables."
   },
   {
     "objectID": "slides/20-bootstrap.html#checklist",
@@ -3987,7 +3987,7 @@
     "href": "slides/20-bootstrap.html#in-summary",
     "title": "Bootstrap",
     "section": "In Summary",
-    "text": "In Summary\n\nBootstrap methods are simulation methods\nVariability - Uncertainty: How spread out your data are\nWe can use this to guess plausible values around our parameter of interest\nThis is called a confidence interval, and it’s different than probability\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "In Summary\n\nBootstrap methods are simulation methods\nVariability - Uncertainty: How spread out your data are\nWe can use this to guess plausible values around our parameter of interest\nThis is called a confidence interval, and it’s different than probability"
   },
   {
     "objectID": "slides/19-logistic-regression.html#while-you-wait-for-class-to-begin",
@@ -4099,7 +4099,7 @@
     "href": "slides/19-logistic-regression.html#review-questions",
     "title": "Models with multiple predictors",
     "section": "Review questions",
-    "text": "Review questions\n\nWhat is a training data set?\n\n\n“Sandbox” for model building. Build the model on these data.\n\n\n\nWhat is a testing data set?\n\n\n\nHeld in reserve to test one or two chosen models and to evaluate their performance.\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Review questions\n\nWhat is a training data set?\n\n\n“Sandbox” for model building. Build the model on these data.\n\n\n\nWhat is a testing data set?\n\n\n\nHeld in reserve to test one or two chosen models and to evaluate their performance."
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#while-you-wait-for-class-to-begin",
@@ -4141,7 +4141,7 @@
     "href": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
     "title": "Grammar of data wrangling",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nThe pipe operator, |>, can be read as “and then”.\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3\n\n1 |> \n  sum(2)\n\n[1] 3\n\n\n\nAlways use a line break after the pipe, and indent the next line of code.\n\nJust like always use a line break between layers of ggplots, after +, and indent the next line.\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nThe pipe operator, |>, can be read as “and then”.\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\nsum(1, 2)\n\n[1] 3\n\n1 |> \n  sum(2)\n\n[1] 3\n\n\n\nAlways use a line break after the pipe, and indent the next line of code.\n\nJust like always use a line break between layers of ggplots, after +, and indent the next line."
   },
   {
     "objectID": "slides/09-data-import.html#while-you-wait-for-class-to-begin",
@@ -4176,7 +4176,7 @@
     "href": "slides/09-data-import.html#continue-from-last-time-ae-06",
     "title": "Data import",
     "section": "Continue from last time: ae-06",
-    "text": "Continue from last time: ae-06\n\n\nGo to your container and open your ae-06 project.\nRender, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\nYou will see an error. Read it and do as it says!\n\n\n\n\nPull.\nOnce again, render, commit, and push."
+    "text": "Continue from last time: ae-06\n\n\nGo to your container and open your ae-06 project.\nRender, commit, and push.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will see an error. Read it and do as it says!\n\n\n\nPull.\nOnce again, render, commit, and push."
   },
   {
     "objectID": "slides/09-data-import.html#recap-of-ae",
@@ -4197,7 +4197,7 @@
     "href": "slides/09-data-import.html#ae-07",
     "title": "Data import",
     "section": "ae-07",
-    "text": "ae-07\n\n\nGo to the course GitHub org and find your ae-07 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today.\n\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "ae-07\n\n\nGo to the course GitHub org and find your ae-07 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/11-dse-misrepresentation.html#while-you-wait-for-class-to-begin",
@@ -4253,7 +4253,7 @@
     "href": "slides/11-dse-misrepresentation.html#recap-of-ae",
     "title": "Data science ethics: Misrepresentation",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nNot all visualizations are equally informative. But, perhaps more importantly, some might be misleading.\nAlways be cautious of a visualization, particularly one with an agenda, at the first glance. Look closely to check if it might be put together to mislead, instead of clarify.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nNot all visualizations are equally informative. But, perhaps more importantly, some might be misleading.\nAlways be cautious of a visualization, particularly one with an agenda, at the first glance. Look closely to check if it might be put together to mislead, instead of clarify."
   },
   {
     "objectID": "slides/21-hypothesis-testing.html#announcements",
@@ -4344,7 +4344,7 @@
     "href": "slides/21-hypothesis-testing.html#recap-of-ae",
     "title": "Hypothesis testing",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nA hypothesis test is a statistical technique used to evaluate competing claims (null and alternative hypotheses) using data.\nWe simulate a null distribution using our original data.\nWe use our sample statistic and direction of the alternative hypothesis to calculate the p-value.\nWe use the p-value to determine conclusions about the alternative hypotheses.\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nA hypothesis test is a statistical technique used to evaluate competing claims (null and alternative hypotheses) using data.\nWe simulate a null distribution using our original data.\nWe use our sample statistic and direction of the alternative hypothesis to calculate the p-value.\nWe use the p-value to determine conclusions about the alternative hypotheses."
   },
   {
     "objectID": "slides/02-meet-the-toolkit.html#five-tips-for-success",
@@ -4470,7 +4470,7 @@
     "href": "slides/02-meet-the-toolkit.html#environments",
     "title": "Meet the toolkit",
     "section": "Environments",
-    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
   },
   {
     "objectID": "slides/02-meet-the-toolkit.html#environments-1",
@@ -4519,7 +4519,7 @@
     "href": "slides/02-meet-the-toolkit.html#versioning-1",
     "title": "Meet the toolkit",
     "section": "Versioning",
-    "text": "Versioning\nwith human readable messages"
+    "text": "Versioning\n\nwith human readable messages"
   },
   {
     "objectID": "slides/02-meet-the-toolkit.html#how-will-we-use-git-and-github",
@@ -4561,7 +4561,7 @@
     "href": "slides/02-meet-the-toolkit.html#tour-git-github",
     "title": "Meet the toolkit",
     "section": "Tour: Git + GitHub",
-    "text": "Tour: Git + GitHub\n\nIn Lab 0 next Monday!\nMake sure to create a GitHub account and fill out the Getting to know you survey!\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Tour: Git + GitHub\n\nIn Lab 0 next Monday!\nMake sure to create a GitHub account and fill out the Getting to know you survey!"
   },
   {
     "objectID": "slides/06-working-with-multiple-data-frames.html#while-you-wait-for-class-to-begin",
@@ -4610,7 +4610,7 @@
     "href": "slides/06-working-with-multiple-data-frames.html#recap-of-ae",
     "title": "Working with multiple data frames",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nTBD…\n\n\n\n\n🔗 sta199-f22-1.github.io"
+    "text": "Recap of AE\n\nTBD…"
   },
   {
     "objectID": "course-faq.html",
@@ -4708,7 +4708,7 @@
     "href": "project-description.html",
     "title": "Project description",
     "section": "",
-    "text": "Proposal due Fri, Oct 21\nDraft 1 due Fri, Nov 11\nDraft 2 due Sun, Nov 27 (optional)\nPeer review due Mon, Nov 28\nPresentation + slides due Mon, Dec 5\nFinal report and final GitHub repo due Thu, Dec 8"
+    "text": "Proposal: bring to class DATE, due DATE\nDescriptive statistics: bring to class DATE, due DATE\nResults bring to class DATE, due DATE\nPaper bring to class DATE, due DATE\nPresentation + slides due at time of in-class presentation on DATE"
   },
   {
     "objectID": "project-description.html#criteria-for-datasets",
@@ -4736,7 +4736,7 @@
     "href": "project-description.html#proposal-grading",
     "title": "Project description",
     "section": "Proposal grading",
-    "text": "Proposal grading\n\n\n\nTotal\n10 pts\n\n\n\n\nIntroduction and data\n3\n\n\nResearch question\n3\n\n\nGlimpse of data\n3\n\n\nWorkflow and formatting\n1\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect."
+    "text": "Proposal grading\n\n\n\n\n\n\n\nTotal\n\n\n\n\n\nPeer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission\n30%\n\n\nResearch questions\n20%\n\n\nData set descriptions\n20%\n\n\nData set glimpses\n10%\n\n\nParagraph on research question choice\n10%\n\n\nWorkflow and formatting\n10%\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect. Just like you are expected to incorporate feedback from your peers into your graded proposal, you will be expected to incorporate feedback from me into the relevant sections of your final paper. The degree to which you address feedback will be a component of your final paper grade.\n\n\n\n\n\n\nWhy?\n\n\n\nThere are three main purposes of the project proposal:\n\nTo get you thinking about the project early so you can get a head start on refining your question, finding your data, and doing your analysis.\nTo ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful.\nTo give you practice talking about analysis ideas and plans with your peers."
   },
   {
     "objectID": "project-description.html#draft-components",
@@ -4764,21 +4764,21 @@
     "href": "project-description.html#report-grading",
     "title": "Project description",
     "section": "Report grading",
-    "text": "Report grading\nThe written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion\n6 pts\n\n\nOrganization + formatting\n4 pts"
+    "text": "Report grading\nThe final paper grade is broken down as follows.\n\n\n\nIntroduction\n10%\n\n\nData and methodology\n20%\n\n\nResults\n30%\n\n\nDiscussion\n20%\n\n\nOrganization and formatting\n10%\n\n\nPeer review\n10%"
   },
   {
     "objectID": "project-description.html#slides",
     "href": "project-description.html#slides",
     "title": "Project description",
     "section": "Slides",
-    "text": "Slides\nIn addition to the written report, your team will also create presentation slides and deliver presentation that summarize and showcase your project. Introduce your research question and data set, showcase visualizations, and discuss the primary conclusions. These slides should serve as a brief visual addition to your written report and will be graded for content and quality.\nYou can create your slides with any software you like (Keynote, PowerPoint, Google Slides, etc.). We recommend choosing an option that’s easy to collaborate with, e.g., Google Slides.\n\n\n\n\n\n\nNote\n\n\n\nYou can also use Quarto to make your slides! While we won’t be covering making slides with Quarto in the class, we would be happy to help you with it in office hours. It’s no different than writing other documents with Quarto, so the learning curve will not be steep!\n\n\nThe slide deck should have no more than 6 content slides + 1 title slide. Here is a suggested outline as you think through the slides; you do not have to use this exact format for the 6 slides.\n\nTitle Slide\nSlide 1: Introduce the topic and motivation\nSlide 2: Introduce the data\nSlide 3: Highlights from EDA\nSlide 4-5: Inference/modeling/other analysis\nSlide 6: Conclusions + future work"
+    "text": "Slides\nIn addition to the written report, you will also create presentation slides and deliver a presentation that summarizes and showcases your project. Introduce your research question and data set, showcase visualizations, and discuss the primary conclusions. These slides should serve as a brief visual addition to your written report and will be graded for content and quality.\nYou can create your slides with any software you like (Keynote, PowerPoint, Google Slides, etc.).\n\n\n\n\n\n\nNote\n\n\n\nYou can also use Quarto to make your slides! While we won’t be covering making slides with Quarto in the class, I am happy to help you with it in office hours. It’s no different than writing other documents with Quarto, so the learning curve will not be steep!\n\n\nThe slide deck should have about 6 content slides + 1 title slide. Here is a suggested outline as you think through the slides; you do not have to use this exact format for the 6 slides.\n\nTitle Slide\nSlide 1: Introduce the topic and motivation\nSlide 2: Introduce the data\nSlide 3: Highlights of the descriptive statistics\nSlide 4-5: Results: Inference/modeling/other analysis\nSlide 6: Conclusions + future work"
   },
   {
     "objectID": "project-description.html#presentation",
     "href": "project-description.html#presentation",
     "title": "Project description",
     "section": "Presentation",
-    "text": "Presentation\nPresentations will take place in class during the last lab of the semester. The presentation must be no longer than 5 minutes. You can choose to present live in class (recommended) or pre-record a video to be shown in class. Either way you must attend the lab session for the Q&A following your presentation.\nIf you choose to pre-record your presentation, you may use can use any platform that works best for your group to record your presentation. Below are a few resources on recording videos:\n\nRecording presentations in Zoom\nApple Quicktime for screen recording\nWindows 10 built-in screen recording functionality\nKap for screen recording\n\nOnce your video is ready, upload the video to Warpwire or another video platform (e.g., YouTube), then add a link to your video in your repo README.\nTo upload your video to Warpwire:\n\nClick the Warpwire tab in the course Sakai site.\nClick the “+” and select “Upload files”.\nLocate the video on your computer and click to upload.\nOnce you’ve uploaded the video to Warpwire, click to share the video and copy the video’s URL. You will need this when you post the video in the discussion forum."
+    "text": "Presentation\nPresentations will take place in class during the last class of the semester (DATE). The presentation should be about 10 minutes. There will be time for a few questions after each presentation."
   },
   {
     "objectID": "project-description.html#reproducibility-organization",
@@ -4877,5 +4877,285 @@
     "title": "Computing troubleshooting",
     "section": "",
     "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course Slack to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\n\nAnother approach is to request a restart of your container. To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container."
+  },
+  {
+    "objectID": "slides/25-quarto.html",
+    "href": "slides/25-quarto.html",
+    "title": "Customizing Quarto reports and presentations",
+    "section": "",
+    "text": "Your investment in completing the course and TA evaluation thoughtfully for about 10 minutes today will not only help instructors improve their courses, but their instruction techniques as well.\nMost of the ratings and responses you provide in your evaluations this semester will be shared with future students. The more students that contribute evaluations, the more access every student will have to course evaluation data when making future course enrollment decisions.\nYou can address the evaluation forms through links in email reminders or by logging in to duke.evaluationkit.com (for course evaluations).\nGoal: If we can hit 80% response rate on both course and TA evaluations, everyone in the class will get an additional point on their HW average.\n\n\n\n\n\n\n\n−+\n10:00\n\n\n\n\n\n\n\nMake sure your presentation is pushed to your GitHub repo before your lab section.\nGet to lab on time, 5 minutes prior if possible – all team members must be present in class and take part in the presentation + Q&A\nFind out your presentation order when you get there.\nDeliver or play your 5-minute presentation.\nAnswer questions during your own Q&A or ask questions to others.\nFill out feedback forms while you listen to others’ presentations.\n\n\n\n\n\nThere’s a good chance you’ll be done with these on Monday as well\nBut you might want to improve your write-up based on inspiration from other teams’ presentations and/or ideas that came up during your Q&A.\nProject repos will close at 11:59pm on Thursday. There is no Gradescope submission, just push your final edits to GitHub."
+  },
+  {
+    "objectID": "slides/15-language-of-models.html",
+    "href": "slides/15-language-of-models.html",
+    "title": "The language of models",
+    "section": "",
+    "text": "Clone your ae-12 project from GitHub, render your document, update your name, and commit and push.\n\n\n\n\nProject proposals due Friday\n\n\n\n\n\nWhat is a model?\nWhy do we model?\nWhat is correlation?\n\n\n\n\n\nlibrary(tidyverse)\nlibrary(gt)"
+  },
+  {
+    "objectID": "slides/26-text-analysis.html",
+    "href": "slides/26-text-analysis.html",
+    "title": "Looking further: Text analysis",
+    "section": "",
+    "text": "Fill out course + TA evaluations\nClone ae-21\n\n\n\n\n\nCourse + TA evaluations – We’re at ~40% only\nAny project questions? Any questions about remaining assessments?"
+  },
+  {
+    "objectID": "slides/08-data-types-classes.html",
+    "href": "slides/08-data-types-classes.html",
+    "title": "Data types and classes",
+    "section": "",
+    "text": "Open your ae-05 project (from last time) in RStudio, render your document, and commit and push. Make sure you have your “first draft” plot ready to go.\nAny questions from prepare materials? Go to slido.com / #sta199. You can also upvote others’ questions.\n\n\n\n\n\nHW 2 due tonight (11:59 pm)\nLab 2 due tomorrow night (11:59 pm)\n\n\n\n\n\n\n\n\n\n\n\n\n\nx < y\ntest if x less than y\n\n\nx <= y\ntest if x less than or equal to y\n\n\nx > y\ntest if x greater than y\n\n\nx >= y\ntest if x greater than or equal to y\n\n\nx == y\ntest if x is equal to y\n\n\nx != y\ntest if x is not equal to y\n\n\n\n\n\n\n\n\n\n\n\n\n\nis.na(x)\ntest if x is NA\n\n\n!is.na(x)\ntest if x is not NA\n\n\nx %in% y\ntest if x is in y\n\n\n!(x %in% y)\ntest if x is not in y\n\n\n!x\ntest for not x\n\n\nx & y\ntest for x and y\n\n\nx | y\ntest for x or y\n\n\n\n\n\n\n\n\n\nWhat is the difference between is.na() and na.rm?\n\nis.na() checks for NAs and returns TRUE or FALSE – it’s a function.\n\nx <- c(1, 2, NA)\nis.na(x)\n\n[1] FALSE FALSE  TRUE\n\n\nna.rm removes NAs before applying a function – it’s an argument in a function.\n\nmean(x)\n\n[1] NA\n\nmean(x, na.rm = TRUE)\n\n[1] 1.5"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html",
+    "href": "slides/14-functions-iteration.html",
+    "title": "Functions and iteration",
+    "section": "",
+    "text": "Clone your ae-11 project from GitHub, render your document, update your name, and commit and push.\n\n\n\n\nProject proposals due Friday\nNo in person OH today (but I’ll be at majors fair!). OH on Zoom 8-9pm tonight (Tuesday) and Wednesday. Will email reminder with Zoom link + add to OH sheet.\nMake sure to review the video/reading for Thursday!\n\n\n\n\n\nCan be difficult to catch up on AEs if bits are missed.\n\nWill post AE solutions after class instead of waiting for the deadline. You still need to attempt them to get points."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html",
+    "href": "slides/01-welcome-199.html",
+    "title": "Welcome to STA 199",
+    "section": "",
+    "text": "Dr. Mine Çetinkaya-Rundel\nProfessor of the Practice\nOld Chem 213\n\n\n\n\n\n\n\n\n\n\n\n\nFoxx Hart - Lecture helper\nBora Jin - Course organizer, lab leader\nJordan Bryan - Head TA, lab leader\nRichard Fremgen - Lab leader\nLeah Johnson - Lab leader\nAlison Reynolds - Lab leader\nBrooke Harmon - Lab helper\nJasmine Wen - Lab helper\nAmber Potter - Lab helper\nShawon (One) Chowdhury - Lab helper\nGaurav Sirdeshmukh - Lab helper\n\n\n\n\n\n\n\n−+\n03:00\n\n\n\n\n\n\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.\nWe’re going to learn to do this in a tidy way – more on that later!\nThis is a course on introduction to data science, with an emphasis on statistical thinking."
+  },
+  {
+    "objectID": "slides/07-tidying-data.html",
+    "href": "slides/07-tidying-data.html",
+    "title": "Tidying data",
+    "section": "",
+    "text": "Open your ae-05 project in RStudio, render your document, and commit and push.\nAny questions from prepare materials? Go to slido.com / #sta199. You can also upvote others’ questions.\n\n\n\n\n\nMy office hours this week 2-3 pm on Tuesday or by appointment\nHW 2 typo fix\nComment on masking in class starting Thursday\nSSMU Welcome Back event: Wed, Sep 21, 7:30 - 8:30 pm at Old Chem 201 (with food & refreshments at the Old Chem porch)\n\n\n\n\n\n\n\n\n\n\nCan you explain the difference between primary and foreign keys?\n\nA primary key is a variable that uniquely identifies an observation. A foreign key is the corresponding variable in another table. These keys might have the same name, but they don’t have to, e.g. by = c(\"student_email\" = \"student_id\").\n\n\nWill we be able to log into containers while not on duke WiFi?\n\nYes, you don’t have to be on Duke WiFi to connect to the containers.\n\n\n\nHow do you code “and/or”?\n\nand is & and or is |.\n\n\n\n\n\nWhat is the difference between rendering and saving a document?\n\nWhen you edit your Quarto file and you save it, your changes are saved but they’re not reflected in your output HTML or PDF file. When you render the document, the output is also updated to reflect those changes. When you hit render, RStudio automatically first saves your Quarto file, and then renders it. So I recommend you render early and often, both to save your changes, and also to make sure your changes did not introduce any errors into the document.\n\n\nWhat does it mean to commit and push something?\n\nWe “commit” to take a snapshot of the files in our local repository, i.e. the files that are saved on the university servers you’re using. We “push” to get those changes to the remote repository, i.e. your repository on GitHub.\n\n\n\n\n\nWhat makes a dataset “tidy”?\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/23-exam-2-review.html",
+    "href": "slides/23-exam-2-review.html",
+    "title": "Exam 2 review",
+    "section": "",
+    "text": "Exam 2 is released on today at noon and is due at 2pm on Monday.\n\nNo TA OH during the exam.\nI will have OH 4-5pm on Friday (on Zoom).\nAny clarification questions must be emailed to me only.\nNo Slack use during the exam, even about non-exam related questions.\n\nAnswer keys:\n\nHW 4 and HW 5 feedback: Keys both posted, feedback coming soon.\nAll lab keys also posted.\nAE 16 key missing complete answers, will post after class."
+  },
+  {
+    "objectID": "slides/12-dse-bias-privacy.html",
+    "href": "slides/12-dse-bias-privacy.html",
+    "title": "Data science ethics: Algorithmic bias + Data privacy",
+    "section": "",
+    "text": "Important\n\n\n\nStudy participation + exam extra credit opportunity:\n\n\n\nOptional! But the researchers would appreciate your participation!\nGo to bit.ly/sta199-learning-study-1 to fill out the survey.\nI won’t see your responses, answer freely and honestly.\nI will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points extra credit for Exam 1.\nIRB Protocol #2022-0545.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHW 3 posted later today, due one week from now\nNo OH over Fall break (weekend, Mon, Tue)\nMidterm evaluation - due Wed, Oct 12, 9am\n\n\n\n\nLet’s tidy up our plot a bit more!"
+  },
+  {
+    "objectID": "slides/04-visualizing-various-types-of-data.html",
+    "href": "slides/04-visualizing-various-types-of-data.html",
+    "title": "Visualizing various types of data",
+    "section": "",
+    "text": "HW 1 posted this evening, due 11:59pm on Thursday, Sep 15\n\n\n\n\n\nAny questions from Part 1?\nDemo: Part 2\n\n\n\n\n\nIdentify the type of each of the following variables.\n\nFavorite food\nNumber of classes you’re taking this semester\nZip code\nFull name\nAge\n\n\n\n\n\n−+\n02:00\n\n\n\n\n\n\n\n\n\n\n\nWhat do these three plots show?\n\n\n\n\nSource: #barbarplots"
+  },
+  {
+    "objectID": "slides/18-more-models-multiple-predictors.html",
+    "href": "slides/18-more-models-multiple-predictors.html",
+    "title": "Models with multiple predictors",
+    "section": "",
+    "text": "Clone your ae-15 project from GitHub, render your document, update your name, and commit and push.\nPost any questions you have about the material so far at sli.do / #sta199.\n\n\n\n\n\nMy OH today: On Zoom at bit.ly/minezoom\nJasmine’s OH moved to 4-5pm\n\n\n\n\n\nReview prediction and interpretation of model results\nReview main and interaction effects models\nDiscuss model selection further"
+  },
+  {
+    "objectID": "slides/17-models-multiple-predictors.html",
+    "href": "slides/17-models-multiple-predictors.html",
+    "title": "Models with multiple predictors",
+    "section": "",
+    "text": "Clone your ae-14 project from GitHub, render your document, update your name, and commit and push.\n\n\n\n\nMy OH going forward: Zoom option will be available\nProject proposal feedback: Incorporate more variables into your analysis\nUpcoming:\n\nHW 4 to be posted soon\nLab 4 due tomorrow evening\n\n\n\n\n\n\nRecap modeling with a single predictor\nFit and interpret models with multiple predictors\nDistinguish between additive and interaction models"
+  },
+  {
+    "objectID": "slides/13-web-scraping.html",
+    "href": "slides/13-web-scraping.html",
+    "title": "Web scraping",
+    "section": "",
+    "text": "If you haven’t yet done so: Install a Chrome browser and the SelectorGadget extension:\n\nChrome\nSelectorGadget\n\nClone your ae-10 project from GitHub, render your document, update your name, and commit and push.\n\n\n\n\n\n\nWatch out for announcement on team assignments before Monday’s lab\nStart thinking about project ideas to bring to your team\nHW 3 is due at 11:59 on Thursday\n\n\n\n\n\n\nThank you to the 49 of you who filled it out!\nHow would you change the class: Overwhelming response: More live coding\nPace:\n\n78% About right\n6% Too fast\n4% Too slow\n12% No response\n\nNumber of hours spent outside of class:\n\nAvg 5.5 hours (Expected ~6.25 hours)\nIf you’re consistently spending less and not doing well, you should be putting more time in\nIf you’re consistently spending more and feel like it’s not working, reach out for help\n\n\n\n\n\n\n\n\nHow are you learning best:\n\nAEs during class\nAssignments\nVideos\n\nTAs:\n\nOverwhelmingly positive!\nIf you’re not making use of the TA resources, your peers think you should!\n\n\n\n\n\n\nGeneral feedback:\n\n\nPositive: Generally, people like the interactive nature of the class, the live coding aspect, and the topics\nConstructive:\n\nLessen overlap between prep materials – Can’t lessen since people learn differently, but I can annotate the overlap. You should also feel free to go through pieces at a faster pace if they feel redundant.\nCan be difficult to catch up on AEs if bits are missed – Ask on Slack or come by office hours, no need to wait for answer keys to be posted.\nSometimes grading feels harsh – Ask for clarification on points taken if not provided and don’t hesitate to ask for a regrade if errors are made in grading.\nWe haven’t done any statistics – All of this is (modern) statistics!"
+  },
+  {
+    "objectID": "slides/16-models-single-predictor.html",
+    "href": "slides/16-models-single-predictor.html",
+    "title": "Models with a single predictor",
+    "section": "",
+    "text": "Clone your ae-13 project from GitHub, render your document, update your name, and commit and push.\n\n\n\n\nMy office hours on Zoom today (2-4pm): bit.ly/minezoom\nAdvising / info session on Zoom 1-2pm today. Will send link along with OH info as Sakai announcement.\n\n\n\n\n\nModeling with a single predictor\nModel parameters, estimates, and error terms\nInterpreting slopes and intercepts\n\n\n\n\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(fivethirtyeight) # for the fandango dataset"
+  },
+  {
+    "objectID": "slides/22-inference-overview.html",
+    "href": "slides/22-inference-overview.html",
+    "title": "Inference overview",
+    "section": "",
+    "text": "Important\n\n\n\nCome up with at least one question you’d like to see answered in the Exam 1 review on Thursday.\nGo to slido.com and submit your question with the code #sta199exam2.\nYou can also upvote others’ questions.\n\n\n\n\n\n\nMy office hours today 3:30-5pm on Zoom: bit.ly/minezoom.\nLab 6 due Friday night (11:59 pm) – but I strongly recommend you finish and submit it before the exam begins!\nExam 2 is released on Thursday at noon and is due at 2pm on Monday.\n\nNo TA OH during the exam.\nI will have OH 4-5pm on Friday (on Zoom).\nAny clarification questions must be emailed to me only.\nNo Slack use during the exam, even about non-exam related questions.\n\n\n\n\n\n\nTake notes that you can reference\nReview feedback given to you on graded work\nRevisit AEs\nReview suggested solutions\nAsk questions\n\n\n\n\n\nCome up with at least one question you’d like to see answered in the Exam 2 review on Thursday.\nGo to slido.com and submit your question with the code #sta199exam2.\nYou can also upvote others’ questions.\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/10-exam-1-review.html",
+    "href": "slides/10-exam-1-review.html",
+    "title": "Exam 1 Review",
+    "section": "",
+    "text": "Open your ae-07 project in RStudio, render your document, and commit and push.\n\n\n\n\nExam 1 is released on today at noon and is due at 2pm on Monday.\n\nNo TA OH during the exam.\nI will have OH 4-5pm on Friday on Zoom: bit.ly/minezoom\nAny clarification questions must be emailed to me only.\nNo Slack use during the exam, even about non-exam related questions."
+  },
+  {
+    "objectID": "slides/24-communicate.html",
+    "href": "slides/24-communicate.html",
+    "title": "Communicating data science results effectively",
+    "section": "",
+    "text": "Office hours today 2:45 - 4:45pm in person or on Zoom\nRemaining due dates:\n\n\nPeer eval 2 due tonight by 11pm. Late submission is not possible!\nSurvey on Sakai for topics requested for next week.\nProject presentations next Monday in lab – all team members must be present.\nProject write-up and final repo due 11:59pm Thur, Dec 8 – you will lose access to your repo at this time.\nHW 6 due 11:59pm Friday, Dec 9.\nRemaining application exercises due on the usual schedule.\n(Optional) Exam retake – due 11:59 pm Thur, Dec 15 – absolutely no late submissions, extensions, etc. for any reason.\n\n\n\n\n\n\n\nReleased after Exam 2 grades are released, by next week.\nWeighted average between your lowest exam score and what you earn on the retake\nIf you earned a 0% on Exam 2 and earn 100% on Exam Retake, you will earn an 85%.\nOverall task: Create a six question assessment covering specific topics from the course, write a key and a grading rubric for each, as well as a justification.\n\n\n\n\n\nReview peer evaluations left by your peers, implement updates as you see fit, close the issue once you review them.\nHave a clear plan for who is doing what, open issues on your repo, and assign them to individuals who can then close the issues as they finish a task.\nSchedule at least one team meting between today and your presentation to practice your presentation together."
+  },
+  {
+    "objectID": "slides/03-grammar-of-graphics.html",
+    "href": "slides/03-grammar-of-graphics.html",
+    "title": "Grammar of graphics",
+    "section": "",
+    "text": "Office hours start this week\n“Graded” AEs also start this week – commit and push to your repo within 3 days of AE\n\n\n\n\n\n\nDiscuss the following for the visualization.\n\nWhat is the visualization trying to show?\nWhat is effective, i.e. what is done well?\nWhat is ineffective, i.e. what could be improved?\nWhat are you curious about after looking at the visualization?\n\n\n\n\n−+\n04:00\n\n\n\n\n\n\n\nSource: Twitter"
+  },
+  {
+    "objectID": "slides/20-bootstrap.html",
+    "href": "slides/20-bootstrap.html",
+    "title": "Bootstrap",
+    "section": "",
+    "text": "– Clone ae-17"
+  },
+  {
+    "objectID": "slides/19-logistic-regression.html",
+    "href": "slides/19-logistic-regression.html",
+    "title": "Models with multiple predictors",
+    "section": "",
+    "text": "Clone your ae-18 project from GitHub, render your document, update your name, and commit and push.\nPost any questions you have about the material so far at sli.do / #sta199.\n\n\n\n\n\nTeam evaluations open – due Sat night, 11:59pm (so we can review before Monday’s lab)\nHW 5 will be posted soon\nHW 6\n\n\n\n\nQ: What is a two-way table?\nA: A table of frequencies for two categorical variables.\n\n\nHow do we go from what’s on the left to what’s on the right?\n\n\n\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\n\npenguins |>\n  count(species, sex)\n\n# A tibble: 8 × 3\n  species   sex        n\n  <fct>     <fct>  <int>\n1 Adelie    female    73\n2 Adelie    male      73\n3 Adelie    <NA>       6\n4 Chinstrap female    34\n5 Chinstrap male      34\n6 Gentoo    female    58\n7 Gentoo    male      61\n8 Gentoo    <NA>       5\n\n\n\n\n\n# A tibble: 3 × 4\n  species   female  male  `NA`\n  <fct>      <int> <int> <int>\n1 Adelie        73    73     6\n2 Chinstrap     34    34    NA\n3 Gentoo        58    61     5\n\n\n\n\n\n\n\n\nQ: How do we build a two-way table in a pipeline?\n\n\npenguins |>\n  count(species, sex) |>\n  pivot_wider(names_from = sex, values_from = n)\n\n# A tibble: 3 × 4\n  species   female  male  `NA`\n  <fct>      <int> <int> <int>\n1 Adelie        73    73     6\n2 Chinstrap     34    34    NA\n3 Gentoo        58    61     5\n\n\n\n\n\n\nQ: How do we know whether we can scrape data from a website?\n\nA: Technically, with robotstxt::paths_allowed(), but that doesn’t address ethical considerations which are just as important, if not more.\n\nrobotstxt::paths_allowed(\"https://www.duke.edu/\")\n\n[1] TRUE\n\n\n\n\n\n\nQ: What is the proper notation for writing out a model?\n\n\nPopulation models (truth):\n\n\\[\ny = \\beta_0 + \\beta_1 \\times x + \\epsilon\n\\]\n\nSample models (estimated):\n\n\\[\n\\hat{y} = b_0 + b_1 \\times x\n\\]\n\n\n\n\n\nFit and interpret models for predicting binary outcomes\nIntroduce over fitting and mitigating it by splitting the data into training and testing sets"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html",
+    "href": "slides/05-grammar-of-data-wrangling.html",
+    "title": "Grammar of data wrangling",
+    "section": "",
+    "text": "Clone your ae-03 repo.\nAny questions from prepare materials? Go to slido.com / #sta199. You can also upvote others’ questions.\n\n\n\n\n\n\nRequest videos for missed classes via the video request form\nAsk course questions on Slack\n\nUsing code formatting and proper indentation\nTaking screenshots\nChecking for previous questions\n\n\n\n\n\n\nHow come I had to load my packages each session before basic functions like ggplot() become available?\nWill we spend time learning more of the actual fundamental statistics needed to understand how the different graphs work and which ones are most useful for different data sets?\n\n\n\n\n\n\nAvoid long lines of code.\n\nWe should be able to see all of your code in the PDF document you submit.\n\nLabel code chunks.\n\nDo not put spaces in the code-chunk labels.\n\nRender, commit, and push regularly.\n\nThink about it like clicking to save regularly as you type a report."
+  },
+  {
+    "objectID": "slides/09-data-import.html",
+    "href": "slides/09-data-import.html",
+    "title": "Data import",
+    "section": "",
+    "text": "Important\n\n\n\nCome up with at least one question you’d like to see answered in the Exam 1 review on Thursday.\nGo to slido.com and submit your question with the code #sta199exam1.\nYou can also upvote others’ questions.\n\n\n\n\n\n\nLab 3 due Friday night (11:59 pm) – but I strongly recommend you finish and submit it before the exam begins!\nExam 1 is released on Thursday at noon and is due at 2pm on Monday.\n\nNo TA OH during the exam.\nI will have OH 4-5pm on Friday (on Zoom).\nAny clarification questions must be emailed to me only.\nNo Slack use during the exam, even about non-exam related questions.\n\n\n\n\n\n\nTake notes that you can reference\nReview feedback given to you on graded work\nRevisit AEs\nReview suggested solutions\nAsk questions\n\n\n\n\nOn the course website:\n\nMore links to package documentation on the useful links page: https://sta199-f22-1.github.io/course-links.html\nNew page with links to cheatsheets: https://sta199-f22-1.github.io/computing-cheatsheets.html"
+  },
+  {
+    "objectID": "slides/11-dse-misrepresentation.html",
+    "href": "slides/11-dse-misrepresentation.html",
+    "title": "Data science ethics: Misrepresentation",
+    "section": "",
+    "text": "Clone your ae-08 repo.\nAny questions from prepare materials? Go to slido.com / #sta199. You can also upvote others’ questions.\n\n\n\n\n\nSlight change of plans for this week – dedicating entire week to data science ethics\nMake sure to catch up with reading and (required) videos by Thursday\nHighly recommend watching thew optional videos as well – if not by Thursday, over the break"
+  },
+  {
+    "objectID": "slides/21-hypothesis-testing.html",
+    "href": "slides/21-hypothesis-testing.html",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "HW 5 due tonight\nProject draft due tomorrow night\n\n\n\n\n\nReview constructing confidence intervals via bootstrapping\nHypothesis testing, p-values, and making conclusions\n\nTest a claim about a population parameter\nUse simulation-based methods to generate the null distribution\nCalculate and interpret the p-value\nUse the p-value to draw conclusions in the context of the data and the research question\n\n\n\n\n\n\n\nWhy do we construct confidence intervals?\nWhat is bootstrapping?\nWhat does each dot on the plot represent? Note: The plot is of a bootstrap distribution of a sample mean.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\n\nTo estimate plausible values of a parameter of interest, e.g., a slope (\\(\\beta_1\\)), a mean (\\(\\mu\\)), a proportion (\\(p\\)).\n\n\n\n\nBootstrapping is a statistical procedure that resamples(with replacement) a single data set to create many simulated samples.\nWe then use these simulated samples to quantify the uncertainty around the sample statistic we’re interested in, e.g., a slope (\\(\\b_1\\)), a mean (\\(\\bar{x}\\)), a proportion (\\(\\hat{p}\\)).\n\n\n\n\nNote: The plot is of a bootstrap distribution of a sample mean.\n\nResample, with replacement, from the original data\nDo this 20 times (since there are 20 dots on the plot)\nCalculate the summary statistic of interest in each of these samples"
+  },
+  {
+    "objectID": "slides/02-meet-the-toolkit.html",
+    "href": "slides/02-meet-the-toolkit.html",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Complete all the preparation work before class.\nAsk questions.\nDo the readings and watch the videos.\nDo the homework and lab.\nDon’t procrastinate and don’t let a week pass by with lingering questions.\n\n\n\n\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded.\n\n\n\n\n\nQ - What data science background does this course assume?\nA - None.\n\nQ - Is this an intro stat course?\nA - While statistics \\(\\ne\\) data science, they are very closely related and have tremendous of overlap. Hence, this course is a great way to get started with statistics. However this course is not your typical high school statistics course.\n\n\nQ - Will we be doing computing?\nA - Yes.\n\n\n\n\nQ - Is this an intro CS course?\nA - No, but many themes are shared.\n\nQ - What computing language will we learn?\nA - R.\n\n\nQ: Why not language X?\nA: We can discuss that over ☕.\n\n\n\n\n\n\nCourse operation\n\nMaterials: sta199-f22-1.github.io\nSubmission: Gradescope\nDiscussion: Slack\nGradebook: Sakai\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html",
+    "href": "slides/06-working-with-multiple-data-frames.html",
+    "title": "Working with multiple data frames",
+    "section": "",
+    "text": "Open your ae-03 project in RStudio (that you already started on Tuesday), render your document, and commit and push.\nAny questions from prepare materials? Go to slido.com / #sta199. You can also upvote others’ questions.\n\n\n\n\n\nRecap: Asking code related questions on Slack\n\nIdeally: Code formatted text, not screenshots\nIf need be: Screenshots, not photos of screens\nAlways include code along with the error\n\nTroubleshooting 101: Read your error messages in full, out loud if need be\nCode formatting 101:\n\nAlways line breaks after + and |>\nAdd line breaks as needed after , to help fit code on rendered PDF\nThink poetry (short lines), not novellas (long sentences)\n\n\n\n\n\nContinue work from Tuesday…\n\n\n\n\nDescribe a scenario where two datasets that contain information about students from this class may need to be joined. What might the analysis be about? What column (information) could be used to join the datasets?\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "project-description.html#why",
+    "href": "project-description.html#why",
+    "title": "Project description",
+    "section": "Why?",
+    "text": "Why?\nStatistics is a tool for answering questions we have about how the world is and how it works. When people — researchers, sports analysts, marketing professionals, etc — use statistics outside of statistics classes, it is because they have a question that can be answered by looking at quantitative data. This project is meant to introduce you to the process of doing quantitative analysis and presenting your results in a way that resembles how you will use statistics after you leave this class."
+  },
+  {
+    "objectID": "project-description.html#submission-format",
+    "href": "project-description.html#submission-format",
+    "title": "Project description",
+    "section": "Submission Format",
+    "text": "Submission Format\nEverything with the exception of the presentation should be written as a Quarto document. All data cleaning, analysis, and visualizations should be done in that single file, so that your entire document is 100% reproducible (i.e., someone else should be able to take your file, click “render” or “run”, and recreate your results and visualizations).\n\n\n\n\n\n\nWhy?\n\n\n\nWhy peer feedback? Very few people work in isolation. We constantly get feedback from colleagues, and learning how to give and receive such feedback in a way that makes projects better is essential for coursework as well as for most jobs.\nWhy Quarto? While there is, of course, a learning curve associated with writing analyses in a new way (ie, in Quarto instead of text editors you are more used to, like Word and Google Docs), it is a skill worth learning for statistical analysis in particular. Why? Quarto allows you to easily make your work entirely reproducible. You will be able to give a collaborator one single document that shows all steps in the analysis process as well as all necessary background information and explanation. This makes your work easy for others to understand, check, and modify. Using Quarto also encourages you to learn good coding practices, right from the beginning. You will be explaining what you do as you go along, and the way files are compiled will encourage you to write code that runs correctly in order–which may not sound like much, but it’s actually quite easy to get disorganized when coding in other ways. We will go over Quarto in class so that you have all the information and support you need to learn it."
+  },
+  {
+    "objectID": "project-description.html#why-1",
+    "href": "project-description.html#why-1",
+    "title": "Project description",
+    "section": "Why?",
+    "text": "Why?\nWhy peer feedback? Very few people work in isolation. We constantly get feedback from colleagues, and learning how to give and receive such feedback in a way that makes projects better is essential for coursework as well as for most jobs.\nWhy Quarto? While there is, of course, a learning curve associated with writing analyses in a new way (ie, in Quarto instead of text editors you are more used to, like Word and Google Docs), it is a skill worth learning for statistical analysis in particular. Why? Quarto allows you to easily make your work entirely reproducible. You will be able to give a collaborator one single document that shows all steps in the analysis process as well as all necessary background information and explanation. This makes your work easy for others to understand, check, and modify. Using Quarto also encourages you to learn good coding practices, right from the beginning. You will be explaining what you do as you go along, and the way files are compiled will encourage you to write code that runs correctly in order–which may not sound like much, but it’s actually quite easy to get disorganized when coding in other ways. We will go over Quarto in class so that you have all the information and support you need to learn it."
+  },
+  {
+    "objectID": "project-description.html#details",
+    "href": "project-description.html#details",
+    "title": "Project description",
+    "section": "Details",
+    "text": "Details\nIn this component, you will think through two possible research questions and data sets. Using the feedback provided by your classmates, you will choose one to pursue further.\n\nData\nYou will need to find two data sets: one for each of your research questions. You may write additional research questions on a single data set if you would like additional feedback, but in all cases, you must consider and present at least two data sets in total. In other words, additional questions on a single data set are extra; they do not count towards your required two questions.\nI highly recommend selecting data sets included with the openintro package. There is all kinds of interesting data freely available on the internet, but it is a good idea to stick with openintro because their data sets are clean and easy to work with. We already have a lot to do in just 6 weeks, and so will not be covering how to prepare “messy” data for analysis (I recommend a data science course like STA 199 for this!). If you really, really want to use a data set from elsewhere, talk to me.\nNot all openintro data sets will work for this course because not all of them lend themselves to sociological questions (see below for research question requirements–they must have to do with people living in a social system). Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 cases and two interesting variables.\nThe below data sets are good places to start, though you may propose others so long as they allow you to write a research question about people and the social systems they live in.\n-   acs12\n-   cia_factbook\n-   county_2019\n-   county_complete\n-   dds.discr\n-   evals\n-   fatal_police_shootings\n-   gpa\n-   gss2010\n-   hfi\n-   hsb2\n-   labor_market_discrimination\n-   loans_full_schema\n-   military\n-   mn_police_use_of_force\n-   ncbirths\n-   piracy\n-   resume\n-   satgpa\n-   sowc_demographics\n-   voter_count\n-   yrbss\n\n\nVersion to bring to class for peer review (DATE)\nYou are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you’re interested in potentially using for the final project. If you would like to receive feedback on more than two research questions, you may optionally submit additional questions. You will review each others’ proposals in groups of 2-3. After peer review, you will be responsible for updating your draft and submitting for grading according to the requirements below.\nFor each research question, you should:\n\nClearly state the specific research question. Make sure it fulfills the following requirements:\n\nMust be specific and well-formulated (see slides LINK)\nMust involve a relationship between at least two variables\nMust be sociological in some way–this is a sociology class, after all. In other words, it has to have something to do with people living in a social system. If you are not sure whether your question meets this requirement, ask!\n\nAdditionally, provide some supporting information:\n\nWhat is your target population?\nWrite ~1 paragraph giving any necessary background information and explaining why the question is interesting to study.\nWrite down a hypothesis stating what you expect to find. Give a brief (~1-2 sentence) justification for why you expect this.\n\nIdentify the data set you would use to answer the research question and provide some information about it. Address the following questions:\n\nWhen and how was it originally collected?\nWho or what was sampled, and how many observations are there?\nWhat variables would you use to answer your question?\nWhy is this data set a good fit for your research question?\nBriefly (in ~2-3 sentences) address any ethical concerns. If none, explain why there are none.\n\nProvide a glimpse of your data\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.\n\n\n\n\nVersion to submit for grading (DATE)\nAfter peer review, incorporate your peers’ feedback into your draft. In addition, add ~1 paragraph of thoughts about which question you should ultimately choose to move forward with. In that paragraph, answer the following questions:\n\nWhich question do you think you should pursue for your final project?\nWhy is this the right choice? Discuss fit between the research question and data set, feasibility, and value of the research question.\n\nSubmit one Quarto document containing your revised research questions and this summary paragraph."
+  },
+  {
+    "objectID": "project-description.html#why-2",
+    "href": "project-description.html#why-2",
+    "title": "Project description",
+    "section": "Why?",
+    "text": "Why?\nThere are three main purposes of the project proposal:\n\nTo get you thinking about the project early so you can get a head start on refining your question, finding your data, and doing your analysis.\nTo ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful.\nTo give you practice talking about analysis ideas and plans with your peers."
+  },
+  {
+    "objectID": "project-description.html#details-1",
+    "href": "project-description.html#details-1",
+    "title": "Project description",
+    "section": "Details",
+    "text": "Details\nThere will be no peer review version for this component. Instead, we will make time available to work on it in class so that you can work through any issues with the help of your colleagues and I.\n\nVersion to bring to class (DATE)\nCome to class having already started the assignment. At minimum, identify your variables, load your data, run the summary() and/or table() functions on the variables you are using in your analysis, and try to create one plot. Completing as much as you can prior to class will allow you to make the best use of the opportunity to ask questions in class.\nI encourage you to submit questions ahead of time by DETAILS or come to class prepared to ask specific questions. Your preparation for and participation in the class session will be part of your grade for this component.\n\n\nVersion to submit for grading (DATE)\nPlease submit this assignment as a single Quarto document.\n\nPart 1: Understanding your variables\n\nWrite down your research question\nWrite down the names of the variables you will use in your analysis (i.e., what you need to type to call them in R)\nFor each variable, tell me:\n\nWhat purpose it serves in your analysis (independent variable, dependent variable, mediating variable, moderating variable, etc)\nWhat kind of variable it is (binary, categorical, ordinal, continuous)\nWhat the range or possible responses are\nFor categorical (ordinal, nominal, and binary) variables, tell me what your reference category will be (or, if you need to see the data to determine this, how you will decide once you do)\n\n\nPart 2: Visualizing your data\n\nLoad your final project data set\nFor each variable:\n\nRun the summary() (for continuous variables) or table() (for all other types of variables) function on the variable. Describe the results. Does anything about them surprise you?\nNote how many missing values there are. Hint: use the useNA = \"always\" option if using table(). Does this seem reasonable?\nMake a histogram of the variable’s distribution.\nDescribe the distribution. Does anything surprise you? For continuous and ordinal variables, tell me which distribution terms discussed in class apply. I.e., is the variable’s distribution normal? Unimodal? Skewed? Uniform?\n\nMake a plot showing the relationship between your primary independent and dependent variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc.\n\nInterpret your plot in ~2-3 sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?"
+  },
+  {
+    "objectID": "project-description.html#grading",
+    "href": "project-description.html#grading",
+    "title": "Project description",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\n\nPeer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission\n30%\n\n\nResearch questions\n20%\n\n\nData set descriptions\n20%\n\n\nData set glimpses\n10%\n\n\nParagraph on research question choice\n10%\n\n\nWorkflow and formatting\n10%\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect. Just like you are expected to incorporate feedback from your peers into your graded proposal, you will be expected to incorporate feedback from me into the relevant sections of your final paper. The degree to which you address feedback will be a component of your final paper grade.\n\n\n\n\n\n\nWhy?\n\n\n\nThere are three main purposes of the project proposal:\n\nTo get you thinking about the project early so you can get a head start on refining your question, finding your data, and doing your analysis.\nTo ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful.\nTo give you practice talking about analysis ideas and plans with your peers."
+  },
+  {
+    "objectID": "project-description.html#grading-1",
+    "href": "project-description.html#grading-1",
+    "title": "Project description",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\n\nPreparation for work in class: assignment started, class participation\n30%\n\n\nPart 1\n30%\n\n\nPart 2\n30%\n\n\nWorkflow and formatting\n10%\n\n\n\n\n\n\n\n\n\nWhy?\n\n\n\nBefore doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like. This will help you head off problems later. For example, looking at the distributions of your variables will reveal if data is missing when you don’t expect it to be. It also might clue you in on interesting patterns you may want to investigate further. Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics."
+  },
+  {
+    "objectID": "project-description.html#details-2",
+    "href": "project-description.html#details-2",
+    "title": "Project description",
+    "section": "Details",
+    "text": "Details\nBring a full draft of this component to class for peer review on DATE.\nIncorporate your peer feedback and turn in a version for grading on DATE.\nThe required elements of this component are as follows:\n\nPart 1: Analysis plan\n\nState your research question, hypothesis, and variables you intend to use (from the proposal, updated as necessary).\nSelect an analytic method to use to answer this question. This must be either an inferential method or a linear regression.\nExplain why your chosen method is appropriate for your question and your variables\nWhat are the limitations of this strategy?\n\nPart 2: Analysis results\n\nPerform the analysis you described in part 1.\nPresent the results as either a figure or a table, as appropriate.\nInterpret your results. What do they tell you about your research question? Do they support your hypothesis?\nWhat don’t your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area?"
+  },
+  {
+    "objectID": "project-description.html#grading-2",
+    "href": "project-description.html#grading-2",
+    "title": "Project description",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\n\nPeer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission\n30%\n\n\nPart 1\n30%\n\n\nPart 2\n30%\n\n\nWorkflow and formatting\n10%\n\n\n\n\n\n\n\n\n\nWhy?\n\n\n\nIt is generally not very convincing to only show descriptive statistics of your sample, because ultimately, we do not care about your sample specifically–we want to know something about the entire target population. If you were somehow able to measure the entire target population, would you be likely to see the same pattern? Inferential statistics allow you to answer that question.\nCompleting this component will allow you the chance to receive feedback on your analytic strategy and refine it prior to submitting your full paper."
+  },
+  {
+    "objectID": "project-description.html#timeline-1",
+    "href": "project-description.html#timeline-1",
+    "title": "Project description",
+    "section": "Timeline",
+    "text": "Timeline\nBring a full draft to class on DATE for peer review. The final revised draft is due on the last day of summer term finals, DATE."
+  },
+  {
+    "objectID": "project-description.html#overall-requirements",
+    "href": "project-description.html#overall-requirements",
+    "title": "Project description",
+    "section": "Overall requirements",
+    "text": "Overall requirements\n\nYour full paper must be completed in the report.qmd file and must be reproducible. Before you finalize your write up, make sure the printing of code chunks is off with the option echo: false in the YAML.\nThe complete paper, including visualizations, should be no more than 10 pages long. There is no minimum page requirement; however, you should comprehensively address all of the analysis in your report.\n\n\n\n\n\n\n\nNote\n\n\n\nTo check how many pages your report is, open it in your browser and go to File > Print > Save as PDF and review the number of pages.\n\n\n\nYou must include and interpret at least one figure that usefully displays your data. You may choose where it makes most sense to include this."
+  },
+  {
+    "objectID": "project-description.html#paper-sections",
+    "href": "project-description.html#paper-sections",
+    "title": "Project description",
+    "section": "Paper sections",
+    "text": "Paper sections\n\nIntroduction\nThis section includes an introduction to the project motivation and research question.\n\nGrading criteria\nThe research question and motivation are clearly stated in the introduction, including citations for the data source and any external research. The research question is well formulated and the data set fits the question. The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report.\n\n\n\nData and methodology\nThis section includes a brief description of your data and your analysis process. Describe the data and variables you will use in analysis. Be clear about what purpose your variables serve and how they are operationalized. Explain your analysis strategy and why this strategy is appropriate for your question and variables. Though you may show descriptive analysis, you should go beyond it–ie, you should use one or more of the hypothesis testing techniques we have discussed in class.\n\nGrading criteria\nThe analysis steps are appropriate for the data and research question.\n\n\n\nResults\nThis is where you will discuss your overall finding and describe the key results from your analysis. Present the results of your analysis using figures and/or tables, as appropriate. The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.\n\nGrading criteria\nThe analysis results are clearly assessed and interesting findings from the analysis are described. Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.\n\n\n\nDiscussion\nIn this section you’ll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions. In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here. In short, describe what your results reveal about the research question, as well as what they do not say. Lastly, this section will include ideas for future work.\n\nGrading criteria\nOverall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.\n\n\n\nOrganization + formatting\nThis is an assessment of the overall presentation and formatting of the written report.\n\nGrading criteria\nThe report is neatly written and organized with clear section headers and appropriately sized figures with informative labels. Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted. All citations and links are properly formatted. All code, warnings, and messages are suppressed. The paper is no longer than 10 pages."
+  },
+  {
+    "objectID": "project-description.html#grading-criteria-5",
+    "href": "project-description.html#grading-criteria-5",
+    "title": "Project description",
+    "section": "Grading criteria",
+    "text": "Grading criteria\nThe presentation is clear and informative. The slides are neat, professional, and support rather than distract from the presenter."
   }
 ]
