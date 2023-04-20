@@ -82,7 +82,7 @@ We already have a lot to do in just 6 weeks, and so will not be covering how to 
 If you really, really want to use a data set from elsewhere, talk to me.
 
 Not all openintro data sets will work for this course because not all of them lend themselves to sociological questions (see below for research question requirements--they must have to do with people living in a social system).
-Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 cases and two interesting variables.
+Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 cases and two interesting variables. Avoid data sets that are used extensively to demonstrate concepts in the textbook. You may not choose questions that are similar to or the same as those used as book examples. 
 
 The below data sets are good places to start, though you may propose others so long as they allow you to write a research question about people and the social systems they live in.
 
@@ -99,12 +99,10 @@ The below data sets are good places to start, though you may propose others so l
 -   hfi
 -   hsb2
 -   labor_market_discrimination
--   loans_full_schema
 -   military
 -   mn_police_use_of_force
 -   ncbirths
 -   piracy
--   resume
 -   satgpa
 -   sowc_demographics
 -   voter_count
@@ -137,7 +135,8 @@ For each research question, you should:
     Address the following questions:
 
     -   When and how was it originally collected?
-    -   Who or what was sampled, and how many observations are there?
+    -   Is it an observational study or an experiment?
+    -   Who or what was sampled, and how many cases are there?
     -   What variables would you use to answer your question?
     -   Why is this data set a good fit for your research question?
     -   Briefly (in \~2-3 sentences) address any ethical concerns. If none, explain why there are none.
