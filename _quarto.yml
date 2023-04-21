@@ -9,7 +9,7 @@ website:
   page-navigation: true
   title: "SOCIOL 333"
   description: "Homepage for SOCIOL 333 - Quantitative Analysis of Sociological Data, Summer 2023 Term 1"
-  site-url: "https://sta199-f22-1.github.io/"
+  site-url: "https://ahcombs.github.io/soc333-sum23.github.io/"
 
   repo-url: https://github.com/ahcombs/soc333-sum23.github.io
   repo-actions: [edit, issue]

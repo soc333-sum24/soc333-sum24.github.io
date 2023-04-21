@@ -19,89 +19,22 @@ d <- read_excel("schedule.xlsx")
 ```{r, echo = FALSE}
 d |>
   mutate(
-    date = as.Date(date),
-    week = ifelse(is.na(week), "", week)
+    date = as.Date(date)
   ) |>
   gt() |>
-  text_transform(cells_body(columns = c(prepare)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("book", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(slides)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("laptop", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(ae)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(ae_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(hw)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("keyboard", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('keyboard')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(hw_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(lab)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users-rectangle')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(lab_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(exam)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("file-circle-check", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('file-circle-check')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(project)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
-      )
-    }
-  ) |>
-  fmt_date(date, date_style = 30) |>
-  sub_missing(columns = c(date, what, topic, notes), missing_text = "") |>
+  fmt_date(date, date_style = 31) |>
+  sub_missing(columns = c(week, topic, prepare, due), missing_text = "") |>
   cols_align(
     align = "center", 
-    columns = c(week, dow, prepare, slides, ae, ae_sa, hw, hw_sa, lab, lab_sa, exam, project)
+    columns = c(week)
+    ) |>
+  cols_align(
+    align = "right", 
+    columns = c(date)
     ) |>
   cols_align(
     align = "left", 
-    columns = c(date, what, topic, notes)
+    columns = c(topic, prepare, due)
     ) |>
   tab_style(
     style = cell_borders(
@@ -110,8 +43,19 @@ d |>
       style = "solid"
     ),
     locations = cells_body(
-      columns = c(date, topic, prepare, ae_sa, hw_sa, lab_sa, exam, project)
+      columns = c(date, topic, prepare)
     )
+  ) |>
+  fmt_markdown(
+    columns = c(topic, prepare, due)
+  ) |>
+  cols_width(
+    week ~ px(30),
+    date ~ px(200), 
+    due ~ px(150),
+    topic ~ px(400),
+    topic ~ px(300),
+    due ~ px(200)
   )
 ```
 :::
