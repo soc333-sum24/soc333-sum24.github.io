@@ -1,0 +1,49 @@
+---
+title: "Project description"
+callout-icon: false
+---
+
+# Results {#results}
+
+In this component, you will test your hypothesis and present the results of your test(s).
+
+## Details
+
+Bring a full draft of this component to class for peer review on DATE.
+
+Incorporate your peer feedback and turn in a version for grading on DATE.
+
+The required elements of this component are as follows:
+
+-   Part 1: Analysis plan
+
+    -   State your research question, hypothesis, and variables you intend to use (from the proposal, updated as necessary).
+    -   Select an analytic method to use to answer this question. This must be either an inferential method or a linear regression.
+    -   Explain why your chosen method is appropriate for your question and your variables
+    -   What are the limitations of this strategy?
+
+-   Part 2: Analysis results
+
+    -   Perform the analysis you described in part 1.
+    -   Present the results as either a figure or a table, as appropriate.
+    -   Interpret your results. What do they tell you about your research question? Do they support your hypothesis?
+    -   What *don't* your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area?
+
+## Grading
+
+|                                                                                                              |     |
+|-----------------------------------------------|-------------------------|
+| Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
+| Part 1                                                                                                       | 30% |
+| Part 2                                                                                                       | 30% |
+| Workflow and formatting                                                                                      | 10% |
+
+::: callout-tip
+## Why?
+
+It is generally not very convincing to only show descriptive statistics of your sample, because ultimately, we do not care about your sample specifically--we want to know something about the entire target population.
+If you were somehow able to measure the entire target population, would you be likely to see the same pattern?
+Inferential statistics allow you to answer that question.
+
+Completing this component will allow you the chance to receive feedback on your analytic strategy and refine it prior to submitting your full paper.
+:::

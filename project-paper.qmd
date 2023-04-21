@@ -1,0 +1,108 @@
+---
+title: "Project description"
+callout-icon: false
+---
+
+# Paper {#paper}
+
+The necessary components of the report are below.
+You are free to add additional sections as necessary.
+I intend that you are able to pull in much of this information from the previous three components of this project (the proposal, descriptive statistics, and results).
+However, you must edit to ensure that the report reads well as a cohesive whole, and you must also address any relevant feedback you received on those components.
+**You must not simply paste your three previous assignments together in one document; this will not score well.**
+
+Be selective in what you include in your final write-up.
+The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis.
+
+## Timeline
+
+Bring a full draft to class on DATE for peer review.
+The final revised draft is due on the last day of summer term finals, DATE.
+
+## Overall requirements
+
+-   Your full paper must be completed in the `report.qmd` file and must be reproducible.
+    Before you finalize your write up, make sure the printing of code chunks is off with the option `echo: false` in the YAML.
+
+-   The complete paper, including visualizations, should be no more than 10 pages long.
+    There is no minimum page requirement; however, you should comprehensively address all of the analysis in your report.
+
+::: callout-note
+To check how many pages your report is, open it in your browser and go to File \> Print \> Save as PDF and review the number of pages.
+:::
+
+-   You must include and interpret at least one figure that usefully displays your data. You may choose where it makes most sense to include this.
+
+## Paper sections
+
+### Introduction
+
+This section includes an introduction to the project motivation and research question.
+
+#### Grading criteria
+
+The research question and motivation are clearly stated in the introduction, including citations for the data source and any external research.
+The research question is well formulated and the data set fits the question.
+The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report.
+
+### Data and methodology
+
+This section includes a brief description of your data and your analysis process.
+Describe the data and variables you will use in analysis.
+Be clear about what purpose your variables serve and how they are operationalized.
+Explain your analysis strategy and why this strategy is appropriate for your question and variables.
+Though you may show descriptive analysis, you should go beyond it--ie, you should use one or more of the hypothesis testing techniques we have discussed in class.
+
+#### Grading criteria
+
+The analysis steps are appropriate for the data and research question.
+
+### Results
+
+This is where you will discuss your overall finding and describe the key results from your analysis.
+Present the results of your analysis using figures and/or tables, as appropriate.
+The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions.
+Focus on the variables that help you answer the research question and that provide relevant context for the reader.
+
+#### Grading criteria
+
+The analysis results are clearly assessed and interesting findings from the analysis are described.
+Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.
+
+### Discussion
+
+In this section you'll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions.
+In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved.
+Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
+In short, describe what your results reveal about the research question, as well as what they *do not* say.
+Lastly, this section will include ideas for future work.
+
+#### Grading criteria
+
+Overall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question.
+There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.
+
+### Organization + formatting
+
+This is an assessment of the overall presentation and formatting of the written report.
+
+#### Grading criteria
+
+The report is neatly written and organized with clear section headers and appropriately sized figures with informative labels.
+Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted.
+All citations and links are properly formatted.
+All code, warnings, and messages are suppressed.
+The paper is no longer than 10 pages.
+
+## Report grading
+
+The final paper grade is broken down as follows.
+
+|                             |     |
+|-----------------------------|-----|
+| Introduction                | 10% |
+| Data and methodology        | 20% |
+| Results                     | 30% |
+| Discussion                  | 20% |
+| Organization and formatting | 10% |
+| Peer review                 | 10% |

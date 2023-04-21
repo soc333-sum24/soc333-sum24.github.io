@@ -1,0 +1,66 @@
+---
+title: "Project description"
+callout-icon: false
+---
+
+# Descriptive Statistics {#descriptives}
+
+In this component, you will explore the variables you will use in your analysis.
+
+## Details
+
+There will be no peer review version for this component.
+Instead, we will make time available to work on it in class so that you can work through any issues with the help of your colleagues and I.
+
+### Version to bring to class (DATE)
+
+Come to class having already started the assignment.
+At minimum, identify your variables, load your data, run the `summary()` and/or `table()` functions on the variables you are using in your analysis, and try to create one plot.
+Completing as much as you can prior to class will allow you to make the best use of the opportunity to ask questions in class.
+
+I encourage you to submit questions ahead of time by DETAILS or come to class prepared to ask specific questions.
+Your preparation for and participation in the class session will be part of your grade for this component.
+
+### Version to submit for grading (DATE)
+
+Please submit this assignment as a single Quarto document.
+
+-   Part 1: Understanding your variables
+
+    -   Write down your research question
+    -   Write down the names of the variables you will use in your analysis (i.e., what you need to type to call them in R)
+    -   For each variable, tell me:
+        -   What purpose it serves in your analysis (independent variable, dependent variable, mediating variable, moderating variable, etc)
+        -   What kind of variable it is (binary, categorical, ordinal, continuous)
+        -   What the range or possible responses are
+        -   For categorical (ordinal, nominal, and binary) variables, tell me what your reference category will be (or, if you need to see the data to determine this, how you will decide once you do)
+
+-   Part 2: Visualizing your data
+
+    -   Load your final project data set
+    -   For each variable:
+        -   Run the `summary()` (for continuous variables) or `table()` (for all other types of variables) function on the variable. Describe the results. Does anything about them surprise you?
+        -   Note how many missing values there are. Hint: use the `useNA = "always"` option if using `table()`. Does this seem reasonable?
+        -   Make a histogram of the variable's distribution.
+        -   Describe the distribution. Does anything surprise you? For continuous and ordinal variables, tell me which distribution terms discussed in class apply. I.e., is the variable's distribution normal? Unimodal? Skewed? Uniform?
+    -   Make a plot showing the relationship between your primary independent and dependent variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc.
+        -   Interpret your plot in \~2-3 sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+
+## Grading
+
+|                                                                        |     |
+|-----------------------------------------------------|-------------------|
+| Preparation for work in class: assignment started, class participation | 30% |
+| Part 1                                                                 | 30% |
+| Part 2                                                                 | 30% |
+| Workflow and formatting                                                | 10% |
+
+::: callout-tip
+## Why?
+
+Before doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like.
+This will help you head off problems later.
+For example, looking at the distributions of your variables will reveal if data is missing when you don't expect it to be.
+It also might clue you in on interesting patterns you may want to investigate further.
+Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics.
+:::
