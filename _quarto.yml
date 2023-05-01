@@ -38,18 +38,14 @@ website:
     contents:
       - section: "Course information"
         contents:
-          - href: course-overview.qmd
-            text: Overview
+          - href: index.qmd
+            text: Schedule
           - href: course-syllabus.qmd
             text: Syllabus
           - href: course-support.qmd
             text: Support
-          - href: index.qmd
-            text: Schedule
           - href: course-links.qmd
             text: Useful links
-          - href: course-faq.qmd
-            text: FAQ
       - section: "Computing"
         contents:
           - href: computing-access.qmd
