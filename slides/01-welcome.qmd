@@ -11,7 +11,7 @@ library(tidyverse)
 
 # Introductions
 
-## Meet the prof
+## Meet the instructor
 
 Aidan Combs
 
@@ -65,9 +65,9 @@ Reuben-Cooke 141
     -   Lots of opportunities to ask questions; lots of in-class practice
 :::
 
-# An Example
+# What we'll do: an example
 
-## Let's meet some data
+## Let's meet some data!
 
 -   Equity in Athletics Data Analytics
 
@@ -90,6 +90,8 @@ coachesperteam <- sportspeople |>
   mutate(playercoachratio = nplayers/totalcoaches)
 
 ```
+
+# Description
 
 ## How many coaches were there at Duke in 2021?
 
@@ -116,7 +118,7 @@ coachesovertime <- sportspeople |>
   summarize(totalcoaches = sum(ncoaches)) |> 
   mutate(teamgender = factor(teamgender, levels = c("women", "men")))
 
-ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
+coachtimeplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
   geom_line() + 
   geom_point() + 
   theme_minimal() + 
@@ -125,6 +127,31 @@ ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) +
        title = "Change in number of Duke coaches over time",
        color = "Team gender")
 
+coachtimeplot
+```
+
+```{r, echo = FALSE}
+stickerplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
+  geom_line(aes(alpha = .3)) + 
+  geom_point(aes(alpha = .3)) + 
+  theme_minimal() + 
+  labs(y = "",
+       x = "",
+       color = "") + 
+  theme(legend.position = "none",
+        axis.text = element_text(color = "grey75"))
+
+s <- sticker(stickerplot,
+             package="Sociol333", p_size=20, p_y = 1, p_color = "purple",
+             s_x=.9, s_y=.9, s_width=1.4, s_height=1.2,
+             h_fill = "#FFFFFF",
+             h_color = "purple",
+             white_around_sticker = TRUE,
+             url = "Aidan Combs | Duke University",
+             u_color = "purple",
+             u_size = 3,
+             filename="../images/logo.png")
+s
 ```
 
 ## How are male and female coaches distributed between men's and women's teams?
@@ -186,6 +213,8 @@ ggplot(genderdist_complete, aes(y = totalcoaches, x = coachgender, fill = coachg
   theme(legend.position = "none")
 ```
 
+# Inference
+
 ## Do women and men have the same probability of being hired for coaching jobs?
 
 -   It depends on the job!
@@ -221,7 +250,13 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
  theme(legend.position = "none")
 ```
 
-# Technology
+# Interpretation
+
+## Why might this be? 
+
+## What explanations might our data be able to speak to? 
+
+# How we'll do it: technology
 
 ## Why not these?
 
@@ -233,7 +268,7 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 -   Limited functionality
 
--   Not reproducible
+-   Work is not reproducible
 
 -   Expensive!
 
@@ -251,7 +286,7 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 -   Free!
 
-# Course overview
+# Course logistics
 
 ## Homepage
 
@@ -360,9 +395,17 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ## Sharing / reusing code policy
 
--   I know that a huge volume of code is available on the web, and many tasks may have solutions posted
+-   I know that a huge volume of code is available on the web, and many tasks may have solutions posted.
+    ChatGPT may (or may not) also be able to write code that is useful to you.
 
--   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+-   Programmers use online resources to help them accomplish tasks all the time--these sources can be extremely helpful for learning *when used well.*
+
+    -   What does this mean?
+        Use them to learn.
+        Don't blindly copy/paste; it won't work.
+        We'll talk more about this soon.
+
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
 
 -   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
 
