@@ -15,17 +15,15 @@ R is the name of the programming language itself and RStudio is a convenient int
 An additional goal is to reinforce Git and GitHub, the collaboration and version control system that we will be using throughout the course.
 
 ::: callout-note
-Git is a version control system (like "Track Changes" features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).
+Git is a version control system (like "Track Changes" features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like Box but much better).
 :::
 
-As the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer.
+As the labs progress, you are encouraged to explore.
+A willingness to experiment will make you a much better programmer.
 Before we get to that stage, however, you need to build some basic fluency in R.
 Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.
 
-To make versioning simpler, this and the next lab are solo labs.
-In the future, you'll learn about collaborating on GitHub and producing a single lab report for your lab team, but for now, concentrate on getting the basics down.
-
-By the end of the lab, you will...
+By the end of the assignment, you will...
 
 -   Be familiar with the workflow using R, RStudio, Git, and GitHub
 -   Gain practice writing a reproducible report using Quarto
@@ -33,10 +31,6 @@ By the end of the lab, you will...
 -   Be able to create data visualizations using `ggplot2`
 
 # Getting started
-
-::: callout-important
-Your lab TA will lead you through the Getting Started and Packages sections.
-:::
 
 ## Log in to RStudio
 
@@ -50,7 +44,7 @@ If you haven't yet done so, you will need to reserve a container for `STA198-199
 ## Set up your SSH key
 
 You will authenticate GitHub using SSH.
-Below are an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
+Below are an outline of the authentication steps.
 
 ::: callout-note
 You only need to do this authentication process one time on a single system.
@@ -98,9 +92,9 @@ You are now ready interact with GitHub via RStudio!
 
 ## Clone the repo & start new RStudio project
 
--   Go to the course organization at [github.com/sta199-f22-1](https://github.com/sta199-f22-1) organization on GitHub.
-    Click on the repo with the prefix **lab-0**.
-    It contains the starter documents you need to complete the lab.
+-   Go to the course organization at <https://github.com/soc333-sum23> organization on GitHub.
+    Click on the repo with the prefix **hw-1**.
+    It contains the starter documents you need to complete the homework.
 
 -   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
     Click on the clipboard icon to copy the repo URL.
@@ -154,9 +148,6 @@ Note that every commit needs to have a commit message associated with it.
 
 You don't have to commit after every change, as this would get quite tedious.
 You should commit states that are *meaningful to you* for inspection, comparison, or restoration.
-
-In the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use.
-As the semester progresses we will let you make these decisions.
 
 Now let's make sure all the changes went to GitHub.
 Go to your GitHub repo and refresh the page.
@@ -398,6 +389,5 @@ Then push.
 
 # Submission
 
-In future labs we'll provide instructions for submission to Gradescope here.
-This lab is not graded, so you do not need to submit it on Gradescope.
-However you should make sure to commit and push all of your changes (nothing should be left in the Git pane) to your repo.
+Make sure to commit and push all of your changes (nothing should be left in the Git pane) to your repo.
+Then you're done!

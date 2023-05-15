@@ -1,0 +1,397 @@
+---
+title: "Welcome to SOCIOL 333"
+subtitle: "Lecture 1"
+date: "May 17, 2023"
+format: revealjs
+---
+
+```{r setup, echo = FALSE}
+library(tidyverse)
+```
+
+# Introductions
+
+## Meet the prof
+
+Aidan Combs
+
+She/her
+
+Ph.D. candidate in sociology
+
+Reuben-Cooke 141
+
+## Meet each other!
+
+-   Name and pronouns, if you wish
+
+-   Major and what's next for you (if you've thought about it!)
+
+-   What are you looking forward to in Durham this summer (other than this class, of course)?
+
+## Meet this course
+
+::: incremental
+-   Quantitative Analysis of Sociological Data
+
+    -   aka, statistics/data science for sociologists
+
+-   Course learning objectives in a nutshell
+
+    -   To give you a set of tools to use to analyze data and communicate what's happening in the social world
+
+    -   To teach you how to critique data analyses that show up in papers, media, etc
+:::
+
+## Your expectations
+
+-   What have you heard about this course/stats courses in general?
+
+-   What is an expectation or goal you have for this course?
+
+## My goals
+
+::: incremental
+-   That this course be useful to you
+
+    -   We will build skills you can use later
+
+    -   Everything we do has a purpose!
+
+-   That the classroom environment be supportive
+
+    -   We will cover everything you need to know
+
+    -   Lots of opportunities to ask questions; lots of in-class practice
+:::
+
+# An Example
+
+## Let's meet some data
+
+-   Equity in Athletics Data Analytics
+
+![](images/01/datapdf.png)
+
+```{r, echo = FALSE}
+sportspeople <- readRDS("data/sports_npeople.rds")
+
+dukecoaches <- sportspeople |> 
+  filter(school == "Duke",
+         year == 2021) |> 
+  group_by(teamgender, coachgender, coachlevel, assignstatus) |> 
+  summarize(n = sum(ncoaches))
+
+coachesperteam <- sportspeople |> 
+  filter(school == "Duke", 
+         year == 2021) |> 
+  group_by(teamgender, assignstatus, sport, nplayers) |> 
+  summarize(totalcoaches = sum(ncoaches)) |> 
+  mutate(playercoachratio = nplayers/totalcoaches)
+
+```
+
+## How many coaches were there at Duke in 2021?
+
+```{r, echo = FALSE}
+dukecoaches2021 <- sportspeople |> 
+  filter(school == "Duke", 
+         year == 2021) |> 
+  group_by(teamgender) |> 
+  summarize(totalcoaches = sum(ncoaches))
+
+mensteamcoaches <- dukecoaches2021$totalcoaches[[1]]
+womensteamcoaches <- dukecoaches2021$totalcoaches[[2]]
+```
+
+-   `r mensteamcoaches` for men's teams
+-   `r womensteamcoaches` for women's teams
+
+## How has that changed since 2003?
+
+```{r, echo = FALSE}
+coachesovertime <- sportspeople |> 
+  filter(school == "Duke") |> 
+  group_by(year, teamgender) |> 
+  summarize(totalcoaches = sum(ncoaches)) |> 
+  mutate(teamgender = factor(teamgender, levels = c("women", "men")))
+
+ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_minimal() + 
+  labs(y = "Number of coaches",
+       x = "Year",
+       title = "Change in number of Duke coaches over time",
+       color = "Team gender")
+
+```
+
+## How are male and female coaches distributed between men's and women's teams?
+
+```{r, echo = FALSE}
+genderdist <- sportspeople |> 
+  filter(school == "Duke",
+         year == 2021) |> 
+  group_by(teamgender, coachgender, coachlevel) |> 
+  summarize(totalcoaches = sum(ncoaches)) |> 
+  ungroup() 
+
+genderdist_complete <- genderdist |> 
+  expand(teamgender, coachgender, coachlevel) |> 
+  full_join(genderdist) |> 
+  replace_na(list(totalcoaches = 0)) |> 
+  mutate(coachgender = factor(coachgender, levels = c("women", "men")),
+         coachlevel = factor(ifelse(coachlevel == "head", "Head coaches", "Assistant coaches"),
+                             levels = c("Head coaches", "Assistant coaches")),
+         teamgender = factor(
+           ifelse(teamgender == "men", "Men's teams", "Women's teams"),
+           levels = c("Women's teams", "Men's teams")
+         )
+  )
+
+ggplot(filter(genderdist_complete, coachlevel == "Head coaches"), aes(y = totalcoaches, x = coachgender, fill = coachgender)) + 
+  geom_bar(stat = "identity") + 
+  facet_grid(cols = vars(teamgender)) + 
+  theme_minimal() + 
+  labs(x = "Coach gender",
+       y = "Number of coaches",
+       fill = "Head coach gender",
+       title = "Head coaches") + 
+  theme(legend.position = "none")
+```
+
+```{r, echo = FALSE}
+ggplot(filter(genderdist_complete, coachlevel == "Assistant coaches"), aes(y = totalcoaches, x = coachgender, fill = coachgender)) + 
+  geom_bar(stat = "identity") + 
+  facet_grid(cols = vars(teamgender)) + 
+  theme_minimal() + 
+  labs(x = "Assistant coach gender",
+       y = "Number of coaches",
+       fill = "Assistant coach gender",
+       title = "Assistant coaches") + 
+  theme(legend.position = "none")
+```
+
+```{r, echo = FALSE}
+ggplot(genderdist_complete, aes(y = totalcoaches, x = coachgender, fill = coachgender)) + 
+  geom_bar(stat = "identity") + 
+  facet_grid(cols = vars(teamgender),
+             rows = vars(coachlevel)) + 
+  theme_minimal() + 
+  labs(x = "Coach gender",
+       y = "Number of coaches",
+       fill = "Coach gender",
+       title = "All coaches") + 
+  theme(legend.position = "none")
+```
+
+## Do women and men have the same probability of being hired for coaching jobs?
+
+-   It depends on the job!
+
+```{r}
+genderdist_t <- genderdist_complete |> 
+  pivot_wider(names_from = coachgender, values_from = totalcoaches)
+
+genderdist_t[1, 'p'] <- prop.test(x = as.matrix(genderdist_t[1, 3:4]))$p.value
+genderdist_t[2, 'p'] <- prop.test(x = as.matrix(genderdist_t[2, 3:4]))$p.value
+genderdist_t[3, 'p'] <- prop.test(x = as.matrix(genderdist_t[3, 3:4]))$p.value
+genderdist_t[4, 'p'] <- prop.test(x = as.matrix(genderdist_t[4, 3:4]))$p.value
+
+genderdist_t$sig <- ifelse(genderdist_t$p < .05, "yes", "no")
+
+genderdist_sig <- genderdist_t |> 
+  pivot_longer(names_to = 'coachgender', 
+               values_to = 'totalcoaches',
+               cols = c("men", "women")) |> 
+  mutate(coachgender = factor(coachgender, levels = c("women", "men")))
+```
+
+```{r, echo = FALSE, warning = FALSE}
+ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender, alpha = sig)) + 
+ geom_bar(stat = "identity") + 
+ facet_grid(cols = vars(teamgender),
+ rows = vars(coachlevel)) + 
+ theme_minimal() + 
+ labs(x = "Coach gender",
+ y = "Number of coaches",
+ fill = "Coach gender",
+ title = "All coaches") + 
+ theme(legend.position = "none")
+```
+
+# Technology
+
+## Why not these?
+
+|                         |                          |
+|-------------------------|--------------------------|
+| ![](images/01/ti84.jpg) | ![](images/01/excel.png) |
+
+## Why not these?
+
+-   Limited functionality
+
+-   Not reproducible
+
+-   Expensive!
+
+## Instead! R and RStudio
+
+![](images/01/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
+
+## Instead! R and RStudio
+
+-   Completely reproducible and open-source
+
+-   Lots of flexibility, and capabilities are always expanding
+
+-   A great resume line--it's what the pros use
+
+-   Free!
+
+# Course overview
+
+## Homepage
+
+<https://soc333-sum23.github.io/>
+
+-   All course materials
+-   Links to Sakai, GitHub, RStudio containers, etc.
+-   Let's take a tour!
+
+## Course toolkit
+
+All linked from the course website:
+
+-   GitHub organization: <https://github.com/soc333-sum23>
+-   RStudio containers: [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers)
+
+::: callout-important
+Reserve an RStudio Container before class on Monday!
+:::
+
+## Activities {.smaller}
+
+::: incremental
+-   **Readings:** All available free online. Best if completed before class.
+-   **Class:** You are expected to attend every day. Your assignments will be much easier if you take advantage of in-class opportunities to complete them.
+-   **In-class exercises:** Complete (at least mostly) during class each day. Turn them in before the next class period. Graded for completion. You'll have to do these on your own if you miss class.
+-   **Homework:** Two additional out-of-class assignments.
+-   **Project:** Final project, developed in pieces through the course of the semester. Paper and presentation due at the end.
+:::
+
+## Exams???
+
+-   nope :)
+
+    ![](images/01/baby-celebrate.jpg)
+
+## Cadence
+
+::: incremental
+-   **Class:** Monday-Thursday (except Memorial Day and Juneteenth)
+-   **In-class exercises:** Most days; due before the next class period
+-   **Project:** Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday.
+-   **Homework:** Due on Mondays when there isn't a project component due.
+:::
+
+## Grading {.smaller}
+
+| Category           | Percentage                                     |
+|--------------------|------------------------------------------------|
+| Homework           | 20% (10% x 2)                                  |
+| In-class exercises | 30%                                            |
+| Project            | 50% (22.5% components; 27.5% final paper+pres) |
+
+See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#grading) for how the final letter grade will be determined.
+
+## [Support](https://soc333-sum23.github.io/course-support.html)
+
+-   Attend office hours! 30 min before/after class
+-   Ask questions in class
+-   Email for individual matters. aidan.combs\@duke.edu
+-   Lots of [resources available through the university](https://soc333-sum23.github.io/course-support.html#academic-support)--use them!
+
+## Announcements
+
+-   Posted on Sakai (Announcements tool) and sent via email, be sure to check both regularly
+-   I'll assume that you've read an announcement by the next "business" day
+-   I'll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do.
+
+## Diversity + inclusion {.smaller}
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+
+::: incremental
+-   Please let me know your preferred name and pronouns on the Getting to know you survey.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+:::
+
+## Accessibility
+
+-   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
+
+-   I am committed to making all course materials accessible and I'm always learning how to do this better.
+    If any course component is not accessible to you in any way, please don't hesitate to let me know.
+
+# Course policies
+
+## COVID policies
+
+-   Masks are optional
+
+-   If you're sick, please stay home
+
+-   Read and follow university guidance
+
+## Late work, waivers, regrades policy
+
+-   We have policies!
+-   Read about them on the [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#course-policies) and refer back to them when you need it
+
+## Collaboration policy
+
+-   Everything you submit for grading in this course should be completed individually.
+
+-   However, you will be working together frequently to provide feedback on each others' final projects.
+
+## Sharing / reusing code policy
+
+-   I know that a huge volume of code is available on the web, and many tasks may have solutions posted
+
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
+
+## Academic integrity
+
+> To uphold the Duke Community Standard:
+>
+> -   I will not lie, cheat, or steal in my academic endeavors;
+>
+> -   I will conduct myself honorably in all my endeavors; and
+>
+> -   I will act if the Standard is compromised.
+
+## Most importantly!
+
+Ask if you're not sure if something violates a policy!
+
+## This week's tasks
+
+-   Before tomorrow: read IMS ch 1
+
+-   Before Monday: complete HW 1 (getting oriented to R)
+
+## Let's get started!
+
+-   In-class exercise 1: let's get set up with GitHub!
+
+-   Get a GitHub account if you don't have one (some advice for choosing a username [here](https://happygitwithr.com/github-acct.html#username-advice "Happy Git with R"))
+
+-   Complete the Getting to know you survey if you haven't yet done so!
+
+-   Read the syllabus

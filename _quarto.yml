@@ -9,9 +9,9 @@ website:
   page-navigation: true
   title: "SOCIOL 333"
   description: "Homepage for SOCIOL 333 - Quantitative Analysis of Sociological Data, Summer 2023 Term 1"
-  site-url: "https://ahcombs.github.io/soc333-sum23.github.io/"
+  site-url: "https://soc333-sum23.github.io/"
 
-  repo-url: https://github.com/ahcombs/soc333-sum23.github.io
+  repo-url: https://github.com/soc333-sum23/soc333-sum23.github.io
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -23,7 +23,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/ahcombs/soc333-sum23.github.io
+        href: https://github.com/soc333-sum23/soc333-sum23.github.io
         text: "GitHub organization"
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers

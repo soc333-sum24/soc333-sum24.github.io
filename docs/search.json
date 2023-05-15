@@ -5017,5 +5017,208 @@
     "title": "Computing troubleshooting",
     "section": "",
     "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course Slack to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\n\nAnother approach is to request a restart of your container. To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container."
+  },
+  {
+    "objectID": "slides/01-welcome.html#meet-each-other",
+    "href": "slides/01-welcome.html#meet-each-other",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\nName and pronouns, if you wish\nMajor and what’s next for you (if you’ve thought about it!)\nWhat are you looking forward to in Durham this summer (other than this class, of course)?"
+  },
+  {
+    "objectID": "slides/01-welcome.html#meet-this-course",
+    "href": "slides/01-welcome.html#meet-this-course",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Meet this course",
+    "text": "Meet this course\n\n\nQuantitative Analysis of Sociological Data\n\naka, statistics/data science for sociologists\n\nCourse learning objectives in a nutshell\n\nTo give you a set of tools to use to analyze data and communicate what’s happening in the social world\nTo teach you how to critique data analyses that show up in papers, media, etc"
+  },
+  {
+    "objectID": "slides/01-welcome.html#whats-wrong-with-these",
+    "href": "slides/01-welcome.html#whats-wrong-with-these",
+    "title": "Welcome to SOCIOL 333",
+    "section": "What’s wrong with these?",
+    "text": "What’s wrong with these?"
+  },
+  {
+    "objectID": "slides/01-welcome.html#whats-wrong-with-these-1",
+    "href": "slides/01-welcome.html#whats-wrong-with-these-1",
+    "title": "Welcome to SOCIOL 333",
+    "section": "What’s wrong with these?",
+    "text": "What’s wrong with these?\n\nLimited functionality\nNot reproducible\nExpensive!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#instead-r-and-rstudio",
+    "href": "slides/01-welcome.html#instead-r-and-rstudio",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Instead! R and RStudio",
+    "text": "Instead! R and RStudio"
+  },
+  {
+    "objectID": "slides/01-welcome.html#instead-r-and-rstudio-1",
+    "href": "slides/01-welcome.html#instead-r-and-rstudio-1",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Instead! R and RStudio",
+    "text": "Instead! R and RStudio\n\nCompletely reproducible and open-source\nLots of flexibility, and capabilities are always expanding\nA great resume line–it’s what the pros use\nFree!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#application-exercise",
+    "href": "slides/01-welcome.html#application-exercise",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Application exercise",
+    "text": "Application exercise\n\nOr more like demo for today…\n📋 github.com/sta199-f22-1/ae-0-unvotes"
+  },
+  {
+    "objectID": "slides/01-welcome.html#homepage",
+    "href": "slides/01-welcome.html#homepage",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://soc333-sum23.github.io/\n\nAll course materials\nLinks to Sakai, GitHub, RStudio containers, etc.\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#course-toolkit",
+    "href": "slides/01-welcome.html#course-toolkit",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: https://github.com/soc333-sum23\nRStudio containers: cmgr.oit.duke.edu/containers\n\n\n\n\n\n\n\nImportant\n\n\nReserve an RStudio Container before class on Monday!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#activities",
+    "href": "slides/01-welcome.html#activities",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Activities",
+    "text": "Activities\n\n\nReadings: All available free online. Best if completed before class.\nClass: You are expected to attend every day. Your assignments will be much easier if you take advantage of in-class opportunities to complete them.\nIn-class exercises: Complete (at least mostly) during class each day. Turn them in before the next class period. Graded for completion. You’ll have to do these on your own if you miss class.\nHomework: Two additional out-of-class assignments.\nProject: Final project, developed in pieces through the course of the semester. Paper and presentation due at the end."
+  },
+  {
+    "objectID": "slides/01-welcome.html#exams",
+    "href": "slides/01-welcome.html#exams",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Exams???",
+    "text": "Exams???\n\nnope :)"
+  },
+  {
+    "objectID": "slides/01-welcome.html#cadence",
+    "href": "slides/01-welcome.html#cadence",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Cadence",
+    "text": "Cadence\n\n\nClass: Monday-Thursday (except Memorial Day and Juneteenth)\nIn-class exercises: Most days; due before the next class period\nProject: Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday.\nHomework: Due on Mondays when there isn’t a project component due."
+  },
+  {
+    "objectID": "slides/01-welcome.html#grading",
+    "href": "slides/01-welcome.html#grading",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n20% (10% x 2)\n\n\nIn-class exercises\n30%\n\n\nProject\n50% (22.5% components; 27.5% final paper+pres)\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/01-welcome.html#support",
+    "href": "slides/01-welcome.html#support",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours! 30 min before/after class\nAsk questions in class\nEmail for individual matters. aidan.combs@duke.edu\nLots of resources available through the university–use them!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#announcements",
+    "href": "slides/01-welcome.html#announcements",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do."
+  },
+  {
+    "objectID": "slides/01-welcome.html#diversity-inclusion",
+    "href": "slides/01-welcome.html#diversity-inclusion",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/01-welcome.html#accessibility",
+    "href": "slides/01-welcome.html#accessibility",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/01-welcome.html#covid-policies",
+    "href": "slides/01-welcome.html#covid-policies",
+    "title": "Welcome to SOCIOL 333",
+    "section": "COVID policies",
+    "text": "COVID policies\n\nMasks are optional\nIf you’re sick, please stay home\nRead and follow university guidance"
+  },
+  {
+    "objectID": "slides/01-welcome.html#late-work-waivers-regrades-policy",
+    "href": "slides/01-welcome.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/01-welcome.html#collaboration-policy",
+    "href": "slides/01-welcome.html#collaboration-policy",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nEverything you submit for grading in this course should be completed individually.\nHowever, you will be working together frequently to provide feedback on each others’ final projects."
+  },
+  {
+    "objectID": "slides/01-welcome.html#sharing-reusing-code-policy",
+    "href": "slides/01-welcome.html#sharing-reusing-code-policy",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nI know that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/01-welcome.html#academic-integrity",
+    "href": "slides/01-welcome.html#academic-integrity",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/01-welcome.html#most-importantly",
+    "href": "slides/01-welcome.html#most-importantly",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01-welcome.html#this-weeks-tasks",
+    "href": "slides/01-welcome.html#this-weeks-tasks",
+    "title": "Welcome to SOCIOL 333",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nBefore tomorrow: read IMS ch 1\nBefore Monday: complete HW 1 (getting oriented to R)"
+  },
+  {
+    "objectID": "slides/01-welcome.html#lets-get-started",
+    "href": "slides/01-welcome.html#lets-get-started",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\n\nIn-class exercise 1: let’s get set up with GitHub!\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
+    "objectID": "slides/01-welcome.html#meet-the-prof",
+    "href": "slides/01-welcome.html#meet-the-prof",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Meet the prof",
+    "text": "Meet the prof\nAidan Combs\nShe/her\nPh.D. candidate in sociology\nReuben-Cooke 141"
+  },
+  {
+    "objectID": "slides/01-welcome.html#your-expectations",
+    "href": "slides/01-welcome.html#your-expectations",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Your expectations",
+    "text": "Your expectations\n\nWhat have you heard about this course/stats courses in general?\nWhat is an expectation or goal you have for this course?"
+  },
+  {
+    "objectID": "slides/01-welcome.html#my-goals",
+    "href": "slides/01-welcome.html#my-goals",
+    "title": "Welcome to SOCIOL 333",
+    "section": "My goals",
+    "text": "My goals\n\n\nThat this course be useful to you\n\nWe will build skills you can use later\nEverything we do has a purpose!\n\nThat the classroom environment be supportive\n\nWe will cover everything you need to know\nLots of opportunities to ask questions; lots of in-class practice"
+  },
+  {
+    "objectID": "slides/01-welcome.html#lets-meet-some-data",
+    "href": "slides/01-welcome.html#lets-meet-some-data",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Let’s meet some data",
+    "text": "Let’s meet some data\n\nEquity in Athletics Data Analytics\n\n\n\nHow many coaches were there at Duke in 2021?\n\n::: {.cell}\n\n:::\n\n\n47 for men’s teams\n43 for women’s teams\n\nHow has that changed since 2003?\nHow are male and female coaches distributed between men’s and women’s teams?"
   }
 ]
