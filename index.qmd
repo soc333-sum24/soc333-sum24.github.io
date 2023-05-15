@@ -23,7 +23,7 @@ d |>
   ) |>
   gt() |>
   fmt_date(Date, date_style = 31) |>
-  sub_missing(columns = c(Week, Topic, Read, Due, Exercise), missing_text = "") |>
+  sub_missing(columns = c(Week, Topic, Read, Bring, Due, Exercise), missing_text = "") |>
   cols_align(
     align = "center", 
     columns = c(Week)
@@ -34,7 +34,7 @@ d |>
     ) |>
   cols_align(
     align = "left", 
-    columns = c(Topic, Read, Due, Exercise)
+    columns = c(Topic, Read, Bring, Due, Exercise)
     ) |>
   tab_style(
     style = cell_borders(
@@ -47,7 +47,7 @@ d |>
     )
   ) |>
   fmt_markdown(
-    columns = c(Topic, Read, Due, Exercise)
+    columns = c(Topic, Read, Bring, Due, Exercise)
   ) |>
   cols_width(
     Week ~ px(30),
@@ -56,6 +56,7 @@ d |>
     Topic ~ px(400),
     Topic ~ px(300),
     Due ~ px(200),
+    Bring ~ px(200),
     Exercise ~ px(300)
   )
 ```
