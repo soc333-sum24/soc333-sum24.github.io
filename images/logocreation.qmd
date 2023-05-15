@@ -1,0 +1,32 @@
+```{r, echo = FALSE}
+library(tidyverse)
+
+sportspeople <- readRDS("../exampleprep/sports_npeople.rds")
+
+coachesovertime <- sportspeople |> 
+  filter(school == "Duke") |> 
+  group_by(year, teamgender) |> 
+  summarize(totalcoaches = sum(ncoaches)) |> 
+  mutate(teamgender = factor(teamgender, levels = c("women", "men")))
+
+stickerplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
+ geom_line(alpha = .3) + 
+ geom_point(size = .1, alpha = .3) + 
+ theme_minimal() + 
+ labs(y = "",
+ x = "",
+ color = "") + 
+ theme(legend.position = "none",
+ axis.text = element_text(color = "grey75"))
+
+s <- hexSticker::sticker(stickerplot,
+ package="Sociol333", p_size=26, p_y = 1, p_color = "purple",
+ s_x=.9, s_y=.9, s_width=1.6, s_height=1.4,
+ h_fill = "#FFFFFF",
+ h_color = "purple",
+ white_around_sticker = TRUE,
+ url = "Aidan Combs | Duke University",
+ u_color = "purple",
+ u_size = 4,
+ filename="../images/logo.png")
+```

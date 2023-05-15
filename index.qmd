@@ -19,22 +19,22 @@ d <- read_excel("schedule.xlsx")
 ```{r, echo = FALSE}
 d |>
   mutate(
-    date = as.Date(date)
+    Date = as.Date(Date)
   ) |>
   gt() |>
-  fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, topic, prepare, due), missing_text = "") |>
+  fmt_date(Date, date_style = 31) |>
+  sub_missing(columns = c(Week, Topic, Read, Due, Exercise), missing_text = "") |>
   cols_align(
     align = "center", 
-    columns = c(week)
+    columns = c(Week)
     ) |>
   cols_align(
     align = "right", 
-    columns = c(date)
+    columns = c(Date)
     ) |>
   cols_align(
     align = "left", 
-    columns = c(topic, prepare, due)
+    columns = c(Topic, Read, Due, Exercise)
     ) |>
   tab_style(
     style = cell_borders(
@@ -43,19 +43,20 @@ d |>
       style = "solid"
     ),
     locations = cells_body(
-      columns = c(date, topic, prepare)
+      columns = c(Date, Topic, Read)
     )
   ) |>
   fmt_markdown(
-    columns = c(topic, prepare, due)
+    columns = c(Topic, Read, Due, Exercise)
   ) |>
   cols_width(
-    week ~ px(30),
-    date ~ px(200), 
-    due ~ px(150),
-    topic ~ px(400),
-    topic ~ px(300),
-    due ~ px(200)
+    Week ~ px(30),
+    Date ~ px(200), 
+    Due ~ px(150),
+    Topic ~ px(400),
+    Topic ~ px(300),
+    Due ~ px(200),
+    Exercise ~ px(300)
   )
 ```
 :::

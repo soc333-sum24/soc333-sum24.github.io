@@ -130,30 +130,6 @@ coachtimeplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color =
 coachtimeplot
 ```
 
-```{r, echo = FALSE}
-stickerplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
-  geom_line(aes(alpha = .3)) + 
-  geom_point(aes(alpha = .3)) + 
-  theme_minimal() + 
-  labs(y = "",
-       x = "",
-       color = "") + 
-  theme(legend.position = "none",
-        axis.text = element_text(color = "grey75"))
-
-s <- sticker(stickerplot,
-             package="Sociol333", p_size=20, p_y = 1, p_color = "purple",
-             s_x=.9, s_y=.9, s_width=1.4, s_height=1.2,
-             h_fill = "#FFFFFF",
-             h_color = "purple",
-             white_around_sticker = TRUE,
-             url = "Aidan Combs | Duke University",
-             u_color = "purple",
-             u_size = 3,
-             filename="../images/logo.png")
-s
-```
-
 ## How are male and female coaches distributed between men's and women's teams?
 
 ```{r, echo = FALSE}
