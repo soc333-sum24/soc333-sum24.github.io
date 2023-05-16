@@ -4,7 +4,7 @@ subtitle: "Instructor: Aidan Combs, Reuben-Cooke 141 \n\n Summer Term 1, 2023"
 ---
 
 ::: {.content-visible when-format="html"}
-[**Click here**](sociol333-sum23-syllabus.pdf) **to download a PDF copy of the syllabus.**
+[**Click here**](soc333-sum23-syllabus.pdf) **to download a PDF copy of the syllabus.**
 :::
 
 ## Class times
@@ -23,7 +23,7 @@ Our textbook is [**freely available online**](https://openintro-ims.netlify.app/
 It is also possible to order a hard copy if you prefer.
 
 |                                                                         |                          |                                   |                                                                                                                                  |
-|-----------------|-----------------|-----------------|----------------------|
+|-----------------|-----------------|-----------------|---------------------|
 | [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
 
 ## Course learning objectives

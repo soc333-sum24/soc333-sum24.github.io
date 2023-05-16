@@ -51,7 +51,7 @@ The below data sets are good places to start, though you may propose others so l
 -   yrbss
 ```
 
-### Version to bring to class for peer review (DATE)
+### Version to bring to class for peer review (Thursday May 25)
 
 You are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you're interested in potentially using for the final project.
 If you would like to receive feedback on more than two research questions, you may optionally submit additional questions.
@@ -88,7 +88,7 @@ For each research question, you should:
     -   Place the file containing your data in the `data` folder of the project repo.
     -   Use the `glimpse()` function to provide a glimpse of the data set.
 
-### Version to submit for grading (DATE)
+### Version to submit for grading (Tuesday May 30, 11:59pm)
 
 After peer review, incorporate your peers' feedback into your draft.
 In addition, add \~1 paragraph of thoughts about which question you should ultimately choose to move forward with.
@@ -102,7 +102,7 @@ Submit one Quarto document containing your revised research questions and this s
 ## Grading
 
 |                                                                                                              |     |
-|--------------------------------------------------------------------------------------------------------------|-----|
+|------------------------------------------------------------|------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |

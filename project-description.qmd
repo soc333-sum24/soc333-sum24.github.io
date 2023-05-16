@@ -5,15 +5,18 @@ callout-icon: false
 
 # Timeline
 
-[Proposal](#proposal): bring to class DATE, due DATE
+"Bring to class" deadlines mean you must have your work submitted before class starts on the given day.
+"Due" deadlines are 11:59pm.
 
-[Descriptive statistics](#descriptives): bring to class DATE, due DATE
+[Proposal](#proposal): bring to class Thursday, May 25; due Tuesday, May 30
 
-[Results](#results) bring to class DATE, due DATE
+[Descriptive statistics](#descriptives): bring to class Thursday, June 1; due Monday, June 5
 
-[Paper](#paper) bring to class DATE, due DATE
+[Results](#results) bring to class Thursday, June 15; due Tuesday, June 20
 
-[Presentation + slides](#presentation) due at time of in-class presentation on DATE
+[Paper](#paper) bring to class Thursday, June 22; due Wednesday, June 28
+
+[Presentation + slides](#presentation) due before in-class presentations on Monday, June 26.
 
 # Overview
 
@@ -94,4 +97,14 @@ A general breakdown of scoring is as follows:
 
 ## Late work policy
 
-**There is no late work accepted on this project.** Be sure to turn in your work early to avoid any technological mishaps.
+-   If you do not bring work to peer-review in class, you will be required to review your own work on your own time, and you will lose points on the peer review portion of the grade.
+
+-   You have three free late days available to you that you can use no questions asked.
+
+    -   That means you can submit one assignment (homework or project component) three days late, three assignments one day late each, or one assignment two days late and a second assignment one day late without penalty.
+
+    -   You do not have to provide me a reason for using late days--simply submit the assignment when you can and tell me that you are using your late days for it.
+
+    -   After your late days are exhausted, grade penalties will begin to apply for future late work.
+
+    -   If life is interfering more than a little bit with your ability to complete your work in this class, please come talk to me.

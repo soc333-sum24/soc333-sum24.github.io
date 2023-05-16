@@ -12,7 +12,7 @@ In this component, you will explore the variables you will use in your analysis.
 There will be no peer review version for this component.
 Instead, we will make time available to work on it in class so that you can work through any issues with the help of your colleagues and I.
 
-### Version to bring to class (DATE)
+### Version to bring to class (Thursday June 1)
 
 Come to class having already started the assignment.
 At minimum, identify your variables, load your data, run the `summary()` and/or `table()` functions on the variables you are using in your analysis, and try to create one plot.
@@ -21,7 +21,7 @@ Completing as much as you can prior to class will allow you to make the best use
 I encourage you to submit questions ahead of time by DETAILS or come to class prepared to ask specific questions.
 Your preparation for and participation in the class session will be part of your grade for this component.
 
-### Version to submit for grading (DATE)
+### Version to submit for grading (Monday June 5, 11:59pm)
 
 Please submit this assignment as a single Quarto document.
 
@@ -49,7 +49,7 @@ Please submit this assignment as a single Quarto document.
 ## Grading
 
 |                                                                        |     |
-|-----------------------------------------------------|-------------------|
+|---------------------------------------------------|---------------------|
 | Preparation for work in class: assignment started, class participation | 30% |
 | Part 1                                                                 | 30% |
 | Part 2                                                                 | 30% |
