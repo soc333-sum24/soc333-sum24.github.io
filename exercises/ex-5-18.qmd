@@ -73,7 +73,7 @@ Goals: By the end of the exercise, you will...
 
 # Getting started
 
-Find someone with the same operating system as you to work together on this with.
+I recommend you find someone with the same operating system as you to work together on this with.
 
 ## Download and install both [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/)
 
@@ -93,16 +93,51 @@ You should see a screen that looks something like this:
 ![](images/rstudio.png)
 
 We will go through what the different pieces of this interface are in more detail another day.
-For now, all you need to know is that the box on the left hand side labeled "Console", where the blue "\>" is, is where you will be copy/pasting the code that is given to you in the next sections.
+For now, all you need to know is that the box on the left hand side labeled "Console", where the blue "\>" is, is where you will be copy/pasting and running the code that is given to you in the next sections.
 
 ## Set up Git and GitHub
 
-We will be following the instructions [on this webpage](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/) to set up Git and GitHub.
-I have written out the code pieces you need here so that you can copy/paste them into your console.
+We will be following the instructions in the [How to Set up Git]{.underline} section [of this webpage](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/).
 
-## Connect Git and Github to R and RStudio
+You can **skip** the subsections [Initialize a Git Repository]{.underline}, [View Commit History]{.underline}, and [Make a Commit and View More History]{.underline}
+
+## Connect Git and GitHub to R and RStudio
 
 We're still following [these instructions](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/) (same page as above).
+Now, follow the directions in the [Connect RStudio and GitHub]{.underline} section.
+
+Not working?
+You can try [these instructions](https://github.com/DukeStatSci/github_auth_guide) instead--a slightly different process that should lead to the same result.
+
+## Clone the repo & start a new RStudio project
+
+-   Go to the course organization at [https://github.com/soc333-sum23](#0){.uri} organization on GitHub.
+    Click on the repo with the prefix **ex-5-18**.
+    It contains a document with which you will test that everything is set up correctly.
+
+-   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
+    Click on the clipboard icon to copy the repo URL.
+
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+
+-   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+
+-   Click *ex-5-18-test.qmd* to open the template Quarto file.
+
+-   Follow the instructions in the file to make a change and commit it.
+
+## It worked!
+
+-   Congrats! You're done with the most annoying and tedious part of this course!
+
+```{=html}
+<iframe src="https://giphy.com/embed/t3sZxY5zS5B0z5zMIz" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nhl-sports-hockey-fan-t3sZxY5zS5B0z5zMIz">via GIPHY</a></p>
+```
+## It didn't work...
+
+-   Can't seem to get it? No worries--come talk to me and we'll get it sorted out.
 
 ## Log in to RStudio
 

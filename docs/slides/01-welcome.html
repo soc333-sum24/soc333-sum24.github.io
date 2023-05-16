@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -434,16 +369,18 @@ Aidan Combs
 </section>
 <section id="meet-this-course" class="slide level2">
 <h2>Meet this course</h2>
-<div>
 <ul>
-<li class="fragment"><p>Quantitative Analysis of Sociological Data</p>
+<li><p>Quantitative Analysis of Sociological Data</p>
 <ul>
-<li class="fragment">aka, statistics/data science for sociologists</li>
+<li>aka, statistics/data science for sociologists</li>
 </ul></li>
-<li class="fragment"><p>Course learning objectives in a nutshell</p>
+</ul>
+<div class="fragment">
 <ul>
-<li class="fragment"><p>To give you a set of tools to use to analyze data and communicate what’s happening in the social world</p></li>
-<li class="fragment"><p>To teach you how to critique data analyses that show up in papers, media, etc</p></li>
+<li><p>Course learning objectives in a nutshell</p>
+<ul>
+<li><p>To give you a set of tools to use to analyze data and communicate what’s happening in the social world</p></li>
+<li><p>To teach you how to critique data analyses that show up in papers, media, etc</p></li>
 </ul></li>
 </ul>
 </div>
@@ -451,112 +388,114 @@ Aidan Combs
 <section id="your-expectations" class="slide level2">
 <h2>Your expectations</h2>
 <ul>
-<li><p>What have you heard about this course/stats courses in general?</p></li>
-<li><p>What is an expectation or goal you have for this course?</p></li>
+<li><p>What have you heard about this course/similar courses?</p></li>
+<li><p>What is a goal you have for this course?</p></li>
 </ul>
 </section>
 <section id="my-goals" class="slide level2">
 <h2>My goals</h2>
-<div>
 <ul>
-<li class="fragment"><p>That this course be useful to you</p>
+<li><p>That this course be useful to you</p>
 <ul>
-<li class="fragment"><p>We will build skills you can use later</p></li>
-<li class="fragment"><p>Everything we do has a purpose!</p></li>
+<li><p>We will build skills you can use later</p></li>
+<li><p>Everything we do has a purpose!</p></li>
 </ul></li>
-<li class="fragment"><p>That the classroom environment be supportive</p>
+</ul>
+<div class="fragment">
 <ul>
-<li class="fragment"><p>We will cover everything you need to know</p></li>
-<li class="fragment"><p>Lots of opportunities to ask questions; lots of in-class practice</p></li>
+<li><p>That the classroom environment be supportive</p>
+<ul>
+<li><p>We will cover everything you need to know</p></li>
+<li><p>Lots of opportunities to ask questions; lots of in-class practice</p></li>
 </ul></li>
+</ul>
+</div>
+</section>
+<section id="what-i-need-from-you" class="slide level2">
+<h2>What I need from you</h2>
+<ul>
+<li><p>Bring a laptop to class every day–something that connects to wifi and that you can download software onto</p>
+<ul>
+<li>…but please don’t let it distract you (I can tell…)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Be engaged. Participate in class–the work will be easier.</li>
 </ul>
 </div>
 </section></section>
 <section>
-<section id="what-well-do-an-example" class="title-slide slide level1 center">
-<h1>What we’ll do: an example</h1>
+<section id="what-well-do" class="title-slide slide level1 center">
+<h1>What we’ll do</h1>
 
 </section>
-<section id="lets-meet-some-data" class="slide level2">
+<section id="lets-meet-some-data" class="slide level2 smaller">
 <h2>Let’s meet some data!</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
-<li>Equity in Athletics Data Analytics</li>
+<li><a href="https://ope.ed.gov/athletics/#/">Equity in Athletics Data Analytics</a></li>
+<li>Participation, staffing, revenues, and expenditures for mens and womens college sports teams</li>
 </ul>
-
-<img data-src="images/01/datapdf.png" class="r-stretch"></section></section>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/01/datapdf.png"></p>
+</div>
+</div>
+</section></section>
 <section>
-<section id="description" class="title-slide slide level1 center">
-<h1>Description</h1>
+<section id="data-description" class="title-slide slide level1 center">
+<h1>Data Description</h1>
 
 </section>
 <section id="how-many-coaches-were-there-at-duke-in-2021" class="slide level2">
 <h2>How many coaches were there at Duke in 2021?</h2>
+<div class="fragment">
 <ul>
-<li>47 for men’s teams</li>
-<li>43 for women’s teams</li>
+<li>47 for men’s teams (11 head, 36 assistant)</li>
+<li>43 for women’s teams (12 head, 31 assistant)</li>
 </ul>
+</div>
 </section>
 <section id="how-has-that-changed-since-2003" class="slide level2">
 <h2>How has that changed since 2003?</h2>
 
 <img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="how-are-male-and-female-coaches-distributed-between-mens-and-womens-teams" class="slide level2">
-<h2>How are male and female coaches distributed between men’s and women’s teams?</h2>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
-</div>
-</div>
-</section></section>
+<section class="slide level2">
+
+<p>How are male and female head coaches distributed between men’s and women’s teams?</p>
+
+<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section class="slide level2">
+
+<p>How are male and female assistant coaches distributed between men’s and women’s teams?</p>
+
+<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section class="slide level2">
+
+<p>Everyone all together!</p>
+
+<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="inference" class="title-slide slide level1 center">
 <h1>Inference</h1>
 
 </section>
-<section id="do-women-and-men-have-the-same-probability-of-being-hired-for-coaching-jobs" class="slide level2">
-<h2>Do women and men have the same probability of being hired for coaching jobs?</h2>
-<ul>
-<li>It depends on the job!</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>genderdist_t <span class="ot">&lt;-</span> genderdist_complete <span class="sc">|&gt;</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> coachgender, <span class="at">values_from =</span> totalcoaches)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>genderdist_t[<span class="dv">1</span>, <span class="st">'p'</span>] <span class="ot">&lt;-</span> <span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">as.matrix</span>(genderdist_t[<span class="dv">1</span>, <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>]))<span class="sc">$</span>p.value</span>
-<span id="cb1-5"><a href="#cb1-5"></a>genderdist_t[<span class="dv">2</span>, <span class="st">'p'</span>] <span class="ot">&lt;-</span> <span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">as.matrix</span>(genderdist_t[<span class="dv">2</span>, <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>]))<span class="sc">$</span>p.value</span>
-<span id="cb1-6"><a href="#cb1-6"></a>genderdist_t[<span class="dv">3</span>, <span class="st">'p'</span>] <span class="ot">&lt;-</span> <span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">as.matrix</span>(genderdist_t[<span class="dv">3</span>, <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>]))<span class="sc">$</span>p.value</span>
-<span id="cb1-7"><a href="#cb1-7"></a>genderdist_t[<span class="dv">4</span>, <span class="st">'p'</span>] <span class="ot">&lt;-</span> <span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">as.matrix</span>(genderdist_t[<span class="dv">4</span>, <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>]))<span class="sc">$</span>p.value</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>genderdist_t<span class="sc">$</span>sig <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(genderdist_t<span class="sc">$</span>p <span class="sc">&lt;</span> .<span class="dv">05</span>, <span class="st">"yes"</span>, <span class="st">"no"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a>genderdist_sig <span class="ot">&lt;-</span> genderdist_t <span class="sc">|&gt;</span> </span>
-<span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">pivot_longer</span>(<span class="at">names_to =</span> <span class="st">'coachgender'</span>, </span>
-<span id="cb1-13"><a href="#cb1-13"></a>               <span class="at">values_to =</span> <span class="st">'totalcoaches'</span>,</span>
-<span id="cb1-14"><a href="#cb1-14"></a>               <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"men"</span>, <span class="st">"women"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">mutate</span>(<span class="at">coachgender =</span> <span class="fu">factor</span>(coachgender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"women"</span>, <span class="st">"men"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section class="slide level2">
+
+<p>Do women and men have the same probability of being hired for coaching jobs?</p>
 
 <img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="interpretation" class="title-slide slide level1 center">
-<h1>Interpretation</h1>
+<section id="results-interpretation" class="title-slide slide level1 center">
+<h1>Results interpretation</h1>
 
 </section>
 <section id="why-might-this-be" class="slide level2">
 <h2>Why might this be?</h2>
 </section>
-<section id="what-explanations-might-our-data-be-able-to-speak-to" class="slide level2">
-<h2>What explanations might our data be able to speak to?</h2>
+<section id="what-else-can-we-ask-with-this-data-set" class="slide level2">
+<h2>What else can we ask with this data set?</h2>
 </section></section>
 <section>
 <section id="how-well-do-it-technology" class="title-slide slide level1 center">
@@ -600,35 +539,18 @@ Aidan Combs
 <h1>Course logistics</h1>
 
 </section>
+<section id="time-check" class="slide level2">
+<h2>Time check!</h2>
+<p>keep me on schedule, please–let me know when it’s 12:15 :)</p>
+</section>
 <section id="homepage" class="slide level2">
 <h2>Homepage</h2>
 <p><a href="https://soc333-sum23.github.io/" class="uri">https://soc333-sum23.github.io/</a></p>
 <ul>
 <li>All course materials</li>
-<li>Links to Sakai, GitHub, RStudio containers, etc.</li>
+<li>Links to Sakai, GitHub, etc.</li>
 <li>Let’s take a tour!</li>
 </ul>
-</section>
-<section id="course-toolkit" class="slide level2">
-<h2>Course toolkit</h2>
-<p>All linked from the course website:</p>
-<ul>
-<li>GitHub organization: <a href="https://github.com/soc333-sum23" class="uri">https://github.com/soc333-sum23</a></li>
-<li>RStudio containers: <a href="https://cmgr.oit.duke.edu/containers">cmgr.oit.duke.edu/containers</a></li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Reserve an RStudio Container before class on Monday!</p>
-</div>
-</div>
-</div>
 </section>
 <section id="activities" class="slide level2 smaller">
 <h2>Activities</h2>
@@ -654,8 +576,8 @@ Aidan Combs
 <div>
 <ul>
 <li class="fragment"><strong>Class:</strong> Monday-Thursday (except Memorial Day and Juneteenth)</li>
-<li class="fragment"><strong>In-class exercises:</strong> Most days; due before the next class period</li>
-<li class="fragment"><strong>Project:</strong> Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday.</li>
+<li class="fragment"><strong>In-class exercises:</strong> Most days; usually due before the next class period</li>
+<li class="fragment"><strong>Project:</strong> Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).</li>
 <li class="fragment"><strong>Homework:</strong> Due on Mondays when there isn’t a project component due.</li>
 </ul>
 </div>
@@ -689,7 +611,7 @@ Aidan Combs
 <section id="support" class="slide level2">
 <h2><a href="https://soc333-sum23.github.io/course-support.html">Support</a></h2>
 <ul>
-<li>Attend office hours! 30 min before/after class</li>
+<li>Attend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)</li>
 <li>Ask questions in class</li>
 <li>Email for individual matters. aidan.combs@duke.edu</li>
 <li>Lots of <a href="https://soc333-sum23.github.io/course-support.html#academic-support">resources available through the university</a>–use them!</li>
@@ -700,15 +622,15 @@ Aidan Combs
 <ul>
 <li>Posted on Sakai (Announcements tool) and sent via email, be sure to check both regularly</li>
 <li>I’ll assume that you’ve read an announcement by the next “business” day</li>
-<li>I’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do.</li>
+<li>I’ll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do.</li>
 </ul>
 </section>
 <section id="diversity-inclusion" class="slide level2 smaller">
 <h2>Diversity + inclusion</h2>
-<p>It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.</p>
+<p>My goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!</p>
 <div>
 <ul>
-<li class="fragment">Please let me know your preferred name and pronouns on the Getting to know you survey.</li>
+<li class="fragment">Please let me know your preferred name and pronouns on the Getting to Know You survey.</li>
 <li class="fragment">If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.</li>
 <li class="fragment">I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.</li>
 </ul>
@@ -744,20 +666,19 @@ Aidan Combs
 <section id="collaboration-policy" class="slide level2">
 <h2>Collaboration policy</h2>
 <ul>
-<li><p>Everything you submit for grading in this course should be completed individually.</p></li>
+<li><p>Everything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but don’t copy.</p></li>
 <li><p>However, you will be working together frequently to provide feedback on each others’ final projects.</p></li>
 </ul>
 </section>
-<section id="sharing-reusing-code-policy" class="slide level2">
+<section id="sharing-reusing-code-policy" class="slide level2 smaller">
 <h2>Sharing / reusing code policy</h2>
 <ul>
-<li><p>I know that a huge volume of code is available on the web, and many tasks may have solutions posted. ChatGPT may (or may not) also be able to write code that is useful to you.</p></li>
 <li><p>Programmers use online resources to help them accomplish tasks all the time–these sources can be extremely helpful for learning <em>when used well.</em></p>
 <ul>
-<li>What does this mean? Use them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.</li>
+<li>Use them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.</li>
 </ul></li>
-<li><p>Unless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g.&nbsp;RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).</p></li>
-<li><p>Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source</p></li>
+<li><p>You may use online resources (e.g.&nbsp;RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.</p></li>
+<li><p>Un-cited recycled/copied code = plagiarism… :(</p></li>
 </ul>
 </section>
 <section id="academic-integrity" class="slide level2">
@@ -778,17 +699,22 @@ Aidan Combs
 <section id="this-weeks-tasks" class="slide level2">
 <h2>This week’s tasks</h2>
 <ul>
-<li><p>Before tomorrow: read IMS ch 1</p></li>
-<li><p>Before Monday: complete HW 1 (getting oriented to R)</p></li>
+<li><p>Before 11:59pm tonight: Complete the Getting to Know You survey (link in email). This asks you to create a GitHub account if you don’t already have one.</p></li>
+<li><p>Before tomorrow’s class: read IMS ch 1</p></li>
 </ul>
 </section>
 <section id="lets-get-started" class="slide level2">
 <h2>Let’s get started!</h2>
 <ul>
-<li><p>In-class exercise 1: let’s get set up with GitHub!</p></li>
-<li><p>Get a GitHub account if you don’t have one (some advice for choosing a username <a href="https://happygitwithr.com/github-acct.html#username-advice" title="Happy Git with R">here</a>)</p></li>
-<li><p>Complete the Getting to know you survey if you haven’t yet done so!</p></li>
-<li><p>Read the syllabus</p></li>
+<li>Today’s in-class exercise (15 min):</li>
+<li>Get a GitHub account if you don’t have one (username advice in the survey)</li>
+<li>Complete the Getting to Know You survey (link in your email)</li>
+</ul>
+</section>
+<section id="before-you-go" class="slide level2">
+<h2>Before you go…</h2>
+<ul>
+<li>Checking in: how are you feeling so far about the course?</li>
 </ul>
 
 

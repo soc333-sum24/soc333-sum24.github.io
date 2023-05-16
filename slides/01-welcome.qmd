@@ -2,7 +2,10 @@
 title: "Welcome to SOCIOL 333"
 subtitle: "Lecture 1"
 date: "May 17, 2023"
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    show-slide-number: all
 ---
 
 ```{r setup, echo = FALSE}
@@ -31,47 +34,64 @@ Reuben-Cooke 141
 
 ## Meet this course
 
-::: incremental
 -   Quantitative Analysis of Sociological Data
 
     -   aka, statistics/data science for sociologists
+
+. . .
 
 -   Course learning objectives in a nutshell
 
     -   To give you a set of tools to use to analyze data and communicate what's happening in the social world
 
     -   To teach you how to critique data analyses that show up in papers, media, etc
-:::
 
 ## Your expectations
 
--   What have you heard about this course/stats courses in general?
+-   What have you heard about this course/similar courses?
 
--   What is an expectation or goal you have for this course?
+-   What is a goal you have for this course?
 
 ## My goals
 
-::: incremental
 -   That this course be useful to you
 
     -   We will build skills you can use later
 
     -   Everything we do has a purpose!
 
+. . .
+
 -   That the classroom environment be supportive
 
     -   We will cover everything you need to know
 
     -   Lots of opportunities to ask questions; lots of in-class practice
+
+## What I need from you
+
+-   Bring a laptop to class every day--something that connects to wifi and that you can download software onto
+
+    -   ...but please don't let it distract you (I can tell...)
+
+. . .
+
+-   Be engaged. Participate in class--the work will be easier.
+
+# What we'll do
+
+## Let's meet some data! {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   [Equity in Athletics Data Analytics](https://ope.ed.gov/athletics/#/)
+-   Participation, staffing, revenues, and expenditures for mens and womens college sports teams
 :::
 
-# What we'll do: an example
-
-## Let's meet some data!
-
--   Equity in Athletics Data Analytics
-
+::: {.column width="60%"}
 ![](images/01/datapdf.png)
+:::
+:::
 
 ```{r, echo = FALSE}
 sportspeople <- readRDS("data/sports_npeople.rds")
@@ -91,7 +111,7 @@ coachesperteam <- sportspeople |>
 
 ```
 
-# Description
+# Data Description
 
 ## How many coaches were there at Duke in 2021?
 
@@ -102,35 +122,54 @@ dukecoaches2021 <- sportspeople |>
   group_by(teamgender) |> 
   summarize(totalcoaches = sum(ncoaches))
 
+headcoaches2021 <- sportspeople |> 
+  filter(school == "Duke",
+         year == 2021) |> 
+  group_by(teamgender, coachlevel) |> 
+  summarize(totalcoaches = sum(ncoaches))
+  
+
 mensteamcoaches <- dukecoaches2021$totalcoaches[[1]]
 womensteamcoaches <- dukecoaches2021$totalcoaches[[2]]
+
+mensheadcoaches <- headcoaches2021$totalcoaches[[2]]
+womensheadcoaches <- headcoaches2021$totalcoaches[[4]]
+mensasstcoaches <- headcoaches2021$totalcoaches[[1]]
+womensasstcoaches <- headcoaches2021$totalcoaches[[3]]
 ```
 
--   `r mensteamcoaches` for men's teams
--   `r womensteamcoaches` for women's teams
+. . .
+
+-   `r mensteamcoaches` for men's teams (`r mensheadcoaches` head, `r mensasstcoaches` assistant)
+-   `r womensteamcoaches` for women's teams (`r womensheadcoaches` head, `r womensasstcoaches` assistant)
 
 ## How has that changed since 2003?
 
 ```{r, echo = FALSE}
 coachesovertime <- sportspeople |> 
   filter(school == "Duke") |> 
-  group_by(year, teamgender) |> 
+  group_by(year, teamgender, coachlevel) |> 
   summarize(totalcoaches = sum(ncoaches)) |> 
-  mutate(teamgender = factor(teamgender, levels = c("women", "men")))
+  mutate(teamgender = factor(ifelse(teamgender == "men", "men's", "women's"), levels = c("women's", "men's")),
+         coachlevel = factor(coachlevel, levels = c("head", "assistant")))
 
-coachtimeplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender)) + 
+coachtimeplot <- ggplot(coachesovertime, aes(x = year, y = totalcoaches, color = teamgender, linetype = coachlevel)) + 
   geom_line() + 
   geom_point() + 
   theme_minimal() + 
   labs(y = "Number of coaches",
        x = "Year",
        title = "Change in number of Duke coaches over time",
-       color = "Team gender")
+       color = "Team gender",
+       linetype = "Coach level")
 
 coachtimeplot
+
 ```
 
-## How are male and female coaches distributed between men's and women's teams?
+------------------------------------------------------------------------
+
+How are male and female head coaches distributed between men's and women's teams?
 
 ```{r, echo = FALSE}
 genderdist <- sportspeople |> 
@@ -164,6 +203,10 @@ ggplot(filter(genderdist_complete, coachlevel == "Head coaches"), aes(y = totalc
   theme(legend.position = "none")
 ```
 
+------------------------------------------------------------------------
+
+How are male and female assistant coaches distributed between men's and women's teams?
+
 ```{r, echo = FALSE}
 ggplot(filter(genderdist_complete, coachlevel == "Assistant coaches"), aes(y = totalcoaches, x = coachgender, fill = coachgender)) + 
   geom_bar(stat = "identity") + 
@@ -175,6 +218,10 @@ ggplot(filter(genderdist_complete, coachlevel == "Assistant coaches"), aes(y = t
        title = "Assistant coaches") + 
   theme(legend.position = "none")
 ```
+
+------------------------------------------------------------------------
+
+Everyone all together!
 
 ```{r, echo = FALSE}
 ggplot(genderdist_complete, aes(y = totalcoaches, x = coachgender, fill = coachgender)) + 
@@ -191,11 +238,11 @@ ggplot(genderdist_complete, aes(y = totalcoaches, x = coachgender, fill = coachg
 
 # Inference
 
-## Do women and men have the same probability of being hired for coaching jobs?
+------------------------------------------------------------------------
 
--   It depends on the job!
+Do women and men have the same probability of being hired for coaching jobs?
 
-```{r}
+```{r, echo = FALSE}
 genderdist_t <- genderdist_complete |> 
   pivot_wider(names_from = coachgender, values_from = totalcoaches)
 
@@ -226,11 +273,11 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
  theme(legend.position = "none")
 ```
 
-# Interpretation
+# Results interpretation
 
 ## Why might this be?
 
-## What explanations might our data be able to speak to?
+## What else can we ask with this data set?
 
 # How we'll do it: technology
 
@@ -264,24 +311,17 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 # Course logistics
 
+## Time check!
+
+keep me on schedule, please--let me know when it's 12:15 :)
+
 ## Homepage
 
 <https://soc333-sum23.github.io/>
 
 -   All course materials
--   Links to Sakai, GitHub, RStudio containers, etc.
+-   Links to Sakai, GitHub, etc.
 -   Let's take a tour!
-
-## Course toolkit
-
-All linked from the course website:
-
--   GitHub organization: <https://github.com/soc333-sum23>
--   RStudio containers: [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers)
-
-::: callout-important
-Reserve an RStudio Container before class on Monday!
-:::
 
 ## Activities {.smaller}
 
@@ -303,8 +343,8 @@ Reserve an RStudio Container before class on Monday!
 
 ::: incremental
 -   **Class:** Monday-Thursday (except Memorial Day and Juneteenth)
--   **In-class exercises:** Most days; due before the next class period
--   **Project:** Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday.
+-   **In-class exercises:** Most days; usually due before the next class period
+-   **Project:** Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).
 -   **Homework:** Due on Mondays when there isn't a project component due.
 :::
 
@@ -320,7 +360,7 @@ See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#gradin
 
 ## [Support](https://soc333-sum23.github.io/course-support.html)
 
--   Attend office hours! 30 min before/after class
+-   Attend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)
 -   Ask questions in class
 -   Email for individual matters. aidan.combs\@duke.edu
 -   Lots of [resources available through the university](https://soc333-sum23.github.io/course-support.html#academic-support)--use them!
@@ -329,14 +369,15 @@ See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#gradin
 
 -   Posted on Sakai (Announcements tool) and sent via email, be sure to check both regularly
 -   I'll assume that you've read an announcement by the next "business" day
--   I'll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do.
+-   I'll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do.
 
 ## Diversity + inclusion {.smaller}
 
-It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+My goal is that everyone is well-served by this course.
+Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!
 
 ::: incremental
--   Please let me know your preferred name and pronouns on the Getting to know you survey.
+-   Please let me know your preferred name and pronouns on the Getting to Know You survey.
 -   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
 -   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
 :::
@@ -365,22 +406,20 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ## Collaboration policy
 
--   Everything you submit for grading in this course should be completed individually.
+-   Everything you submit for grading in this course should be completed and submitted individually.
+    You can talk to each other, but don't copy.
 
 -   However, you will be working together frequently to provide feedback on each others' final projects.
 
-## Sharing / reusing code policy
-
--   I know that a huge volume of code is available on the web, and many tasks may have solutions posted.
-    ChatGPT may (or may not) also be able to write code that is useful to you.
+## Sharing / reusing code policy {.smaller}
 
 -   Programmers use online resources to help them accomplish tasks all the time--these sources can be extremely helpful for learning *when used well.*
 
-    -   What does this mean? Use them to learn. Don't blindly copy/paste; it won't work. We'll talk more about this soon.
+    -   Use them to learn. Don't blindly copy/paste; it won't work. We'll talk more about this soon.
 
--   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+-   You may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.
 
--   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
+-   Un-cited recycled/copied code = plagiarism... :(
 
 ## Academic integrity
 
@@ -398,16 +437,17 @@ Ask if you're not sure if something violates a policy!
 
 ## This week's tasks
 
--   Before tomorrow: read IMS ch 1
+-   Before 11:59pm tonight: Complete the Getting to Know You survey (link in email).
+    This asks you to create a GitHub account if you don't already have one.
 
--   Before Monday: complete HW 1 (getting oriented to R)
+-   Before tomorrow's class: read IMS ch 1
 
 ## Let's get started!
 
--   In-class exercise 1: let's get set up with GitHub!
+-   Today's in-class exercise (15 min):
+-   Get a GitHub account if you don't have one (username advice in the survey)
+-   Complete the Getting to Know You survey (link in your email)
 
--   Get a GitHub account if you don't have one (some advice for choosing a username [here](https://happygitwithr.com/github-acct.html#username-advice "Happy Git with R"))
+## Before you go...
 
--   Complete the Getting to know you survey if you haven't yet done so!
-
--   Read the syllabus
+-   Checking in: how are you feeling so far about the course?

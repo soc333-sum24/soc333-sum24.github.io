@@ -7,6 +7,7 @@ format:
     theme: slides.scss
     transition: fade
     slide-number: true
+    show-slide-number: "all"
     chalkboard: true
 editor: visual
 execute:

@@ -284,35 +284,42 @@
     "href": "slides/01-welcome.html#meet-this-course",
     "title": "Welcome to SOCIOL 333",
     "section": "Meet this course",
-    "text": "Meet this course\n\n\nQuantitative Analysis of Sociological Data\n\naka, statistics/data science for sociologists\n\nCourse learning objectives in a nutshell\n\nTo give you a set of tools to use to analyze data and communicate what’s happening in the social world\nTo teach you how to critique data analyses that show up in papers, media, etc"
+    "text": "Meet this course\n\nQuantitative Analysis of Sociological Data\n\naka, statistics/data science for sociologists\n\n\n\n\nCourse learning objectives in a nutshell\n\nTo give you a set of tools to use to analyze data and communicate what’s happening in the social world\nTo teach you how to critique data analyses that show up in papers, media, etc"
   },
   {
     "objectID": "slides/01-welcome.html#your-expectations",
     "href": "slides/01-welcome.html#your-expectations",
     "title": "Welcome to SOCIOL 333",
     "section": "Your expectations",
-    "text": "Your expectations\n\nWhat have you heard about this course/stats courses in general?\nWhat is an expectation or goal you have for this course?"
+    "text": "Your expectations\n\nWhat have you heard about this course/similar courses?\nWhat is a goal you have for this course?"
   },
   {
     "objectID": "slides/01-welcome.html#my-goals",
     "href": "slides/01-welcome.html#my-goals",
     "title": "Welcome to SOCIOL 333",
     "section": "My goals",
-    "text": "My goals\n\n\nThat this course be useful to you\n\nWe will build skills you can use later\nEverything we do has a purpose!\n\nThat the classroom environment be supportive\n\nWe will cover everything you need to know\nLots of opportunities to ask questions; lots of in-class practice"
+    "text": "My goals\n\nThat this course be useful to you\n\nWe will build skills you can use later\nEverything we do has a purpose!\n\n\n\n\nThat the classroom environment be supportive\n\nWe will cover everything you need to know\nLots of opportunities to ask questions; lots of in-class practice"
+  },
+  {
+    "objectID": "slides/01-welcome.html#what-i-need-from-you",
+    "href": "slides/01-welcome.html#what-i-need-from-you",
+    "title": "Welcome to SOCIOL 333",
+    "section": "What I need from you",
+    "text": "What I need from you\n\nBring a laptop to class every day–something that connects to wifi and that you can download software onto\n\n…but please don’t let it distract you (I can tell…)\n\n\n\n\nBe engaged. Participate in class–the work will be easier."
   },
   {
     "objectID": "slides/01-welcome.html#lets-meet-some-data",
     "href": "slides/01-welcome.html#lets-meet-some-data",
     "title": "Welcome to SOCIOL 333",
     "section": "Let’s meet some data!",
-    "text": "Let’s meet some data!\n\nEquity in Athletics Data Analytics"
+    "text": "Let’s meet some data!\n\n\n\nEquity in Athletics Data Analytics\nParticipation, staffing, revenues, and expenditures for mens and womens college sports teams"
   },
   {
     "objectID": "slides/01-welcome.html#how-many-coaches-were-there-at-duke-in-2021",
     "href": "slides/01-welcome.html#how-many-coaches-were-there-at-duke-in-2021",
     "title": "Welcome to SOCIOL 333",
     "section": "How many coaches were there at Duke in 2021?",
-    "text": "How many coaches were there at Duke in 2021?\n\n47 for men’s teams\n43 for women’s teams"
+    "text": "How many coaches were there at Duke in 2021?\n\n\n47 for men’s teams (11 head, 36 assistant)\n43 for women’s teams (12 head, 31 assistant)"
   },
   {
     "objectID": "slides/01-welcome.html#how-has-that-changed-since-2003",
@@ -322,20 +329,6 @@
     "text": "How has that changed since 2003?"
   },
   {
-    "objectID": "slides/01-welcome.html#how-are-male-and-female-coaches-distributed-between-mens-and-womens-teams",
-    "href": "slides/01-welcome.html#how-are-male-and-female-coaches-distributed-between-mens-and-womens-teams",
-    "title": "Welcome to SOCIOL 333",
-    "section": "How are male and female coaches distributed between men’s and women’s teams?",
-    "text": "How are male and female coaches distributed between men’s and women’s teams?"
-  },
-  {
-    "objectID": "slides/01-welcome.html#do-women-and-men-have-the-same-probability-of-being-hired-for-coaching-jobs",
-    "href": "slides/01-welcome.html#do-women-and-men-have-the-same-probability-of-being-hired-for-coaching-jobs",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Do women and men have the same probability of being hired for coaching jobs?",
-    "text": "Do women and men have the same probability of being hired for coaching jobs?\n\nIt depends on the job!\n\n\ngenderdist_t &lt;- genderdist_complete |&gt; \n  pivot_wider(names_from = coachgender, values_from = totalcoaches)\n\ngenderdist_t[1, 'p'] &lt;- prop.test(x = as.matrix(genderdist_t[1, 3:4]))$p.value\ngenderdist_t[2, 'p'] &lt;- prop.test(x = as.matrix(genderdist_t[2, 3:4]))$p.value\ngenderdist_t[3, 'p'] &lt;- prop.test(x = as.matrix(genderdist_t[3, 3:4]))$p.value\ngenderdist_t[4, 'p'] &lt;- prop.test(x = as.matrix(genderdist_t[4, 3:4]))$p.value\n\ngenderdist_t$sig &lt;- ifelse(genderdist_t$p &lt; .05, \"yes\", \"no\")\n\ngenderdist_sig &lt;- genderdist_t |&gt; \n  pivot_longer(names_to = 'coachgender', \n               values_to = 'totalcoaches',\n               cols = c(\"men\", \"women\")) |&gt; \n  mutate(coachgender = factor(coachgender, levels = c(\"women\", \"men\")))"
-  },
-  {
     "objectID": "slides/01-welcome.html#why-might-this-be",
     "href": "slides/01-welcome.html#why-might-this-be",
     "title": "Welcome to SOCIOL 333",
@@ -343,11 +336,11 @@
     "text": "Why might this be?"
   },
   {
-    "objectID": "slides/01-welcome.html#what-explanations-might-our-data-be-able-to-speak-to",
-    "href": "slides/01-welcome.html#what-explanations-might-our-data-be-able-to-speak-to",
+    "objectID": "slides/01-welcome.html#what-else-can-we-ask-with-this-data-set",
+    "href": "slides/01-welcome.html#what-else-can-we-ask-with-this-data-set",
     "title": "Welcome to SOCIOL 333",
-    "section": "What explanations might our data be able to speak to?",
-    "text": "What explanations might our data be able to speak to?"
+    "section": "What else can we ask with this data set?",
+    "text": "What else can we ask with this data set?"
   },
   {
     "objectID": "slides/01-welcome.html#why-not-these",
@@ -378,18 +371,18 @@
     "text": "Instead! R and RStudio\n\nCompletely reproducible and open-source\nLots of flexibility, and capabilities are always expanding\nA great resume line–it’s what the pros use\nFree!"
   },
   {
+    "objectID": "slides/01-welcome.html#time-check",
+    "href": "slides/01-welcome.html#time-check",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Time check!",
+    "text": "Time check!\nkeep me on schedule, please–let me know when it’s 12:15 :)"
+  },
+  {
     "objectID": "slides/01-welcome.html#homepage",
     "href": "slides/01-welcome.html#homepage",
     "title": "Welcome to SOCIOL 333",
     "section": "Homepage",
-    "text": "Homepage\nhttps://soc333-sum23.github.io/\n\nAll course materials\nLinks to Sakai, GitHub, RStudio containers, etc.\nLet’s take a tour!"
-  },
-  {
-    "objectID": "slides/01-welcome.html#course-toolkit",
-    "href": "slides/01-welcome.html#course-toolkit",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Course toolkit",
-    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: https://github.com/soc333-sum23\nRStudio containers: cmgr.oit.duke.edu/containers\n\n\n\n\n\n\n\nImportant\n\n\nReserve an RStudio Container before class on Monday!"
+    "text": "Homepage\nhttps://soc333-sum23.github.io/\n\nAll course materials\nLinks to Sakai, GitHub, etc.\nLet’s take a tour!"
   },
   {
     "objectID": "slides/01-welcome.html#activities",
@@ -410,7 +403,7 @@
     "href": "slides/01-welcome.html#cadence",
     "title": "Welcome to SOCIOL 333",
     "section": "Cadence",
-    "text": "Cadence\n\n\nClass: Monday-Thursday (except Memorial Day and Juneteenth)\nIn-class exercises: Most days; due before the next class period\nProject: Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday.\nHomework: Due on Mondays when there isn’t a project component due."
+    "text": "Cadence\n\n\nClass: Monday-Thursday (except Memorial Day and Juneteenth)\nIn-class exercises: Most days; usually due before the next class period\nProject: Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).\nHomework: Due on Mondays when there isn’t a project component due."
   },
   {
     "objectID": "slides/01-welcome.html#grading",
@@ -424,21 +417,21 @@
     "href": "slides/01-welcome.html#support",
     "title": "Welcome to SOCIOL 333",
     "section": "Support",
-    "text": "Support\n\nAttend office hours! 30 min before/after class\nAsk questions in class\nEmail for individual matters. aidan.combs@duke.edu\nLots of resources available through the university–use them!"
+    "text": "Support\n\nAttend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)\nAsk questions in class\nEmail for individual matters. aidan.combs@duke.edu\nLots of resources available through the university–use them!"
   },
   {
     "objectID": "slides/01-welcome.html#announcements",
     "href": "slides/01-welcome.html#announcements",
     "title": "Welcome to SOCIOL 333",
     "section": "Announcements",
-    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do."
+    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do."
   },
   {
     "objectID": "slides/01-welcome.html#diversity-inclusion",
     "href": "slides/01-welcome.html#diversity-inclusion",
     "title": "Welcome to SOCIOL 333",
     "section": "Diversity + inclusion",
-    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+    "text": "Diversity + inclusion\nMy goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!\n\n\nPlease let me know your preferred name and pronouns on the Getting to Know You survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
   },
   {
     "objectID": "slides/01-welcome.html#accessibility",
@@ -466,14 +459,14 @@
     "href": "slides/01-welcome.html#collaboration-policy",
     "title": "Welcome to SOCIOL 333",
     "section": "Collaboration policy",
-    "text": "Collaboration policy\n\nEverything you submit for grading in this course should be completed individually.\nHowever, you will be working together frequently to provide feedback on each others’ final projects."
+    "text": "Collaboration policy\n\nEverything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but don’t copy.\nHowever, you will be working together frequently to provide feedback on each others’ final projects."
   },
   {
     "objectID": "slides/01-welcome.html#sharing-reusing-code-policy",
     "href": "slides/01-welcome.html#sharing-reusing-code-policy",
     "title": "Welcome to SOCIOL 333",
     "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nI know that a huge volume of code is available on the web, and many tasks may have solutions posted. ChatGPT may (or may not) also be able to write code that is useful to you.\nProgrammers use online resources to help them accomplish tasks all the time–these sources can be extremely helpful for learning when used well.\n\nWhat does this mean? Use them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.\n\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+    "text": "Sharing / reusing code policy\n\nProgrammers use online resources to help them accomplish tasks all the time–these sources can be extremely helpful for learning when used well.\n\nUse them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.\n\nYou may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.\nUn-cited recycled/copied code = plagiarism… :("
   },
   {
     "objectID": "slides/01-welcome.html#academic-integrity",
@@ -494,14 +487,21 @@
     "href": "slides/01-welcome.html#this-weeks-tasks",
     "title": "Welcome to SOCIOL 333",
     "section": "This week’s tasks",
-    "text": "This week’s tasks\n\nBefore tomorrow: read IMS ch 1\nBefore Monday: complete HW 1 (getting oriented to R)"
+    "text": "This week’s tasks\n\nBefore 11:59pm tonight: Complete the Getting to Know You survey (link in email). This asks you to create a GitHub account if you don’t already have one.\nBefore tomorrow’s class: read IMS ch 1"
   },
   {
     "objectID": "slides/01-welcome.html#lets-get-started",
     "href": "slides/01-welcome.html#lets-get-started",
     "title": "Welcome to SOCIOL 333",
     "section": "Let’s get started!",
-    "text": "Let’s get started!\n\nIn-class exercise 1: let’s get set up with GitHub!\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Let’s get started!\n\nToday’s in-class exercise (15 min):\nGet a GitHub account if you don’t have one (username advice in the survey)\nComplete the Getting to Know You survey (link in your email)"
+  },
+  {
+    "objectID": "slides/01-welcome.html#before-you-go",
+    "href": "slides/01-welcome.html#before-you-go",
+    "title": "Welcome to SOCIOL 333",
+    "section": "Before you go…",
+    "text": "Before you go…\n\nChecking in: how are you feeling so far about the course?\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "project-results.html",
@@ -557,21 +557,21 @@
     "href": "exercises/ex-5-18.html#download-and-install-both-r-and-rstudio",
     "title": "5/18/23",
     "section": "Download and install both R and RStudio",
-    "text": "Download and install both R and RStudio\nThose links again:\n\nDownload R: https://cran.r-project.org/\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n\nFollow the instructions your computer gives you to install both programs.\nThese instructions might help if you get stuck.\nNow open RStudio. You should see a screen that looks something like this:\n\nWe will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue “&gt;” is, is where you will be copy/pasting the code that is given to you in the next sections."
+    "text": "Download and install both R and RStudio\nThose links again:\n\nDownload R: https://cran.r-project.org/\nDownload RStudio: https://posit.co/download/rstudio-desktop/\n\nFollow the instructions your computer gives you to install both programs.\nThese instructions might help if you get stuck.\nNow open RStudio. You should see a screen that looks something like this:\n\nWe will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue “&gt;” is, is where you will be copy/pasting and running the code that is given to you in the next sections."
   },
   {
     "objectID": "exercises/ex-5-18.html#set-up-git-and-github",
     "href": "exercises/ex-5-18.html#set-up-git-and-github",
     "title": "5/18/23",
     "section": "Set up Git and GitHub",
-    "text": "Set up Git and GitHub\nWe will be following the instructions on this webpage to set up Git and GitHub. I have written out the code pieces you need here so that you can copy/paste them into your console."
+    "text": "Set up Git and GitHub\nWe will be following the instructions in the How to Set up Git section of this webpage.\nYou can skip the subsections Initialize a Git Repository, View Commit History, and Make a Commit and View More History"
   },
   {
     "objectID": "exercises/ex-5-18.html#connect-git-and-github-to-r-and-rstudio",
     "href": "exercises/ex-5-18.html#connect-git-and-github-to-r-and-rstudio",
     "title": "5/18/23",
-    "section": "Connect Git and Github to R and RStudio",
-    "text": "Connect Git and Github to R and RStudio\nWe’re still following these instructions (same page as above)."
+    "section": "Connect Git and GitHub to R and RStudio",
+    "text": "Connect Git and GitHub to R and RStudio\nWe’re still following these instructions (same page as above). Now, follow the directions in the Connect RStudio and GitHub section.\nNot working? You can try these instructions instead–a slightly different process that should lead to the same result."
   },
   {
     "objectID": "exercises/ex-5-18.html#log-in-to-rstudio",
@@ -810,5 +810,26 @@
     "title": "SOCIOL333: Quantitative Analysis of Sociological Data Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nCollaboration: You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically result in a 0 for the assignment and will be reported to the Office of Student Conduct for further action.\n\n\nLate work\n\nHomework, project components, and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.\n\n\n\nExtenuating circumstances\nThings happen that make it impossible to submit every assignment on time. The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.\nIn the case that you must miss class, please let me know. My slides will be made accessible to all students. You will still be expected to complete that day’s in-class exercises, but you will have to do so on your own.\nIf there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know, as they can be a resource.\nNote: If you’ve read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!\n\n\nAttendance policy\n\nCOVID Symptoms, Exposure, or Infection: Student health, safety, and well-being are the university’s top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested. If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health (dshcheckin@duke.edu, 919-681-9355). Learn more about current university policy related to COVID-19 at https://coronavirus.duke.edu. To keep the university community’s safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.\nInclement weather: In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.  Asynchronous catch-up methods may apply.\nReligious accommodations: Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays."
+  },
+  {
+    "objectID": "exercises/ex-5-18.html#clone-the-repo-start-a-new-rstudio-project",
+    "href": "exercises/ex-5-18.html#clone-the-repo-start-a-new-rstudio-project",
+    "title": "5/18/23",
+    "section": "Clone the repo & start a new RStudio project",
+    "text": "Clone the repo & start a new RStudio project\n\nGo to the course organization at https://github.com/soc333-sum23 organization on GitHub. Click on the repo with the prefix ex-5-18. It contains a document with which you will test that everything is set up correctly.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick ex-5-18-test.qmd to open the template Quarto file.\nFollow the instructions in the file to make a change and commit it."
+  },
+  {
+    "objectID": "exercises/ex-5-18.html#it-worked",
+    "href": "exercises/ex-5-18.html#it-worked",
+    "title": "5/18/23",
+    "section": "It worked!",
+    "text": "It worked!\n\nCongrats! You’re done with the most annoying and tedious part of this course!\n\nvia GIPHY"
+  },
+  {
+    "objectID": "exercises/ex-5-18.html#it-didnt-work",
+    "href": "exercises/ex-5-18.html#it-didnt-work",
+    "title": "5/18/23",
+    "section": "It didn’t work…",
+    "text": "It didn’t work…\n\nCan’t seem to get it? No worries–come talk to me and we’ll get it sorted out."
   }
 ]

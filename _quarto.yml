@@ -2,8 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - sta199-f22-1-syllabus.pdf
-    - slides/27-interactive-web-apps.pdf
+    - soc33-sum23-syllabus.pdf
 
 website:
   page-navigation: true
@@ -74,7 +73,7 @@ website:
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2023, Aidan Combs"
-    background: "#325b74" # Pantone Midnight - Fall 2022
+    background: "#32174d" # Russian Violet
 
 format:
   html:
