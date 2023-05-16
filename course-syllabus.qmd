@@ -1,14 +1,16 @@
 ---
-title: "Syllabus"
+title: "SOCIOL333: Quantitative Analysis of Sociological Data Syllabus"
+subtitle: "Instructor: Aidan Combs, Reuben-Cooke 141 \n\n Summer Term 1, 2023"
 ---
 
 ::: {.content-visible when-format="html"}
-[**Click here**](sta199-f22-1-syllabus.pdf) **to download a PDF copy of the syllabus.**
+[**Click here**](sociol333-sum23-syllabus.pdf) **to download a PDF copy of the syllabus.**
 :::
 
 ## Class times
 
-We will generally meet from 11:15-12:30 Monday through Thursday (except Memorial Day and Juneteenth) in 329 Reuben-Cooke. See the [schedule](index.html) for more information.
+We will meet from 11:15-12:30 Monday through Thursday (except Memorial Day and Juneteenth) in 329 Reuben-Cooke.
+See the [schedule](index.html) for more information.
 
 ## Office hours
 
@@ -21,27 +23,29 @@ Our textbook is [**freely available online**](https://openintro-ims.netlify.app/
 It is also possible to order a hard copy if you prefer.
 
 |                                                                         |                          |                                   |                                                                                                                                  |
-|----------------|----------------|----------------|------------------------|
+|-----------------|-----------------|-----------------|----------------------|
 | [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
 
 ## Course learning objectives
 
 By the end of the semester, you will...
 
-
 -   learn to use statistics to shed light on questions about the social world
 -   learn to make statistical choices and interpret results in ways consistent with feminist and antiracist scholarship
 -   learn to load, manipulate, and visualize data in R
--   learn to effectively communicate results through written assignments and project presentation
--   learn to critically analyze the use of statistics in the world, and know what statistics can and can't tell you about a problem. 
+-   learn to effectively communicate results through written assignments and project presentations
+-   learn to critically analyze the use of statistics in the world, and know what statistics can and can't tell you about a problem.
 
 ## Attendance
 
-You are expected to attend every lecture. Attending class every day will make it much easier for you to complete our in-class exercises. In addition, you will have to attend class on workshop days in order to receive full points on the project components. 
+You are expected to attend every lecture.
+Attending class every day will make it much easier for you to complete our in-class exercises.
+In addition, you will have to attend class on workshop days in order to receive full points on the project components.
 
 ### What to bring to class
 
-Please bring a laptop to every class. You will need it to complete in-class exercises.
+Please bring a laptop to every class.
+You will need it to complete in-class exercises.
 
 ## Course community
 
@@ -88,9 +92,11 @@ Please check your email regularly to ensure you have the latest announcements fo
 
 ### Where to get help
 
-If you have a question during class, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone. I will also be available before and after each class session as well as by email. 
+If you have a question during class, feel free to ask it!
+There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
+I will also be available before and after each class session as well as by email.
 
-Check out the [Help](/help/) tab for more resources.
+Check out the [course support](https://soc333-sum23.github.io/course-support.html) tab for more resources.
 
 ### Email
 
@@ -104,29 +110,35 @@ The assessments in this course are designed to help you successfully achieve the
 
 ### In-class exercises
 
-We will spend a significant portion of our class time learning to apply concepts from lectures by doing in-class exercises. You will be expected to turn in the exercises from lecture before the next class period. For example, you will be expected to submit the Tuesday in-class exercises before class starts on Wednesday. These will be graded for completion--i.e., you will get full points if you show that you made a good-faith attempt to answer all parts.
+We will spend a significant portion of our class time learning to apply concepts from lectures by doing in-class exercises.
+You will be expected to turn in the exercises from lecture before the next class period.
+For example, you will be expected to submit the Tuesday exercises before class starts on Wednesday.
+These will be graded for completion--i.e., you will get full points if you show that you made a good-faith attempt to answer all parts.
 You will receive full points for the in-class exercise portion of the final grade if you submit at least 80% of the exercises on time.
 
 ### Homework
 
-You will complete 1-2 homework assignments during the course of the summer term. In homework, you will apply what you've learned during lecture to complete data analysis tasks.
+You will complete 1-2 homework assignments during the course of the summer term.
+In homework, you will apply what you've learned during lecture to complete data analysis tasks.
 You may discuss homework assignments with other students; however, homework should be completed and submitted individually.
 
 ### Project
 
-The purpose of the [project](project-description.html) is to apply what you've learned throughout the semester to analyze a sociological research question of your choice.
-You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester. You will bring a draft of most components to class to workshop with your classmates before submitting them for grading. Your grade will be determined by both the quality of your submitted work and your participation in the peer feedback process. 
+The purpose of the [project](https://soc333-sum23.github.io/project-description.html) is to apply what you've learned throughout the semester to analyze a sociological research question of your choice.
+You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester.
+You will bring a draft of most components to class to workshop with your classmates before submitting them for grading.
+Your grade will be determined by both the quality of your submitted work and your participation in the peer feedback process.
 More information about the project will be provided during the semester.
 
 ## Grading
 
 The final course grade will be calculated as follows:
 
-| Category              | Percentage   |
-|-----------------------|--------------|
-| Homework              | 20% |
-| In-class exercises | 30%         |
-| Project               | 50%          |
+| Category           | Percentage |
+|--------------------|------------|
+| Homework           | 20%        |
+| In-class exercises | 30%        |
+| Project            | 50%        |
 
 Your final letter grade will be determined based on the following thresholds:
 
@@ -147,7 +159,8 @@ Your final letter grade will be determined based on the following thresholds:
 
 ### Regrade requests
 
-I do everything in my power to grade assignments consistently, accurately, and fairly the first time. I will only change a grade later if I made a clear and undeniable error--doing otherwise compromises the fairness and consistency I strive for. 
+I do everything in my power to grade assignments consistently, accurately, and fairly the first time.
+I will only change a grade later if I made a clear and undeniable error--doing otherwise compromises the fairness and consistency I strive for.
 
 To ask a question about your grade or request a regrade, please email me.
 
@@ -159,7 +172,7 @@ To ask a question about your grade or request a regrade, please email me.
 
 Please abide by the following as you work on assignments in this course:
 
--   You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
+-   **Collaboration:** You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
 -   **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
 
 Any violations in academic honesty standards as outlined in the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) and those specific to this course will automatically result in a 0 for the assignment and will be reported to the [Office of Student Conduct](https://studentaffairs.duke.edu/conduct) for further action.
@@ -170,9 +183,12 @@ Any violations in academic honesty standards as outlined in the [Duke Community 
 
 ### Extenuating circumstances
 
-Things happen that make it impossible to submit every assignment on time. The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.
+Things happen that make it impossible to submit every assignment on time.
+The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.
 
-In the case that you must miss class, please let me know. My slides will be made accessible to all students. You will still be expected to complete that day's in-class exercises, but you will have to do so on your own.
+In the case that you must miss class, please let me know.
+My slides will be made accessible to all students.
+You will still be expected to complete that day's in-class exercises, but you will have to do so on your own.
 
 If there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know, as they can be a resource.
 

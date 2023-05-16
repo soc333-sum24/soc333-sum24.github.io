@@ -12,17 +12,20 @@ There are likely other students with the same question, so by asking you will cr
 
 ## Office hours
 
-I will come to the lecture hall 30 minutes prior to class, and stay 30 minutes after class.
+I will come to the classroom 30 minutes prior to class and stay 30 minutes after class.
 You are encouraged to come early or stay late to ask questions about the course content and assignments.
 A lot of questions are most effectively answered in-person, so office hours are a valuable resource.
 I encourage each and every one of you to take advantage of it!
 
-If these times do not work for you, please email me to set up an appointment.
+If it works better for you to meet at a different time, please email me to set up an appointment.
 
 ## Email
 
-My email address is [ahc26@duke.edu](mailto:ahc26@duke.edu). If you have a question that's not appropriate for the public forum, please email me. Barring extenuating circumstances, I will respond to emails within 48 hours Monday - Friday.
-I take weekends off (and encourage you to do so as well). As such, I will respond more slowly to emails sent Friday evening - Sunday.
+My email address is [ahc26\@duke.edu](mailto:ahc26@duke.edu).
+Please email me with any questions you have that you don't wish to ask in class.
+Barring extenuating circumstances, I will respond to emails within 48 hours Monday - Friday.
+I take weekends off (and encourage you to do so as well).
+As such, I will respond more slowly to emails sent Friday evening - Sunday.
 
 ## Academic support
 
@@ -34,6 +37,12 @@ Because learning is a process unique to every individual, they work with each st
 Contact the ARC to schedule an appointment.
 Undergraduates in any year, studying any discipline can benefit!
 Contact [ARC\@duke.edu](mailto:arc@duke.edu), 919-684-5917.
+
+## Technical support
+
+For help with computing, reach out to the [Duke Office of Information Technology](https://oit.duke.edu/help/).
+A functioning computing setup is a critical part of this course.
+If something breaks, please reach out to me as soon as possible.
 
 ## Mental health and wellness
 
@@ -48,16 +57,17 @@ Duke encourages all students to access these resources.
 
 ## Course costs
 
--   **Textbooks:** The textbooks for this course are freely available on the web.
--   **Laptops:** Each student is expected to have a laptop they can bring to each lecture.
+-   **Textbook:** The textbook and all other readings for this course are freely available on the web.
+-   **Laptops:** Each student is expected to have a laptop they can bring to each lecture. Any laptop that will connect to campus wifi and allow you to download a roughly 1gb program should be fine.
 
 If you are having difficulty with costs associated with this course, here are some resources:
 
 -   [Contact the financial aid office](https://financialaid.duke.edu/contact "https://financialaid.duke.edu/contact") (whether or not you are on aid).
     They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.
 
--   DukeLIFE offers [course materials assistance](https://dukelife.duke.edu/programs/course-materials-assistance/ "https://dukelife.duke.edu/programs/course-materials-assistance/") for eligible students.
-    Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.
+-   DukeLIFE offers [loaner laptops](https://dukelife.duke.edu/technology-assistance-program/) for eligible students.
+
+-   [The Link](https://oit.duke.edu/what-we-do/services/link-equipment) may also offer short-term laptop rentals.
 
 ## **Assistance with Sakai**
 

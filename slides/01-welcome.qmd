@@ -228,9 +228,9 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 # Interpretation
 
-## Why might this be? 
+## Why might this be?
 
-## What explanations might our data be able to speak to? 
+## What explanations might our data be able to speak to?
 
 # How we'll do it: technology
 
@@ -376,10 +376,7 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   Programmers use online resources to help them accomplish tasks all the time--these sources can be extremely helpful for learning *when used well.*
 
-    -   What does this mean?
-        Use them to learn.
-        Don't blindly copy/paste; it won't work.
-        We'll talk more about this soon.
+    -   What does this mean? Use them to learn. Don't blindly copy/paste; it won't work. We'll talk more about this soon.
 
 -   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
 
