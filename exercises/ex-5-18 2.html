@@ -94,13 +94,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="SOCIOL 333 - 5/18/23">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://soc333-sum23.github.io/hw/images/lab-0/rstudio.png">
+<meta property="og:image" content="https://soc333-sum23.github.io/exercises/images/rstudio.png">
 <meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:image:height" content="1610">
+<meta property="og:image:width" content="2870">
 </head>
 
 <body class="nav-sidebar docked">
@@ -223,6 +223,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Component 5: Presentation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-tips-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tips + resources</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -239,6 +245,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lets-get-set-up" id="toc-lets-get-set-up" class="nav-link" data-scroll-target="#lets-get-set-up">Let’s get set up!</a></li>
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
   <ul class="collapse">
+  <li><a href="#download-and-install-both-r-and-rstudio" id="toc-download-and-install-both-r-and-rstudio" class="nav-link" data-scroll-target="#download-and-install-both-r-and-rstudio">Download and install both R and RStudio</a></li>
+  <li><a href="#set-up-git-and-github" id="toc-set-up-git-and-github" class="nav-link" data-scroll-target="#set-up-git-and-github">Set up Git and GitHub</a></li>
+  <li><a href="#connect-git-and-github-to-r-and-rstudio" id="toc-connect-git-and-github-to-r-and-rstudio" class="nav-link" data-scroll-target="#connect-git-and-github-to-r-and-rstudio">Connect Git and Github to R and RStudio</a></li>
   <li><a href="#log-in-to-rstudio" id="toc-log-in-to-rstudio" class="nav-link" data-scroll-target="#log-in-to-rstudio">Log in to RStudio</a></li>
   <li><a href="#get-familiar-with-rstudio" id="toc-get-familiar-with-rstudio" class="nav-link" data-scroll-target="#get-familiar-with-rstudio">Get familiar with RStudio</a></li>
   <li><a href="#set-up-your-ssh-key" id="toc-set-up-your-ssh-key" class="nav-link" data-scroll-target="#set-up-your-ssh-key">Set up your SSH key</a></li>
@@ -250,15 +259,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#push-changes" id="toc-push-changes" class="nav-link" data-scroll-target="#push-changes">Push changes</a></li>
   </ul></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
-  <ul class="collapse">
-  <li><a href="#data-visualization-and-summary" id="toc-data-visualization-and-summary" class="nav-link" data-scroll-target="#data-visualization-and-summary">Data visualization and summary</a></li>
-  <li><a href="#resize-your-figures" id="toc-resize-your-figures" class="nav-link" data-scroll-target="#resize-your-figures">Resize your figures</a></li>
-  </ul></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/hw/hw-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/exercises/ex-5-18.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -299,7 +301,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a note. Notes will contain exercises and questions you need to provide an answer to.</p>
+<p>This is a note. Notes will contain problems and questions you need to provide an answer to.</p>
 </div>
 </div>
 <p>For this exercise, you will submit your response via the assignments tab in Sakai. After this, you will instead submit exercises by pushing your edits to GitHub. More details to follow in future.</p>
@@ -309,7 +311,7 @@ Note
 <h1>Let’s get set up!</h1>
 <p>This exercise will introduce you to the course computing workflow. We will set up everything you need in order to start using R, RStudio, Git, and GitHub–four powerful programs that you will be learning to use to analyze data in this class.</p>
 <p>R is a programming language, like Python, C++, Java, and many others. That means it can be used to do all kinds of things. Its primary strength, however, is data analysis, and it is used by many social scientists, statisticians, data scientists, and others to clean, model, transform, and visualize all kinds of data.</p>
-<p>RStudio is an interface for using R--basically, a nice text editor with bells and whistles that are specific to writing code. There are other ways to write programs in R, but most people use RStudio because it is both free and powerful.</p>
+<p>RStudio is an interface for using R--basically, a nice text editor with bells and whistles that are specific to writing code. There are other ways to write programs in R, but most people use RStudio because it is both powerful and free.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -338,7 +340,7 @@ Tip
 </div>
 </div>
 <p>Today, we simply aim to get these four tools set up and talking to one another. This can be a little tedious, but I ask that you stick with it–it only needs to be done once, and we will take as much time as we need to ensure it works for everyone.</p>
-<p>Goals: By the end of the assignment, you will…</p>
+<p>Goals: By the end of the exercise, you will…</p>
 <ul>
 <li>Have a functioning R, RStudio, Git, and GitHub setup</li>
 <li>Be familiar with our course workflow using R, RStudio, Git, and GitHub</li>
@@ -349,6 +351,28 @@ Tip
 </section>
 <section id="getting-started" class="level1">
 <h1>Getting started</h1>
+<p>Find someone with the same operating system as you to work together on this with.</p>
+<section id="download-and-install-both-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="download-and-install-both-r-and-rstudio">Download and install both <a href="https://cran.r-project.org/">R</a> and <a href="https://posit.co/download/rstudio-desktop/">RStudio</a></h2>
+<p>Those links again:</p>
+<ul>
+<li><p>Download R: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p></li>
+<li><p>Download RStudio: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p></li>
+</ul>
+<p>Follow the instructions your computer gives you to install both programs.</p>
+<p><a href="https://rstudio-education.github.io/hopr/starting.html">These instructions</a> might help if you get stuck.</p>
+<p>Now open RStudio. You should see a screen that looks something like this:</p>
+<p><img src="images/rstudio.png" class="img-fluid"></p>
+<p>We will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue “&gt;” is, is where you will be copy/pasting the code that is given to you in the next sections.</p>
+</section>
+<section id="set-up-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-git-and-github">Set up Git and GitHub</h2>
+<p>We will be following the instructions <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">on this webpage</a> to set up Git and GitHub. I have written out the code pieces you need here so that you can copy/paste them into your console.</p>
+</section>
+<section id="connect-git-and-github-to-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="connect-git-and-github-to-r-and-rstudio">Connect Git and Github to R and RStudio</h2>
+<p>We’re still following <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">these instructions</a> (same page as above).</p>
+</section>
 <section id="log-in-to-rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="log-in-to-rstudio">Log in to RStudio</h2>
 <ul>
@@ -499,180 +523,11 @@ Note
 </ul>
 <p>The message that’s printed when you load the package tells you which versions of these packages are loaded as well as any conflicts they may have introduced, e.g., the <code>filter()</code> function from dplyr has now masked (overwritten) the <code>filter()</code> function available in base R (and that’s ok, we’ll use <code>dplyr::filter()</code> anyway).</p>
 <p>You can now <strong>Render</strong> your template document and see the results.</p>
-</section>
-<section id="data" class="level1">
-<h1>Data</h1>
-<p>The data frame we will be working with today is called <code>datasaurus_dozen</code> and it’s in the datasauRus package. Actually, this single data frame contains 13 datasets, designed to show us why data visualization is important and how summary statistics alone can be misleading. The different datasets are marked by the <code>dataset</code> variable.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If it’s confusing that the data frame is called <code>datasaurus_dozen</code> when it contains 13 datasets, you’re not alone! Have you heard of a <a href="https://www.mentalfloss.com/article/32259/why-bakers-dozen-13">baker’s dozen</a>?</p>
-</div>
-</div>
-<p>Let’s also load these packages in the <strong>Console</strong>. You can do this by either typing the following in the console or clicking on the play button (green triangle) on the code chunk that loads the packages.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(tidyverse)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># library(datasauRus)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To find out more about the dataset, type the following in your console.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ?datasaurus_dozen</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>A question mark before the name of an object will always bring up its help file. This command must be run in the console. Alternatively, you can use the <code>help()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># help(datasaurus_dozen)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
-<ol type="1">
-<li>Based on the help file, how many rows and how many columns does the <code>datasaurus_dozen</code> file have? What are the variables included in the data frame? Add your responses to your lab report.</li>
-</ol>
-<div class="render-commit-push">
-<p>When you’re done, commit your changes with the commit message “Added answer for Ex 1”,</p>
-<p>Then, <strong>push</strong> these changes.</p>
-</div>
-<p>Let’s take a look at what these datasets are. To do so we can check th e <code>distinct()</code> values of the <code>dataset</code> variable:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #| eval: true</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># datasaurus_dozen |&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   distinct(dataset)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The original Datasaurus (<code>dino</code>) was created by Alberto Cairo in <a href="http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html">this great blog post</a>. The other Dozen were generated using simulated annealing and the process is described in the paper <em>Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics</em> through Simulated Annealing by Justin Matejka and George Fitzmaurice.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the paper, the authors simulate a variety of datasets that the same summary statistics to the Datasaurus but have very different distributions.</p>
-<section id="data-visualization-and-summary" class="level2">
-<h2 class="anchored" data-anchor-id="data-visualization-and-summary">Data visualization and summary</h2>
-<ol start="2" type="1">
-<li>Plot <code>y</code> vs.&nbsp;<code>x</code> for the <code>dino</code> dataset. Then, calculate the correlation coefficient between <code>x</code> and <code>y</code> for this dataset.</li>
-</ol>
-<p>Below is the code you will need to complete this exercise. Basically, the answer is already given, but you need to include relevant bits in your document and successfully render it and view the results.</p>
-<p>Start with the <code>datasaurus_dozen</code> and <strong>pipe</strong> it into the <code>filter</code> function to filter for observations where <code>dataset == "dino"</code>. Store the resulting filtered data frame as a new data frame called <code>dino_data</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dino_data &lt;- datasaurus_dozen |&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   filter(dataset == "dino")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>There is a lot going on here, so let’s slow down and unpack it a bit.</p>
-<p>First, the pipe operator: <code>|&gt;</code>, takes what comes before it and sends it as the first argument to what comes after it. So here, we’re saying <code>filter</code> the <code>datasaurus_dozen</code> data frame for observations where <code>dataset == "dino"</code>.</p>
-<p>Second, the assignment operator: <code>&lt;-</code>, assigns the name <code>dino_data</code> to the filtered data frame.</p>
-<p>Next, we need to visualize these data. We will use the <code>ggplot</code> function for this. Its first argument is the data you’re visualizing. Next we define the <code>aes</code>thetic mappings. In other words, the columns of the data that get mapped to certain aesthetic features of the plot, e.g.&nbsp;the <code>x</code> axis will represent the variable called <code>x</code> and the <code>y</code> axis will represent the variable called <code>y</code>. Then, we add another layer to this plot where we define which <code>geom</code>etric shapes we want to use to represent each observation in the data. In this case we want these to be points, hence <code>geom_point</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(data = dino_data, mapping = aes(x = x, y = y)) +</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_point()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For the second part of this exercise, we need to calculate a summary statistic: the correlation coefficient. Correlation coefficient, often referred to as <span class="math inline">\(r\)</span> in statistics, measures the linear association between two variables. You will see that some of the pairs of variables we plot do not have a linear relationship between them. This is exactly why we want to visualize first: visualize to assess the form of the relationship, and calculate <span class="math inline">\(r\)</span> only if relevant. In this case, calculating a correlation coefficient really doesn’t make sense since the relationship between <code>x</code> and <code>y</code> is definitely not linear (it’s dinosaurial)!</p>
-<p>For illustrative purposes only, let’s calculate the correlation coefficient between <code>x</code> and <code>y</code>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Start with `dino_data` and calculate a summary statistic that we will call `r` as the `cor`relation between `x` and `y`.</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dino_data |&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   summarize(r = cor(x, y))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="render-commit-push">
-<p>This is a good place to pause, <strong>render</strong>, and <strong>commit</strong> changes with the commit message “Added answer for Ex 2.”</p>
-<p>Then, <strong>push</strong> these changes when you’re done.</p>
-</div>
-<ol start="3" type="1">
-<li>Plot <code>y</code> vs.&nbsp;<code>x</code> for the <code>circle</code> dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between <code>x</code> and <code>y</code> for this dataset. How does this value compare to the <code>r</code> of <code>dino</code>?</li>
-</ol>
-<div class="render-commit-push">
-<p>This is another good place to pause, <strong>render</strong>, and <strong>commit</strong> changes with the commit message “Added answer for Ex 3.”</p>
-<p>Then, <strong>push</strong> these changes when you’re done.</p>
-</div>
-<ol start="4" type="1">
-<li>Plot <code>y</code> vs.&nbsp;<code>x</code> for the <code>star</code> dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between <code>x</code> and <code>y</code> for this dataset. How does this value compare to the <code>r</code> of <code>dino</code>?</li>
-</ol>
-<div class="render-commit-push">
-<p>You should pause again, <strong>render</strong>, <strong>commit</strong> changes with the commit message “Added answer for Ex 4”.</p>
-<p>Then, <strong>push</strong>.</p>
-</div>
-<p>Finally, let’s plot all datasets at once. In order to do this we will make use of faceting, given by the code below:</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Facet by the dataset variable, placing the plots in a 3 column grid, and don’t add a legend.</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_point()+</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   facet_wrap(~ dataset, ncol = 3) +</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme(legend.position = "none")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>And we can use the <code>group_by</code> function to generate all the summary correlation coefficients. We’ll go through these functions next week when we learn about data wrangling.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># datasaurus_dozen |&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   group_by(dataset) |&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   summarize(r = cor(x, y)) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="5" type="1">
-<li>Include the faceted plot and the summary of the correlation coefficients in your lab write-up by including relevant code in R chunks (and give them appropriate labels). In the narrative below the code chunks, <em>briefly</em> comment on what you notice about the plots and the correlations between <code>x</code> and <code>y</code> values within each of them (one or two sentences is fine!).</li>
-</ol>
-<p>You’re done with the data analysis exercises, but we’d like to do one more thing to customize the look of the report.</p>
-</section>
-<section id="resize-your-figures" class="level2">
-<h2 class="anchored" data-anchor-id="resize-your-figures">Resize your figures</h2>
-<p>We can customize the output from a particular R chunk by including options in the header that will override any global settings.</p>
-<ol start="6" type="1">
-<li>In the R chunks you wrote for Exercises 2-5, customize the settings by modifying the <strong>options</strong> in the R chunks used to create those figures.</li>
-</ol>
-<p>For Exercises 2, 3, and 4, we want square figures. We can use <code>fig.height</code> and <code>fig.width</code> in the options to adjust the height and width of figures. Modify the chunks in Exercises 2-4 to be as follows:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ex2-chunk-label</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 5</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code that created the figure</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For Exercise 5, modify your figure to have <code>fig-height</code> of 10 and <code>fig-width</code> of 6.</p>
-<p>Now, save and render.</p>
-<p>Once you’ve created this PDF file, you’re done!</p>
-<div class="render-commit-push">
-<p>Commit all remaining changes with the commit message “Done with Lab 1!”.</p>
-<p>Then push.</p>
-</div>
-</section>
-</section>
-<section id="submission" class="level1">
-<h1>Submission</h1>
-<p>Make sure to commit and push all of your changes (nothing should be left in the Git pane) to your repo. Then you’re done!</p>
 
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Matejka, Justin, and George Fitzmaurice. “Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing.” Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 2017.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

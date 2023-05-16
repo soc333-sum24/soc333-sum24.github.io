@@ -17,7 +17,7 @@ website:
   open-graph: true
 
   sidebar:
-    background: "#325b74" # Pantone Midnight - Fall 2022
+    background: "#32174d" # Russian Violet
     logo: "images/logo.png"
     pinned: true
     align: center
@@ -68,8 +68,8 @@ website:
             text: "Component 4: Paper"
           - href: project-presentation.qmd
             text: "Component 5: Presentation"
-          - href: project-tips-resources.qmd
-            text: "Tips + resources"
+          # - href: project-tips-resources.qmd
+          #   text: "Tips + resources"
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
