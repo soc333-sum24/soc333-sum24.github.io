@@ -45,14 +45,14 @@ website:
             text: Support
           - href: course-links.qmd
             text: Useful links
-      # - section: "Computing"
-      #   contents:
-      #     - href: computing-access.qmd
-      #       text: Access
-      #     - href: computing-troubleshooting.qmd
-      #       text: Troubleshooting
-      #     - href: computing-cheatsheets.qmd
-      #       text: Cheatsheets
+      - section: "Computing"
+        contents:
+          - href: computing-setup.qmd
+            text: Setup instructions
+          # - href: computing-troubleshooting.qmd
+          #   text: Troubleshooting
+          - href: computing-cheatsheets.qmd
+            text: Cheatsheets
       - section: "Project"
         contents:
           - href: project-description.qmd

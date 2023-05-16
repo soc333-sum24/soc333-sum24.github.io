@@ -2,14 +2,10 @@
 title: "Computing access"
 ---
 
-We will be using R and RStudio to do statistical analysis and Git and GitHub to submit assignments. 
+We will be using R and RStudio to do statistical analysis and Git and GitHub to submit assignments.
 
-I recommend setting up this software on a laptop that you can bring to class. We will walk through this process in class--see ex-5-18. 
-
-
-
-
-
+I recommend setting up this software on a laptop that you can bring to class.
+We will walk through this process in class--see ex-5-18.
 
 To access computing resources for this course, go to the [Duke Container Manager](https://cmgr.oit.duke.edu/containers) website, [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers).
 
@@ -47,6 +43,7 @@ However, it has advantages once set up--notably, local copies can be used offlin
 
 You will need to download the most recent versions of [R](https://cran.r-project.org/), [RStudio](https://blog--rstudio-com.netlify.app/products/rstudio/download/#download), and [Git](https://git-scm.com/downloads) (all free online).
 
-Then, you will need to connect git and your GitHub account to RStudio. I recommend [these instructions](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/). 
+Then, you will need to connect git and your GitHub account to RStudio.
+I recommend [these instructions](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/).
 
 If you get stuck, talk to me--I'm happy to help!
