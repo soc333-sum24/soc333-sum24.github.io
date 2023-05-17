@@ -161,4 +161,4 @@ Ask if you're not sure if something violates a policy!
     -   Surveys, administrative data, digital trace data, etc
 :::
 
-## An example: EADA data (from last time)
+## EADA data (from last time)
