@@ -69,6 +69,10 @@ website:
             text: "Component 5: Presentation"
           # - href: project-tips-resources.qmd
           #   text: "Tips + resources"
+      - section: "Lecture slides"
+        contents:
+          - href: slides/01-welcome.qmd
+          - text: "Lecture 1: Welcome"
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
