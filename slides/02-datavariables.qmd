@@ -1,0 +1,164 @@
+---
+title: "Data and Variables"
+subtitle: "Lecture 2"
+date: "May 18, 2023"
+format: 
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+```{r setup, echo = FALSE}
+library(tidyverse)
+```
+
+# Wrapping up course logistics
+
+## Reminders
+
+-   Drop/add ends tomorrow
+-   Class does not meet Fridays--next meeting is Monday
+
+## Cadence
+
+::: incremental
+-   **Class:** Monday-Thursday (except Memorial Day and Juneteenth)
+-   **In-class exercises:** Most days; usually due before the next class period
+-   **Project:** Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).
+-   **Homework:** Due on Mondays when there isn't a project component due.
+:::
+
+## Grading {.smaller}
+
+| Category           | Percentage                                     |
+|--------------------|------------------------------------------------|
+| Homework           | 20% (10% x 2)                                  |
+| In-class exercises | 30%                                            |
+| Project            | 50% (22.5% components; 27.5% final paper+pres) |
+
+See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#grading) for how the final letter grade will be determined.
+
+## [Support](https://soc333-sum23.github.io/course-support.html)
+
+-   Attend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)
+-   Ask questions in class
+-   Email for individual matters. aidan.combs\@duke.edu
+-   Lots of [resources available through the university](https://soc333-sum23.github.io/course-support.html#academic-support)--use them!
+
+## Announcements
+
+-   Posted on Sakai (Announcements tool) and sent via email, be sure to check both regularly
+-   I'll assume that you've read an announcement by the next "business" day
+-   I'll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do.
+
+## Diversity + inclusion {.smaller}
+
+My goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!
+
+::: incremental
+-   Please let me know your preferred name and pronouns on the Getting to Know You survey.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+:::
+
+## Accessibility
+
+-   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
+
+-   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+
+# Course policies
+
+## COVID policies
+
+-   Masks are optional
+
+-   If you're sick, please stay home
+
+-   Read and follow university guidance
+
+## Late work and regrades
+
+-   We have policies!
+-   Read about them on the [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#course-policies) and refer back to them when you need it
+
+## Collaboration policy
+
+-   Everything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but please don't copy/paste.
+
+-   However, you will be working together frequently to provide feedback on each others' final projects.
+
+## Sharing / reusing code policy {.smaller}
+
+-   Programmers use online resources to help them accomplish tasks all the time--these sources can be extremely helpful for learning *when used well.*
+
+    -   Use them to learn. Don't blindly copy/paste; it won't work. We'll talk more about this soon.
+
+-   You may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.
+
+-   Un-cited recycled/copied code = plagiarism :(
+
+## Academic integrity
+
+> To uphold the Duke Community Standard:
+>
+> -   I will not lie, cheat, or steal in my academic endeavors;
+>
+> -   I will conduct myself honorably in all my endeavors; and
+>
+> -   I will act if the Standard is compromised.
+
+## Most importantly!
+
+Ask if you're not sure if something violates a policy!
+
+# Getting to know you survey
+
+## Advice!
+
+-   Your advice for each other
+
+    -   FROM SURVEY . . .
+
+-   Your advice for me
+
+    -   FROM SURVEY
+
+## Course questions
+
+-   FROM SURVEY
+-   Anything else?
+
+# Data and Variables
+
+## Sociological data
+
+## Sociological data: Qualitative
+
+::: incremental
+-   Interpretations, stories, narratives, observations
+
+-   Uses:
+
+    -   deep understanding of particular cases, theory building, where measurement doesn't work
+
+-   Methods:
+
+    -   interviews, ethnographies, content analysis, image analysis, etc
+:::
+
+## Sociological data: Quantitative
+
+::: incremental
+-   Measured quantities. Counts, closed-ended surveys, proportions, outcomes.
+
+-   Uses:
+
+    -   Describing measurable things about the world, theory testing
+
+-   Methods/sources:
+
+    -   Surveys, administrative data, digital trace data, etc
+:::
+
+## An example: EADA data (from last time)

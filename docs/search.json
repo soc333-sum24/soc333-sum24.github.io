@@ -364,90 +364,6 @@
     "text": "Exams???\n\nnope :)"
   },
   {
-    "objectID": "slides/01-welcome.html#cadence",
-    "href": "slides/01-welcome.html#cadence",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Cadence",
-    "text": "Cadence\n\n\nClass: Monday-Thursday (except Memorial Day and Juneteenth)\nIn-class exercises: Most days; usually due before the next class period\nProject: Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).\nHomework: Due on Mondays when there isn’t a project component due."
-  },
-  {
-    "objectID": "slides/01-welcome.html#grading",
-    "href": "slides/01-welcome.html#grading",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Grading",
-    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n20% (10% x 2)\n\n\nIn-class exercises\n30%\n\n\nProject\n50% (22.5% components; 27.5% final paper+pres)\n\n\n\nSee course syllabus for how the final letter grade will be determined."
-  },
-  {
-    "objectID": "slides/01-welcome.html#support",
-    "href": "slides/01-welcome.html#support",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Support",
-    "text": "Support\n\nAttend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)\nAsk questions in class\nEmail for individual matters. aidan.combs@duke.edu\nLots of resources available through the university–use them!"
-  },
-  {
-    "objectID": "slides/01-welcome.html#announcements",
-    "href": "slides/01-welcome.html#announcements",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Announcements",
-    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do."
-  },
-  {
-    "objectID": "slides/01-welcome.html#diversity-inclusion",
-    "href": "slides/01-welcome.html#diversity-inclusion",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Diversity + inclusion",
-    "text": "Diversity + inclusion\nMy goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!\n\n\nPlease let me know your preferred name and pronouns on the Getting to Know You survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
-  },
-  {
-    "objectID": "slides/01-welcome.html#accessibility",
-    "href": "slides/01-welcome.html#accessibility",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Accessibility",
-    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
-  },
-  {
-    "objectID": "slides/01-welcome.html#covid-policies",
-    "href": "slides/01-welcome.html#covid-policies",
-    "title": "Welcome to SOCIOL 333",
-    "section": "COVID policies",
-    "text": "COVID policies\n\nMasks are optional\nIf you’re sick, please stay home\nRead and follow university guidance"
-  },
-  {
-    "objectID": "slides/01-welcome.html#late-work-waivers-regrades-policy",
-    "href": "slides/01-welcome.html#late-work-waivers-regrades-policy",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Late work, waivers, regrades policy",
-    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
-  },
-  {
-    "objectID": "slides/01-welcome.html#collaboration-policy",
-    "href": "slides/01-welcome.html#collaboration-policy",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Collaboration policy",
-    "text": "Collaboration policy\n\nEverything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but don’t copy.\nHowever, you will be working together frequently to provide feedback on each others’ final projects."
-  },
-  {
-    "objectID": "slides/01-welcome.html#sharing-reusing-code-policy",
-    "href": "slides/01-welcome.html#sharing-reusing-code-policy",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nProgrammers use online resources to help them accomplish tasks all the time–these sources can be extremely helpful for learning when used well.\n\nUse them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.\n\nYou may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.\nUn-cited recycled/copied code = plagiarism… :("
-  },
-  {
-    "objectID": "slides/01-welcome.html#academic-integrity",
-    "href": "slides/01-welcome.html#academic-integrity",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
-  },
-  {
-    "objectID": "slides/01-welcome.html#most-importantly",
-    "href": "slides/01-welcome.html#most-importantly",
-    "title": "Welcome to SOCIOL 333",
-    "section": "Most importantly!",
-    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
-  },
-  {
     "objectID": "slides/01-welcome.html#this-weeks-tasks",
     "href": "slides/01-welcome.html#this-weeks-tasks",
     "title": "Welcome to SOCIOL 333",
@@ -467,6 +383,139 @@
     "title": "Welcome to SOCIOL 333",
     "section": "Let’s get started!",
     "text": "Let’s get started!\n\nToday’s in-class exercise (15 min):\nGet a GitHub account if you don’t have one (username advice in the survey)\nComplete the Getting to Know You survey (link in your email)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#reminders",
+    "href": "slides/02-datavariables.html#reminders",
+    "title": "Data and Variables",
+    "section": "Reminders",
+    "text": "Reminders\n\nDrop/add ends tomorrow\nClass does not meet Fridays–next meeting is Monday"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#cadence",
+    "href": "slides/02-datavariables.html#cadence",
+    "title": "Data and Variables",
+    "section": "Cadence",
+    "text": "Cadence\n\n\nClass: Monday-Thursday (except Memorial Day and Juneteenth)\nIn-class exercises: Most days; usually due before the next class period\nProject: Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).\nHomework: Due on Mondays when there isn’t a project component due."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#grading",
+    "href": "slides/02-datavariables.html#grading",
+    "title": "Data and Variables",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n20% (10% x 2)\n\n\nIn-class exercises\n30%\n\n\nProject\n50% (22.5% components; 27.5% final paper+pres)\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#support",
+    "href": "slides/02-datavariables.html#support",
+    "title": "Data and Variables",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)\nAsk questions in class\nEmail for individual matters. aidan.combs@duke.edu\nLots of resources available through the university–use them!"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#announcements",
+    "href": "slides/02-datavariables.html#announcements",
+    "title": "Data and Variables",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Sakai (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#diversity-inclusion",
+    "href": "slides/02-datavariables.html#diversity-inclusion",
+    "title": "Data and Variables",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nMy goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!\n\n\nPlease let me know your preferred name and pronouns on the Getting to Know You survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#accessibility",
+    "href": "slides/02-datavariables.html#accessibility",
+    "title": "Data and Variables",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#covid-policies",
+    "href": "slides/02-datavariables.html#covid-policies",
+    "title": "Data and Variables",
+    "section": "COVID policies",
+    "text": "COVID policies\n\nMasks are optional\nIf you’re sick, please stay home\nRead and follow university guidance"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#late-work-and-regrades",
+    "href": "slides/02-datavariables.html#late-work-and-regrades",
+    "title": "Data and Variables",
+    "section": "Late work and regrades",
+    "text": "Late work and regrades\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#collaboration-policy",
+    "href": "slides/02-datavariables.html#collaboration-policy",
+    "title": "Data and Variables",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nEverything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but please don’t copy/paste.\nHowever, you will be working together frequently to provide feedback on each others’ final projects."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#sharing-reusing-code-policy",
+    "href": "slides/02-datavariables.html#sharing-reusing-code-policy",
+    "title": "Data and Variables",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nProgrammers use online resources to help them accomplish tasks all the time–these sources can be extremely helpful for learning when used well.\n\nUse them to learn. Don’t blindly copy/paste; it won’t work. We’ll talk more about this soon.\n\nYou may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.\nUn-cited recycled/copied code = plagiarism :("
+  },
+  {
+    "objectID": "slides/02-datavariables.html#academic-integrity",
+    "href": "slides/02-datavariables.html#academic-integrity",
+    "title": "Data and Variables",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#most-importantly",
+    "href": "slides/02-datavariables.html#most-importantly",
+    "title": "Data and Variables",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#advice",
+    "href": "slides/02-datavariables.html#advice",
+    "title": "Data and Variables",
+    "section": "Advice!",
+    "text": "Advice!\n\nYour advice for each other\n\nFROM SURVEY . . .\n\nYour advice for me\n\nFROM SURVEY"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#course-questions",
+    "href": "slides/02-datavariables.html#course-questions",
+    "title": "Data and Variables",
+    "section": "Course questions",
+    "text": "Course questions\n\nFROM SURVEY\nAnything else?"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#sociological-data",
+    "href": "slides/02-datavariables.html#sociological-data",
+    "title": "Data and Variables",
+    "section": "Sociological data",
+    "text": "Sociological data"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#sociological-data-qualitative",
+    "href": "slides/02-datavariables.html#sociological-data-qualitative",
+    "title": "Data and Variables",
+    "section": "Sociological data: Qualitative",
+    "text": "Sociological data: Qualitative\n\n\nInterpretations, stories, narratives, observations\nUses:\n\ndeep understanding of particular cases, theory building, where measurement doesn’t work\n\nMethods:\n\ninterviews, ethnographies, content analysis, image analysis, etc"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#sociological-data-quantitative",
+    "href": "slides/02-datavariables.html#sociological-data-quantitative",
+    "title": "Data and Variables",
+    "section": "Sociological data: Quantitative",
+    "text": "Sociological data: Quantitative\n\n\nMeasured quantities. Counts, closed-ended surveys, proportions, outcomes.\nUses:\n\nDescribing measurable things about the world, theory testing\n\nMethods/sources:\n\nSurveys, administrative data, digital trace data, etc"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#an-example-eada-data-from-last-time",
+    "href": "slides/02-datavariables.html#an-example-eada-data-from-last-time",
+    "title": "Data and Variables",
+    "section": "An example: EADA data (from last time)",
+    "text": "An example: EADA data (from last time)\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "project-results.html",
