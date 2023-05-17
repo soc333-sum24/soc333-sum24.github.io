@@ -19,7 +19,7 @@ website:
     background: "#32174d" # Russian Violet
     logo: "images/logo.png"
     pinned: true
-    align: center
+    align: "center"
     tools:
       - icon: github
         href: https://github.com/soc333-sum23/soc333-sum23.github.io
@@ -84,7 +84,7 @@ format:
     theme:
       light: [cosmo, style/sta199.scss]
       dark: [cosmo, style/sta199.scss, style/dark.scss]
-    linkcolor: "#325b74" # Pantone Midnight - Fall 2022
+    linkcolor: "#32174d" # Russian Violet
     toc: true
     code-copy: true
     code-overflow: wrap
