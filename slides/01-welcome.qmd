@@ -315,6 +315,12 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 keep me on schedule, please--let me know when it's 12:15 :)
 
+## Reminders about summer term
+
+-   Drop/add ends on **Friday** (yes, that is very soon)
+-   No class on Memorial Day (May 29) or Juneteenth (June 19)
+-   Something up with your enrollment? Talk to me after class. 
+
 ## Homepage
 
 <https://soc333-sum23.github.io/>
@@ -442,12 +448,12 @@ Ask if you're not sure if something violates a policy!
 
 -   Before tomorrow's class: read IMS ch 1
 
+## Checking in: how are you feeling so far about the course?
+
 ## Let's get started!
 
 -   Today's in-class exercise (15 min):
 -   Get a GitHub account if you don't have one (username advice in the survey)
 -   Complete the Getting to Know You survey (link in your email)
 
-## Before you go...
 
--   Checking in: how are you feeling so far about the course?
