@@ -1,6 +1,7 @@
-This file cleans data downloaded from the Equity in Athletics Data Analysis initiative, managed by the U.S. Department of Education. 
+This file cleans data downloaded from the Equity in Athletics Data Analysis initiative, managed by the U.S.
+Department of Education.
 
-[https://ope.ed.gov/athletics/#/](https://ope.ed.gov/athletics/#/)
+<https://ope.ed.gov/athletics/#/>
 
 I downloaded all available equity data for Duke and UNC from 2003 through 2021.
 
@@ -125,6 +126,13 @@ coachsalaries <- coachsalaries |>
 
 saveRDS(coachsalaries, file = "../slides/data/sports_coachsalaries.rds")
 saveRDS(coachsalaries, file = "sports_coachsalaries.rds")
+```
+
+```{r tidy coaches}
+tidycoaches <- coaches |> 
+  uncount(ncoaches) |> 
+  mutate(coachgender = ifelse(coachgender == "men", "man", "woman"))
+
 ```
 
 ```{r student aid and recruiting expenses}

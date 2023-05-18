@@ -17,6 +17,7 @@ website:
 
   sidebar:
     background: "#32174d" # Russian Violet
+    foreground: "#f8f8f8"
     logo: "images/logo.png"
     pinned: true
     align: "center"

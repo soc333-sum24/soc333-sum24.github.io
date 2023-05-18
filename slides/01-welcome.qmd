@@ -319,7 +319,7 @@ keep me on schedule, please--let me know when it's 12:15 :)
 
 -   Drop/add ends on **Friday** (yes, that is very soon)
 -   No class on Memorial Day (May 29) or Juneteenth (June 19)
--   Something up with your enrollment? Talk to me after class. 
+-   Something up with your enrollment? Talk to me after class.
 
 ## Homepage
 
@@ -359,5 +359,3 @@ keep me on schedule, please--let me know when it's 12:15 :)
 -   Today's in-class exercise (15 min):
 -   Get a GitHub account if you don't have one (username advice in the survey)
 -   Complete the Getting to Know You survey (link in your email)
-
-

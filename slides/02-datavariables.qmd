@@ -19,6 +19,16 @@ library(tidyverse)
 -   Drop/add ends tomorrow
 -   Class does not meet Fridays--next meeting is Monday
 
+## Slides
+
+-   Available on the website.
+    Use your arrow keys to navigate.
+
+-   I will post a version before class so you can follow along if you want to.
+    If we don't make it through everything I will cut the extra slides afterwards.
+
+-   Editable versions will be posted on GitHub--the file format is the same as what we will use for assignments (more on that next week!)
+
 ## Cadence
 
 ::: incremental
@@ -53,19 +63,22 @@ See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#gradin
 
 ## Diversity + inclusion {.smaller}
 
-My goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!
+My goal is that everyone is well-served by this course.
+Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!
 
 ::: incremental
--   Please let me know your preferred name and pronouns on the Getting to Know You survey.
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+-   Please list your pronouns on your name tent if you feel comfortable doing so.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you.
+    -   If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
+-   I, along with many others, am still learning (and unlearning), and sometimes make mistakes. If something that happens here doesn't sit right with you, please talk to me about it.
 :::
 
 ## Accessibility
 
 -   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
 
--   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+-   I am committed to making all course materials accessible and I'm always learning how to do this better.
+    If any course component is not accessible to you in any way, please don't hesitate to let me know.
 
 # Course policies
 
@@ -84,7 +97,8 @@ My goal is that everyone is well-served by this course. Diverse experiences and 
 
 ## Collaboration policy
 
--   Everything you submit for grading in this course should be completed and submitted individually. You can talk to each other, but please don't copy/paste.
+-   Everything you submit for grading in this course should be completed and submitted individually.
+    You can talk to each other, but please don't copy/paste.
 
 -   However, you will be working together frequently to provide feedback on each others' final projects.
 
@@ -147,10 +161,11 @@ Ask if you're not sure if something violates a policy!
     -   interviews, ethnographies, content analysis, image analysis, etc
 :::
 
-## Sociological data: Quantitative
+## Sociological data: Quantitative (this class)
 
 ::: incremental
--   Measured quantities. Counts, closed-ended surveys, proportions, outcomes.
+-   Measured quantities.
+    Counts, closed-ended surveys, proportions, outcomes.
 
 -   Uses:
 
@@ -161,4 +176,100 @@ Ask if you're not sure if something violates a policy!
     -   Surveys, administrative data, digital trace data, etc
 :::
 
-## EADA data (from last time)
+## EADA data (from last time) {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   [Equity in Athletics Data Analytics](https://ope.ed.gov/athletics/#/)
+-   Participation, staffing, revenues, and expenditures for mens and womens college sports teams
+:::
+
+::: {.column width="60%"}
+![](images/01/datapdf.png)
+:::
+:::
+
+## Step 1: Data -\> data frame
+
+![](images/02/eada_df.png)
+
+## Observations
+
+-   Each instance that you observe data about (often 1 observation = 1 person, but not always)
+-   Rows in your data frame
+
+------------------------------------------------------------------------
+
+![](images/02/eada_obs.png)
+
+## Variables
+
+-   Aspects that can be different for different cases
+-   Columns in your data frame
+-   Values the variable can take are called *response options* (especially in the context of surveys)
+
+------------------------------------------------------------------------
+
+![](images/02/eada_vars.png)
+
+# Types of variables
+
+------------------------------------------------------------------------
+
+![](images/02/variableschart.png)
+
+## Categorical
+
+-   Response options have names, not numbers
+-   Mathematical operations (addition, subtraction, division) do not make sense
+-   The book treats these subtypes as the same--we will too for math's sake, but sometimes the difference does play into interpretations
+
+## Categorical: Nominal
+
+-   Simple categories
+-   Can't say one category is "bigger" or "smaller" than another
+-   Examples: gender identity, race, ethnicity, economic sector
+
+## Categorical: Ordinal
+
+-   You can say that one is "bigger" or "more" than another
+-   Examples: education (no hs diploma, hs diploma, some college, 2 year degree, 4 year degree, advanced degree), income (low, middle, high)
+
+## Categorical: Binary
+
+-   Has just two levels: yes/no; present/not present
+-   Examples: has college degree/does not have college degree; not ever married/married
+
+## Numeric
+
+-   Response options are numbers where the values are meaningful (ie, not arbitrary)
+-   Mathematical operations (addition, subtraction, etc) make sense
+
+## Numeric: Continuous
+
+-   Any value within a range is possible--decimals are fine
+-   Examples: Temperature, height, elevation, stock price
+
+## Numeric: Discrete
+
+-   Only certain values (usually round numbers) "make sense" and are used
+-   Examples: Age, years of education
+
+## Exercise: EADA data variable types {.smaller}
+
+-   Determine the type of each variable in this data set.
+
+![](images/02/eada_df.png)
+
+## Exercise: Palmer Penguins {.smaller}
+
+![](images/02/penguins.png){width="726"}
+
+-   How many observations are there?
+-   What are the variables, and what are their types?
+
+## For next time: 
+
+-   Read the syllabus, if you haven't already
+
+-   Watch your email for an invite to [our course GitHub organization](https://github.com/soc333-sum23)--later today

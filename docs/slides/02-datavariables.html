@@ -418,9 +418,12 @@ Aidan Combs
 <p>My goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!</p>
 <div>
 <ul>
-<li class="fragment">Please let me know your preferred name and pronouns on the Getting to Know You survey.</li>
-<li class="fragment">If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.</li>
-<li class="fragment">I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.</li>
+<li class="fragment">Please list your pronouns on your name tent if you feel comfortable doing so.</li>
+<li class="fragment">If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.
+<ul>
+<li class="fragment">If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.</li>
+</ul></li>
+<li class="fragment">I, along with many others, am still learning (and unlearning), and sometimes make mistakes. If something that happens here doesn’t sit right with you, please talk to me about it.</li>
 </ul>
 </div>
 </section>
@@ -533,8 +536,8 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="sociological-data-quantitative" class="slide level2">
-<h2>Sociological data: Quantitative</h2>
+<section id="sociological-data-quantitative-this-class" class="slide level2">
+<h2>Sociological data: Quantitative (this class)</h2>
 <div>
 <ul>
 <li class="fragment"><p>Measured quantities. Counts, closed-ended surveys, proportions, outcomes.</p></li>
@@ -549,11 +552,123 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="eada-data-from-last-time" class="slide level2">
+<section id="eada-data-from-last-time" class="slide level2 smaller">
 <h2>EADA data (from last time)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><a href="https://ope.ed.gov/athletics/#/">Equity in Athletics Data Analytics</a></li>
+<li>Participation, staffing, revenues, and expenditures for mens and womens college sports teams</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/01/datapdf.png"></p>
+</div>
+</div>
+</section>
+<section id="step-1-data---data-frame" class="slide level2">
+<h2>Step 1: Data -&gt; data frame</h2>
+
+<img data-src="images/02/eada_df.png" class="r-stretch"></section>
+<section id="observations" class="slide level2">
+<h2>Observations</h2>
+<ul>
+<li>Each instance that you observe data about (often 1 observation = 1 person, but not always)</li>
+<li>Rows in your data frame</li>
+</ul>
+</section>
+<section class="slide level2">
 
 
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<img data-src="images/02/eada_obs.png" class="r-stretch"></section>
+<section id="variables" class="slide level2">
+<h2>Variables</h2>
+<ul>
+<li>Aspects that can be different for different cases</li>
+<li>Columns in your data frame</li>
+<li>Values the variable can take are called <em>response options</em> (especially in the context of surveys)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/02/eada_vars.png" class="r-stretch"></section></section>
+<section>
+<section id="types-of-variables" class="title-slide slide level1 center">
+<h1>Types of variables</h1>
+
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/02/variableschart.png" class="r-stretch"></section>
+<section id="categorical" class="slide level2">
+<h2>Categorical</h2>
+<ul>
+<li>Response options have names, not numbers</li>
+<li>Mathematical operations (addition, subtraction, division) do not make sense</li>
+<li>The book treats these subtypes as the same–we will too for math’s sake, but sometimes the difference does play into interpretations</li>
+</ul>
+</section>
+<section id="categorical-nominal" class="slide level2">
+<h2>Categorical: Nominal</h2>
+<ul>
+<li>Simple categories</li>
+<li>Can’t say one category is “bigger” or “smaller” than another</li>
+<li>Examples: gender identity, race, ethnicity, economic sector</li>
+</ul>
+</section>
+<section id="categorical-ordinal" class="slide level2">
+<h2>Categorical: Ordinal</h2>
+<ul>
+<li>You can say that one is “bigger” or “more” than another</li>
+<li>Examples: education (no hs diploma, hs diploma, some college, 2 year degree, 4 year degree, advanced degree), income (low, middle, high)</li>
+</ul>
+</section>
+<section id="categorical-binary" class="slide level2">
+<h2>Categorical: Binary</h2>
+<ul>
+<li>Has just two levels: yes/no; present/not present</li>
+<li>Examples: has college degree/does not have college degree; not ever married/married</li>
+</ul>
+</section>
+<section id="numeric" class="slide level2">
+<h2>Numeric</h2>
+<ul>
+<li>Response options are numbers where the values are meaningful (ie, not arbitrary)</li>
+<li>Mathematical operations (addition, subtraction, etc) make sense</li>
+</ul>
+</section>
+<section id="numeric-continuous" class="slide level2">
+<h2>Numeric: Continuous</h2>
+<ul>
+<li>Any value within a range is possible–decimals are fine</li>
+<li>Examples: Temperature, height, elevation, stock price</li>
+</ul>
+</section>
+<section id="numeric-discrete" class="slide level2">
+<h2>Numeric: Discrete</h2>
+<ul>
+<li>Only certain values (usually round numbers) “make sense” and are used</li>
+<li>Examples: Age, years of education</li>
+</ul>
+</section>
+<section id="exercise-eada-data-variable-types" class="slide level2 smaller">
+<h2>Exercise: EADA data variable types</h2>
+<ul>
+<li>Determine the type of each variable in this data set.</li>
+</ul>
+
+<img data-src="images/02/eada_df.png" class="r-stretch"></section>
+<section id="exercise-palmer-penguins" class="slide level2 smaller">
+<h2>Exercise: Palmer Penguins</h2>
+<p><img data-src="images/02/penguins.png" width="726"></p>
+<ul>
+<li>How many observations are there?</li>
+<li>What are the variables, and what are their types?</li>
+</ul>
+
+<p><img src="images/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
 </div>
 </section></section>

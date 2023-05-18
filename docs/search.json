@@ -424,7 +424,7 @@
     "href": "slides/02-datavariables.html#diversity-inclusion",
     "title": "Data and Variables",
     "section": "Diversity + inclusion",
-    "text": "Diversity + inclusion\nMy goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!\n\n\nPlease let me know your preferred name and pronouns on the Getting to Know You survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+    "text": "Diversity + inclusion\nMy goal is that everyone is well-served by this course. Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!\n\n\nPlease list your pronouns on your name tent if you feel comfortable doing so.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\n\nIf you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.\n\nI, along with many others, am still learning (and unlearning), and sometimes make mistakes. If something that happens here doesn’t sit right with you, please talk to me about it."
   },
   {
     "objectID": "slides/02-datavariables.html#accessibility",
@@ -515,7 +515,7 @@
     "href": "slides/02-datavariables.html#eada-data-from-last-time",
     "title": "Data and Variables",
     "section": "EADA data (from last time)",
-    "text": "EADA data (from last time)\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "EADA data (from last time)\n\n\n\nEquity in Athletics Data Analytics\nParticipation, staffing, revenues, and expenditures for mens and womens college sports teams"
   },
   {
     "objectID": "project-results.html",
@@ -733,5 +733,96 @@
     "title": "SOCIOL333: Quantitative Analysis of Sociological Data Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nCollaboration: You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically result in a 0 for the assignment and will be reported to the Office of Student Conduct for further action.\n\n\nLate work\n\nHomework, project components, and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.\n\n\n\nExtenuating circumstances\nThings happen that make it impossible to submit every assignment on time. The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.\nIn the case that you must miss class, please let me know. My slides will be made accessible to all students. You will still be expected to complete that day’s in-class exercises, but you will have to do so on your own.\nIf there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know, as they can be a resource.\nNote: If you’ve read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!\n\n\nAttendance policy\n\nCOVID Symptoms, Exposure, or Infection: Student health, safety, and well-being are the university’s top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested. If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health (dshcheckin@duke.edu, 919-681-9355). Learn more about current university policy related to COVID-19 at https://coronavirus.duke.edu. To keep the university community’s safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.\nInclement weather: In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.  Asynchronous catch-up methods may apply.\nReligious accommodations: Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#sociological-data-quantitative-this-class",
+    "href": "slides/02-datavariables.html#sociological-data-quantitative-this-class",
+    "title": "Data and Variables",
+    "section": "Sociological data: Quantitative (this class)",
+    "text": "Sociological data: Quantitative (this class)\n\n\nMeasured quantities. Counts, closed-ended surveys, proportions, outcomes.\nUses:\n\nDescribing measurable things about the world, theory testing\n\nMethods/sources:\n\nSurveys, administrative data, digital trace data, etc"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#step-1-data---data-frame",
+    "href": "slides/02-datavariables.html#step-1-data---data-frame",
+    "title": "Data and Variables",
+    "section": "Step 1: Data -> data frame",
+    "text": "Step 1: Data -&gt; data frame"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#observations",
+    "href": "slides/02-datavariables.html#observations",
+    "title": "Data and Variables",
+    "section": "Observations",
+    "text": "Observations\n\nEach instance that you observe data about (often 1 observation = 1 person, but not always)\nRows in your data frame"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#variables",
+    "href": "slides/02-datavariables.html#variables",
+    "title": "Data and Variables",
+    "section": "Variables",
+    "text": "Variables\n\nAspects that can be different for different cases\nColumns in your data frame\nValues the variable can take are called response options (especially in the context of surveys)"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#categorical",
+    "href": "slides/02-datavariables.html#categorical",
+    "title": "Data and Variables",
+    "section": "Categorical",
+    "text": "Categorical\n\nResponse options have names, not numbers\nMathematical operations (addition, subtraction, division) do not make sense\nThe book treats these subtypes as the same–we will too for math’s sake, but sometimes the difference does play into interpretations"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#categorical-nominal",
+    "href": "slides/02-datavariables.html#categorical-nominal",
+    "title": "Data and Variables",
+    "section": "Categorical: Nominal",
+    "text": "Categorical: Nominal\n\nSimple categories\nCan’t say one category is “bigger” or “smaller” than another\nExamples: gender identity, race, ethnicity, economic sector"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#categorical-ordinal",
+    "href": "slides/02-datavariables.html#categorical-ordinal",
+    "title": "Data and Variables",
+    "section": "Categorical: Ordinal",
+    "text": "Categorical: Ordinal\n\nYou can say that one is “bigger” or “more” than another\nExamples: education (no hs diploma, hs diploma, some college, 2 year degree, 4 year degree, advanced degree), income (low, middle, high)"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#categorical-binary",
+    "href": "slides/02-datavariables.html#categorical-binary",
+    "title": "Data and Variables",
+    "section": "Categorical: Binary",
+    "text": "Categorical: Binary\n\nHas just two levels: yes/no; present/not present\nExamples: has college degree/does not have college degree; not ever married/married"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#numeric",
+    "href": "slides/02-datavariables.html#numeric",
+    "title": "Data and Variables",
+    "section": "Numeric",
+    "text": "Numeric\n\nResponse options are numbers where the values are meaningful (ie, not arbitrary)\nMathematical operations (addition, subtraction, etc) make sense"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#numeric-continuous",
+    "href": "slides/02-datavariables.html#numeric-continuous",
+    "title": "Data and Variables",
+    "section": "Numeric: Continuous",
+    "text": "Numeric: Continuous\n\nAny value within a range is possible–decimals are fine\nExamples: Temperature, height, elevation, stock price"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#numeric-discrete",
+    "href": "slides/02-datavariables.html#numeric-discrete",
+    "title": "Data and Variables",
+    "section": "Numeric: Discrete",
+    "text": "Numeric: Discrete\n\nOnly certain values (usually round numbers) “make sense” and are used\nExamples: Age, years of education"
+  },
+  {
+    "objectID": "slides/02-datavariables.html#exercise-eada-data-variable-types",
+    "href": "slides/02-datavariables.html#exercise-eada-data-variable-types",
+    "title": "Data and Variables",
+    "section": "Exercise: EADA data variable types",
+    "text": "Exercise: EADA data variable types\n\nDetermine the type of each variable in this data set."
+  },
+  {
+    "objectID": "slides/02-datavariables.html#exercise-palmer-penguins",
+    "href": "slides/02-datavariables.html#exercise-palmer-penguins",
+    "title": "Data and Variables",
+    "section": "Exercise: Palmer Penguins",
+    "text": "Exercise: Palmer Penguins\n\n\nHow many observations are there?\nWhat are the variables, and what are their types?\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   }
 ]
