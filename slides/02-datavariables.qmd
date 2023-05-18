@@ -12,6 +12,22 @@ format:
 library(tidyverse)
 ```
 
+## Your advice for each other
+
+-   Keep on the ball...
+
+    -   Always finish \| don't get behind \| always stay on your work
+
+-   ...but don't sacrifice your mental health
+
+    -   Take breaks when needed, don't overwork yourself \| Stress is a fact of life, but should never be a way of life!
+
+    -   Have a positive outlook, don't be so pessimistic that it brings the entire mood of the group down
+
+    -   stay happy stay positive stay sane
+
+    -   
+
 # Wrapping up course logistics
 
 ## Reminders
@@ -21,13 +37,13 @@ library(tidyverse)
 
 ## Slides
 
--   Available on the website.
+-   Available [on the website](https://soc333-sum23.github.io/).
     Use your arrow keys to navigate.
 
 -   I will post a version before class so you can follow along if you want to.
     If we don't make it through everything I will cut the extra slides afterwards.
 
--   Editable versions will be posted on GitHub--the file format is the same as what we will use for assignments (more on that next week!)
+-   Editable versions will be posted on GitHub if useful to you--the file format is the same as what we will use for assignments (more on that next week!)
 
 ## Cadence
 
@@ -125,23 +141,6 @@ Diverse experiences and perspectives that you bring to this class are a resource
 ## Most importantly!
 
 Ask if you're not sure if something violates a policy!
-
-# Getting to know you survey
-
-## Advice!
-
--   Your advice for each other
-
-    -   FROM SURVEY . . .
-
--   Your advice for me
-
-    -   FROM SURVEY
-
-## Course questions
-
--   FROM SURVEY
--   Anything else?
 
 # Data and Variables
 

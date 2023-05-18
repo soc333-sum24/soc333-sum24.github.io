@@ -70,14 +70,16 @@ website:
             text: "Component 5: Presentation"
           # - href: project-tips-resources.qmd
           #   text: "Tips + resources"
-      - section: "Lecture slides"
+      - section: "Slides"
         contents:
           - href: slides/01-welcome.qmd
             text: "Lecture 1: Welcome"
+          - href: slides/02-datavariables.qmd
+            text: "Lecture 2: Data and Variables"
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023, Aidan Combs"
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2023, Aidan Combs.\n\nCredit to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the materials and website for SOCIOL333 are based."
     background: "#32174d" # Russian Violet
 
 format:
