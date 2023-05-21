@@ -49,11 +49,9 @@ website:
       - section: "Computing"
         contents:
           - href: computing-setup.qmd
-            text: Setup instructions
+            text: Setup
           - href: computing-clonerepo.qmd
-            text: Cloning and commiting instructions
-          # - href: computing-troubleshooting.qmd
-          #   text: Troubleshooting
+            text: Cloning and committing
           - href: computing-cheatsheets.qmd
             text: Cheatsheets
       - section: "Project"
@@ -70,8 +68,6 @@ website:
             text: "Component 4: Paper"
           - href: project-presentation.qmd
             text: "Component 5: Presentation"
-          # - href: project-tips-resources.qmd
-          #   text: "Tips + resources"
       - section: "Slides"
         contents:
           - href: slides/01-welcome.qmd

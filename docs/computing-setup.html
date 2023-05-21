@@ -99,8 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="SOCIOL 333 - Computing setup instructions">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://soc333-sum23.github.io/images/rstudio.png">
+<meta property="og:image" content="https://soc333-sum23.github.io/images/computingimages/rstudio.png">
 <meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:image:height" content="640">
+<meta property="og:image:width" content="936">
 </head>
 
 <body class="nav-sidebar docked">
@@ -112,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-setup.html">Setup instructions</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-setup.html">Setup</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -190,13 +192,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./computing-setup.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Setup instructions</span></a>
+ <span class="menu-text">Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./computing-clonerepo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cloning and commiting instructions</span></a>
+ <span class="menu-text">Cloning and committing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -399,7 +401,7 @@ Tip
 <p>Follow the prompts your computer gives you to install both programs.</p>
 <p><a href="https://rstudio-education.github.io/hopr/starting.html">These instructions</a> might help if you get stuck.</p>
 <p>Now open RStudio. You should see a screen that looks something like this:</p>
-<p><img src="images/rstudio.png" class="img-fluid"></p>
+<p><img src="images/computingimages/rstudio.png" class="img-fluid"></p>
 <p>We will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue <code>&gt;</code> is, is where you will be copy/pasting and running the code that is given to you in the next sections.</p>
 </section>
 <section id="step-2-install-some-packages" class="level3">
@@ -415,8 +417,7 @@ Tip
 </section>
 <section id="part-b-git-and-github" class="level2">
 <h2 class="anchored" data-anchor-id="part-b-git-and-github">Part B: Git and GitHub</h2>
-<p>We will be following the instructions in the <u>How to Set up Git</u> section <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">of this webpage</a>, <strong>skipping</strong> the subsections <u>Initialize a Git Repository</u>, <u>View Commit History</u>, and <u>Make a Commit and View More History.</u></p>
-<p>Look at the webpage if you like learning through videos. This page contains the same instructions in text form, with copy-pasteable code.</p>
+<p>These instructions are adapted from the <u>How to Set up Git</u> section <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">of this webpage</a>. That page contains some videos that might help you if you prefer learning that way–but know that a couple of things are slightly out of date.</p>
 <section id="step-3.-do-you-already-have-git" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-do-you-already-have-git">Step 3. Do you already have Git?</h3>
 <p>Open RStudio. Look at the console (left hand window). You should see another tab right next to the word “Console” that says “Terminal.” Click on this. In the terminal window, paste the following code, then hit enter:</p>
@@ -445,28 +446,27 @@ Note
 </section>
 <section id="step-5-configure-git" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-configure-git">Step 5: Configure Git</h3>
-<p>Paste the following code into the RStudio console (you may have to click back into the console if you are still in the terminal from Step 3), then hit enter.</p>
+<p>Paste the following code into the RStudio console (you may have to click back into the console if you are still in the terminal from Step 3), edit it to contain your GitHub username and email address, then hit enter.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_git_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">user.name =</span> <span class="st">"Your_GitHub_username"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">user.email =</span> <span class="st">"your_github_email@example.com"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will open a file with some information in it. After <code>name =</code> , write your name <strong>in quotation marks</strong>, eg <code>name = "Aidan Combs"</code> . Then provide your email where it says <code>email =</code>, also in quotation marks. <strong>Use the email that is associated with your GitHub account.</strong></p>
-<p>Once that information is entered, save the file.</p>
 </section>
 </section>
 <section id="part-c-connect-rrstudio-to-gitgithub" class="level2">
 <h2 class="anchored" data-anchor-id="part-c-connect-rrstudio-to-gitgithub">Part C: Connect R/RStudio to Git/GitHub</h2>
-<p>We’re still following <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">these instructions</a> (same page as above). Now, follow the directions in the <u>Connect RStudio and GitHub</u> section.</p>
-<p>Not working? You can try <a href="https://github.com/DukeStatSci/github_auth_guide">these instructions</a> instead–a slightly different process that should lead to the same result.</p>
+<p>This is adapted from the <u>Connect RStudio and GitHub</u> section of <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">this page</a> (same as above).</p>
 <section id="step-6-create-a-personal-access-token-on-github" class="level3">
 <h3 class="anchored" data-anchor-id="step-6-create-a-personal-access-token-on-github">Step 6: Create a Personal Access Token on GitHub</h3>
-<p>You already have a GitHub account, right? If not, you need to make one before you go any further.</p>
 <p>Personal access tokens are like passwords–they allow GitHub to make sure that it really is your computer that is trying to modify things in your account. Here you’ll create a token in GitHub. Then in Step 7 you’ll provide the same token to R. Then the two will be able to communicate with one another.</p>
 <p>Enter the following code in the RStudio console and hit enter:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This will take you to the right page on GitHub. Enter a description. <strong>Make sure you change the expiration to be longer than 30 days,</strong> so that everything will keep working at least until the end of this course. You can leave all other options at their default values.</p>
-<p>Then copy the token GitHub provides you to your clipboard. It is best to leave this window open until the next step is finished so that you can re-copy this if needed.</p>
+<p>Then copy the token GitHub provides you to your clipboard. It is best to leave this window open until the next step is finished so that you can re-copy this if needed–if you lose it, you will have to create another one.</p>
 </section>
 <section id="step-7-store-the-personal-access-token-to-connect-rrstudio-and-github" class="level3">
 <h3 class="anchored" data-anchor-id="step-7-store-the-personal-access-token-to-connect-rrstudio-and-github">Step 7: Store the personal access token to connect R/RStudio and GitHub</h3>
@@ -474,7 +474,7 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Enter your GitHub username, and use the Personal Access Token you copied in Step 6 as your password (<strong>not</strong> your actual GitHub password–yes, it is confusing!)</p>
+<p>Enter the personal access token you copied in Step 6 when prompted.</p>
 </section>
 </section>
 <section id="part-d-testing-your-new-setup" class="level2">
@@ -483,13 +483,9 @@ Note
 <h3 class="anchored" data-anchor-id="step-8-clone-the-test-repo-start-a-new-rstudio-project">Step 8: Clone the test repo &amp; start a new RStudio project</h3>
 <p>Everything should now be set up! Now, we’ll test whether it is working correctly.</p>
 <ul>
-<li><p>Go to the course organization at <a href="#0" class="uri">https://github.com/soc333-sum23</a>. Click on the repo with the prefix <strong>tech-setup</strong>. It contains a document with which you will test that everything is set up correctly.</p></li>
-<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
-<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
-<li><p>Copy and paste the URL of the test repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
-<li><p>Change the default directory to <strong>something you’ll be able to find later</strong> on your computer–I recommend making a folder just for this class, and keeping all of your repos in it!</p></li>
-<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
-<li><p>Click <em>tech-setup-test.qmd</em> to open the template Quarto file.</p></li>
+<li><p>Go to the course organization at <a href="https://github.com/soc333-sum23" class="uri">https://github.com/soc333-sum23</a>. Click on the repo called <strong>tech-setup-yourname</strong>. You will copy these files to your computer (known as “cloning”), make a change, and upload your changes back to GitHub (known as “pushing”) to confirm that everything is working correctly.</p></li>
+<li><p>Follow <a href="https://soc333-sum23.github.io/computing-clonerepo.html">these instructions</a> to clone the repo so that you can open its files in RStudio.</p></li>
+<li><p>In RStudio, click <em>tech-setup-test.qmd</em> to open the template Quarto file.</p></li>
 <li><p>Follow the instructions in the file to make a change and commit it.</p></li>
 </ul>
 </section>
@@ -862,7 +858,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./computing-clonerepo.html" class="pagination-link">
-        <span class="nav-page-text">Cloning and commiting instructions</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Cloning and committing</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

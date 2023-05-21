@@ -1,41 +1,36 @@
 ---
 title: "How to access and submit your assignments: cloning, committing, and pushing"
-author: "Aidan Combs"
 ---
 
 # How to clone a git repo
 
-You will begin most assignments and exercises in this class by "cloning" a git repository containing template documents hosted in [our course organization on GitHub](https://github.com/soc333-sum23).
-"Cloning" simply means creating your own local copy of the files the repository contains.
-It is equivalent to downloading project instructions from Sakai.
-The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked.
-This makes it easy to incorporate your changes into the online version and vice versa.
+You will begin most assignments and exercises in this class by "cloning" a git repository containing template documents hosted in [our course organization on GitHub](https://github.com/soc333-sum23). "Cloning" simply means creating your own local copy of the files the repository contains. It is equivalent to downloading project instructions from Sakai. The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked. This makes it easy to incorporate your changes into the online version and vice versa.
 
 ## Step 1: Get the repo SSH link from GitHub
 
--   Go to the course organization at [https://github.com/soc333-sum23](#0){.uri}.
-    Click on the repo you want to work on.
+-   Go to [the course organization](https://github.com/soc333-sum23) (https://github.com/soc333-sum23). Click on the repo you want to work on.
 
     -   ::: callout-important
-        For each assignment, you will see a template repo and your individual repo.
-        Your individual repo will have your name appended on the end.
-        You should clone your individual repo.
-        You will not be able to push changes to template repos.
+        For each assignment, you will see a template repo and your individual repo. Your individual repo will have your name appended on the end. You should clone your individual repo. You will not be able to push changes to template repos.
         :::
 
--   Click on the green **CODE** button.
-    Select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
-    Click on the clipboard icon to copy the repo URL.
+-   Click on the green **CODE** button. Select **HTTPS** (this might already be selected by default). Click on the clipboard icon to copy the repo URL.
+
+    ![](images/computingimages/clone.png)
 
 ## Step 2: Use RStudio to copy the contents to your computer
 
 -   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
 
--   Paste the URL you copied in Step 1 into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+-   Paste the URL you copied in Step 1 into the box *Repository URL*. Again, please make sure to have HTTPS highlighted under *Clone* when you copy the address.
 
 -   Change the default directory to **something you'll be able to find later** on your computer---I recommend making a folder just for this class, and keeping all of your repos in it!
 
+    ![](images/computingimages/clonelocal.png)
+
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+
+    ![](images/computingimages/yourfiles.png)
 
 -   Open the template files (typically .qmd files) and make and save your changes.
 
@@ -49,7 +44,7 @@ This makes it easy to incorporate your changes into the online version and vice 
 
 ## Step 1: Save
 
-First, save your file as you normally would (File -\> Save). This saves your changes to your computer and makes them available to commit. 
+First, save your file as you normally would (File -\> Save). This saves your changes to your computer and makes them available to commit.
 
 ## Step 2: Stage and commit changes
 
@@ -60,6 +55,8 @@ In the upper right hand corner of RStudio, you should see a pane with several ta
 To commit changes, first you have to stage them. Changes to multiple files can be included in one commit. Check the boxes next to your .html and .qmd files---this tells Git that you want to include all changes you've made to the qmd file and add in the new html file.
 
 Then, click the "Commit" button. This brings up a window in which you can see the changes you've made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click "Commit" again to finish the commit. Once everything is finished, you can close the popup window.
+
+![](images/computingimages/commit.png)
 
 ## Step 3. Push your changes to GitHub
 
