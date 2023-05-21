@@ -50,6 +50,8 @@ website:
         contents:
           - href: computing-setup.qmd
             text: Setup instructions
+          - href: computing-clonerepo.qmd
+            text: Cloning and commiting instructions
           # - href: computing-troubleshooting.qmd
           #   text: Troubleshooting
           - href: computing-cheatsheets.qmd

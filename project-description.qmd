@@ -8,15 +8,15 @@ callout-icon: false
 "Bring to class" deadlines mean you must have your work submitted before class starts on the given day.
 "Due" deadlines are 11:59pm.
 
-[Proposal](#proposal): bring to class Thursday, May 25; due Tuesday, May 30
+[Proposal](https://soc333-sum23.github.io/project-proposal.html): bring to class Thursday, May 25; due Tuesday, May 30
 
-[Descriptive statistics](#descriptives): bring to class Thursday, June 1; due Monday, June 5
+[Descriptive statistics](https://soc333-sum23.github.io/project-descstats.html): bring to class Thursday, June 1; due Monday, June 5
 
-[Results](#results) bring to class Thursday, June 15; due Tuesday, June 20
+[Results](https://soc333-sum23.github.io/project-results.html): bring to class Thursday, June 15; due Tuesday, June 20
 
-[Paper](#paper) bring to class Thursday, June 22; due Wednesday, June 28
+[Paper](https://soc333-sum23.github.io/project-paper.html): bring to class Thursday, June 22; due Wednesday, June 28
 
-[Presentation + slides](#presentation) due before in-class presentations on Monday, June 26.
+[Presentation + slides](https://soc333-sum23.github.io/project-presentation.html): due before in-class presentations on Monday, June 26.
 
 # Overview
 

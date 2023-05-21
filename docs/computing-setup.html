@@ -63,7 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./computing-cheatsheets.html" rel="next">
+<link href="./computing-clonerepo.html" rel="next">
 <link href="./course-links.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -195,6 +195,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./computing-clonerepo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cloning and commiting instructions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cheatsheets</span></a>
   </div>
@@ -281,28 +287,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lets-get-set-up" id="toc-lets-get-set-up" class="nav-link active" data-scroll-target="#lets-get-set-up">Let’s get set up!</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
+  <li><a href="#computing-in-sociol-333" id="toc-computing-in-sociol-333" class="nav-link active" data-scroll-target="#computing-in-sociol-333">Computing in Sociol 333</a>
   <ul class="collapse">
-  <li><a href="#step-1-download-and-install-both-r-and-rstudio" id="toc-step-1-download-and-install-both-r-and-rstudio" class="nav-link" data-scroll-target="#step-1-download-and-install-both-r-and-rstudio">Step 1: Download and install both R and RStudio</a>
+  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
+  </ul></li>
+  <li><a href="#getting-set-up" id="toc-getting-set-up" class="nav-link" data-scroll-target="#getting-set-up">Getting set up!</a>
   <ul class="collapse">
+  <li><a href="#part-a-r-and-rstudio" id="toc-part-a-r-and-rstudio" class="nav-link" data-scroll-target="#part-a-r-and-rstudio">Part A: R and RStudio</a>
+  <ul class="collapse">
+  <li><a href="#step-1-download-and-install-both-r-and-rstudio" id="toc-step-1-download-and-install-both-r-and-rstudio" class="nav-link" data-scroll-target="#step-1-download-and-install-both-r-and-rstudio">Step 1: Download and install both R and RStudio</a></li>
   <li><a href="#step-2-install-some-packages" id="toc-step-2-install-some-packages" class="nav-link" data-scroll-target="#step-2-install-some-packages">Step 2: Install some packages</a></li>
   </ul></li>
-  <li><a href="#set-up-git-and-github" id="toc-set-up-git-and-github" class="nav-link" data-scroll-target="#set-up-git-and-github">Set up Git and GitHub</a>
+  <li><a href="#part-b-git-and-github" id="toc-part-b-git-and-github" class="nav-link" data-scroll-target="#part-b-git-and-github">Part B: Git and GitHub</a>
   <ul class="collapse">
   <li><a href="#step-3.-do-you-already-have-git" id="toc-step-3.-do-you-already-have-git" class="nav-link" data-scroll-target="#step-3.-do-you-already-have-git">Step 3. Do you already have Git?</a></li>
   <li><a href="#step-4-install-git" id="toc-step-4-install-git" class="nav-link" data-scroll-target="#step-4-install-git">Step 4: Install Git</a></li>
   <li><a href="#step-5-configure-git" id="toc-step-5-configure-git" class="nav-link" data-scroll-target="#step-5-configure-git">Step 5: Configure Git</a></li>
   </ul></li>
-  <li><a href="#connect-git-and-github-to-r-and-rstudio" id="toc-connect-git-and-github-to-r-and-rstudio" class="nav-link" data-scroll-target="#connect-git-and-github-to-r-and-rstudio">Connect Git and GitHub to R and RStudio</a>
+  <li><a href="#part-c-connect-rrstudio-to-gitgithub" id="toc-part-c-connect-rrstudio-to-gitgithub" class="nav-link" data-scroll-target="#part-c-connect-rrstudio-to-gitgithub">Part C: Connect R/RStudio to Git/GitHub</a>
   <ul class="collapse">
   <li><a href="#step-6-create-a-personal-access-token-on-github" id="toc-step-6-create-a-personal-access-token-on-github" class="nav-link" data-scroll-target="#step-6-create-a-personal-access-token-on-github">Step 6: Create a Personal Access Token on GitHub</a></li>
   <li><a href="#step-7-store-the-personal-access-token-to-connect-rrstudio-and-github" id="toc-step-7-store-the-personal-access-token-to-connect-rrstudio-and-github" class="nav-link" data-scroll-target="#step-7-store-the-personal-access-token-to-connect-rrstudio-and-github">Step 7: Store the personal access token to connect R/RStudio and GitHub</a></li>
   </ul></li>
-  <li><a href="#step-8-clone-the-repo-start-a-new-rstudio-project" id="toc-step-8-clone-the-repo-start-a-new-rstudio-project" class="nav-link" data-scroll-target="#step-8-clone-the-repo-start-a-new-rstudio-project">Step 8: Clone the repo &amp; start a new RStudio project</a></li>
-  <li><a href="#it-worked" id="toc-it-worked" class="nav-link" data-scroll-target="#it-worked">It worked!</a></li>
-  <li><a href="#it-didnt-work" id="toc-it-didnt-work" class="nav-link" data-scroll-target="#it-didnt-work">It didn’t work…</a></li>
+  <li><a href="#part-d-testing-your-new-setup" id="toc-part-d-testing-your-new-setup" class="nav-link" data-scroll-target="#part-d-testing-your-new-setup">Part D: Testing your new setup!</a>
+  <ul class="collapse">
+  <li><a href="#step-8-clone-the-test-repo-start-a-new-rstudio-project" id="toc-step-8-clone-the-test-repo-start-a-new-rstudio-project" class="nav-link" data-scroll-target="#step-8-clone-the-test-repo-start-a-new-rstudio-project">Step 8: Clone the test repo &amp; start a new RStudio project</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#this-isnt-working" id="toc-this-isnt-working" class="nav-link" data-scroll-target="#this-isnt-working">This isn’t working…</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/computing-setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -326,8 +338,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="lets-get-set-up" class="level1">
-<h1>Let’s get set up!</h1>
+<section id="computing-in-sociol-333" class="level1">
+<h1>Computing in Sociol 333</h1>
 <p>This page will introduce you to the course computing workflow. We will set up everything you need in order to start using R, RStudio, Git, and GitHub–four powerful programs that you will be learning to use to analyze data in this class.</p>
 <p>R is a programming language, like Python, C++, Java, and many others. That means it can be used to do all kinds of things. Its primary strength, however, is data analysis, and it is used by many social scientists, statisticians, data scientists, and others to clean, model, transform, and visualize all kinds of data.</p>
 <p>RStudio is an interface for using R--basically, a nice text editor with bells and whistles that are specific to writing code. There are other ways to write programs in R, but most people use RStudio because it is both powerful and free.</p>
@@ -358,8 +370,12 @@ Tip
 <p>Git is a version control system (like “Track Changes” features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like Box but much better).</p>
 </div>
 </div>
-<p>Today, we simply aim to get these four tools set up and talking to one another. This can be a little tedious, but I ask that you stick with it–it only needs to be done once, and we will take as much time as we need to ensure it works for everyone.</p>
-<p>Goals: By time you go through the steps on this page and in the <a href="https://github.com/soc333-sum23/tech-setup">tech-setup repo</a> that it pairs with, you will…</p>
+<p>Today, we simply aim to get these four tools set up and talking to one another.</p>
+<p><strong>The good news:</strong> All of this only needs to be done one time–after this, you’re set not just for the rest of this class, but for whenever you use these tools again in future!</p>
+<p><strong>The bad news:</strong> It’s a tedious and nonintuitive process. If you find it frustrating and/or confusing, it’s not just you. Stick with it, and ask when you get stuck–we will take as much time as necessary to make sure it works for everyone.</p>
+<section id="goals" class="level2">
+<h2 class="anchored" data-anchor-id="goals">Goals</h2>
+<p>By time you go through the steps on this page and in the <a href="https://github.com/soc333-sum23/tech-setup">tech setup repo</a> that it pairs with, you will…</p>
 <ul>
 <li>Have a functioning R, RStudio, Git, and GitHub setup</li>
 <li>Have an introduction to our course workflow using R, RStudio, Git, and GitHub</li>
@@ -367,21 +383,25 @@ Tip
 <li>Practice version control using GitHub</li>
 </ul>
 </section>
-<section id="getting-started" class="level1">
-<h1>Getting started</h1>
+</section>
+<section id="getting-set-up" class="level1">
+<h1>Getting set up!</h1>
 <p>I recommend you find someone with the same operating system as you to work together on this with.</p>
-<section id="step-1-download-and-install-both-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-download-and-install-both-r-and-rstudio">Step 1: Download and install both <a href="https://cran.r-project.org/">R</a> and <a href="https://posit.co/download/rstudio-desktop/">RStudio</a></h2>
+<section id="part-a-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="part-a-r-and-rstudio">Part A: R and RStudio</h2>
+<section id="step-1-download-and-install-both-r-and-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-download-and-install-both-r-and-rstudio">Step 1: Download and install both <a href="https://cran.r-project.org/">R</a> and <a href="https://posit.co/download/rstudio-desktop/">RStudio</a></h3>
 <p>Those links again:</p>
 <ul>
 <li><p>Download R: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p></li>
 <li><p>Download RStudio: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p></li>
 </ul>
-<p>Follow the instructions your computer gives you to install both programs.</p>
+<p>Follow the prompts your computer gives you to install both programs.</p>
 <p><a href="https://rstudio-education.github.io/hopr/starting.html">These instructions</a> might help if you get stuck.</p>
 <p>Now open RStudio. You should see a screen that looks something like this:</p>
 <p><img src="images/rstudio.png" class="img-fluid"></p>
-<p>We will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue “&gt;” is, is where you will be copy/pasting and running the code that is given to you in the next sections.</p>
+<p>We will go through what the different pieces of this interface are in more detail another day. For now, all you need to know is that the box on the left hand side labeled “Console”, where the blue <code>&gt;</code> is, is where you will be copy/pasting and running the code that is given to you in the next sections.</p>
+</section>
 <section id="step-2-install-some-packages" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-install-some-packages">Step 2: Install some packages</h3>
 <p>You will need a couple of what are called “packages” to complete the rest of these steps. Packages are basically bundles of code that people write and release that make it easier to do specific tasks in R.</p>
@@ -393,18 +413,31 @@ Tip
 <p>Your computer might take a few moments to download and install the required code. Then you should see a message in the console saying <code>The downloaded binary packages are in</code>, followed by a file path. This means the installation worked.</p>
 </section>
 </section>
-<section id="set-up-git-and-github" class="level2">
-<h2 class="anchored" data-anchor-id="set-up-git-and-github">Set up Git and GitHub</h2>
+<section id="part-b-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="part-b-git-and-github">Part B: Git and GitHub</h2>
 <p>We will be following the instructions in the <u>How to Set up Git</u> section <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">of this webpage</a>, <strong>skipping</strong> the subsections <u>Initialize a Git Repository</u>, <u>View Commit History</u>, and <u>Make a Commit and View More History.</u></p>
-<p>Look at the webpage if you like learning through videos. This page contains the same instructions in text form, with copy-pastable code.</p>
+<p>Look at the webpage if you like learning through videos. This page contains the same instructions in text form, with copy-pasteable code.</p>
 <section id="step-3.-do-you-already-have-git" class="level3">
 <h3 class="anchored" data-anchor-id="step-3.-do-you-already-have-git">Step 3. Do you already have Git?</h3>
-<p>Open RStudio. Look at the console (left hand window). You should see another tab right next to the word “Console” that says “Terminal.” Click on this. In this window, paste the following code, then hit enter:</p>
+<p>Open RStudio. Look at the console (left hand window). You should see another tab right next to the word “Console” that says “Terminal.” Click on this. In the terminal window, paste the following code, then hit enter:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This checks if you have git installed. If so, it will show a file path–something like <code>/usr/local/bin/git.</code> Congrats, you’re good to go! Move to <strong>Step 5.</strong></p>
-<p>If instead you see something like <code>git: command not found</code> , you need to install git. Proceed to <strong>Step 3.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The console sends instructions to R. The terminal, on the other hand, sends instructions to the operating system of your computer. The terminal is often used to install and update things and create/delete/move files on your computer.</p>
+</div>
+</div>
+<p>This checks if you have git installed. If so, it will show a file path–on a mac, something like <code>/usr/local/bin/git.</code> Congrats, you’re good to go! Move to <strong>Step 5.</strong></p>
+<p>If instead you see something like <code>git: command not found</code> , you need to install git. Proceed to <strong>Step 4.</strong></p>
 </section>
 <section id="step-4-install-git" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-install-git">Step 4: Install Git</h3>
@@ -420,8 +453,8 @@ Tip
 <p>Once that information is entered, save the file.</p>
 </section>
 </section>
-<section id="connect-git-and-github-to-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="connect-git-and-github-to-r-and-rstudio">Connect Git and GitHub to R and RStudio</h2>
+<section id="part-c-connect-rrstudio-to-gitgithub" class="level2">
+<h2 class="anchored" data-anchor-id="part-c-connect-rrstudio-to-gitgithub">Part C: Connect R/RStudio to Git/GitHub</h2>
 <p>We’re still following <a href="https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/">these instructions</a> (same page as above). Now, follow the directions in the <u>Connect RStudio and GitHub</u> section.</p>
 <p>Not working? You can try <a href="https://github.com/DukeStatSci/github_auth_guide">these instructions</a> instead–a slightly different process that should lead to the same result.</p>
 <section id="step-6-create-a-personal-access-token-on-github" class="level3">
@@ -444,34 +477,32 @@ Tip
 <p>Enter your GitHub username, and use the Personal Access Token you copied in Step 6 as your password (<strong>not</strong> your actual GitHub password–yes, it is confusing!)</p>
 </section>
 </section>
-<section id="step-8-clone-the-repo-start-a-new-rstudio-project" class="level2">
-<h2 class="anchored" data-anchor-id="step-8-clone-the-repo-start-a-new-rstudio-project">Step 8: Clone the repo &amp; start a new RStudio project</h2>
+<section id="part-d-testing-your-new-setup" class="level2">
+<h2 class="anchored" data-anchor-id="part-d-testing-your-new-setup">Part D: Testing your new setup!</h2>
+<section id="step-8-clone-the-test-repo-start-a-new-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-clone-the-test-repo-start-a-new-rstudio-project">Step 8: Clone the test repo &amp; start a new RStudio project</h3>
 <p>Everything should now be set up! Now, we’ll test whether it is working correctly.</p>
-<p>Go to the course organization at <a href="#0" class="uri">https://github.com/soc333-sum23</a>. Click on the repo with the prefix <strong>tech-setup</strong>. It contains a document with which you will test that everything is set up correctly.</p>
-<p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p>
-<p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p>
-<p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p>
-<p>Change the default directory to something you’ll be able to find later on your computer–I recommend making a folder just for this class, and keeping all of your repos in it!</p>
-<p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p>
-<p>Click <em>tech-setup-test.qmd</em> to open the template Quarto file.</p>
-<p>Follow the instructions in the file to make a change and commit it.</p>
-</section>
-<section id="it-worked" class="level2">
-<h2 class="anchored" data-anchor-id="it-worked">It worked!</h2>
 <ul>
-<li>Congrats! You’re done with the most annoying and tedious part of this course!</li>
+<li><p>Go to the course organization at <a href="#0" class="uri">https://github.com/soc333-sum23</a>. Click on the repo with the prefix <strong>tech-setup</strong>. It contains a document with which you will test that everything is set up correctly.</p></li>
+<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
+<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
+<li><p>Copy and paste the URL of the test repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
+<li><p>Change the default directory to <strong>something you’ll be able to find later</strong> on your computer–I recommend making a folder just for this class, and keeping all of your repos in it!</p></li>
+<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
+<li><p>Click <em>tech-setup-test.qmd</em> to open the template Quarto file.</p></li>
+<li><p>Follow the instructions in the file to make a change and commit it.</p></li>
 </ul>
-<iframe src="https://giphy.com/embed/t3sZxY5zS5B0z5zMIz" width="480" height="270" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe><p><a href="https://giphy.com/gifs/nhl-sports-hockey-fan-t3sZxY5zS5B0z5zMIz">via GIPHY</a></p>
 </section>
-<section id="it-didnt-work" class="level2">
-<h2 class="anchored" data-anchor-id="it-didnt-work">It didn’t work…</h2>
+</section>
+</section>
+<section id="this-isnt-working" class="level1">
+<h1>This isn’t working…</h1>
 <ul>
-<li>Can’t seem to get it? No worries–come talk to me and we’ll get it sorted out.</li>
-<li>Depending on your setup, it may be simpler to access RStudio through containers. Containers allow you to code through a browser, meaning you can skip all the downloading steps (though you still must connect RStudio and GitHub). See <a href="https://github.com/sta199-f22-1/sta199-f22-1.github.io/blob/main/labs/lab-0.qmd">these instructions</a> for how to set this up.</li>
+<li>If you get stuck, come talk to me.</li>
+<li>Depending on your setup, it may be simpler to access RStudio through containers. Containers allow you to code through a browser, meaning you can skip all the downloading steps (though you still must connect RStudio and GitHub). See <a href="https://sta199-f22-1.github.io/labs/lab-0.html">these instructions</a> for how to set this up.</li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -830,8 +861,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./computing-cheatsheets.html" class="pagination-link">
-        <span class="nav-page-text">Cheatsheets</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./computing-clonerepo.html" class="pagination-link">
+        <span class="nav-page-text">Cloning and commiting instructions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

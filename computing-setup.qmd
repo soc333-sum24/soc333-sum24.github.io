@@ -4,7 +4,7 @@ execute:
   eval: false
 ---
 
-# Let's get set up!
+# Computing in Sociol 333
 
 This page will introduce you to the course computing workflow.
 We will set up everything you need in order to start using R, RStudio, Git, and GitHub--four powerful programs that you will be learning to use to analyze data in this class.
@@ -29,20 +29,29 @@ Git is a version control system (like "Track Changes" features from Microsoft Wo
 :::
 
 Today, we simply aim to get these four tools set up and talking to one another.
-This can be a little tedious, but I ask that you stick with it--it only needs to be done once, and we will take as much time as we need to ensure it works for everyone.
 
-Goals: By time you go through the steps on this page and in the [tech-setup repo](https://github.com/soc333-sum23/tech-setup) that it pairs with, you will...
+**The good news:** All of this only needs to be done one time--after this, you're set not just for the rest of this class, but for whenever you use these tools again in future!
+
+**The bad news:** It's a tedious and nonintuitive process.
+If you find it frustrating and/or confusing, it's not just you.
+Stick with it, and ask when you get stuck--we will take as much time as necessary to make sure it works for everyone.
+
+## Goals
+
+By time you go through the steps on this page and in the [tech setup repo](https://github.com/soc333-sum23/tech-setup) that it pairs with, you will...
 
 -   Have a functioning R, RStudio, Git, and GitHub setup
 -   Have an introduction to our course workflow using R, RStudio, Git, and GitHub
 -   Gain practice writing a reproducible report using Quarto
 -   Practice version control using GitHub
 
-# Getting started
+# Getting set up!
 
 I recommend you find someone with the same operating system as you to work together on this with.
 
-## Step 1: Download and install both [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/)
+## Part A: R and RStudio
+
+### Step 1: Download and install both [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/)
 
 Those links again:
 
@@ -50,7 +59,7 @@ Those links again:
 
 -   Download RStudio: <https://posit.co/download/rstudio-desktop/>
 
-Follow the instructions your computer gives you to install both programs.
+Follow the prompts your computer gives you to install both programs.
 
 [These instructions](https://rstudio-education.github.io/hopr/starting.html) might help if you get stuck.
 
@@ -60,7 +69,7 @@ You should see a screen that looks something like this:
 ![](images/rstudio.png)
 
 We will go through what the different pieces of this interface are in more detail another day.
-For now, all you need to know is that the box on the left hand side labeled "Console", where the blue "\>" is, is where you will be copy/pasting and running the code that is given to you in the next sections.
+For now, all you need to know is that the box on the left hand side labeled "Console", where the blue `>` is, is where you will be copy/pasting and running the code that is given to you in the next sections.
 
 ### Step 2: Install some packages
 
@@ -79,30 +88,36 @@ Your computer might take a few moments to download and install the required code
 Then you should see a message in the console saying `The downloaded binary packages are in`, followed by a file path.
 This means the installation worked.
 
-## Set up Git and GitHub
+## Part B: Git and GitHub
 
 We will be following the instructions in the [How to Set up Git]{.underline} section [of this webpage](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/), **skipping** the subsections [Initialize a Git Repository]{.underline}, [View Commit History]{.underline}, and [Make a Commit and View More History.]{.underline}
 
 Look at the webpage if you like learning through videos.
-This page contains the same instructions in text form, with copy-pastable code.
+This page contains the same instructions in text form, with copy-pasteable code.
 
-### Step 3. Do you already have Git? 
+### Step 3. Do you already have Git?
 
 Open RStudio.
 Look at the console (left hand window).
 You should see another tab right next to the word "Console" that says "Terminal." Click on this.
-In this window, paste the following code, then hit enter:
+In the terminal window, paste the following code, then hit enter:
 
 ```{bash}
 which git
 ```
 
+::: callout-note
+The console sends instructions to R.
+The terminal, on the other hand, sends instructions to the operating system of your computer.
+The terminal is often used to install and update things and create/delete/move files on your computer.
+:::
+
 This checks if you have git installed.
-If so, it will show a file path--something like `/usr/local/bin/git.` Congrats, you're good to go!
+If so, it will show a file path--on a mac, something like `/usr/local/bin/git.` Congrats, you're good to go!
 Move to **Step 5.**
 
 If instead you see something like `git: command not found` , you need to install git.
-Proceed to **Step 3.**
+Proceed to **Step 4.**
 
 ### Step 4: Install Git
 
@@ -124,7 +139,7 @@ Then provide your email where it says `email =`, also in quotation marks.
 
 Once that information is entered, save the file.
 
-## Connect Git and GitHub to R and RStudio
+## Part C: Connect R/RStudio to Git/GitHub
 
 We're still following [these instructions](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/) (same page as above).
 Now, follow the directions in the [Connect RStudio and GitHub]{.underline} section.
@@ -166,38 +181,33 @@ gitcreds::gitcreds_set()
 
 Enter your GitHub username, and use the Personal Access Token you copied in Step 6 as your password (**not** your actual GitHub password--yes, it is confusing!)
 
-## Step 8: Clone the repo & start a new RStudio project
+## Part D: Testing your new setup!
+
+### Step 8: Clone the test repo & start a new RStudio project
 
 Everything should now be set up!
 Now, we'll test whether it is working correctly.
 
-Go to the course organization at [https://github.com/soc333-sum23](#0){.uri}.
-Click on the repo with the prefix **tech-setup**.
-It contains a document with which you will test that everything is set up correctly.
+-   Go to the course organization at [https://github.com/soc333-sum23](#0){.uri}.
+    Click on the repo with the prefix **tech-setup**.
+    It contains a document with which you will test that everything is set up correctly.
 
-Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
-Click on the clipboard icon to copy the repo URL.
+-   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
+    Click on the clipboard icon to copy the repo URL.
 
-In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
 
-Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+-   Copy and paste the URL of the test repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
 
-Change the default directory to something you'll be able to find later on your computer--I recommend making a folder just for this class, and keeping all of your repos in it!
+-   Change the default directory to **something you'll be able to find later** on your computer--I recommend making a folder just for this class, and keeping all of your repos in it!
 
-Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 
-Click *tech-setup-test.qmd* to open the template Quarto file.
+-   Click *tech-setup-test.qmd* to open the template Quarto file.
 
-Follow the instructions in the file to make a change and commit it.
+-   Follow the instructions in the file to make a change and commit it.
 
-## It worked!
+# This isn't working...
 
--   Congrats! You're done with the most annoying and tedious part of this course!
-
-```{=html}
-<iframe src="https://giphy.com/embed/t3sZxY5zS5B0z5zMIz" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nhl-sports-hockey-fan-t3sZxY5zS5B0z5zMIz">via GIPHY</a></p>
-```
-## It didn't work...
-
--   Can't seem to get it? No worries--come talk to me and we'll get it sorted out.
--   Depending on your setup, it may be simpler to access RStudio through containers. Containers allow you to code through a browser, meaning you can skip all the downloading steps (though you still must connect RStudio and GitHub). See [these instructions](https://github.com/sta199-f22-1/sta199-f22-1.github.io/blob/main/labs/lab-0.qmd) for how to set this up.
+-   If you get stuck, come talk to me.
+-   Depending on your setup, it may be simpler to access RStudio through containers. Containers allow you to code through a browser, meaning you can skip all the downloading steps (though you still must connect RStudio and GitHub). See [these instructions](https://sta199-f22-1.github.io/labs/lab-0.html) for how to set this up.
