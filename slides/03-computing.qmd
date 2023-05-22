@@ -19,6 +19,10 @@ By the end of the course, you will be able to...
 -   gain insight from data, reproducibly **(with literate programming and version control)** and collaboratively, using modern programming tools and techniques
 :::
 
+::: aside
+Today's slides adapted from Dr. Mine Çetinkaya-Rundel's Intro to Data Science (STA199) course
+:::
+
 # Reproducible data analysis
 
 ## Reproducibility checklist {.smaller}
@@ -55,7 +59,7 @@ What does it mean for a data analysis to be "reproducible"?
 
 ::: columns
 ::: {.column width="50%"}
-![](images/02/r-logo.png){fig-alt="R logo" fig-align="center"}
+![](images/03/r-logo.png){fig-alt="R logo" fig-align="center"}
 
 -   R is an open-source statistical **programming language**
 -   R is also an environment for statistical computing and graphics
@@ -63,7 +67,7 @@ What does it mean for a data analysis to be "reproducible"?
 :::
 
 ::: {.column .fragment width="50%"}
-![](images/02/rstudio-logo.png){fig-alt="RStudio logo"}
+![](images/03/rstudio-logo.png){fig-alt="RStudio logo"}
 
 -   RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
 -   RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
@@ -72,61 +76,11 @@ What does it mean for a data analysis to be "reproducible"?
 
 ## R vs. RStudio
 
-[![](images/02/r_vs_rstudio.png){fig-alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." fig-align="center" width="1001"}](https://moderndive.com/1-getting-started.html)
+[![](images/03/r_vs_rstudio.png){fig-alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." fig-align="center" width="1001"}](https://moderndive.com/1-getting-started.html)
 
 ::: aside
 Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
 :::
-
-
-## Tour: R and RStudio
-
-![](images/02/tour-r-rstudio.png)
-# Quarto
-
-## Quarto
-
-::: incremental
--   A text editor, like Microsoft Word or Google Docs--but it does code too!
--   Fully reproducible reports -- each time you render the analysis is run from the beginning
-:::
-
-## Tour: Quarto
-
-![](images/02/tour-quarto.png){fig-alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
-
-## How will we use Quarto?
-
--   Every assignment / report / project / etc. is a Quarto document
--   You'll always have a template Quarto document to start with
--   The amount of scaffolding in the template will decrease over the semester
-
-# Toolkit: Version control and collaboration
-
-## Git and GitHub {.smaller}
-
-::: columns
-::: {.column width="50%"}
-![](images/02/git-logo.png){fig-alt="Git logo" fig-align="center" width="200"}
-
--   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
--   It's not the only version control system, but it's a very popular one
-:::
-
-::: {.column width="50%"}
-![](images/02/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="200"}
-
--   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
-
--   We will use GitHub as a platform for web hosting and collaboration (and as our course management system!)
-:::
-:::
-
-## Install time!
-
--   Setting up is the hardest part...
--   Go to our course webpage (soc333-sum23.github.io), click on "Computing" in the side bar, and then click on "Setup".
--   Today's exercise: Work through these installation steps with a partner on the same operating system
 
 ## A short list (for now) of R essentials
 
@@ -162,3 +116,76 @@ dataframe$var_name
 ```{r, eval = FALSE}
 ?mean
 ```
+
+## Tour: R and RStudio
+
+![](images/03/tour-r-rstudio.png)
+
+# Quarto
+
+## Quarto
+
+::: incremental
+-   A text editor, like Microsoft Word or Google Docs--but it does code too!
+-   Fully reproducible reports -- each time you render the analysis is run from the beginning
+:::
+
+## Tour: Quarto
+
+![](images/03/tour-quarto.png){fig-alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
+
+## How will we use Quarto?
+
+-   Every assignment / report / project / etc. is a Quarto document
+-   You'll always have a template Quarto document to start with
+-   The amount of scaffolding in the template will decrease over the semester
+
+# Toolkit: Version control, organization, collaboration
+
+------------------------------------------------------------------------
+
+![](images/03/phd_comics_vc.gif)
+
+## Git and GitHub {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/03/git-logo.png){fig-alt="Git logo" fig-align="center" width="200"}
+
+-   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
+-   It's not the only version control system, but it's a very popular one
+:::
+
+::: {.column width="50%"}
+![](images/03/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="200"}
+
+-   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
+
+-   We will use GitHub as a platform for web hosting and collaboration (and as our course management system!)
+:::
+:::
+
+# How it all fits together
+
+------------------------------------------------------------------------
+
+![](images/03/whole-game-01.png)
+
+------------------------------------------------------------------------
+
+![](images/03/whole-game-02.png)
+
+------------------------------------------------------------------------
+
+![](images/03/whole-game-03.png)
+
+------------------------------------------------------------------------
+
+![](images/03/whole-game-04.png)
+
+## Install time!
+
+-   Setting up is the hardest part...
+-   Check your email; accept the invite to the course GitHub organization
+-   Then go to our course webpage (soc333-sum23.github.io), click on "Computing" in the side bar, and then click on "Setup".
+-   Today's exercise: Work through these installation steps with a partner on the same operating system

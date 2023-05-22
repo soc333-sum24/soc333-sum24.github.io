@@ -249,7 +249,7 @@
     "href": "slides/03-computing.html#learning-goals",
     "title": "Meet the toolkit",
     "section": "Learning goals",
-    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques\n\n\n\n\nToday’s slides adapted from Dr. Mine Çetinkaya-Rundel’s Intro to Data Science (STA199) course"
   },
   {
     "objectID": "slides/03-computing.html#reproducibility-checklist",
@@ -280,15 +280,29 @@
     "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
   },
   {
+    "objectID": "slides/03-computing.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/03-computing.html#a-short-list-for-now-of-r-essentials",
+    "title": "Meet the toolkit",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_these)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/03-computing.html#r-essentials-continued",
+    "href": "slides/03-computing.html#r-essentials-continued",
+    "title": "Meet the toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
+  },
+  {
     "objectID": "slides/03-computing.html#tour-r-and-rstudio",
     "href": "slides/03-computing.html#tour-r-and-rstudio",
     "title": "Meet the toolkit",
     "section": "Tour: R and RStudio",
-    "text": "Tour: R and RStudio\n # Quarto"
+    "text": "Tour: R and RStudio"
   },
   {
-    "objectID": "slides/03-computing.html#quarto",
-    "href": "slides/03-computing.html#quarto",
+    "objectID": "slides/03-computing.html#quarto-1",
+    "href": "slides/03-computing.html#quarto-1",
     "title": "Meet the toolkit",
     "section": "Quarto",
     "text": "Quarto\n\n\nA text editor, like Microsoft Word or Google Docs–but it does code too!\nFully reproducible reports – each time you render the analysis is run from the beginning"
@@ -319,21 +333,7 @@
     "href": "slides/03-computing.html#install-time",
     "title": "Meet the toolkit",
     "section": "Install time!",
-    "text": "Install time!\n\nSetting up is the hardest part…\nGo to our course webpage (soc333-sum23.github.io), click on “Computing” in the side bar, and then click on “Setup”.\nToday’s exercise: Work through these installation steps with a partner on the same operating system"
-  },
-  {
-    "objectID": "slides/03-computing.html#a-short-list-for-now-of-r-essentials",
-    "href": "slides/03-computing.html#a-short-list-for-now-of-r-essentials",
-    "title": "Meet the toolkit",
-    "section": "A short list (for now) of R essentials",
-    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_these)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
-  },
-  {
-    "objectID": "slides/03-computing.html#r-essentials-continued",
-    "href": "slides/03-computing.html#r-essentials-continued",
-    "title": "Meet the toolkit",
-    "section": "R essentials (continued)",
-    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Install time!\n\nSetting up is the hardest part…\nCheck your email; accept the invite to the course GitHub organization\nThen go to our course webpage (soc333-sum23.github.io), click on “Computing” in the side bar, and then click on “Setup”.\nToday’s exercise: Work through these installation steps with a partner on the same operating system\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/01-welcome.html#meet-the-instructor",
