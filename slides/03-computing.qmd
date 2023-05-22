@@ -1,0 +1,164 @@
+---
+title: "Meet the toolkit"
+subtitle: "Lecture 3"
+date: "May 22, 2023"
+format: revealjs
+---
+
+# Toolkit: Computing
+
+## Learning goals {.smaller}
+
+By the end of the course, you will be able to...
+
+::: incremental
+-   gain insight from data
+-   gain insight from data, **reproducibly**
+-   gain insight from data, reproducibly, **using modern programming tools and techniques**
+-   gain insight from data, reproducibly **and collaboratively**, using modern programming tools and techniques
+-   gain insight from data, reproducibly **(with literate programming and version control)** and collaboratively, using modern programming tools and techniques
+:::
+
+# Reproducible data analysis
+
+## Reproducibility checklist {.smaller}
+
+::: question
+What does it mean for a data analysis to be "reproducible"?
+:::
+
+. . .
+
+**Near-term goals:**
+
+-   Are the tables and figures reproducible from the code and data?
+-   Does the code actually do what you think it does?
+-   In addition to what was done, is it clear *why* it was done?
+
+. . .
+
+**Long-term goals:**
+
+-   Can other people check your work?
+-   Can the code be used for other data?
+-   Can you extend the code to do other things?
+
+## Toolkit for reproducibility
+
+-   Scriptability $\rightarrow$ R / RStudio
+-   Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto
+-   Version control $\rightarrow$ Git / GitHub
+
+# R and RStudio
+
+## R and RStudio {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/02/r-logo.png){fig-alt="R logo" fig-align="center"}
+
+-   R is an open-source statistical **programming language**
+-   R is also an environment for statistical computing and graphics
+-   It's easily extensible with *packages*
+:::
+
+::: {.column .fragment width="50%"}
+![](images/02/rstudio-logo.png){fig-alt="RStudio logo"}
+
+-   RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
+-   RStudio is not a requirement for programming with R, but it's very commonly used by R programmers and data scientists
+:::
+:::
+
+## R vs. RStudio
+
+[![](images/02/r_vs_rstudio.png){fig-alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." fig-align="center" width="1001"}](https://moderndive.com/1-getting-started.html)
+
+::: aside
+Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
+:::
+
+
+## Tour: R and RStudio
+
+![](images/02/tour-r-rstudio.png)
+# Quarto
+
+## Quarto
+
+::: incremental
+-   A text editor, like Microsoft Word or Google Docs--but it does code too!
+-   Fully reproducible reports -- each time you render the analysis is run from the beginning
+:::
+
+## Tour: Quarto
+
+![](images/02/tour-quarto.png){fig-alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
+
+## How will we use Quarto?
+
+-   Every assignment / report / project / etc. is a Quarto document
+-   You'll always have a template Quarto document to start with
+-   The amount of scaffolding in the template will decrease over the semester
+
+# Toolkit: Version control and collaboration
+
+## Git and GitHub {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/02/git-logo.png){fig-alt="Git logo" fig-align="center" width="200"}
+
+-   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
+-   It's not the only version control system, but it's a very popular one
+:::
+
+::: {.column width="50%"}
+![](images/02/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="200"}
+
+-   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
+
+-   We will use GitHub as a platform for web hosting and collaboration (and as our course management system!)
+:::
+:::
+
+## Install time!
+
+-   Setting up is the hardest part...
+-   Go to our course webpage (soc333-sum23.github.io), click on "Computing" in the side bar, and then click on "Setup".
+-   Today's exercise: Work through these installation steps with a partner on the same operating system
+
+## A short list (for now) of R essentials
+
+-   Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+```{r, eval = FALSE}
+do_this(to_this)
+do_that(to_this, to_that, with_these)
+```
+
+. . .
+
+-   Packages are installed with the `install.packages()` function and loaded with the `library` function, once per session:
+
+```{r, eval = FALSE}
+install.packages("package_name")
+library(package_name)
+```
+
+## R essentials (continued)
+
+-   Columns (variables) in data frames are accessed with `$`:
+
+```{r, eval = FALSE}
+#| eval: false
+dataframe$var_name
+```
+
+. . .
+
+-   Object documentation can be accessed with `?`
+
+```{r, eval = FALSE}
+?mean
+```
