@@ -10,7 +10,7 @@ callout-icon: false
 
 [Proposal](https://soc333-sum23.github.io/project-proposal.html): bring to class Thursday, May 25; due Tuesday, May 30
 
-Descriptive statistics: bring to class Thursday, June 1; due Monday, June 5
+Descriptive statistics: due Monday, June 5
 
 Results: bring to class Thursday, June 15; due Tuesday, June 20
 
@@ -40,14 +40,14 @@ You will have to turn in five components for this project.
 This may sound daunting, but it is not meant to be.
 The first three components (the proposal, descriptive statistics, and results) are meant to build on each other and help you construct the last two (the paper and presentation).
 
-Each component with the exception of the presentation has two due dates.
+Three of the five components (the proposal, results, and paper) have two due dates.
 You will first bring your assignment to class for peer feedback.
 Then, you will have an opportunity to edit the assignment before turning it in to me for feedback and grading.
 You will be expected to incorporate feedback given by both your peers and by me to make future revisions better --- this will be a component of your grade.
 
 ## Submission Format
 
-Everything with the exception of the presentation should be written as a Quarto document.
+Everything with the exception of the presentation should be written as a Quarto document, using templates I will provide you.
 All data cleaning, analysis, and visualizations should be done in that single file, so that your entire document is 100% reproducible (i.e., someone else should be able to take your file, click "render" or "run", and recreate your results and visualizations).
 
 ::: callout-tip
@@ -87,21 +87,13 @@ Grading of the project will take into account the following:
 -   Writing and Presentation - What is the quality of the statistical presentation, writing, and explanations?
 -   Creativity and Critical Thought - Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?
 
-A general breakdown of scoring is as follows:
-
--   *90%-100%*: Outstanding effort. Student understands how to apply all statistical concepts, can put the results into a cogent argument, can identify weaknesses in the argument, and can clearly communicate the results to others.
--   *80%-89%*: Good effort. Student understands most of the concepts, puts together an adequate argument, identifies some weaknesses of their argument, and communicates most results clearly to others.
--   *70%-79%*: Passing effort. Student has misunderstanding of concepts in several areas, has some trouble putting results together in a cogent argument, and communication of results is sometimes unclear.
--   *60%-69%*: Struggling effort. Student is making some effort, but has misunderstanding of many concepts and is unable to put together a cogent argument. Communication of results is unclear.
--   *Below 60%*: Student is not making a sufficient effort.
-
 ## Late work policy
 
 -   If you do not bring work to peer-review in class, you will be required to review your own work outside of class, and you will lose points on the peer review portion of the grade.
 
 -   You have three free late days available to you that you can use no questions asked.
 
-    -   That means you can submit one assignment (homework or project component) three days late, three assignments one day late each, or one assignment two days late and a second assignment one day late without penalty.
+    -   That means that without penalty, you can submit one assignment (homework or project component) three days late, three assignments one day late each, or one assignment two days late and a second assignment one day late.
 
     -   You do not have to provide me a reason for using late days--simply submit the assignment when you can and tell me that you are using your late days for it.
 

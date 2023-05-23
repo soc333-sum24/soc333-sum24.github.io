@@ -26,7 +26,7 @@ format: revealjs
 -   5 components; \~1/week:
 
     1.  Proposal (May 25; May 30)
-    2.  Descriptive statistics (June 1; June 5)
+    2.  Descriptive statistics (June 5)
     3.  Results (June 15; June 20)
     4.  Paper (June 21; June 28)
     5.  Presentation (June 22 or 26)
@@ -34,6 +34,7 @@ format: revealjs
 
 ## Why two dates?
 
+-   Proposal, results, and paper
 -   Date 1: when we will do in-class peer review. Push your work to GitHub before class that day. This is a chance to get feedback; it is also part of your project grade.
 -   Date 2: when you will submit your work for grading. Incorporate your peers' comments and anything else requested. Deadline is 11:59pm.
 
@@ -129,7 +130,7 @@ Revise them to improve them.
 -   Installation instructions on course webpage at [Computing -> Setup](https://soc333-sum23.github.io/computing-setup.html)
 -   For step 8 (testing it out): instructions for cloning a repo at [Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
 
-## Next time
+## For next time
 -   Next lecture: Studies and sampling (the rest of what you need to know for the proposal)
 -   Read IMS chapter 2
--   Look over instructions for the proposal ([Project -> Component 1: Proposal](https://soc333-sum23.github.io/project-proposal.html)); start thinking about data sets and questions (bring drafts for peer review Thursday)
+-   Look over instructions for the proposal ([Project -> Component 1: Proposal](https://soc333-sum23.github.io/project-proposal.html)); start looking at data sets and thinking about research questions (bring drafts for peer review Thursday)
