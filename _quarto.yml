@@ -60,14 +60,14 @@ website:
             text: "General information"
           - href: project-proposal.qmd
             text: "Component 1: Proposal"
-          - href: project-descstats.qmd
-            text: "Component 2: Descriptive Stats"
-          - href: project-results.qmd
-            text: "Component 3: Results"
-          - href: project-paper.qmd
-            text: "Component 4: Paper"
-          - href: project-presentation.qmd
-            text: "Component 5: Presentation"
+          # - href: project-descstats.qmd
+          #   text: "Component 2: Descriptive Stats"
+          # - href: project-results.qmd
+          #   text: "Component 3: Results"
+          # - href: project-paper.qmd
+          #   text: "Component 4: Paper"
+          # - href: project-presentation.qmd
+          #   text: "Component 5: Presentation"
       - section: "Slides"
         contents:
           - href: slides/01-welcome.qmd

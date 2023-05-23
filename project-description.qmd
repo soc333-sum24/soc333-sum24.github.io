@@ -10,13 +10,13 @@ callout-icon: false
 
 [Proposal](https://soc333-sum23.github.io/project-proposal.html): bring to class Thursday, May 25; due Tuesday, May 30
 
-[Descriptive statistics](https://soc333-sum23.github.io/project-descstats.html): bring to class Thursday, June 1; due Monday, June 5
+Descriptive statistics: bring to class Thursday, June 1; due Monday, June 5
 
-[Results](https://soc333-sum23.github.io/project-results.html): bring to class Thursday, June 15; due Tuesday, June 20
+Results: bring to class Thursday, June 15; due Tuesday, June 20
 
-[Paper](https://soc333-sum23.github.io/project-paper.html): bring to class Thursday, June 22; due Wednesday, June 28
+Paper: bring to class Thursday, June 22; due Wednesday, June 28
 
-[Presentation + slides](https://soc333-sum23.github.io/project-presentation.html): due before in-class presentations on Monday, June 26.
+Presentation + slides: due before in-class presentations on Monday, June 26.
 
 # Overview
 
@@ -97,7 +97,7 @@ A general breakdown of scoring is as follows:
 
 ## Late work policy
 
--   If you do not bring work to peer-review in class, you will be required to review your own work on your own time, and you will lose points on the peer review portion of the grade.
+-   If you do not bring work to peer-review in class, you will be required to review your own work outside of class, and you will lose points on the peer review portion of the grade.
 
 -   You have three free late days available to you that you can use no questions asked.
 

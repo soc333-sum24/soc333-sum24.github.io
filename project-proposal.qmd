@@ -7,7 +7,7 @@ callout-icon: false
 
 To get some practice with our new computing workflow, you will write this assignment in a Quarto document. 
 
-First, you need to locate and clone the repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our course github organization and find the repository called **c1_proposal_yourusername**. Clone that repository. Open the document called *c1_proposal.qmd*. This is a template document where you will put your work. 
+First, you need to locate and clone the repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/soc333-sum23/soc333-sum23.github.io) and find the repository called **c1_proposal_yourusername**. Clone that repository. Open the document called *c1_proposal.qmd*. This is a template document where you will put your work. 
 
 Commit your changes regularly. When you are done, render the document and push your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
 
