@@ -249,6 +249,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Lecture 3: Meet the Toolkit</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/04-researchquestions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4: Project and research questions</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -263,12 +269,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#how-to-clone-a-git-repo" id="toc-how-to-clone-a-git-repo" class="nav-link active" data-scroll-target="#how-to-clone-a-git-repo">How to clone a git repo</a>
   <ul class="collapse">
-  <li><a href="#step-1-get-the-repo-ssh-link-from-github" id="toc-step-1-get-the-repo-ssh-link-from-github" class="nav-link" data-scroll-target="#step-1-get-the-repo-ssh-link-from-github">Step 1: Get the repo SSH link from GitHub</a></li>
+  <li><a href="#step-1-get-the-repo-link-from-github" id="toc-step-1-get-the-repo-link-from-github" class="nav-link" data-scroll-target="#step-1-get-the-repo-link-from-github">Step 1: Get the repo link from GitHub</a></li>
   <li><a href="#step-2-use-rstudio-to-copy-the-contents-to-your-computer" id="toc-step-2-use-rstudio-to-copy-the-contents-to-your-computer" class="nav-link" data-scroll-target="#step-2-use-rstudio-to-copy-the-contents-to-your-computer">Step 2: Use RStudio to copy the contents to your computer</a></li>
   </ul></li>
   <li><a href="#how-to-commit-and-push-changes" id="toc-how-to-commit-and-push-changes" class="nav-link" data-scroll-target="#how-to-commit-and-push-changes">How to commit and push changes</a>
   <ul class="collapse">
-  <li><a href="#step-1-save" id="toc-step-1-save" class="nav-link" data-scroll-target="#step-1-save">Step 1: Save</a></li>
+  <li><a href="#step-1-save-and-render" id="toc-step-1-save-and-render" class="nav-link" data-scroll-target="#step-1-save-and-render">Step 1: Save and render</a></li>
   <li><a href="#step-2-stage-and-commit-changes" id="toc-step-2-stage-and-commit-changes" class="nav-link" data-scroll-target="#step-2-stage-and-commit-changes">Step 2: Stage and commit changes</a></li>
   <li><a href="#step-3.-push-your-changes-to-github" id="toc-step-3.-push-your-changes-to-github" class="nav-link" data-scroll-target="#step-3.-push-your-changes-to-github">Step 3. Push your changes to GitHub</a></li>
   <li><a href="#did-it-work-check-github" id="toc-did-it-work-check-github" class="nav-link" data-scroll-target="#did-it-work-check-github">Did it work? Check GitHub!</a></li>
@@ -299,8 +305,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-to-clone-a-git-repo" class="level1">
 <h1>How to clone a git repo</h1>
 <p>You will begin most assignments and exercises in this class by “cloning” a git repository containing template documents hosted in <a href="https://github.com/soc333-sum23">our course organization on GitHub</a>. “Cloning” simply means creating your own local copy of the files the repository contains. It is equivalent to downloading project instructions from Sakai. The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked. This makes it easy to incorporate your changes into the online version and vice versa.</p>
-<section id="step-1-get-the-repo-ssh-link-from-github" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-get-the-repo-ssh-link-from-github">Step 1: Get the repo SSH link from GitHub</h2>
+<section id="step-1-get-the-repo-link-from-github" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-get-the-repo-link-from-github">Step 1: Get the repo link from GitHub</h2>
 <ul>
 <li><p>Go to <a href="https://github.com/soc333-sum23">the course organization</a> (https://github.com/soc333-sum23). Click on the repo you want to work on.</p>
 <ul>
@@ -340,9 +346,11 @@ Important
 <h1>How to commit and push changes</h1>
 <p>“Committing” changes means saving them to Git. You should commit your changes frequently—as a rule of thumb, every time you finish a task, or reach some other natural stop point that you may want to roll back to later on.</p>
 <p>“Pushing” your commits to GitHub means updating the internet versions of the files with the changes you’ve made. You will submit your work by pushing your changes to your assignment repository on GitHub.</p>
-<section id="step-1-save" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-save">Step 1: Save</h2>
+<section id="step-1-save-and-render" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-save-and-render">Step 1: Save and render</h2>
 <p>First, save your file as you normally would (File -&gt; Save). This saves your changes to your computer and makes them available to commit.</p>
+<p>Most files will be set to automatically render (run everything and create a nice pretty html version) when you save them. You can also render them manually by clicking the <code>Render</code> button in the menu bar.</p>
+<p><img src="images/computingimages/render.png" class="img-fluid"></p>
 </section>
 <section id="step-2-stage-and-commit-changes" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-stage-and-commit-changes">Step 2: Stage and commit changes</h2>

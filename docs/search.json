@@ -46,7 +46,7 @@
     "href": "computing-setup.html#part-d-testing-your-new-setup",
     "title": "Computing setup instructions",
     "section": "Part D: Testing your new setup!",
-    "text": "Part D: Testing your new setup!\n\nStep 8: Clone the test repo & start a new RStudio project\nEverything should now be set up! Now, we’ll test whether it is working correctly.\n\nGo to the course organization at https://github.com/soc333-sum23. Click on the repo called tech-setup-yourname. You will copy these files to your computer (known as “cloning”), make a change, and upload your changes back to GitHub (known as “pushing”) to confirm that everything is working correctly.\nFollow these instructions to clone the repo so that you can open its files in RStudio.\nIn RStudio, click tech-setup-test.qmd to open the template Quarto file.\nFollow the instructions in the file to make a change and commit it."
+    "text": "Part D: Testing your new setup!\n\nStep 8: Clone the test repo & start a new RStudio project\nEverything should now be set up! Now, we’ll test whether it is working correctly.\n\nGo to the course organization at https://github.com/soc333-sum23. Click on the repo called tech-setup-yourname. You will copy these files to your computer (known as “cloning”), make a change, and upload your changes back to GitHub (known as “pushing”) to confirm that everything is working correctly.\nFollow the “How to clone a git repo” section of these instructions to clone the repo so that you can open its files in RStudio.\nIn RStudio, click tech-setup-test.qmd in the files pane (bottom right) to open the template Quarto file.\nFollow the instructions in the file to make a change and commit it."
   },
   {
     "objectID": "computing-clonerepo.html",
@@ -56,8 +56,8 @@
     "text": "You will begin most assignments and exercises in this class by “cloning” a git repository containing template documents hosted in our course organization on GitHub. “Cloning” simply means creating your own local copy of the files the repository contains. It is equivalent to downloading project instructions from Sakai. The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked. This makes it easy to incorporate your changes into the online version and vice versa.\n\n\n\nGo to the course organization (https://github.com/soc333-sum23). Click on the repo you want to work on.\n\n\n\n\n\n\n\nImportant\n\n\n\nFor each assignment, you will see a template repo and your individual repo. Your individual repo will have your name appended on the end. You should clone your individual repo. You will not be able to push changes to template repos.\n\n\n\nClick on the green CODE button. Select HTTPS (this might already be selected by default). Click on the clipboard icon to copy the repo URL.\n\n\n\n\n\n\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work."
   },
   {
-    "objectID": "computing-clonerepo.html#step-1-get-the-repo-ssh-link-from-github",
-    "href": "computing-clonerepo.html#step-1-get-the-repo-ssh-link-from-github",
+    "objectID": "computing-clonerepo.html#step-1-get-the-repo-link-from-github",
+    "href": "computing-clonerepo.html#step-1-get-the-repo-link-from-github",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
     "section": "",
     "text": "Go to the course organization (https://github.com/soc333-sum23). Click on the repo you want to work on.\n\n\n\n\n\n\n\nImportant\n\n\n\nFor each assignment, you will see a template repo and your individual repo. Your individual repo will have your name appended on the end. You should clone your individual repo. You will not be able to push changes to template repos.\n\n\n\nClick on the green CODE button. Select HTTPS (this might already be selected by default). Click on the clipboard icon to copy the repo URL."
@@ -70,11 +70,11 @@
     "text": "In RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work."
   },
   {
-    "objectID": "computing-clonerepo.html#step-1-save",
-    "href": "computing-clonerepo.html#step-1-save",
+    "objectID": "computing-clonerepo.html#step-1-save-and-render",
+    "href": "computing-clonerepo.html#step-1-save-and-render",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
-    "section": "Step 1: Save",
-    "text": "Step 1: Save\nFirst, save your file as you normally would (File -&gt; Save). This saves your changes to your computer and makes them available to commit."
+    "section": "Step 1: Save and render",
+    "text": "Step 1: Save and render\nFirst, save your file as you normally would (File -&gt; Save). This saves your changes to your computer and makes them available to commit.\nMost files will be set to automatically render (run everything and create a nice pretty html version) when you save them. You can also render them manually by clicking the Render button in the menu bar."
   },
   {
     "objectID": "computing-clonerepo.html#step-2-stage-and-commit-changes",
@@ -128,23 +128,16 @@
   {
     "objectID": "project-proposal.html",
     "href": "project-proposal.html",
-    "title": "Project description",
+    "title": "Component 1: Project proposal",
     "section": "",
-    "text": "In this component, you will think through two possible research questions and data sets. Using the feedback provided by your classmates, you will choose one to pursue further.\n\n\nYou will need to find two data sets: one for each of your research questions. You may write additional research questions on a single data set if you would like additional feedback, but in all cases, you must consider and present at least two data sets in total. In other words, additional questions on a single data set are extra; they do not count towards your required two questions.\nI highly recommend selecting data sets included with the openintro package. There is all kinds of interesting data freely available on the internet, but it is a good idea to stick with openintro because their data sets are clean and easy to work with. We already have a lot to do in just 6 weeks, and so will not be covering how to prepare “messy” data for analysis (I recommend a data science course like STA 199 for this!). If you really, really want to use a data set from elsewhere, talk to me.\nNot all openintro data sets will work for this course because not all of them lend themselves to sociological questions (see below for research question requirements–they must have to do with people living in a social system). Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 cases and two interesting variables. Avoid data sets that are used extensively to demonstrate concepts in the textbook. You may not choose questions that are similar to or the same as those used as book examples.\nThe below data sets are good places to start, though you may propose others so long as they allow you to write a research question about people and the social systems they live in.\n-   acs12\n-   cia_factbook\n-   county_2019\n-   county_complete\n-   dds.discr\n-   evals\n-   fatal_police_shootings\n-   gpa\n-   gss2010\n-   hfi\n-   hsb2\n-   labor_market_discrimination\n-   military\n-   mn_police_use_of_force\n-   ncbirths\n-   piracy\n-   satgpa\n-   sowc_demographics\n-   voter_count\n-   yrbss\n\n\n\nYou are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you’re interested in potentially using for the final project. If you would like to receive feedback on more than two research questions, you may optionally submit additional questions. You will review each others’ proposals in groups of 2-3. After peer review, you will be responsible for updating your draft and submitting for grading according to the requirements below.\nFor each research question, you should:\n\nClearly state the specific research question. Make sure it fulfills the following requirements:\n\nMust be specific and well-formulated (see slides LINK)\nMust involve a relationship between at least two variables\nMust be sociological in some way–this is a sociology class, after all. In other words, it has to have something to do with people living in a social system. If you are not sure whether your question meets this requirement, ask!\n\nAdditionally, provide some supporting information:\n\nWhat is your target population?\nWrite ~1 paragraph giving any necessary background information and explaining why the question is interesting to study.\nWrite down a hypothesis stating what you expect to find. Give a brief (~1-2 sentence) justification for why you expect this.\n\nIdentify the data set you would use to answer the research question and provide some information about it. Address the following questions:\n\nWhen and how was it originally collected?\nIs it an observational study or an experiment?\nWho or what was sampled, and how many cases are there?\nWhat variables would you use to answer your question?\nWhy is this data set a good fit for your research question?\nBriefly (in ~2-3 sentences) address any ethical concerns. If none, explain why there are none.\n\nProvide a glimpse of your data\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.\n\n\n\n\n\nAfter peer review, incorporate your peers’ feedback into your draft. In addition, add ~1 paragraph of thoughts about which question you should ultimately choose to move forward with. In that paragraph, answer the following questions:\n\nWhich question do you think you should pursue for your final project?\nWhy is this the right choice? Discuss fit between the research question and data set, feasibility, and value of the research question.\n\nSubmit one Quarto document containing your revised research questions and this summary paragraph.\n\n\n\n\n\n\n\n\n\n\n\nPeer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission\n30%\n\n\nResearch questions\n20%\n\n\nData set descriptions\n20%\n\n\nData set glimpses\n10%\n\n\nParagraph on research question choice\n10%\n\n\nWorkflow and formatting\n10%\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect. Just like you are expected to incorporate feedback from your peers into your graded proposal, you will be expected to incorporate feedback from me into the relevant sections of your final paper. The degree to which you address feedback will be a component of your final paper grade.\n\n\n\n\n\n\nWhy?\n\n\n\nThere are three main purposes of the project proposal:\n\nTo get you thinking about the project early so you can get a head start on refining your question, finding your data, and doing your analysis.\nTo ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful.\nTo give you practice talking about analysis ideas and plans with your peers."
+    "text": "To get some practice with our new computing workflow, you will write this assignment in a Quarto document.\nFirst, you need to locate and clone the repository (instructions). Go to our course github organization and find the repository called c1_proposal_yourusername. Clone that repository. Open the document called c1_proposal.qmd. This is a template document where you will put your work.\nCommit your changes regularly. When you are done, render the document and push your work to github (instructions)"
   },
   {
-    "objectID": "project-proposal.html#details",
-    "href": "project-proposal.html#details",
-    "title": "Project description",
-    "section": "",
-    "text": "In this component, you will think through two possible research questions and data sets. Using the feedback provided by your classmates, you will choose one to pursue further.\n\n\nYou will need to find two data sets: one for each of your research questions. You may write additional research questions on a single data set if you would like additional feedback, but in all cases, you must consider and present at least two data sets in total. In other words, additional questions on a single data set are extra; they do not count towards your required two questions.\nI highly recommend selecting data sets included with the openintro package. There is all kinds of interesting data freely available on the internet, but it is a good idea to stick with openintro because their data sets are clean and easy to work with. We already have a lot to do in just 6 weeks, and so will not be covering how to prepare “messy” data for analysis (I recommend a data science course like STA 199 for this!). If you really, really want to use a data set from elsewhere, talk to me.\nNot all openintro data sets will work for this course because not all of them lend themselves to sociological questions (see below for research question requirements–they must have to do with people living in a social system). Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 cases and two interesting variables. Avoid data sets that are used extensively to demonstrate concepts in the textbook. You may not choose questions that are similar to or the same as those used as book examples.\nThe below data sets are good places to start, though you may propose others so long as they allow you to write a research question about people and the social systems they live in.\n-   acs12\n-   cia_factbook\n-   county_2019\n-   county_complete\n-   dds.discr\n-   evals\n-   fatal_police_shootings\n-   gpa\n-   gss2010\n-   hfi\n-   hsb2\n-   labor_market_discrimination\n-   military\n-   mn_police_use_of_force\n-   ncbirths\n-   piracy\n-   satgpa\n-   sowc_demographics\n-   voter_count\n-   yrbss\n\n\n\nYou are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you’re interested in potentially using for the final project. If you would like to receive feedback on more than two research questions, you may optionally submit additional questions. You will review each others’ proposals in groups of 2-3. After peer review, you will be responsible for updating your draft and submitting for grading according to the requirements below.\nFor each research question, you should:\n\nClearly state the specific research question. Make sure it fulfills the following requirements:\n\nMust be specific and well-formulated (see slides LINK)\nMust involve a relationship between at least two variables\nMust be sociological in some way–this is a sociology class, after all. In other words, it has to have something to do with people living in a social system. If you are not sure whether your question meets this requirement, ask!\n\nAdditionally, provide some supporting information:\n\nWhat is your target population?\nWrite ~1 paragraph giving any necessary background information and explaining why the question is interesting to study.\nWrite down a hypothesis stating what you expect to find. Give a brief (~1-2 sentence) justification for why you expect this.\n\nIdentify the data set you would use to answer the research question and provide some information about it. Address the following questions:\n\nWhen and how was it originally collected?\nIs it an observational study or an experiment?\nWho or what was sampled, and how many cases are there?\nWhat variables would you use to answer your question?\nWhy is this data set a good fit for your research question?\nBriefly (in ~2-3 sentences) address any ethical concerns. If none, explain why there are none.\n\nProvide a glimpse of your data\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.\n\n\n\n\n\nAfter peer review, incorporate your peers’ feedback into your draft. In addition, add ~1 paragraph of thoughts about which question you should ultimately choose to move forward with. In that paragraph, answer the following questions:\n\nWhich question do you think you should pursue for your final project?\nWhy is this the right choice? Discuss fit between the research question and data set, feasibility, and value of the research question.\n\nSubmit one Quarto document containing your revised research questions and this summary paragraph."
-  },
-  {
-    "objectID": "project-proposal.html#grading",
-    "href": "project-proposal.html#grading",
-    "title": "Project description",
-    "section": "",
-    "text": "Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission\n30%\n\n\nResearch questions\n20%\n\n\nData set descriptions\n20%\n\n\nData set glimpses\n10%\n\n\nParagraph on research question choice\n10%\n\n\nWorkflow and formatting\n10%\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect. Just like you are expected to incorporate feedback from your peers into your graded proposal, you will be expected to incorporate feedback from me into the relevant sections of your final paper. The degree to which you address feedback will be a component of your final paper grade.\n\n\n\n\n\n\nWhy?\n\n\n\nThere are three main purposes of the project proposal:\n\nTo get you thinking about the project early so you can get a head start on refining your question, finding your data, and doing your analysis.\nTo ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will allow you to be successful.\nTo give you practice talking about analysis ideas and plans with your peers."
+    "objectID": "project-proposal.html#data",
+    "href": "project-proposal.html#data",
+    "title": "Component 1: Project proposal",
+    "section": "Data",
+    "text": "Data\nYou will need to find two data sets: one for each of your research questions. You may write additional research questions on a single data set if you would like additional feedback, but in all cases, you must consider and present at least two data sets in total.\nI highly recommend selecting data sets included with the openintro package. There is all kinds of interesting data freely available on the internet, but it is a good idea to stick with openintro because their data sets are clean and easy to work with. We already have a lot to do in just 6 weeks, and so will not be covering how to prepare “messy” data for analysis (I recommend a data science course like STA 199 for this!). If you really want to use a data set from elsewhere instead, talk to me.\nNot all openintro data sets will work for this course because not all of them lend themselves to sociological questions (see below for research question requirements). Choose data sets that have something to do with people, that contain real (not simulated, not demo) data, and that contain a bare minimum of 50 observations and two interesting variables. Avoid data sets that are used extensively to demonstrate concepts in the textbook. You may not choose questions that are similar to or the same as those used as book examples.\nI recommend the below data sets, all of which are included in openintro. Click on the links to see some basic information about them. To access any of them in R, just load the openintro package, then use their names.\n\nacs12\ncia_factbook\ncounty_2019\ncounty_complete\ndds.discr\nevals\nfatal_police_shootings\ngpa\ngss2010\nhfi\nhsb2\nlabor_market_discrimination\nmilitary\nmn_police_use_of_force\nncbirths\npiracy\nsatgpa\nsowc_demographics\nvoter_count\nyrbss\n\n\nVersion to bring to class for peer review (Thursday May 25)\nYou are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you’re interested in potentially using for the final project. If you would like to receive feedback on more than two research questions, you may optionally submit additional questions. You will review each others’ proposals in groups of 2-3. After peer review, you will be responsible for updating your draft and submitting for grading according to the requirements below.\nFor each research question, you should:\n\nClearly state the specific research question. Make sure it fulfills the following requirements (see slides for more detail):\n\nMust fulfill the requirements of a good research question: specific, feasible, sociological\nMust involve a relationship between at least two variables\nMust be answerable with quantitative data and simple statistics\n\nAdditionally, provide some supporting information:\n\nWhat is your target population?\nWrite ~1 paragraph giving any necessary background information and explaining why the question is interesting to study.\nWrite down a hypothesis stating what you expect to find. Give a brief (~1-2 sentence) justification for why you expect this.\n\nIdentify the data set you would use to answer the research question and provide some information about it. Address the following questions:\n\nWhen and how was it originally collected?\nIs it an observational study or an experiment?\nWho or what was sampled, and how many observations are there?\nWhat variables would you use to answer your question?\nWhy is this data set a good fit for your research question?\nBriefly (in ~2-3 sentences) address any ethical concerns. If none, explain why there are none.\n\nProvide a glimpse of your data\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set.\n\n\n\n\nVersion to submit for grading (Tuesday May 30, 11:59pm)\nAfter peer review, incorporate your peers’ feedback into your draft. In addition, add ~1 paragraph of thoughts about which question you should ultimately choose to move forward with. In that paragraph, answer the following questions:\n\nWhich question do you think you should pursue for your final project?\nWhy is this the right choice? Discuss fit between the research question and data set, feasibility, and value of the research question.\n\nSubmit one Quarto document containing your revised research questions and this summary paragraph."
   },
   {
     "objectID": "project-paper.html",
@@ -242,7 +235,7 @@
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nResearch questions\n\n\n\n\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\n\n    \nThu, May 25\nCategorical data pt 1\n\nIMS ch 4\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nCategorical data pt 2\n\n\n\nComponent 1: proposal AND HW1: Getting oriented to R\n\n\n    \nWed, May 31\nNumerical data pt 1\n\nIMS ch 5\n\n\n\n\n    \nThu, Jun 1\nNumerical data pt 2\n\n\nComponent 2 draft\n\n\n\n    4\nMon, Jun 5\nMaking nice plots\n\nIMS ch 6\n\n\nComponent 2: Descriptive statistics\n\n\n    \nTue, Jun 6\nHypothesis testing pt 1\n\nIMS ch 11\n\n\n\n\n    \nWed, Jun 7\nHypothesis testing pt 2\n\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 3\n\n\n\n\n\n    5\nMon, Jun 12\nBest fit lines pt 1\n\nIMS ch 7\n\n\nHW2: Analyzing data\n\n\n    \nTue, Jun 13\nBest fit lines pt 2\n\n\n\n\n\n    \nWed, Jun 14\nMultiple regression pt 1\n\nIMS ch 8\n\n\n\n\n    \nThu, Jun 15\nMultiple regression pt 2\n\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\n\n    \nThu, May 25\nCategorical data pt 1\n\nIMS ch 4\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nCategorical data pt 2\n\n\n\nComponent 1: proposal AND HW1: Getting oriented to R\n\n\n    \nWed, May 31\nNumerical data pt 1\n\nIMS ch 5\n\n\n\n\n    \nThu, Jun 1\nNumerical data pt 2\n\n\nComponent 2 draft\n\n\n\n    4\nMon, Jun 5\nMaking nice plots\n\nIMS ch 6\n\n\nComponent 2: Descriptive statistics\n\n\n    \nTue, Jun 6\nHypothesis testing pt 1\n\nIMS ch 11\n\n\n\n\n    \nWed, Jun 7\nHypothesis testing pt 2\n\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 3\n\n\n\n\n\n    5\nMon, Jun 12\nBest fit lines pt 1\n\nIMS ch 7\n\n\nHW2: Analyzing data\n\n\n    \nTue, Jun 13\nBest fit lines pt 2\n\n\n\n\n\n    \nWed, Jun 14\nMultiple regression pt 1\n\nIMS ch 8\n\n\n\n\n    \nThu, Jun 15\nMultiple regression pt 2\n\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
   },
   {
     "objectID": "slides/03-computing.html#learning-goals",
@@ -495,6 +488,111 @@
     "title": "Welcome to SOCIOL 333",
     "section": "Let’s get started!",
     "text": "Let’s get started!\n\nToday’s in-class exercise (15 min):\nGet a GitHub account if you don’t have one (username advice in the survey)\nComplete the Getting to Know You survey (link in your email)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#today",
+    "href": "slides/04-researchquestions.html#today",
+    "title": "Research questions",
+    "section": "Today",
+    "text": "Today\n\n\nIntroduce the project\nResearch questions\nFinish installing"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#big-idea",
+    "href": "slides/04-researchquestions.html#big-idea",
+    "title": "Research questions",
+    "section": "Big idea",
+    "text": "Big idea\n\nIn a nutshell: Ask a sociological question; answer it with statistical analysis\nInstructions: under “Project” on the course website"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#structure",
+    "href": "slides/04-researchquestions.html#structure",
+    "title": "Research questions",
+    "section": "Structure",
+    "text": "Structure\n\n\n5 components; ~1/week:\n\nProposal (May 25; May 30)\nDescriptive statistics (June 1; June 5)\nResults (June 15; June 20)\nPaper (June 21; June 28)\nPresentation (June 22 or 26)"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#why-two-dates",
+    "href": "slides/04-researchquestions.html#why-two-dates",
+    "title": "Research questions",
+    "section": "Why two dates?",
+    "text": "Why two dates?\n\nDate 1: when we will do in-class peer review. Push your work to GitHub before class that day. This is a chance to get feedback; it is also part of your project grade.\nDate 2: when you will submit your work for grading. Incorporate your peers’ comments and anything else requested. Deadline is 11:59pm."
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#component-1-proposal",
+    "href": "slides/04-researchquestions.html#component-1-proposal",
+    "title": "Research questions",
+    "section": "Component 1: Proposal",
+    "text": "Component 1: Proposal\n\nDevelop two plausible sociological research questions you could answer with data\nThe goal: To choose and refine one question to move forward with\nInstructions: course website -&gt; Project -&gt; Component 1: Proposal"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#what-makes-a-good-sociology-research-question",
+    "href": "slides/04-researchquestions.html#what-makes-a-good-sociology-research-question",
+    "title": "Research questions",
+    "section": "What makes a good sociology research question?",
+    "text": "What makes a good sociology research question?\n\n\nSpecific\nFeasible\nSociological\nIn this class: Is quantitative; involves a relationship between at least 2 variables"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#specific",
+    "href": "slides/04-researchquestions.html#specific",
+    "title": "Research questions",
+    "section": "Specific",
+    "text": "Specific\n\nA question, not a topic\n\n\n\nToo broad: College student binge drinking\nBetter: How are college students’ binge drinking behaviors affected by the binge drinking behaviors of their friends?\nBetter: How are college students’ opinions on binge drinking affected by the binge drinking behaviors of their friends?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#specific-1",
+    "href": "slides/04-researchquestions.html#specific-1",
+    "title": "Research questions",
+    "section": "Specific",
+    "text": "Specific\n\nImplicates specific variables\n\n\n\nToo broad: What drives racial disparities in health outcomes?\nBetter: How do primary care doctors’ rates of referrals to specialists vary by patient race?\nBetter: How do rates of health insurance coverage vary by race?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#feasible",
+    "href": "slides/04-researchquestions.html#feasible",
+    "title": "Research questions",
+    "section": "Feasible",
+    "text": "Feasible\n\nDo you have data with the variables you need?\n\nStart with the data—find an interesting dataset; structure your question based on the variables it has.\n\nIs it simple enough to answer with basic statistics in the next 5 weeks?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#sociological",
+    "href": "slides/04-researchquestions.html#sociological",
+    "title": "Research questions",
+    "section": "Sociological",
+    "text": "Sociological\n\n\nHas to do with people…\n\nObservations should be people, companies, countries, etc—no plants, animals, cars…\n\n…living in social systems\n\nQuestion should have a social element\nNot social: How do stents affect heart attack survival rates?\nBetter: How does the likelihood of stent placement vary by gender identity?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#for-this-class",
+    "href": "slides/04-researchquestions.html#for-this-class",
+    "title": "Research questions",
+    "section": "For this class",
+    "text": "For this class\n\n\nQuantitative, not qualitative\n\nNot quantitative: How do peoples’ recollections of ads for luxury products vary by socioeconomic status?\nBetter: How do peoples’ ratings of ads for luxury products vary by socioeconomic status?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#for-this-class-1",
+    "href": "slides/04-researchquestions.html#for-this-class-1",
+    "title": "Research questions",
+    "section": "For this class",
+    "text": "For this class\n\n\nAt least two variables\n\nHow does X affect Y?\nHow does Y vary by X?\nHow does the relationship between X and Y vary by Z?\nNot enough variables: What proportion of American voters approve of President Biden’s job performance?\nBetter: How does President Biden’s approval rating vary by age among American voters?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#exercise",
+    "href": "slides/04-researchquestions.html#exercise",
+    "title": "Research questions",
+    "section": "Exercise",
+    "text": "Exercise\nWhat are the problems with these research questions? Revise them to improve them.\n\nWhat factors drive gender differences in choice of major?\nHow does susceptibility to migraine headaches vary by age?"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#wrapping-up-computing-workflow-installation",
+    "href": "slides/04-researchquestions.html#wrapping-up-computing-workflow-installation",
+    "title": "Research questions",
+    "section": "Wrapping up computing workflow installation",
+    "text": "Wrapping up computing workflow installation\n\nInstallation instructions on course webpage at Computing -&gt; Setup\nFor step 8 (testing it out): instructions for cloning a repo at Computing -&gt; Cloning and committing"
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#next-time",
+    "href": "slides/04-researchquestions.html#next-time",
+    "title": "Research questions",
+    "section": "Next time",
+    "text": "Next time\n\nNext lecture: Studies and sampling (the rest of what you need to know for the proposal)\nRead IMS chapter 2\nLook over instructions for the proposal (Project -&gt; Component 1: Proposal); start thinking about data sets and questions (bring drafts for peer review Thursday)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/02-datavariables.html#your-advice-for-each-other",
