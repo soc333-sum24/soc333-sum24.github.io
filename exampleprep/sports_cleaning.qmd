@@ -70,9 +70,15 @@ athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_a
 
 
 # Merge coach data and athletes data
-npeople <- full_join(coaches, athletes)
+npeople <- full_join(coaches, athletes) |> 
+  mutate(player_coach_ratio = nplayers/ncoaches)
+
+# npeople_indiv <- npeople |> 
+#   uncount(ncoaches) |> 
+#   mutate(coachgender = ifelse(coachgender == "men", "man", "woman"))
 
 saveRDS(npeople, file = "sports_npeople.rds")
+# saveRDS(npeople_indiv, file = "sports_npeople_indiv.rds")
 saveRDS(npeople, file = "../slides/data/sports_npeople.rds")
 ```
 

@@ -39,9 +39,7 @@ To access any of them in R, just load the openintro package, then use their name
 -   [`cia_factbook`](https://www.openintro.org/data/index.php?data=cia_factbook)
 -   [`county_2019`](https://www.openintro.org/data/index.php?data=county_2019)
 -   [`county_complete`](https://www.openintro.org/data/index.php?data=county_complete)
--   [`dds.discr`](https://www.openintro.org/data/index.php?data=dds.discr)
 -   [`evals`](https://www.openintro.org/data/index.php?data=evals)
--   [`fatal_police_shootings`](https://www.openintro.org/data/index.php?data=fatal_police_shootings)
 -   [`gpa`](https://www.openintro.org/data/index.php?data=gpa)
 -   [`gss2010`](https://www.openintro.org/data/index.php?data=gss2010)
 -   [`hfi`](https://www.openintro.org/data/index.php?data=hfi)
@@ -51,6 +49,7 @@ To access any of them in R, just load the openintro package, then use their name
 -   [`mn_police_use_of_force`](https://www.openintro.org/data/index.php?data=mn_police_use_of_force)
 -   [`ncbirths`](https://www.openintro.org/data/index.php?data=ncbirths)
 -   [`piracy`](https://www.openintro.org/data/index.php?data=piracy)
+-   [`resume`](https://www.openintro.org/data/index.php?data=resume)
 -   [`satgpa`](https://www.openintro.org/data/index.php?data=satgpa)
 -   [`sowc_demographics`](https://www.openintro.org/data/index.php?data=sowc_demographics)
 -   [`voter_count`](https://www.openintro.org/data/index.php?data=voter_count)
@@ -75,7 +74,6 @@ For each research question, you should:
 -   Additionally, provide some supporting information:
 
     -   What is your target population?
-    -   Write \~1 paragraph giving any necessary background information and explaining why the question is interesting to study.
     -   Write down a hypothesis stating what you expect to find. Give a brief (\~1-2 sentence) justification for why you expect this.
 
 -   Identify the data set you would use to answer the research question and provide some information about it.
@@ -85,13 +83,11 @@ For each research question, you should:
     -   Is it an observational study or an experiment?
     -   Who or what was sampled, and how many observations are there?
     -   What variables would you use to answer your question?
-    -   Why is this data set a good fit for your research question?
-    -   Briefly (in \~2-3 sentences) address any ethical concerns. If none, explain why there are none.
+    -   Discuss the strengths and weaknesses of this data set with respect to your research question and target population. Does the sampling strategy make it a good fit? What are its limitations? 
 
 -   Provide a glimpse of your data
 
-    -   Place the file containing your data in the `data` folder of the project repo.
-    -   Use the `glimpse()` function to provide a glimpse of the data set.
+    -   Use the `glimpse()` function to provide a first look at the data set.
 
 ### Version to submit for grading (Tuesday May 30, 11:59pm)
 
