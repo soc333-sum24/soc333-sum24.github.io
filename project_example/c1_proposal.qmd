@@ -1,0 +1,73 @@
+---
+title: "Project component 1: Research question proposal"
+author: "Aidan Combs"
+editor: visual
+---
+
+# Project proposal {#proposal}
+
+Please [see this page for instructions](https://soc333-sum23.github.io/project-proposal.html) on how to write your project proposal. Put your work in this document. Render the document and commit your changes regularly ([see instructions here](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)). When you are done, push your changes to GitHub.
+
+Please write both research questions and their accompanying supporting information and push your work to GitHub before class on Thursday, May 25.
+
+Then, by Tuesday, May 30th, incorporate your peers' feedback into your initial work and add your thoughts on which question you will move forward with (details on the version to submit for grading [can be found here](https://soc333-sum23.github.io/project-proposal.html#version-to-submit-for-grading-tuesday-may-30-1159pm)).
+
+## Setup
+
+In the YAML at the top of the page, replace my name under `author` with yours.
+
+Install the `tidyverse` and `openintro` packages by running the code chunk below (click the green play button). This only needs to be done once.
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+install.packages("openintro")
+```
+
+Then load them with the `library` function by running the code chunk below. This needs to be done once per session (ie, once each time you open this document).
+
+```{r}
+library(tidyverse)
+library(openintro)
+```
+
+## Research question 1
+
+**Research question:** How was income change as a result of the COVID-19 pandemic associated with the industry in which a person was employed?
+
+**Target population:** Non-retired adults who were employed before the pandemic hit.
+
+**Hypothesis:** I hypothesize that people employed in service-related industries will see greater income drops than people in other industries. I expect this because jobs in service-related industries are more likely to depend on in-person interactions with customers that were particularly affected by the pandemic.
+
+**Data set:** I plan to use the reddit_finance data set from the openintro package to answer this question. These data are from a survey that was distributed to users of the subreddit r/financialindependence in 2020. It is an observational study. 1998 Reddit users were sampled.
+
+**Variables:** To answer this question, I would use the variables "pan_inc_chg", which measures whether someone's income increased, decreased, or stayed the same as a result of the pandemic, and "industry", which measures the industry that the respondent was employed in.
+
+**Strengths and weaknesses:** The strengths of this data set are that it contains detailed measures of both pandemic-related income change and employment sector. It has two main weaknesses. First, it uses a convenience sample of Reddit users active in the r/financialindependence subreddit. This group is likely much more interested in and perhaps more knowledgeable about finances than people who do not choose to spend time in this subreddit, and so their financial trajectories post-pandemic were likely different than for others. This impairs the generalizability of results. Second, the "pan_inc_chg" variable is a self-reported estimate, not an exact value. People may have misremembered or misjudged their income change. This impairs the accuracy of the analysis.
+
+```{r}
+glimpse(reddit_finance)
+```
+
+## Research question 2
+
+**Research question:** How does the number of coaches assigned to college sports teams vary by the gender of the team?
+
+**Target population:** Coaches of college sports teams in the US
+
+**Hypothesis:** I predict that for sports in which there is both a men's and a women's team, coaching levels will be equivalent. I expect this because universities are required to adhere to Title IX, which would prohibit differential levels of resources for equivalent sports.
+
+**Data:** These data were reported by Duke and UNC annually from 2003-2021. It is an observational study. All coaches from both institutions are represented in the data set. It contains 3567 observations.
+
+**Variables:** I will use the teamgender, coachgender, and sport variables to answer this question.
+
+**Strengths and weaknesses:** A strength of this data set is that it is administrative data, and so represents all coaches that were employed by these institutions. A weakness is that only two institutions are represented, and both are highly selective institutions with strong athletics programs. This limits the generalizability of the results to institutions that are less selective and that have less resourced athletics programs.
+
+```{r}
+sports <- readRDS("sports_npeople_indiv.rds") # This data set is not part of openintro, so this line is needed to load it from a file instead.
+
+glimpse(sports)
+```
+
+## Post-peer review reflections
+
+After class on 5-30, add [your concluding thoughts](https://soc333-sum23.github.io/project-proposal.html#version-to-submit-for-grading-tuesday-may-30-1159pm) about your research questions here (delete this line).
