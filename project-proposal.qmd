@@ -91,12 +91,12 @@ For each research question, you should:
 
 ### Version to submit for grading (Tuesday May 30, 11:59pm)
 
-After peer review, incorporate your peers' feedback into your draft.
+After peer review, incorporate your peers' feedback into your draft. You should revise your questions if they need it. 
 In addition, add \~1 paragraph of thoughts about which question you should ultimately choose to move forward with.
 In that paragraph, answer the following questions:
 
 -   Which question do you think you should pursue for your final project?
--   Why is this the right choice? Discuss fit between the research question and data set, feasibility, and value of the research question.
+-   Why is this the right choice? Discuss quality of the research question (in terms of being specific, feasible, and sociological) and the ability of the data set to answer the question well.
 
 Submit one Quarto document containing your revised research questions and this summary paragraph.
 
