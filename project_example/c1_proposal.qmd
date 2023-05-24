@@ -66,9 +66,9 @@ glimpse(reddit_finance)
 
 ## Research question 2
 
-**Research question:** How does the number of coaches assigned to college sports teams vary by the gender of the team?
+**Research question:** How does the number of coaches assigned to US college sports teams vary by the gender of the team?
 
-**Target population:** Coaches of college sports teams in the US
+**Target population:** College sports teams in the US
 
 **Hypothesis:** I predict that for sports in which there is both a men's and a women's team, coaching levels will be equivalent.
 I expect this because universities are required to adhere to Title IX, which would prohibit differential levels of resources for equivalent sports.
@@ -76,16 +76,16 @@ I expect this because universities are required to adhere to Title IX, which wou
 **Data:** These data were reported by Duke and UNC annually from 2003-2021.
 It is an observational study.
 All coaches from both institutions are represented in the data set.
-It contains 3567 observations.
+It contains 2311 observations (team-years).
 
-**Variables:** I will use the teamgender, coachgender, and sport variables to answer this question.
+**Variables:** I will use the teamgender, sport, and ncoaches variables to answer this question.
 
 **Strengths and weaknesses:** A strength of this data set is that it is administrative data, and so represents all coaches that were employed by these institutions.
 A weakness is that only two institutions are represented, and both are highly selective institutions with strong athletics programs.
 This limits the generalizability of the results to institutions that are less selective and that have less resourced athletics programs.
 
 ```{r}
-sports <- readRDS("sports_npeople_indiv.rds") # This data set is not part of openintro, so this line is needed to load it from a file instead.
+sports <- readRDS("sports_npeople.rds") # This data set is not part of openintro, so this line is needed to load it from a file instead.
 
 glimpse(sports)
 ```

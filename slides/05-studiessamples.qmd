@@ -1,0 +1,23 @@
+---
+title: "Studies and samples"
+subtitle: "Lecture 5"
+date: "May 23, 2023"
+format: revealjs
+---
+
+## Today
+
+::: incremental
+-   Studies and samples
+-   Questions on the project
+:::
+
+# Populations and Samples
+
+# Types of studies
+
+## Observational studies
+
+## Experiments
+
+## Why does it matter? Causality
