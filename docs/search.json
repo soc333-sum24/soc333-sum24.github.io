@@ -599,28 +599,154 @@
     "href": "slides/05-studiessamples.html#today",
     "title": "Studies and samples",
     "section": "Today",
-    "text": "Today\n\n\nStudies and samples\nQuestions on the project"
+    "text": "Today\n\n\nRelationships between variables\nStudies and samples\nQuestions on the project\n\n\n\n\nToday’s slides are based in part on materials written by Dr. Joseph Roso—thank you!"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#association",
+    "href": "slides/05-studiessamples.html#association",
+    "title": "Studies and samples",
+    "section": "Association",
+    "text": "Association\n\nDescription\nIs variable 1 related to variable 2?"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#association-1",
+    "href": "slides/05-studiessamples.html#association-1",
+    "title": "Studies and samples",
+    "section": "Association",
+    "text": "Association"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#causation",
+    "href": "slides/05-studiessamples.html#causation",
+    "title": "Studies and samples",
+    "section": "Causation",
+    "text": "Causation\n\nExplanation\nDoes variable 1 lead to variable 2?"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#explanatory-and-response-variables",
+    "href": "slides/05-studiessamples.html#explanatory-and-response-variables",
+    "title": "Studies and samples",
+    "section": "Explanatory and response variables",
+    "text": "Explanatory and response variables\n\nExplanatory variable -&gt; might affect -&gt; response variable"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#examples",
+    "href": "slides/05-studiessamples.html#examples",
+    "title": "Studies and samples",
+    "section": "Examples",
+    "text": "Examples\nWhat are the explanatory and response variables?\n\n\nHow are college students’ opinions on binge drinking affected by the binge drinking behaviors of their friends?\nHow does the likelihood of stent placement vary by gender identity?"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#explanatory-does-not-equal-explanation",
+    "href": "slides/05-studiessamples.html#explanatory-does-not-equal-explanation",
+    "title": "Studies and samples",
+    "section": "Explanatory does not equal explanation",
+    "text": "Explanatory does not equal explanation\n\n\nWe often use social categories like race, gender, ethnicity, sexuality, etc as explanatory variables\nBut the categories don’t cause differences; stigma and discrimination and unequal access to resources associated with them do\nEx: How do health outcomes vary by race?\nDifferences are caused by racism (structural, interpersonal), not race"
   },
   {
     "objectID": "slides/05-studiessamples.html#observational-studies",
     "href": "slides/05-studiessamples.html#observational-studies",
     "title": "Studies and samples",
     "section": "Observational studies",
-    "text": "Observational studies"
+    "text": "Observational studies\n\n\nResearcher doesn’t make any changes; just collects data\nExamples\n\nA survey of peoples’ opinions on police reform\nData on the race, age, and gender of people who were hired by a firm"
   },
   {
     "objectID": "slides/05-studiessamples.html#experiments",
     "href": "slides/05-studiessamples.html#experiments",
     "title": "Studies and samples",
     "section": "Experiments",
-    "text": "Experiments"
+    "text": "Experiments\n\n\nResearcher assigns participants into different conditions/treatments\nControl: Everything except one variable is the same between treatments\nRandomization: Groups in different conditions are similar\nDifferences have to be because of the treatment!"
   },
   {
-    "objectID": "slides/05-studiessamples.html#why-does-it-matter-causality",
-    "href": "slides/05-studiessamples.html#why-does-it-matter-causality",
+    "objectID": "slides/05-studiessamples.html#experiments-1",
+    "href": "slides/05-studiessamples.html#experiments-1",
     "title": "Studies and samples",
-    "section": "Why does it matter? Causality",
-    "text": "Why does it matter? Causality\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "section": "Experiments",
+    "text": "Experiments\n\n\nRecording how much money people leave in a tip jar depending on whether there’s a poster with eyes on it on the wall\nMeasuring opinions about the other political party after reading either a news article a participant agrees with or doesn’t agree with"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#why-does-the-distinction-matter-back-to-association-vs-causation.",
+    "href": "slides/05-studiessamples.html#why-does-the-distinction-matter-back-to-association-vs-causation.",
+    "title": "Studies and samples",
+    "section": "Why does the distinction matter? Back to association vs causation.",
+    "text": "Why does the distinction matter? Back to association vs causation.\n\n\nObservational studies: associations are easy; causation is hard\n\nIs smoking causing cancer, or do people already prone to cancer just happen to smoke more?\nDoes social media cause anxiety, or do people with anxiety use social media more?\n\nExperiments: If everything is the same except for the treatment, then differences have to be because of the treatment\n\nBut is that effect important in real life, where things aren’t held to be the same?\nExperiments are hard and not always ethical!"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#exercise-1",
+    "href": "slides/05-studiessamples.html#exercise-1",
+    "title": "Studies and samples",
+    "section": "Exercise 1",
+    "text": "Exercise 1"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#sampling",
+    "href": "slides/05-studiessamples.html#sampling",
+    "title": "Studies and samples",
+    "section": "Sampling",
+    "text": "Sampling\n\n\n\n\n\n\n\n\nYou don’t need to eat all the soup to check the seasoning\nBut you do need to make sure it’s stirred up"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#target-population",
+    "href": "slides/05-studiessamples.html#target-population",
+    "title": "Studies and samples",
+    "section": "Target population",
+    "text": "Target population\n\n\nThe group you’re interested in\nDetermined by your research question\nHow is time spent on social media related to likelihood of being diagnosed with anxiety among American teenagers?\nHow is a country’s spending on healthcare related to its average life expectancy?"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#sample",
+    "href": "slides/05-studiessamples.html#sample",
+    "title": "Studies and samples",
+    "section": "Sample",
+    "text": "Sample\n\n\nWho your data points are actually from\nDetermined by your data set\nA survey of 2500 people recruited on the subreddit r/financialindependence\nSalary and demographic data for all employees at three engineering firms in the Midwest"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#sampling-frame",
+    "href": "slides/05-studiessamples.html#sampling-frame",
+    "title": "Studies and samples",
+    "section": "Sampling frame",
+    "text": "Sampling frame\n ## Sampling frame\n\n\nWho could have been included in your sample?\nDetermined by the sampling process\nA survey emailed to all sophomores at Duke\nA survey posted on r/financialindependence\nOften this is not clearly stated in publicly available data sets :("
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#random-and-nonrandom-samples",
+    "href": "slides/05-studiessamples.html#random-and-nonrandom-samples",
+    "title": "Studies and samples",
+    "section": "Random and nonrandom samples",
+    "text": "Random and nonrandom samples\n\nRandom avoids bias, but it’s not always possible\nNonrandom “convenience samples” are common"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#representativeness-and-generalizability",
+    "href": "slides/05-studiessamples.html#representativeness-and-generalizability",
+    "title": "Studies and samples",
+    "section": "Representativeness and generalizability",
+    "text": "Representativeness and generalizability\n\n\nRepresentativeness: How much your sample is like the target population\nGeneralizability (the goal!): The idea that your sample will tell us something about a larger group than just the sample\nIt’s easier to argue that your results are generalizable if your data are representative\nBut non-representative samples can give generalizable results under the right conditions\n\nDoes the relationship you’re interested in work differently in your sample than in the population?"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#this-is-a-problem-if-you-want-to-estimate-mental-health-in-the-population",
+    "href": "slides/05-studiessamples.html#this-is-a-problem-if-you-want-to-estimate-mental-health-in-the-population",
+    "title": "Studies and samples",
+    "section": "This is a problem if you want to estimate mental health in the population",
+    "text": "This is a problem if you want to estimate mental health in the population"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#but-not-if-youre-interested-in-the-social-mediamental-health-relationship",
+    "href": "slides/05-studiessamples.html#but-not-if-youre-interested-in-the-social-mediamental-health-relationship",
+    "title": "Studies and samples",
+    "section": "But not if you’re interested in the social media/mental health relationship",
+    "text": "But not if you’re interested in the social media/mental health relationship"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#interactions-are-a-problem-for-studying-relationships",
+    "href": "slides/05-studiessamples.html#interactions-are-a-problem-for-studying-relationships",
+    "title": "Studies and samples",
+    "section": "Interactions are a problem for studying relationships",
+    "text": "Interactions are a problem for studying relationships\n ## Exercise 2"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#project-proposal",
+    "href": "slides/05-studiessamples.html#project-proposal",
+    "title": "Studies and samples",
+    "section": "Project proposal",
+    "text": "Project proposal\n\nExample is posted\nInstructions are shortened; bad data sets removed\nQuestions?\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/02-datavariables.html#your-advice-for-each-other",

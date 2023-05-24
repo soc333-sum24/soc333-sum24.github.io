@@ -1,23 +1,189 @@
 ---
 title: "Studies and samples"
 subtitle: "Lecture 5"
-date: "May 23, 2023"
+date: "May 24, 2023"
 format: revealjs
 ---
 
 ## Today
 
 ::: incremental
+-   Relationships between variables
 -   Studies and samples
 -   Questions on the project
 :::
 
-# Populations and Samples
+::: aside
+Today's slides are based in part on materials written by Dr. Joseph Roso---thank you!
+:::
+
+# Relationships between variables: association vs causation
+
+## Association
+
+-   Description
+-   Is variable 1 related to variable 2? 
+
+## Association
+
+![](images/05/homeownership.png)
+
+## Causation
+
+-   Explanation
+-   Does variable 1 lead to variable 2?
+
+## Explanatory and response variables
+
+-   Explanatory variable -> *might affect* -> response variable
+
+## Examples
+
+What are the explanatory and response variables? 
+
+::: incremental
+-   How are *college students' opinions on binge drinking* affected by *the binge drinking behaviors of their friends*?
+-   How does the *likelihood of stent placement* vary by *gender identity*?
+:::
+
+## Explanatory does not equal explanation
+
+::: incremental
+-   We often use social categories like race, gender, ethnicity, sexuality, etc as explanatory variables
+-   But the *categories* don't cause differences; stigma and discrimination and unequal access to resources associated with them do
+-   Ex: How do health outcomes vary by race? 
+-   Differences are caused by rac*ism* (structural, interpersonal), not race
+::: 
 
 # Types of studies
 
 ## Observational studies
 
+::: incremental
+-   Researcher doesn't make any changes; just collects data
+-   Examples
+
+    -   A survey of peoples' opinions on police reform
+    -   Data on the race, age, and gender of people who were hired by a firm
+:::
+
 ## Experiments
 
-## Why does it matter? Causality
+::: incremental
+-   Researcher assigns participants into different conditions/treatments
+-   Control: Everything except one variable is the same between treatments
+-   Randomization: Groups in different conditions are similar
+-   Differences have to be because of the treatment!
+:::
+
+## Experiments
+
+::: incremental
+-   Recording how much money people leave in a tip jar depending on whether there's a poster with eyes on it on the wall
+-   Measuring opinions about the other political party after reading either a news article a participant agrees with or doesn't agree with
+:::
+
+## Why does the distinction matter? Back to association vs causation.
+
+::: incremental
+-   Observational studies: associations are easy; causation is hard
+
+    -   Is smoking causing cancer, or do people already prone to cancer just happen to smoke more?
+    -   Does social media cause anxiety, or do people with anxiety use social media more?
+    
+-   Experiments: If everything is the same except for the treatment, then differences have to be because of the treatment
+
+    -   But is that effect important in real life, where things aren't held to be the same?
+    -   Experiments are hard and not always ethical!
+:::
+
+## Exercise 1
+
+![](images/05/covid_ex.png)
+
+# Populations and Samples
+
+## Sampling
+
++---------------------------------------------------------------+----------------------------------------+
+| -   You don't need to eat all the soup to check the seasoning | ![](images/05/soup.png)                |
+|                                                               |                                        |
+| -   But you *do* need to make sure it's stirred up            |                                        |
++---------------------------------------------------------------+----------------------------------------+
+
+## Target population
+
+::: incremental
+-   The group you're interested in
+-   Determined by your *research question*
+-   How is time spent on social media related to likelihood of being diagnosed with anxiety among American teenagers? 
+-   How is a country's spending on healthcare related to its average life expectancy?
+:::
+
+## Sample
+
+::: incremental
+-   Who your data points are actually from
+-   Determined by your *data set*
+-   A survey of 2500 people recruited on the subreddit r/financialindependence
+-   Salary and demographic data for all employees at three engineering firms in the Midwest
+:::
+
+---
+
+![](images/05/samplepopulation.png)
+---
+
+## Sampling frame
+
+![](images/05/samplingframe.png)
+## Sampling frame
+
+::: incremental
+-   Who could have been included in your sample? 
+-   Determined by the sampling process
+-   A survey emailed to all sophomores at Duke
+-   A survey posted on r/financialindependence
+-   Often this is not clearly stated in publicly available data sets :(
+:::
+
+## Random and nonrandom samples
+-   Random avoids bias, but it's not always possible
+-   Nonrandom "convenience samples" are common
+
+---
+
+![](images/05/famsize.png)
+-   What is the sampling frame?
+
+## Representativeness and generalizability
+
+::: incremental
+-   Representativeness: How much your sample is like the target population
+-   Generalizability (the goal!): The idea that your sample will tell us something about a larger group than just the sample
+-   It's easier to argue that your results are generalizable if your data are representative
+-   But non-representative samples *can* give generalizable results under the right conditions
+
+    -   Does the relationship you're interested in work differently in your sample than in the population?
+:::
+
+## This is a problem if you want to estimate mental health in the population
+
+![](images/05/confounder.png)
+
+## But not if you're interested in the social media/mental health relationship
+
+![](images/05/confounder.png)
+
+## Interactions are a problem for studying relationships
+
+![](images/05/interaction.png)
+## Exercise 2
+
+![](images/05/gamification.png)
+
+## Project proposal
+
+-   Example is posted
+-   Instructions are shortened; bad data sets removed
+-   Questions?

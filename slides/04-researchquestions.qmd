@@ -127,10 +127,11 @@ Revise them to improve them.
 
 ## Wrapping up computing workflow installation
 
--   Installation instructions on course webpage at [Computing -> Setup](https://soc333-sum23.github.io/computing-setup.html)
--   For step 8 (testing it out): instructions for cloning a repo at [Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
+-   Installation instructions on course webpage at [Computing -\> Setup](https://soc333-sum23.github.io/computing-setup.html)
+-   For step 8 (testing it out): instructions for cloning a repo at [Computing -\> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
 
 ## For next time
+
 -   Next lecture: Studies and sampling (the rest of what you need to know for the proposal)
 -   Read IMS chapter 2
--   Look over instructions for the proposal ([Project -> Component 1: Proposal](https://soc333-sum23.github.io/project-proposal.html)); start looking at data sets and thinking about research questions (bring drafts for peer review Thursday)
+-   Look over instructions for the proposal ([Project -\> Component 1: Proposal](https://soc333-sum23.github.io/project-proposal.html)); start looking at data sets and thinking about research questions (bring drafts for peer review Thursday)
