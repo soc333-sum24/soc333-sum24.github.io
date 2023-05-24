@@ -7,11 +7,9 @@ format: revealjs
 
 ## Today
 
-::: incremental
 -   Relationships between variables
 -   Studies and samples
 -   Questions on the project
-:::
 
 ::: aside
 Today's slides are based in part on materials written by Dr. Joseph Roso---thank you!
@@ -50,9 +48,9 @@ What are the explanatory and response variables?
 
 ::: incremental
 -   We often use social categories like race, gender, ethnicity, sexuality, etc as explanatory variables
--   But the *categories* don't cause differences; stigma and discrimination and unequal access to resources associated with them do
--   Ex: How do health outcomes vary by race? 
--   Differences are caused by rac*ism* (structural, interpersonal), not race
+-   But the *categories* don't cause differences; stigma and discrimination and unequal access to power and resources do
+-   Ex: How do rates of high blood pressure vary by race? 
+-   Differences are caused by rac*ism* (structural and interpersonal), not race
 ::: 
 
 # Types of studies
@@ -72,7 +70,7 @@ What are the explanatory and response variables?
 ::: incremental
 -   Researcher assigns participants into different conditions/treatments
 -   Control: Everything except one variable is the same between treatments
--   Randomization: Groups in different conditions are similar
+-   Randomization: If people are randomly assigned to conditions, then groups in different conditions are similar
 -   Differences have to be because of the treatment!
 :::
 
@@ -132,11 +130,11 @@ What are the explanatory and response variables?
 ---
 
 ![](images/05/samplepopulation.png)
----
 
 ## Sampling frame
 
 ![](images/05/samplingframe.png)
+
 ## Sampling frame
 
 ::: incremental
@@ -154,6 +152,7 @@ What are the explanatory and response variables?
 ---
 
 ![](images/05/famsize.png)
+
 -   What is the sampling frame?
 
 ## Representativeness and generalizability
@@ -178,6 +177,7 @@ What are the explanatory and response variables?
 ## Interactions are a problem for studying relationships
 
 ![](images/05/interaction.png)
+
 ## Exercise 2
 
 ![](images/05/gamification.png)
@@ -186,4 +186,5 @@ What are the explanatory and response variables?
 
 -   Example is posted
 -   Instructions are shortened; bad data sets removed
+-   By class tomorrow: a first draft (for feedback; graded for completion only)
 -   Questions?

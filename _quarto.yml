@@ -84,6 +84,8 @@ website:
             text: "Lecture 3: Meet the Toolkit"
           - href: slides/04-researchquestions.qmd
             text: "Lecture 4: Project and research questions"
+          - href: slides/05-studiessamples.qmd
+            text: "Lecture 5: Studies and samples"
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2023, Aidan Combs. Credit to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the materials and website for SOCIOL333 are based"
