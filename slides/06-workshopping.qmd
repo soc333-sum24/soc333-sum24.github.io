@@ -12,8 +12,10 @@ format: revealjs
 
 ## Fit between research questions and data
 
+::: incremental
 -   Is the sample generalizable to the target population? 
 -   Does it contain the necessary variables to answer the research question?
+:::
 
 ## This is a problem if you want to estimate mental health in the population
 
@@ -27,7 +29,7 @@ format: revealjs
 
 ![](images/05/interaction.png)
 
-## Research questions and variables
+## Research questions and variables {.smaller}
 
 -   EADA data
 
@@ -40,11 +42,29 @@ sports <- readRDS("../exampleprep/sports_npeople.rds") |>
 ```{r}
 glimpse(sports)
 ```
-## Would these research questions work? What variables would they use?
+## Would these research questions work? What variables would they use? {.smaller}
 
 -   How does the number of assistant coaches assigned to teams vary by university? 
+
+```{r}
+glimpse(sports)
+```
+
+## Would these research questions work? What variables would they use? {.smaller}
+
 -   How does the number of coaches assigned to basketball teams vary by gender of the team? 
--   How is a team's chances of winning related to the number of coaches it has?
+
+```{r}
+glimpse(sports)
+```
+
+## Would these research questions work? What variables would they use? {.smaller}
+
+-   How is the number of games a team wins related to the number of coaches it has?
+
+```{r}
+glimpse(sports)
+```
 
 ## Workshopping {.smaller}
 

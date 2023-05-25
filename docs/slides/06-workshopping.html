@@ -421,10 +421,12 @@ Aidan Combs
 </section>
 <section id="fit-between-research-questions-and-data" class="slide level2">
 <h2>Fit between research questions and data</h2>
+<div>
 <ul>
-<li>Is the sample generalizable to the target population?</li>
-<li>Does it contain the necessary variables to answer the research question?</li>
+<li class="fragment">Is the sample generalizable to the target population?</li>
+<li class="fragment">Does it contain the necessary variables to answer the research question?</li>
 </ul>
+</div>
 </section>
 <section id="this-is-a-problem-if-you-want-to-estimate-mental-health-in-the-population" class="slide level2">
 <h2>This is a problem if you want to estimate mental health in the population</h2>
@@ -438,7 +440,7 @@ Aidan Combs
 <h2>Interactions are a problem for studying relationships</h2>
 
 <img data-src="images/05/interaction.png" class="r-stretch"></section>
-<section id="research-questions-and-variables" class="slide level2">
+<section id="research-questions-and-variables" class="slide level2 smaller">
 <h2>Research questions and variables</h2>
 <ul>
 <li>EADA data</li>
@@ -461,13 +463,74 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 </div>
 </div>
 </section>
-<section id="would-these-research-questions-work-what-variables-would-they-use" class="slide level2">
+<section id="would-these-research-questions-work-what-variables-would-they-use" class="slide level2 smaller">
 <h2>Would these research questions work? What variables would they use?</h2>
 <ul>
 <li>How does the number of assistant coaches assigned to teams vary by university?</li>
-<li>How does the number of coaches assigned to basketball teams vary by gender of the team?</li>
-<li>How is a team’s chances of winning related to the number of coaches it has?</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,311
+Columns: 10
+$ school       &lt;chr&gt; "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "…
+$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…
+$ division     &lt;chr&gt; "NCAA Division I-A", "NCAA Division I-A", "NCAA Division …
+$ teamgender   &lt;chr&gt; "men", "men", "men", "men", "men", "men", "men", "men", "…
+$ sport        &lt;chr&gt; "Baseball", "Basketball", "Football", "Golf", "Lacrosse",…
+$ coachgender  &lt;chr&gt; "men", "men", "men", "men", "men", "men", "women", "men",…
+$ coachlevel   &lt;chr&gt; "assistant", "assistant", "assistant", "assistant", "assi…
+$ assignstatus &lt;chr&gt; "FT", "FT", "FT", "PT", "PT", "PT", "PT", "FT", "FT", "FT…
+$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …
+$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…</code></pre>
+</div>
+</div>
+</section>
+<section id="would-these-research-questions-work-what-variables-would-they-use-1" class="slide level2 smaller">
+<h2>Would these research questions work? What variables would they use?</h2>
+<ul>
+<li>How does the number of coaches assigned to basketball teams vary by gender of the team?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,311
+Columns: 10
+$ school       &lt;chr&gt; "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "…
+$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…
+$ division     &lt;chr&gt; "NCAA Division I-A", "NCAA Division I-A", "NCAA Division …
+$ teamgender   &lt;chr&gt; "men", "men", "men", "men", "men", "men", "men", "men", "…
+$ sport        &lt;chr&gt; "Baseball", "Basketball", "Football", "Golf", "Lacrosse",…
+$ coachgender  &lt;chr&gt; "men", "men", "men", "men", "men", "men", "women", "men",…
+$ coachlevel   &lt;chr&gt; "assistant", "assistant", "assistant", "assistant", "assi…
+$ assignstatus &lt;chr&gt; "FT", "FT", "FT", "PT", "PT", "PT", "PT", "FT", "FT", "FT…
+$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …
+$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…</code></pre>
+</div>
+</div>
+</section>
+<section id="would-these-research-questions-work-what-variables-would-they-use-2" class="slide level2 smaller">
+<h2>Would these research questions work? What variables would they use?</h2>
+<ul>
+<li>How is the number of games a team wins related to the number of coaches it has?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,311
+Columns: 10
+$ school       &lt;chr&gt; "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "…
+$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…
+$ division     &lt;chr&gt; "NCAA Division I-A", "NCAA Division I-A", "NCAA Division …
+$ teamgender   &lt;chr&gt; "men", "men", "men", "men", "men", "men", "men", "men", "…
+$ sport        &lt;chr&gt; "Baseball", "Basketball", "Football", "Golf", "Lacrosse",…
+$ coachgender  &lt;chr&gt; "men", "men", "men", "men", "men", "men", "women", "men",…
+$ coachlevel   &lt;chr&gt; "assistant", "assistant", "assistant", "assistant", "assi…
+$ assignstatus &lt;chr&gt; "FT", "FT", "FT", "PT", "PT", "PT", "PT", "FT", "FT", "FT…
+$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …
+$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…</code></pre>
+</div>
+</div>
 </section>
 <section id="workshopping" class="slide level2 smaller">
 <h2>Workshopping</h2>

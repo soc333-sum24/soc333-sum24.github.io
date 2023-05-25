@@ -270,7 +270,7 @@
     "href": "slides/06-workshopping.html#fit-between-research-questions-and-data",
     "title": "Workshopping project proposals",
     "section": "Fit between research questions and data",
-    "text": "Fit between research questions and data\n\nIs the sample generalizable to the target population?\nDoes it contain the necessary variables to answer the research question?"
+    "text": "Fit between research questions and data\n\n\nIs the sample generalizable to the target population?\nDoes it contain the necessary variables to answer the research question?"
   },
   {
     "objectID": "slides/06-workshopping.html#this-is-a-problem-if-you-want-to-estimate-mental-health-in-the-population",
@@ -305,7 +305,21 @@
     "href": "slides/06-workshopping.html#would-these-research-questions-work-what-variables-would-they-use",
     "title": "Workshopping project proposals",
     "section": "Would these research questions work? What variables would they use?",
-    "text": "Would these research questions work? What variables would they use?\n\nHow does the number of assistant coaches assigned to teams vary by university?\nHow does the number of coaches assigned to basketball teams vary by gender of the team?\nHow is a team’s chances of winning related to the number of coaches it has?"
+    "text": "Would these research questions work? What variables would they use?\n\nHow does the number of assistant coaches assigned to teams vary by university?\n\n\nglimpse(sports)\n\nRows: 2,311\nColumns: 10\n$ school       &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"…\n$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division     &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Division …\n$ teamgender   &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"…\n$ sport        &lt;chr&gt; \"Baseball\", \"Basketball\", \"Football\", \"Golf\", \"Lacrosse\",…\n$ coachgender  &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"women\", \"men\",…\n$ coachlevel   &lt;chr&gt; \"assistant\", \"assistant\", \"assistant\", \"assistant\", \"assi…\n$ assignstatus &lt;chr&gt; \"FT\", \"FT\", \"FT\", \"PT\", \"PT\", \"PT\", \"PT\", \"FT\", \"FT\", \"FT…\n$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …\n$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…"
+  },
+  {
+    "objectID": "slides/06-workshopping.html#would-these-research-questions-work-what-variables-would-they-use-1",
+    "href": "slides/06-workshopping.html#would-these-research-questions-work-what-variables-would-they-use-1",
+    "title": "Workshopping project proposals",
+    "section": "Would these research questions work? What variables would they use?",
+    "text": "Would these research questions work? What variables would they use?\n\nHow does the number of coaches assigned to basketball teams vary by gender of the team?\n\n\nglimpse(sports)\n\nRows: 2,311\nColumns: 10\n$ school       &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"…\n$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division     &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Division …\n$ teamgender   &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"…\n$ sport        &lt;chr&gt; \"Baseball\", \"Basketball\", \"Football\", \"Golf\", \"Lacrosse\",…\n$ coachgender  &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"women\", \"men\",…\n$ coachlevel   &lt;chr&gt; \"assistant\", \"assistant\", \"assistant\", \"assistant\", \"assi…\n$ assignstatus &lt;chr&gt; \"FT\", \"FT\", \"FT\", \"PT\", \"PT\", \"PT\", \"PT\", \"FT\", \"FT\", \"FT…\n$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …\n$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…"
+  },
+  {
+    "objectID": "slides/06-workshopping.html#would-these-research-questions-work-what-variables-would-they-use-2",
+    "href": "slides/06-workshopping.html#would-these-research-questions-work-what-variables-would-they-use-2",
+    "title": "Workshopping project proposals",
+    "section": "Would these research questions work? What variables would they use?",
+    "text": "Would these research questions work? What variables would they use?\n\nHow is the number of games a team wins related to the number of coaches it has?\n\n\nglimpse(sports)\n\nRows: 2,311\nColumns: 10\n$ school       &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"…\n$ year         &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division     &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Division …\n$ teamgender   &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"…\n$ sport        &lt;chr&gt; \"Baseball\", \"Basketball\", \"Football\", \"Golf\", \"Lacrosse\",…\n$ coachgender  &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"women\", \"men\",…\n$ coachlevel   &lt;chr&gt; \"assistant\", \"assistant\", \"assistant\", \"assistant\", \"assi…\n$ assignstatus &lt;chr&gt; \"FT\", \"FT\", \"FT\", \"PT\", \"PT\", \"PT\", \"PT\", \"FT\", \"FT\", \"FT…\n$ ncoaches     &lt;dbl&gt; 2, 3, 9, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 3, 6, 1, 3, 2, 9, …\n$ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 30, 1…"
   },
   {
     "objectID": "slides/06-workshopping.html#workshopping",
