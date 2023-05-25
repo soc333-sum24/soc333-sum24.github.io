@@ -5,11 +5,59 @@ callout-icon: false
 
 # How to complete and submit
 
-To get some practice with our new computing workflow, you will write this assignment in a Quarto document. 
+To get some practice with our new computing workflow, you will write this assignment in a Quarto document.
 
-First, you need to locate and clone the repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/soc333-sum23/soc333-sum23.github.io) and find the repository called **c1_proposal_yourusername**. Clone that repository. Open the document called *c1_proposal.qmd*. This is a template document where you will put your work. 
+First, you need to locate and clone the repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)).
+Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c1_proposal_yourusername**.
+Clone that repository.
+Open the document called *c1_proposal.qmd*.
+This is a template document where you will put your work.
 
-Commit your changes regularly. When you are done, render the document and push your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
+Commit your changes regularly.
+When you are done, render the document and push your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
+
+# Workshop questions
+
+Read your group members' proposed research questions.
+Then create a new GitHub issue on each of their repositories, copy and paste in these questions, and answer them.
+
+## Research question 1:
+
+A. Is the question...
+
+1.  Specific and feasible?
+2.  Sociological?
+3.  About a relationship between at least two quantitative variables?
+
+B. Is the data set a good fit for the research question?
+Will the sample allow the results to be generalized to the target population?
+(check the data documentation for more information if needed)
+
+C. Will the variables your group member identified let them answer their research question?
+If, why not?
+Are there any limitations to consider with these variables?
+
+D. What suggestions do you have about how to improve the research question or other aspects of the proposal?
+
+## Research question 2:
+
+A. Is the question...
+
+1.  Specific and feasible?
+2.  Sociological?
+3.  About a relationship between at least two quantitative variables?
+
+B. Is the data set a good fit for the research question?
+Will the sample allow the results to be generalized to the target population?
+(check the data documentation for more information if needed)
+
+C. Will the variables your group member identified let them answer their research question?
+If, why not?
+Are there any limitations to consider with these variables?
+
+D. What suggestions do you have about how to improve the research question or other aspects of the proposal?
+
+## Which research question would you choose? Why?
 
 # Details
 
@@ -83,7 +131,7 @@ For each research question, you should:
     -   Is it an observational study or an experiment?
     -   Who or what was sampled, and how many observations are there?
     -   What variables would you use to answer your question?
-    -   Discuss the strengths and weaknesses of this data set with respect to your research question and target population. Does the sampling strategy make it a good fit? What are its limitations? 
+    -   Discuss the strengths and weaknesses of this data set with respect to your research question and target population. Does the sampling strategy make it a good fit? What are its limitations?
 
 -   Provide a glimpse of your data
 
@@ -91,7 +139,8 @@ For each research question, you should:
 
 ### Version to submit for grading (Tuesday May 30, 11:59pm)
 
-After peer review, incorporate your peers' feedback into your draft. You should revise your questions if they need it. 
+After peer review, incorporate your peers' feedback into your draft.
+You should revise your questions if they need it.
 In addition, add \~1 paragraph of thoughts about which question you should ultimately choose to move forward with.
 In that paragraph, answer the following questions:
 
@@ -103,7 +152,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|----------------------------------------------------|--------------------|
+|--------------------------------------------------|----------------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |

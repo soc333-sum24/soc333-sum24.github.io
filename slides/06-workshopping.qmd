@@ -1,0 +1,70 @@
+---
+title: "Workshopping project proposals"
+subtitle: "Lecture 6"
+date: "May 25, 2023"
+format: revealjs
+---
+
+## Today
+
+-   Fit between research questions and data
+-   Workshop your research questions
+
+## Fit between research questions and data
+
+-   Is the sample generalizable to the target population? 
+-   Does it contain the necessary variables to answer the research question?
+
+## This is a problem if you want to estimate mental health in the population
+
+![](images/05/confounder.png)
+
+## But not if you're interested in the social media/mental health relationship
+
+![](images/05/confounder.png)
+
+## Interactions are a problem for studying relationships
+
+![](images/05/interaction.png)
+
+## Research questions and variables
+
+-   EADA data
+
+```{r, include = FALSE}
+library(tidyverse)
+sports <- readRDS("../exampleprep/sports_npeople.rds") |> 
+  select(-player_coach_ratio)
+```
+
+```{r}
+glimpse(sports)
+```
+## Would these research questions work? What variables would they use?
+
+-   How does the number of assistant coaches assigned to teams vary by university? 
+-   How does the number of coaches assigned to basketball teams vary by gender of the team? 
+-   How is a team's chances of winning related to the number of coaches it has?
+
+## Workshopping {.smaller}
+
+-   Groups of 3
+
+    -   You have access to each others' github repos
+    
+-   Read your group members' submissions
+-   Answer some questions about their work
+
+    -   Make your feedback a GitHub issue: copy/paste template from project instructions; fill out
+    -   10-15 min/person
+    -   Goal is improvement--how can they make their work better?
+    
+-   Talk through your thoughts on each group member's proposal and their choice of question (5-10 minutes each)
+
+---
+
+-   Was this helpful?
+-   Do you feel like you're on a good path with your project?
+-   How is learning our computing workflow going?
+-   Suggestions for me for next time? Questions you'd like me to address?
+

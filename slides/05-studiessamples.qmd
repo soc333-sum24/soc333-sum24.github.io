@@ -20,7 +20,7 @@ Today's slides are based in part on materials written by Dr. Joseph Roso---thank
 ## Association
 
 -   Description
--   Is variable 1 related to variable 2? 
+-   Is variable 1 related to variable 2?
 
 ## Association
 
@@ -33,11 +33,11 @@ Today's slides are based in part on materials written by Dr. Joseph Roso---thank
 
 ## Explanatory and response variables
 
--   Explanatory variable -> *might affect* -> response variable
+-   Explanatory variable -\> *might affect* -\> response variable
 
 ## Examples
 
-What are the explanatory and response variables? 
+What are the explanatory and response variables?
 
 ::: incremental
 -   How are *college students' opinions on binge drinking* affected by *the binge drinking behaviors of their friends*?
@@ -49,9 +49,9 @@ What are the explanatory and response variables?
 ::: incremental
 -   We often use social categories like race, gender, ethnicity, sexuality, etc as explanatory variables
 -   But the *categories* don't cause differences; stigma and discrimination and unequal access to power and resources do
--   Ex: How do rates of high blood pressure vary by race? 
+-   Ex: How do rates of high blood pressure vary by race?
 -   Differences are caused by rac*ism* (structural and interpersonal), not race
-::: 
+:::
 
 # Types of studies
 
@@ -59,6 +59,7 @@ What are the explanatory and response variables?
 
 ::: incremental
 -   Researcher doesn't make any changes; just collects data
+
 -   Examples
 
     -   A survey of peoples' opinions on police reform
@@ -88,7 +89,7 @@ What are the explanatory and response variables?
 
     -   Is smoking causing cancer, or do people already prone to cancer just happen to smoke more?
     -   Does social media cause anxiety, or do people with anxiety use social media more?
-    
+
 -   Experiments: If everything is the same except for the treatment, then differences have to be because of the treatment
 
     -   But is that effect important in real life, where things aren't held to be the same?
@@ -103,18 +104,18 @@ What are the explanatory and response variables?
 
 ## Sampling
 
-+---------------------------------------------------------------+----------------------------------------+
-| -   You don't need to eat all the soup to check the seasoning | ![](images/05/soup.png)                |
-|                                                               |                                        |
-| -   But you *do* need to make sure it's stirred up            |                                        |
-+---------------------------------------------------------------+----------------------------------------+
++---------------------------------------------------------------+---------------------------+
+| -   You don't need to eat all the soup to check the seasoning | ![](images/05/soup.png)   |
+|                                                               |                           |
+| -   But you *do* need to make sure it's stirred up            |                           |
++---------------------------------------------------------------+---------------------------+
 
 ## Target population
 
 ::: incremental
 -   The group you're interested in
 -   Determined by your *research question*
--   How is time spent on social media related to likelihood of being diagnosed with anxiety among American teenagers? 
+-   How is time spent on social media related to likelihood of being diagnosed with anxiety among American teenagers?
 -   How is a country's spending on healthcare related to its average life expectancy?
 :::
 
@@ -127,7 +128,7 @@ What are the explanatory and response variables?
 -   Salary and demographic data for all employees at three engineering firms in the Midwest
 :::
 
----
+------------------------------------------------------------------------
 
 ![](images/05/samplepopulation.png)
 
@@ -138,7 +139,7 @@ What are the explanatory and response variables?
 ## Sampling frame
 
 ::: incremental
--   Who could have been included in your sample? 
+-   Who could have been included in your sample?
 -   Determined by the sampling process
 -   A survey emailed to all sophomores at Duke
 -   A survey posted on r/financialindependence
@@ -146,21 +147,25 @@ What are the explanatory and response variables?
 :::
 
 ## Random and nonrandom samples
+
 -   Random avoids bias, but it's not always possible
 -   Nonrandom "convenience samples" are common
 
----
+------------------------------------------------------------------------
 
 ![](images/05/famsize.png)
 
 -   What is the sampling frame?
 
-## Representativeness and generalizability
+## Representativeness and generalizability {.smaller}
 
 ::: incremental
 -   Representativeness: How much your sample is like the target population
+
 -   Generalizability (the goal!): The idea that your sample will tell us something about a larger group than just the sample
+
 -   It's easier to argue that your results are generalizable if your data are representative
+
 -   But non-representative samples *can* give generalizable results under the right conditions
 
     -   Does the relationship you're interested in work differently in your sample than in the population?
@@ -177,10 +182,6 @@ What are the explanatory and response variables?
 ## Interactions are a problem for studying relationships
 
 ![](images/05/interaction.png)
-
-## Exercise 2
-
-![](images/05/gamification.png)
 
 ## Project proposal
 
