@@ -1,0 +1,51 @@
+---
+title: "Project description"
+callout-icon: false
+---
+
+# Descriptive Statistics {#descriptives}
+
+Please put your work for component 2, descriptive statistics, in this document. 
+
+```{r setup}
+library(tidyverse)
+library(openintro)
+```
+
+
+### Part 1: Understanding your variables
+
+    -   Write down your research question (from component 1)
+    -   Write down your hypothesis (from component 1)
+    -   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
+    
+    -   For each variable, write:
+        -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else.
+        -   What kind of variable it is (categorical or numeric and which subtype within these)
+        -   What the range or possible responses are
+
+### Part 2: Univariate distributions
+
+    -   For each of your variables:
+        -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable. Interpret the results. Does anything about them surprise you?
+        -   Note how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`.
+        
+```{r}
+# replace the contents of this code chunk with tables/summaries of your variables
+summary(lizard_run$top_speed)
+table(lizard_run$common_name, useNA = "always")
+```
+        
+###  Part 3: Multivariate visualizations
+
+    -   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc. Include axis labels. 
+    -   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+    
+```{r}
+# replace the contents of this chunk with code to create your plot
+ggplot(lizard_run, aes(x = top_speed, y = common_name)) + 
+  geom_boxplot() + 
+  labs(x = "Top running speed (meters per second)", 
+       y = "Species",
+       title = "Top speeds of two species of cool lizards")
+```
