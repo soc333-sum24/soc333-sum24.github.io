@@ -85,7 +85,7 @@ A weakness is that only two institutions are represented, and both are highly se
 This limits the generalizability of the results to institutions that are less selective and that have less resourced athletics programs.
 
 ```{r}
-sports <- readRDS("sports_npeople.rds") # This data set is not part of openintro, so this line is needed to load it from a file instead.
+sports <- readRDS("sports_teams.rds") # This data set is not part of openintro, so this line is needed to load it from a file instead.
 
 glimpse(sports)
 ```

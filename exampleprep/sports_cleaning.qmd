@@ -11,11 +11,17 @@ library(tidyverse)
 
 General format information: everything is in separate files, but the format is the same (1 row per school per year).
 
-Some of these counts appear to be inaccurate--for example, neither the UNC nor the Duke 2021 women's basketball team is listed as having a head coach. A quick google search shows this is clearly incorrect. There are no part time female head coaches listed at all, in any sport--I have a feeling this might be the source of the error (but have no way to prove it). 
+Some of these counts appear to be inaccurate--for example, neither the UNC nor the Duke 2021 women's basketball team is listed as having a head coach.
+A quick google search shows this is clearly incorrect.
+There are no part time female head coaches listed at all, in any sport--I have a feeling this might be the source of the error (but have no way to prove it).
 
-To avoid drawing conclusions that rest on this data issue, and also for simplicity, I am just going to use the total number of coaches, not split out by coach gender or full time/part time status or head/assistant status. 
+To avoid drawing conclusions that rest on this data issue, and also for simplicity, I am just going to use the total number of coaches, not split out by coach gender or full time/part time status or head/assistant status.
 
 ```{r number of coaches and players}
+# Load and transform the data on number of male and female coaches for mens and womens teams
+commoncols <- c("Survey Year", "UNITID", "Institution Name", "OPE ID", "State CD", "Classification Name", "Classification Other", "Sanction Code", "Sanction Name", "Male Undergraduates", "Female Undergraduates", "Type of Varsity Sports Teams")
+
+
 # Load and transform data on number of athletes
 athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_and_Coed_Teams_2003_2004_2005_2006_2007_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017_2018_2019_2020_2021.csv", 
                           show_col_types = FALSE) |> 
@@ -36,10 +42,6 @@ athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_a
          school = ifelse(school == "Duke University", "Duke", "UNC")) |> 
   select(school, year, division, sport, teamgender, nplayers) |> 
   filter(sport != "Unduplicated Count")
-
-
-# Load and transform the data on number of male and female coaches for mens and womens teams
-commoncols <- c("Survey Year", "UNITID", "Institution Name", "OPE ID", "State CD", "Classification Name", "Classification Other", "Sanction Code", "Sanction Name", "Male Undergraduates", "Female Undergraduates", "Type of Varsity Sports Teams")
 
 teams <- tibble()
 coachfiles <- list.files("raw/")[grepl("Coaches_", list.files("raw/"))]
@@ -90,7 +92,7 @@ teams[is.na(teams)] <- 0
 
 teams <- teams |> 
   mutate(
-    all_coaches = 
+    ncoaches = 
       PT_head_men + FT_head_men + PT_head_women + FT_head_women + 
       PT_assistant_men + FT_assistant_men + PT_assistant_women + FT_assistant_women,
     coaches_head = PT_head_men + FT_head_men + PT_head_women + FT_head_women,
@@ -99,14 +101,16 @@ teams <- teams |>
     coaches_PT = PT_head_men + PT_head_women + PT_assistant_men + PT_assistant_women,
     coaches_women = FT_head_women + PT_head_women + FT_assistant_women + PT_assistant_women,
     coaches_men = FT_head_men + PT_head_men + FT_assistant_men + PT_assistant_men,
-  )
+  ) |> 
+  filter(ncoaches > 0)
 
 
 # Merge coach data and athletes data
 npeople <- full_join(teams, athletes) |> 
-  mutate(player_coach_ratio = nplayers/all_coaches) |> 
+  mutate(player_coach_ratio = nplayers/ncoaches) |> 
   filter(!is.na(nplayers)) |> 
-  select(-starts_with("coaches"), -starts_with("[PF]T_"))
+  select(-starts_with("coaches")) |> 
+  select(-starts_with("PT"), -starts_with("FT"))
 
 # npeople_indiv <- npeople |> 
 #   uncount(ncoaches) |> 
@@ -115,6 +119,7 @@ npeople <- full_join(teams, athletes) |>
 saveRDS(npeople, file = "sports_teams.rds")
 # saveRDS(npeople_indiv, file = "sports_npeople_indiv.rds")
 saveRDS(npeople, file = "../slides/data/sports_teams.rds")
+saveRDS(npeople, file = "../project_example/sports_teams.rds")
 ```
 
 ```{r coach salaries}
