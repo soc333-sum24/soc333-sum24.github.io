@@ -11,42 +11,11 @@ library(tidyverse)
 
 General format information: everything is in separate files, but the format is the same (1 row per school per year).
 
+Some of these counts appear to be inaccurate--for example, neither the UNC nor the Duke 2021 women's basketball team is listed as having a head coach. A quick google search shows this is clearly incorrect. There are no part time female head coaches listed at all, in any sport--I have a feeling this might be the source of the error (but have no way to prove it). 
+
+To avoid drawing conclusions that rest on this data issue, and also for simplicity, I am just going to use the total number of coaches, not split out by coach gender or full time/part time status or head/assistant status. 
+
 ```{r number of coaches and players}
-# Load and transform the data on number of male and female coaches for mens and womens teams
-commoncols <- c("Survey Year", "UNITID", "Institution Name", "OPE ID", "State CD", "Classification Name", "Classification Other", "Sanction Code", "Sanction Name", "Male Undergraduates", "Female Undergraduates", "Type of Varsity Sports Teams")
-
-coaches <- tibble()
-coachfiles <- list.files("raw/")[grepl("Coaches_", list.files("raw/"))]
-for(f in coachfiles){
-  tomerge <- read_csv(paste0("raw/", f), show_col_types = FALSE) |> 
-    # we can calculate totals--so drop them; they complicate merging
-    select(-contains("Total")) |> 
-    pivot_longer(names_to = c("sport", "coachgender", "coachlevel", "assignstatus"),
-                 names_pattern = "(.*) ([[:alpha:]]*ale) (.*) Coach (.T)",
-                 values_to = "ncoaches",
-                 cols = -commoncols
-    ) |> 
-    filter(!is.na(ncoaches)) |> 
-    rename(teamgender = "Type of Varsity Sports Teams",
-           school = "Institution Name",
-           year = "Survey Year",
-           maleug = "Male Undergraduates",
-           femaleug = "Female Undergraduates",
-           division = "Classification Name") |> 
-    select(school, year, division, teamgender, sport, coachgender, coachlevel, assignstatus, ncoaches) |> 
-    mutate(teamgender = ifelse(teamgender == "Men's Team", "men", "women"),
-           coachgender = ifelse(coachgender == "Male", "men", "women"),
-           coachlevel = ifelse(coachlevel == "Assistant", "assistant", "head"),
-           school = ifelse(school == "Duke University", "Duke", "UNC"))
-  
-  if(nrow(coaches) == 0){
-    coaches <- tomerge
-  } else {
-    coaches <- full_join(coaches, tomerge) 
-  }
-}
-
-
 # Load and transform data on number of athletes
 athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_and_Coed_Teams_2003_2004_2005_2006_2007_2008_2009_2010_2011_2012_2013_2014_2015_2016_2017_2018_2019_2020_2021.csv", 
                           show_col_types = FALSE) |> 
@@ -69,17 +38,83 @@ athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_a
   filter(sport != "Unduplicated Count")
 
 
+# Load and transform the data on number of male and female coaches for mens and womens teams
+commoncols <- c("Survey Year", "UNITID", "Institution Name", "OPE ID", "State CD", "Classification Name", "Classification Other", "Sanction Code", "Sanction Name", "Male Undergraduates", "Female Undergraduates", "Type of Varsity Sports Teams")
+
+teams <- tibble()
+coachfiles <- list.files("raw/")[grepl("Coaches_", list.files("raw/"))]
+for(f in coachfiles){
+  tomerge <- read_csv(paste0("raw/", f), show_col_types = FALSE) |> 
+    # we can calculate totals--so drop them; they complicate merging
+    select(-contains("Total")) |> 
+    pivot_longer(names_to = c("sport", "coachgender", "coachlevel", "assignstatus"),
+                 names_pattern = "(.*) ([[:alpha:]]*ale) (.*) Coach (.T)",
+                 values_to = "ncoaches",
+                 cols = -any_of(commoncols)
+    ) |> 
+    rename(teamgender = "Type of Varsity Sports Teams",
+           school = "Institution Name",
+           year = "Survey Year",
+           maleug = "Male Undergraduates",
+           femaleug = "Female Undergraduates",
+           division = "Classification Name") |> 
+    select(school, year, division, teamgender, sport, coachgender, coachlevel, assignstatus, ncoaches) |> 
+    mutate(teamgender = ifelse(teamgender == "Men's Team", "men", "women"),
+           coachgender = ifelse(coachgender == "Male", "men", "women"),
+           coachlevel = ifelse(coachlevel == "Assistant", "assistant", "head"),
+           school = ifelse(school == "Duke University", "Duke", "UNC")) |> 
+    pivot_wider(
+      names_from = c(assignstatus, coachlevel, coachgender), 
+      values_from = ncoaches)
+  
+  if(nrow(teams) == 0){
+    teams <- tomerge
+  } else {
+    teams <- full_join(teams, tomerge)
+  }
+}
+
+teams <- teams |> 
+  filter(any(
+    !is.na(PT_head_women),
+    !is.na(PT_head_men),
+    !is.na(PT_assistant_women),
+    !is.na(PT_assistant_men),
+    !is.na(FT_head_women),
+    !is.na(FT_head_men),
+    !is.na(FT_assistant_women),
+    !is.na(FT_assistant_men)
+  ))
+
+teams[is.na(teams)] <- 0
+
+teams <- teams |> 
+  mutate(
+    all_coaches = 
+      PT_head_men + FT_head_men + PT_head_women + FT_head_women + 
+      PT_assistant_men + FT_assistant_men + PT_assistant_women + FT_assistant_women,
+    coaches_head = PT_head_men + FT_head_men + PT_head_women + FT_head_women,
+    coaches_assistant = PT_assistant_men + FT_assistant_men + PT_assistant_women + FT_assistant_women,
+    coaches_FT = FT_head_men + FT_head_women + FT_assistant_men + FT_assistant_women,
+    coaches_PT = PT_head_men + PT_head_women + PT_assistant_men + PT_assistant_women,
+    coaches_women = FT_head_women + PT_head_women + FT_assistant_women + PT_assistant_women,
+    coaches_men = FT_head_men + PT_head_men + FT_assistant_men + PT_assistant_men,
+  )
+
+
 # Merge coach data and athletes data
-npeople <- full_join(coaches, athletes) |> 
-  mutate(player_coach_ratio = nplayers/ncoaches)
+npeople <- full_join(teams, athletes) |> 
+  mutate(player_coach_ratio = nplayers/all_coaches) |> 
+  filter(!is.na(nplayers)) |> 
+  select(-starts_with("coaches"), -starts_with("[PF]T_"))
 
 # npeople_indiv <- npeople |> 
 #   uncount(ncoaches) |> 
 #   mutate(coachgender = ifelse(coachgender == "men", "man", "woman"))
 
-saveRDS(npeople, file = "sports_npeople.rds")
+saveRDS(npeople, file = "sports_teams.rds")
 # saveRDS(npeople_indiv, file = "sports_npeople_indiv.rds")
-saveRDS(npeople, file = "../slides/data/sports_npeople.rds")
+saveRDS(npeople, file = "../slides/data/sports_teams.rds")
 ```
 
 ```{r coach salaries}
@@ -132,13 +167,6 @@ coachsalaries <- coachsalaries |>
 
 saveRDS(coachsalaries, file = "../slides/data/sports_coachsalaries.rds")
 saveRDS(coachsalaries, file = "sports_coachsalaries.rds")
-```
-
-```{r tidy coaches}
-tidycoaches <- coaches |> 
-  uncount(ncoaches) |> 
-  mutate(coachgender = ifelse(coachgender == "men", "man", "woman"))
-
 ```
 
 ```{r student aid and recruiting expenses}
