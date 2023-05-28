@@ -1,0 +1,62 @@
+---
+title: "Project description"
+callout-icon: false
+---
+
+
+# Descriptive Statistics {#descriptives}
+
+In this component of your project, you will explore the variables you will use in your analysis.
+
+## How to complete and submit (due Monday, June 5, 11:59pm)
+
+First, locate and clone the component 2 repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)).
+Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c2_descriptives_yourusername**.
+Clone that repository.
+Open the document called *c2_descriptives.qmd*.
+This is a template document where you will put your work.
+
+Commit your changes regularly.
+When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
+
+## Details
+
+### Part 1: Understanding your variables
+
+    -   Write down your research question (from component 1)
+    -   Write down your hypothesis (from component 1)
+    -   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
+    -   For each variable, write:
+        -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (if something else, explain what purpose it serves)
+        -   What kind of variable it is (categorical or numeric and which subtype within these)
+        -   What the range or possible responses are
+
+### Part 2: Univariate distributions
+
+    -   For each of your variables:
+        -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable. Describe the results. Does anything about them surprise you?
+        -   Note how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`.
+        
+###  Part 3: Multivariate visualizations
+
+    -   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc.
+    -   Interpret your plot in \~2-3 sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+
+## Grading
+
+|                                                                        |     |
+|---------------------------------------------------|---------------------|
+| Preparation for work in class: assignment started, class participation | 30% |
+| Part 1                                                                 | 30% |
+| Part 2                                                                 | 30% |
+| Workflow and formatting                                                | 10% |
+
+::: callout-tip
+## Why?
+
+Before doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like.
+This will help you head off problems later.
+For example, looking at the distributions of your variables will reveal if data is missing when you don't expect it to be.
+It also might clue you in on interesting patterns you may want to investigate further.
+Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics.
+:::
