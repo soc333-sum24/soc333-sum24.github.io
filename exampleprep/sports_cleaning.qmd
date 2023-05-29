@@ -43,9 +43,7 @@ athletes <- read_csv("raw/Athletics_Participation_All_Sports_and_Men's_Women's_a
   select(school, year, division, sport, teamgender, nplayers) |> 
   filter(sport != "Unduplicated Count")
 
-teams <- tibble()
-coachfiles <- list.files("raw/")[grepl("Coaches_", list.files("raw/"))]
-for(f in coachfiles){
+reshape_sports <- function(f){
   tomerge <- read_csv(paste0("raw/", f), show_col_types = FALSE) |> 
     # we can calculate totals--so drop them; they complicate merging
     select(-contains("Total")) |> 
@@ -67,14 +65,37 @@ for(f in coachfiles){
            school = ifelse(school == "Duke University", "Duke", "UNC")) |> 
     pivot_wider(
       names_from = c(assignstatus, coachlevel, coachgender), 
-      values_from = ncoaches)
+      values_from = ncoaches) 
   
-  if(nrow(teams) == 0){
-    teams <- tomerge
-  } else {
-    teams <- full_join(teams, tomerge)
+  # |>
+  #   select(where(~any(!is.na(.))))
+  
+  return(tomerge)
+}
+
+assistants <- tibble()
+heads <- tibble()
+coachfiles <- list.files("raw/")[grepl("Coaches_", list.files("raw/"))]
+for(f in coachfiles){
+  tomerge <- reshape_sports(f)
+  
+  if(str_detect(f, "Assistant")){
+    if(nrow(assistants) == 0){
+      assistants <- tomerge
+    } else {
+      assistants <- full_join(assistants, tomerge)
+    }
+  } else if(str_detect(f, "Head")){
+    if(nrow(heads) == 0){
+      heads <- tomerge
+    } else {
+      heads <- full_join(heads, tomerge)
+    }
   }
 }
+
+teams <- assistants |> 
+  full_join(heads)
 
 teams <- teams |> 
   filter(any(

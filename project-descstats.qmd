@@ -49,7 +49,7 @@ Please submit this assignment as a single Quarto document.
 ## Grading
 
 |                                                                        |     |
-|---------------------------------------------------|---------------------|
+|------------------------------------------------------------------------|-----|
 | Preparation for work in class: assignment started, class participation | 30% |
 | Part 1                                                                 | 30% |
 | Part 2                                                                 | 30% |

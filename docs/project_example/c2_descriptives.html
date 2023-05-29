@@ -20,26 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -62,8 +96,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="SOCIOL 333 - Project description">
-<meta property="og:description" content="">
+<meta property="og:image" content="https://soc333-sum23.github.io/project_example/c2_descriptives_files/figure-html/unnamed-chunk-5-1.png">
 <meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
 </head>
 
 <body class="nav-sidebar docked">
@@ -89,8 +125,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/soc333-sum23/soc333-sum23.github.io" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -117,25 +153,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Support</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful links</span></a>
   </div>
 </li>
@@ -152,19 +188,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-clonerepo.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-clonerepo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cloning and committing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
+  <a href="../computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cheatsheets</span></a>
   </div>
 </li>
@@ -181,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-description.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">General information</span></a>
   </div>
 </li>
@@ -196,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project-proposal.html" class="sidebar-item-text sidebar-link">
+  <a href="../project-proposal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Component 1: Proposal</span></a>
   </div>
 </li>
@@ -213,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project_example/c1_proposal.html" class="sidebar-item-text sidebar-link">
+  <a href="../project_example/c1_proposal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Component 1: Proposal</span></a>
   </div>
 </li>
@@ -232,37 +268,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/01-welcome.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/01-welcome.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: Welcome</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/02-datavariables.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/02-datavariables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Data and Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/03-computing.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/03-computing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Meet the Toolkit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/04-researchquestions.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/04-researchquestions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: Project and research questions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/05-studiessamples.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/05-studiessamples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Studies and samples</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/06-workshopping.html" class="sidebar-item-text sidebar-link">
+  <a href="../slides/06-workshopping.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 6: Workshopping proposals</span></a>
   </div>
 </li>
@@ -280,15 +316,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#descriptives" id="toc-descriptives" class="nav-link active" data-scroll-target="#descriptives">Descriptive Statistics</a>
   <ul class="collapse">
-  <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a>
-  <ul class="collapse">
-  <li><a href="#version-to-bring-to-class-thursday-june-1" id="toc-version-to-bring-to-class-thursday-june-1" class="nav-link" data-scroll-target="#version-to-bring-to-class-thursday-june-1">Version to bring to class (Thursday June 1)</a></li>
-  <li><a href="#version-to-submit-for-grading-monday-june-5-1159pm" id="toc-version-to-submit-for-grading-monday-june-5-1159pm" class="nav-link" data-scroll-target="#version-to-submit-for-grading-monday-june-5-1159pm">Version to submit for grading (Monday June 5, 11:59pm)</a></li>
-  </ul></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#part-1-understanding-your-variables" id="toc-part-1-understanding-your-variables" class="nav-link" data-scroll-target="#part-1-understanding-your-variables">Part 1: Understanding your variables</a></li>
+  <li><a href="#part-2-preparing-your-data-set" id="toc-part-2-preparing-your-data-set" class="nav-link" data-scroll-target="#part-2-preparing-your-data-set">Part 2: Preparing your data set</a></li>
+  <li><a href="#part-3-univariate-distributions" id="toc-part-3-univariate-distributions" class="nav-link" data-scroll-target="#part-3-univariate-distributions">Part 3: Univariate distributions</a></li>
+  <li><a href="#part-4-multivariate-visualizations" id="toc-part-4-multivariate-visualizations" class="nav-link" data-scroll-target="#part-4-multivariate-visualizations">Part 4: Multivariate visualizations</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/project-descstats.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/project_example/c2_descriptives.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -312,86 +346,176 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="descriptives" class="level1">
 <h1>Descriptive Statistics</h1>
-<p>In this component, you will explore the variables you will use in your analysis.</p>
-<section id="details" class="level2">
-<h2 class="anchored" data-anchor-id="details">Details</h2>
-<p>There will be no peer review version for this component. Instead, we will make time available to work on it in class so that you can work through any issues with the help of your colleagues and I.</p>
-<section id="version-to-bring-to-class-thursday-june-1" class="level3">
-<h3 class="anchored" data-anchor-id="version-to-bring-to-class-thursday-june-1">Version to bring to class (Thursday June 1)</h3>
-<p>Come to class having already started the assignment. At minimum, identify your variables, load your data, run the <code>summary()</code> and/or <code>table()</code> functions on the variables you are using in your analysis, and try to create one plot. Completing as much as you can prior to class will allow you to make the best use of the opportunity to ask questions in class.</p>
-<p>I encourage you to submit questions ahead of time by DETAILS or come to class prepared to ask specific questions. Your preparation for and participation in the class session will be part of your grade for this component.</p>
-</section>
-<section id="version-to-submit-for-grading-monday-june-5-1159pm" class="level3">
-<h3 class="anchored" data-anchor-id="version-to-submit-for-grading-monday-june-5-1159pm">Version to submit for grading (Monday June 5, 11:59pm)</h3>
-<p>Please submit this assignment as a single Quarto document.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: airports
+Loading required package: cherryblossom
+Loading required package: usdata</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sports <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"sports_teams.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="part-1-understanding-your-variables" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-understanding-your-variables">Part 1: Understanding your variables</h3>
 <ul>
-<li><p>Part 1: Understanding your variables</p>
+<li><p>Write down your research question (from component 1)</p>
+<p>How does the number of coaches assigned to US college sports teams vary by the gender of the team?</p></li>
+<li><p>Write down your hypothesis (from component 1)</p>
+<p>I predict that for sports in which there is both a men’s and a women’s team, coaching levels will be equivalent. I expect this because universities are required to adhere to Title IX, which would prohibit differential levels of resources for equivalent sports.</p></li>
+<li><p>Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)</p>
+<p>ncoaches, teamgender, sport</p></li>
+<li><p>For each variable, write:</p>
 <ul>
-<li>Write down your research question</li>
-<li>Write down the names of the variables you will use in your analysis (i.e., what you need to type to call them in R)</li>
-<li>For each variable, tell me:
-<ul>
-<li>What purpose it serves in your analysis (independent variable, dependent variable, mediating variable, moderating variable, etc)</li>
-<li>What kind of variable it is (binary, categorical, ordinal, continuous)</li>
-<li>What the range or possible responses are</li>
-<li>For categorical (ordinal, nominal, and binary) variables, tell me what your reference category will be (or, if you need to see the data to determine this, how you will decide once you do)</li>
-</ul></li>
-</ul></li>
-<li><p>Part 2: Visualizing your data</p>
-<ul>
-<li>Load your final project data set</li>
-<li>For each variable:
-<ul>
-<li>Run the <code>summary()</code> (for continuous variables) or <code>table()</code> (for all other types of variables) function on the variable. Describe the results. Does anything about them surprise you?</li>
-<li>Note how many missing values there are. Hint: use the <code>useNA = "always"</code> option if using <code>table()</code>. Does this seem reasonable?</li>
-<li>Make a histogram of the variable’s distribution.</li>
-<li>Describe the distribution. Does anything surprise you? For continuous and ordinal variables, tell me which distribution terms discussed in class apply. I.e., is the variable’s distribution normal? Unimodal? Skewed? Uniform?</li>
-</ul></li>
-<li>Make a plot showing the relationship between your primary independent and dependent variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc.
-<ul>
-<li>Interpret your plot in ~2-3 sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?</li>
-</ul></li>
+<li><p>A brief description of what it measures</p></li>
+<li><p>Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)</p></li>
+<li><p>What kind of variable it is (categorical or numeric and which subtype within these)</p></li>
 </ul></li>
 </ul>
+<p><strong>ncoaches</strong>: This measures the number of coaches on each team. It is my response variable. It is a discrete numeric variable.</p>
+<p><strong>teamgender:</strong> This records the gender of the players on the team. It is an explanatory variable and it is nominal categorical.</p>
+<p><strong>sport:</strong> I will use this variable to limit my data frame to the sports that have both men’s and women’s teams. It is a nominal categorical variable.</p>
 </section>
+<section id="part-2-preparing-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-preparing-your-data-set">Part 2: Preparing your data set</h3>
+<ul>
+<li><p>Will you analyze all the observations in your data set? If not, which will you include and which will you exclude?</p>
+<p>I will not analyze all of the observations in my data set. I am interested in comparing the number of coaches for comparable men’s and women’s teams, so I will exclude sports for which there are only men’s teams or only women’s teams (e.g., football, softball).</p></li>
+<li><p>If necessary, use the code chunk below to filter out observations which are not relevant to your research question (not required if you will analyze all of your observations).</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first, I need to figure out which sports have teams for both genders</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>sport, sports<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                           
+                            men women
+  All Track Combined         36    36
+  Baseball                   38     0
+  Basketball                 38    38
+  Fencing                    38    38
+  Field Hockey                0    38
+  Football                   38     0
+  Golf                       38    38
+  Gymnastics                  0    19
+  Lacrosse                   38    38
+  Rowing                      0    38
+  Soccer                     38    38
+  Softball                    0    24
+  Swimming and Diving        38    38
+  Tennis                     38    38
+  Track and Field X Country   2     2
+  Volleyball                  0    38
+  Wrestling                  38     0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from that table, I can see that I need to remove baseball, field hockey, football, gymnastics, rowing, softball, volleyball, and wrestling.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sports_filtered <span class="ot">&lt;-</span> sports <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Baseball"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Field Hockey"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Football"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Gymnastics"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Rowing"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Softball"</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Volleyball"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Wrestling"</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># did it work? Let's make the same table with the new data set</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>sport, sports_filtered<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                           
+                            men women
+  All Track Combined         36    36
+  Basketball                 38    38
+  Fencing                    38    38
+  Golf                       38    38
+  Lacrosse                   38    38
+  Soccer                     38    38
+  Swimming and Diving        38    38
+  Tennis                     38    38
+  Track and Field X Country   2     2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now all the sports have both men's and women's teams--we're good to go!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<table class="table">
-<colgroup>
-<col style="width: 93%">
-<col style="width: 6%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Preparation for work in class: assignment started, class participation</td>
-<td>30%</td>
-</tr>
-<tr class="even">
-<td>Part 1</td>
-<td>30%</td>
-</tr>
-<tr class="odd">
-<td>Part 2</td>
-<td>30%</td>
-</tr>
-<tr class="even">
-<td>Workflow and formatting</td>
-<td>10%</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Why?
+<section id="part-3-univariate-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-univariate-distributions">Part 3: Univariate distributions</h3>
+<ul>
+<li>For each of your variables:
+<ul>
+<li>Run the <code>summary()</code> (for numeric variables) or <code>table()</code> (for categorical variables) function on the variable.</li>
+<li>Indicate how many missing values (NAs) there are. Hint: use the <code>useNA = "always"</code> option if using <code>table()</code>. <code>summary()</code> will provide the number of NAs in the data if there are any—if the output contains no information about them, there are none in the data.</li>
+<li>In ~2-3 sentences, describe what you see in the results. Note anything that surprises you.</li>
+</ul></li>
+</ul>
+<p><strong>ncoaches:</strong></p>
+<p>The minimum number of coaches per team is one, the median is three, and the maximum is 14. There are no missing values. The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right. In other words, there may be a small number of teams with a large number of coaches relative to the rest.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(sports_filtered<span class="sc">$</span>ncoaches)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00    3.00    3.00    3.88    4.00   14.00 </code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Before doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like. This will help you head off problems later. For example, looking at the distributions of your variables will reveal if data is missing when you don’t expect it to be. It also might clue you in on interesting patterns you may want to investigate further. Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics.</p>
+<p><strong>teamgender:</strong></p>
+<p>There are 304 men’s teams and 304 women’s teams in these data. There are no missing values. That the number of teams is the same for both represented genders is unsurprising given that I filtered my data to only include sports for which there is both a men’s and a women’s team.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>teamgender, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  men women  &lt;NA&gt; 
+  304   304     0 </code></pre>
+</div>
+</div>
+<p><strong>sport:</strong></p>
+<p>There are nine sports represented in my data (though it is likely that “All Track Combined” and “Track and Field X Country” are different words for the same thing, which would make it eight sports). There are no missing values. Assuming the two entries for track are in fact the same, there are the same number of teams represented for all sports.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>sport, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+       All Track Combined                Basketball                   Fencing 
+                       72                        76                        76 
+                     Golf                  Lacrosse                    Soccer 
+                       76                        76                        76 
+      Swimming and Diving                    Tennis Track and Field X Country 
+                       76                        76                         4 
+                     &lt;NA&gt; 
+                        0 </code></pre>
+</div>
+</div>
+</section>
+<section id="part-4-multivariate-visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-multivariate-visualizations">Part 4: Multivariate visualizations</h3>
+<ul>
+<li><p>Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.</p></li>
+<li><p>Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?</p>
+<p>As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right. The distributions look nearly identical for men’s and women’s teams, so it appears that team gender and staffing levels are probably not associated with one another. This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I have one numeric and one categorical variable, so a boxplot (as in example code in the assignment template) would also be a good choice here--but for variety I will show the same information in histogram form</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> sports_filtered, <span class="fu">aes</span>(<span class="at">x =</span> ncoaches, <span class="at">fill =</span> teamgender)) <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(), <span class="co"># this puts the bars next to each other</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">binwidth =</span> <span class="dv">1</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of coaches"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of teams"</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution of staffing levels by team gender for Duke and UNC sports"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Team gender"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="c2_descriptives_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

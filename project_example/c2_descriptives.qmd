@@ -5,47 +5,134 @@ callout-icon: false
 
 # Descriptive Statistics {#descriptives}
 
-Please put your work for component 2, descriptive statistics, in this document. 
-
 ```{r setup}
 library(tidyverse)
 library(openintro)
-```
 
+sports <- readRDS("sports_teams.rds")
+```
 
 ### Part 1: Understanding your variables
 
-    -   Write down your research question (from component 1)
-    -   Write down your hypothesis (from component 1)
-    -   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
-    
-    -   For each variable, write:
-        -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else.
-        -   What kind of variable it is (categorical or numeric and which subtype within these)
-        -   What the range or possible responses are
+-   Write down your research question (from component 1)
 
-### Part 2: Univariate distributions
+    How does the number of coaches assigned to US college sports teams vary by the gender of the team?
 
-    -   For each of your variables:
-        -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable. Interpret the results. Does anything about them surprise you?
-        -   Note how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`.
-        
+-   Write down your hypothesis (from component 1)
+
+    I predict that for sports in which there is both a men's and a women's team, coaching levels will be equivalent.
+    I expect this because universities are required to adhere to Title IX, which would prohibit differential levels of resources for equivalent sports.
+
+-   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
+
+    ncoaches, teamgender, sport
+
+-   For each variable, write:
+
+    -   A brief description of what it measures
+
+    -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)
+
+    -   What kind of variable it is (categorical or numeric and which subtype within these)
+
+**ncoaches**: This measures the number of coaches on each team.
+It is my response variable.
+It is a discrete numeric variable.
+
+**teamgender:** This records the gender of the players on the team.
+It is an explanatory variable and it is nominal categorical.
+
+**sport:** I will use this variable to limit my data frame to the sports that have both men's and women's teams.
+It is a nominal categorical variable.
+
+### Part 2: Preparing your data set
+
+-   Will you analyze all the observations in your data set?
+    If not, which will you include and which will you exclude?
+
+    I will not analyze all of the observations in my data set.
+    I am interested in comparing the number of coaches for comparable men's and women's teams, so I will exclude sports for which there are only men's teams or only women's teams (e.g., football, softball).
+
+-   If necessary, use the code chunk below to filter out observations which are not relevant to your research question (not required if you will analyze all of your observations).
+
 ```{r}
-# replace the contents of this code chunk with tables/summaries of your variables
-summary(lizard_run$top_speed)
-table(lizard_run$common_name, useNA = "always")
+# first, I need to figure out which sports have teams for both genders
+table(sports$sport, sports$teamgender)
+
+# from that table, I can see that I need to remove baseball, field hockey, football, gymnastics, rowing, softball, volleyball, and wrestling.
+sports_filtered <- sports |> 
+  filter(
+    sport != "Baseball",
+    sport != "Field Hockey",
+    sport != "Football",
+    sport != "Gymnastics",
+    sport != "Rowing",
+    sport != "Softball",
+    sport != "Volleyball",
+    sport != "Wrestling"
+  )
+
+# did it work? Let's make the same table with the new data set
+table(sports_filtered$sport, sports_filtered$teamgender)
+# now all the sports have both men's and women's teams--we're good to go!
 ```
-        
-###  Part 3: Multivariate visualizations
 
-    -   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc. Include axis labels. 
-    -   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
-    
+### Part 3: Univariate distributions
+
+-   For each of your variables:
+    -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable.
+    -   Indicate how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`. `summary()` will provide the number of NAs in the data if there are any---if the output contains no information about them, there are none in the data.
+    -   In \~2-3 sentences, describe what you see in the results. Note anything that surprises you.
+
+**ncoaches:**
+
+The minimum number of coaches per team is one, the median is three, and the maximum is 14.
+There are no missing values.
+The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right.
+In other words, there may be a small number of teams with a large number of coaches relative to the rest.
+
 ```{r}
-# replace the contents of this chunk with code to create your plot
-ggplot(lizard_run, aes(x = top_speed, y = common_name)) + 
-  geom_boxplot() + 
-  labs(x = "Top running speed (meters per second)", 
-       y = "Species",
-       title = "Top speeds of two species of cool lizards")
+summary(sports_filtered$ncoaches)
+```
+
+**teamgender:**
+
+There are 304 men's teams and 304 women's teams in these data.
+There are no missing values.
+That the number of teams is the same for both represented genders is unsurprising given that I filtered my data to only include sports for which there is both a men's and a women's team.
+
+```{r}
+table(sports_filtered$teamgender, useNA = "always")
+```
+
+**sport:**
+
+There are nine sports represented in my data (though it is likely that "All Track Combined" and "Track and Field X Country" are different words for the same thing, which would make it eight sports).
+There are no missing values.
+Assuming the two entries for track are in fact the same, there are the same number of teams represented for all sports.
+
+```{r}
+table(sports_filtered$sport, useNA = "always")
+```
+
+### Part 4: Multivariate visualizations
+
+-   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.
+
+-   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+
+    As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right. The distributions look nearly identical for men's and women's teams, so it appears that team gender and staffing levels are probably not associated with one another. This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.
+
+```{r}
+# I have one numeric and one categorical variable, so a boxplot (as in example code in the assignment template) would also be a good choice here--but for variety I will show the same information in histogram form
+ggplot(data = sports_filtered, aes(x = ncoaches, fill = teamgender)) + 
+  geom_histogram(
+    position = position_dodge(), # this puts the bars next to each other
+    binwidth = 1
+    ) + 
+  labs(x = "Number of coaches",
+       y = "Number of teams",
+       title = "Distribution of staffing levels by team gender for Duke and UNC sports",
+       fill = "Team gender")
+  
 ```
