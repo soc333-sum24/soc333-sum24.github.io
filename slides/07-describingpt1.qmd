@@ -1,0 +1,463 @@
+---
+title: "Describing data: part 1"
+subtitle: "Lecture 7"
+date: "May 30, 2023"
+format: revealjs
+---
+
+## Logistics
+
+-   Final project proposals due tonight
+
+-   Late work policy
+
+    -   You have 3 late days to use through the semester; no questions asked
+    -   Applies to project components and assignments
+
+-   Homework 1, Intro to R: available now; due Thursday night (it's short)
+
+## Today
+
+-   Data analysis process
+-   Univariate summaries: what do my variables look like?
+-   Today's exercise: in R! Clone project repo now (**ex-5-30-yourusername**)
+
+    -   [Instructions: Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
+
+## The (approximate) data analysis process {.smaller}
+
+::: columns
+::: {.column width="73%"}
+::: incremental
+-   Determine topic
+-   Find data; learn what observations and variables are available
+-   Write research question
+-   Describe distributions of relevant variables
+-   Prepare data frame for analysis
+-   Describe relationships between variables
+-   Perform statistical tests/write models
+-   Communicate results
+:::
+:::
+
+::: {.column width="27%"}
+::: fragment
+![](images/07/cycle.png)
+:::
+:::
+:::
+
+## The (approximate) data analysis process {.smaller}
+
+::: columns
+::: {.column width="73%"}
+-   Determine topic ✓
+-   Find data; learn what observations and variables are available ✓
+-   Write research question ✓
+-   Describe distributions of relevant variables
+-   Prepare data frame for analysis
+-   Describe relationships between variables
+-   Perform statistical tests/write models
+-   Communicate results
+:::
+
+::: {.column width="27%"}
+![](images/07/cycle.png)
+:::
+:::
+
+## The (approximate) data analysis process {.smaller}
+
+::: columns
+::: {.column width="73%"}
+-   Determine topic ✓
+-   Find data; learn what observations and variables are available ✓
+-   Write research question ✓
+-   **Describe distributions of relevant variables**
+-   **Prepare data frame for analysis**
+-   **Describe relationships between variables**
+-   Perform statistical tests/write models
+-   Communicate results
+:::
+
+::: {.column width="27%"}
+![](images/07/cycle.png)
+:::
+:::
+
+## Project component 2: Descriptive statistics
+
+Goals: 
+
+::: {.incremental}
+
+-   Understand how your variables are distributed in your data
+
+-   Make any necessary modifications data frame
+
+    -   Remove irrelevant observations
+    -   Modify or create variables
+
+-   Describe the relationships between your variables 
+:::
+
+# Understanding how your variables are distributed
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+sports <- readRDS("data/sports_teams.rds")
+```
+
+## Method 1: With numbers
+
+-   Summary statistics
+-   What makes sense depends on variable type
+
+## R syntax for today
+
+-   To access specific variables: `dataframe$variable`
+-   Functions do things with variables/other inputs: `do_this(with_this)`
+-   We can save results as *objects* to use later with `<-`: `an_object_name <- some_function(some_input)`
+    -   eg: `meanvalue <- mean(dataframe$variable)`
+
+## Examples: EADA data on sports teams {.smaller}
+
+```{r}
+glimpse(sports)
+```
+# Categorical variables
+
+## Categorical: What are the options? {.smaller}
+
+-   `unique()`
+
+::: {.fragment}
+
+```{r}
+unique(sports$school)
+```
+
+:::
+
+::: {.fragment}
+
+
+
+```{r}
+unique(sports$sport)
+```
+:::
+
+## Categorical: counts for one variable
+
+-   Counts: `table()`
+
+    -   `useNA = "always"` tells R to let you know if any observations are missing information
+
+```{r}
+table(sports$school, useNA = "always")
+```
+
+## Categorical: counts for two variables
+
+-   Still `table()`, but use two variables as arguments
+
+```{r}
+table(sports$teamgender, sports$school, useNA = "always")
+```
+
+# TODO: Exercise with categorical variables
+
+# Numeric variables 
+
+## Numeric: Distributions
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+normdata <- tibble(d = rnorm(1000, mean = 5, sd = 1))
+ggplot(normdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+unifdata <- tibble(d = runif(1000, min = 1.5, max = 8.5))
+ggplot(unifdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+:::
+
+
+## Summarizing a distribution
+
+-   Center
+-   Spread
+-   Shape
+
+## Center
+
+Say we measure heights of 7 people (in inches):
+
+```{r}
+heights <- c(67, 70, 80, 61, 70, 71, 62)
+```
+
+
+::: incremental
+-   Mean
+
+    -   The average
+    -   Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7
+    -   `mean()`
+:::
+
+::: {.fragment}
+
+```{r}
+mean(heights)
+```
+:::
+
+## Center
+
+```{r}
+heights
+```
+
+
+::: incremental
+
+-   Median
+
+    -   The middle value
+    -   Order them least to greatest, select the one in the middle
+    -   61, 62, 67, **70**, 70, 71, 80
+    -   `median()`
+:::
+
+::: {.fragment}
+    
+```{r}
+median(heights)
+```
+:::
+
+## Spread
+
+-   Minimum and maximum
+```{r}
+min(heights)
+```
+
+```{r}
+max(heights)
+```
+
+## Spread: quartiles {.smaller}
+-   **percentiles**
+-   lowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc
+-   Calculated the same way as the median
+-   `quantile()`
+
+```{r}
+quantile(heights)
+```
+
+## Spread: standard deviation
+
+-   Measure of degree of variation in data: bigger standard deviation = more variation
+-   Used to establish statistical significance--we'll come back to this later
+-   `sd()`
+
+```{r}
+heights_moresimilar <- c(60, 63, 62, 60, 61, 61, 64)
+```
+
+```{r}
+heights
+heights_moresimilar
+```
+
+```{r}
+sd(heights)
+```
+
+```{r}
+sd(heights_moresimilar)
+```
+
+## summary(): (almost) everything all at once
+
+```{r}
+summary(sports$nplayers)
+```
+
+## Summary statistics functions and missing values {.smaller}
+
+```{r}
+mean(acs12$income)
+```
+
+-   NA! What!
+
+::: incremental
+-   Summary statistics functions will return NA if any of the observations are missing information for the variable
+-   Always check for missing data!
+-   Use the `na.rm = TRUE` option to tell the function to ignore the NA values. 
+:::
+
+::: {.fragment}
+```{r}
+summary(acs12$income)
+```
+:::
+
+::: {.fragment}
+```{r}
+mean(acs12$income, na.rm = TRUE)
+```
+:::
+
+
+
+## TODO: exercise on center and spread
+
+## Shape
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+normdata <- tibble(d = rnorm(1000, mean = 5, sd = 1))
+ggplot(normdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+unifdata <- tibble(d = runif(1000, min = 1.5, max = 8.5))
+ggplot(unifdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+:::
+
+
+## Shape
+
+-   We'll go over how to make plots later
+-   But summary statistics tell you things about shape too
+
+## Skew
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+rightdata <- tibble(d = rbeta(1000, 1, 10))
+ggplot(rightdata, aes(x = d)) + 
+  geom_histogram(bins = 30) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank(),
+        axis.text.x = element_blank())
+```
+Right-skewed data
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+leftdata <- tibble(d = rbeta(1000, 10, 1))
+ggplot(leftdata, aes(x = d)) + 
+  geom_histogram(bins = 30) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank(),
+        axis.text.x = element_blank())
+```
+Left-skewed data
+:::
+:::
+
+## Skew
+
+-   Extreme values influence the mean more than the median
+-   When mean is higher than median: data might be skewed right (and vice versa)
+
+## Example: American Community Survey commute time
+
+time_to_work: Travel time to work, in minutes.
+
+```{r}
+mean_commute <- mean(acs12$time_to_work, na.rm = TRUE)
+median_commute <- median(acs12$time_to_work, na.rm = TRUE)
+```
+
+::: {.fragment}
+
+```{r}
+mean_commute
+```
+:::
+
+::: {.fragment}
+```{r}
+median_commute
+```
+:::
+
+## Example: American Community Survey commute time
+
+```{r, echo = FALSE, warning = FALSE}
+ggplot(acs12, aes(x = time_to_work)) + 
+  geom_histogram(bins = 20) + 
+  geom_vline(xintercept = mean_commute, color = "blue") +
+  geom_text(color = "blue", aes(x = mean_commute + 8, y = 242, label = "mean")) + 
+  geom_vline(xintercept = median_commute, color = "red") + 
+  geom_text(color = "red", aes(x = median_commute - 8, y = 242, label = "median")) + 
+  theme_minimal() +
+  labs(x = "Commute time (minutes)", y = "Number of observations")
+```
+
+
+## Shape: Quartiles
+
+-   Location of quartiles also tells you something about shape
+
+```{r}
+summary(acs12$time_to_work)
+```
+
+## Review {.smaller}
+
+-   We just covered how to get a better understanding of the variables in your data set
+
+...
+
+-   Categorical data: look at the available categories and how many observations are in each category
+
+    -   `unique(dataframe$variable)`
+    -   `table(dataframe$variable, useNA = "always")`
+    -   `table(dataframe$variable1, dataframe$variable2, useNA = "always")`
+    
+...
+
+-   Numeric data: Look at summary statistics that tell you something about the distribution
+    -   `summary(dataframe$variable)`
+    -   `sd(dataframe$variable, na.rm = TRUE)`
+    

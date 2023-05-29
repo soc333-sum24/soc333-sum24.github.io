@@ -1064,6 +1064,216 @@
     "text": "For next time:\n\nRead the syllabus, if you haven’t already\nWatch your email for an invite to our course GitHub organization–later today\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/07-describingpt1.html#logistics",
+    "href": "slides/07-describingpt1.html#logistics",
+    "title": "Describing data: part 1",
+    "section": "Logistics",
+    "text": "Logistics\n\nFinal project proposals due tonight\nLate work policy\n\nYou have 3 late days to use through the semester; no questions asked\nApplies to project components and assignments\n\nHomework 1, Intro to R: available now; due Thursday night (it’s short)"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#today",
+    "href": "slides/07-describingpt1.html#today",
+    "title": "Describing data: part 1",
+    "section": "Today",
+    "text": "Today\n\nData analysis process\nUnivariate summaries: what do my variables look like?\nToday’s exercise: in R! Clone project repo now (ex-5-30-yourusername)\n\nInstructions: Computing -&gt; Cloning and committing"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process",
+    "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process",
+    "title": "Describing data: part 1",
+    "section": "The (approximate) data analysis process",
+    "text": "The (approximate) data analysis process\n\n\n\n\nDetermine topic\nFind data; learn what observations and variables are available\nWrite research question\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
+    "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
+    "title": "Describing data: part 1",
+    "section": "The (approximate) data analysis process",
+    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
+    "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
+    "title": "Describing data: part 1",
+    "section": "The (approximate) data analysis process",
+    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#project-component-2-descriptive-statistics",
+    "href": "slides/07-describingpt1.html#project-component-2-descriptive-statistics",
+    "title": "Describing data: part 1",
+    "section": "Project component 2: Descriptive statistics",
+    "text": "Project component 2: Descriptive statistics\nGoals:\n\n\nUnderstand how your variables are distributed in your data\nMake any necessary modifications data frame\n\nRemove irrelevant observations\nModify or create variables\n\nDescribe the relationships between your variables"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#method-1-with-numbers",
+    "href": "slides/07-describingpt1.html#method-1-with-numbers",
+    "title": "Describing data: part 1",
+    "section": "Method 1: With numbers",
+    "text": "Method 1: With numbers\n\nSummary statistics\nWhat makes sense depends on variable type"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#r-syntax-for-today",
+    "href": "slides/07-describingpt1.html#r-syntax-for-today",
+    "title": "Describing data: part 1",
+    "section": "R syntax for today",
+    "text": "R syntax for today\n\nTo access specific variables: dataframe$variable\nFunctions do things with variables/other inputs: do_this(with_this)\nWe can save results as objects to use later with &lt;-: an_object_name &lt;- some_function(some_input)\n\neg: meanvalue &lt;- mean(dataframe$variable)"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#examples-eada-data-on-sports-teams",
+    "href": "slides/07-describingpt1.html#examples-eada-data-on-sports-teams",
+    "title": "Describing data: part 1",
+    "section": "Examples: EADA data on sports teams",
+    "text": "Examples: EADA data on sports teams\n\nglimpse(sports)\n\nRows: 879\nColumns: 8\n$ school             &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Du…\n$ year               &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division           &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Div…\n$ teamgender         &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"m…\n$ sport              &lt;chr&gt; \"Baseball\", \"Basketball\", \"Fencing\", \"Football\", \"G…\n$ ncoaches           &lt;dbl&gt; 3, 4, 1, 10, 2, 3, 3, 2, 2, 3, 3, 4, 4, 8, 6, 13, 2…\n$ nplayers           &lt;dbl&gt; 33, 15, 19, 81, 12, 45, 23, 32, 11, 50, 35, 35, 30,…\n$ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000000,…"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#categorical-what-are-the-options",
+    "href": "slides/07-describingpt1.html#categorical-what-are-the-options",
+    "title": "Describing data: part 1",
+    "section": "Categorical: What are the options?",
+    "text": "Categorical: What are the options?\n\nunique()\n\n\n\nunique(sports$school)\n\n[1] \"Duke\" \"UNC\" \n\n\n\n\n\nunique(sports$sport)\n\n [1] \"Baseball\"                  \"Basketball\"               \n [3] \"Fencing\"                   \"Football\"                 \n [5] \"Golf\"                      \"Lacrosse\"                 \n [7] \"Soccer\"                    \"Swimming and Diving\"      \n [9] \"Tennis\"                    \"Track and Field X Country\"\n[11] \"Wrestling\"                 \"All Track Combined\"       \n[13] \"Field Hockey\"              \"Rowing\"                   \n[15] \"Volleyball\"                \"Gymnastics\"               \n[17] \"Softball\""
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#categorical-counts-for-one-variable",
+    "href": "slides/07-describingpt1.html#categorical-counts-for-one-variable",
+    "title": "Describing data: part 1",
+    "section": "Categorical: counts for one variable",
+    "text": "Categorical: counts for one variable\n\nCounts: table()\n\nuseNA = \"always\" tells R to let you know if any observations are missing information\n\n\n\ntable(sports$school, useNA = \"always\")\n\n\nDuke  UNC &lt;NA&gt; \n 423  456    0"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#categorical-counts-for-two-variables",
+    "href": "slides/07-describingpt1.html#categorical-counts-for-two-variables",
+    "title": "Describing data: part 1",
+    "section": "Categorical: counts for two variables",
+    "text": "Categorical: counts for two variables\n\nStill table(), but use two variables as arguments\n\n\ntable(sports$teamgender, sports$school, useNA = \"always\")\n\n       \n        Duke UNC &lt;NA&gt;\n  men    209 209    0\n  women  214 247    0\n  &lt;NA&gt;     0   0    0"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#numeric-distributions",
+    "href": "slides/07-describingpt1.html#numeric-distributions",
+    "title": "Describing data: part 1",
+    "section": "Numeric: Distributions",
+    "text": "Numeric: Distributions"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#summarizing-a-distribution",
+    "href": "slides/07-describingpt1.html#summarizing-a-distribution",
+    "title": "Describing data: part 1",
+    "section": "Summarizing a distribution",
+    "text": "Summarizing a distribution\n\nCenter\nSpread\nShape"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#center",
+    "href": "slides/07-describingpt1.html#center",
+    "title": "Describing data: part 1",
+    "section": "Center",
+    "text": "Center\nSay we measure heights of 7 people (in inches):\n\nheights &lt;- c(67, 70, 80, 61, 70, 71, 62)\n\n\n\nMean\n\nThe average\nAdd everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7\nmean()\n\n\n\n\n\nmean(heights)\n\n[1] 68.71429"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#center-1",
+    "href": "slides/07-describingpt1.html#center-1",
+    "title": "Describing data: part 1",
+    "section": "Center",
+    "text": "Center\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\n\n\n\nMedian\n\nThe middle value\nOrder them least to greatest, select the one in the middle\n61, 62, 67, 70, 70, 71, 80\nmedian()\n\n\n\n\n\nmedian(heights)\n\n[1] 70"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#spread",
+    "href": "slides/07-describingpt1.html#spread",
+    "title": "Describing data: part 1",
+    "section": "Spread",
+    "text": "Spread\n\nMinimum and maximum\n\n\nmin(heights)\n\n[1] 61\n\n\n\nmax(heights)\n\n[1] 80"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#spread-quartiles",
+    "href": "slides/07-describingpt1.html#spread-quartiles",
+    "title": "Describing data: part 1",
+    "section": "Spread: quartiles",
+    "text": "Spread: quartiles\n\npercentiles\nlowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc\nCalculated the same way as the median\nquantile()\n\n\nquantile(heights)\n\n  0%  25%  50%  75% 100% \n61.0 64.5 70.0 70.5 80.0"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#spread-standard-deviation",
+    "href": "slides/07-describingpt1.html#spread-standard-deviation",
+    "title": "Describing data: part 1",
+    "section": "Spread: standard deviation",
+    "text": "Spread: standard deviation\n\nMeasure of degree of variation in data: bigger standard deviation = more variation\nUsed to establish statistical significance–we’ll come back to this later\nsd()\n\n\nheights_moresimilar &lt;- c(60, 63, 62, 60, 61, 61, 64)\n\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\nheights_moresimilar\n\n[1] 60 63 62 60 61 61 64\n\n\n\nsd(heights)\n\n[1] 6.369571\n\n\n\nsd(heights_moresimilar)\n\n[1] 1.511858"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#summary-almost-everything-all-at-once",
+    "href": "slides/07-describingpt1.html#summary-almost-everything-all-at-once",
+    "title": "Describing data: part 1",
+    "section": "summary(): (almost) everything all at once",
+    "text": "summary(): (almost) everything all at once\n\nsummary(sports$nplayers)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   5.00   15.00   28.00   35.63   40.00  148.00"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#summary-statistics-functions-and-missing-values",
+    "href": "slides/07-describingpt1.html#summary-statistics-functions-and-missing-values",
+    "title": "Describing data: part 1",
+    "section": "Summary statistics functions and missing values",
+    "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#todo-exercise-on-center-and-spread",
+    "href": "slides/07-describingpt1.html#todo-exercise-on-center-and-spread",
+    "title": "Describing data: part 1",
+    "section": "TODO: exercise on center and spread",
+    "text": "TODO: exercise on center and spread"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#shape",
+    "href": "slides/07-describingpt1.html#shape",
+    "title": "Describing data: part 1",
+    "section": "Shape",
+    "text": "Shape"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#shape-1",
+    "href": "slides/07-describingpt1.html#shape-1",
+    "title": "Describing data: part 1",
+    "section": "Shape",
+    "text": "Shape\n\nWe’ll go over how to make plots later\nBut summary statistics tell you things about shape too"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#skew",
+    "href": "slides/07-describingpt1.html#skew",
+    "title": "Describing data: part 1",
+    "section": "Skew",
+    "text": "Skew\n\n\n\n\n\n\n\nRight-skewed data\n\n\n\n\n\n\nLeft-skewed data"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#skew-1",
+    "href": "slides/07-describingpt1.html#skew-1",
+    "title": "Describing data: part 1",
+    "section": "Skew",
+    "text": "Skew\n\nExtreme values influence the mean more than the median\nWhen mean is higher than median: data might be skewed right (and vice versa)"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#example-american-community-survey-commute-time",
+    "href": "slides/07-describingpt1.html#example-american-community-survey-commute-time",
+    "title": "Describing data: part 1",
+    "section": "Example: American Community Survey commute time",
+    "text": "Example: American Community Survey commute time\ntime_to_work: Travel time to work, in minutes.\n\nmean_commute &lt;- mean(acs12$time_to_work, na.rm = TRUE)\nmedian_commute &lt;- median(acs12$time_to_work, na.rm = TRUE)\n\n\n\nmean_commute\n\n[1] 25.99745\n\n\n\n\n\nmedian_commute\n\n[1] 20"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#example-american-community-survey-commute-time-1",
+    "href": "slides/07-describingpt1.html#example-american-community-survey-commute-time-1",
+    "title": "Describing data: part 1",
+    "section": "Example: American Community Survey commute time",
+    "text": "Example: American Community Survey commute time"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#shape-quartiles",
+    "href": "slides/07-describingpt1.html#shape-quartiles",
+    "title": "Describing data: part 1",
+    "section": "Shape: Quartiles",
+    "text": "Shape: Quartiles\n\nLocation of quartiles also tells you something about shape\n\n\nsummary(acs12$time_to_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      1      10      20      26      30     163    1217"
+  },
+  {
+    "objectID": "slides/07-describingpt1.html#review",
+    "href": "slides/07-describingpt1.html#review",
+    "title": "Describing data: part 1",
+    "section": "Review",
+    "text": "Review\n\nWe just covered how to get a better understanding of the variables in your data set\n\n…\n\nCategorical data: look at the available categories and how many observations are in each category\n\nunique(dataframe$variable)\ntable(dataframe$variable, useNA = \"always\")\ntable(dataframe$variable1, dataframe$variable2, useNA = \"always\")\n\n\n…\n\nNumeric data: Look at summary statistics that tell you something about the distribution\n\nsummary(dataframe$variable)\nsd(dataframe$variable, na.rm = TRUE)\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "project-descriptives.html",
     "href": "project-descriptives.html",
     "title": "Project description",
