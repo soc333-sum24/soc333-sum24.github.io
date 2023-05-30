@@ -422,7 +422,7 @@ Aidan Combs
 <li>Any last questions?</li>
 </ul></li>
 </ul>
-<p>…</p>
+<div class="fragment">
 <ul>
 <li><p>Late work policy</p>
 <ul>
@@ -430,6 +430,7 @@ Aidan Combs
 <li>Applies to project components and assignments (except final paper and presentation–I can’t extend those)</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
@@ -526,7 +527,7 @@ Aidan Combs
 <li>What makes sense depends on variable type</li>
 </ul>
 </section>
-<section id="r-syntax-for-today" class="slide level2">
+<section id="r-syntax-for-today" class="slide level2 smaller">
 <h2>R syntax for today</h2>
 <ul>
 <li>To access specific variables: <code>dataframe$variable</code></li>
@@ -752,20 +753,17 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 </div>
 </section>
-<section id="center" class="slide level2">
-<h2>Center</h2>
+<section id="center-mean" class="slide level2">
+<h2>Center: Mean</h2>
 <p>Say we measure heights of 7 people (in inches):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>heights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">61</span>, <span class="dv">70</span>, <span class="dv">71</span>, <span class="dv">62</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div>
 <ul>
-<li class="fragment"><p>Mean</p>
-<ul>
 <li class="fragment">aka the average</li>
 <li class="fragment">Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7</li>
 <li class="fragment"><code>mean()</code></li>
-</ul></li>
 </ul>
 </div>
 <div class="fragment">
@@ -777,8 +775,8 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 </div>
 </section>
-<section id="center-1" class="slide level2">
-<h2>Center</h2>
+<section id="center-median" class="slide level2">
+<h2>Center: Median</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -787,13 +785,10 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 <div>
 <ul>
-<li class="fragment"><p>Median</p>
-<ul>
 <li class="fragment">The middle value</li>
 <li class="fragment">Order the values least to greatest, select the one in the middle</li>
 <li class="fragment">61, 62, 67, <strong>70</strong>, 70, 71, 80</li>
 <li class="fragment"><code>median()</code></li>
-</ul></li>
 </ul>
 </div>
 <div class="fragment">

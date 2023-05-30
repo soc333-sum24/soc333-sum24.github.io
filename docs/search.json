@@ -1068,7 +1068,7 @@
     "href": "slides/07-describingpt1.html#logistics",
     "title": "Describing data: part 1",
     "section": "Logistics",
-    "text": "Logistics\n\nFinal project proposals due tonight\n\nUpdate your first draft: incorporate useful peer feedback\nDon’t forget to add the last paragraph about what question you think you should go with\nAny last questions?\n\n\n…\n\nLate work policy\n\nYou have 3 no-questions-asked late days to use through the semester\nApplies to project components and assignments (except final paper and presentation–I can’t extend those)"
+    "text": "Logistics\n\nFinal project proposals due tonight\n\nUpdate your first draft: incorporate useful peer feedback\nDon’t forget to add the last paragraph about what question you think you should go with\nAny last questions?\n\n\n\n\nLate work policy\n\nYou have 3 no-questions-asked late days to use through the semester\nApplies to project components and assignments (except final paper and presentation–I can’t extend those)"
   },
   {
     "objectID": "slides/07-describingpt1.html#today",
@@ -1197,18 +1197,18 @@
     "text": "Summarizing a distribution\n\n\n\n\nCenter\nSpread\nShape"
   },
   {
-    "objectID": "slides/07-describingpt1.html#center",
-    "href": "slides/07-describingpt1.html#center",
+    "objectID": "slides/07-describingpt1.html#center-mean",
+    "href": "slides/07-describingpt1.html#center-mean",
     "title": "Describing data: part 1",
-    "section": "Center",
-    "text": "Center\nSay we measure heights of 7 people (in inches):\n\nheights &lt;- c(67, 70, 80, 61, 70, 71, 62)\n\n\n\nMean\n\naka the average\nAdd everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7\nmean()\n\n\n\n\n\nmean(heights)\n\n[1] 68.71429"
+    "section": "Center: Mean",
+    "text": "Center: Mean\nSay we measure heights of 7 people (in inches):\n\nheights &lt;- c(67, 70, 80, 61, 70, 71, 62)\n\n\n\naka the average\nAdd everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7\nmean()\n\n\n\n\nmean(heights)\n\n[1] 68.71429"
   },
   {
-    "objectID": "slides/07-describingpt1.html#center-1",
-    "href": "slides/07-describingpt1.html#center-1",
+    "objectID": "slides/07-describingpt1.html#center-median",
+    "href": "slides/07-describingpt1.html#center-median",
     "title": "Describing data: part 1",
-    "section": "Center",
-    "text": "Center\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\n\n\n\nMedian\n\nThe middle value\nOrder the values least to greatest, select the one in the middle\n61, 62, 67, 70, 70, 71, 80\nmedian()\n\n\n\n\n\nmedian(heights)\n\n[1] 70"
+    "section": "Center: Median",
+    "text": "Center: Median\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\n\n\n\nThe middle value\nOrder the values least to greatest, select the one in the middle\n61, 62, 67, 70, 70, 71, 80\nmedian()\n\n\n\n\nmedian(heights)\n\n[1] 70"
   },
   {
     "objectID": "slides/07-describingpt1.html#spread-minimum-and-maximum",

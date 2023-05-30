@@ -13,7 +13,7 @@ format: revealjs
     -   Don't forget to add the last paragraph about what question you think you should go with
     -   Any last questions?
 
-...
+. . .
 
 -   Late work policy
 
@@ -88,10 +88,9 @@ format: revealjs
 
 ## Project component 2: Descriptive statistics
 
-Goals: 
+Goals:
 
-::: {.incremental}
-
+::: incremental
 -   Understand how your variables are distributed in your data
 
 -   Make any necessary modifications to your data frame
@@ -99,7 +98,7 @@ Goals:
     -   Remove irrelevant observations
     -   Modify or create variables as necessary
 
--   Describe the relationships between your variables 
+-   Describe the relationships between your variables
 :::
 
 # Understanding how your variables are distributed
@@ -115,7 +114,7 @@ sports <- readRDS("data/sports_teams.rds")
 -   Summary statistics
 -   What makes sense depends on variable type
 
-## R syntax for today
+## R syntax for today {.smaller}
 
 -   To access specific variables: `dataframe$variable`
 -   Functions do things with variables/other inputs: `do_this(with_this)`
@@ -142,16 +141,13 @@ glimpse(sports)
 
 -   `unique()`
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 unique(sports$school)
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 unique(sports$sport)
 ```
@@ -177,11 +173,12 @@ table(sports$teamgender, sports$school, useNA = "always")
 
 ## Exercise {.smaller}
 
--   Today's exercise: in R! Clone and open the project repo now (**ex-5-30-yourusername**)
+-   Today's exercise: in R!
+    Clone and open the project repo now (**ex-5-30-yourusername**)
 
-    -   [Instructions: Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
-    
-- Data: American Community Survey 2012
+    -   [Instructions: Computing -\> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
+
+-   Data: American Community Survey 2012
 
 ```{r}
 glimpse(acs12)
@@ -191,7 +188,7 @@ glimpse(acs12)
 
 Response options for the employment variable
 
-::: {.fragment}
+::: fragment
 ```{r}
 unique(acs12$employment)
 ```
@@ -199,9 +196,10 @@ unique(acs12$employment)
 
 ## Question 1 solutions {.smaller}
 
-How many people are in each category? How many missing values are there? 
+How many people are in each category?
+How many missing values are there?
 
-::: {.fragment}
+::: fragment
 ```{r}
 table(acs12$employment, useNA = "always")
 ```
@@ -211,17 +209,17 @@ table(acs12$employment, useNA = "always")
 
 Create a table that shows the number of people of each gender in each employment category.
 
-::: {.fragment}
+::: fragment
 ```{r}
 table(acs12$gender, acs12$employment, useNA = "always")
 ```
 :::
 
-::: {.fragment}
+::: fragment
 Does it look like gender and employment status are related?
 :::
 
-# Numeric variables 
+# Numeric variables
 
 ## Numeric: All about distributions!
 
@@ -249,12 +247,11 @@ ggplot(unifdata, aes(x = d)) +
 :::
 :::
 
-
 ## Summarizing a distribution
 
 ::: columns
 ::: {.column width="50%"}
-:::: incremental
+::: incremental
 -   Center
 -   Spread
 -   Shape
@@ -273,8 +270,7 @@ ggplot(normdata, aes(x = d)) +
 :::
 :::
 
-
-## Center
+## Center: Mean
 
 Say we measure heights of 7 people (in inches):
 
@@ -282,41 +278,34 @@ Say we measure heights of 7 people (in inches):
 heights <- c(67, 70, 80, 61, 70, 71, 62)
 ```
 
-
 ::: incremental
--   Mean
 
-    -   aka the average
-    -   Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7
-    -   `mean()`
+-   aka the average
+-   Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7
+-   `mean()`
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 mean(heights)
 ```
 :::
 
-## Center
+## Center: Median
 
 ```{r}
 heights
 ```
 
-
 ::: incremental
 
--   Median
-
-    -   The middle value
-    -   Order the values least to greatest, select the one in the middle
-    -   61, 62, 67, **70**, 70, 71, 80
-    -   `median()`
+-   The middle value
+-   Order the values least to greatest, select the one in the middle
+-   61, 62, 67, **70**, 70, 71, 80
+-   `median()`
 :::
 
-::: {.fragment}
-    
+::: fragment
 ```{r}
 median(heights)
 ```
@@ -333,6 +322,7 @@ max(heights)
 ```
 
 ## Spread: quartiles {.smaller}
+
 -   **percentiles**
 -   lowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc
 -   Calculated similarly to the median
@@ -382,16 +372,16 @@ mean(acs12$income)
 ::: incremental
 -   Summary statistics functions will return NA if any of the observations are missing information for the variable
 -   Always check for missing data!
--   Use the `na.rm = TRUE` option to tell the function to ignore the NA values. 
+-   Use the `na.rm = TRUE` option to tell the function to ignore the NA values.
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 summary(acs12$income)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 mean(acs12$income, na.rm = TRUE)
 ```
@@ -401,18 +391,21 @@ mean(acs12$income, na.rm = TRUE)
 
 ## Question 2 solutions {.smaller}
 
-What is the mean of `hrs_work`? What is the median? 
+What is the mean of `hrs_work`?
+What is the median?
 
-::: {.fragment}
+::: fragment
 Approach 1:
+
 ```{r}
 mean(acs12$hrs_work, na.rm = TRUE)
 median(acs12$hrs_work, na.rm = TRUE)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 Approach 2:
+
 ```{r}
 summary(acs12$hrs_work)
 ```
@@ -422,8 +415,7 @@ summary(acs12$hrs_work)
 
 What is the standard deviation of `hrs_work`?
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 sd(acs12$hrs_work, na.rm = TRUE)
 ```
@@ -431,14 +423,15 @@ sd(acs12$hrs_work, na.rm = TRUE)
 
 ## Question 2 solutions {.smaller}
 
-What proportion of people in the data set are missing information (have NAs) for this variable? 
+What proportion of people in the data set are missing information (have NAs) for this variable?
 (there are many ways to do this)
 
-::: {.fragment}
+::: fragment
 ```{r}
 # Find the number of NA values
 summary(acs12$hrs_work)
 ```
+
 ```{r}
 # Find the total number of observations
 glimpse(acs12)
@@ -447,8 +440,7 @@ glimpse(acs12)
 
 ## Question 2 solutions
 
-::: {.fragment}
-
+::: fragment
 Now that we have those values, we can use R to do the math
 
 ```{r}
@@ -483,7 +475,6 @@ ggplot(unifdata, aes(x = d)) +
 :::
 :::
 
-
 ## Shape
 
 -   We'll go over how to make plots later
@@ -502,6 +493,7 @@ ggplot(rightdata, aes(x = d)) +
   theme(axis.text.y = element_blank(),
         axis.text.x = element_blank())
 ```
+
 Right-skewed data
 :::
 
@@ -515,6 +507,7 @@ ggplot(leftdata, aes(x = d)) +
   theme(axis.text.y = element_blank(),
         axis.text.x = element_blank())
 ```
+
 Left-skewed data
 :::
 :::
@@ -533,14 +526,13 @@ mean_commute <- mean(acs12$time_to_work, na.rm = TRUE)
 median_commute <- median(acs12$time_to_work, na.rm = TRUE)
 ```
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 mean_commute
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 median_commute
 ```
@@ -559,7 +551,6 @@ ggplot(acs12, aes(x = time_to_work)) +
   labs(x = "Commute time (minutes)", y = "Number of observations")
 ```
 
-
 ## Shape: Quartiles
 
 -   Location of quartiles also tells you something about shape
@@ -568,7 +559,7 @@ ggplot(acs12, aes(x = time_to_work)) +
 summary(acs12$time_to_work)
 ```
 
-## Review 
+## Review
 
 -   We just covered how to get a better understanding of the variables in your data set
 
@@ -579,10 +570,9 @@ summary(acs12$time_to_work)
     -   `unique(dataframe$variable)`
     -   `table(dataframe$variable, useNA = "always")`
     -   `table(dataframe$variable1, dataframe$variable2, useNA = "always")`
-    
+
 ## Review {.smaller}
 
 -   Numeric data: Look at summary statistics that tell you something about the distribution
     -   `summary(dataframe$variable)`
     -   `sd(dataframe$variable, na.rm = TRUE)`
-    
