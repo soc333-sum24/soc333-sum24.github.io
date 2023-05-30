@@ -9,7 +9,11 @@ format: revealjs
 
 -   Final project proposals due tonight
 
+    -   Update your first draft: incorporate useful peer feedback
+    -   Don't forget to add the last paragraph about what question you think you should go with
     -   Any last questions?
+
+...
 
 -   Late work policy
 

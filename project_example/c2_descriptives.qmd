@@ -1,6 +1,7 @@
 ---
 title: "Project description"
 callout-icon: false
+editor: visual
 ---
 
 # Descriptive Statistics {#descriptives}
@@ -47,10 +48,10 @@ It is a nominal categorical variable.
 
 ### Part 2: Preparing your data set
 
--   Will you analyze all the observations in your data set?
+-   Will you analyze all the observations in your data set? Explain why or why not.
     If not, which will you include and which will you exclude?
 
-    I will not analyze all of the observations in my data set.
+    I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison. There is a different set of sports available for men than for women. 
     I am interested in comparing the number of coaches for comparable men's and women's teams, so I will exclude sports for which there are only men's teams or only women's teams (e.g., football, softball).
 
 -   If necessary, use the code chunk below to filter out observations which are not relevant to your research question (not required if you will analyze all of your observations).

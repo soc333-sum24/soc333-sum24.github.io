@@ -62,8 +62,8 @@ website:
             contents:
               - href: project-proposal.qmd
                 text: "Component 1: Proposal"
-              # - href: project-descstats.qmd
-              #   text: "Component 2: Descriptive Stats"
+              - href: project-descriptives.qmd
+                text: "Component 2: Descriptive stats"
               # - href: project-results.qmd
               #   text: "Component 3: Results"
               # - href: project-paper.qmd
@@ -74,20 +74,27 @@ website:
             contents:
               - href: project_example/c1_proposal.qmd
                 text: "Component 1: Proposal"
+              - href: project_example/c2_descriptives.qmd
+                text: "Component 2: Descriptive stats"
       - section: "Slides"
         contents:
-          - href: slides/01-welcome.qmd
-            text: "Lecture 1: Welcome"
-          - href: slides/02-datavariables.qmd
-            text: "Lecture 2: Data and Variables"
-          - href: slides/03-computing.qmd
-            text: "Lecture 3: Meet the Toolkit"
-          - href: slides/04-researchquestions.qmd
-            text: "Lecture 4: Project and research questions"
-          - href: slides/05-studiessamples.qmd
-            text: "Lecture 5: Studies and samples"
+          - href: slides/07-describingpt1.qmd
+            text: "Lecture 7: Describing data pt 1"
           - href: slides/06-workshopping.qmd
             text: "Lecture 6: Workshopping proposals"
+          - href: slides/05-studiessamples.qmd
+            text: "Lecture 5: Studies and samples"
+          - href: slides/04-researchquestions.qmd
+            text: "Lecture 4: Project and research questions"
+          - href: slides/03-computing.qmd
+            text: "Lecture 3: Meet the toolkit"
+          - href: slides/02-datavariables.qmd
+            text: "Lecture 2: Data and variables"
+          - href: slides/01-welcome.qmd
+            text: "Lecture 1: Welcome"
+
+
+
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)"
     left: "&copy; Copyright 2023, Aidan Combs. Credit to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the materials and website for SOCIOL333 are based"

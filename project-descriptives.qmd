@@ -3,7 +3,6 @@ title: "Project description"
 callout-icon: false
 ---
 
-
 # Descriptive Statistics {#descriptives}
 
 In this component of your project, you will explore the variables you will use in your analysis.
@@ -21,34 +20,44 @@ When you are done, render the document and submit by pushing your work to github
 
 ## Details
 
+This should be completed in the template Quarto document (these instructions are duplicated there)
+
 ### Part 1: Understanding your variables
+       
+-   Write down your research question (from component 1)
+-   Write down your hypothesis (from component 1)
+-   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
+-   For each variable, write:
+    -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)
+    -   What kind of variable it is (categorical or numeric and which subtype within these)
+    
+### Part 2: Preparing your data set
 
-    -   Write down your research question (from component 1)
-    -   Write down your hypothesis (from component 1)
-    -   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
-    -   For each variable, write:
-        -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (if something else, explain what purpose it serves)
-        -   What kind of variable it is (categorical or numeric and which subtype within these)
-        -   What the range or possible responses are
+-   Will you analyze all the observations in your data set? Explain why or why not.
+    If not, which will you include and which will you exclude?
+-   Make any necessary changes to your data set.
 
-### Part 2: Univariate distributions
+### Part 3: Univariate distributions
 
-    -   For each of your variables:
-        -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable. Describe the results. Does anything about them surprise you?
-        -   Note how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`.
-        
-###  Part 3: Multivariate visualizations
+-   For each of your variables:
+    -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable.
+    -   Indicate how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`. `summary()` will provide the number of NAs in the data if there are any---if the output contains no information about them, there are none in the data.
+    -   In \~2-3 sentences, describe what you see in the results. Note anything that surprises you.
 
-    -   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this could be a scatter plot, box plot, bar chart, etc.
-    -   Interpret your plot in \~2-3 sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+### Part 4: Multivariate visualizations
+
+-   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.
+
+-   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
 
 ## Grading
 
 |                                                                        |     |
-|---------------------------------------------------|---------------------|
-| Preparation for work in class: assignment started, class participation | 30% |
-| Part 1                                                                 | 30% |
-| Part 2                                                                 | 30% |
+|--------------------------------------------------|----------------------|
+| Part 1                                                                 | 10% |
+| Part 2                                                                 | 20% |
+| Part 3                                                                 | 30% |
+| Part 4                                                                 | 30% |
 | Workflow and formatting                                                | 10% |
 
 ::: callout-tip
