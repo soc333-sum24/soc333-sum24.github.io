@@ -9,20 +9,17 @@ format: revealjs
 
 -   Final project proposals due tonight
 
+    -   Any last questions?
+
 -   Late work policy
 
-    -   You have 3 late days to use through the semester; no questions asked
-    -   Applies to project components and assignments
-
--   Homework 1, Intro to R: available now; due Thursday night (it's short)
+    -   You have 3 no-questions-asked late days to use through the semester
+    -   Applies to project components and assignments (except final paper and presentation--I can't extend those)
 
 ## Today
 
 -   Data analysis process
 -   Univariate summaries: what do my variables look like?
--   Today's exercise: in R! Clone project repo now (**ex-5-30-yourusername**)
-
-    -   [Instructions: Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
 
 ## The (approximate) data analysis process {.smaller}
 
@@ -93,10 +90,10 @@ Goals:
 
 -   Understand how your variables are distributed in your data
 
--   Make any necessary modifications data frame
+-   Make any necessary modifications to your data frame
 
     -   Remove irrelevant observations
-    -   Modify or create variables
+    -   Modify or create variables as necessary
 
 -   Describe the relationships between your variables 
 :::
@@ -109,7 +106,7 @@ library(openintro)
 sports <- readRDS("data/sports_teams.rds")
 ```
 
-## Method 1: With numbers
+## Today: With numbers (later: with plots)
 
 -   Summary statistics
 -   What makes sense depends on variable type
@@ -121,11 +118,20 @@ sports <- readRDS("data/sports_teams.rds")
 -   We can save results as *objects* to use later with `<-`: `an_object_name <- some_function(some_input)`
     -   eg: `meanvalue <- mean(dataframe$variable)`
 
-## Examples: EADA data on sports teams {.smaller}
+## Data set 1 for today: EADA data on sports teams {.smaller}
 
 ```{r}
 glimpse(sports)
 ```
+
+## Before we dive in: an intro to missing data
+
+::: incremental
+-   Sometimes not everyone answers every question or data is not available for a specific observation
+-   Creates `NA` values in your data frame
+-   Check for them--they can create unexpected results otherwise
+:::
+
 # Categorical variables
 
 ## Categorical: What are the options? {.smaller}
@@ -142,8 +148,6 @@ unique(sports$school)
 
 ::: {.fragment}
 
-
-
 ```{r}
 unique(sports$sport)
 ```
@@ -153,7 +157,7 @@ unique(sports$sport)
 
 -   Counts: `table()`
 
-    -   `useNA = "always"` tells R to let you know if any observations are missing information
+    -   `useNA = "always"` tells R to let you know if there is any missing data on your variables
 
 ```{r}
 table(sports$school, useNA = "always")
@@ -167,11 +171,55 @@ table(sports$school, useNA = "always")
 table(sports$teamgender, sports$school, useNA = "always")
 ```
 
-# TODO: Exercise with categorical variables
+## Exercise {.smaller}
+
+-   Today's exercise: in R! Clone and open the project repo now (**ex-5-30-yourusername**)
+
+    -   [Instructions: Computing -> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
+    
+- Data: American Community Survey 2012
+
+```{r}
+glimpse(acs12)
+```
+
+## Question 1 solutions {.smaller}
+
+Response options for the employment variable
+
+::: {.fragment}
+```{r}
+unique(acs12$employment)
+```
+:::
+
+## Question 1 solutions {.smaller}
+
+How many people are in each category? How many missing values are there? 
+
+::: {.fragment}
+```{r}
+table(acs12$employment, useNA = "always")
+```
+:::
+
+## Question 1 solutions {.smaller}
+
+Create a table that shows the number of people of each gender in each employment category.
+
+::: {.fragment}
+```{r}
+table(acs12$gender, acs12$employment, useNA = "always")
+```
+:::
+
+::: {.fragment}
+Does it look like gender and employment status are related?
+:::
 
 # Numeric variables 
 
-## Numeric: Distributions
+## Numeric: All about distributions!
 
 ::: columns
 ::: {.column width="50%"}
@@ -200,9 +248,27 @@ ggplot(unifdata, aes(x = d)) +
 
 ## Summarizing a distribution
 
+::: columns
+::: {.column width="50%"}
+:::: incremental
 -   Center
 -   Spread
 -   Shape
+:::
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+normdata <- tibble(d = rnorm(1000, mean = 5, sd = 1))
+ggplot(normdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+:::
+
 
 ## Center
 
@@ -216,7 +282,7 @@ heights <- c(67, 70, 80, 61, 70, 71, 62)
 ::: incremental
 -   Mean
 
-    -   The average
+    -   aka the average
     -   Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7
     -   `mean()`
 :::
@@ -240,7 +306,7 @@ heights
 -   Median
 
     -   The middle value
-    -   Order them least to greatest, select the one in the middle
+    -   Order the values least to greatest, select the one in the middle
     -   61, 62, 67, **70**, 70, 71, 80
     -   `median()`
 :::
@@ -252,9 +318,8 @@ median(heights)
 ```
 :::
 
-## Spread
+## Spread: minimum and maximum
 
--   Minimum and maximum
 ```{r}
 min(heights)
 ```
@@ -266,14 +331,14 @@ max(heights)
 ## Spread: quartiles {.smaller}
 -   **percentiles**
 -   lowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc
--   Calculated the same way as the median
+-   Calculated similarly to the median
 -   `quantile()`
 
 ```{r}
 quantile(heights)
 ```
 
-## Spread: standard deviation
+## Spread: standard deviation {.smaller}
 
 -   Measure of degree of variation in data: bigger standard deviation = more variation
 -   Used to establish statistical significance--we'll come back to this later
@@ -328,9 +393,65 @@ mean(acs12$income, na.rm = TRUE)
 ```
 :::
 
+# Exercise question 2
 
+## Question 2 solutions {.smaller}
 
-## TODO: exercise on center and spread
+What is the mean of `hrs_work`? What is the median? 
+
+::: {.fragment}
+Approach 1:
+```{r}
+mean(acs12$hrs_work, na.rm = TRUE)
+median(acs12$hrs_work, na.rm = TRUE)
+```
+:::
+
+::: {.fragment}
+Approach 2:
+```{r}
+summary(acs12$hrs_work)
+```
+:::
+
+## Question 2 solutions {.smaller}
+
+What is the standard deviation of `hrs_work`?
+
+::: {.fragment}
+
+```{r}
+sd(acs12$hrs_work, na.rm = TRUE)
+```
+:::
+
+## Question 2 solutions {.smaller}
+
+What proportion of people in the data set are missing information (have NAs) for this variable? 
+(there are many ways to do this)
+
+::: {.fragment}
+```{r}
+# Find the number of NA values
+summary(acs12$hrs_work)
+```
+```{r}
+# Find the total number of observations
+glimpse(acs12)
+```
+:::
+
+## Question 2 solutions
+
+::: {.fragment}
+
+Now that we have those values, we can use R to do the math
+
+```{r}
+# Divide!
+1041/2000
+```
+:::
 
 ## Shape
 
@@ -443,11 +564,11 @@ ggplot(acs12, aes(x = time_to_work)) +
 summary(acs12$time_to_work)
 ```
 
-## Review {.smaller}
+## Review 
 
 -   We just covered how to get a better understanding of the variables in your data set
 
-...
+## Review {.smaller}
 
 -   Categorical data: look at the available categories and how many observations are in each category
 
@@ -455,7 +576,7 @@ summary(acs12$time_to_work)
     -   `table(dataframe$variable, useNA = "always")`
     -   `table(dataframe$variable1, dataframe$variable2, useNA = "always")`
     
-...
+## Review {.smaller}
 
 -   Numeric data: Look at summary statistics that tell you something about the distribution
     -   `summary(dataframe$variable)`
