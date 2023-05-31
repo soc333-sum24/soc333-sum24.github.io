@@ -225,6 +225,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Component 1: Proposal</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project_example/c2_descriptives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Component 2: Descriptive stats</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -304,8 +310,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a>
   <ul class="collapse">
   <li><a href="#part-1-understanding-your-variables" id="toc-part-1-understanding-your-variables" class="nav-link" data-scroll-target="#part-1-understanding-your-variables">Part 1: Understanding your variables</a></li>
-  <li><a href="#part-2-preparing-your-data-set" id="toc-part-2-preparing-your-data-set" class="nav-link" data-scroll-target="#part-2-preparing-your-data-set">Part 2: Preparing your data set</a></li>
-  <li><a href="#part-3-univariate-distributions" id="toc-part-3-univariate-distributions" class="nav-link" data-scroll-target="#part-3-univariate-distributions">Part 3: Univariate distributions</a></li>
+  <li><a href="#part-2-univariate-distributions" id="toc-part-2-univariate-distributions" class="nav-link" data-scroll-target="#part-2-univariate-distributions">Part 2: Univariate distributions</a></li>
+  <li><a href="#part-3-preparing-your-data-set" id="toc-part-3-preparing-your-data-set" class="nav-link" data-scroll-target="#part-3-preparing-your-data-set">Part 3: Preparing your data set</a></li>
   <li><a href="#part-4-multivariate-visualizations" id="toc-part-4-multivariate-visualizations" class="nav-link" data-scroll-target="#part-4-multivariate-visualizations">Part 4: Multivariate visualizations</a></li>
   </ul></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
@@ -339,17 +345,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-to-complete-and-submit-due-tuesday-june-6-1159pm" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-complete-and-submit-due-tuesday-june-6-1159pm">How to complete and submit (due Tuesday, June 6, 11:59pm)</h2>
 <p>First, locate and clone the component 2 repository (<a href="https://soc333-sum23.github.io/computing-clonerepo.html">instructions</a>). Go to our <a href="https://github.com/orgs/soc333-sum23/repositories">course github organization</a> and find the repository called <strong>c2_descriptives_yourusername</strong>. Clone that repository. Open the document called <em>c2_descriptives.qmd</em>. This is a template document where you will put your work.</p>
-<p>Commit your changes regularly. When you are done, render the document and submit by pushing your work to github (<a href="https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes">instructions</a>)</p>
+<p>Commit your changes regularly. When you are done, render the document and submit by pushing your work to github (<a href="https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes">instructions</a>).</p>
 </section>
 <section id="details" class="level2">
 <h2 class="anchored" data-anchor-id="details">Details</h2>
-<p>This should be completed in the template Quarto document (these instructions are duplicated there)</p>
+<p>This should be completed in the template Quarto document (these instructions are duplicated there).</p>
 <section id="part-1-understanding-your-variables" class="level3">
 <h3 class="anchored" data-anchor-id="part-1-understanding-your-variables">Part 1: Understanding your variables</h3>
 <ul>
 <li>Write down your research question (from component 1)</li>
 <li>Write down your hypothesis (from component 1)</li>
-<li>Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)</li>
+<li>Write down the name of your data set (from component 1)</li>
+<li>Write down the names of the variables you will need to do your analysis (i.e., what you need to type to access them in R)--this includes your explanatory and response variables and any other variables needed to filter your dataset or create new variables.</li>
 <li>For each variable, write:
 <ul>
 <li>Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)</li>
@@ -357,23 +364,23 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="part-2-preparing-your-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-preparing-your-data-set">Part 2: Preparing your data set</h3>
-<ul>
-<li>Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?</li>
-<li>Do you need to create any new variables? Explain why or why not. If so, what are they?</li>
-<li>Make any necessary changes to your data set.</li>
-</ul>
-</section>
-<section id="part-3-univariate-distributions" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-univariate-distributions">Part 3: Univariate distributions</h3>
+<section id="part-2-univariate-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-univariate-distributions">Part 2: Univariate distributions</h3>
 <ul>
 <li>For each of your variables:
 <ul>
-<li>Run the <code>summary()</code> (for numeric variables) or <code>table()</code> (for categorical variables) function on the variable.</li>
-<li>Indicate how many missing values (NAs) there are. Hint: use the <code>useNA = "always"</code> option if using <code>table()</code>. <code>summary()</code> will provide the number of NAs in the data if there are any—if the output contains no information about them, there are none in the data.</li>
+<li>Look at its distribution using the <code>summary()</code> or <code>table()</code> function (as appropriate to its type).</li>
+<li>Indicate how many missing values (NAs) there are.</li>
 <li>In ~2-3 sentences, describe what you see in the results. Note anything that surprises you.</li>
 </ul></li>
+</ul>
+</section>
+<section id="part-3-preparing-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-preparing-your-data-set">Part 3: Preparing your data set</h3>
+<ul>
+<li>Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?</li>
+<li>Do you need to create any new variables? Explain why or why not. If so, what are they?</li>
+<li>Make any necessary changes to your data set. Check whether they worked as expected.</li>
 </ul>
 </section>
 <section id="part-4-multivariate-visualizations" class="level3">
@@ -394,11 +401,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Part 2</td>
-<td>20%</td>
+<td>25%</td>
 </tr>
 <tr class="odd">
 <td>Part 3</td>
-<td>30%</td>
+<td>25%</td>
 </tr>
 <tr class="even">
 <td>Part 4</td>

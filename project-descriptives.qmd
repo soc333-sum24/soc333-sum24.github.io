@@ -16,33 +16,34 @@ Open the document called *c2_descriptives.qmd*.
 This is a template document where you will put your work.
 
 Commit your changes regularly.
-When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
+When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)).
 
 ## Details
 
-This should be completed in the template Quarto document (these instructions are duplicated there)
+This should be completed in the template Quarto document (these instructions are duplicated there).
 
 ### Part 1: Understanding your variables
 
 -   Write down your research question (from component 1)
 -   Write down your hypothesis (from component 1)
--   Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)
+-   Write down the name of your data set (from component 1)
+-   Write down the names of the variables you will need to do your analysis (i.e., what you need to type to access them in R)\--this includes your explanatory and response variables and any other variables needed to filter your dataset or create new variables.
 -   For each variable, write:
     -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)
     -   What kind of variable it is (categorical or numeric and which subtype within these)
 
-### Part 2: Preparing your data set
+### Part 2: Univariate distributions
+
+-   For each of your variables:
+    -   Look at its distribution using the `summary()` or `table()` function (as appropriate to its type).
+    -   Indicate how many missing values (NAs) there are.
+    -   In \~2-3 sentences, describe what you see in the results. Note anything that surprises you.
+
+### Part 3: Preparing your data set
 
 -   Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?
 -   Do you need to create any new variables? Explain why or why not. If so, what are they?
--   Make any necessary changes to your data set.
-
-### Part 3: Univariate distributions
-
--   For each of your variables:
-    -   Run the `summary()` (for numeric variables) or `table()` (for categorical variables) function on the variable.
-    -   Indicate how many missing values (NAs) there are. Hint: use the `useNA = "always"` option if using `table()`. `summary()` will provide the number of NAs in the data if there are any---if the output contains no information about them, there are none in the data.
-    -   In \~2-3 sentences, describe what you see in the results. Note anything that surprises you.
+-   Make any necessary changes to your data set. Check whether they worked as expected.
 
 ### Part 4: Multivariate visualizations
 
@@ -60,8 +61,8 @@ This should be completed in the template Quarto document (these instructions are
 |                         |     |
 |-------------------------|-----|
 | Part 1                  | 10% |
-| Part 2                  | 20% |
-| Part 3                  | 30% |
+| Part 2                  | 25% |
+| Part 3                  | 25% |
 | Part 4                  | 30% |
 | Workflow and formatting | 10% |
 

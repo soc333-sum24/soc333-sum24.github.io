@@ -63,6 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../slides/08-describingpt2.html" rel="next">
+<link href="../project_example/c1_proposal.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Project description</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project-description.html">Project</a></li><li class="breadcrumb-item"><a href="../project_example/c1_proposal.html">Examples</a></li><li class="breadcrumb-item"><a href="../project_example/c2_descriptives.html">Component 2: Descriptive stats</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -208,13 +210,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Project</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-description.html" class="sidebar-item-text sidebar-link">
@@ -246,17 +248,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Examples</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project_example/c1_proposal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Component 1: Proposal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project_example/c2_descriptives.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Component 2: Descriptive stats</span></a>
   </div>
 </li>
       </ul>
@@ -335,8 +343,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#descriptives" id="toc-descriptives" class="nav-link active" data-scroll-target="#descriptives">Descriptive Statistics</a>
   <ul class="collapse">
   <li><a href="#part-1-understanding-your-variables" id="toc-part-1-understanding-your-variables" class="nav-link" data-scroll-target="#part-1-understanding-your-variables">Part 1: Understanding your variables</a></li>
-  <li><a href="#part-2-preparing-your-data-set" id="toc-part-2-preparing-your-data-set" class="nav-link" data-scroll-target="#part-2-preparing-your-data-set">Part 2: Preparing your data set</a></li>
-  <li><a href="#part-3-univariate-distributions" id="toc-part-3-univariate-distributions" class="nav-link" data-scroll-target="#part-3-univariate-distributions">Part 3: Univariate distributions</a></li>
+  <li><a href="#part-2-univariate-distributions" id="toc-part-2-univariate-distributions" class="nav-link" data-scroll-target="#part-2-univariate-distributions">Part 2: Univariate distributions</a></li>
+  <li><a href="#part-3-preparing-your-data-set" id="toc-part-3-preparing-your-data-set" class="nav-link" data-scroll-target="#part-3-preparing-your-data-set">Part 3: Preparing your data set</a></li>
   <li><a href="#part-4-multivariate-visualizations" id="toc-part-4-multivariate-visualizations" class="nav-link" data-scroll-target="#part-4-multivariate-visualizations">Part 4: Multivariate visualizations</a></li>
   </ul></li>
   </ul>
@@ -392,7 +400,9 @@ Loading required package: usdata</code></pre>
 <li><p>Write down your research question (from component 1)</p>
 <p>How does the number of coaches assigned to US college sports teams vary by the gender of the team?</p></li>
 <li><p>Write down your hypothesis (from component 1)</p>
-<p>I predict that for sports in which there is both a men’s and a women’s team, coaching levels will be equivalent. I expect this because universities are required to adhere to Title IX, which would prohibit differential levels of resources for equivalent sports.</p></li>
+<p>I predict that for sports in which there is both a men’s and a women’s team, coaching levels will be equivalent. I expect this because universities are required to adhere to Title IX, which would prohibit different levels of resources for equivalent sports.</p></li>
+<li><p>Write down the name of your data set (from component 1)</p>
+<p>I will be using the <a href="https://ope.ed.gov/athletics/#/">EADA data set on equity in college athletics</a>.</p></li>
 <li><p>Write down the names of the variables you will use in your analysis (i.e., what you need to type to access them in R)</p>
 <p>ncoaches, teamgender, sport</p></li>
 <li><p>For each variable, write:</p>
@@ -406,16 +416,69 @@ Loading required package: usdata</code></pre>
 <p><strong>teamgender:</strong> This records the gender of the players on the team. It is an explanatory variable and it is nominal categorical.</p>
 <p><strong>sport:</strong> I will use this variable to limit my data frame to the sports that have both men’s and women’s teams. It is a nominal categorical variable.</p>
 </section>
-<section id="part-2-preparing-your-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-preparing-your-data-set">Part 2: Preparing your data set</h3>
+<section id="part-2-univariate-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-univariate-distributions">Part 2: Univariate distributions</h3>
+<ul>
+<li><p>For each of your variables:</p>
+<ul>
+<li>Look at its distribution using the summary() or table() function (as appropriate to its type).</li>
+<li>Indicate how many missing values (NAs) there are.</li>
+<li>In ~2-3 sentences, describe what you see in the results. Note anything that surprises you.</li>
+</ul></li>
+</ul>
+<p><strong>ncoaches:</strong></p>
+<p>The minimum number of coaches per team is one, the median is four, and the maximum is 14. There are no missing values. The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right. In other words, there may be a small number of teams with a large number of coaches relative to the rest.</p>
+<p>The median and the cutoff point for the third quartile are the same (both equal 4), indicating that four is a really common number of coaches for teams to have.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(sports<span class="sc">$</span>ncoaches)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   3.000   4.000   4.058   4.000  14.000 </code></pre>
+</div>
+</div>
+<p><strong>teamgender:</strong></p>
+<p>There are 418 men’s teams and 461 women’s teams in these data. There are no missing values. I am surprised that there are so many more women’s teams than men’s teams. I would have expected the numbers to be about the same.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>teamgender, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  men women  &lt;NA&gt; 
+  418   461     0 </code></pre>
+</div>
+</div>
+<p><strong>sport:</strong></p>
+<p>There are 17 sports represented in my data (though it is likely that “All Track Combined” and “Track and Field X Country” are different words for the same thing, which would make it 16 sports). There are no missing values. Most sports have either 76 or 38 distinct teams in my data. It is possible that the sports with 38 teams are those that are available only to one gender, and the ones with 76 (38x2) teams have both men’s and women’s versions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>sport, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+       All Track Combined                  Baseball                Basketball 
+                       72                        38                        76 
+                  Fencing              Field Hockey                  Football 
+                       76                        38                        38 
+                     Golf                Gymnastics                  Lacrosse 
+                       76                        19                        76 
+                   Rowing                    Soccer                  Softball 
+                       38                        76                        24 
+      Swimming and Diving                    Tennis Track and Field X Country 
+                       76                        76                         4 
+               Volleyball                 Wrestling                      &lt;NA&gt; 
+                       38                        38                         0 </code></pre>
+</div>
+</div>
+</section>
+<section id="part-3-preparing-your-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-preparing-your-data-set">Part 3: Preparing your data set</h3>
 <ul>
 <li><p>Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?</p>
 <p>I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison. There is a different set of sports available for men than for women. I am interested in comparing the number of coaches for comparable men’s and women’s teams, so I will exclude sports for which there are only men’s teams or only women’s teams (e.g., football, softball).</p></li>
-<li><p>If necessary, use the code chunk below to filter out observations which are not relevant to your research question (not required if you will analyze all of your observations).</p></li>
+<li><p>Do you need to create any new variables? Explain why or why not. If so, what are they?</p>
+<p>I do not need to create any new variables. My explanatory variable is teamgender and my response variable is ncoaches, and they already fit my research question well in their current forms.</p></li>
+<li><p>If necessary, use the code chunk below to make any needed changes (filtering observations and creating variables) to your data.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first, I need to figure out which sports have teams for both genders</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>sport, sports<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first, I need to figure out which sports have teams for both genders</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>sport, sports<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                           
                             men women
@@ -437,21 +500,21 @@ Loading required package: usdata</code></pre>
   Volleyball                  0    38
   Wrestling                  38     0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from that table, I can see that I need to remove baseball, field hockey, football, gymnastics, rowing, softball, volleyball, and wrestling.</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sports_filtered <span class="ot">&lt;-</span> sports <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Baseball"</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Field Hockey"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Football"</span>,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Gymnastics"</span>,</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Rowing"</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Softball"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Volleyball"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Wrestling"</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># did it work? Let's make the same table with the new data set</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>sport, sports_filtered<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from that table, I can see that I need to remove baseball, field hockey, football, gymnastics, rowing, softball, volleyball, and wrestling.</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sports_filtered <span class="ot">&lt;-</span> sports <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Baseball"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Field Hockey"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Football"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Gymnastics"</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Rowing"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Softball"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Volleyball"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    sport <span class="sc">!=</span> <span class="st">"Wrestling"</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># did it work? Let's make the same table with the new data set</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>sport, sports_filtered<span class="sc">$</span>teamgender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                           
                             men women
@@ -465,53 +528,7 @@ Loading required package: usdata</code></pre>
   Tennis                     38    38
   Track and Field X Country   2     2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now all the sports have both men's and women's teams--we're good to go!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="part-3-univariate-distributions" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-univariate-distributions">Part 3: Univariate distributions</h3>
-<ul>
-<li>For each of your variables:
-<ul>
-<li>Run the <code>summary()</code> (for numeric variables) or <code>table()</code> (for categorical variables) function on the variable.</li>
-<li>Indicate how many missing values (NAs) there are. Hint: use the <code>useNA = "always"</code> option if using <code>table()</code>. <code>summary()</code> will provide the number of NAs in the data if there are any—if the output contains no information about them, there are none in the data.</li>
-<li>In ~2-3 sentences, describe what you see in the results. Note anything that surprises you.</li>
-</ul></li>
-</ul>
-<p><strong>ncoaches:</strong></p>
-<p>The minimum number of coaches per team is one, the median is three, and the maximum is 14. There are no missing values. The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right. In other words, there may be a small number of teams with a large number of coaches relative to the rest.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(sports_filtered<span class="sc">$</span>ncoaches)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   1.00    3.00    3.00    3.88    4.00   14.00 </code></pre>
-</div>
-</div>
-<p><strong>teamgender:</strong></p>
-<p>There are 304 men’s teams and 304 women’s teams in these data. There are no missing values. That the number of teams is the same for both represented genders is unsurprising given that I filtered my data to only include sports for which there is both a men’s and a women’s team.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>teamgender, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-  men women  &lt;NA&gt; 
-  304   304     0 </code></pre>
-</div>
-</div>
-<p><strong>sport:</strong></p>
-<p>There are nine sports represented in my data (though it is likely that “All Track Combined” and “Track and Field X Country” are different words for the same thing, which would make it eight sports). There are no missing values. Assuming the two entries for track are in fact the same, there are the same number of teams represented for all sports.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(sports_filtered<span class="sc">$</span>sport, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-       All Track Combined                Basketball                   Fencing 
-                       72                        76                        76 
-                     Golf                  Lacrosse                    Soccer 
-                       76                        76                        76 
-      Swimming and Diving                    Tennis Track and Field X Country 
-                       76                        76                         4 
-                     &lt;NA&gt; 
-                        0 </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># now all the sports have both men's and women's teams--we're good to go!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="part-4-multivariate-visualizations" class="level3">
@@ -890,6 +907,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../project_example/c1_proposal.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Component 1: Proposal</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../slides/08-describingpt2.html" class="pagination-link">
+        <span class="nav-page-text">Lecture 8: Describing data pt 2</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
