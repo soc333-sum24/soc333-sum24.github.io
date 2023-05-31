@@ -48,10 +48,12 @@ It is a nominal categorical variable.
 
 ### Part 2: Preparing your data set
 
--   Will you analyze all the observations in your data set? Explain why or why not.
+-   Will you analyze all the observations in your data set?
+    Explain why or why not.
     If not, which will you include and which will you exclude?
 
-    I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison. There is a different set of sports available for men than for women. 
+    I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison.
+    There is a different set of sports available for men than for women.
     I am interested in comparing the number of coaches for comparable men's and women's teams, so I will exclude sports for which there are only men's teams or only women's teams (e.g., football, softball).
 
 -   If necessary, use the code chunk below to filter out observations which are not relevant to your research question (not required if you will analyze all of your observations).
@@ -118,11 +120,18 @@ table(sports_filtered$sport, useNA = "always")
 
 ### Part 4: Multivariate visualizations
 
--   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.
+-   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables.
+    Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc.
+    Include meaningful axis labels.
 
--   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
+-   Interpret your plot in a few sentences.
+    Does it appear these variables are associated with one another?
+    Does anything about the relationship surprise you?
+    Is it consistent or inconsistent with your hypothesis?
 
-    As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right. The distributions look nearly identical for men's and women's teams, so it appears that team gender and staffing levels are probably not associated with one another. This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.
+    As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right.
+    The distributions look nearly identical for men's and women's teams, so it appears that team gender and staffing levels are probably not associated with one another.
+    This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.
 
 ```{r}
 # I have one numeric and one categorical variable, so a boxplot (as in example code in the assignment template) would also be a good choice here--but for variety I will show the same information in histogram form

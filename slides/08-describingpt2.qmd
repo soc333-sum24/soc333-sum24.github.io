@@ -16,10 +16,20 @@ sports <- readRDS("data/sports_teams.rds")
 -   Project proposals
 
     -   I will get my feedback to you soon--will be posted as a github issue (grades will be in Sakai)
+    
+. . . 
 
 -   Project descriptive statistics
 
-    -   Due Monday June 5. Instructions and example are posted on the website.
+    -   Due **Tuesday June 6**. Instructions and example are posted on the website.
+    
+. . . 
+
+-   Homework 1
+
+    -   Cancelled as a mandatory assignment; time is short
+    -   BUT practice is the only way to learn this stuff!
+    -   So, extra credit opportunities will be worked into exercises--I highly recommend doing as much as you can!
 
 ## Today
 
@@ -376,6 +386,12 @@ filter(acs12, employment == employed)
 
 ```{r, error = TRUE}
 filter(acs12, employment == "employd")
+```
+
+## Common mistakes and error messages {.smaller}
+
+```{r, error = TRUE}
+filter(acs12, employment == "Employed")
 ```
 
 ## Exercise: Filtering
