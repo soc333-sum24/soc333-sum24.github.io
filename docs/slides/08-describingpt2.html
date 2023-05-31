@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.3.333">
 
   <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-05-30">
-  <title>SOCIOL 333 - Describing data: part 1</title>
+  <meta name="dcterms.date" content="2023-05-31">
+  <title>SOCIOL 333 - Describing data: part 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -387,8 +387,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="SOCIOL 333 - Describing data: part 1">
-<meta property="og:description" content="Lecture 7">
+<meta property="og:title" content="SOCIOL 333 - Describing data: part 2">
+<meta property="og:description" content="Lecture 8">
 <meta property="og:site-name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
@@ -396,8 +396,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Describing data: part 1</h1>
-  <p class="subtitle">Lecture 7</p>
+  <h1 class="title">Describing data: part 2</h1>
+  <p class="subtitle">Lecture 8</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -410,241 +410,68 @@ Aidan Combs
     </div>
 </div>
 
-  <p class="date">2023-05-30</p>
+  <p class="date">2023-05-31</p>
 </section>
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
 <ul>
-<li><p>Final project proposals due tonight</p>
+<li><p>Project proposals</p>
 <ul>
-<li>Update your first draft: incorporate useful peer feedback</li>
-<li>Don’t forget to add the last paragraph about what question you think you should go with</li>
-<li>Any last questions?</li>
+<li>I will get my feedback to you soon–will be posted as a github issue (grades will be in Sakai)</li>
+</ul></li>
+<li><p>Project descriptive statistics</p>
+<ul>
+<li>Due Monday June 5. Instructions and example are posted on the website.</li>
 </ul></li>
 </ul>
-<div class="fragment">
-<ul>
-<li><p>Late work policy</p>
-<ul>
-<li>You have 3 no-questions-asked late days to use through the semester</li>
-<li>Applies to project components and assignments (except final paper and presentation–I can’t extend those)</li>
-</ul></li>
-</ul>
-</div>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <ul>
-<li>Data analysis process</li>
-<li>Univariate summaries: what do my variables look like?</li>
+<li>Finish univariate summaries</li>
+<li>Preparing data frames</li>
 </ul>
-</section>
-<section id="the-approximate-data-analysis-process" class="slide level2 smaller">
-<h2>The (approximate) data analysis process</h2>
-<div class="columns">
-<div class="column" style="width:73%;">
-<div>
-<ul>
-<li class="fragment">Determine topic</li>
-<li class="fragment">Find data; learn what observations and variables are available</li>
-<li class="fragment">Write research question</li>
-<li class="fragment">Describe distributions of relevant variables</li>
-<li class="fragment">Prepare data frame for analysis</li>
-<li class="fragment">Describe relationships between variables</li>
-<li class="fragment">Perform statistical tests/write models</li>
-<li class="fragment">Communicate results</li>
-</ul>
-</div>
-</div><div class="column" style="width:27%;">
-<div class="fragment">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-approximate-data-analysis-process-1" class="slide level2 smaller">
-<h2>The (approximate) data analysis process</h2>
-<div class="columns">
-<div class="column" style="width:73%;">
-<ul>
-<li>Determine topic ✓</li>
-<li>Find data; learn what observations and variables are available ✓</li>
-<li>Write research question ✓</li>
-<li>Describe distributions of relevant variables</li>
-<li>Prepare data frame for analysis</li>
-<li>Describe relationships between variables</li>
-<li>Perform statistical tests/write models</li>
-<li>Communicate results</li>
-</ul>
-</div><div class="column" style="width:27%;">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
-</section>
-<section id="the-approximate-data-analysis-process-2" class="slide level2 smaller">
-<h2>The (approximate) data analysis process</h2>
-<div class="columns">
-<div class="column" style="width:73%;">
-<ul>
-<li>Determine topic ✓</li>
-<li>Find data; learn what observations and variables are available ✓</li>
-<li>Write research question ✓</li>
-<li><strong>Describe distributions of relevant variables</strong></li>
-<li><strong>Prepare data frame for analysis</strong></li>
-<li><strong>Describe relationships between variables</strong></li>
-<li>Perform statistical tests/write models</li>
-<li>Communicate results</li>
-</ul>
-</div><div class="column" style="width:27%;">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
-</section>
-<section id="project-component-2-descriptive-statistics" class="slide level2">
-<h2>Project component 2: Descriptive statistics</h2>
-<p>Goals:</p>
-<div>
-<ul>
-<li class="fragment"><p>Understand how your variables are distributed in your data</p></li>
-<li class="fragment"><p>Make any necessary modifications to your data frame</p>
-<ul>
-<li class="fragment">Remove irrelevant observations</li>
-<li class="fragment">Modify or create variables as necessary</li>
-</ul></li>
-<li class="fragment"><p>Describe the relationships between your variables</p></li>
-</ul>
-</div>
 </section>
 <section>
-<section id="understanding-how-your-variables-are-distributed" class="title-slide slide level1 center">
-<h1>Understanding how your variables are distributed</h1>
+<section id="where-we-left-off-summarizing-numeric-variables" class="title-slide slide level1 center">
+<h1>Where we left off: summarizing numeric variables</h1>
 
 </section>
-<section id="today-with-numbers-later-with-plots" class="slide level2">
-<h2>Today: With numbers (later: with plots)</h2>
-<ul>
-<li>Summary statistics</li>
-<li>What makes sense depends on variable type</li>
-</ul>
-</section>
-<section id="r-syntax-for-today" class="slide level2 smaller">
-<h2>R syntax for today</h2>
-<ul>
-<li>To access specific variables: <code>dataframe$variable</code></li>
-<li>Functions do things with variables/other inputs: <code>do_this(with_this)</code></li>
-<li>We can save results as <em>objects</em> to use later with <code>&lt;-</code>: <code>an_object_name &lt;- some_function(some_input)</code>
-<ul>
-<li>eg: <code>meanvalue &lt;- mean(dataframe$variable)</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="data-set-1-for-today-eada-data-on-sports-teams" class="slide level2 smaller">
-<h2>Data set 1 for today: EADA data on sports teams</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 879
-Columns: 8
-$ school             &lt;chr&gt; "Duke", "Duke", "Duke", "Duke", "Duke", "Duke", "Du…
-$ year               &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…
-$ division           &lt;chr&gt; "NCAA Division I-A", "NCAA Division I-A", "NCAA Div…
-$ teamgender         &lt;chr&gt; "men", "men", "men", "men", "men", "men", "men", "m…
-$ sport              &lt;chr&gt; "Baseball", "Basketball", "Fencing", "Football", "G…
-$ ncoaches           &lt;dbl&gt; 3, 4, 1, 10, 2, 3, 3, 2, 2, 3, 3, 4, 4, 8, 6, 13, 2…
-$ nplayers           &lt;dbl&gt; 33, 15, 19, 81, 12, 45, 23, 32, 11, 50, 35, 35, 30,…
-$ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000000,…</code></pre>
-</div>
-</div>
-</section>
-<section id="before-we-dive-in-an-intro-to-missing-data" class="slide level2">
-<h2>Before we dive in: an intro to missing data</h2>
+<section id="summarizing-a-distribution" class="slide level2 smaller">
+<h2>Summarizing a distribution</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div>
 <ul>
-<li class="fragment">Sometimes not everyone answers every question or data is not available for a specific observation</li>
-<li class="fragment">Creates <code>NA</code> values in your data frame</li>
-<li class="fragment">Check for them–they can create unexpected results otherwise</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="categorical-variables" class="title-slide slide level1 center">
-<h1>Categorical variables</h1>
-
-</section>
-<section id="categorical-what-are-the-options" class="slide level2 smaller">
-<h2>Categorical: What are the options?</h2>
+<li class="fragment"><p>Center</p>
 <ul>
-<li><code>unique()</code></li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">unique</span>(sports<span class="sc">$</span>school)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Duke" "UNC" </code></pre>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">unique</span>(sports<span class="sc">$</span>sport)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "Baseball"                  "Basketball"               
- [3] "Fencing"                   "Football"                 
- [5] "Golf"                      "Lacrosse"                 
- [7] "Soccer"                    "Swimming and Diving"      
- [9] "Tennis"                    "Track and Field X Country"
-[11] "Wrestling"                 "All Track Combined"       
-[13] "Field Hockey"              "Rowing"                   
-[15] "Volleyball"                "Gymnastics"               
-[17] "Softball"                 </code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="categorical-counts-for-one-variable" class="slide level2">
-<h2>Categorical: counts for one variable</h2>
+<li class="fragment">median(dataset$var, na.rm = TRUE)</li>
+<li class="fragment">mean(dataset$var, na.rm = TRUE)</li>
+</ul></li>
+<li class="fragment"><p>Spread</p>
 <ul>
-<li><p>Counts: <code>table()</code></p>
+<li class="fragment">quantile(dataset$var, na.rm = TRUE)</li>
+<li class="fragment">sd(dataset$var, na.rm = TRUE)</li>
+</ul></li>
+<li class="fragment"><p>(Almost) everything</p>
 <ul>
-<li><code>useNA = "always"</code> tells R to let you know if there is any missing data on your variables</li>
+<li class="fragment">summary(dataset$var)</li>
 </ul></li>
 </ul>
+</div>
+</div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Duke  UNC &lt;NA&gt; 
- 423  456    0 </code></pre>
+<div class="cell-output-display">
+<p><img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-2-1.png" width="480"></p>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="categorical-counts-for-two-variables" class="slide level2">
-<h2>Categorical: counts for two variables</h2>
-<ul>
-<li>Still <code>table()</code>, but use two variables as arguments</li>
-</ul>
+<section id="exercise-question-2" class="slide level2 smaller">
+<h2>Exercise question 2</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>teamgender, sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       
-        Duke UNC &lt;NA&gt;
-  men    209 209    0
-  women  214 247    0
-  &lt;NA&gt;     0   0    0</code></pre>
-</div>
-</div>
-</section>
-<section id="exercise" class="slide level2 smaller">
-<h2>Exercise</h2>
-<ul>
-<li><p>Today’s exercise: in R! Clone and open the project repo now (<strong>ex-5-30-yourusername</strong>)</p>
-<ul>
-<li><a href="https://soc333-sum23.github.io/computing-clonerepo.html">Instructions: Computing -&gt; Cloning and committing</a></li>
-</ul></li>
-<li><p>Data: American Community Survey 2012</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,000
 Columns: 13
@@ -664,251 +491,388 @@ $ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru de
 </div>
 </div>
 </section>
-<section id="question-1-solutions" class="slide level2 smaller">
-<h2>Question 1 solutions</h2>
-<p>Response options for the employment variable</p>
+<section id="question-2-solutions" class="slide level2 smaller">
+<h2>Question 2 solutions</h2>
+<p>What is the mean of <code>hrs_work</code>? What is the median? (there are two ways to get this info)</p>
 <div class="fragment">
+<p>Approach 1:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">unique</span>(acs12<span class="sc">$</span>employment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mean</span>(acs12<span class="sc">$</span>hrs_work, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] not in labor force &lt;NA&gt;               employed           unemployed        
-Levels: not in labor force unemployed employed</code></pre>
+<pre><code>[1] 37.97706</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">median</span>(acs12<span class="sc">$</span>hrs_work, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 40</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Approach 2:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">summary</span>(acs12<span class="sc">$</span>hrs_work)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00   32.00   40.00   37.98   40.00   99.00    1041 </code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="question-1-solutions-1" class="slide level2 smaller">
-<h2>Question 1 solutions</h2>
-<p>How many people are in each category? How many missing values are there?</p>
+<section id="question-2-solutions-1" class="slide level2 smaller">
+<h2>Question 2 solutions</h2>
+<p>What is the standard deviation of <code>hrs_work</code>?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">sd</span>(acs12<span class="sc">$</span>hrs_work, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13.49768</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2-solutions-2" class="slide level2 smaller">
+<h2>Question 2 solutions</h2>
+<p>What proportion of people in the data set are missing information (have NAs) for this variable? (there are many ways to do this)</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Find the number of NA values</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">summary</span>(acs12<span class="sc">$</span>hrs_work)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00   32.00   40.00   37.98   40.00   99.00    1041 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Find the total number of observations</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 13
+$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…
+$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …
+$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…
+$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…
+$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …
+$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…
+$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…
+$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…
+$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …
+$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…
+$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…
+$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …
+$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="question-2-solutions-3" class="slide level2">
+<h2>Question 2 solutions</h2>
+<div class="fragment">
+<p>Now that we have those values, we can use R to do the math</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Divide!</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="dv">1041</span><span class="sc">/</span><span class="dv">2000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5205</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="shape" class="slide level2">
+<h2>Shape</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-10-1.png" width="480"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-11-1.png" width="480"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="shape-1" class="slide level2">
+<h2>Shape</h2>
+<ul>
+<li>We’ll go over how to make plots later</li>
+<li>But summary statistics tell you things about shape too</li>
+</ul>
+</section>
+<section id="skew" class="slide level2">
+<h2>Skew</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-12-1.png" width="480"></p>
+</div>
+</div>
+<p>Right-skewed data</p>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-13-1.png" width="480"></p>
+</div>
+</div>
+<p>Left-skewed data</p>
+</div>
+</div>
+</section>
+<section id="skew-1" class="slide level2">
+<h2>Skew</h2>
+<ul>
+<li>Extreme values influence the mean more than the median</li>
+<li>When mean is higher than median: data might be skewed right (and vice versa)</li>
+</ul>
+</section>
+<section id="example-american-community-survey-commute-time" class="slide level2">
+<h2>Example: American Community Survey commute time</h2>
+<p>time_to_work: Travel time to work, in minutes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>mean_commute <span class="ot">&lt;-</span> <span class="fu">mean</span>(acs12<span class="sc">$</span>time_to_work, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>median_commute <span class="ot">&lt;-</span> <span class="fu">median</span>(acs12<span class="sc">$</span>time_to_work, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>mean_commute</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 25.99745</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>median_commute</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="example-american-community-survey-commute-time-1" class="slide level2">
+<h2>Example: American Community Survey commute time</h2>
+
+<img data-src="08-describingpt2_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="shape-quartiles" class="slide level2">
+<h2>Shape: Quartiles</h2>
+<ul>
+<li>Location of quartiles also tells you something about shape</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">summary</span>(acs12<span class="sc">$</span>time_to_work)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      1      10      20      26      30     163    1217 </code></pre>
+</div>
+</div>
+</section>
+<section id="review" class="slide level2 smaller">
+<h2>Review</h2>
+<ul>
+<li><p>Categorical data: look at the available categories and how many observations are in each category</p>
+<ul>
+<li><code>unique(dataframe$variable)</code></li>
+<li><code>table(dataframe$variable, useNA = "always")</code></li>
+<li><code>table(dataframe$variable1, dataframe$variable2, useNA = "always")</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="review-1" class="slide level2 smaller">
+<h2>Review</h2>
+<ul>
+<li>Numeric data: Look at summary statistics that tell you something about the distribution
+<ul>
+<li><code>summary(dataframe$variable)</code></li>
+<li><code>sd(dataframe$variable, na.rm = TRUE)</code></li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="modifying-data-frames" class="title-slide slide level1 center">
+<h1>Modifying data frames</h1>
+
+</section>
+<section id="removing-observations" class="slide level2">
+<h2>Removing observations</h2>
+<div>
+<ul>
+<li class="fragment"><p>You may not be interested in all observations</p></li>
+<li class="fragment"><p>Example:</p>
+<ul>
+<li class="fragment">RQ: How is commute time related to hours worked?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="removing-observations-1" class="slide level2 smaller">
+<h2>Removing observations</h2>
+<ul>
+<li>How is commute time related to hours worked?</li>
+<li>Data: ACS 2012</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 13
+$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…
+$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …
+$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…
+$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…
+$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …
+$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…
+$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…
+$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…
+$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …
+$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…
+$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…
+$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …
+$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<pre><code>-   Need to remove people who are unemployed/not in labor force (and don't have a job or a commute!)</code></pre>
+</div>
+</section>
+<section id="removing-observations-2" class="slide level2 smaller">
+<h2>Removing observations</h2>
+<div>
+<ul>
+<li class="fragment">How? With <code>filter()</code></li>
+<li class="fragment"><code>filter(dataframe, condition)</code></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>acs12_employedonly <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, employment <span class="sc">==</span> <span class="st">"employed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Did it work? Check with <code>table()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">table</span>(acs12_employedonly<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 not in labor force         unemployed           employed               &lt;NA&gt; 
-               656                106                843                395 </code></pre>
+                 0                  0                843                  0 </code></pre>
 </div>
 </div>
 </div>
 </section>
-<section id="question-1-solutions-2" class="slide level2 smaller">
-<h2>Question 1 solutions</h2>
-<p>Create a table that shows the number of people of each gender in each employment category.</p>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>gender, acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>        
-         not in labor force unemployed employed &lt;NA&gt;
-  male                  283         59      470  219
-  female                373         47      373  176
-  &lt;NA&gt;                    0          0        0    0</code></pre>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Does it look like gender and employment status are related?</p>
-</div>
-</section></section>
-<section>
-<section id="numeric-variables" class="title-slide slide level1 center">
-<h1>Numeric variables</h1>
-
-</section>
-<section id="numeric-all-about-distributions" class="slide level2">
-<h2>Numeric: All about distributions!</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-11-1.png" width="480"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-12-1.png" width="480"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="summarizing-a-distribution" class="slide level2">
-<h2>Summarizing a distribution</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div>
+<section id="conditions" class="slide level2 smaller">
+<h2>Conditions</h2>
 <ul>
-<li class="fragment">Center</li>
-<li class="fragment">Spread</li>
-<li class="fragment">Shape</li>
+<li><p><code>filter(acs12, employment == "employed")</code> ::: incremental</p></li>
+<li><p>condition: <code>employment == "employed"</code></p></li>
+<li><p>general structure: <code>variable</code> <code>comparison</code> <code>value</code></p></li>
+<li><p>This specifies which observations you want to <em>keep</em> :::</p></li>
 </ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-13-1.png" width="480"></p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="center-mean" class="slide level2">
-<h2>Center: Mean</h2>
-<p>Say we measure heights of 7 people (in inches):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>heights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">61</span>, <span class="dv">70</span>, <span class="dv">71</span>, <span class="dv">62</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div>
+<div class="fragment">
 <ul>
-<li class="fragment">aka the average</li>
-<li class="fragment">Add everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7</li>
-<li class="fragment"><code>mean()</code></li>
+<li>Common comparison operators:
+<ul>
+<li><code>==</code> : equal to (note there are two equals signs!)</li>
+<li><code>!=</code> : not equal to</li>
+<li><code>&gt;</code>, <code>&gt;=</code> : greater than, greater than or equal to</li>
+<li><code>&lt;</code>, <code>&lt;=</code> : less than, less than or equal to</li>
+</ul></li>
 </ul>
 </div>
 <div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">mean</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 68.71429</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="center-median" class="slide level2">
-<h2>Center: Median</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 67 70 80 61 70 71 62</code></pre>
-</div>
-</div>
-<div>
 <ul>
-<li class="fragment">The middle value</li>
-<li class="fragment">Order the values least to greatest, select the one in the middle</li>
-<li class="fragment">61, 62, 67, <strong>70</strong>, 70, 71, 80</li>
-<li class="fragment"><code>median()</code></li>
+<li><p>Values:</p>
+<ul>
+<li>Can be numbers, letters/words, or TRUE/FALSE–should match the response options of your variable</li>
+<li>Put letters/words in quotation marks</li>
+</ul></li>
 </ul>
 </div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">median</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 70</code></pre>
-</div>
-</div>
-</div>
 </section>
-<section id="spread-minimum-and-maximum" class="slide level2">
-<h2>Spread: minimum and maximum</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">min</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 61</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">max</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 80</code></pre>
-</div>
-</div>
-</section>
-<section id="spread-quartiles" class="slide level2 smaller">
-<h2>Spread: quartiles</h2>
+<section id="condition-examples" class="slide level2 smaller">
+<h2>Condition examples</h2>
 <ul>
-<li><strong>percentiles</strong></li>
-<li>lowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc</li>
-<li>Calculated similarly to the median</li>
-<li><code>quantile()</code></li>
+<li><code>filter(acs12, citizen == "no")</code></li>
+<li><code>filter(acs12, income &lt;= 12000)</code></li>
+<li><code>filter(acs12, birth_qrtr != "jan thru mar")</code></li>
+<li><code>filter(acs12, hrs_work &gt; 20)</code></li>
 </ul>
+</section>
+<section id="other-useful-condition-operators" class="slide level2 smaller">
+<h2>Other useful condition operators</h2>
+<ul>
+<li><p>Two or more requirements</p>
+<ul>
+<li><p><code>&amp;</code> : and</p></li>
+<li><p><code>|</code> : or</p></li>
+<li><p><code>filter(acs12, citizen == "no" &amp; lang == "english")</code></p></li>
+<li><p><code>filter(acs12, race == "black" | race == "asian")</code></p></li>
+</ul></li>
+<li><p>Missing values</p>
+<ul>
+<li><p><code>is.na()</code></p></li>
+<li><p><code>!is.na()</code></p>
+<ul>
+<li>is <em>not</em> missing – good for removing rows with missing values</li>
+</ul></li>
+<li><p><code>filter(acs12, !is.na(income))</code></p></li>
+</ul></li>
+<li><p>More: <a href="https://r4ds.had.co.nz/transform.html#filter-rows-with-filter">Click here for R for Data Science</a></p></li>
+</ul>
+</section>
+<section id="common-mistakes-and-error-messages" class="slide level2 smaller">
+<h2>Common mistakes and error messages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">quantile</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  0%  25%  50%  75% 100% 
-61.0 64.5 70.0 70.5 80.0 </code></pre>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">filter</span>(acs12, <span class="at">employment =</span> <span class="st">"employed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `filter()`:
+! We detected a named input.
+ℹ This usually means that you've used `=` instead of `==`.
+ℹ Did you mean `employment == "employed"`?</code></pre>
 </div>
 </div>
 </section>
-<section id="spread-standard-deviation" class="slide level2 smaller">
-<h2>Spread: standard deviation</h2>
-<ul>
-<li>Measure of degree of variation in data: bigger standard deviation = more variation</li>
-<li>Used to establish statistical significance–we’ll come back to this later</li>
-<li><code>sd()</code></li>
-</ul>
+<section id="common-mistakes-and-error-messages-1" class="slide level2 smaller">
+<h2>Common mistakes and error messages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>heights_moresimilar <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">60</span>, <span class="dv">63</span>, <span class="dv">62</span>, <span class="dv">60</span>, <span class="dv">61</span>, <span class="dv">61</span>, <span class="dv">64</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 67 70 80 61 70 71 62</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>heights_moresimilar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 60 63 62 60 61 61 64</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">sd</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 6.369571</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">sd</span>(heights_moresimilar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.511858</code></pre>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">filter</span>(acs12, employment <span class="sc">==</span> employed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `filter()`:
+ℹ In argument: `employment == employed`.
+Caused by error:
+! object 'employed' not found</code></pre>
 </div>
 </div>
 </section>
-<section id="summary-almost-everything-all-at-once" class="slide level2">
-<h2>summary(): (almost) everything all at once</h2>
+<section id="common-mistakes-and-error-messages-2" class="slide level2 smaller">
+<h2>Common mistakes and error messages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">summary</span>(sports<span class="sc">$</span>nplayers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">filter</span>(acs12, employment <span class="sc">==</span> <span class="st">"employd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   5.00   15.00   28.00   35.63   40.00  148.00 </code></pre>
+<pre><code># A tibble: 0 × 13
+# ℹ 13 variables: income &lt;int&gt;, employment &lt;fct&gt;, hrs_work &lt;int&gt;, race &lt;fct&gt;,
+#   age &lt;int&gt;, gender &lt;fct&gt;, citizen &lt;fct&gt;, time_to_work &lt;int&gt;, lang &lt;fct&gt;,
+#   married &lt;fct&gt;, edu &lt;fct&gt;, disability &lt;fct&gt;, birth_qrtr &lt;fct&gt;</code></pre>
 </div>
 </div>
 </section>
-<section id="summary-statistics-functions-and-missing-values" class="slide level2 smaller">
-<h2>Summary statistics functions and missing values</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] NA</code></pre>
-</div>
-</div>
+<section id="exercise-filtering" class="slide level2">
+<h2>Exercise: Filtering</h2>
 <ul>
-<li>NA! What!</li>
-</ul>
-<div>
+<li><p>Clone and open the project repo now (<strong>ex-5-31-yourusername</strong>)</p></li>
+<li><p>Then open the .qmd file and try out some filtering</p>
 <ul>
-<li class="fragment">Summary statistics functions will return NA if any of the observations are missing information for the variable</li>
-<li class="fragment">Always check for missing data!</li>
-<li class="fragment">Use the <code>na.rm = TRUE</code> option to tell the function to ignore the NA values.</li>
+<li><a href="https://soc333-sum23.github.io/computing-clonerepo.html">Instructions: Computing -&gt; Cloning and committing</a></li>
+</ul></li>
 </ul>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">summary</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-      0       0    3000   23600   33700  450000     377 </code></pre>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 23599.98</code></pre>
-</div>
-</div>
-</div>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
