@@ -304,13 +304,11 @@ table(acs12_employedonly$employment, useNA = "always")
 
 ## Conditions {.smaller}
 
--   `filter(acs12, employment == "employed")` ::: incremental
-
+::: incremental
+-   `filter(acs12, employment == "employed")` 
 -   condition: `employment == "employed"`
-
--   general structure: `variable` `comparison` `value`
-
--   This specifies which observations you want to *keep* :::
+-   This specifies which observations you want to *keep* 
+:::
 
 ::: fragment
 -   Common comparison operators:
@@ -329,13 +327,16 @@ table(acs12_employedonly$employment, useNA = "always")
 
 ## Condition examples {.smaller}
 
+::: incremental
 -   `filter(acs12, citizen == "no")`
 -   `filter(acs12, income <= 12000)`
 -   `filter(acs12, birth_qrtr != "jan thru mar")`
 -   `filter(acs12, hrs_work > 20)`
+:::
 
 ## Other useful condition operators {.smaller}
 
+::: incremental
 -   Two or more requirements
 
     -   `&` : and
@@ -357,6 +358,7 @@ table(acs12_employedonly$employment, useNA = "always")
     -   `filter(acs12, !is.na(income))`
 
 -   More: [Click here for R for Data Science](https://r4ds.had.co.nz/transform.html#filter-rows-with-filter)
+:::
 
 ## Common mistakes and error messages {.smaller}
 

@@ -725,21 +725,21 @@
     "href": "slides/08-describingpt2.html#conditions",
     "title": "Describing data: part 2",
     "section": "Conditions",
-    "text": "Conditions\n\nfilter(acs12, employment == \"employed\") ::: incremental\ncondition: employment == \"employed\"\ngeneral structure: variable comparison value\nThis specifies which observations you want to keep :::\n\n\n\nCommon comparison operators:\n\n== : equal to (note there are two equals signs!)\n!= : not equal to\n&gt;, &gt;= : greater than, greater than or equal to\n&lt;, &lt;= : less than, less than or equal to\n\n\n\n\n\nValues:\n\nCan be numbers, letters/words, or TRUE/FALSE–should match the response options of your variable\nPut letters/words in quotation marks"
+    "text": "Conditions\n\n\nfilter(acs12, employment == \"employed\")\ncondition: employment == \"employed\"\nThis specifies which observations you want to keep\n\n\n\n\nCommon comparison operators:\n\n== : equal to (note there are two equals signs!)\n!= : not equal to\n&gt;, &gt;= : greater than, greater than or equal to\n&lt;, &lt;= : less than, less than or equal to\n\n\n\n\n\nValues:\n\nCan be numbers, letters/words, or TRUE/FALSE–should match the response options of your variable\nPut letters/words in quotation marks"
   },
   {
     "objectID": "slides/08-describingpt2.html#condition-examples",
     "href": "slides/08-describingpt2.html#condition-examples",
     "title": "Describing data: part 2",
     "section": "Condition examples",
-    "text": "Condition examples\n\nfilter(acs12, citizen == \"no\")\nfilter(acs12, income &lt;= 12000)\nfilter(acs12, birth_qrtr != \"jan thru mar\")\nfilter(acs12, hrs_work &gt; 20)"
+    "text": "Condition examples\n\n\nfilter(acs12, citizen == \"no\")\nfilter(acs12, income &lt;= 12000)\nfilter(acs12, birth_qrtr != \"jan thru mar\")\nfilter(acs12, hrs_work &gt; 20)"
   },
   {
     "objectID": "slides/08-describingpt2.html#other-useful-condition-operators",
     "href": "slides/08-describingpt2.html#other-useful-condition-operators",
     "title": "Describing data: part 2",
     "section": "Other useful condition operators",
-    "text": "Other useful condition operators\n\nTwo or more requirements\n\n& : and\n| : or\nfilter(acs12, citizen == \"no\" & lang == \"english\")\nfilter(acs12, race == \"black\" | race == \"asian\")\n\nMissing values\n\nis.na()\n!is.na()\n\nis not missing – good for removing rows with missing values\n\nfilter(acs12, !is.na(income))\n\nMore: Click here for R for Data Science"
+    "text": "Other useful condition operators\n\n\nTwo or more requirements\n\n& : and\n| : or\nfilter(acs12, citizen == \"no\" & lang == \"english\")\nfilter(acs12, race == \"black\" | race == \"asian\")\n\nMissing values\n\nis.na()\n!is.na()\n\nis not missing – good for removing rows with missing values\n\nfilter(acs12, !is.na(income))\n\nMore: Click here for R for Data Science"
   },
   {
     "objectID": "slides/08-describingpt2.html#common-mistakes-and-error-messages",

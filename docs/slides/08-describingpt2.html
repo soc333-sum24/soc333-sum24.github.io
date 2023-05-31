@@ -770,12 +770,13 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </section>
 <section id="conditions" class="slide level2 smaller">
 <h2>Conditions</h2>
+<div>
 <ul>
-<li><p><code>filter(acs12, employment == "employed")</code> ::: incremental</p></li>
-<li><p>condition: <code>employment == "employed"</code></p></li>
-<li><p>general structure: <code>variable</code> <code>comparison</code> <code>value</code></p></li>
-<li><p>This specifies which observations you want to <em>keep</em> :::</p></li>
+<li class="fragment"><code>filter(acs12, employment == "employed")</code></li>
+<li class="fragment">condition: <code>employment == "employed"</code></li>
+<li class="fragment">This specifies which observations you want to <em>keep</em></li>
 </ul>
+</div>
 <div class="fragment">
 <ul>
 <li>Common comparison operators:
@@ -799,34 +800,38 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </section>
 <section id="condition-examples" class="slide level2 smaller">
 <h2>Condition examples</h2>
+<div>
 <ul>
-<li><code>filter(acs12, citizen == "no")</code></li>
-<li><code>filter(acs12, income &lt;= 12000)</code></li>
-<li><code>filter(acs12, birth_qrtr != "jan thru mar")</code></li>
-<li><code>filter(acs12, hrs_work &gt; 20)</code></li>
+<li class="fragment"><code>filter(acs12, citizen == "no")</code></li>
+<li class="fragment"><code>filter(acs12, income &lt;= 12000)</code></li>
+<li class="fragment"><code>filter(acs12, birth_qrtr != "jan thru mar")</code></li>
+<li class="fragment"><code>filter(acs12, hrs_work &gt; 20)</code></li>
 </ul>
+</div>
 </section>
 <section id="other-useful-condition-operators" class="slide level2 smaller">
 <h2>Other useful condition operators</h2>
+<div>
 <ul>
-<li><p>Two or more requirements</p>
+<li class="fragment"><p>Two or more requirements</p>
 <ul>
-<li><p><code>&amp;</code> : and</p></li>
-<li><p><code>|</code> : or</p></li>
-<li><p><code>filter(acs12, citizen == "no" &amp; lang == "english")</code></p></li>
-<li><p><code>filter(acs12, race == "black" | race == "asian")</code></p></li>
+<li class="fragment"><p><code>&amp;</code> : and</p></li>
+<li class="fragment"><p><code>|</code> : or</p></li>
+<li class="fragment"><p><code>filter(acs12, citizen == "no" &amp; lang == "english")</code></p></li>
+<li class="fragment"><p><code>filter(acs12, race == "black" | race == "asian")</code></p></li>
 </ul></li>
-<li><p>Missing values</p>
+<li class="fragment"><p>Missing values</p>
 <ul>
-<li><p><code>is.na()</code></p></li>
-<li><p><code>!is.na()</code></p>
+<li class="fragment"><p><code>is.na()</code></p></li>
+<li class="fragment"><p><code>!is.na()</code></p>
 <ul>
-<li>is <em>not</em> missing – good for removing rows with missing values</li>
+<li class="fragment">is <em>not</em> missing – good for removing rows with missing values</li>
 </ul></li>
-<li><p><code>filter(acs12, !is.na(income))</code></p></li>
+<li class="fragment"><p><code>filter(acs12, !is.na(income))</code></p></li>
 </ul></li>
-<li><p>More: <a href="https://r4ds.had.co.nz/transform.html#filter-rows-with-filter">Click here for R for Data Science</a></p></li>
+<li class="fragment"><p>More: <a href="https://r4ds.had.co.nz/transform.html#filter-rows-with-filter">Click here for R for Data Science</a></p></li>
 </ul>
+</div>
 </section>
 <section id="common-mistakes-and-error-messages" class="slide level2 smaller">
 <h2>Common mistakes and error messages</h2>
