@@ -21,7 +21,7 @@ sports <- readRDS("data/sports_teams.rds")
 
 -   Project descriptive statistics
 
-    -   Due **Tuesday June 6**. Instructions and example are posted on the website.
+    -   Due **Tuesday June 6**. Instructions are up; template and example to come this afternoon.
     
 . . . 
 

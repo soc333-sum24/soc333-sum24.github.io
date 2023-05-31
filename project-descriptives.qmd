@@ -34,6 +34,7 @@ This should be completed in the template Quarto document (these instructions are
 ### Part 2: Preparing your data set
 
 -   Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?
+-   Do you need to create any new variables? Explain why or why not. If so, what are they?
 -   Make any necessary changes to your data set.
 
 ### Part 3: Univariate distributions

@@ -74,8 +74,8 @@ website:
             contents:
               - href: project_example/c1_proposal.qmd
                 text: "Component 1: Proposal"
-              - href: project_example/c2_descriptives.qmd
-                text: "Component 2: Descriptive stats"
+              # - href: project_example/c2_descriptives.qmd
+              #   text: "Component 2: Descriptive stats"
       - section: "Slides"
         contents:
           - href: slides/08-describingpt2.qmd
