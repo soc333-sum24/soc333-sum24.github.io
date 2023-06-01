@@ -415,11 +415,13 @@ Aidan Combs
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
 <ul>
-<li><p>Project proposal</p>
+<li><p>Project component 2: descriptive statistics</p>
 <ul>
-<li>All materials are posted</li>
-<li>Due Tuesday June 6</li>
-<li>We will save some time to work on it in class Monday June 5</li>
+<li>All materials are posted (instructions, example, github repos)</li>
+<li>I will have feedback to you on your research questions soon</li>
+<li>After that, you’ll be able to do parts 1-3. Material for part 4 will be Monday.</li>
+<li>Due Tuesday June 6 11:59pm</li>
+<li>We will save some time to work on it in class Monday or Tuesday–start before then, come with questions!</li>
 </ul></li>
 </ul>
 </section>
@@ -427,7 +429,7 @@ Aidan Combs
 <h2>Today</h2>
 <ul>
 <li>Creating new variables</li>
-<li>Plots</li>
+<li>Stringing commands together with pipes (<code>|&gt;</code>)</li>
 </ul>
 </section>
 <section id="creating-variables" class="slide level2">
@@ -437,7 +439,7 @@ Aidan Combs
 <li class="fragment"><p>You may want to create new variables/change the response options of old variables</p></li>
 <li class="fragment"><p>Example:</p>
 <ul>
-<li class="fragment">RQ: How does employment status vary between teenagers, adults below retirement age (67), and adults above retirement age?</li>
+<li class="fragment">RQ: How does employment status vary between teenagers (14-18) and adults (18+)?</li>
 </ul></li>
 </ul>
 </div>
@@ -473,21 +475,619 @@ $ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru de
 </ul>
 </div>
 </section>
+<section id="creating-variables-2" class="slide level2 smaller">
+<h2>Creating variables</h2>
+<ul>
+<li>We do this with <code>mutate()</code> and <code>case_when()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb3-2"><a href="#cb3-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>notice that this command spans multiple lines–this is totally fine!</p>
+<ul>
+<li>Parentheses matter more than lines for determining where a command starts/ends.</li>
+<li>Breaking long commands up between lines can make them more readable and easier to debug!</li>
+<li>RStudio does the helpful indenting for you.</li>
+<li>After commas is a good place to put line breaks</li>
+</ul></li>
+</ul>
+</section>
+<section id="creating-variables-3" class="slide level2 smaller">
+<h2>Creating variables</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">glimpse</span>(acs12_agecat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 14
+$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…
+$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …
+$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…
+$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…
+$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …
+$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…
+$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…
+$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…
+$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …
+$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…
+$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…
+$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …
+$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…
+$ agecat       &lt;chr&gt; "adult", "adult", "teen", "teen", "adult", "adult", "teen…</code></pre>
+</div>
+</div>
+</section>
+<section id="checking-your-work" class="slide level2 smaller">
+<h2>Checking your work</h2>
+<div>
+<ul>
+<li class="fragment"><p>You should always find a way to check that your variables got created in the way you expected! Surprises later are not good…</p></li>
+<li class="fragment"><p><code>table()</code> is helpful for categorical variables in particular</p>
+<ul>
+<li class="fragment">sometimes for numeric as well, but it can get overwhelming</li>
+</ul></li>
+<li class="fragment"><p>Or–look at the new data set in the data viewer! Click on its name in the environment tab. You can sort columns by value (like in Excel/Google Sheets).</p></li>
+</ul>
+</div>
+</section>
+<section id="checking-your-work-1" class="slide level2 smaller">
+<h2>Checking your work</h2>
+<ul>
+<li>Did it work? Table!</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">table</span>(acs12_agecat<span class="sc">$</span>agecat, acs12_agecat<span class="sc">$</span>age, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       
+         0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+  adult  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 32 29 32 25 32 19
+  teen  21 14 23 26 21 25 24 24 26 22 27 39 29 29 27 18 20 24  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+  adult 24 21 16 24 25 26 25 12 26 28 21 22 23 25 25 23 28 14 19 27 24 16 33 25
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+  adult 39 30 35 28 27 37 34 22 22 17 19 36 28 36 22 29 38 21 23 22 28 17 19 15
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94
+  adult 14 11 16  9 18 14  9 17  5  8 10  5  8  5  8  1 12  6  2  1  2 10  5
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        &lt;NA&gt;
+  adult    0
+  teen     0
+  &lt;NA&gt;     0</code></pre>
+</div>
+</div>
+</section>
+<section id="checking-your-work-2" class="slide level2 smaller">
+<h2>Checking your work</h2>
+
+<img data-src="images/09/dataviewer.png" class="r-stretch"></section>
+<section id="functions-for-creating-variables" class="slide level2 smaller">
+<h2>Functions for creating variables</h2>
+<div>
+<ul>
+<li class="fragment"><p><code>mutate()</code>: creates a new variable and adds it to your data frame</p>
+<ul>
+<li class="fragment"><code>mutate(dataset, newvarname = value)</code></li>
+</ul></li>
+<li class="fragment"><p><code>case_when()</code>: lets you use conditions to tell mutate what the value of the new variable should be based on other variables that are already in your data frame.</p>
+<ul>
+<li class="fragment"><code>case_when(condition1 ~ value1, condition2 ~ value2, etc)</code></li>
+</ul></li>
+<li class="fragment"><p><code>case_when()</code> goes in the <code>value</code> slot of <code>mutate()</code></p></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">mutate</span>(dataset, <span class="at">newvarname =</span> <span class="fu">case_when</span>(condition1 <span class="sc">~</span> value1, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>                                       condition2 <span class="sc">~</span> value2, </span>
+<span id="cb8-3"><a href="#cb8-3"></a>                                       etc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="mutate" class="slide level2 smaller">
+<h2><code>mutate()</code></h2>
+<ul>
+<li><code>mutate()</code> <em>can</em> be used on its own—by itself, it creates a new variable where every observation has the same value</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>acs12_species <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, <span class="at">species =</span> <span class="st">"human"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">glimpse</span>(acs12_species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 14
+$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…
+$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …
+$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…
+$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…
+$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …
+$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…
+$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…
+$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…
+$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …
+$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…
+$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…
+$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …
+$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…
+$ species      &lt;chr&gt; "human", "human", "human", "human", "human", "human", "hu…</code></pre>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment">but this isn’t super useful… the interesting variables are the ones that vary!</li>
+</ul>
+</div>
+</section>
+<section id="mutate-1" class="slide level2 smaller">
+<h2><code>mutate()</code></h2>
+<ul>
+<li>It can also be used with a single condition to create a binary (TRUE/FALSE) variable</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>acs_jobs <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, <span class="at">hasjob =</span> employment <span class="sc">==</span> <span class="st">"employed"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">table</span>(acs_jobs<span class="sc">$</span>employment, acs_jobs<span class="sc">$</span>hasjob, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    
+                     FALSE TRUE &lt;NA&gt;
+  not in labor force   656    0    0
+  unemployed           106    0    0
+  employed               0  843    0
+  &lt;NA&gt;                   0    0  395</code></pre>
+</div>
+</div>
+</section>
+<section id="case_when" class="slide level2">
+<h2><code>case_when()</code></h2>
+<div>
+<ul>
+<li class="fragment"><code>case_when()</code> gives you more flexibility–can assign any values and create any number of categories</li>
+<li class="fragment">It is designed to work along with <code>mutate()</code> (it isn’t useful by itself)</li>
+<li class="fragment">Conditions work the same as in <code>filter()</code></li>
+</ul>
+</div>
+</section>
+<section id="adding-more-conditionscategories" class="slide level2 smaller">
+<h2>Adding more conditions/categories</h2>
+<ul>
+<li>Our example from earlier: how does employment vary by age category?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb13-2"><a href="#cb13-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb13-3"><a href="#cb13-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div>
+<ul>
+<li class="fragment">Should we really be analyzing 3 year olds alongside 17 year olds? And 83 year olds alongside 35 year olds?</li>
+</ul>
+</div>
+</section>
+<section id="adding-more-conditionscategories-1" class="slide level2 smaller">
+<h2>Adding more conditions/categories</h2>
+<ul>
+<li>Let’s add two more categories: “child” (&lt;14) and “retired” (&gt;67)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>acs12_4agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
+<span id="cb14-2"><a href="#cb14-2"></a>                        <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>                                           age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4"></a>                                           age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5"></a>                                           <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div>
+<ul>
+<li class="fragment"><p>Conditions are evaluated in order–the value an observation gets is the first one that fits</p></li>
+<li class="fragment"><p>Adding a “TRUE” at the end catches everybody who’s left over</p>
+<ul>
+<li class="fragment">We could have also used the condition <code>age &gt;= 67</code> in place of TRUE–same result</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="grouping-multiple-categories-into-one-with" class="slide level2 smaller">
+<h2>Grouping multiple categories into one with <code>|</code></h2>
+<ul>
+<li>Similar to <code>filter()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">mutate</span>(acs12, </span>
+<span id="cb15-2"><a href="#cb15-2"></a>       <span class="at">birthseason =</span> <span class="fu">case_when</span>(</span>
+<span id="cb15-3"><a href="#cb15-3"></a>         birth_qrtr <span class="sc">==</span> <span class="st">"oct thru dec"</span> <span class="sc">|</span> birth_qrtr <span class="sc">==</span> <span class="st">"jan thru mar"</span> <span class="sc">~</span> <span class="st">"fallwinter"</span>,</span>
+<span id="cb15-4"><a href="#cb15-4"></a>         birth_qrtr <span class="sc">==</span> <span class="st">"apr thru jun"</span> <span class="sc">|</span> birth_qrtr <span class="sc">==</span> <span class="st">"jul thru sep"</span> <span class="sc">~</span> <span class="st">"springsummer"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="combining-variables-with" class="slide level2 smaller">
+<h2>Combining variables with <code>&amp;</code></h2>
+<div>
+<ul>
+<li class="fragment">Sometimes we have two variables that we want to combine into one</li>
+<li class="fragment">Useful when studying intersectional effects!</li>
+<li class="fragment">Use <code>&amp;</code> if something has to meet multiple conditions at once–same as <code>filter()</code>.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>acs_racegender <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
+<span id="cb16-2"><a href="#cb16-2"></a>       <span class="at">racegender =</span> <span class="fu">case_when</span>(race <span class="sc">==</span> <span class="st">"black"</span> <span class="sc">&amp;</span> gender <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"black man"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>                              race <span class="sc">==</span> <span class="st">"white"</span> <span class="sc">&amp;</span> gender <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"white man"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4"></a>                              race <span class="sc">==</span> <span class="st">"black"</span> <span class="sc">&amp;</span> gender <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"black woman"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5"></a>                              race <span class="sc">==</span> <span class="st">"white"</span> <span class="sc">&amp;</span> gender <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"white woman"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6"></a>                              gender <span class="sc">==</span> <span class="st">"female"</span> <span class="sc">~</span> <span class="st">"other race woman"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7"></a>                              gender <span class="sc">==</span> <span class="st">"male"</span> <span class="sc">~</span> <span class="st">"other race man"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="combining-variables-with-1" class="slide level2 smaller scrollable">
+<h2>Combining variables with <code>&amp;</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">table</span>(acs_racegender<span class="sc">$</span>race,</span>
+<span id="cb17-2"><a href="#cb17-2"></a>      acs_racegender<span class="sc">$</span>racegender,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>      acs_racegender<span class="sc">$</span>gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>, ,  = male
+
+       
+        black man black woman other race man other race woman white man
+  white         0           0              0                0       800
+  black       108           0              0                0         0
+  asian         0           0             45                0         0
+  other         0           0             78                0         0
+       
+        white woman
+  white           0
+  black           0
+  asian           0
+  other           0
+
+, ,  = female
+
+       
+        black man black woman other race man other race woman white man
+  white         0           0              0                0         0
+  black         0          98              0                0         0
+  asian         0           0              0               42         0
+  other         0           0              0               74         0
+       
+        white woman
+  white         755
+  black           0
+  asian           0
+  other           0</code></pre>
+</div>
+</div>
+</section>
+<section id="why-do-this-brief-aside-on-intersectionality" class="slide level2 smaller">
+<h2>Why do this? Brief aside on intersectionality</h2>
+<div>
+<ul>
+<li class="fragment"><p>Intersectionality: people are in many categories that affect their experiences in ways that are complicated! More than the sum of their parts.</p>
+<ul>
+<li class="fragment">Categories like: race, gender, class, ethnicity, education, ability status…</li>
+</ul></li>
+<li class="fragment"><p>Eg: the experience of being an Asian woman is not just the experience of being Asian (all genders) plus the experience of being a woman (all races)</p>
+<ul>
+<li class="fragment">For instance: there are discriminatory stereotypes of Asian women that don’t apply to women generally or to Asian people generally–they’re unique to Asian women and have unique consequences</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="intersectionality-in-analysis" class="slide level2">
+<h2>Intersectionality in analysis</h2>
+<div>
+<ul>
+<li class="fragment"><p>We’re still developing good statistical methods</p></li>
+<li class="fragment"><p>But analyzing variables representing combinations of categories instead of single categories in isolation is a good start</p>
+<ul>
+<li class="fragment">eg: analyzing the relationship between health and race-gender combination, rather than health and race and then separately health and gender</li>
+</ul></li>
+<li class="fragment"><p>Not feasible in small samples though :(</p></li>
+</ul>
+</div>
+</section>
+<section>
+<section id="common-errors-with-variable-creation" class="title-slide slide level1 center">
+<h1>Common errors with variable creation</h1>
+
+</section>
+<section id="errors-and-error-messages" class="slide level2 smaller">
+<h2>Errors and error messages</h2>
+<div>
+<ul>
+<li class="fragment">R is very picky about syntax (spelling, capitalization, punctuation, symbols and their placement…)</li>
+<li class="fragment">You will make mistakes. But you will get better at fixing them!</li>
+<li class="fragment">Look carefully at format examples (copy/paste is your friend)</li>
+<li class="fragment">Error messages can be cryptic and confusing–you will get better at decoding them</li>
+<li class="fragment">Start looking for your mistake one step behind the place the error message complains about</li>
+</ul>
+</div>
+</section>
+<section id="common-errors" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:3:43: unexpected symbol
+2:                        agecat = case_when(age &lt; 18 ~ "teen"
+3:                                           age
+                                             ^</code></pre>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment">Watch for missing commas! (especially after copy/pasting)</li>
+</ul>
+</div>
+</section>
+<section id="common-errors-1" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb21-2"><a href="#cb21-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,,</span>
+<span id="cb21-3"><a href="#cb21-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `mutate()`:
+ℹ In argument: `agecat = case_when(age &lt; 18 ~ "teen", , age &gt;= 18 ~
+  "adult")`.
+Caused by error in `list2()`:
+! Argument 2 can't be empty.</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>And extra commas too</li>
+</ul>
+</div>
+</section>
+<section id="common-errors-2" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb23-2"><a href="#cb23-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>),</span>
+<span id="cb23-3"><a href="#cb23-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `mutate()`:
+ℹ In argument: `age &gt;= 18 ~ "adult"`.
+Caused by error:
+! `age &gt;= 18 ~ "adult"` must be a vector, not a &lt;formula&gt; object.</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Parentheses tell R where each command starts and ends–misplacing them confuses it!</li>
+</ul>
+</div>
+</section>
+<section id="common-errors-3" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb25-2"><a href="#cb25-2"></a>                       agecat <span class="ot">&lt;-</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb25-3"><a href="#cb25-3"></a>                                           age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span>
+<span id="cb25-4"><a href="#cb25-4"></a></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="fu">table</span>(acs12_agecat<span class="sc">$</span>agecat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt; table of extent 0 &gt;</code></pre>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">glimpse</span>(acs12_agecat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 14
+$ income                                                        &lt;int&gt; 60000, 0…
+$ employment                                                    &lt;fct&gt; not in l…
+$ hrs_work                                                      &lt;int&gt; 40, NA, …
+$ race                                                          &lt;fct&gt; white, w…
+$ age                                                           &lt;int&gt; 68, 88, …
+$ gender                                                        &lt;fct&gt; female, …
+$ citizen                                                       &lt;fct&gt; yes, yes…
+$ time_to_work                                                  &lt;int&gt; NA, NA, …
+$ lang                                                          &lt;fct&gt; english,…
+$ married                                                       &lt;fct&gt; no, no, …
+$ edu                                                           &lt;fct&gt; college,…
+$ disability                                                    &lt;fct&gt; no, yes,…
+$ birth_qrtr                                                    &lt;fct&gt; jul thru…
+$ `agecat &lt;- case_when(age &lt; 18 ~ "teen", age &gt;= 18 ~ "adult")` &lt;chr&gt; "adult",…</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="common-errors-4" class="slide level2 smaller">
+<h2>Common errors</h2>
+<p>Inside mutate, use <code>=</code>, not <code>&lt;-</code> (yes, it is pretty arbitrary)</p>
+</section>
+<section id="common-errors-5" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb29-2"><a href="#cb29-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="ot">=</span> <span class="st">"teen"</span>,</span>
+<span id="cb29-3"><a href="#cb29-3"></a>                                          age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="ot">=</span> <span class="st">"adult"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:2:52: unexpected '='
+1: acs12_agecat &lt;- mutate(acs12, 
+2:                        agecat = case_when(age &lt; 18 =
+                                                      ^</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>And inside <code>case_when()</code>, use <code>~</code>, not <code>=</code> (yes, that’s pretty arbitrary too)</li>
+</ul>
+</div>
+</section>
+<section id="common-errors-6" class="slide level2 smaller">
+<h2>Common errors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>acs12_agecat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, </span>
+<span id="cb31-2"><a href="#cb31-2"></a>                       <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb31-3"><a href="#cb31-3"></a>                                          age <span class="sc">&gt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"adult"</span>))</span>
+<span id="cb31-4"><a href="#cb31-4"></a></span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="fu">table</span>(acs12_agecat<span class="sc">$</span>agecat, acs12<span class="sc">$</span>age, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       
+         0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+  adult  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 29 32 25 32 19
+  teen  21 14 23 26 21 25 24 24 26 22 27 39 29 29 27 18 20 24  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 32  0  0  0  0  0
+       
+        24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+  adult 24 21 16 24 25 26 25 12 26 28 21 22 23 25 25 23 28 14 19 27 24 16 33 25
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+  adult 39 30 35 28 27 37 34 22 22 17 19 36 28 36 22 29 38 21 23 22 28 17 19 15
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94
+  adult 14 11 16  9 18 14  9 17  5  8 10  5  8  5  8  1 12  6  2  1  2 10  5
+  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+       
+        &lt;NA&gt;
+  adult    0
+  teen     0
+  &lt;NA&gt;     0</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Make sure your conditions catch everyone! This is a benefit of using a catchall <code>TRUE</code> condition at the end.</li>
+</ul>
+</div>
+</section>
 <section id="exercise-creating-new-variables" class="slide level2">
 <h2>Exercise: Creating new variables</h2>
 <ul>
-<li><p>Clone and open the project repo now (<strong>ex-5-31-yourusername</strong>)</p></li>
-<li><p>Then open the .qmd file and try out some filtering</p>
+<li><p>Clone and open the project repo now (<strong>ex-6-1-yourusername</strong>)</p></li>
+<li><p>Then open the .qmd file and try out some variable creation</p>
 <ul>
 <li><a href="https://soc333-sum23.github.io/computing-clonerepo.html">Instructions: Computing -&gt; Cloning and committing</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="stringing-commands-together-with-pipes" class="slide level2 smaller">
+<h2>Stringing commands together with pipes (<code>|&gt;</code>)</h2>
+<div>
+<ul>
+<li class="fragment">Often we need to change data frames in more than one way</li>
+<li class="fragment">Back to our starting example: how does employment status vary by age category?</li>
+<li class="fragment">We need to create an age category variable (as we talked about above)</li>
+<li class="fragment">But we probably want to filter too–why analyze kids?</li>
+</ul>
+</div>
+</section>
+<section id="stringing-commands-together-approach-1" class="slide level2 smaller">
+<h2>Stringing commands together: approach 1</h2>
+<p>We can do this with the tools we have.</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>acs12_newagevar <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb33-2"><a href="#cb33-2"></a>                                                    age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb33-3"><a href="#cb33-3"></a>                                                    age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb33-4"><a href="#cb33-4"></a>                                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span>
+<span id="cb33-5"><a href="#cb33-5"></a>acs12_nokids <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12_newagevar, agecat <span class="sc">!=</span> <span class="st">"child"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6"></a></span>
+<span id="cb33-7"><a href="#cb33-7"></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  adult retired    teen    &lt;NA&gt; 
+   1264     297      89       0 </code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>But it’s kind of ugly… we don’t need to save that middle step</li>
+</ul>
+</div>
+</section>
+<section id="stringing-commands-together-approach-2-with" class="slide level2 smaller">
+<h2>Stringing commands together: approach 2, with <code>|&gt;</code></h2>
+<div>
+<ul>
+<li class="fragment">The pipe operator, <code>|&gt;</code>, lets us pass the result of one function directly into another one</li>
+<li class="fragment">The <code>|</code> symbol is the key below “delete” on your keyboard (not I, not l, not 1)</li>
+<li class="fragment">It replaces the first mutate/filter argument (the dataset)</li>
+<li class="fragment">“Take the thing that came before this and give it to the function that comes after this”</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>acs12_nokids <span class="ot">&lt;-</span> acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb35-3"><a href="#cb35-3"></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb35-4"><a href="#cb35-4"></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb35-5"><a href="#cb35-5"></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb35-6"><a href="#cb35-6"></a>  <span class="fu">filter</span>(agecat <span class="sc">!=</span> <span class="st">"child"</span>)</span>
+<span id="cb35-7"><a href="#cb35-7"></a></span>
+<span id="cb35-8"><a href="#cb35-8"></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  adult retired    teen    &lt;NA&gt; 
+   1264     297      89       0 </code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="another-example" class="slide level2 smaller">
+<h2>Another <code>|&gt;</code> example</h2>
+<ul>
+<li>This:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb37-2"><a href="#cb37-2"></a>                                 age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb37-3"><a href="#cb37-3"></a>                                 age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb37-4"><a href="#cb37-4"></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Is the same as this:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4"></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb38-5"><a href="#cb38-5"></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="more-on" class="slide level2 smaller">
+<h2>More on <code>|&gt;</code></h2>
+<div>
+<ul>
+<li class="fragment"><p>We’re just scratching the surface in this class</p></li>
+<li class="fragment"><p>When you need to clean your data or when your analyses are more complex, <code>|&gt;</code> makes your life a lot easier!</p></li>
+<li class="fragment"><p>Sometimes in internet resources more than ~2 years old, you’ll see <code>%&gt;%</code> instead–this older version does exactly the same thing</p></li>
+<li class="fragment"><p>Annoying to type out? There’s a keyboard shortcut</p>
+<ul>
+<li class="fragment">on mac, command-shift-M</li>
+<li class="fragment">on pc, ctrl-shift-M</li>
+</ul></li>
+</ul>
+</div>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

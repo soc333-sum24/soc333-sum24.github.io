@@ -886,21 +886,21 @@
     "href": "slides/09-describingpt3.html#logistics",
     "title": "Describing data: part 3",
     "section": "Logistics",
-    "text": "Logistics\n\nProject proposal\n\nAll materials are posted\nDue Tuesday June 6\nWe will save some time to work on it in class Monday June 5"
+    "text": "Logistics\n\nProject component 2: descriptive statistics\n\nAll materials are posted (instructions, example, github repos)\nI will have feedback to you on your research questions soon\nAfter that, you’ll be able to do parts 1-3. Material for part 4 will be Monday.\nDue Tuesday June 6 11:59pm\nWe will save some time to work on it in class Monday or Tuesday–start before then, come with questions!"
   },
   {
     "objectID": "slides/09-describingpt3.html#today",
     "href": "slides/09-describingpt3.html#today",
     "title": "Describing data: part 3",
     "section": "Today",
-    "text": "Today\n\nCreating new variables\nPlots"
+    "text": "Today\n\nCreating new variables\nStringing commands together with pipes (|&gt;)"
   },
   {
     "objectID": "slides/09-describingpt3.html#creating-variables",
     "href": "slides/09-describingpt3.html#creating-variables",
     "title": "Describing data: part 3",
     "section": "Creating variables",
-    "text": "Creating variables\n\n\nYou may want to create new variables/change the response options of old variables\nExample:\n\nRQ: How does employment status vary between teenagers, adults below retirement age (67), and adults above retirement age?"
+    "text": "Creating variables\n\n\nYou may want to create new variables/change the response options of old variables\nExample:\n\nRQ: How does employment status vary between teenagers (14-18) and adults (18+)?"
   },
   {
     "objectID": "slides/09-describingpt3.html#creating-variables-1",
@@ -910,11 +910,214 @@
     "text": "Creating variables\n\nHow does employment status vary by age category?\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…\n\n\n\n\nWe need to take the “age” variable and use it to create age categories (making a categorical variable from a numeric variable!)"
   },
   {
+    "objectID": "slides/09-describingpt3.html#creating-variables-2",
+    "href": "slides/09-describingpt3.html#creating-variables-2",
+    "title": "Describing data: part 3",
+    "section": "Creating variables",
+    "text": "Creating variables\n\nWe do this with mutate() and case_when()\n\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\",\n                                          age &gt;= 18 ~ \"adult\"))\n\n\nnotice that this command spans multiple lines–this is totally fine!\n\nParentheses matter more than lines for determining where a command starts/ends.\nBreaking long commands up between lines can make them more readable and easier to debug!\nRStudio does the helpful indenting for you.\nAfter commas is a good place to put line breaks"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#creating-variables-3",
+    "href": "slides/09-describingpt3.html#creating-variables-3",
+    "title": "Describing data: part 3",
+    "section": "Creating variables",
+    "text": "Creating variables\n\nglimpse(acs12_agecat)\n\nRows: 2,000\nColumns: 14\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…\n$ agecat       &lt;chr&gt; \"adult\", \"adult\", \"teen\", \"teen\", \"adult\", \"adult\", \"teen…"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#checking-your-work",
+    "href": "slides/09-describingpt3.html#checking-your-work",
+    "title": "Describing data: part 3",
+    "section": "Checking your work",
+    "text": "Checking your work\n\n\nYou should always find a way to check that your variables got created in the way you expected! Surprises later are not good…\ntable() is helpful for categorical variables in particular\n\nsometimes for numeric as well, but it can get overwhelming\n\nOr–look at the new data set in the data viewer! Click on its name in the environment tab. You can sort columns by value (like in Excel/Google Sheets)."
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#checking-your-work-1",
+    "href": "slides/09-describingpt3.html#checking-your-work-1",
+    "title": "Describing data: part 3",
+    "section": "Checking your work",
+    "text": "Checking your work\n\nDid it work? Table!\n\n\ntable(acs12_agecat$agecat, acs12_agecat$age, useNA = \"always\")\n\n       \n         0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23\n  adult  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 32 29 32 25 32 19\n  teen  21 14 23 26 21 25 24 24 26 22 27 39 29 29 27 18 20 24  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47\n  adult 24 21 16 24 25 26 25 12 26 28 21 22 23 25 25 23 28 14 19 27 24 16 33 25\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71\n  adult 39 30 35 28 27 37 34 22 22 17 19 36 28 36 22 29 38 21 23 22 28 17 19 15\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94\n  adult 14 11 16  9 18 14  9 17  5  8 10  5  8  5  8  1 12  6  2  1  2 10  5\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        &lt;NA&gt;\n  adult    0\n  teen     0\n  &lt;NA&gt;     0"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#checking-your-work-2",
+    "href": "slides/09-describingpt3.html#checking-your-work-2",
+    "title": "Describing data: part 3",
+    "section": "Checking your work",
+    "text": "Checking your work"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#functions-for-creating-variables",
+    "href": "slides/09-describingpt3.html#functions-for-creating-variables",
+    "title": "Describing data: part 3",
+    "section": "Functions for creating variables",
+    "text": "Functions for creating variables\n\n\nmutate(): creates a new variable and adds it to your data frame\n\nmutate(dataset, newvarname = value)\n\ncase_when(): lets you use conditions to tell mutate what the value of the new variable should be based on other variables that are already in your data frame.\n\ncase_when(condition1 ~ value1, condition2 ~ value2, etc)\n\ncase_when() goes in the value slot of mutate()\n\n\n\n\nmutate(dataset, newvarname = case_when(condition1 ~ value1, \n                                       condition2 ~ value2, \n                                       etc))"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#mutate",
+    "href": "slides/09-describingpt3.html#mutate",
+    "title": "Describing data: part 3",
+    "section": "mutate()",
+    "text": "mutate()\n\nmutate() can be used on its own—by itself, it creates a new variable where every observation has the same value\n\n\nacs12_species &lt;- mutate(acs12, species = \"human\")\nglimpse(acs12_species)\n\nRows: 2,000\nColumns: 14\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…\n$ species      &lt;chr&gt; \"human\", \"human\", \"human\", \"human\", \"human\", \"human\", \"hu…\n\n\n\n\nbut this isn’t super useful… the interesting variables are the ones that vary!"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#mutate-1",
+    "href": "slides/09-describingpt3.html#mutate-1",
+    "title": "Describing data: part 3",
+    "section": "mutate()",
+    "text": "mutate()\n\nIt can also be used with a single condition to create a binary (TRUE/FALSE) variable\n\n\nacs_jobs &lt;- mutate(acs12, hasjob = employment == \"employed\")\n\ntable(acs_jobs$employment, acs_jobs$hasjob, useNA = \"always\")\n\n                    \n                     FALSE TRUE &lt;NA&gt;\n  not in labor force   656    0    0\n  unemployed           106    0    0\n  employed               0  843    0\n  &lt;NA&gt;                   0    0  395"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#case_when",
+    "href": "slides/09-describingpt3.html#case_when",
+    "title": "Describing data: part 3",
+    "section": "case_when()",
+    "text": "case_when()\n\n\ncase_when() gives you more flexibility–can assign any values and create any number of categories\nIt is designed to work along with mutate() (it isn’t useful by itself)\nConditions work the same as in filter()"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#adding-more-conditionscategories",
+    "href": "slides/09-describingpt3.html#adding-more-conditionscategories",
+    "title": "Describing data: part 3",
+    "section": "Adding more conditions/categories",
+    "text": "Adding more conditions/categories\n\nOur example from earlier: how does employment vary by age category?\n\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\",\n                                          age &gt;= 18 ~ \"adult\"))\n\n\n\nShould we really be analyzing 3 year olds alongside 17 year olds? And 83 year olds alongside 35 year olds?"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#adding-more-conditionscategories-1",
+    "href": "slides/09-describingpt3.html#adding-more-conditionscategories-1",
+    "title": "Describing data: part 3",
+    "section": "Adding more conditions/categories",
+    "text": "Adding more conditions/categories\n\nLet’s add two more categories: “child” (&lt;14) and “retired” (&gt;67)\n\n\nacs12_4agecat &lt;- mutate(acs12,\n                        agecat = case_when(age &lt; 14 ~ \"child\",\n                                           age &lt; 18 ~ \"teen\",\n                                           age &lt; 67 ~ \"adult\",\n                                           TRUE ~ \"retired\"))\n\n\n\nConditions are evaluated in order–the value an observation gets is the first one that fits\nAdding a “TRUE” at the end catches everybody who’s left over\n\nWe could have also used the condition age &gt;= 67 in place of TRUE–same result"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#grouping-multiple-categories-into-one-with",
+    "href": "slides/09-describingpt3.html#grouping-multiple-categories-into-one-with",
+    "title": "Describing data: part 3",
+    "section": "Grouping multiple categories into one with |",
+    "text": "Grouping multiple categories into one with |\n\nSimilar to filter()\n\n\nmutate(acs12, \n       birthseason = case_when(\n         birth_qrtr == \"oct thru dec\" | birth_qrtr == \"jan thru mar\" ~ \"fallwinter\",\n         birth_qrtr == \"apr thru jun\" | birth_qrtr == \"jul thru sep\" ~ \"springsummer\")\n)"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#combining-variables-with",
+    "href": "slides/09-describingpt3.html#combining-variables-with",
+    "title": "Describing data: part 3",
+    "section": "Combining variables with &",
+    "text": "Combining variables with &\n\n\nSometimes we have two variables that we want to combine into one\nUseful when studying intersectional effects!\nUse & if something has to meet multiple conditions at once–same as filter().\n\n\n\n\nacs_racegender &lt;- mutate(acs12,\n       racegender = case_when(race == \"black\" & gender == \"male\" ~ \"black man\",\n                              race == \"white\" & gender == \"male\" ~ \"white man\",\n                              race == \"black\" & gender == \"female\" ~ \"black woman\",\n                              race == \"white\" & gender == \"female\" ~ \"white woman\",\n                              gender == \"female\" ~ \"other race woman\",\n                              gender == \"male\" ~ \"other race man\"))"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#combining-variables-with-1",
+    "href": "slides/09-describingpt3.html#combining-variables-with-1",
+    "title": "Describing data: part 3",
+    "section": "Combining variables with &",
+    "text": "Combining variables with &\n\ntable(acs_racegender$race,\n      acs_racegender$racegender,\n      acs_racegender$gender)\n\n, ,  = male\n\n       \n        black man black woman other race man other race woman white man\n  white         0           0              0                0       800\n  black       108           0              0                0         0\n  asian         0           0             45                0         0\n  other         0           0             78                0         0\n       \n        white woman\n  white           0\n  black           0\n  asian           0\n  other           0\n\n, ,  = female\n\n       \n        black man black woman other race man other race woman white man\n  white         0           0              0                0         0\n  black         0          98              0                0         0\n  asian         0           0              0               42         0\n  other         0           0              0               74         0\n       \n        white woman\n  white         755\n  black           0\n  asian           0\n  other           0"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#why-do-this-brief-aside-on-intersectionality",
+    "href": "slides/09-describingpt3.html#why-do-this-brief-aside-on-intersectionality",
+    "title": "Describing data: part 3",
+    "section": "Why do this? Brief aside on intersectionality",
+    "text": "Why do this? Brief aside on intersectionality\n\n\nIntersectionality: people are in many categories that affect their experiences in ways that are complicated! More than the sum of their parts.\n\nCategories like: race, gender, class, ethnicity, education, ability status…\n\nEg: the experience of being an Asian woman is not just the experience of being Asian (all genders) plus the experience of being a woman (all races)\n\nFor instance: there are discriminatory stereotypes of Asian women that don’t apply to women generally or to Asian people generally–they’re unique to Asian women and have unique consequences"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#intersectionality-in-analysis",
+    "href": "slides/09-describingpt3.html#intersectionality-in-analysis",
+    "title": "Describing data: part 3",
+    "section": "Intersectionality in analysis",
+    "text": "Intersectionality in analysis\n\n\nWe’re still developing good statistical methods\nBut analyzing variables representing combinations of categories instead of single categories in isolation is a good start\n\neg: analyzing the relationship between health and race-gender combination, rather than health and race and then separately health and gender\n\nNot feasible in small samples though :("
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#errors-and-error-messages",
+    "href": "slides/09-describingpt3.html#errors-and-error-messages",
+    "title": "Describing data: part 3",
+    "section": "Errors and error messages",
+    "text": "Errors and error messages\n\n\nR is very picky about syntax (spelling, capitalization, punctuation, symbols and their placement…)\nYou will make mistakes. But you will get better at fixing them!\nLook carefully at format examples (copy/paste is your friend)\nError messages can be cryptic and confusing–you will get better at decoding them\nStart looking for your mistake one step behind the place the error message complains about"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors",
+    "href": "slides/09-describingpt3.html#common-errors",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\"\n                                          age &gt;= 18 ~ \"adult\"))\n\nError: &lt;text&gt;:3:43: unexpected symbol\n2:                        agecat = case_when(age &lt; 18 ~ \"teen\"\n3:                                           age\n                                             ^\n\n\n\n\nWatch for missing commas! (especially after copy/pasting)"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-1",
+    "href": "slides/09-describingpt3.html#common-errors-1",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\",,\n                                          age &gt;= 18 ~ \"adult\"))\n\nError in `mutate()`:\nℹ In argument: `agecat = case_when(age &lt; 18 ~ \"teen\", , age &gt;= 18 ~\n  \"adult\")`.\nCaused by error in `list2()`:\n! Argument 2 can't be empty.\n\n\n\n\nAnd extra commas too"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-2",
+    "href": "slides/09-describingpt3.html#common-errors-2",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\"),\n                                          age &gt;= 18 ~ \"adult\")\n\nError in `mutate()`:\nℹ In argument: `age &gt;= 18 ~ \"adult\"`.\nCaused by error:\n! `age &gt;= 18 ~ \"adult\"` must be a vector, not a &lt;formula&gt; object.\n\n\n\n\nParentheses tell R where each command starts and ends–misplacing them confuses it!"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-3",
+    "href": "slides/09-describingpt3.html#common-errors-3",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat &lt;- case_when(age &lt; 18 ~ \"teen\",\n                                           age &gt;= 18 ~ \"adult\"))\n\ntable(acs12_agecat$agecat)\n\n&lt; table of extent 0 &gt;\n\n\n\n\nglimpse(acs12_agecat)\n\nRows: 2,000\nColumns: 14\n$ income                                                        &lt;int&gt; 60000, 0…\n$ employment                                                    &lt;fct&gt; not in l…\n$ hrs_work                                                      &lt;int&gt; 40, NA, …\n$ race                                                          &lt;fct&gt; white, w…\n$ age                                                           &lt;int&gt; 68, 88, …\n$ gender                                                        &lt;fct&gt; female, …\n$ citizen                                                       &lt;fct&gt; yes, yes…\n$ time_to_work                                                  &lt;int&gt; NA, NA, …\n$ lang                                                          &lt;fct&gt; english,…\n$ married                                                       &lt;fct&gt; no, no, …\n$ edu                                                           &lt;fct&gt; college,…\n$ disability                                                    &lt;fct&gt; no, yes,…\n$ birth_qrtr                                                    &lt;fct&gt; jul thru…\n$ `agecat &lt;- case_when(age &lt; 18 ~ \"teen\", age &gt;= 18 ~ \"adult\")` &lt;chr&gt; \"adult\",…"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-4",
+    "href": "slides/09-describingpt3.html#common-errors-4",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\nInside mutate, use =, not &lt;- (yes, it is pretty arbitrary)"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-5",
+    "href": "slides/09-describingpt3.html#common-errors-5",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 = \"teen\",\n                                          age &gt;= 18 = \"adult\"))\n\nError: &lt;text&gt;:2:52: unexpected '='\n1: acs12_agecat &lt;- mutate(acs12, \n2:                        agecat = case_when(age &lt; 18 =\n                                                      ^\n\n\n\n\nAnd inside case_when(), use ~, not = (yes, that’s pretty arbitrary too)"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#common-errors-6",
+    "href": "slides/09-describingpt3.html#common-errors-6",
+    "title": "Describing data: part 3",
+    "section": "Common errors",
+    "text": "Common errors\n\nacs12_agecat &lt;- mutate(acs12, \n                       agecat = case_when(age &lt; 18 ~ \"teen\",\n                                          age &gt; 18 ~ \"adult\"))\n\ntable(acs12_agecat$agecat, acs12$age, useNA = \"always\")\n\n       \n         0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23\n  adult  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 29 32 25 32 19\n  teen  21 14 23 26 21 25 24 24 26 22 27 39 29 29 27 18 20 24  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 32  0  0  0  0  0\n       \n        24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47\n  adult 24 21 16 24 25 26 25 12 26 28 21 22 23 25 25 23 28 14 19 27 24 16 33 25\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71\n  adult 39 30 35 28 27 37 34 22 22 17 19 36 28 36 22 29 38 21 23 22 28 17 19 15\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94\n  adult 14 11 16  9 18 14  9 17  5  8 10  5  8  5  8  1 12  6  2  1  2 10  5\n  teen   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  &lt;NA&gt;   0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n       \n        &lt;NA&gt;\n  adult    0\n  teen     0\n  &lt;NA&gt;     0\n\n\n\n\nMake sure your conditions catch everyone! This is a benefit of using a catchall TRUE condition at the end."
+  },
+  {
     "objectID": "slides/09-describingpt3.html#exercise-creating-new-variables",
     "href": "slides/09-describingpt3.html#exercise-creating-new-variables",
     "title": "Describing data: part 3",
     "section": "Exercise: Creating new variables",
-    "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-5-31-yourusername)\nThen open the .qmd file and try out some filtering\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-6-1-yourusername)\nThen open the .qmd file and try out some variable creation\n\nInstructions: Computing -&gt; Cloning and committing"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#stringing-commands-together-with-pipes",
+    "href": "slides/09-describingpt3.html#stringing-commands-together-with-pipes",
+    "title": "Describing data: part 3",
+    "section": "Stringing commands together with pipes (|>)",
+    "text": "Stringing commands together with pipes (|&gt;)\n\n\nOften we need to change data frames in more than one way\nBack to our starting example: how does employment status vary by age category?\nWe need to create an age category variable (as we talked about above)\nBut we probably want to filter too–why analyze kids?"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#stringing-commands-together-approach-1",
+    "href": "slides/09-describingpt3.html#stringing-commands-together-approach-1",
+    "title": "Describing data: part 3",
+    "section": "Stringing commands together: approach 1",
+    "text": "Stringing commands together: approach 1\nWe can do this with the tools we have.\n\n\nacs12_newagevar &lt;- mutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                                    age &lt; 18 ~ \"teen\",\n                                                    age &lt; 67 ~ \"adult\",\n                                                    TRUE ~ \"retired\"))\nacs12_nokids &lt;- filter(acs12_newagevar, agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0 \n\n\n\n\n\nBut it’s kind of ugly… we don’t need to save that middle step"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#stringing-commands-together-approach-2-with",
+    "href": "slides/09-describingpt3.html#stringing-commands-together-approach-2-with",
+    "title": "Describing data: part 3",
+    "section": "Stringing commands together: approach 2, with |>",
+    "text": "Stringing commands together: approach 2, with |&gt;\n\n\nThe pipe operator, |&gt;, lets us pass the result of one function directly into another one\nThe | symbol is the key below “delete” on your keyboard (not I, not l, not 1)\nIt replaces the first mutate/filter argument (the dataset)\n“Take the thing that came before this and give it to the function that comes after this”\n\n\n\n\nacs12_nokids &lt;- acs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\")) |&gt; \n  filter(agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#another-example",
+    "href": "slides/09-describingpt3.html#another-example",
+    "title": "Describing data: part 3",
+    "section": "Another |> example",
+    "text": "Another |&gt; example\n\nThis:\n\n\nmutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                 age &lt; 18 ~ \"teen\",\n                                 age &lt; 67 ~ \"adult\",\n                                 TRUE ~ \"retired\"))\n\n\nIs the same as this:\n\n\nacs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\"))"
+  },
+  {
+    "objectID": "slides/09-describingpt3.html#more-on",
+    "href": "slides/09-describingpt3.html#more-on",
+    "title": "Describing data: part 3",
+    "section": "More on |>",
+    "text": "More on |&gt;\n\n\nWe’re just scratching the surface in this class\nWhen you need to clean your data or when your analyses are more complex, |&gt; makes your life a lot easier!\nSometimes in internet resources more than ~2 years old, you’ll see %&gt;% instead–this older version does exactly the same thing\nAnnoying to type out? There’s a keyboard shortcut\n\non mac, command-shift-M\non pc, ctrl-shift-M\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/05-studiessamples.html#today",
