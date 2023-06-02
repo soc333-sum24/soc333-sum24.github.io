@@ -79,7 +79,7 @@ website:
       - section: "Exercise resources"
         contents:
           - href: ex-6-01-scaffolding.qmd
-            text: "Creating variables exercise: hints"
+            text: "Ex. 6-01 hints"
       - section: "Slides"
         contents:
           - href: slides/09-describingpt3.qmd
