@@ -436,6 +436,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                                <span class="at">XXXX =</span> XXXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Do the same thing as above, but this time use <code>|&gt;</code> to provide the <code>acs12</code> dataset to the function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(XXXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Using pipes (<code>|&gt;</code>), create a variable that indicates whether someone is a married woman, unmarried woman, married man, or unmarried man, then remove all minors (less than 18 years old) from the dataset. Check your work using tables, summary statistics, and/or by looking at the data frame. <em>This one is challenging!</em></p>
 </section>
 <section id="submit" class="level1">

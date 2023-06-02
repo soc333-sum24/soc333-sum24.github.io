@@ -76,7 +76,8 @@ acs12_citizenlanguage <- mutate(acs12,
 Do the same thing as above, but this time use `|>` to provide the `acs12` dataset to the function
 
 ```{r, eval = FALSE}
-
+acs12 |> 
+  mutate(XXXX)
 ```
 
 Using pipes (`|>`), create a variable that indicates whether someone is a married woman, unmarried woman, married man, or unmarried man, then remove all minors (less than 18 years old) from the dataset.
