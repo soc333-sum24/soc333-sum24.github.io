@@ -74,12 +74,16 @@ glimpse(acs12_agecat)
 ## Checking your work {.smaller}
 
 ::: incremental
--   You should always find a way to check that your variables got created in the way you expected! Surprises later are not good...
+-   You should always find a way to check that your variables got created in the way you expected!
+    Surprises later are not good...
+
 -   `table()` is helpful for categorical variables in particular
 
     -   sometimes for numeric as well, but it can get overwhelming
-    
--   Or--look at the new data set in the data viewer! Click on its name in the environment tab. You can sort columns by value (like in Excel/Google Sheets). 
+
+-   Or--look at the new data set in the data viewer!
+    Click on its name in the environment tab.
+    You can sort columns by value (like in Excel/Google Sheets).
 :::
 
 ## Checking your work {.smaller}
@@ -97,27 +101,23 @@ table(acs12_agecat$agecat, acs12_agecat$age, useNA = "always")
 ## Functions for creating variables {.smaller}
 
 ::: incremental
-  
 -   `mutate()`: creates a new variable and adds it to your data frame
-    
-    -   `mutate(dataset, newvarname = value)`
-        
--   `case_when()`: lets you use conditions to tell mutate what the value of the new variable should be based on other variables that are already in your data frame. 
-    
-    -   `case_when(condition1 ~ value1, condition2 ~ value2, etc)`
-    
--   `case_when()` goes in the `value` slot of `mutate()`
 
+    -   `mutate(dataset, newvarname = value)`
+
+-   `case_when()`: lets you use conditions to tell mutate what the value of the new variable should be based on other variables that are already in your data frame.
+
+    -   `case_when(condition1 ~ value1, condition2 ~ value2, etc)`
+
+-   `case_when()` goes in the `value` slot of `mutate()`
 :::
 
 ::: fragment
-
 ```{r, eval = FALSE}
 mutate(dataset, newvarname = case_when(condition1 ~ value1, 
                                        condition2 ~ value2, 
                                        etc))
 ```
-
 :::
 
 ## `mutate()` {.smaller}
@@ -162,12 +162,12 @@ acs12_agecat <- mutate(acs12,
 ```
 
 ::: incremental
--   Should we really be analyzing 3 year olds alongside 17 year olds? And 83 year olds alongside 35 year olds? 
+-   Should we really be analyzing 3 year olds alongside 17 year olds? And 83 year olds alongside 35 year olds?
 :::
 
 ## Adding more conditions/categories {.smaller}
 
--   Let's add two more categories: "child" (<14) and "retired" (>67)
+-   Let's add two more categories: "child" (\<14) and "retired" (\>67)
 
 ```{r, eval = FALSE}
 acs12_4agecat <- mutate(acs12,
@@ -179,6 +179,7 @@ acs12_4agecat <- mutate(acs12,
 
 ::: incremental
 -   Conditions are evaluated in order--the value an observation gets is the first one that fits
+
 -   Adding a "TRUE" at the end catches everybody who's left over
 
     -   We could have also used the condition `age >= 67` in place of TRUE--same result
@@ -227,10 +228,11 @@ table(acs_racegender$race,
 ## Why do this? Brief aside on intersectionality {.smaller}
 
 ::: incremental
--   Intersectionality: people are in many categories that affect their experiences in ways that are complicated! More than the sum of their parts. 
+-   Intersectionality: people are in many categories that affect their experiences in ways that are complicated!
+    More than the sum of their parts.
 
     -   Categories like: race, gender, class, ethnicity, education, ability status...
-    
+
 -   Eg: the experience of being an Asian woman is not just the experience of being Asian (all genders) plus the experience of being a woman (all races)
 
     -   For instance: there are discriminatory stereotypes of Asian women that don't apply to women generally or to Asian people generally--they're unique to Asian women and have unique consequences
@@ -240,10 +242,11 @@ table(acs_racegender$race,
 
 ::: incremental
 -   We're still developing good statistical methods
+
 -   But analyzing variables representing combinations of categories instead of single categories in isolation is a good start
 
     -   eg: analyzing the relationship between health and race-gender combination, rather than health and race and then separately health and gender
-    
+
 -   Not feasible in small samples though :(
 :::
 
@@ -279,7 +282,7 @@ acs12_agecat <- mutate(acs12,
                                           age >= 18 ~ "adult"))
 ```
 
-. . . 
+. . .
 
 -   And extra commas too
 
@@ -290,7 +293,8 @@ acs12_agecat <- mutate(acs12,
                        agecat = case_when(age < 18 ~ "teen"),
                                           age >= 18 ~ "adult")
 ```
-. . . 
+
+. . .
 
 -   Parentheses tell R where each command starts and ends--misplacing them confuses it!
 
@@ -322,7 +326,7 @@ acs12_agecat <- mutate(acs12,
                                           age >= 18 = "adult"))
 ```
 
-. . . 
+. . .
 
 -   And inside `case_when()`, use `~`, not `=` (yes, that's pretty arbitrary too)
 
@@ -343,91 +347,7 @@ table(acs12_agecat$agecat, acs12$age, useNA = "always")
 ## Exercise: Creating new variables
 
 -   Clone and open the project repo now (**ex-6-1-yourusername**)
+
 -   Then open the .qmd file and try out some variable creation
 
     -   [Instructions: Computing -\> Cloning and committing](https://soc333-sum23.github.io/computing-clonerepo.html)
- 
-## Stringing commands together with pipes (`|>`) {.smaller}
-
-::: incremental
--   Often we need to change data frames in more than one way
--   Back to our starting example: how does employment status vary by age category? 
--   We need to create an age category variable (as we talked about above)
--   But we probably want to filter too--why analyze kids?
-:::
-
-## Stringing commands together: approach 1 {.smaller}
-
-We can do this with the tools we have.
-
-. . . 
-
-```{r}
-acs12_newagevar <- mutate(acs12, agecat = case_when(age < 14 ~ "child",
-                                                    age < 18 ~ "teen",
-                                                    age < 67 ~ "adult",
-                                                    TRUE ~ "retired"))
-acs12_nokids <- filter(acs12_newagevar, agecat != "child")
-
-table(acs12_nokids$agecat, useNA = "always")
-```
-   
-. . . 
-
--   But it's kind of ugly... we don't need to save that middle step
-
-## Stringing commands together: approach 2, with `|>` {.smaller}
-
-::: incremental
--   The pipe operator, `|>`, lets us pass the result of one function directly into another one
--   The `|` symbol is the key below "delete" on your keyboard (not I, not l, not 1)
--   It replaces the first mutate/filter argument (the dataset)
--   "Take the thing that came before this and give it to the function that comes after this"
-:::
-
-. . . 
-
-```{r}
-acs12_nokids <- acs12 |> 
-  mutate(agecat = case_when(age < 14 ~ "child",
-                            age < 18 ~ "teen",
-                            age < 67 ~ "adult",
-                            TRUE ~ "retired")) |> 
-  filter(agecat != "child")
-
-table(acs12_nokids$agecat, useNA = "always")
-```
-
-## Another `|>` example {.smaller}
-
--   This: 
-
-```{r, eval = FALSE}
-mutate(acs12, agecat = case_when(age < 14 ~ "child",
-                                 age < 18 ~ "teen",
-                                 age < 67 ~ "adult",
-                                 TRUE ~ "retired"))
-```
-
--   Is the same as this:
-
-```{r, eval = FALSE}
-acs12 |> 
-  mutate(agecat = case_when(age < 14 ~ "child",
-                            age < 18 ~ "teen",
-                            age < 67 ~ "adult",
-                            TRUE ~ "retired"))
-```
-
-## More on `|>` {.smaller}
-
-::: incremental
--   We're just scratching the surface in this class
--   When you need to clean your data or when your analyses are more complex, `|>` makes your life a lot easier!
--   Sometimes in internet resources more than ~2 years old, you'll see `%>%` instead--this older version does exactly the same thing
--   Annoying to type out? There's a keyboard shortcut
-
-    -   on mac, command-shift-M
-    -   on pc, ctrl-shift-M
-:::
-

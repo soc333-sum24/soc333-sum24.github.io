@@ -76,6 +76,10 @@ website:
                 text: "Component 1: Proposal"
               - href: project_example/c2_descriptives.qmd
                 text: "Component 2: Descriptive stats"
+      - section: "Exercise resources"
+        contents:
+          - href: ex-6-01-scaffolding.qmd
+            text: "Creating variables exercise: hints"
       - section: "Slides"
         contents:
           - href: slides/09-describingpt3.qmd

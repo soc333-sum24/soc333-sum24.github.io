@@ -1,0 +1,93 @@
+---
+title: "ex-6-01"
+format: html
+editor: visual
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+# Creating new variables exercise
+
+This is supplementary information for the exercise you were given on June 1 on creating variables. I've provided some templates to help get you started on the exercises. If you get stuck on the exercise, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace `XXXX`. 
+
+## Q1
+
+Create a version of `acs12` with a new variable called `long_commute` with the value "yes" if a respondent commutes more than 30 minutes to work and "no" otherwise.
+
+*hint: how would you find out what variable tells you what someone's commute time is?*
+
+```{r, eval = FALSE}
+mutate(acs12, 
+       long_commute = case_when(XXXX ~ "yes",
+                                XXXX ~ "no"))
+```
+
+Give this new dataset a name (aka, save it as an object). 
+
+*hint: this is what `<-` is for*
+
+Then look at it in the data viewer (click its name in the "Environment" panel).
+Does it look like your new variable worked as you expected?
+
+## Q2
+
+Create a version of `acs12` with a new variable called `collegeplus`.
+It should have the value `TRUE` if someone has a college or graduate school degree and `FALSE` if not.
+
+```{r, eval = FALSE}
+acs12_collegeplus <- mutate(acs12,
+                            collegeplus = XXXX)
+```
+
+Check your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.
+
+```{r, eval = FALSE}
+table(XXXX, XXXX, useNA = "always")
+```
+
+# Extra credit
+
+Create a new variable that indicates whether someone works a.
+not at all (0 work hours), b.
+part time (1-30 hours), c.
+full time (30-50 hours), or d.
+too much (50+ hours).
+Check the data to see if it worked correctly.
+
+```{r, eval = FALSE}
+acs12_workcat <- mutate(acs12,
+                        XXXX = case_when(hrs_worked == 0 ~ "not at all",
+                                         XXXX ~ XXXX,
+                                         XXXX ~ XXXX,
+                                         XXXX ~ XXXX))
+```
+
+Create a new variable that indicates whether someone is an English-speaking citizen, a non-English speaking citizen, an English-speaking non-citizen, or a non-English speaking non-citizen.
+Check the data to see if it worked correctly.
+
+```{r, eval = FALSE}
+acs12_citizenlanguage <- mutate(acs12,
+                                XXXX = XXXX)
+```
+
+Do the same thing as above, but this time use `|>` to provide the `acs12` dataset to the function
+
+```{r, eval = FALSE}
+
+```
+
+Using pipes (`|>`), create a variable that indicates whether someone is a married woman, unmarried woman, married man, or unmarried man, then remove all minors (less than 18 years old) from the dataset.
+Check your work using tables, summary statistics, and/or by looking at the data frame.
+*This one is challenging!*
+
+```{r, eval = FALSE}
+
+```
+
+# Submit
+
+As usual, submit your work by committing your changes and then pushing to github!
+Please submit before class on Tuesday 6-6.

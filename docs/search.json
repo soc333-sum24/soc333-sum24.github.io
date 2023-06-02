@@ -581,6 +581,62 @@
     "text": "Let’s get started!\n\nToday’s in-class exercise (15 min):\nGet a GitHub account if you don’t have one (username advice in the survey)\nComplete the Getting to Know You survey (link in your email)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/10-describingpt4.html#logistics",
+    "href": "slides/10-describingpt4.html#logistics",
+    "title": "Describing data: part 4",
+    "section": "Logistics",
+    "text": "Logistics\n\nProject component 2: descriptive statistics\n\nAll materials are posted (instructions, example, github repos)\nI will have feedback to you on your research questions soon\nAfter that, you’ll be able to do parts 1-3. Material for part 4 will be Monday.\nDue Tuesday June 6 11:59pm\nWe will save some time to work on it in class Monday or Tuesday–start before then, come with questions!"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#today",
+    "href": "slides/10-describingpt4.html#today",
+    "title": "Describing data: part 4",
+    "section": "Today",
+    "text": "Today\n\nAnswers to filtering\nPipes\nWorking on creating variables\nAnswers to creating variables"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#exercise-creating-new-variables",
+    "href": "slides/10-describingpt4.html#exercise-creating-new-variables",
+    "title": "Describing data: part 4",
+    "section": "Exercise: Creating new variables",
+    "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-6-1-yourusername)\nThen open the .qmd file and try out some variable creation\n\nInstructions: Computing -&gt; Cloning and committing"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#stringing-commands-together-with-pipes",
+    "href": "slides/10-describingpt4.html#stringing-commands-together-with-pipes",
+    "title": "Describing data: part 4",
+    "section": "Stringing commands together with pipes (|>)",
+    "text": "Stringing commands together with pipes (|&gt;)\n\n\nOften we need to change data frames in more than one way\nBack to our starting example: how does employment status vary by age category?\nWe need to create an age category variable (as we talked about above)\nBut we probably want to filter too–why analyze kids?"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#stringing-commands-together-approach-1",
+    "href": "slides/10-describingpt4.html#stringing-commands-together-approach-1",
+    "title": "Describing data: part 4",
+    "section": "Stringing commands together: approach 1",
+    "text": "Stringing commands together: approach 1\nWe can do this with the tools we have.\n\n\nacs12_newagevar &lt;- mutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                                    age &lt; 18 ~ \"teen\",\n                                                    age &lt; 67 ~ \"adult\",\n                                                    TRUE ~ \"retired\"))\nacs12_nokids &lt;- filter(acs12_newagevar, agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0 \n\n\n\n\n\nBut it’s kind of ugly… we don’t need to save that middle step"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#stringing-commands-together-approach-2-with",
+    "href": "slides/10-describingpt4.html#stringing-commands-together-approach-2-with",
+    "title": "Describing data: part 4",
+    "section": "Stringing commands together: approach 2, with |>",
+    "text": "Stringing commands together: approach 2, with |&gt;\n\n\nThe pipe operator, |&gt;, lets us pass the result of one function directly into another one\nThe | symbol is the key below “delete” on your keyboard (not I, not l, not 1)\nIt replaces the first mutate/filter argument (the dataset)\n“Take the thing that came before this and give it to the function that comes after this”\n\n\n\n\nacs12_nokids &lt;- acs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\")) |&gt; \n  filter(agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#another-example",
+    "href": "slides/10-describingpt4.html#another-example",
+    "title": "Describing data: part 4",
+    "section": "Another |> example",
+    "text": "Another |&gt; example\n\nThis:\n\n\nmutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                 age &lt; 18 ~ \"teen\",\n                                 age &lt; 67 ~ \"adult\",\n                                 TRUE ~ \"retired\"))\n\n\nIs the same as this:\n\n\nacs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\"))"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#more-on",
+    "href": "slides/10-describingpt4.html#more-on",
+    "title": "Describing data: part 4",
+    "section": "More on |>",
+    "text": "More on |&gt;\n\n\nWe’re just scratching the surface in this class\nWhen you need to clean your data or when your analyses are more complex, |&gt; makes your life a lot easier!\nSometimes in internet resources more than ~2 years old, you’ll see %&gt;% instead–this older version does exactly the same thing\nAnnoying to type out? There’s a keyboard shortcut\n\non mac, command-shift-M\non pc, ctrl-shift-M\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "slides/08-describingpt2.html#logistics",
     "href": "slides/08-describingpt2.html#logistics",
     "title": "Describing data: part 2",
@@ -1082,42 +1138,7 @@
     "href": "slides/09-describingpt3.html#exercise-creating-new-variables",
     "title": "Describing data: part 3",
     "section": "Exercise: Creating new variables",
-    "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-6-1-yourusername)\nThen open the .qmd file and try out some variable creation\n\nInstructions: Computing -&gt; Cloning and committing"
-  },
-  {
-    "objectID": "slides/09-describingpt3.html#stringing-commands-together-with-pipes",
-    "href": "slides/09-describingpt3.html#stringing-commands-together-with-pipes",
-    "title": "Describing data: part 3",
-    "section": "Stringing commands together with pipes (|>)",
-    "text": "Stringing commands together with pipes (|&gt;)\n\n\nOften we need to change data frames in more than one way\nBack to our starting example: how does employment status vary by age category?\nWe need to create an age category variable (as we talked about above)\nBut we probably want to filter too–why analyze kids?"
-  },
-  {
-    "objectID": "slides/09-describingpt3.html#stringing-commands-together-approach-1",
-    "href": "slides/09-describingpt3.html#stringing-commands-together-approach-1",
-    "title": "Describing data: part 3",
-    "section": "Stringing commands together: approach 1",
-    "text": "Stringing commands together: approach 1\nWe can do this with the tools we have.\n\n\nacs12_newagevar &lt;- mutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                                    age &lt; 18 ~ \"teen\",\n                                                    age &lt; 67 ~ \"adult\",\n                                                    TRUE ~ \"retired\"))\nacs12_nokids &lt;- filter(acs12_newagevar, agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0 \n\n\n\n\n\nBut it’s kind of ugly… we don’t need to save that middle step"
-  },
-  {
-    "objectID": "slides/09-describingpt3.html#stringing-commands-together-approach-2-with",
-    "href": "slides/09-describingpt3.html#stringing-commands-together-approach-2-with",
-    "title": "Describing data: part 3",
-    "section": "Stringing commands together: approach 2, with |>",
-    "text": "Stringing commands together: approach 2, with |&gt;\n\n\nThe pipe operator, |&gt;, lets us pass the result of one function directly into another one\nThe | symbol is the key below “delete” on your keyboard (not I, not l, not 1)\nIt replaces the first mutate/filter argument (the dataset)\n“Take the thing that came before this and give it to the function that comes after this”\n\n\n\n\nacs12_nokids &lt;- acs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\")) |&gt; \n  filter(agecat != \"child\")\n\ntable(acs12_nokids$agecat, useNA = \"always\")\n\n\n  adult retired    teen    &lt;NA&gt; \n   1264     297      89       0"
-  },
-  {
-    "objectID": "slides/09-describingpt3.html#another-example",
-    "href": "slides/09-describingpt3.html#another-example",
-    "title": "Describing data: part 3",
-    "section": "Another |> example",
-    "text": "Another |&gt; example\n\nThis:\n\n\nmutate(acs12, agecat = case_when(age &lt; 14 ~ \"child\",\n                                 age &lt; 18 ~ \"teen\",\n                                 age &lt; 67 ~ \"adult\",\n                                 TRUE ~ \"retired\"))\n\n\nIs the same as this:\n\n\nacs12 |&gt; \n  mutate(agecat = case_when(age &lt; 14 ~ \"child\",\n                            age &lt; 18 ~ \"teen\",\n                            age &lt; 67 ~ \"adult\",\n                            TRUE ~ \"retired\"))"
-  },
-  {
-    "objectID": "slides/09-describingpt3.html#more-on",
-    "href": "slides/09-describingpt3.html#more-on",
-    "title": "Describing data: part 3",
-    "section": "More on |>",
-    "text": "More on |&gt;\n\n\nWe’re just scratching the surface in this class\nWhen you need to clean your data or when your analyses are more complex, |&gt; makes your life a lot easier!\nSometimes in internet resources more than ~2 years old, you’ll see %&gt;% instead–this older version does exactly the same thing\nAnnoying to type out? There’s a keyboard shortcut\n\non mac, command-shift-M\non pc, ctrl-shift-M\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-6-1-yourusername)\nThen open the .qmd file and try out some variable creation\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/05-studiessamples.html#today",
@@ -1832,6 +1853,27 @@
     "title": "Course support",
     "section": "Assistance with Sakai",
     "text": "Assistance with Sakai\nFor technical help with Sakai, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub."
+  },
+  {
+    "objectID": "ex-6-01-scaffolding.html",
+    "href": "ex-6-01-scaffolding.html",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "This is supplementary information for the exercise you were given on June 1 on creating variables. I’ve provided some templates to help get you started on the exercises. If you get stuck on the exercise, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace XXXX.\n\n\nCreate a version of acs12 with a new variable called long_commute with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.\nhint: how would you find out what variable tells you what someone’s commute time is?\n\nmutate(acs12, \n       long_commute = case_when(XXXX ~ \"yes\",\n                                XXXX ~ \"no\"))\n\nGive this new dataset a name (aka, save it as an object).\nhint: this is what &lt;- is for\nThen look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?\n\n\n\nCreate a version of acs12 with a new variable called collegeplus. It should have the value TRUE if someone has a college or graduate school degree and FALSE if not.\n\nacs12_collegeplus &lt;- mutate(acs12,\n                            collegeplus = XXXX)\n\nCheck your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.\n\ntable(XXXX, XXXX, useNA = \"always\")"
+  },
+  {
+    "objectID": "ex-6-01-scaffolding.html#q1",
+    "href": "ex-6-01-scaffolding.html#q1",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "Create a version of acs12 with a new variable called long_commute with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.\nhint: how would you find out what variable tells you what someone’s commute time is?\n\nmutate(acs12, \n       long_commute = case_when(XXXX ~ \"yes\",\n                                XXXX ~ \"no\"))\n\nGive this new dataset a name (aka, save it as an object).\nhint: this is what &lt;- is for\nThen look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?"
+  },
+  {
+    "objectID": "ex-6-01-scaffolding.html#q2",
+    "href": "ex-6-01-scaffolding.html#q2",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "Create a version of acs12 with a new variable called collegeplus. It should have the value TRUE if someone has a college or graduate school degree and FALSE if not.\n\nacs12_collegeplus &lt;- mutate(acs12,\n                            collegeplus = XXXX)\n\nCheck your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.\n\ntable(XXXX, XXXX, useNA = \"always\")"
   },
   {
     "objectID": "project-description.html",

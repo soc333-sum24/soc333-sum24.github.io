@@ -152,7 +152,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|--------------------------------------------------|----------------------|
+|-------------------------------------------------|-----------------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |
@@ -160,16 +160,18 @@ Submit one Quarto document containing your revised research questions and this s
 | Paragraph on research question choice                                                                        | 10% |
 | Workflow and formatting                                                                                      | 10% |
 
-Each component will be graded as follows:
+Each part will be graded as follows:
 
--   **Meets expectations (full credit)**: All required elements are completed and are accurate.
+-   **Meets expectations**: All required elements are completed and are accurate.
     The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.
 
--   **Close to expectations (half credit)**: There are some elements missing and/or inaccurate.
+-   **Close to expectations**: There are some elements missing and/or inaccurate.
     There are some issues with formatting.
 
--   **Does not meet expectations (no credit)**: Major elements missing.
+-   **Partial credit:** Major elements missing.
     Work is not neatly formatted and would not be presentable in a professional setting.
+
+-   **Does not meet expectations**: Not completed.
 
 It is critical to check feedback on your project proposal.
 Even if you earn full credit, it may not mean that your proposal is perfect.
