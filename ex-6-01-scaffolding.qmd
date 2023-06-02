@@ -11,13 +11,13 @@ library(openintro)
 
 # Creating new variables exercise
 
-This is supplementary information for the exercise you were given on June 1 on creating variables. I've provided some templates to help get you started on the exercises. If you get stuck on the exercise, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace `XXXX`. 
+This is supplementary information for the exercise you were given on June 1 on creating variables. I've provided some incomplete template code to help get you started on the exercises. If you get stuck on something, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace `XXXX`. 
 
 ## Q1
 
 Create a version of `acs12` with a new variable called `long_commute` with the value "yes" if a respondent commutes more than 30 minutes to work and "no" otherwise.
 
-*hint: how would you find out what variable tells you what someone's commute time is?*
+*hint: you need to know which variable tells you what someone's commute time is. How would you find this out?*
 
 ```{r, eval = FALSE}
 mutate(acs12, 
@@ -25,7 +25,7 @@ mutate(acs12,
                                 XXXX ~ "no"))
 ```
 
-Give this new dataset a name (aka, save it as an object). 
+Edit the above code to give this new dataset a name (aka, save it as an object). 
 
 *hint: this is what `<-` is for*
 
@@ -59,7 +59,7 @@ Check the data to see if it worked correctly.
 
 ```{r, eval = FALSE}
 acs12_workcat <- mutate(acs12,
-                        XXXX = case_when(hrs_worked == 0 ~ "not at all",
+                        XXXX = case_when(hrs_work == 0 ~ "not at all",
                                          XXXX ~ XXXX,
                                          XXXX ~ XXXX,
                                          XXXX ~ XXXX))

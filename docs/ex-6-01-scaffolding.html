@@ -393,17 +393,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="creating-new-variables-exercise" class="level1">
 <h1>Creating new variables exercise</h1>
-<p>This is supplementary information for the exercise you were given on June 1 on creating variables. I’ve provided some templates to help get you started on the exercises. If you get stuck on the exercise, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace <code>XXXX</code>.</p>
+<p>This is supplementary information for the exercise you were given on June 1 on creating variables. I’ve provided some incomplete template code to help get you started on the exercises. If you get stuck on something, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace <code>XXXX</code>.</p>
 <section id="q1" class="level2">
 <h2 class="anchored" data-anchor-id="q1">Q1</h2>
 <p>Create a version of <code>acs12</code> with a new variable called <code>long_commute</code> with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.</p>
-<p><em>hint: how would you find out what variable tells you what someone’s commute time is?</em></p>
+<p><em>hint: you need to know which variable tells you what someone’s commute time is. How would you find this out?</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(acs12, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">long_commute =</span> <span class="fu">case_when</span>(XXXX <span class="sc">~</span> <span class="st">"yes"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                                XXXX <span class="sc">~</span> <span class="st">"no"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Give this new dataset a name (aka, save it as an object).</p>
+<p>Edit the above code to give this new dataset a name (aka, save it as an object).</p>
 <p><em>hint: this is what <code>&lt;-</code> is for</em></p>
 <p>Then look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?</p>
 </section>
@@ -425,7 +425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create a new variable that indicates whether someone works a. not at all (0 work hours), b. part time (1-30 hours), c. full time (30-50 hours), or d. too much (50+ hours). Check the data to see if it worked correctly.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>acs12_workcat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">XXXX =</span> <span class="fu">case_when</span>(hrs_worked <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"not at all"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">XXXX =</span> <span class="fu">case_when</span>(hrs_work <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"not at all"</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
