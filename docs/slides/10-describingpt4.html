@@ -421,10 +421,11 @@ Aidan Combs
 <li>Due <strong>Wednesday June 7</strong> 11:59pm</li>
 <li>I have returned feedback (GitHub issue on your repo) and grades (Sakai) for your proposals</li>
 <li>We have covered everything for parts 1-3. Part 4 is today and tomorrow.</li>
+<li>I’m around before/after class for questions (after generally better), or set up an appointment</li>
 </ul></li>
 </ul>
 </section>
-<section id="today" class="slide level2">
+<section id="today" class="slide level2 smaller">
 <h2>Today</h2>
 <ul>
 <li>Answers to filtering</li>
@@ -434,13 +435,13 @@ Aidan Combs
 <li>Plots</li>
 </ul>
 </section>
-<section id="filtering-exercise-ex-5-31-answers" class="slide level2">
+<section id="filtering-exercise-ex-5-31-answers" class="slide level2 smaller">
 <h2>Filtering exercise (ex-5-31): answers!</h2>
 <ul>
 <li>Find this on your computer (no need to clone it again)</li>
 </ul>
 </section>
-<section id="stringing-commands-together-with-pipes" class="slide level2 smaller">
+<section id="stringing-commands-together-with-pipes" class="slide level2">
 <h2>Stringing commands together with pipes (<code>|&gt;</code>)</h2>
 <div>
 <ul>
@@ -451,7 +452,7 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="stringing-commands-together-approach-1" class="slide level2 smaller">
+<section id="stringing-commands-together-approach-1" class="slide level2">
 <h2>Stringing commands together: approach 1</h2>
 <p>We can do this with the tools we have.</p>
 <div class="fragment">
@@ -480,7 +481,7 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="stringing-commands-together-approach-2-with" class="slide level2 smaller">
+<section id="stringing-commands-together-approach-2-with" class="slide level2">
 <h2>Stringing commands together: approach 2, with <code>|&gt;</code></h2>
 <div>
 <ul>
@@ -508,7 +509,7 @@ Aidan Combs
 </div>
 </div>
 </section>
-<section id="another-example" class="slide level2 smaller">
+<section id="another-example" class="slide level2">
 <h2>Another <code>|&gt;</code> example</h2>
 <ul>
 <li>This:</li>
@@ -530,7 +531,7 @@ Aidan Combs
 <span id="cb6-5"><a href="#cb6-5"></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="more-on" class="slide level2 smaller">
+<section id="more-on" class="slide level2">
 <h2>More on <code>|&gt;</code></h2>
 <div>
 <ul>
@@ -545,7 +546,7 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="continuing-on-creating-new-variables" class="slide level2">
+<section id="continuing-on-creating-new-variables" class="slide level2 smaller">
 <h2>Continuing on creating new variables</h2>
 <ul>
 <li><p>Find your exercise from last Thursday (ex-6-01)</p>
@@ -584,7 +585,7 @@ Aidan Combs
 <li><p>Cheatsheets!</p>
 <ul>
 <li>Relevant ones are on the course website: <a href="https://soc333-sum23.github.io/computing-cheatsheets.html">Computing -&gt; Cheatsheets</a></li>
-<li>More at <a href="https://posit.co/resources/cheatsheets/">https://posit.co/resources/cheatsheets/</a></li>
+<li>More at <a href="https://posit.co/resources/cheatsheets/" class="uri">https://posit.co/resources/cheatsheets/</a></li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -821,7 +822,9 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </ul></li>
 <li><p>The message is telling us that R took its best dumb guess, but we should pick something better.</p></li>
 </ul>
-<div class="fragment">
+</section>
+<section id="cleaning-up-the-histogram-4" class="slide level2">
+<h2>Cleaning up the histogram</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
 <span id="cb19-2"><a href="#cb19-2"></a></span>
@@ -829,13 +832,10 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <span id="cb19-4"><a href="#cb19-4"></a>  <span class="co"># the binwidth argument goes inside the geom_histogram function</span></span>
 <span id="cb19-5"><a href="#cb19-5"></a>  <span class="co"># let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc</span></span>
 <span id="cb19-6"><a href="#cb19-6"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="10-describingpt4_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+
 </div>
-</div>
-</div>
-</section>
-<section id="cleaning-up-the-histogram-4" class="slide level2">
+<img data-src="10-describingpt4_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<section id="cleaning-up-the-histogram-5" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
 <li>Now we’ve eliminated all the messages–let’s add labels!</li>

@@ -1,0 +1,112 @@
+---
+title: "5-31-23 exercise: filtering"
+format: html
+editor: visual
+---
+
+## Setup
+
+First, we need to load some packages. Click the play button to run the code in the block below (remember, you only need to do this once per session).
+
+```{r}
+library(tidyverse)
+library(openintro)
+```
+
+## Filtering
+
+Like yesterday, we will be working with the `acs12` data set.
+
+Often, we only want to analyze adult respondents. In the chunk below, create a modified version of `acs12` that contains only respondents who are 18 or older. Call your new data frame `acs_adults`.
+
+```{r}
+
+```
+
+Look at the summary statistics of the `age` variable in your new, filtered data frame. Did the filtering work?
+
+```{r}
+
+```
+
+How many respondents are left in this new data frame? (we started with 2000)
+
+(hint: there are multiple ways to do this, some of which involve code, one of which involves looking at the entry for your new data frame in the "environment" RStudio panel)
+
+```{r}
+
+```
+
+## Extra credit
+
+Use the chunks below to create other subsets of the `acs12` data. Do as many or as few as you feel are useful to you. When you feel like you've got the basics down, try out some of the more complex filtering operators we discussed.
+
+Check your results by looking at summary statistics or tables. Look at your new data frames by opening them up from the environment panel.
+
+#### For practice with simple comparison operators (`==`, `!=`, `<`, `<=`, `>`, `>=`):
+
+-   Include only US citizens
+
+    ```{r}
+
+    ```
+
+-   Include only people who are not White
+
+    ```{r}
+
+    ```
+
+-   Include only people who are retirement age (\>67).
+
+    ```{r}
+
+    ```
+
+-   Exclude people who were born in winter
+
+    ```{r}
+
+    ```
+
+#### For practice with more complex comparison operators:
+
+-   Include only the people who are not in the labor force but still say they work more than 20 hours per week (??)
+
+    ```{r}
+
+    ```
+
+-   Include only Black and Asian respondents
+
+    ```{r}
+
+    ```
+
+-   Include only the people who reported a usable (not-NA) commute time
+
+    ```{r}
+
+    ```
+
+-   Include people who have a disability or are unemployed
+
+    ```{r}
+
+    ```
+
+-   Include non-retired adults (people who are older than 18 but younger than 67)
+
+    ```{r}
+
+    ```
+
+#### Other subsets that interest you:
+
+```{r}
+
+```
+
+## Submission
+
+When you are done, commit your changes and push them to GitHub! ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html))

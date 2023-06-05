@@ -252,6 +252,27 @@
     "text": "Arranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid.\nMore to be added soon…"
   },
   {
+    "objectID": "ex-6-01-solutions.html",
+    "href": "ex-6-01-solutions.html",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "This is supplementary information for the exercise you were given on June 1 on creating variables. I’ve provided some incomplete template code to help get you started on the exercises. If you get stuck on something, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace XXXX.\n\n\nCreate a version of acs12 with a new variable called long_commute with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.\nhint: you need to know which variable tells you what someone’s commute time is. How would you find this out?\n\nmutate(acs12, \n       long_commute = case_when(XXXX ~ \"yes\",\n                                XXXX ~ \"no\"))\n\nEdit the above code to give this new dataset a name (aka, save it as an object).\nhint: this is what &lt;- is for\nThen look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?\n\n\n\nCreate a version of acs12 with a new variable called collegeplus. It should have the value TRUE if someone has a college or graduate school degree and FALSE if not.\n\nacs12_collegeplus &lt;- mutate(acs12,\n                            collegeplus = XXXX)\n\nCheck your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.\n\ntable(XXXX, XXXX, useNA = \"always\")"
+  },
+  {
+    "objectID": "ex-6-01-solutions.html#q1",
+    "href": "ex-6-01-solutions.html#q1",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "Create a version of acs12 with a new variable called long_commute with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.\nhint: you need to know which variable tells you what someone’s commute time is. How would you find this out?\n\nmutate(acs12, \n       long_commute = case_when(XXXX ~ \"yes\",\n                                XXXX ~ \"no\"))\n\nEdit the above code to give this new dataset a name (aka, save it as an object).\nhint: this is what &lt;- is for\nThen look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?"
+  },
+  {
+    "objectID": "ex-6-01-solutions.html#q2",
+    "href": "ex-6-01-solutions.html#q2",
+    "title": "ex-6-01",
+    "section": "",
+    "text": "Create a version of acs12 with a new variable called collegeplus. It should have the value TRUE if someone has a college or graduate school degree and FALSE if not.\n\nacs12_collegeplus &lt;- mutate(acs12,\n                            collegeplus = XXXX)\n\nCheck your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.\n\ntable(XXXX, XXXX, useNA = \"always\")"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
@@ -585,7 +606,7 @@
     "href": "slides/10-describingpt4.html#logistics",
     "title": "Describing data: part 4",
     "section": "Logistics",
-    "text": "Logistics\n\nProject component 2: descriptive statistics\n\nAll materials are posted (instructions, example, github repos)\nDue Wednesday June 7 11:59pm\nI have returned feedback (GitHub issue on your repo) and grades (Sakai) for your proposals\nWe have covered everything for parts 1-3. Part 4 is today and tomorrow."
+    "text": "Logistics\n\nProject component 2: descriptive statistics\n\nAll materials are posted (instructions, example, github repos)\nDue Wednesday June 7 11:59pm\nI have returned feedback (GitHub issue on your repo) and grades (Sakai) for your proposals\nWe have covered everything for parts 1-3. Part 4 is today and tomorrow.\nI’m around before/after class for questions (after generally better), or set up an appointment"
   },
   {
     "objectID": "slides/10-describingpt4.html#today",
@@ -767,11 +788,18 @@
     "href": "slides/10-describingpt4.html#cleaning-up-the-histogram-3",
     "title": "Describing data: part 4",
     "section": "Cleaning up the histogram",
-    "text": "Cleaning up the histogram\n\nThe function documentation tells us that geom_histogram gives you two ways to set the width of the bars: bins and binwidth.\n\nbinwidth sets the width of each bar: eg, each bar should represent 5 hours worked, or 10\nWe could use bins instead to tell R how many bars there should be–10 bars, 20 bars, etc\n\nThe message is telling us that R took its best dumb guess, but we should pick something better.\n\n\n\nacs_filtered &lt;- filter(acs12, !is.na(hrs_work))\n\nggplot(data = acs_filtered, aes(x = hrs_work)) + \n  # the binwidth argument goes inside the geom_histogram function\n  # let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc\n  geom_histogram(binwidth = 5)"
+    "text": "Cleaning up the histogram\n\nThe function documentation tells us that geom_histogram gives you two ways to set the width of the bars: bins and binwidth.\n\nbinwidth sets the width of each bar: eg, each bar should represent 5 hours worked, or 10\nWe could use bins instead to tell R how many bars there should be–10 bars, 20 bars, etc\n\nThe message is telling us that R took its best dumb guess, but we should pick something better."
   },
   {
     "objectID": "slides/10-describingpt4.html#cleaning-up-the-histogram-4",
     "href": "slides/10-describingpt4.html#cleaning-up-the-histogram-4",
+    "title": "Describing data: part 4",
+    "section": "Cleaning up the histogram",
+    "text": "Cleaning up the histogram\n\nacs_filtered &lt;- filter(acs12, !is.na(hrs_work))\n\nggplot(data = acs_filtered, aes(x = hrs_work)) + \n  # the binwidth argument goes inside the geom_histogram function\n  # let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc\n  geom_histogram(binwidth = 5)"
+  },
+  {
+    "objectID": "slides/10-describingpt4.html#cleaning-up-the-histogram-5",
+    "href": "slides/10-describingpt4.html#cleaning-up-the-histogram-5",
     "title": "Describing data: part 4",
     "section": "Cleaning up the histogram",
     "text": "Cleaning up the histogram\n\nNow we’ve eliminated all the messages–let’s add labels!\n\n\nacs_filtered &lt;- filter(acs12, !is.na(hrs_work))\n\nggplot(data = acs_filtered, aes(x = hrs_work)) + \n  geom_histogram(binwidth = 5) + \n  labs(x = \"Number of hours worked per week\",\n       y = \"Number of people\",\n       title = \"Distribution of hours worked per week\",\n       subtitle = \"American Community Survey 2012\")\n\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
@@ -1993,6 +2021,41 @@
     "title": "Course support",
     "section": "Assistance with Sakai",
     "text": "Assistance with Sakai\nFor technical help with Sakai, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub."
+  },
+  {
+    "objectID": "ex-5-31-solutions.html",
+    "href": "ex-5-31-solutions.html",
+    "title": "5-31-23 exercise: filtering",
+    "section": "",
+    "text": "First, we need to load some packages. Click the play button to run the code in the block below (remember, you only need to do this once per session).\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata"
+  },
+  {
+    "objectID": "ex-5-31-solutions.html#setup",
+    "href": "ex-5-31-solutions.html#setup",
+    "title": "5-31-23 exercise: filtering",
+    "section": "",
+    "text": "First, we need to load some packages. Click the play button to run the code in the block below (remember, you only need to do this once per session).\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata"
+  },
+  {
+    "objectID": "ex-5-31-solutions.html#filtering",
+    "href": "ex-5-31-solutions.html#filtering",
+    "title": "5-31-23 exercise: filtering",
+    "section": "Filtering",
+    "text": "Filtering\nLike yesterday, we will be working with the acs12 data set.\nOften, we only want to analyze adult respondents. In the chunk below, create a modified version of acs12 that contains only respondents who are 18 or older. Call your new data frame acs_adults.\nLook at the summary statistics of the age variable in your new, filtered data frame. Did the filtering work?\nHow many respondents are left in this new data frame? (we started with 2000)\n(hint: there are multiple ways to do this, some of which involve code, one of which involves looking at the entry for your new data frame in the “environment” RStudio panel)"
+  },
+  {
+    "objectID": "ex-5-31-solutions.html#extra-credit",
+    "href": "ex-5-31-solutions.html#extra-credit",
+    "title": "5-31-23 exercise: filtering",
+    "section": "Extra credit",
+    "text": "Extra credit\nUse the chunks below to create other subsets of the acs12 data. Do as many or as few as you feel are useful to you. When you feel like you’ve got the basics down, try out some of the more complex filtering operators we discussed.\nCheck your results by looking at summary statistics or tables. Look at your new data frames by opening them up from the environment panel.\n\nFor practice with simple comparison operators (==, !=, &lt;, &lt;=, &gt;, &gt;=):\n\nInclude only US citizens\nInclude only people who are not White\nInclude only people who are retirement age (&gt;67).\nExclude people who were born in winter\n\n\n\nFor practice with more complex comparison operators:\n\nInclude only the people who are not in the labor force but still say they work more than 20 hours per week (??)\nInclude only Black and Asian respondents\nInclude only the people who reported a usable (not-NA) commute time\nInclude people who have a disability or are unemployed\nInclude non-retired adults (people who are older than 18 but younger than 67)\n\n\n\nOther subsets that interest you:"
+  },
+  {
+    "objectID": "ex-5-31-solutions.html#submission",
+    "href": "ex-5-31-solutions.html#submission",
+    "title": "5-31-23 exercise: filtering",
+    "section": "Submission",
+    "text": "Submission\nWhen you are done, commit your changes and push them to GitHub! (instructions)"
   },
   {
     "objectID": "ex-6-01-scaffolding.html",
