@@ -82,6 +82,8 @@ website:
             text: "Ex. 6-01 hints"
       - section: "Slides"
         contents:
+          - href: slides/10-describingpt4.qmd
+            text: "Lecture 9: Describing data pt 3"
           - href: slides/09-describingpt3.qmd
             text: "Lecture 9: Describing data pt 3"
           - href: slides/08-describingpt2.qmd
