@@ -80,6 +80,10 @@ website:
         contents:
           - href: ex-6-01-scaffolding.qmd
             text: "Ex. 6-01 hints"
+          - section: "Solutions"
+            contents:
+                - href: exercise-solutions/ex-5-31-solutions.qmd
+                  text: "5/31: Filtering"
       - section: "Slides"
         contents:
           - href: slides/10-describingpt4.qmd

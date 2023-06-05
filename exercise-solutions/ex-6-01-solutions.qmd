@@ -1,0 +1,149 @@
+---
+title: "ex-6-01"
+format: html
+editor: visual
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+# Creating new variables exercise
+
+This is supplementary information for the exercise you were given on June 1 on creating variables.
+I've provided some incomplete template code to help get you started on the exercises.
+If you get stuck on something, copy and paste the contents of the code chunks here into your assignment.
+Then determine what you need to add to replace `XXXX`.
+
+## Q1
+
+Create a version of `acs12` with a new variable called `long_commute` with the value "yes" if a respondent commutes more than 30 minutes to work and "no" otherwise.
+
+*hint: you need to know which variable tells you what someone's commute time is. How would you find this out?*
+
+```{r}
+glimpse(acs12) # I'm using glimpse to figure out what variable measures someone's commute time
+# the output tells me it's time_to_work, which is numeric
+
+acs_longcommute <- mutate(acs12, 
+       long_commute = case_when(time_to_work > 30 ~ "yes",
+                                time_to_work <= 30 ~ "no"))
+```
+
+Edit the above code to give this new dataset a name (aka, save it as an object).
+
+*hint: this is what `<-` is for*
+
+Then look at it in the data viewer (click its name in the "Environment" panel).
+Does it look like your new variable worked as you expected?
+
+**Yes! It appears that everyone with a commute time of under 30 min (time_to_work) has "no" under longcommute, and everyone with a commute time of over 30 min has "yes" for longcommute. People with exactly 30 minute commutes are counted as not having long commutes, which is what we expected given the code above.**
+
+## Q2
+
+Create a version of `acs12` with a new variable called `collegeplus`.
+It should have the value `TRUE` if someone has a college or graduate school degree and `FALSE` if not.
+
+```{r}
+# glimpse and unique help us figure out which variable we should be using (edu) and what its values are ("hs or lower", "college", "grad")
+glimpse(acs12)
+unique(acs12$edu )
+
+# there are several ways to write this condition. Here's one: 
+acs12_collegeplus <- mutate(acs12,
+                            collegeplus = case_when(edu != "hs or lower" ~ TRUE,
+                                                    edu == "hs or lower" ~ FALSE))
+
+# A second, totally equivalent one: 
+# here, we're taking advantage of the fact that edu != "hs or lower" evaluates to either TRUE or FALSE
+acs12_collegeplus <- mutate(acs12,
+                            collegeplus = edu != "hs or lower")
+
+# Another one using | (or)
+acs12_collegeplus <- mutate(acs12,
+                            collegeplus = case_when(edu == "college" | edu == "grad" ~ TRUE,
+                                                    TRUE ~ FALSE)) # this "catches" everyone who's left over (ie, people who don't have either "college" or "grad" as their value for edu)
+```
+
+Check your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.
+
+```{r, eval = FALSE}
+table(acs12_collegeplus$collegeplus, 
+      acs12_collegeplus$edu, 
+      useNA = "always")
+
+# This table shows us that everyone with "hs or lower" for edu has FALSE for collegeplus, and everyone who has "college" or "grad" for edu has TRUE for collegeplus. This is as we expect--it worked!
+```
+
+# Extra credit
+
+Create a new variable that indicates whether someone works a.
+not at all (0 work hours), b.
+part time (1-30 hours), c.
+full time (30-50 hours), or d.
+too much (50+ hours).
+Check the data to see if it worked correctly.
+
+```{r, eval = FALSE}
+acs12_workcat <- mutate(acs12,
+                        work = case_when(hrs_work == 0 ~ "not at all",
+                                         hrs_work <= 30 ~ "part time",
+                                         hrs_work <= 50 ~ "full time",
+                                         TRUE ~ "too much"))
+
+# I can check the data by looking at it in the environment pane
+```
+
+Create a new variable that indicates whether someone is an English-speaking citizen, a non-English speaking citizen, an English-speaking non-citizen, or a non-English speaking non-citizen.
+Check the data to see if it worked correctly.
+
+```{r, eval = FALSE}
+acs12_citizenlanguage <- mutate(acs12,
+                                citizenlang = case_when(citizen == "yes" & lang == "english" ~ "english citizen",
+                                                        citizen == "no" & lang == "english" ~ "english noncitizen",
+                                                        citizen == "yes" & lang != "english" ~ "non english citizen",
+                                                        citizen == "no" & lang != "english" ~ "non english noncitizen"))
+
+# this table shows us that everyone is in the category we expected!
+table(acs12_citizenlanguage$citizenlang, acs12_citizenlanguage$citizen, acs12_citizenlanguage$lang)
+```
+
+Do the same thing as above, but this time use `|>` to provide the `acs12` dataset to the function
+
+```{r, eval = FALSE}
+acs12 |> 
+  mutate(citizenlang = case_when(citizen == "yes" & lang == "english" ~ "english citizen",
+                                 citizen == "no" & lang == "english" ~ "english noncitizen",
+                                 citizen == "yes" & lang != "english" ~ "non english citizen",
+                                 citizen == "no" & lang != "english" ~ "non english noncitizen"))
+```
+
+Using pipes (`|>`), create a variable that indicates whether someone is a married woman, unmarried woman, married man, or unmarried man, then remove all minors (less than 18 years old) from the dataset.
+Check your work using tables, summary statistics, and/or by looking at the data frame.
+*This one is challenging!*
+
+```{r, eval = FALSE}
+glimpse(acs12)
+
+acs_gendermarried <- acs12 |> 
+  # this creates the gender/marriage combination variable
+  mutate(gendermarried = case_when(married == "yes" & gender == "female" ~ "married woman",
+                                    married == "no" & gender == "female" ~ "unmarried woman",
+                                    married == "yes" & gender == "male" ~ "married man",
+                                    married == "no" & gender == "male" ~ "unmarried man")) |> 
+  # and this filters out all people under age 18
+  filter(age >= 18)
+
+# this checks the variable creation--the table shows us that everyone is in the right category
+table(acs_gendermarried$gendermarried, acs_gendermarried$married, acs_gendermarried$gender)
+
+# this checks the filtering--our minimum age is 18, so we're good to go!
+summary(acs_gendermarried$age)
+
+```
+
+# Submit
+
+As usual, submit your work by committing your changes and then pushing to github!
+Please submit before class on Tuesday 6-6.

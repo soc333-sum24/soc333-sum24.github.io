@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SOCIOL 333 - ex-6-01</title>
+<title>SOCIOL 333 - R resources and cheatsheets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -63,6 +29,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./project-description.html" rel="next">
+<link href="./computing-clonerepo.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -95,9 +63,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="SOCIOL 333 - ex-6-01">
+<meta property="og:title" content="SOCIOL 333 - R resources and cheatsheets">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://soc333-sum23.github.io/images/cheatsheets/data-visualization.png">
 <meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:image:height" content="850">
+<meta property="og:image:width" content="1100">
 </head>
 
 <body class="nav-sidebar docked">
@@ -109,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ex-6-01</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-cheatsheets.html">Cheatsheets</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,13 +148,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./computing-setup.html" class="sidebar-item-text sidebar-link">
@@ -198,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
+  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cheatsheets</span></a>
   </div>
 </li>
@@ -279,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ex-6-01-scaffolding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ex. 6-01 hints</span></a>
+ <span class="menu-text">Creating variables exercise: hints</span></a>
   </div>
 </li>
       </ul>
@@ -293,12 +264,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/10-describingpt4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 10: Describing data pt 4</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./slides/09-describingpt3.html" class="sidebar-item-text sidebar-link">
@@ -361,26 +326,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#creating-new-variables-exercise" id="toc-creating-new-variables-exercise" class="nav-link active" data-scroll-target="#creating-new-variables-exercise">Creating new variables exercise</a>
-  <ul class="collapse">
-  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1">Q1</a></li>
-  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a></li>
-  </ul></li>
-  <li><a href="#extra-credit" id="toc-extra-credit" class="nav-link" data-scroll-target="#extra-credit">Extra credit</a></li>
-  <li><a href="#submit" id="toc-submit" class="nav-link" data-scroll-target="#submit">Submit</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/ex-6-01-solutions.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ex-6-01</h1>
+<h1 class="title">R resources and cheatsheets</h1>
 </div>
 
 
@@ -395,63 +348,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="creating-new-variables-exercise" class="level1">
-<h1>Creating new variables exercise</h1>
-<p>This is supplementary information for the exercise you were given on June 1 on creating variables. I’ve provided some incomplete template code to help get you started on the exercises. If you get stuck on something, copy and paste the contents of the code chunks here into your assignment. Then determine what you need to add to replace <code>XXXX</code>.</p>
-<section id="q1" class="level2">
-<h2 class="anchored" data-anchor-id="q1">Q1</h2>
-<p>Create a version of <code>acs12</code> with a new variable called <code>long_commute</code> with the value “yes” if a respondent commutes more than 30 minutes to work and “no” otherwise.</p>
-<p><em>hint: you need to know which variable tells you what someone’s commute time is. How would you find this out?</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(acs12, </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">long_commute =</span> <span class="fu">case_when</span>(XXXX <span class="sc">~</span> <span class="st">"yes"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                                XXXX <span class="sc">~</span> <span class="st">"no"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are many freely available online resources for learning R that you may find helpful, either for this course or in the future.</p>
+<p>I highly recommend the online textbook <a href="https://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham and Garrett Grolemund, which does an excellent job introducing the skills you need in order to explore data in R.</p>
+<p><a href="https://stackoverflow.com/">StackOverflow</a> can be a great resource when you are asking “how do I do X specific thing?” or “why am I getting this error message?”. Just remember to cite any code that you copy from here.</p>
+<p>The following cheatsheets come from <a href="https://www.rstudio.com/resources/cheatsheets" class="uri">https://www.rstudio.com/resources/cheatsheets</a>. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf"><img src="images/cheatsheets/data-visualization.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-<p>Edit the above code to give this new dataset a name (aka, save it as an object).</p>
-<p><em>hint: this is what <code>&lt;-</code> is for</em></p>
-<p>Then look at it in the data viewer (click its name in the “Environment” panel). Does it look like your new variable worked as you expected?</p>
-</section>
-<section id="q2" class="level2">
-<h2 class="anchored" data-anchor-id="q2">Q2</h2>
-<p>Create a version of <code>acs12</code> with a new variable called <code>collegeplus</code>. It should have the value <code>TRUE</code> if someone has a college or graduate school degree and <code>FALSE</code> if not.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>acs12_collegeplus <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">collegeplus =</span> XXXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf"><img src="images/cheatsheets/tidyr.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-<p>Check your work by creating a table that shows you if your new variable maps onto the old variable in the way you expect.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(XXXX, XXXX, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf"><img src="images/cheatsheets/strings.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-</section>
-</section>
-<section id="extra-credit" class="level1">
-<h1>Extra credit</h1>
-<p>Create a new variable that indicates whether someone works a. not at all (0 work hours), b. part time (1-30 hours), c. full time (30-50 hours), or d. too much (50+ hours). Check the data to see if it worked correctly.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>acs12_workcat <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">XXXX =</span> <span class="fu">case_when</span>(hrs_work <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"not at all"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                                         XXXX <span class="sc">~</span> XXXX))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf"><img src="images/cheatsheets/lubridate.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-<p>Create a new variable that indicates whether someone is an English-speaking citizen, a non-English speaking citizen, an English-speaking non-citizen, or a non-English speaking non-citizen. Check the data to see if it worked correctly.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>acs12_citizenlanguage <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                                <span class="at">XXXX =</span> XXXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf"><img src="images/cheatsheets/data-transformation.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-<p>Do the same thing as above, but this time use <code>|&gt;</code> to provide the <code>acs12</code> dataset to the function</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>acs12 <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(XXXX)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf"><img src="images/cheatsheets/data-import.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
 </div>
-<p>Using pipes (<code>|&gt;</code>), create a variable that indicates whether someone is a married woman, unmarried woman, married man, or unmarried man, then remove all minors (less than 18 years old) from the dataset. Check your work using tables, summary statistics, and/or by looking at the data frame. <em>This one is challenging!</em></p>
-</section>
-<section id="submit" class="level1">
-<h1>Submit</h1>
-<p>As usual, submit your work by committing your changes and then pushing to github! Please submit before class on Tuesday 6-6.</p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf"><img src="images/cheatsheets/factors.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
+</div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf"><img src="images/cheatsheets/rstudio-ide.png" class="img-fluid figure-img" alt="ggplot2 cheat sheet" width="300"></a></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -802,13 +755,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./computing-clonerepo.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cloning and committing</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./project-description.html" class="pagination-link">
+        <span class="nav-page-text">General information</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2023, Aidan Combs. Credit to <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a> and her <a href="https://sta199-f22-1.github.io/">STA199 course</a>, on which the materials and website for SOCIOL333 are based</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/computing-cheatsheets.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a></div>
   </div>
 </footer>
