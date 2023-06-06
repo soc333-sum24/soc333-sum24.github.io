@@ -1,0 +1,390 @@
+---
+title: "Plotting a single variable"
+subtitle: "Lecture 11"
+date: "June 6, 2023"
+format: revealjs
+smaller: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+## Logistics {.smaller}
+
+-   Project component 2: descriptive statistics
+
+    -   Due **Thursday June 8** 11:59pm
+    -   this is the last time it's moving--thank you for your patience. :)
+
+## Today {.smaller}
+
+-   Getting help with R
+-   Single variable plots
+-   Factors
+
+## Finding help in R
+
+-   #1: Your classmates and I!
+
+    -   Copy/pasting from slides or exercises and editing the pieces you need is a good strategy
+
+. . .
+
+-   Documentation! Use `?`
+
+```{r}
+?median
+```
+
+## Finding help in R
+
+-   Cheatsheets!
+
+    -   Relevant ones are on the course website: [Computing -\> Cheatsheets](https://soc333-sum23.github.io/computing-cheatsheets.html)
+    -   More at <https://posit.co/resources/cheatsheets/>
+
+. . .
+
+-   Google!
+
+    -   Try "how to calculate the median in r" rather than "r how to calculate median"
+    -   StackOverflow/StackExchange is good
+    -   Paste in your error message
+    -   **Cite your sources**
+
+. . .
+
+-   A book!
+
+    -   [R for Data Science](https://r4ds.had.co.nz/)
+
+## Finding help in R
+
+-   Campus resources!
+
+    -   [Center for Data Visualization Sciences](https://library.duke.edu/data/about)
+    -   [Innovation CoLab](https://colab.duke.edu/)
+    -   [Social Science Research Institute (SSRI) consults](https://ssri.duke.edu/research/consulting-training/)
+
+. . .
+
+-   ChatGPT??
+
+. . .
+
+```         
+-   ...eh. It can WRITE code, but it can't test it... 
+-   So what it gives you probably won't work, or won't work correctly, at least not right out of the box
+-   Might be useful for inspiration/finding a starting place, but not for doing your work for you (just like with writing!)
+-   **Cite your sources**
+```
+
+# Plots
+
+## Why plot?
+
+![](images/10/homeownership_table.png)
+
+::: aside
+table from IMS ch 4
+:::
+
+## Why plot?
+
+![](images/10/homeownership_plot.png)
+
+::: aside
+figure from IMS ch 4
+:::
+
+# Plotting a single variable
+
+## Categorical data: bar charts
+
+```{r, echo = FALSE}
+acs12 |> 
+  filter(!is.na(employment)) |> 
+  ggplot(aes(x = employment)) + 
+  geom_bar() + 
+  labs(y = "",
+       x = "Labor force status")
+```
+
+## Numeric data: histograms
+
+```{r, echo = FALSE}
+acs12 |> 
+  filter(!is.na(hrs_work)) |> 
+  ggplot(aes(x = hrs_work)) + 
+  geom_histogram(binwidth = 5) + 
+  labs(y = "Number of people",
+       x = "Hours worked per week")
+```
+
+## How? With ggplot!
+
+The basic structure of a plot:
+
+```{r, eval = FALSE}
+ggplot(data = DATASET, aes(x = X.VARIABLE, 
+                           y = Y.VARIABLE,
+                           OTHER.STUFF)) + 
+  geom_XXXX()
+```
+
+## Back to the bar chart
+
+```{r}
+ggplot(data = acs12, # we want to plot the acs12 dataset
+       aes(x = employment)) + # and specifically the employment variable, which should be on the x axis
+  geom_bar() # and we want that plot to be a bar chart
+```
+
+. . .
+
+-   It's there but it's ugly!
+
+## Cleaning up the bar chart
+
+-   Once we have a basic plot, we can add code to make it nicer
+
+```{r}
+ggplot(data = acs12, aes(x = employment)) + 
+  geom_bar() + 
+  # this changes our axis labels
+  labs(y = "", # make the y axis labels blank
+       x = "Labor force status") # Change the x axis label
+```
+
+## Cleaning up the bar chart
+
+-   What about that NA bar?
+-   There are NAs in our plot because there are NAs in our data set
+
+```{r}
+table(acs12$employment, useNA = "always")
+```
+
+## Cleaning up the bar chart
+
+-   We can use `filter()` to get rid of them before plotting the data
+
+```{r}
+# first we filter out the NAs
+acs12_filtered <- filter(acs12, !is.na(employment))
+
+# then we plot that new dataset
+ggplot(data = acs12_filtered, aes(x = employment)) + 
+  geom_bar() + 
+  labs(y = "", 
+       x = "Labor force status",
+       # and let's add a title too
+       title = "Number of people in each employment category"
+       ) 
+```
+
+## Cleaning up the bar chart
+
+-   We could have also used a pipe to do the same thing in one command
+
+```{r}
+# we start with acs12
+acs12 |> 
+  # then we filter out the NAs
+  filter(!is.na(employment)) |> 
+  # then we make our plot
+  ggplot(aes(x = employment)) + 
+  geom_bar() + 
+  labs(y = "", 
+       x = "Labor force status",
+       # and let's add a title too
+       title = "Number of people in each employment category"
+  ) 
+```
+
+## Back to the histogram
+
+-   It has exactly the same structure!
+
+```{r}
+ggplot(data = acs12, aes(x = hrs_work)) + 
+  #notice that the geom is different--this is what specifies what kind of plot you want
+  geom_histogram()
+```
+
+## Cleaning up the histogram
+
+-   Two messages come up:
+
+    -   `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+    -   Warning: Removed 1041 rows containing non-finite values (`stat_bin()`).
+
+. . .
+
+-   Let's start with the second one
+
+    -   When there are NA variables in categorical variables, R plots them as another category, in their own bar
+    -   But when there are NA variables in numeric variables, R doesn't know what to do
+    -   So here it's warning us that it dropped "non-finite" (ie, NA) values itself
+
+## Cleaning up the histogram
+
+-   It's better if we do that explicitly though
+-   Same as the bar chart, let's filter out the NAs before plotting
+
+```{r}
+acs_filtered <- filter(acs12, !is.na(hrs_work))
+
+ggplot(data = acs_filtered, aes(x = hrs_work)) + 
+  geom_histogram()
+```
+
+## Cleaning up the histogram
+
+-   Now what about that other message?
+
+    -   `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+```{r}
+# Hmm. Let's check the function documentation. 
+# Since it didn't give us this message last time, 
+# it must have something to do with the histogram function.
+?geom_histogram
+```
+
+## Cleaning up the histogram
+
+-   The function documentation tells us that geom_histogram gives you two ways to set the width of the bars: `bins` and `binwidth`.
+
+    -   `binwidth` sets the width of each bar: eg, each bar should represent 5 hours worked, or 10
+    -   We could use `bins` instead to tell R how many bars there should be--10 bars, 20 bars, etc
+
+-   The message is telling us that R took its best dumb guess, but we should pick something better.
+
+## Cleaning up the histogram
+
+```{r}
+acs_filtered <- filter(acs12, !is.na(hrs_work))
+
+ggplot(data = acs_filtered, aes(x = hrs_work)) + 
+  # the binwidth argument goes inside the geom_histogram function
+  # let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc
+  geom_histogram(binwidth = 5) 
+```
+
+## Cleaning up the histogram
+
+-   What if we picked 8 instead? (logic being that 8 is a standard workday)
+
+```{r}
+acs_filtered <- filter(acs12, !is.na(hrs_work))
+
+ggplot(data = acs_filtered, aes(x = hrs_work)) + 
+  geom_histogram(binwidth = 10) 
+```
+
+## Cleaning up the histogram
+
+-   What about 1?
+
+```{r}
+acs_filtered <- filter(acs12, !is.na(hrs_work))
+
+ggplot(data = acs_filtered, aes(x = hrs_work)) + 
+  geom_histogram(binwidth = 1) 
+```
+
+## Cleaning up the histogram
+
+-   Now we've eliminated all the messages--let's add labels!
+
+```{r}
+acs_filtered <- filter(acs12, !is.na(hrs_work))
+
+ggplot(data = acs_filtered, aes(x = hrs_work)) + 
+  geom_histogram(binwidth = 5) + 
+  labs(x = "Number of hours worked per week",
+       y = "Number of people",
+       title = "Distribution of hours worked per week",
+       subtitle = "American Community Survey 2012")
+```
+
+# Exercise: Plotting one variable
+
+# Factors
+
+## Factors
+
+-   Remember our bar plot of helmet wearing habits from the exercise:
+
+```{r}
+ggplot(data = yrbss, aes(x = helmet_12m)) + 
+  geom_bar()
+```
+
+## Factors
+
+-   Categorical variables (those where the values are words/letters/numbers in quotation marks) default to being ordered alphabetically
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE}
+ggplot(data = yrbss, aes(x = helmet_12m)) + 
+  geom_bar()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+glimpse(yrbss)
+```
+:::
+:::
+
+## Factors
+
+-   But we can change that!
+-   *Factors* are a specific type of R object. They are categorical with response options that are represented by words/letters/numbers in quotation marks, but they allow you to assign those options any order you'd like.
+-   Useful for ordinal variables
+-   To change the order of the bars, we change the order of the response options in the data set before we plot.
+
+## Factors
+
+-   We can use `mutate()` with a new function, `factor()`, for this.
+
+```{r}
+table(yrbss$helmet_12m, useNA = "always")
+```
+
+```{r}
+yrbss_reordered <- mutate(yrbss,
+                          # we are turning our helmet variable into a factor
+                          # its name will remain the same (the new variable 
+                          # we create will overwrite the old one)
+                          helmet_12m = factor(
+                            helmet_12m, 
+                            # and we want its response options to be in this order
+                            # least to greatest frequency
+                            levels = c("did not ride", "never", "rarely", 
+                                       "sometimes", "most of time", "always")))
+
+table(yrbss_reordered$helmet_12m)
+```
+
+## Factors
+
+-   Our new plot! I've added better labels as well.
+-   What is easier to see in this plot than the old one?
+-   Does the pattern surprise you?
+
+```{r}
+ggplot(data = yrbss_reordered, aes(x = helmet_12m)) + 
+  geom_bar() + 
+  labs(x = "How frequently did you wear a helmet while riding your bike?",
+       y = "Number of students",
+       title = "Distribution of reported helmet wearing in the last 12 months")
+```
+
+

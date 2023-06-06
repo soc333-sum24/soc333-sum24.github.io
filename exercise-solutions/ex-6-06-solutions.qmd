@@ -1,0 +1,122 @@
+---
+title: "Plotting one variable"
+format: html
+editor: visual
+---
+
+# Exercise: Plotting a single variable
+
+Today's exercise will use a new dataset: the [Youth Risk Behavior Surveillance System](https://www.openintro.org/data/index.php?data=yrbss) data (`yrbss` in R).
+This data set contains information from surveys of high school aged kids conducted between 1991 and 2013 across the United States.
+It contains demographic information and self-reported information on a number of different health and risk-related activities.
+
+## Setup: run this first!
+
+```{r}
+library(tidyverse)
+library(openintro)
+```
+
+## Q1: Getting bearings with this data
+
+First, we have to get an idea of what's in this new data set!
+Skim over [the dataset documentation](https://www.openintro.org/data/index.php?data=yrbss).
+Then run `glimpse` on `yrbss`.
+
+```{r}
+glimpse(yrbss)
+```
+
+## Q2: Helmets
+
+Let's look first at a categorical variable: `helmet_12m`.
+This records how often the respondent says that they wore a helmet while riding their bike in the last 12 months.
+
+#### a. Review: What are the possible response options for this variable? What subtype of categorical variable is it (nominal, ordinal, binary)?
+
+```{r}
+unique(yrbss$helmet_12m)
+```
+
+I would call this an ordinal variable.
+Its response options are categories, but they have an innate ordering.
+
+#### b. Review: Make a table showing how many people are in each category for `helmet_12m`.
+
+```{r}
+table(yrbss$helmet_12m)
+```
+
+#### c. Make a bar plot of this variable.
+
+```{r}
+ggplot(data = yrbss, aes(x = helmet_12m)) + 
+  geom_bar()
+```
+
+#### d. What's the overall, one-sentence story here? What would you say if someone asked you what the research says about teens' use of bike helmets?
+
+A lot of kids don't ride bikes, but most of the ones who do don't ever wear helmets.
+
+(your brain is important wear your helmet!)
+
+#### e. What is a way this plot could be improved/made clearer/made easier to interpret?
+
+It would help if the categories were in order, least to most frequent.
+We could also add better axis labels and drop the NA responses.
+
+## Q3: Strength training
+
+Now let's look at a numeric variable: `strength_training_7d`.
+This is the number of days the respondent said they did strength training in the week before they took the survey.
+
+#### a. Make a histogram of this variable.
+
+```{r}
+ggplot(data = yrbss, aes(x = strength_training_7d)) + 
+  geom_histogram(binwidth = 1) + 
+  labs(x = "Weekly strength training days",
+       y = "Number of students")
+```
+
+#### b. Edit your code above to make there be one bin per day. In other words, we want the width of each bin to be 1. Then rerun your plot.
+
+*Hint: use the `binwidth` or `bins` options for `geom_histogram`*
+
+#### c. Edit your code above to add more meaningful labels to the axes. Then rerun your plot.
+
+## Extra credit
+
+### Q4: TV
+
+#### a. Create a plot showing the distribution of how many hours of TV students report watching on school days.
+
+*Hint: this is measured in hours, so it seems like it should be a numeric variable--but is that how it's treated in the data? Look back at the `glimpse()` output and/or find the response options of the variable to see.*
+
+```{r}
+yrbss |> 
+  mutate(hours_tv_per_school_day = factor(hours_tv_per_school_day, 
+                                          levels = c("do not watch", "<1", "1", "2", "3", "4", "5+"))) |> 
+  filter(!is.na(hours_tv_per_school_day)) |> 
+  ggplot(aes(x = hours_tv_per_school_day)) +
+  geom_bar() + 
+  labs(x = "Hours",
+       y = "",
+       title = "Distribution of amount of TV students watch on school nights")
+```
+
+#### b. Edit your code in (a) to add better axis labels and a title.
+
+#### c. Edit your code in (a) to drop the NA values before plotting.
+
+#### d. Edit your code in (a) to put the bar for "do not watch" first, to the left of "\<1".
+
+*Hint: You'll need to change the order of the variable levels in the data frame before you plot the data. Use the template code below--edit as necessary and paste it into the correct place in your own code.*
+
+*Additionally: some of these values are numbers, but even so, the variable as a whole is treated as categorical--this means all values need quotation marks around them, even the numbers. You can tell this from the `glimpse()` output: the numbers for this variable are in quotes there, while they are not for the strictly numeric variables like height.*
+
+```{r, eval = FALSE}
+mutate(yrbss, 
+       hours_tv_per_school_day = factor(hours_tv_per_school_day, 
+                                        levels = XXXX))
+```

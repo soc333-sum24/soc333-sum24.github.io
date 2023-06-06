@@ -84,16 +84,20 @@ website:
             contents:
                 - href: exercise-solutions/ex-5-31-solutions.qmd
                   text: "5/31: Filtering"
+                - href: exercise-solutions/ex-6-01-solutions.qmd
+                  text: "6/01: Creating variables"
       - section: "Slides"
         contents:
+          - href: slides/11-plots.qmd
+            text: "Lecture 11: Plotting one variable"
           - href: slides/10-describingpt4.qmd
-            text: "Lecture 10: Describing data pt 4"
+            text: "Lecture 10: Pipes"
           - href: slides/09-describingpt3.qmd
-            text: "Lecture 9: Describing data pt 3"
+            text: "Lecture 9: Creating new variables"
           - href: slides/08-describingpt2.qmd
-            text: "Lecture 8: Describing data pt 2"
+            text: "Lecture 8: Filtering data frames"
           - href: slides/07-describingpt1.qmd
-            text: "Lecture 7: Describing data pt 1"
+            text: "Lecture 7: Summary statistics"
           - href: slides/06-workshopping.qmd
             text: "Lecture 6: Workshopping proposals"
           - href: slides/05-studiessamples.qmd

@@ -10,7 +10,7 @@ callout-icon: false
 
 Proposal: bring to class Thursday, May 25; due Tuesday, May 30
 
-Descriptive statistics: due Wednesday, June 7
+Descriptive statistics: due Thursday, June 8
 
 Results: bring to class Thursday, June 15; due Tuesday, June 20
 

@@ -7,7 +7,7 @@ callout-icon: false
 
 In this component of your project, you will explore the variables you will use in your analysis.
 
-## How to complete and submit (due Wednesday, June 7, 11:59pm)
+## How to complete and submit (due Thursday, June 8, 11:59pm)
 
 First, locate and clone the component 2 repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)).
 Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c2_descriptives_yourusername**.
