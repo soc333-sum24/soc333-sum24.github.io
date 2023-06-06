@@ -128,10 +128,31 @@ acs12 |>
 The basic structure of a plot:
 
 ```{r, eval = FALSE}
-ggplot(data = DATASET, aes(x = X.VARIABLE, 
-                           y = Y.VARIABLE,
-                           OTHER.STUFF)) + 
-  geom_XXXX()
+ggplot(
+  data = DATASET, 
+  # aes stands for aesthetics--it is where you tell R what plot features should represent what variables. 
+  aes(
+    # sometimes--like in the single variable plots we're making today--you 
+    # only need to specify one variable (x or y). 
+    # If you plot more than one variable you'll specify more than one thing here.
+    # eg, maybe x and y variables and a third variable for color
+    x = X.VARIABLE, 
+    y = Y.VARIABLE, 
+    fill = FILL.COLOR.VARIABLE,
+    OTHER.STUFF)) + # add more elements to the plot with +
+  # geoms tell R what kind of plot you want to make. More options in the ggplot cheatsheet.
+  geom_XXXX() 
+```
+
+```{r, eval = FALSE}
+# the same thing but without the messy comments
+
+ggplot(data = DATASET, 
+       aes(x = X.VARIABLE, 
+           y = Y.VARIABLE, 
+           fill = FILL.COLOR.VARIABLE,
+           OTHER.STUFF)) +
+  geom_XXXX() 
 ```
 
 ## Back to the bar chart
@@ -148,12 +169,12 @@ ggplot(data = acs12, # we want to plot the acs12 dataset
 
 ## Cleaning up the bar chart
 
--   Once we have a basic plot, we can add code to make it nicer
+-   Once we have a basic plot, we can add more elements to make it nicer
 
 ```{r}
 ggplot(data = acs12, aes(x = employment)) + 
   geom_bar() + 
-  # this changes our axis labels
+  # this layer changes our axis labels
   labs(y = "", # make the y axis labels blank
        x = "Labor force status") # Change the x axis label
 ```
@@ -375,10 +396,14 @@ table(yrbss_reordered$helmet_12m)
 
 ## Factors
 
+::: columns
+::: {.column width="30%"}
 -   Our new plot! I've added better labels as well.
 -   What is easier to see in this plot than the old one?
 -   Does the pattern surprise you?
+:::
 
+::: {.column width="70%"}
 ```{r}
 ggplot(data = yrbss_reordered, aes(x = helmet_12m)) + 
   geom_bar() + 
@@ -386,5 +411,7 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
        y = "Number of students",
        title = "Distribution of reported helmet wearing in the last 12 months")
 ```
+:::
+:::
 
 

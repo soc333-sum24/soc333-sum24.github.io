@@ -1313,7 +1313,7 @@
     "href": "slides/11-plots.html#how-with-ggplot",
     "title": "Plotting a single variable",
     "section": "How? With ggplot!",
-    "text": "How? With ggplot!\nThe basic structure of a plot:\n\nggplot(data = DATASET, aes(x = X.VARIABLE, \n                           y = Y.VARIABLE,\n                           OTHER.STUFF)) + \n  geom_XXXX()"
+    "text": "How? With ggplot!\nThe basic structure of a plot:\n\nggplot(\n  data = DATASET, \n  # aes stands for aesthetics--it is where you tell R what plot features should represent what variables. \n  aes(\n    # sometimes--like in the single variable plots we're making today--you \n    # only need to specify one variable (x or y). \n    # If you plot more than one variable you'll specify more than one thing here.\n    # eg, maybe x and y variables and a third variable for color\n    x = X.VARIABLE, \n    y = Y.VARIABLE, \n    fill = FILL.COLOR.VARIABLE,\n    OTHER.STUFF)) + # add more elements to the plot with +\n  # geoms tell R what kind of plot you want to make. More options in the ggplot cheatsheet.\n  geom_XXXX() \n\n\n# the same thing but without the messy comments\n\nggplot(data = DATASET, \n       aes(x = X.VARIABLE, \n           y = Y.VARIABLE, \n           fill = FILL.COLOR.VARIABLE,\n           OTHER.STUFF)) +\n  geom_XXXX()"
   },
   {
     "objectID": "slides/11-plots.html#back-to-the-bar-chart",
@@ -1327,7 +1327,7 @@
     "href": "slides/11-plots.html#cleaning-up-the-bar-chart",
     "title": "Plotting a single variable",
     "section": "Cleaning up the bar chart",
-    "text": "Cleaning up the bar chart\n\nOnce we have a basic plot, we can add code to make it nicer\n\n\nggplot(data = acs12, aes(x = employment)) + \n  geom_bar() + \n  # this changes our axis labels\n  labs(y = \"\", # make the y axis labels blank\n       x = \"Labor force status\") # Change the x axis label"
+    "text": "Cleaning up the bar chart\n\nOnce we have a basic plot, we can add more elements to make it nicer\n\n\nggplot(data = acs12, aes(x = employment)) + \n  geom_bar() + \n  # this layer changes our axis labels\n  labs(y = \"\", # make the y axis labels blank\n       x = \"Labor force status\") # Change the x axis label"
   },
   {
     "objectID": "slides/11-plots.html#cleaning-up-the-bar-chart-1",
@@ -1446,7 +1446,7 @@
     "href": "slides/11-plots.html#factors-5",
     "title": "Plotting a single variable",
     "section": "Factors",
-    "text": "Factors\n\nOur new plot! I’ve added better labels as well.\nWhat is easier to see in this plot than the old one?\nDoes the pattern surprise you?\n\n\nggplot(data = yrbss_reordered, aes(x = helmet_12m)) + \n  geom_bar() + \n  labs(x = \"How frequently did you wear a helmet while riding your bike?\",\n       y = \"Number of students\",\n       title = \"Distribution of reported helmet wearing in the last 12 months\")\n\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Factors\n\n\n\nOur new plot! I’ve added better labels as well.\nWhat is easier to see in this plot than the old one?\nDoes the pattern surprise you?\n\n\n\nggplot(data = yrbss_reordered, aes(x = helmet_12m)) + \n  geom_bar() + \n  labs(x = \"How frequently did you wear a helmet while riding your bike?\",\n       y = \"Number of students\",\n       title = \"Distribution of reported helmet wearing in the last 12 months\")\n\n\n\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/05-studiessamples.html#today",

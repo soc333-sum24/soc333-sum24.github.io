@@ -534,21 +534,41 @@ Aidan Combs
 <h2>How? With ggplot!</h2>
 <p>The basic structure of a plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> DATASET, <span class="fu">aes</span>(<span class="at">x =</span> X.VARIABLE, </span>
-<span id="cb3-2"><a href="#cb3-2"></a>                           <span class="at">y =</span> Y.VARIABLE,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>                           OTHER.STUFF)) <span class="sc">+</span> </span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">geom_XXXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="at">data =</span> DATASET, </span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="co"># aes stands for aesthetics--it is where you tell R what plot features should represent what variables. </span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">aes</span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="co"># sometimes--like in the single variable plots we're making today--you </span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="co"># only need to specify one variable (x or y). </span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="co"># If you plot more than one variable you'll specify more than one thing here.</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>    <span class="co"># eg, maybe x and y variables and a third variable for color</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>    <span class="at">x =</span> X.VARIABLE, </span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="at">y =</span> Y.VARIABLE, </span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="at">fill =</span> FILL.COLOR.VARIABLE,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    OTHER.STUFF)) <span class="sc">+</span> <span class="co"># add more elements to the plot with +</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a>  <span class="co"># geoms tell R what kind of plot you want to make. More options in the ggplot cheatsheet.</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">geom_XXXX</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># the same thing but without the messy comments</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> DATASET, </span>
+<span id="cb4-4"><a href="#cb4-4"></a>       <span class="fu">aes</span>(<span class="at">x =</span> X.VARIABLE, </span>
+<span id="cb4-5"><a href="#cb4-5"></a>           <span class="at">y =</span> Y.VARIABLE, </span>
+<span id="cb4-6"><a href="#cb4-6"></a>           <span class="at">fill =</span> FILL.COLOR.VARIABLE,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>           OTHER.STUFF)) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">geom_XXXX</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="back-to-the-bar-chart" class="slide level2">
 <h2>Back to the bar chart</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="co"># we want to plot the acs12 dataset</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> <span class="co"># and specifically the employment variable, which should be on the x axis</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_bar</span>() <span class="co"># and we want that plot to be a bar chart</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="co"># we want to plot the acs12 dataset</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> <span class="co"># and specifically the employment variable, which should be on the x axis</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_bar</span>() <span class="co"># and we want that plot to be a bar chart</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><div class="fragment">
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><div class="fragment">
 <ul>
 <li>It’s there but it’s ugly!</li>
 </ul>
@@ -557,17 +577,17 @@ Aidan Combs
 <section id="cleaning-up-the-bar-chart" class="slide level2">
 <h2>Cleaning up the bar chart</h2>
 <ul>
-<li>Once we have a basic plot, we can add code to make it nicer</li>
+<li>Once we have a basic plot, we can add more elements to make it nicer</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="co"># this changes our axis labels</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, <span class="co"># make the y axis labels blank</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>) <span class="co"># Change the x axis label</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="co"># this layer changes our axis labels</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, <span class="co"># make the y axis labels blank</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>) <span class="co"># Change the x axis label</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-bar-chart-1" class="slide level2">
 <h2>Cleaning up the bar chart</h2>
 <ul>
@@ -575,7 +595,7 @@ Aidan Combs
 <li>There are NAs in our plot because there are NAs in our data set</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 not in labor force         unemployed           employed               &lt;NA&gt; 
@@ -589,53 +609,53 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <li>We can use <code>filter()</code> to get rid of them before plotting the data</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># first we filter out the NAs</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>acs12_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(employment))</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># then we plot that new dataset</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12_filtered, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
-<span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, </span>
-<span id="cb8-8"><a href="#cb8-8"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>,</span>
-<span id="cb8-9"><a href="#cb8-9"></a>       <span class="co"># and let's add a title too</span></span>
-<span id="cb8-10"><a href="#cb8-10"></a>       <span class="at">title =</span> <span class="st">"Number of people in each employment category"</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>       ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># first we filter out the NAs</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>acs12_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(employment))</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># then we plot that new dataset</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12_filtered, <span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, </span>
+<span id="cb9-8"><a href="#cb9-8"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9"></a>       <span class="co"># and let's add a title too</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>       <span class="at">title =</span> <span class="st">"Number of people in each employment category"</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>       ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-bar-chart-3" class="slide level2">
 <h2>Cleaning up the bar chart</h2>
 <ul>
 <li>We could have also used a pipe to do the same thing in one command</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># we start with acs12</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>acs12 <span class="sc">|&gt;</span> </span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="co"># then we filter out the NAs</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(employment)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-5"><a href="#cb9-5"></a>  <span class="co"># then we make our plot</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
-<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, </span>
-<span id="cb9-9"><a href="#cb9-9"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>,</span>
-<span id="cb9-10"><a href="#cb9-10"></a>       <span class="co"># and let's add a title too</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a>       <span class="at">title =</span> <span class="st">"Number of people in each employment category"</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># we start with acs12</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="co"># then we filter out the NAs</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(employment)) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="co"># then we make our plot</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> employment)) <span class="sc">+</span> </span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb10-8"><a href="#cb10-8"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>, </span>
+<span id="cb10-9"><a href="#cb10-9"></a>       <span class="at">x =</span> <span class="st">"Labor force status"</span>,</span>
+<span id="cb10-10"><a href="#cb10-10"></a>       <span class="co"># and let's add a title too</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>       <span class="at">title =</span> <span class="st">"Number of people in each employment category"</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="back-to-the-histogram" class="slide level2">
 <h2>Back to the histogram</h2>
 <ul>
 <li>It has exactly the same structure!</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="co">#notice that the geom is different--this is what specifies what kind of plot you want</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs12, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="co">#notice that the geom is different--this is what specifies what kind of plot you want</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-histogram" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
@@ -663,13 +683,13 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <li>Same as the bar chart, let’s filter out the NAs before plotting</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-histogram-2" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
@@ -679,10 +699,10 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Hmm. Let's check the function documentation. </span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="co"># Since it didn't give us this message last time, </span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="co"># it must have something to do with the histogram function.</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>?geom_histogram</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Hmm. Let's check the function documentation. </span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Since it didn't give us this message last time, </span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># it must have something to do with the histogram function.</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>?geom_histogram</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="cleaning-up-the-histogram-3" class="slide level2">
@@ -699,58 +719,58 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <section id="cleaning-up-the-histogram-4" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="co"># the binwidth argument goes inside the geom_histogram function</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="co"># let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="co"># the binwidth argument goes inside the geom_histogram function</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="co"># let's say that each bar should equal five hours--so 0-5 hours, 5-10, etc</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-histogram-5" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
 <li>What if we picked 8 instead? (logic being that 8 is a standard workday)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-histogram-6" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
 <li>What about 1?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
-<span id="cb15-2"><a href="#cb15-2"></a></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
 <section id="cleaning-up-the-histogram-7" class="slide level2">
 <h2>Cleaning up the histogram</h2>
 <ul>
 <li>Now we’ve eliminated all the messages–let’s add labels!</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
-<span id="cb16-2"><a href="#cb16-2"></a></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
-<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
-<span id="cb16-5"><a href="#cb16-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of hours worked per week"</span>,</span>
-<span id="cb16-6"><a href="#cb16-6"></a>       <span class="at">y =</span> <span class="st">"Number of people"</span>,</span>
-<span id="cb16-7"><a href="#cb16-7"></a>       <span class="at">title =</span> <span class="st">"Distribution of hours worked per week"</span>,</span>
-<span id="cb16-8"><a href="#cb16-8"></a>       <span class="at">subtitle =</span> <span class="st">"American Community Survey 2012"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>acs_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12, <span class="sc">!</span><span class="fu">is.na</span>(hrs_work))</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">ggplot</span>(<span class="at">data =</span> acs_filtered, <span class="fu">aes</span>(<span class="at">x =</span> hrs_work)) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of hours worked per week"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6"></a>       <span class="at">y =</span> <span class="st">"Number of people"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7"></a>       <span class="at">title =</span> <span class="st">"Distribution of hours worked per week"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8"></a>       <span class="at">subtitle =</span> <span class="st">"American Community Survey 2012"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section></section>
 <section id="exercise-plotting-one-variable" class="title-slide slide level1 center">
 <h1>Exercise: Plotting one variable</h1>
 
@@ -767,11 +787,11 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <li>Remember our bar plot of helmet wearing habits from the exercise:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="fu">aes</span>(<span class="at">x =</span> helmet_12m)) <span class="sc">+</span> </span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="fu">aes</span>(<span class="at">x =</span> helmet_12m)) <span class="sc">+</span> </span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<img data-src="11-plots_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
 <section id="factors-2" class="slide level2">
 <h2>Factors</h2>
 <ul>
@@ -781,12 +801,12 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="11-plots_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+<p><img data-src="11-plots_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">glimpse</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">glimpse</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 13,583
 Columns: 13
@@ -823,7 +843,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <li>We can use <code>mutate()</code> with a new function, <code>factor()</code>, for this.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">table</span>(yrbss<span class="sc">$</span>helmet_12m, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">table</span>(yrbss<span class="sc">$</span>helmet_12m, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
       always did not ride most of time        never       rarely    sometimes 
@@ -833,18 +853,18 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>yrbss_reordered <span class="ot">&lt;-</span> <span class="fu">mutate</span>(yrbss,</span>
-<span id="cb22-2"><a href="#cb22-2"></a>                          <span class="co"># we are turning our helmet variable into a factor</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>                          <span class="co"># its name will remain the same (the new variable </span></span>
-<span id="cb22-4"><a href="#cb22-4"></a>                          <span class="co"># we create will overwrite the old one)</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>                          <span class="at">helmet_12m =</span> <span class="fu">factor</span>(</span>
-<span id="cb22-6"><a href="#cb22-6"></a>                            helmet_12m, </span>
-<span id="cb22-7"><a href="#cb22-7"></a>                            <span class="co"># and we want its response options to be in this order</span></span>
-<span id="cb22-8"><a href="#cb22-8"></a>                            <span class="co"># least to greatest frequency</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a>                            <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not ride"</span>, <span class="st">"never"</span>, <span class="st">"rarely"</span>, </span>
-<span id="cb22-10"><a href="#cb22-10"></a>                                       <span class="st">"sometimes"</span>, <span class="st">"most of time"</span>, <span class="st">"always"</span>)))</span>
-<span id="cb22-11"><a href="#cb22-11"></a></span>
-<span id="cb22-12"><a href="#cb22-12"></a><span class="fu">table</span>(yrbss_reordered<span class="sc">$</span>helmet_12m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>yrbss_reordered <span class="ot">&lt;-</span> <span class="fu">mutate</span>(yrbss,</span>
+<span id="cb23-2"><a href="#cb23-2"></a>                          <span class="co"># we are turning our helmet variable into a factor</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>                          <span class="co"># its name will remain the same (the new variable </span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>                          <span class="co"># we create will overwrite the old one)</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>                          <span class="at">helmet_12m =</span> <span class="fu">factor</span>(</span>
+<span id="cb23-6"><a href="#cb23-6"></a>                            helmet_12m, </span>
+<span id="cb23-7"><a href="#cb23-7"></a>                            <span class="co"># and we want its response options to be in this order</span></span>
+<span id="cb23-8"><a href="#cb23-8"></a>                            <span class="co"># least to greatest frequency</span></span>
+<span id="cb23-9"><a href="#cb23-9"></a>                            <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not ride"</span>, <span class="st">"never"</span>, <span class="st">"rarely"</span>, </span>
+<span id="cb23-10"><a href="#cb23-10"></a>                                       <span class="st">"sometimes"</span>, <span class="st">"most of time"</span>, <span class="st">"always"</span>)))</span>
+<span id="cb23-11"><a href="#cb23-11"></a></span>
+<span id="cb23-12"><a href="#cb23-12"></a><span class="fu">table</span>(yrbss_reordered<span class="sc">$</span>helmet_12m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 did not ride        never       rarely    sometimes most of time       always 
@@ -854,19 +874,24 @@ did not ride        never       rarely    sometimes most of time       always
 </section>
 <section id="factors-5" class="slide level2">
 <h2>Factors</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
 <ul>
 <li>Our new plot! I’ve added better labels as well.</li>
 <li>What is easier to see in this plot than the old one?</li>
 <li>Does the pattern surprise you?</li>
 </ul>
+</div><div class="column" style="width:70%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss_reordered, <span class="fu">aes</span>(<span class="at">x =</span> helmet_12m)) <span class="sc">+</span> </span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"How frequently did you wear a helmet while riding your bike?"</span>,</span>
-<span id="cb24-4"><a href="#cb24-4"></a>       <span class="at">y =</span> <span class="st">"Number of students"</span>,</span>
-<span id="cb24-5"><a href="#cb24-5"></a>       <span class="at">title =</span> <span class="st">"Distribution of reported helmet wearing in the last 12 months"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss_reordered, <span class="fu">aes</span>(<span class="at">x =</span> helmet_12m)) <span class="sc">+</span> </span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"How frequently did you wear a helmet while riding your bike?"</span>,</span>
+<span id="cb25-4"><a href="#cb25-4"></a>       <span class="at">y =</span> <span class="st">"Number of students"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5"></a>       <span class="at">title =</span> <span class="st">"Distribution of reported helmet wearing in the last 12 months"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="11-plots_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<p><img data-src="11-plots_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 
