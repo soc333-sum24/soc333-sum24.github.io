@@ -70,6 +70,8 @@ glimpse(yrbss)
 table(yrbss$helmet_12m, useNA = "always")
 ```
 
+. . .
+
 ```{r}
 yrbss_reordered <- mutate(yrbss,
                           # we are turning our helmet variable into a factor
@@ -107,7 +109,7 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 
 # Multivariate plots
 
-## Plots for relationships between variables
+## Plots for relationships between variables {.smaller}
 
 -   Plots are an excellent tool for looking at the relationships between variables.
 -   The same structure applies for plotting two/three/four/etc variables as one variable.
@@ -151,15 +153,27 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 
     -   Can you add color (one per category)?
     -   Can you break a big plot into several small plots (facets)?
-    
-        -   No time to cover facets in lecture, but it is in your extra credit
 
 . . .
 
 -   Adding an additional numeric variable
 
-    -   Can you add size?
     -   Can you add color (along a gradient)?
+    -   Can you add size?
+    
+## Adding variables in ggplot
+
+-   `aes()` (aesthetics) is where we tell R what variables we want represented by what plot elements
+
+-   For example: 
+
+    -   `ggplot(acs12, aes(x = income))`
+    -   `ggplot(acs12, aes(x = income, y = married))`
+    -   `ggplot(acs12, aes(x = income, y = married, color = gender))`
+    
+    -   `ggplot(acs12, aes(x = time_to_work, y = lang, size = income))`
+    -   `ggplot(acs12, aes(x = time_to_work, y = lang, color = income))`
+
     
 ## Bar charts for two categorical variables
 
@@ -167,7 +181,6 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 -   We can use color!
 
     - `color` (for lines and points) and `fill` (for filling in areas like bars) are the arguments we use inside `aes()` to add color.
-
 
 ::: columns
 ::: {.column width="60%"}
@@ -179,7 +192,7 @@ glimpse(yrbss)
 
 ::: {.column width="40%"}
 ```{r}
-# will give me the response options
+# this will give me the response options
 table(yrbss$text_while_driving_30d, 
       yrbss$gender, 
       useNA = "always") 
@@ -196,11 +209,10 @@ table(yrbss$text_while_driving_30d,
 yrbss |> 
   filter(!is.na(gender) & !is.na(text_while_driving_30d)) |> # remove missing data
   mutate(text_while_driving_30d = factor(text_while_driving_30d, # change the order of the bars
-                                         levels = c("did not drive", "0", 
-                                                    "1-2", "3-5", "6-9",
-                                                    "10-19", "20-29", "30"))) |> 
-  ggplot(aes(x = text_while_driving_30d, 
-             fill = gender)) + # we add the fill argument here with the variable we want the fill color to represent.
+                                         levels = c("did not drive", "0", "1-2", "3-5", 
+                                                    "6-9", "10-19", "20-29", "30"))) |> 
+  # we add the fill argument here with the variable we want the fill color to represent.
+  ggplot(aes(x = text_while_driving_30d, fill = gender)) + 
   geom_bar()
 ```
 
@@ -212,13 +224,13 @@ yrbss |>
 yrbss |> 
   filter(!is.na(gender) & !is.na(text_while_driving_30d)) |>
   mutate(text_while_driving_30d = factor(text_while_driving_30d,
-                                         levels = c("did not drive", "0", 
-                                                    "1-2", "3-5", "6-9",
-                                                    "10-19", "20-29", "30"))) |> 
+                                         levels = c("did not drive", "0", "1-2", "3-5", 
+                                                    "6-9", "10-19", "20-29", "30"))) |> 
   ggplot(aes(x = text_while_driving_30d, fill = gender)) + 
   geom_bar(position = "dodge") + 
   labs(x = "Number of days last month respondent texted while driving",
        y = "",
+       # I can change the label on other aes features just like on axes--this goes above the legend
        fill = "Sex")
 ```
 
@@ -240,7 +252,7 @@ yrbss |>
        fill = "Sex")
 ```
 
-## New plots for two variables: scatter plots and boxplots
+## New plots for two variables: scatter plots and boxplots {.smaller}
 
 -   Scatter plots show the relationship between two numeric variables
 -   Explanatory (independent) variable on the x axis, response (dependent) variable on the y axis
@@ -254,7 +266,7 @@ ggplot(acs12, aes(x = time_to_work, y = hrs_work)) + # we specify x and y axis v
        y = "Hours worked per week")
 ```
 
-## Scatter plot with color
+## Scatter plot with color {.smaller}
 
 -   What if we wanted to add a third variable? How about gender?
 -   One option is to use color
@@ -328,9 +340,15 @@ acs12 |> # we start with the acs
     -   This walks through different kinds of plots and their strengths and weaknesses. It includes lots of example code.
     -   There are lots of resources here for making plots both more interpretable and more beautiful!
 
--   If this interests you, I recommend [Soc 232: Visualizing Social Data](https://visualizingsociety.com/), taught by Dr. Kieran Healy
+-   If this interests you, I recommend:
 
-    -   or, Dr. Healy's book, [Data Visualization: A Practical Introduction](https://socviz.co/)
+    -   [Soc 232: Visualizing Social Data](https://visualizingsociety.com/), taught by Dr. Kieran Healy
+
+        -   or, Dr. Healy's book, [Data Visualization: A Practical Introduction](https://socviz.co/)
+    
+    -   [Stat 313: Advanced Data Visualization](https://mine-cr.com/teaching/sta313/), taught by Dr. Mine Çetinkaya-Rundel
+    
+    -   Soc 223: Data Analytics and Visualization for Business, taught by Dr. Stephen Vaisey
     
 ## Steps to make a plot for your project
 
@@ -347,9 +365,9 @@ acs12 |> # we start with the acs
 -   Step 4: Make the super simple version
 -   Step 5: Refine it to make it more interpretable
     
-    -   At minimum, add labels and drop NA values if necessary
+    -   My expectation: add labels and drop NA values if necessary
 
-## For tomorrow
+## For tomorrow {.smaller}
 
--   No mandatory exercise on multivariate plots--but there is extra credit available if you would like some practice before diving into part 4 of your project (repo on GitHub).
--   Try out part 4 of your project. Come tomorrow with questions. 
+-   No exercise on multivariate plots
+-   Try out part 4 of your project instead! Come tomorrow with questions. 

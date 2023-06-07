@@ -86,6 +86,8 @@ website:
                   text: "5/31: Filtering"
                 - href: exercise-solutions/ex-6-01-solutions.qmd
                   text: "6/01: Creating variables"
+                - href: exercise-solutions/ex-6-06-solutions.qmd
+                  text: "6/06: Single variable plots"
       - section: "Slides"
         contents:
           - href: slides/11-plots.qmd

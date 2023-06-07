@@ -509,6 +509,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
          311 </code></pre>
 </div>
 </div>
+<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>yrbss_reordered <span class="ot">&lt;-</span> <span class="fu">mutate</span>(yrbss,</span>
 <span id="cb6-2"><a href="#cb6-2"></a>                          <span class="co"># we are turning our helmet variable into a factor</span></span>
@@ -526,6 +527,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <pre><code>
 did not ride        never       rarely    sometimes most of time       always 
         4549         6977          713          341          293          399 </code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -557,7 +559,7 @@ did not ride        never       rarely    sometimes most of time       always
 <h1>Multivariate plots</h1>
 
 </section>
-<section id="plots-for-relationships-between-variables" class="slide level2">
+<section id="plots-for-relationships-between-variables" class="slide level2 smaller">
 <h2>Plots for relationships between variables</h2>
 <ul>
 <li>Plots are an excellent tool for looking at the relationships between variables.</li>
@@ -608,11 +610,8 @@ did not ride        never       rarely    sometimes most of time       always
 <ul>
 <li><p>Adding an additional categorical variable</p>
 <ul>
-<li><p>Can you add color (one per category)?</p></li>
-<li><p>Can you break a big plot into several small plots (facets)?</p>
-<ul>
-<li>No time to cover facets in lecture, but it is in your extra credit</li>
-</ul></li>
+<li>Can you add color (one per category)?</li>
+<li>Can you break a big plot into several small plots (facets)?</li>
 </ul></li>
 </ul>
 </div>
@@ -620,11 +619,25 @@ did not ride        never       rarely    sometimes most of time       always
 <ul>
 <li><p>Adding an additional numeric variable</p>
 <ul>
-<li>Can you add size?</li>
 <li>Can you add color (along a gradient)?</li>
+<li>Can you add size?</li>
 </ul></li>
 </ul>
 </div>
+</section>
+<section id="adding-variables-in-ggplot" class="slide level2">
+<h2>Adding variables in ggplot</h2>
+<ul>
+<li><p><code>aes()</code> (aesthetics) is where we tell R what variables we want represented by what plot elements</p></li>
+<li><p>For example:</p>
+<ul>
+<li><p><code>ggplot(acs12, aes(x = income))</code></p></li>
+<li><p><code>ggplot(acs12, aes(x = income, y = married))</code></p></li>
+<li><p><code>ggplot(acs12, aes(x = income, y = married, color = gender))</code></p></li>
+<li><p><code>ggplot(acs12, aes(x = time_to_work, y = lang, size = income))</code></p></li>
+<li><p><code>ggplot(acs12, aes(x = time_to_work, y = lang, color = income))</code></p></li>
+</ul></li>
+</ul>
 </section>
 <section id="bar-charts-for-two-categorical-variables" class="slide level2">
 <h2>Bar charts for two categorical variables</h2>
@@ -660,7 +673,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># will give me the response options</span></span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># this will give me the response options</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="fu">table</span>(yrbss<span class="sc">$</span>text_while_driving_30d, </span>
 <span id="cb11-3"><a href="#cb11-3"></a>      yrbss<span class="sc">$</span>gender, </span>
 <span id="cb11-4"><a href="#cb11-4"></a>      <span class="at">useNA =</span> <span class="st">"always"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -691,12 +704,11 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>yrbss <span class="sc">|&gt;</span> </span>
 <span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(gender) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(text_while_driving_30d)) <span class="sc">|&gt;</span> <span class="co"># remove missing data</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">mutate</span>(<span class="at">text_while_driving_30d =</span> <span class="fu">factor</span>(text_while_driving_30d, <span class="co"># change the order of the bars</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>                                         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not drive"</span>, <span class="st">"0"</span>, </span>
-<span id="cb13-5"><a href="#cb13-5"></a>                                                    <span class="st">"1-2"</span>, <span class="st">"3-5"</span>, <span class="st">"6-9"</span>,</span>
-<span id="cb13-6"><a href="#cb13-6"></a>                                                    <span class="st">"10-19"</span>, <span class="st">"20-29"</span>, <span class="st">"30"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_while_driving_30d, </span>
-<span id="cb13-8"><a href="#cb13-8"></a>             <span class="at">fill =</span> gender)) <span class="sc">+</span> <span class="co"># we add the fill argument here with the variable we want the fill color to represent.</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4"></a>                                         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not drive"</span>, <span class="st">"0"</span>, <span class="st">"1-2"</span>, <span class="st">"3-5"</span>, </span>
+<span id="cb13-5"><a href="#cb13-5"></a>                                                    <span class="st">"6-9"</span>, <span class="st">"10-19"</span>, <span class="st">"20-29"</span>, <span class="st">"30"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="co"># we add the fill argument here with the variable we want the fill color to represent.</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_while_driving_30d, <span class="at">fill =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="12-plots2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section></section>
@@ -710,13 +722,13 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>yrbss <span class="sc">|&gt;</span> </span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(gender) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(text_while_driving_30d)) <span class="sc">|&gt;</span></span>
 <span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">mutate</span>(<span class="at">text_while_driving_30d =</span> <span class="fu">factor</span>(text_while_driving_30d,</span>
-<span id="cb14-4"><a href="#cb14-4"></a>                                         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not drive"</span>, <span class="st">"0"</span>, </span>
-<span id="cb14-5"><a href="#cb14-5"></a>                                                    <span class="st">"1-2"</span>, <span class="st">"3-5"</span>, <span class="st">"6-9"</span>,</span>
-<span id="cb14-6"><a href="#cb14-6"></a>                                                    <span class="st">"10-19"</span>, <span class="st">"20-29"</span>, <span class="st">"30"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_while_driving_30d, <span class="at">fill =</span> gender)) <span class="sc">+</span> </span>
-<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span> </span>
-<span id="cb14-9"><a href="#cb14-9"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of days last month respondent texted while driving"</span>,</span>
-<span id="cb14-10"><a href="#cb14-10"></a>       <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb14-4"><a href="#cb14-4"></a>                                         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"did not drive"</span>, <span class="st">"0"</span>, <span class="st">"1-2"</span>, <span class="st">"3-5"</span>, </span>
+<span id="cb14-5"><a href="#cb14-5"></a>                                                    <span class="st">"6-9"</span>, <span class="st">"10-19"</span>, <span class="st">"20-29"</span>, <span class="st">"30"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> text_while_driving_30d, <span class="at">fill =</span> gender)) <span class="sc">+</span> </span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span> </span>
+<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of days last month respondent texted while driving"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9"></a>       <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb14-10"><a href="#cb14-10"></a>       <span class="co"># I can change the label on other aes features just like on axes--this goes above the legend</span></span>
 <span id="cb14-11"><a href="#cb14-11"></a>       <span class="at">fill =</span> <span class="st">"Sex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -727,7 +739,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 </ul>
 
 <img data-src="12-plots2_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="new-plots-for-two-variables-scatter-plots-and-boxplots" class="slide level2">
+<section id="new-plots-for-two-variables-scatter-plots-and-boxplots" class="slide level2 smaller">
 <h2>New plots for two variables: scatter plots and boxplots</h2>
 <ul>
 <li>Scatter plots show the relationship between two numeric variables</li>
@@ -744,7 +756,7 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 
 </div>
 <img data-src="12-plots2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="scatter-plot-with-color" class="slide level2">
+<section id="scatter-plot-with-color" class="slide level2 smaller">
 <h2>Scatter plot with color</h2>
 <ul>
 <li>What if we wanted to add a third variable? How about gender?</li>
@@ -831,9 +843,14 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <li>This walks through different kinds of plots and their strengths and weaknesses. It includes lots of example code.</li>
 <li>There are lots of resources here for making plots both more interpretable and more beautiful!</li>
 </ul></li>
-<li><p>If this interests you, I recommend <a href="https://visualizingsociety.com/">Soc 232: Visualizing Social Data</a>, taught by Dr.&nbsp;Kieran Healy</p>
+<li><p>If this interests you, I recommend:</p>
+<ul>
+<li><p><a href="https://visualizingsociety.com/">Soc 232: Visualizing Social Data</a>, taught by Dr.&nbsp;Kieran Healy</p>
 <ul>
 <li>or, Dr.&nbsp;Healy’s book, <a href="https://socviz.co/">Data Visualization: A Practical Introduction</a></li>
+</ul></li>
+<li><p><a href="https://mine-cr.com/teaching/sta313/">Stat 313: Advanced Data Visualization</a>, taught by Dr.&nbsp;Mine Çetinkaya-Rundel</p></li>
+<li><p>Soc 223: Data Analytics and Visualization for Business, taught by Dr.&nbsp;Stephen Vaisey</p></li>
 </ul></li>
 </ul>
 </section>
@@ -853,15 +870,15 @@ $ school_night_hours_sleep &lt;chr&gt; "8", "6", "&lt;5", "6", "9", "8", "9", "6
 <li><p>Step 4: Make the super simple version</p></li>
 <li><p>Step 5: Refine it to make it more interpretable</p>
 <ul>
-<li>At minimum, add labels and drop NA values if necessary</li>
+<li>My expectation: add labels and drop NA values if necessary</li>
 </ul></li>
 </ul>
 </section>
-<section id="for-tomorrow" class="slide level2">
+<section id="for-tomorrow" class="slide level2 smaller">
 <h2>For tomorrow</h2>
 <ul>
-<li>No mandatory exercise on multivariate plots–but there is extra credit available if you would like some practice before diving into part 4 of your project (repo on GitHub).</li>
-<li>Try out part 4 of your project. Come tomorrow with questions.</li>
+<li>No exercise on multivariate plots</li>
+<li>Try out part 4 of your project instead! Come tomorrow with questions.</li>
 </ul>
 
 
