@@ -350,11 +350,32 @@
     "text": "Submission\nWhen you are done, commit your changes and push them to GitHub! (instructions)"
   },
   {
+    "objectID": "multivariateplots.html",
+    "href": "multivariateplots.html",
+    "title": "Multivariate plots extra credit",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata"
+  },
+  {
+    "objectID": "multivariateplots.html#three-numeric-variables-using-size-and-color",
+    "href": "multivariateplots.html#three-numeric-variables-using-size-and-color",
+    "title": "Multivariate plots extra credit",
+    "section": "Three numeric variables: using size and color",
+    "text": "Three numeric variables: using size and color\nYou might have a question that involves three numeric variables–for example, “how does the relationship between hours worked and income vary by age?”\nScatter plots are the natural choice for showing the relationship between two numeric variables. We can add a third numeric variable using size or color.\nHere, I am putting hours worked on the x axis (as an explanatory variable), income on the y axis (as a dependent variable), and using color to plot respondent age (also an explanatory variable).\nThis is the super simple version of this plot. It could be improved by dropping NA values and adding labels.\n\nggplot(acs12, aes(x = hrs_work, y = income, color = age)) + \n  geom_point()\n\nWarning: Removed 1041 rows containing missing values (`geom_point()`).\n\n\n\n\n\nThis is exactly the same plot, but here I’m mapping the age variable using size (and I’m dropping NA values–notice how this changes the age scale to start around 20, rather than 0). This varies the size of the points based on the value of age.\n\nacs12 |&gt; \n  filter(!is.na(hrs_work)) |&gt; \n  ggplot(aes(x = hrs_work, y = income, size = age)) + \n  geom_point()\n\n\n\n\nIn general, income seems to rise with hours worked, at least up to a point. There doesn’t seem to be a strong relationship with age, though as they are neither of these plots makes that especially easy to determine."
+  },
+  {
+    "objectID": "multivariateplots.html#facets",
+    "href": "multivariateplots.html#facets",
+    "title": "Multivariate plots extra credit",
+    "section": "Facets",
+    "text": "Facets\nHere, I’ll show the relationship between education level, hours worked, and ability status, just like we did in lecture. In lecture we did this using a boxplot. Here, I’ll do the same thing using a series of histograms.\nThe takeaway from this is that there are many ways to show the same information!\nI will be using facets–R’s word for smaller subplots–to show how the shape of the hours worked histogram changes across different education levels and ability statuses.\nFirst, let’s temporarily put disability aside and just show the relationship between hours worked and education status using histograms and facets.\n\nacs12 |&gt; \n  filter(employment == \"employed\") |&gt; #filtering out people who are not employed\n  ggplot(aes(x = hrs_work)) + \n  geom_histogram(binwidth = 8) +\n  # this additional geom adds a vertical line at 40 hours, where we know everyone's median is\n  # this is not necessary, but it makes it easier to compare distributions\n  geom_vline(xintercept = 40) + \n  # this facet command tells R that it should actually make several small plots,\n  # one for each value of \"edu\" (hs or lower, college, grad)\n  facet_wrap(facets = \"edu\") \n\n\n\n\nNow we have three small plots!\nWhat if we want to also show ability status? One way is to use color.\nThis time, I will facet by ability status, and use color to show different education levels. I will position the histogram bars next to each other with position = \"dodge\".\n\nacs12 |&gt; \n  filter(employment == \"employed\") |&gt; \n  ggplot(aes(x = hrs_work, fill = edu)) + # notice that I added the fill argument here\n  geom_histogram(binwidth = 8, position = \"dodge\") + # and the position = \"dodge\" argument here\n  facet_wrap(facets = \"disability\", # and I changed this to facet by disability instead of edu\n             scales = \"free\") # this argument makes it so that the different facets can have different axis limits--useful here because there are many more respondents without disabilities than with disabilities\n\n\n\n\n\nQ1: Facet practice\nAnother way to show this same relationship would have been to use color to indicate ability status and facet by education level. Edit the code below to\n\nacs12 |&gt; \n  filter(employment == \"employed\") |&gt; \n  ggplot(aes(x = hrs_work, fill = edu)) +\n  geom_histogram(binwidth = 8, position = \"dodge\") +\n  facet_wrap(facets = \"disability\", \n             scales = \"free\")"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\n\n    \nWed, Jun 7\nPlots pt 2\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11\n\n\nComponent 2: Descriptive statistics\n\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\n\n    \nWed, Jun 14\nBest fit lines pt 1\n\nIMS ch 7\n\n\n\n\n    \nThu, Jun 15\nBest fit lines pt 2\n\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\nComponent 5: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11\n\n\nComponent 2: Descriptive statistics\n\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\n\n    \nWed, Jun 14\nBest fit lines pt 1\n\nIMS ch 7\n\n\n\n\n    \nThu, Jun 15\nBest fit lines pt 2\n\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\nComponent 5: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
   },
   {
     "objectID": "slides/06-workshopping.html#today",
@@ -677,6 +698,181 @@
     "title": "Welcome to SOCIOL 333",
     "section": "Let’s get started!",
     "text": "Let’s get started!\n\nToday’s in-class exercise (15 min):\nGet a GitHub account if you don’t have one (username advice in the survey)\nComplete the Getting to Know You survey (link in your email)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
+    "objectID": "slides/12-plots2.html#logistics",
+    "href": "slides/12-plots2.html#logistics",
+    "title": "Plotting relationships between variables",
+    "section": "Logistics",
+    "text": "Logistics\n\nProject component 2, descriptive statistics, due tomorrow 11:59pm\nI recommend trying all parts today and coming tomorrow with questions\nTomorrow we will start on hypothesis testing"
+  },
+  {
+    "objectID": "slides/12-plots2.html#today",
+    "href": "slides/12-plots2.html#today",
+    "title": "Plotting relationships between variables",
+    "section": "Today",
+    "text": "Today\n\nSingle variable plots exercise solutions\nFactors\nMultivariate plots"
+  },
+  {
+    "objectID": "slides/12-plots2.html#factors-1",
+    "href": "slides/12-plots2.html#factors-1",
+    "title": "Plotting relationships between variables",
+    "section": "Factors",
+    "text": "Factors\n\nRemember our bar plot of helmet wearing habits from the exercise:\n\n\nggplot(data = yrbss, aes(x = helmet_12m)) + \n  geom_bar()"
+  },
+  {
+    "objectID": "slides/12-plots2.html#factors-2",
+    "href": "slides/12-plots2.html#factors-2",
+    "title": "Plotting relationships between variables",
+    "section": "Factors",
+    "text": "Factors\n\nCategorical variables (those where the values are words/letters/numbers in quotation marks) default to being ordered alphabetically\n\n\n\n\n\n\n\n\n\n\nglimpse(yrbss)\n\nRows: 13,583\nColumns: 13\n$ age                      &lt;int&gt; 14, 14, 15, 15, 15, 15, 15, 14, 15, 15, 15, 1…\n$ gender                   &lt;chr&gt; \"female\", \"female\", \"female\", \"female\", \"fema…\n$ grade                    &lt;chr&gt; \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", …\n$ hispanic                 &lt;chr&gt; \"not\", \"not\", \"hispanic\", \"not\", \"not\", \"not\"…\n$ race                     &lt;chr&gt; \"Black or African American\", \"Black or Africa…\n$ height                   &lt;dbl&gt; NA, NA, 1.73, 1.60, 1.50, 1.57, 1.65, 1.88, 1…\n$ weight                   &lt;dbl&gt; NA, NA, 84.37, 55.79, 46.72, 67.13, 131.54, 7…\n$ helmet_12m               &lt;chr&gt; \"never\", \"never\", \"never\", \"never\", \"did not …\n$ text_while_driving_30d   &lt;chr&gt; \"0\", NA, \"30\", \"0\", \"did not drive\", \"did not…\n$ physically_active_7d     &lt;int&gt; 4, 2, 7, 0, 2, 1, 4, 4, 5, 0, 0, 0, 4, 7, 7, …\n$ hours_tv_per_school_day  &lt;chr&gt; \"5+\", \"5+\", \"5+\", \"2\", \"3\", \"5+\", \"5+\", \"5+\",…\n$ strength_training_7d     &lt;int&gt; 0, 0, 0, 0, 1, 0, 2, 0, 3, 0, 3, 0, 0, 7, 7, …\n$ school_night_hours_sleep &lt;chr&gt; \"8\", \"6\", \"&lt;5\", \"6\", \"9\", \"8\", \"9\", \"6\", \"&lt;5\"…"
+  },
+  {
+    "objectID": "slides/12-plots2.html#factors-3",
+    "href": "slides/12-plots2.html#factors-3",
+    "title": "Plotting relationships between variables",
+    "section": "Factors",
+    "text": "Factors\n\nBut we can change that!\nFactors are a specific type of R object. They are categorical with response options that are represented by words/letters/numbers in quotation marks, but they allow you to assign those options any order you’d like.\nUseful for ordinal variables\nTo change the order of the bars, we change the order of the response options in the data set before we plot."
+  },
+  {
+    "objectID": "slides/12-plots2.html#factors-4",
+    "href": "slides/12-plots2.html#factors-4",
+    "title": "Plotting relationships between variables",
+    "section": "Factors",
+    "text": "Factors\n\nWe can use mutate() with a new function, factor(), for this.\n\n\ntable(yrbss$helmet_12m, useNA = \"always\")\n\n\n      always did not ride most of time        never       rarely    sometimes \n         399         4549          293         6977          713          341 \n        &lt;NA&gt; \n         311 \n\n\n\nyrbss_reordered &lt;- mutate(yrbss,\n                          # we are turning our helmet variable into a factor\n                          # its name will remain the same (the new variable \n                          # we create will overwrite the old one)\n                          helmet_12m = factor(\n                            helmet_12m, \n                            # and we want its response options to be in this order\n                            # least to greatest frequency\n                            levels = c(\"did not ride\", \"never\", \"rarely\", \n                                       \"sometimes\", \"most of time\", \"always\")))\n\ntable(yrbss_reordered$helmet_12m)\n\n\ndid not ride        never       rarely    sometimes most of time       always \n        4549         6977          713          341          293          399"
+  },
+  {
+    "objectID": "slides/12-plots2.html#factors-5",
+    "href": "slides/12-plots2.html#factors-5",
+    "title": "Plotting relationships between variables",
+    "section": "Factors",
+    "text": "Factors\n\n\n\nOur new plot! I’ve added better labels as well.\nWhat is easier to see in this plot than the old one?\nDoes the pattern surprise you?\n\n\n\nggplot(data = yrbss_reordered, aes(x = helmet_12m)) + \n  geom_bar() + \n  labs(x = \"How frequently did you wear a helmet while riding your bike?\",\n       y = \"Number of students\",\n       title = \"Distribution of reported helmet wearing in the last 12 months\")"
+  },
+  {
+    "objectID": "slides/12-plots2.html#plots-for-relationships-between-variables",
+    "href": "slides/12-plots2.html#plots-for-relationships-between-variables",
+    "title": "Plotting relationships between variables",
+    "section": "Plots for relationships between variables",
+    "text": "Plots for relationships between variables\n\nPlots are an excellent tool for looking at the relationships between variables.\nThe same structure applies for plotting two/three/four/etc variables as one variable.\nWhat’s different? Some new function options, some new geoms."
+  },
+  {
+    "objectID": "slides/12-plots2.html#types-of-plots-for-different-combinations-of-variables-overview",
+    "href": "slides/12-plots2.html#types-of-plots-for-different-combinations-of-variables-overview",
+    "title": "Plotting relationships between variables",
+    "section": "Types of plots for different combinations of variables: overview",
+    "text": "Types of plots for different combinations of variables: overview\n\nOne numeric variable\n\nHistogram, geom_histogram()\n\nOne categorical variable\n\nBar chart, geom_bar()\n\n\n\n\nTwo numeric variables\n\nScatterplots, geom_point()\n\nOne numeric and one categorical variable\n\nBoxplots, geom_boxplot()\n\nTwo categorical variables\n\nBar chart with color or facets\n\n\n\n\n\nThis is not the be-all end-all list; there are more options! But these are common and useful places to start."
+  },
+  {
+    "objectID": "slides/12-plots2.html#what-about-three-or-more-variables",
+    "href": "slides/12-plots2.html#what-about-three-or-more-variables",
+    "title": "Plotting relationships between variables",
+    "section": "What about three or more variables?",
+    "text": "What about three or more variables?\n\nStart with your main explanatory variable and main response variable and make a two variable plot\n\n\n\nAdding an additional categorical variable\n\nCan you add color (one per category)?\nCan you break a big plot into several small plots (facets)?\n\nNo time to cover facets in lecture, but it is in your extra credit\n\n\n\n\n\n\nAdding an additional numeric variable\n\nCan you add size?\nCan you add color (along a gradient)?"
+  },
+  {
+    "objectID": "slides/12-plots2.html#bar-charts-for-two-categorical-variables",
+    "href": "slides/12-plots2.html#bar-charts-for-two-categorical-variables",
+    "title": "Plotting relationships between variables",
+    "section": "Bar charts for two categorical variables",
+    "text": "Bar charts for two categorical variables\n\nRQ: How do reported rates of texting while driving vary by gender? (in yrbss)\nWe can use color!\n\ncolor (for lines and points) and fill (for filling in areas like bars) are the arguments we use inside aes() to add color.\n\n\n\n\n\n# if I don't know what variables to look at, I can use glimpse()\nglimpse(yrbss)\n\nRows: 13,583\nColumns: 13\n$ age                      &lt;int&gt; 14, 14, 15, 15, 15, 15, 15, 14, 15, 15, 15, 1…\n$ gender                   &lt;chr&gt; \"female\", \"female\", \"female\", \"female\", \"fema…\n$ grade                    &lt;chr&gt; \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", \"9\", …\n$ hispanic                 &lt;chr&gt; \"not\", \"not\", \"hispanic\", \"not\", \"not\", \"not\"…\n$ race                     &lt;chr&gt; \"Black or African American\", \"Black or Africa…\n$ height                   &lt;dbl&gt; NA, NA, 1.73, 1.60, 1.50, 1.57, 1.65, 1.88, 1…\n$ weight                   &lt;dbl&gt; NA, NA, 84.37, 55.79, 46.72, 67.13, 131.54, 7…\n$ helmet_12m               &lt;chr&gt; \"never\", \"never\", \"never\", \"never\", \"did not …\n$ text_while_driving_30d   &lt;chr&gt; \"0\", NA, \"30\", \"0\", \"did not drive\", \"did not…\n$ physically_active_7d     &lt;int&gt; 4, 2, 7, 0, 2, 1, 4, 4, 5, 0, 0, 0, 4, 7, 7, …\n$ hours_tv_per_school_day  &lt;chr&gt; \"5+\", \"5+\", \"5+\", \"2\", \"3\", \"5+\", \"5+\", \"5+\",…\n$ strength_training_7d     &lt;int&gt; 0, 0, 0, 0, 1, 0, 2, 0, 3, 0, 3, 0, 0, 7, 7, …\n$ school_night_hours_sleep &lt;chr&gt; \"8\", \"6\", \"&lt;5\", \"6\", \"9\", \"8\", \"9\", \"6\", \"&lt;5\"…\n\n\n\n\n# will give me the response options\ntable(yrbss$text_while_driving_30d, \n      yrbss$gender, \n      useNA = \"always\") \n\n               \n                female male &lt;NA&gt;\n  0               2254 2534    4\n  1-2              438  487    0\n  10-19            154  219    0\n  20-29            124  174    0\n  3-5              208  282    3\n  30               358  467    2\n  6-9              140  171    0\n  did not drive   2485 2159    2\n  &lt;NA&gt;             460  457    1"
+  },
+  {
+    "objectID": "slides/12-plots2.html#bar-charts-for-two-categorical-variables-1",
+    "href": "slides/12-plots2.html#bar-charts-for-two-categorical-variables-1",
+    "title": "Plotting relationships between variables",
+    "section": "Bar charts for two categorical variables",
+    "text": "Bar charts for two categorical variables\n\nfill = gender is the argument we want for bar color (an area rather than a point or line)\nThis is an okay start, but it’s not super obvious yet what the story is\n\n\nyrbss |&gt; \n  filter(!is.na(gender) & !is.na(text_while_driving_30d)) |&gt; # remove missing data\n  mutate(text_while_driving_30d = factor(text_while_driving_30d, # change the order of the bars\n                                         levels = c(\"did not drive\", \"0\", \n                                                    \"1-2\", \"3-5\", \"6-9\",\n                                                    \"10-19\", \"20-29\", \"30\"))) |&gt; \n  ggplot(aes(x = text_while_driving_30d, \n             fill = gender)) + # we add the fill argument here with the variable we want the fill color to represent.\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/12-plots2.html#bar-charts-for-two-categorical-variables-3",
+    "href": "slides/12-plots2.html#bar-charts-for-two-categorical-variables-3",
+    "title": "Plotting relationships between variables",
+    "section": "Bar charts for two categorical variables",
+    "text": "Bar charts for two categorical variables\n\nHere the story is clearer!"
+  },
+  {
+    "objectID": "slides/12-plots2.html#new-plots-for-two-variables-scatter-plots-and-boxplots",
+    "href": "slides/12-plots2.html#new-plots-for-two-variables-scatter-plots-and-boxplots",
+    "title": "Plotting relationships between variables",
+    "section": "New plots for two variables: scatter plots and boxplots",
+    "text": "New plots for two variables: scatter plots and boxplots\n\nScatter plots show the relationship between two numeric variables\nExplanatory (independent) variable on the x axis, response (dependent) variable on the y axis"
+  },
+  {
+    "objectID": "slides/12-plots2.html#scatter-plot",
+    "href": "slides/12-plots2.html#scatter-plot",
+    "title": "Plotting relationships between variables",
+    "section": "Scatter plot",
+    "text": "Scatter plot\n\nggplot(acs12, aes(x = time_to_work, y = hrs_work)) + # we specify x and y axis variables here\n  geom_point() + # and this tells R we want a scatter plot\n  labs(x = \"Commute time (minutes)\",\n       y = \"Hours worked per week\")"
+  },
+  {
+    "objectID": "slides/12-plots2.html#scatter-plot-with-color",
+    "href": "slides/12-plots2.html#scatter-plot-with-color",
+    "title": "Plotting relationships between variables",
+    "section": "Scatter plot with color",
+    "text": "Scatter plot with color\n\nWhat if we wanted to add a third variable? How about gender?\nOne option is to use color"
+  },
+  {
+    "objectID": "slides/12-plots2.html#scatter-plot-with-color-1",
+    "href": "slides/12-plots2.html#scatter-plot-with-color-1",
+    "title": "Plotting relationships between variables",
+    "section": "Scatter plot with color",
+    "text": "Scatter plot with color\n\n# This code is nearly identical to the last plot--we just add one argument to aes!\nggplot(acs12, \n       aes(x = time_to_work, \n           y = hrs_work,\n           color = gender)) + \n  geom_point() +\n  labs(x = \"Commute time (minutes)\",\n       y = \"Hours worked per week\")"
+  },
+  {
+    "objectID": "slides/12-plots2.html#box-plots",
+    "href": "slides/12-plots2.html#box-plots",
+    "title": "Plotting relationships between variables",
+    "section": "Box plots",
+    "text": "Box plots\n\nBox plots are good for showing the median, quartiles, outliers, and range of a variable.\nYou can plot a single numeric variable using a boxplot, but they’re most useful for comparing the distribution of a numeric variable across different groups represented by a categorical variable.\n\n\n\n\nImage from https://www.data-to-viz.com/caveat/boxplot.html"
+  },
+  {
+    "objectID": "slides/12-plots2.html#box-plots-and-distributions-exercise",
+    "href": "slides/12-plots2.html#box-plots-and-distributions-exercise",
+    "title": "Plotting relationships between variables",
+    "section": "Box plots and distributions: exercise",
+    "text": "Box plots and distributions: exercise"
+  },
+  {
+    "objectID": "slides/12-plots2.html#box-plots-1",
+    "href": "slides/12-plots2.html#box-plots-1",
+    "title": "Plotting relationships between variables",
+    "section": "Box plots",
+    "text": "Box plots\n\nExample: How does the number of hours worked per week vary by education level?\n\n\nggplot(acs12, aes(x = hrs_work, y = edu)) + \n  geom_boxplot() # this gives us our boxplot"
+  },
+  {
+    "objectID": "slides/12-plots2.html#three-variables-adding-color-to-our-boxplot",
+    "href": "slides/12-plots2.html#three-variables-adding-color-to-our-boxplot",
+    "title": "Plotting relationships between variables",
+    "section": "Three variables: Adding color to our boxplot",
+    "text": "Three variables: Adding color to our boxplot\n\nRQ: Among people who report being employed, how does the relationship between education level and number of hours worked per week vary by ability status?\n\n\nacs12 |&gt; # we start with the acs\n  filter(employment == \"employed\") |&gt; # first we filter out people who are not employed\n  ggplot(aes(x = hrs_work, y = edu, color = disability)) + # this part is the same; we just add the color argument!\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/12-plots2.html#my-expectations-for-your-plots",
+    "href": "slides/12-plots2.html#my-expectations-for-your-plots",
+    "title": "Plotting relationships between variables",
+    "section": "My expectations for your plots",
+    "text": "My expectations for your plots\n\nMake plots that are interpretable\n\nChoose plot types that are appropriate to your variables\nUse useful labels\n\n\n\n\nDo they have to be pretty?\n\nNo. Ugly but interpretable is fine.\nBUT, R is really good at making beautiful graphics–and if you’d like to learn more about how to do that, I’m happy to help!"
+  },
+  {
+    "objectID": "slides/12-plots2.html#additional-resources-for-plotting",
+    "href": "slides/12-plots2.html#additional-resources-for-plotting",
+    "title": "Plotting relationships between variables",
+    "section": "Additional resources for plotting",
+    "text": "Additional resources for plotting\n\nCheck out the R Graph Gallery\n\nThis walks through different kinds of plots and their strengths and weaknesses. It includes lots of example code.\nThere are lots of resources here for making plots both more interpretable and more beautiful!\n\nIf this interests you, I recommend Soc 232: Visualizing Social Data, taught by Dr. Kieran Healy\n\nor, Dr. Healy’s book, Data Visualization: A Practical Introduction"
+  },
+  {
+    "objectID": "slides/12-plots2.html#steps-to-make-a-plot-for-your-project",
+    "href": "slides/12-plots2.html#steps-to-make-a-plot-for-your-project",
+    "title": "Plotting relationships between variables",
+    "section": "Steps to make a plot for your project",
+    "text": "Steps to make a plot for your project\n\nStep 1: Identify the variables you want to plot and figure out if they’re numeric or categorical\n\nWatch out for variables that are theoretically numeric but treated in R as categorical (like the texting while driving variable above)\n\nStep 2: Choose a plot type that fits your variables and question\n\nSketch it out! Figure out what it should look like in your head before you jump into R.\nWhat should each axis represent? Do you need color or something else in order to include all your variables?\n\nStep 3: Look for resources. Find the relevant code in the slides and read the R Graph Gallery’s information about your plot type.\nStep 4: Make the super simple version\nStep 5: Refine it to make it more interpretable\n\nAt minimum, add labels and drop NA values if necessary"
+  },
+  {
+    "objectID": "slides/12-plots2.html#for-tomorrow",
+    "href": "slides/12-plots2.html#for-tomorrow",
+    "title": "Plotting relationships between variables",
+    "section": "For tomorrow",
+    "text": "For tomorrow\n\nNo mandatory exercise on multivariate plots–but there is extra credit available if you would like some practice before diving into part 4 of your project (repo on GitHub).\nTry out part 4 of your project. Come tomorrow with questions.\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/10-describingpt4.html#logistics",

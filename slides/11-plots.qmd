@@ -413,5 +413,3 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 ```
 :::
 :::
-
-

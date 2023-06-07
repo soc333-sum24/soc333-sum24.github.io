@@ -1,0 +1,355 @@
+---
+title: "Plotting relationships between variables"
+subtitle: "Lecture 12"
+date: "June 7, 2023"
+format: revealjs
+smaller: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+## Logistics {.smaller}
+
+-   Project component 2, descriptive statistics, due tomorrow 11:59pm
+-   I recommend trying all parts today and coming tomorrow with questions
+-   Tomorrow we will start on hypothesis testing
+
+## Today {.smaller}
+
+-   Single variable plots exercise solutions
+-   Factors
+-   Multivariate plots
+
+# Exercise solutions: single variable plots
+
+# Factors
+
+## Factors
+
+-   Remember our bar plot of helmet wearing habits from the exercise:
+
+```{r}
+ggplot(data = yrbss, aes(x = helmet_12m)) + 
+  geom_bar()
+```
+
+## Factors
+
+-   Categorical variables (those where the values are words/letters/numbers in quotation marks) default to being ordered alphabetically
+
+::: columns
+::: {.column width="80%"}
+```{r, echo = FALSE}
+ggplot(data = yrbss, aes(x = helmet_12m)) + 
+  geom_bar()
+```
+:::
+
+::: {.column width="20%"}
+```{r}
+glimpse(yrbss)
+```
+:::
+:::
+
+## Factors
+
+-   But we can change that!
+-   *Factors* are a specific type of R object. They are categorical with response options that are represented by words/letters/numbers in quotation marks, but they allow you to assign those options any order you'd like.
+-   Useful for ordinal variables
+-   To change the order of the bars, we change the order of the response options in the data set before we plot.
+
+## Factors
+
+-   We can use `mutate()` with a new function, `factor()`, for this.
+
+```{r}
+table(yrbss$helmet_12m, useNA = "always")
+```
+
+```{r}
+yrbss_reordered <- mutate(yrbss,
+                          # we are turning our helmet variable into a factor
+                          # its name will remain the same (the new variable 
+                          # we create will overwrite the old one)
+                          helmet_12m = factor(
+                            helmet_12m, 
+                            # and we want its response options to be in this order
+                            # least to greatest frequency
+                            levels = c("did not ride", "never", "rarely", 
+                                       "sometimes", "most of time", "always")))
+
+table(yrbss_reordered$helmet_12m)
+```
+
+## Factors
+
+::: columns
+::: {.column width="20%"}
+-   Our new plot! I've added better labels as well.
+-   What is easier to see in this plot than the old one?
+-   Does the pattern surprise you?
+:::
+
+::: {.column width="80%"}
+```{r}
+ggplot(data = yrbss_reordered, aes(x = helmet_12m)) + 
+  geom_bar() + 
+  labs(x = "How frequently did you wear a helmet while riding your bike?",
+       y = "Number of students",
+       title = "Distribution of reported helmet wearing in the last 12 months")
+```
+:::
+:::
+
+# Multivariate plots
+
+## Plots for relationships between variables
+
+-   Plots are an excellent tool for looking at the relationships between variables.
+-   The same structure applies for plotting two/three/four/etc variables as one variable.
+-   What's different? Some new function options, some new geoms.
+
+## Types of plots for different combinations of variables: overview
+
+-   One numeric variable
+
+    -   Histogram, `geom_histogram()`
+
+-   One categorical variable
+
+    -   Bar chart, `geom_bar()`
+
+. . .
+
+-   Two numeric variables
+
+    -   Scatterplots, `geom_point()`
+
+-   One numeric and one categorical variable
+
+    -   Boxplots, `geom_boxplot()`
+    
+-   Two categorical variables
+
+    -   Bar chart with color or facets
+
+. . .
+
+-   This is not the be-all end-all list; there are more options! But these are common and useful places to start.
+
+## What about three or more variables?
+
+-   Start with your main explanatory variable and main response variable and make a two variable plot
+
+. . .
+
+-   Adding an additional categorical variable
+
+    -   Can you add color (one per category)?
+    -   Can you break a big plot into several small plots (facets)?
+    
+        -   No time to cover facets in lecture, but it is in your extra credit
+
+. . .
+
+-   Adding an additional numeric variable
+
+    -   Can you add size?
+    -   Can you add color (along a gradient)?
+    
+## Bar charts for two categorical variables
+
+-   RQ: How do reported rates of texting while driving vary by gender? (in `yrbss`)
+-   We can use color!
+
+    - `color` (for lines and points) and `fill` (for filling in areas like bars) are the arguments we use inside `aes()` to add color.
+
+
+::: columns
+::: {.column width="60%"}
+```{r}
+# if I don't know what variables to look at, I can use glimpse()
+glimpse(yrbss)
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+# will give me the response options
+table(yrbss$text_while_driving_30d, 
+      yrbss$gender, 
+      useNA = "always") 
+```
+:::
+:::
+
+## Bar charts for two categorical variables
+
+-   `fill = gender` is the argument we want for bar color (an area rather than a point or line)
+-   This is an okay start, but it's not super obvious yet what the story is
+
+```{r}
+yrbss |> 
+  filter(!is.na(gender) & !is.na(text_while_driving_30d)) |> # remove missing data
+  mutate(text_while_driving_30d = factor(text_while_driving_30d, # change the order of the bars
+                                         levels = c("did not drive", "0", 
+                                                    "1-2", "3-5", "6-9",
+                                                    "10-19", "20-29", "30"))) |> 
+  ggplot(aes(x = text_while_driving_30d, 
+             fill = gender)) + # we add the fill argument here with the variable we want the fill color to represent.
+  geom_bar()
+```
+
+# Bar charts for two categorical variables
+
+-   We can set the bars to be next to one another rather than stacked with the `position = "dodge"` argument to `geom_bar()`
+
+```{r, eval = FALSE}
+yrbss |> 
+  filter(!is.na(gender) & !is.na(text_while_driving_30d)) |>
+  mutate(text_while_driving_30d = factor(text_while_driving_30d,
+                                         levels = c("did not drive", "0", 
+                                                    "1-2", "3-5", "6-9",
+                                                    "10-19", "20-29", "30"))) |> 
+  ggplot(aes(x = text_while_driving_30d, fill = gender)) + 
+  geom_bar(position = "dodge") + 
+  labs(x = "Number of days last month respondent texted while driving",
+       y = "",
+       fill = "Sex")
+```
+
+## Bar charts for two categorical variables
+
+-   Here the story is clearer!
+
+```{r, echo = FALSE}
+yrbss |> 
+  filter(!is.na(gender) & !is.na(text_while_driving_30d)) |>
+  mutate(text_while_driving_30d = factor(text_while_driving_30d,
+                                         levels = c("did not drive", "0", 
+                                                    "1-2", "3-5", "6-9",
+                                                    "10-19", "20-29", "30"))) |> 
+  ggplot(aes(x = text_while_driving_30d, fill = gender)) + 
+  geom_bar(position = "dodge") + 
+  labs(x = "Number of days last month respondent texted while driving",
+       y = "",
+       fill = "Sex")
+```
+
+## New plots for two variables: scatter plots and boxplots
+
+-   Scatter plots show the relationship between two numeric variables
+-   Explanatory (independent) variable on the x axis, response (dependent) variable on the y axis
+
+## Scatter plot
+
+```{r}
+ggplot(acs12, aes(x = time_to_work, y = hrs_work)) + # we specify x and y axis variables here
+  geom_point() + # and this tells R we want a scatter plot
+  labs(x = "Commute time (minutes)",
+       y = "Hours worked per week")
+```
+
+## Scatter plot with color
+
+-   What if we wanted to add a third variable? How about gender?
+-   One option is to use color
+
+## Scatter plot with color
+
+```{r}
+# This code is nearly identical to the last plot--we just add one argument to aes!
+ggplot(acs12, 
+       aes(x = time_to_work, 
+           y = hrs_work,
+           color = gender)) + 
+  geom_point() +
+  labs(x = "Commute time (minutes)",
+       y = "Hours worked per week")
+```
+
+## Box plots
+
+-   Box plots are good for showing the median, quartiles, outliers, and range of a variable.
+-   You can plot a single numeric variable using a boxplot, but they're most useful for comparing the distribution of a numeric variable across different groups represented by a categorical variable.
+
+![](images/12/boxplotanatomy.png)
+
+::: aside
+Image from https://www.data-to-viz.com/caveat/boxplot.html
+:::
+
+## Box plots and distributions: exercise
+
+![](images/12/histograms_boxplots.png)
+
+## Box plots
+
+-   Example: How does the number of hours worked per week vary by education level?
+
+```{r}
+ggplot(acs12, aes(x = hrs_work, y = edu)) + 
+  geom_boxplot() # this gives us our boxplot
+```
+
+## Three variables: Adding color to our boxplot
+
+-   RQ: Among people who report being employed, how does the relationship between education level and number of hours worked per week vary by ability status?
+
+```{r}
+acs12 |> # we start with the acs
+  filter(employment == "employed") |> # first we filter out people who are not employed
+  ggplot(aes(x = hrs_work, y = edu, color = disability)) + # this part is the same; we just add the color argument!
+  geom_boxplot()
+```
+
+## My expectations for your plots
+
+-   Make plots that are interpretable
+
+    -   Choose plot types that are appropriate to your variables
+    -   Use useful labels
+
+. . .
+
+-   Do they have to be pretty?
+
+    -   No. Ugly but interpretable is fine.
+    -   BUT, R is really good at making beautiful graphics--and if you'd like to learn more about how to do that, I'm happy to help!
+
+## Additional resources for plotting
+
+-   Check out the [R Graph Gallery](https://r-graph-gallery.com/index.html)
+
+    -   This walks through different kinds of plots and their strengths and weaknesses. It includes lots of example code.
+    -   There are lots of resources here for making plots both more interpretable and more beautiful!
+
+-   If this interests you, I recommend [Soc 232: Visualizing Social Data](https://visualizingsociety.com/), taught by Dr. Kieran Healy
+
+    -   or, Dr. Healy's book, [Data Visualization: A Practical Introduction](https://socviz.co/)
+    
+## Steps to make a plot for your project
+
+-   Step 1: Identify the variables you want to plot and figure out if they're numeric or categorical
+
+    -   Watch out for variables that are *theoretically* numeric but treated in R as categorical (like the texting while driving variable above)
+    
+-   Step 2: Choose a plot type that fits your variables and question
+
+    -   Sketch it out! Figure out what it should look like in your head before you jump into R.
+    -   What should each axis represent? Do you need color or something else in order to include all your variables?
+
+-   Step 3: Look for resources. Find the relevant code in the slides and read the [R Graph Gallery's](https://r-graph-gallery.com/index.html) information about your plot type. 
+-   Step 4: Make the super simple version
+-   Step 5: Refine it to make it more interpretable
+    
+    -   At minimum, add labels and drop NA values if necessary
+
+## For tomorrow
+
+-   No mandatory exercise on multivariate plots--but there is extra credit available if you would like some practice before diving into part 4 of your project (repo on GitHub).
+-   Try out part 4 of your project. Come tomorrow with questions. 
