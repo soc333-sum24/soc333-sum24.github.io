@@ -90,6 +90,8 @@ website:
                   text: "6/06: Single variable plots"
       - section: "Slides"
         contents:
+          - href: slides/13-hypothesistests1.qmd
+            text: "Lecture 13: Hypothesis tests pt 1"
           - href: slides/12-plots2.qmd
             text: "Lecture 12: Plotting multiple variables"
           - href: slides/11-plots.qmd
