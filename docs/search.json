@@ -2363,14 +2363,35 @@
     "href": "slides/13-hypothesistests1.html#z-scores-1",
     "title": "Hypothesis tests pt 1",
     "section": "Z scores",
-    "text": "Z scores\n\nFormula: Z score = (observation - mean) / sd\nBut having the intuition is more important than remembering the formula"
+    "text": "Z scores\n\n\n“Weirder” observations have larger Z scores (absolute value): they are further from the mean.\nFormula: Z score = (observation - mean) / sd\nBut having the intuition is more important than remembering the formula"
   },
   {
     "objectID": "slides/13-hypothesistests1.html#z-scores-and-percentiles",
     "href": "slides/13-hypothesistests1.html#z-scores-and-percentiles",
     "title": "Hypothesis tests pt 1",
     "section": "Z scores and percentiles",
-    "text": "Z scores and percentiles"
+    "text": "Z scores and percentiles\n\nPercentile: What percent of the data is below a particular observation\nSomething that can be calculated with software (like R)\n\npnorm() function takes a Z score and gives you the corresponding percentile\n\n\n\n\n\npnorm(q = 1) # q is the Z score (yes, it's confusing). Nel's Z score is 1 because their score is 1 standard deviation above the mean.\n\n[1] 0.8413447\n\n\n\nConclusion: 84% of SAT-takers score below Nel."
+  },
+  {
+    "objectID": "slides/13-hypothesistests1.html#z-scores-and-percentiles-1",
+    "href": "slides/13-hypothesistests1.html#z-scores-and-percentiles-1",
+    "title": "Hypothesis tests pt 1",
+    "section": "Z scores and percentiles",
+    "text": "Z scores and percentiles\n\nThere’s a relationship between number of standard deviations away from the mean (Z score) and percentile\n\n\n\n68% of observations are within 1 standard deviation of the mean\n95% are within 2 sds\n99.7% are within 3 sds"
+  },
+  {
+    "objectID": "slides/13-hypothesistests1.html#recap",
+    "href": "slides/13-hypothesistests1.html#recap",
+    "title": "Hypothesis tests pt 1",
+    "section": "Recap",
+    "text": "Recap\n\n\nWe know now that we can use the normal distribution to figure out how “weird” an observation is\nIf it falls too far outside of what we would expect, we can conclude it came from a different population than we assumed in our null hypothesis\nAnd therefore we can reject our null hypothesis"
+  },
+  {
+    "objectID": "slides/13-hypothesistests1.html#next-week",
+    "href": "slides/13-hypothesistests1.html#next-week",
+    "title": "Hypothesis tests pt 1",
+    "section": "Next week",
+    "text": "Next week\n\nHow do we take data and figure this out?"
   },
   {
     "objectID": "slides/13-hypothesistests1.html#plots-for-your-projects",

@@ -701,13 +701,65 @@ Aidan Combs
 </section>
 <section id="z-scores-1" class="slide level2">
 <h2>Z scores</h2>
+<div>
 <ul>
-<li>Formula: Z score = (observation - mean) / sd</li>
-<li>But having the intuition is more important than remembering the formula</li>
+<li class="fragment">“Weirder” observations have larger Z scores (absolute value): they are further from the mean.</li>
+<li class="fragment">Formula: Z score = (observation - mean) / sd</li>
+<li class="fragment">But having the intuition is more important than remembering the formula</li>
 </ul>
+</div>
 </section>
 <section id="z-scores-and-percentiles" class="slide level2">
 <h2>Z scores and percentiles</h2>
+<ul>
+<li><p>Percentile: What percent of the data is below a particular observation</p></li>
+<li><p>Something that can be calculated with software (like R)</p>
+<ul>
+<li><code>pnorm()</code> function takes a Z score and gives you the corresponding percentile</li>
+</ul></li>
+</ul>
+
+<img data-src="images/13/nel_percentile.png" class="r-stretch"><div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). Nel's Z score is 1 because their score is 1 standard deviation above the mean.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8413447</code></pre>
+</div>
+</div>
+<ul>
+<li>Conclusion: 84% of SAT-takers score below Nel.</li>
+</ul>
+</div>
+</section>
+<section id="z-scores-and-percentiles-1" class="slide level2">
+<h2>Z scores and percentiles</h2>
+<ul>
+<li>There’s a relationship between number of standard deviations away from the mean (Z score) and percentile</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>68% of observations are within 1 standard deviation of the mean</li>
+<li>95% are within 2 sds</li>
+<li>99.7% are within 3 sds</li>
+</ul>
+<p><img data-src="images/13/percentiles.png"></p>
+</div>
+</section>
+<section id="recap" class="slide level2 smaller">
+<h2>Recap</h2>
+<div>
+<ul>
+<li class="fragment">We know now that we can use the normal distribution to figure out how “weird” an observation is</li>
+<li class="fragment">If it falls too far outside of what we would expect, we can conclude it came from a different population than we assumed in our null hypothesis</li>
+<li class="fragment">And therefore we can reject our null hypothesis</li>
+</ul>
+</div>
+</section>
+<section id="next-week" class="slide level2 smaller">
+<h2>Next week</h2>
+<ul>
+<li>How do we take data and figure this out?</li>
+</ul>
 </section>
 <section id="plots-for-your-projects" class="slide level2">
 <h2>Plots for your projects</h2>

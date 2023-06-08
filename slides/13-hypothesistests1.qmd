@@ -264,10 +264,52 @@ ggplot(d, aes(x = vals)) +
 
 ## Z scores
 
+::: incremental
+-   "Weirder" observations have larger Z scores (absolute value): they are further from the mean.
 -   Formula: Z score = (observation - mean) / sd
 -   But having the intuition is more important than remembering the formula
+:::
 
 ## Z scores and percentiles
+
+-   Percentile: What percent of the data is below a particular observation
+-   Something that can be calculated with software (like R)
+
+    -   `pnorm()` function takes a Z score and gives you the corresponding percentile
+
+![](images/13/nel_percentile.png)
+
+. . . 
+
+```{r}
+pnorm(q = 1) # q is the Z score (yes, it's confusing). Nel's Z score is 1 because their score is 1 standard deviation above the mean.
+```
+
+- Conclusion: 84% of SAT-takers score below Nel.
+
+## Z scores and percentiles
+
+-   There's a relationship between number of standard deviations away from the mean (Z score) and percentile
+
+. . . 
+
+-   68% of observations are within 1 standard deviation of the mean
+-   95% are within 2 sds
+-   99.7% are within 3 sds
+
+![](images/13/percentiles.png)
+
+## Recap {.smaller}
+
+::: incremental
+-   We know now that we can use the normal distribution to figure out how "weird" an observation is
+-   If it falls too far outside of what we would expect, we can conclude it came from a different population than we assumed in our null hypothesis
+-   And therefore we can reject our null hypothesis
+:::
+
+## Next week {.smaller}
+
+-   How do we take data and figure this out? 
 
 ## Plots for your projects
 
