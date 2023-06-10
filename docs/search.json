@@ -1449,6 +1449,69 @@
     "text": "Exercise: Creating new variables\n\nClone and open the project repo now (ex-6-1-yourusername)\nThen open the .qmd file and try out some variable creation\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/14-hypothesistests2.html#logistics",
+    "href": "slides/14-hypothesistests2.html#logistics",
+    "title": "Hypothesis tests pt 2",
+    "section": "Logistics",
+    "text": "Logistics\n\nProject component 2 is graded\n\nCheck GitHub issues for written feedback\nGrades on Sakai\n\nExercise grades up to date too\nProject component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)\n\nDrafts should be complete–meaning you attempted all parts"
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#today",
+    "href": "slides/14-hypothesistests2.html#today",
+    "title": "Hypothesis tests pt 2",
+    "section": "Today",
+    "text": "Today\n\nHypothesis tests in more specifics"
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#recap-from-last-time-hypothesis-test-process",
+    "href": "slides/14-hypothesistests2.html#recap-from-last-time-hypothesis-test-process",
+    "title": "Hypothesis tests pt 2",
+    "section": "Recap from last time: Hypothesis test process",
+    "text": "Recap from last time: Hypothesis test process\n\n\nStart with a null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)\nIn the world where your null hypothesis is true, would your sample be super weird?\n\nWe have statistical tests for this\n\nIf so, we reject the null hypothesis in favor of the alternative hypothesis\nIf not, we fail to reject the null hypothesis\n\n“Fail” sounds harsh but this is normal and fine! We do analysis to find out if our predictions are true–sometimes they aren’t and that’s valuable to know."
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#how-do-i-know-if-my-sample-is-weird",
+    "href": "slides/14-hypothesistests2.html#how-do-i-know-if-my-sample-is-weird",
+    "title": "Hypothesis tests pt 2",
+    "section": "How do I know if my sample is weird?",
+    "text": "How do I know if my sample is weird?\n\nWould it fall within the distribution of the samples you would get under the null hypothesis?"
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#how-do-i-know-if-my-sample-is-weird-1",
+    "href": "slides/14-hypothesistests2.html#how-do-i-know-if-my-sample-is-weird-1",
+    "title": "Hypothesis tests pt 2",
+    "section": "How do I know if my sample is weird?",
+    "text": "How do I know if my sample is weird?\n\n\nWe take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)–the Central Limit Theorem guarantees it.\nThere is math that describes the shape of normal distributions\nZ scores tell us how many standard deviations away from the expected mean our sample is."
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#z-scores-and-percentiles",
+    "href": "slides/14-hypothesistests2.html#z-scores-and-percentiles",
+    "title": "Hypothesis tests pt 2",
+    "section": "Z scores and percentiles",
+    "text": "Z scores and percentiles\n\nPercentile: What percent of the data is below a particular observation\nSomething that can be calculated with software (like R)\n\nThe pnorm() function takes a Z score and gives you the corresponding percentile\n\n\n\n\n\npnorm(q = 1) # q is the Z score (yes, it's confusing). \n\n[1] 0.8413447\n\n# Nel's Z score is 1 because their SAT score is 1 standard \n# deviation above the mean for all test-takers.\n\n\nConclusion: 84% of SAT-takers score below Nel."
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#todo-z-score-and-percentile-exercise",
+    "href": "slides/14-hypothesistests2.html#todo-z-score-and-percentile-exercise",
+    "title": "Hypothesis tests pt 2",
+    "section": "TODO: Z score and percentile exercise",
+    "text": "TODO: Z score and percentile exercise"
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#z-scores-and-percentiles-1",
+    "href": "slides/14-hypothesistests2.html#z-scores-and-percentiles-1",
+    "title": "Hypothesis tests pt 2",
+    "section": "Z scores and percentiles",
+    "text": "Z scores and percentiles\n\n68% of observations are within 1 standard deviation of the mean\n95% are within 2 sds\n99.7% are within 3 sds"
+  },
+  {
+    "objectID": "slides/14-hypothesistests2.html#p-values",
+    "href": "slides/14-hypothesistests2.html#p-values",
+    "title": "Hypothesis tests pt 2",
+    "section": "P values",
+    "text": "P values\n\nUsually\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "slides/11-plots.html#logistics",
     "href": "slides/11-plots.html#logistics",
     "title": "Plotting a single variable",
@@ -2364,20 +2427,6 @@
     "title": "Hypothesis tests pt 1",
     "section": "Z scores",
     "text": "Z scores\n\n\n“Weirder” observations have larger Z scores (absolute value): they are further from the mean.\nFormula: Z score = (observation - mean) / sd\nBut having the intuition is more important than remembering the formula"
-  },
-  {
-    "objectID": "slides/13-hypothesistests1.html#z-scores-and-percentiles",
-    "href": "slides/13-hypothesistests1.html#z-scores-and-percentiles",
-    "title": "Hypothesis tests pt 1",
-    "section": "Z scores and percentiles",
-    "text": "Z scores and percentiles\n\nPercentile: What percent of the data is below a particular observation\nSomething that can be calculated with software (like R)\n\npnorm() function takes a Z score and gives you the corresponding percentile\n\n\n\n\n\npnorm(q = 1) # q is the Z score (yes, it's confusing). Nel's Z score is 1 because their score is 1 standard deviation above the mean.\n\n[1] 0.8413447\n\n\n\nConclusion: 84% of SAT-takers score below Nel."
-  },
-  {
-    "objectID": "slides/13-hypothesistests1.html#z-scores-and-percentiles-1",
-    "href": "slides/13-hypothesistests1.html#z-scores-and-percentiles-1",
-    "title": "Hypothesis tests pt 1",
-    "section": "Z scores and percentiles",
-    "text": "Z scores and percentiles\n\nThere’s a relationship between number of standard deviations away from the mean (Z score) and percentile\n\n\n\n68% of observations are within 1 standard deviation of the mean\n95% are within 2 sds\n99.7% are within 3 sds"
   },
   {
     "objectID": "slides/13-hypothesistests1.html#recap",

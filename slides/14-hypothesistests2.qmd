@@ -1,0 +1,92 @@
+---
+title: "Hypothesis tests pt 2"
+subtitle: "Lecture 14"
+date: "June 12, 2023"
+format: revealjs
+smaller: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+## Logistics {.smaller}
+
+-   Project component 2 is graded
+
+    -   Check GitHub issues for written feedback
+    -   Grades on Sakai
+
+-   Exercise grades up to date too
+
+-   Project component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)
+
+    -   Drafts should be complete--meaning you attempted all parts
+
+## Today {.smaller}
+
+-   Hypothesis tests in more specifics
+
+## Recap from last time: Hypothesis test process
+
+::: incremental
+-   Start with a null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
+
+-   In the world where your null hypothesis is true, would your sample be super weird?
+
+    -   We have statistical tests for this
+
+-   If so, we reject the null hypothesis in favor of the alternative hypothesis
+
+-   If not, we fail to reject the null hypothesis
+
+    -   "Fail" sounds harsh but this is normal and fine! We do analysis to find out if our predictions are true--sometimes they aren't and that's valuable to know.
+:::
+
+## How do I know if my sample is weird?
+
+-   Would it fall within the distribution of the samples you would get under the null hypothesis?
+
+![](images/13/clt_n20_newsample.png)
+
+## How do I know if my sample is weird?
+
+::: incremental
+-   We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)--the Central Limit Theorem guarantees it.
+-   There is math that describes the shape of normal distributions
+-   Z scores tell us how many standard deviations away from the expected mean our sample is.
+:::
+
+## Z scores and percentiles
+
+-   Percentile: What percent of the data is below a particular observation
+-   Something that can be calculated with software (like R)
+
+    -   The `pnorm()` function takes a Z score and gives you the corresponding percentile
+
+![](images/13/nel_percentile.png)
+
+. . .
+
+```{r}
+pnorm(q = 1) # q is the Z score (yes, it's confusing). 
+# Nel's Z score is 1 because their SAT score is 1 standard 
+# deviation above the mean for all test-takers.
+```
+
+-   Conclusion: 84% of SAT-takers score below Nel.
+
+## TODO: Z score and percentile exercise
+
+## Z scores and percentiles
+
+-   68% of observations are within 1 standard deviation of the mean
+-   95% are within 2 sds
+-   99.7% are within 3 sds
+
+![](images/13/percentiles.png)
+
+## P values
+
+-   Usually

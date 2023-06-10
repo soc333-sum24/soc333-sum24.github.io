@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-05-17">
-  <title>SOCIOL 333 - Welcome to SOCIOL 333</title>
+  <meta name="dcterms.date" content="2023-06-12">
+  <title>SOCIOL 333 - Hypothesis tests pt 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -322,8 +387,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="SOCIOL 333 - Welcome to SOCIOL 333">
-<meta property="og:description" content="Lecture 1">
+<meta property="og:title" content="SOCIOL 333 - Hypothesis tests pt 2">
+<meta property="og:description" content="Lecture 14">
 <meta property="og:site-name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
@@ -331,8 +396,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Welcome to SOCIOL 333</h1>
-  <p class="subtitle">Lecture 1</p>
+  <h1 class="title">Hypothesis tests pt 2</h1>
+  <p class="subtitle">Lecture 14</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -345,263 +410,110 @@ Aidan Combs
     </div>
 </div>
 
-  <p class="date">2023-05-17</p>
+  <p class="date">2023-06-12</p>
 </section>
-<section>
-<section id="introductions" class="title-slide slide level1 center">
-<h1>Introductions</h1>
-
-</section>
-<section id="meet-the-instructor" class="slide level2">
-<h2>Meet the instructor</h2>
-<p>Aidan Combs</p>
-<p>She/her</p>
-<p>Ph.D.&nbsp;candidate in sociology</p>
-<p>Reuben-Cooke 141</p>
-</section>
-<section id="meet-each-other" class="slide level2">
-<h2>Meet each other!</h2>
+<section id="logistics" class="slide level2 smaller">
+<h2>Logistics</h2>
 <ul>
-<li><p>Name and pronouns, if you wish</p></li>
-<li><p>Major and what’s next for you (if you’ve thought about it!)</p></li>
-<li><p>What are you looking forward to in Durham this summer (other than this class, of course)?</p></li>
-</ul>
-</section>
-<section id="meet-this-course" class="slide level2">
-<h2>Meet this course</h2>
+<li><p>Project component 2 is graded</p>
 <ul>
-<li><p>Quantitative Analysis of Sociological Data</p>
+<li>Check GitHub issues for written feedback</li>
+<li>Grades on Sakai</li>
+</ul></li>
+<li><p>Exercise grades up to date too</p></li>
+<li><p>Project component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)</p>
 <ul>
-<li>aka, statistics/data science for sociologists</li>
+<li>Drafts should be complete–meaning you attempted all parts</li>
 </ul></li>
 </ul>
-<div class="fragment">
-<ul>
-<li><p>Course learning objectives in a nutshell</p>
-<ul>
-<li><p>To give you a set of tools to use to analyze data and communicate what’s happening in the social world</p></li>
-<li><p>To teach you how to critique data analyses that show up in papers, media, etc</p></li>
-</ul></li>
-</ul>
-</div>
 </section>
-<section id="your-expectations" class="slide level2">
-<h2>Your expectations</h2>
+<section id="today" class="slide level2 smaller">
+<h2>Today</h2>
 <ul>
-<li><p>What are you hoping to get out of this course?</p></li>
-<li><p>What have you heard about this course/similar courses?</p></li>
+<li>Hypothesis tests in more specifics</li>
 </ul>
 </section>
-<section id="my-goals" class="slide level2">
-<h2>My goals</h2>
-<ul>
-<li><p>That this course be useful to you</p>
-<ul>
-<li><p>We will build skills you can use later</p></li>
-<li><p>Everything we do has a purpose!</p></li>
-</ul></li>
-</ul>
-<div class="fragment">
-<ul>
-<li><p>That the classroom environment be supportive</p>
-<ul>
-<li><p>We will cover everything you need to know</p></li>
-<li><p>Lots of opportunities to ask questions; lots of in-class practice</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="what-i-need-from-you" class="slide level2">
-<h2>What I need from you</h2>
-<ul>
-<li><p>Bring a laptop to class every day–something that connects to wifi and that you can download software onto</p>
-<ul>
-<li>…but please don’t let it distract you (I can tell…)</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<ul>
-<li>Be engaged. Participate in class–the work will be easier.</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="what-well-do" class="title-slide slide level1 center">
-<h1>What we’ll do</h1>
-
-</section>
-<section id="lets-meet-some-data" class="slide level2 smaller">
-<h2>Let’s meet some data!</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li><a href="https://ope.ed.gov/athletics/#/">Equity in Athletics Data Analytics</a></li>
-<li>Participation, staffing, revenues, and expenditures for mens and womens college sports teams</li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p><img data-src="images/01/datapdf.png"></p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="data-description" class="title-slide slide level1 center">
-<h1>Data Description</h1>
-
-</section>
-<section id="how-many-coaches-were-there-at-duke-in-2021" class="slide level2">
-<h2>How many coaches were there at Duke in 2021?</h2>
-<div class="fragment">
-<ul>
-<li>47 for men’s teams (11 head, 36 assistant)</li>
-<li>43 for women’s teams (12 head, 31 assistant)</li>
-</ul>
-</div>
-</section>
-<section id="how-has-that-changed-since-2003" class="slide level2">
-<h2>How has that changed since 2003?</h2>
-
-<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>How are male and female head coaches distributed between men’s and women’s teams?</p>
-
-<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>How are male and female assistant coaches distributed between men’s and women’s teams?</p>
-
-<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section class="slide level2">
-
-<p>Everyone all together!</p>
-
-<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="inference" class="title-slide slide level1 center">
-<h1>Inference</h1>
-
-</section>
-<section class="slide level2">
-
-<p>Do women and men have the same probability of being hired for coaching jobs?</p>
-
-<img data-src="01-welcome_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="results-interpretation" class="title-slide slide level1 center">
-<h1>Results interpretation</h1>
-
-</section>
-<section id="why-might-this-be" class="slide level2">
-<h2>Why might this be?</h2>
-</section>
-<section id="what-else-can-we-ask-with-this-data-set" class="slide level2">
-<h2>What else can we ask with this data set?</h2>
-</section></section>
-<section>
-<section id="how-well-do-it-technology" class="title-slide slide level1 center">
-<h1>How we’ll do it: technology</h1>
-
-</section>
-<section id="why-not-these" class="slide level2">
-<h2>Why not these?</h2>
-<table>
-<tbody>
-<tr class="odd">
-<td><img data-src="images/01/ti84.jpg"></td>
-<td><img data-src="images/01/excel.png"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="why-not-these-1" class="slide level2">
-<h2>Why not these?</h2>
-<ul>
-<li><p>Limited functionality</p></li>
-<li><p>Work is not reproducible</p></li>
-<li><p>Expensive!</p></li>
-</ul>
-</section>
-<section id="instead-r-and-rstudio" class="slide level2">
-<h2>Instead! R and RStudio</h2>
-
-<img data-src="images/01/rstudio.png" alt="An RStudio window" class="r-stretch quarto-figure-center"></section>
-<section id="instead-r-and-rstudio-1" class="slide level2">
-<h2>Instead! R and RStudio</h2>
-<ul>
-<li><p>Completely reproducible and open-source</p></li>
-<li><p>Lots of flexibility, and capabilities are always expanding</p></li>
-<li><p>A great resume line–it’s what the pros use</p></li>
-<li><p>Free!</p></li>
-</ul>
-</section></section>
-<section>
-<section id="course-logistics" class="title-slide slide level1 center">
-<h1>Course logistics</h1>
-
-</section>
-<section id="time-check" class="slide level2">
-<h2>Time check!</h2>
-<p>keep me on schedule, please–let me know when it’s 12:15 :)</p>
-</section>
-<section id="reminders-about-summer-term" class="slide level2">
-<h2>Reminders about summer term</h2>
-<ul>
-<li>Drop/add ends on <strong>Friday</strong> (yes, that is very soon)</li>
-<li>No class on Memorial Day (May 29) or Juneteenth (June 19)</li>
-<li>Something up with your enrollment? Talk to me after class.</li>
-</ul>
-</section>
-<section id="homepage" class="slide level2">
-<h2>Homepage</h2>
-<p><a href="https://soc333-sum23.github.io/" class="uri">https://soc333-sum23.github.io/</a></p>
-<ul>
-<li>All course materials</li>
-<li>Links to Sakai, GitHub, etc.</li>
-<li>Let’s take a tour!</li>
-</ul>
-</section>
-<section id="activities" class="slide level2 smaller">
-<h2>Activities</h2>
+<section id="recap-from-last-time-hypothesis-test-process" class="slide level2">
+<h2>Recap from last time: Hypothesis test process</h2>
 <div>
 <ul>
-<li class="fragment"><strong>Readings:</strong> All available free online. Best if completed before class.</li>
-<li class="fragment"><strong>Class:</strong> You are expected to attend every day. Your assignments will be much easier if you take advantage of in-class opportunities to complete them.</li>
-<li class="fragment"><strong>In-class exercises:</strong> Complete (at least mostly) during class each day. Turn them in before the next class period. Graded for completion. You’ll have to do these on your own if you miss class.</li>
-<li class="fragment"><strong>Homework:</strong> Two additional out-of-class assignments.</li>
-<li class="fragment"><strong>Project:</strong> Final project, developed in pieces through the course of the semester. Paper and presentation due at the end.</li>
+<li class="fragment"><p>Start with a null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
+<li class="fragment"><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
+<ul>
+<li class="fragment">We have statistical tests for this</li>
+</ul></li>
+<li class="fragment"><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
+<li class="fragment"><p>If not, we fail to reject the null hypothesis</p>
+<ul>
+<li class="fragment">“Fail” sounds harsh but this is normal and fine! We do analysis to find out if our predictions are true–sometimes they aren’t and that’s valuable to know.</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="exams" class="slide level2">
-<h2>Exams???</h2>
+<section id="how-do-i-know-if-my-sample-is-weird" class="slide level2">
+<h2>How do I know if my sample is weird?</h2>
 <ul>
-<li><p>nope :)</p>
-<p><img data-src="images/01/baby-celebrate.jpg"></p></li>
+<li>Would it fall within the distribution of the samples you would get under the null hypothesis?</li>
 </ul>
-</section>
-<section id="this-weeks-tasks" class="slide level2">
-<h2>This week’s tasks</h2>
+
+<img data-src="images/13/clt_n20_newsample.png" class="r-stretch"></section>
+<section id="how-do-i-know-if-my-sample-is-weird-1" class="slide level2">
+<h2>How do I know if my sample is weird?</h2>
+<div>
 <ul>
-<li><p>Before 11:59pm tonight: Complete the Getting to Know You survey (link in email). This asks you to create a GitHub account if you don’t already have one.</p></li>
-<li><p>Before tomorrow’s class: read IMS ch 1</p></li>
+<li class="fragment">We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)–the Central Limit Theorem guarantees it.</li>
+<li class="fragment">There is math that describes the shape of normal distributions</li>
+<li class="fragment">Z scores tell us how many standard deviations away from the expected mean our sample is.</li>
 </ul>
+</div>
 </section>
-<section id="checking-in-how-are-you-feeling-so-far-about-the-course" class="slide level2">
-<h2>Checking in: how are you feeling so far about the course?</h2>
-</section>
-<section id="lets-get-started" class="slide level2">
-<h2>Let’s get started!</h2>
+<section id="z-scores-and-percentiles" class="slide level2">
+<h2>Z scores and percentiles</h2>
 <ul>
-<li>Today’s in-class exercise (15 min):</li>
-<li>Get a GitHub account if you don’t have one (username advice in the survey)</li>
-<li>Complete the Getting to Know You survey (link in your email)</li>
+<li><p>Percentile: What percent of the data is below a particular observation</p></li>
+<li><p>Something that can be calculated with software (like R)</p>
+<ul>
+<li>The <code>pnorm()</code> function takes a Z score and gives you the corresponding percentile</li>
+</ul></li>
+</ul>
+
+<img data-src="images/13/nel_percentile.png" class="r-stretch"><div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8413447</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Nel's Z score is 1 because their SAT score is 1 standard </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># deviation above the mean for all test-takers.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Conclusion: 84% of SAT-takers score below Nel.</li>
+</ul>
+</div>
+</section>
+<section id="todo-z-score-and-percentile-exercise" class="slide level2">
+<h2>TODO: Z score and percentile exercise</h2>
+</section>
+<section id="z-scores-and-percentiles-1" class="slide level2">
+<h2>Z scores and percentiles</h2>
+<ul>
+<li>68% of observations are within 1 standard deviation of the mean</li>
+<li>95% are within 2 sds</li>
+<li>99.7% are within 3 sds</li>
+</ul>
+
+<img data-src="images/13/percentiles.png" class="r-stretch"></section>
+<section id="p-values" class="slide level2">
+<h2>P values</h2>
+<ul>
+<li>Usually</li>
 </ul>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -629,14 +541,14 @@ Aidan Combs
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
+'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
