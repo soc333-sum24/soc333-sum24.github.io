@@ -466,7 +466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="results" class="level1">
 <h1>Results</h1>
 <p>In this component, you will perform an inferential statistical test that provides evidence regarding your research question. The results of inferential analyses allow you to draw some conclusions about the population that your data came from.</p>
-<p>The expectation is that you perform one test to provide evidence for one question.</p>
+<p>You are required to perform one test to provide evidence for one question.</p>
 <p>If your research question involves multiple sub-questions (e.g., is of the form “how does X affect Y and also how does Z affect Y” or “how does X affect Y and also how does X affect Z”), you are welcome and encouraged to perform additional statistical tests to investigate the additional sub-questions. In this case, I will score your tests separately and count only the highest score towards your grade.</p>
 <section id="part-1-analysis-plan" class="level2">
 <h2 class="anchored" data-anchor-id="part-1-analysis-plan">Part 1: Analysis plan</h2>
@@ -485,13 +485,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Hypotheses:</p>
 <ul>
 <li><p>State your null hypothesis.</p>
-<p>Men’s and women’s teams will be assigned the same number of coaches, on average.</p></li>
+<p>Teams will have the same number of coaches regardless of team gender.</p></li>
 <li><p>State your alternative hypothesis.</p>
 <p>Men’s and women’s teams will be assigned different numbers of coaches.</p></li>
 </ul></li>
-<li><p>What statistical test will you use? Explain why this test is the right choice. (~1-3 sentences)</p>
-<p>I will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable. I am comparing the mean of the number of coaches between the two represented team genders.</p></li>
-<li><p>If necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code can be copied from component 2 (updated as necessary).</p></li>
+<li><p>What statistical test will you use? Explain why this test is the right choice.</p>
+<p>I will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable.</p></li>
+<li><p>If necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.</p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Just like in component 2, in order to avoid confounding team gender with sport, I need to filter out sports that are only available for one gender.</span></span>
@@ -539,7 +539,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and I display the p value</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>p_sports<span class="sc">$</span>p_value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.798</code></pre>
+<pre><code>[1] 0.802</code></pre>
 </div>
 </div>
 <ul>

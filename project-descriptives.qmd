@@ -9,14 +9,9 @@ In this component of your project, you will explore the variables you will use i
 
 ## How to complete and submit (due Thursday, June 8, 11:59pm)
 
-First, locate and clone the component 2 repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)).
-Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c2_descriptives_yourusername**.
-Clone that repository.
-Open the document called *c2_descriptives.qmd*.
-This is a template document where you will put your work.
+First, locate and clone the component 2 repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c2_descriptives_yourusername**. Clone that repository. Open the document called *c2_descriptives.qmd*. This is a template document where you will put your work.
 
-Commit your changes regularly.
-When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)).
+Commit your changes regularly. When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)).
 
 ## Details
 
@@ -47,14 +42,9 @@ This should be completed in the template Quarto document (these instructions are
 
 ### Part 4: Multivariate visualizations
 
--   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables.
-    Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc.
-    Include meaningful axis labels.
+-   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.
 
--   Interpret your plot in a few sentences.
-    Does it appear these variables are associated with one another?
-    Does anything about the relationship surprise you?
-    Is it consistent or inconsistent with your hypothesis?
+-   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
 
 ## Grading
 
@@ -69,9 +59,5 @@ This should be completed in the template Quarto document (these instructions are
 ::: callout-tip
 ## Why?
 
-Before doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like.
-This will help you head off problems later.
-For example, looking at the distributions of your variables will reveal if data is missing when you don't expect it to be.
-It also might clue you in on interesting patterns you may want to investigate further.
-Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics.
+Before doing any inferential statistics, you should always get a good understanding of what the distributions of your variables look like. This will help you head off problems later. For example, looking at the distributions of your variables will reveal if data is missing when you don't expect it to be. It also might clue you in on interesting patterns you may want to investigate further. Looking at bivariate associations between variables gives you a sense of what the relationship between them looks like, which will help you interpret inferential statistics.
 :::

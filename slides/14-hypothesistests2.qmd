@@ -13,13 +13,6 @@ library(openintro)
 
 ## Logistics {.smaller}
 
--   Project component 2 is graded
-
-    -   Check GitHub issues for written feedback
-    -   Grades on Sakai
-
--   Exercise grades up to date too
-
 -   Project component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)
 
     -   Drafts should be complete--meaning you attempted all parts
@@ -28,17 +21,18 @@ library(openintro)
 
 -   Hypothesis tests in more specifics
 
-## Recap from last time: Hypothesis test process
+## Hypothesis test process
 
 ::: incremental
 -   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
 
--   In the world where your null hypothesis is true, would your sample be super weird?
+-   In the world where your null hypothesis is true, would your sample be super weird? Run a test to find out!
 
-    -   Run a statistical test. The correct one depends on your variables.
-    -   Interpret the P value it gives you.
+    -   Figure out what statistical test you need to run. This depends on the types of your variables.
+    -   Run the test
+    -   Interpret the p value the test gives you. This tells you whether your sample falls far enough outside the expected distribution.
 
--   If so, we reject the null hypothesis in favor of the alternative hypothesis
+-   If the sample is sufficiently different than we expected, we reject the null hypothesis in favor of the alternative hypothesis
 
 -   If not, we fail to reject the null hypothesis
 
@@ -47,7 +41,7 @@ library(openintro)
 
 ## Conditions for hypothesis tests
 
--   Sampling distributions are normal (and so hypothesis tests "work") when two conditions are met:
+-   Sampling distributions follow predictable shapes (and so hypothesis tests "work") when two conditions are met:
 
 ::: incremental
 -   *Independence:* The value of one observation in the sample does not depend on the values of any of the others.
@@ -56,9 +50,7 @@ library(openintro)
     -   So does random assignment to experimental conditions
     -   Example that is *not* independent: I am interested in relationship satisfaction in monogamous relationships. I sample couples and ask both partners in each couple how satisfied they are.
     -   One partner's satisfaction is surely related to the other's!
-:::
 
-::: incremental
 -   *Samples are large enough:* Big samples are more likely to generate normal sampling distributions.
 
     -   How large is large enough depends on the specific test
@@ -68,26 +60,28 @@ library(openintro)
 
 ## General hypothesis test logic
 
--   Would the sample fall within the distribution of the samples you would get under the null hypothesis?
+-   Would the sample fall within the distribution of the samples you would get under the null hypothesis (the *null distribution*)?
 
 ![](images/13/clt_n20_newsample.png)
 
-## General hypothesis test logic
+# Understanding distributions: with the normal distribution as an example
 
-::: incremental
--   We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)
+## Distributions {.smaller}
 
-    -   The Central Limit Theorem guarantees it
+-   Null distributions take different shapes depending on what test statistic you calculate
+    
+    -   Which in turn depends on the combination of categorical and numeric variables you have---different tests (and so test statistics) are appropriate for different kinds of variables
+    
+-   But one very common one is the normal distribution
 
--   The center of a normal distribution is captured by its mean, and its spread is captured by its standard deviation
-:::
-
-# More on the normal distribution
+    -   Bell-shaped; defined by a mean and a standard deviation
 
 ## Z scores
 
 ::: incremental
 -   Z scores are a measure of how far an observation is from the center of a normal distribution, in units of standard deviation (or standard error--more on the difference in a moment).
+
+-   Z scores are the test statistic for the normal distribution
 
 -   Why are standard units important?
     For comparing across distributions.
@@ -104,8 +98,8 @@ openintro::normTail(m = 0, s = 1)
 ::: incremental
 -   Normal distributions can describe either individual samples or the distribution of sample statistics between samples---we'll do both here.
 -   The logic is exactly the same, but the name for the measure of distribution spread varies slightly.
--   Standard deviation: measures variation within a single sample
--   Standard error: measures variation in a sample statistic between multiple samples.
+-   **Standard deviation**: measures variation within a single sample
+-   **Standard error**: measures variation in a sample statistic between multiple samples.
 :::
 
 ## Standard deviation vs standard error
@@ -185,7 +179,7 @@ ggplot(data.frame(x = c(600, 2400)), aes(x = x)) +
 
 ![](images/13/nel_percentile.png)
 
-## Percentiles
+## Percentiles {.smaller}
 
 ```{r}
 pnorm(q = 1) # q is the Z score (yes, it's confusing). 
@@ -356,7 +350,7 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
 ## One-tailed vs two-tailed tests
 
 ::: incremental
--   How we think about P values depends on if our hypothesis test is *one-tailed* or *two-tailed*.
+-   How we think about p values depends on if our hypothesis test is *one-tailed* or *two-tailed*.
 
 -   One-tailed: we reject the null hypothesis only if our alternative hypothesis is specific about the *direction* of difference.
 
@@ -368,12 +362,13 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
     -   New Yorkers sleep a different amount than people in other cities
     -   The average number of friends for people who live in rural areas of the US has changed over the past 50 years.
 
--   Most hypothesis tests in sociology are two-tailed, and most software defaults to two-tailed tests
+-   Most hypothesis tests involving normal distributions in sociology are two-tailed, and most software defaults to two-tailed tests.
+-   When using some other distributions, like Chi square distributions, tests are always one-tailed---more on that another day.
 :::
 
-## One-tailed P values
+## One-tailed p values
 
--   The P value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).
+-   The p value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).
 
 -   Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less?
     (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)
@@ -384,7 +379,7 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
 openintro::normTail(m = 70, s = 3.3, L = 63.4, col = "blue")
 ```
 
-## One-tailed P values
+## One-tailed p values {.smaller}
 
 ```{r}
 pnorm(q = -2)
@@ -392,9 +387,9 @@ pnorm(q = -2)
 
 . . .
 
--   In this case, P value and percentile are the same!
+-   In this case, p value and percentile are the same!
 
-## One-tailed P values
+## One-tailed p values
 
 -   What is the probability of randomly selecting an American man who is 76.6 inches tall or taller?
     (use the same height distribution)
@@ -407,21 +402,21 @@ pnorm(q = -2)
 openintro::normTail(m = 70, s = 3.3, U = 76.6, col = "blue")
 ```
 
-## One tailed P values
+## One tailed p values
 
 ```{r, echo = FALSE}
 openintro::normTail(m = 70, s = 3.3, U = 76.6, col = "blue")
 ```
 
--   What is the P value here?
+-   What is the p value here?
 -   Is it the same as the percentile?
 
-## Two-tailed P values
+## Two-tailed p values
 
--   The P value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.
+-   The p value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.
 -   We count something as "more extreme" if it is larger in *absolute* Z score.
 
-## Two-tailed P values
+## Two-tailed p values
 
 -   Example: What is the probability of randomly selecting an American man whose height is two or more standard deviations from the mean?
 
@@ -438,7 +433,7 @@ openintro::normTail(m = 70, s = 3.3, L = 63.4, U = 76.6, col = "blue")
 ::: incremental
 -   Back to our question from earlier: how do I know if my sample is weird enough to warrant rejecting my null hypothesis?
 
--   We define threshold p-values before we run tests
+-   We define threshold p values before we run tests
 
 -   If the p value we get is smaller than the threshold, we say the sample provides *statistically significant* evidence against the null hypothesis, and we reject it.
 
@@ -453,39 +448,66 @@ openintro::normTail(m = 70, s = 3.3, L = 63.4, U = 76.6, col = "blue")
 
 -   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
 
--   In the world where your null hypothesis is true, would your sample be super weird?
+-   In the world where your null hypothesis is true, would your sample be super weird? Run a test to find out!
 
-    -   Run a statistical test. The correct one depends on your variables.
-    -   Interpret the P value it gives you.
+    -   Figure out what statistical test you need to run. This depends on the types of your variables.
+    -   Run the test
+    -   Interpret the p value the test gives you. This tells you whether your sample falls far enough outside the expected distribution.
 
--   If so, we reject the null hypothesis in favor of the alternative hypothesis
-
--   If not, we fail to reject the null hypothesis
-
-## Hypothesis test process
-
--   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
-
--   In the world where your null hypothesis is true, would your sample be super weird?
-
-    -   **Run a statistical test. The correct one depends on your variables.**
-    -   Interpret the P value it gives you.
-
--   If so, we reject the null hypothesis in favor of the alternative hypothesis
+-   If the sample is sufficiently different than we expected, we reject the null hypothesis in favor of the alternative hypothesis
 
 -   If not, we fail to reject the null hypothesis
 
 ## Different types of tests
 
 ::: incremental
--   Now that we've got the basics down, how do we run tests on data?
+-   Now that we know a little bit about distributions, how do we run tests on data?
 
 -   Step 1: Figure out what kind of test you need
 
-    -   This depends on whether your variables are categorical, binary, or numeric
+    -   This depends on your variable types. Are they...
+        
+        -   Categorical with two categories (including binary variables)?
+        -   Categorical with three or more categories?
+        -   Numeric?
+        -   *Wait, what about ordinal?* Ordinal variables are tricky. For our purposes, you can choose to treat them as either numeric or nominal categorical variables instead. 
+    
+    -   It also depends on how many variables your question involves
+    
+        -   Two? (one explanatory variable; one response variable)
+        -   Or more than two? (more than one explanatory variable; one response variable)
+        
     -   Does this feel similar to plotting? Lots of things depend on what kind of variables you have!
 :::
 
 ## Different types of tests: An overview
 
-## TODO: put in powerpoint table
+-   Which test to use is not as cut-and-dry as you might hope---there is overlap in use cases. This is my recommendation for this class.
+-   These terms won't mean much to you right now. We'll come back to the specifics.
+
+![](images/14/test_table.png)
+
+## Identifying the right test: exercise Q4
+
+-   For each of these research questions, identify the explanatory variable, the response variable, their types, and the correct statistical test. *Think about what the data would look like for each individual in these cases*
+
+-   a. How does whether a student attended a public or private school affect their chances of graduating high school?
+
+-   b. How do outcomes of traffic stops (warnings, citations, or arrests) vary by the race of the driver? 
+
+-   c. How does the probability a doctor refers a patient to a specialist vary by the patient's body mass index?
+
+-   d. How is a country's average life expectancy related to the amount of money per person it spends on health care? 
+
+![](images/14/test_table.png)
+
+## Running a hypothesis test in R with `infer`
+
+:::incremental
+-   The bad news: there are a lot of different tests. 
+-   The good news: regardless of what specific test you run, the logic is similar, and your code will look about the same!
+-   We will be using [the `infer` package](https://infer.tidymodels.org/index.html) to conduct hypothesis tests
+    
+    -   `infer` is built to work on similar logic to the tidyverse---where `filter()`, `mutate()`, and `ggplot()` are from
+    -   Its documentation is excellent---check out the website ([link here](https://infer.tidymodels.org/index.html)) if you ever get stuck
+:::

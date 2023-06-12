@@ -415,12 +415,6 @@ Aidan Combs
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
 <ul>
-<li><p>Project component 2 is graded</p>
-<ul>
-<li>Check GitHub issues for written feedback</li>
-<li>Grades on Sakai</li>
-</ul></li>
-<li><p>Exercise grades up to date too</p></li>
 <li><p>Project component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)</p>
 <ul>
 <li>Drafts should be complete–meaning you attempted all parts</li>
@@ -433,17 +427,18 @@ Aidan Combs
 <li>Hypothesis tests in more specifics</li>
 </ul>
 </section>
-<section id="recap-from-last-time-hypothesis-test-process" class="slide level2">
-<h2>Recap from last time: Hypothesis test process</h2>
+<section id="hypothesis-test-process" class="slide level2">
+<h2>Hypothesis test process</h2>
 <div>
 <ul>
 <li class="fragment"><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
-<li class="fragment"><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
+<li class="fragment"><p>In the world where your null hypothesis is true, would your sample be super weird? Run a test to find out!</p>
 <ul>
-<li class="fragment">Run a statistical test. The correct one depends on your variables.</li>
-<li class="fragment">Interpret the P value it gives you.</li>
+<li class="fragment">Figure out what statistical test you need to run. This depends on the types of your variables.</li>
+<li class="fragment">Run the test</li>
+<li class="fragment">Interpret the p value the test gives you. This tells you whether your sample falls far enough outside the expected distribution.</li>
 </ul></li>
-<li class="fragment"><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
+<li class="fragment"><p>If the sample is sufficiently different than we expected, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
 <li class="fragment"><p>If not, we fail to reject the null hypothesis</p>
 <ul>
 <li class="fragment">“Fail” sounds harsh, but this is normal and fine! We do analysis to find out if our predictions are true–sometimes they aren’t and that’s valuable information.</li>
@@ -454,7 +449,7 @@ Aidan Combs
 <section id="conditions-for-hypothesis-tests" class="slide level2">
 <h2>Conditions for hypothesis tests</h2>
 <ul>
-<li>Sampling distributions are normal (and so hypothesis tests “work”) when two conditions are met:</li>
+<li>Sampling distributions follow predictable shapes (and so hypothesis tests “work”) when two conditions are met:</li>
 </ul>
 <div>
 <ul>
@@ -465,10 +460,6 @@ Aidan Combs
 <li class="fragment">Example that is <em>not</em> independent: I am interested in relationship satisfaction in monogamous relationships. I sample couples and ask both partners in each couple how satisfied they are.</li>
 <li class="fragment">One partner’s satisfaction is surely related to the other’s!</li>
 </ul></li>
-</ul>
-</div>
-<div>
-<ul>
 <li class="fragment"><p><em>Samples are large enough:</em> Big samples are more likely to generate normal sampling distributions.</p>
 <ul>
 <li class="fragment">How large is large enough depends on the specific test</li>
@@ -484,32 +475,34 @@ Aidan Combs
 <section id="general-hypothesis-test-logic" class="slide level2">
 <h2>General hypothesis test logic</h2>
 <ul>
-<li>Would the sample fall within the distribution of the samples you would get under the null hypothesis?</li>
+<li>Would the sample fall within the distribution of the samples you would get under the null hypothesis (the <em>null distribution</em>)?</li>
 </ul>
 
-<img data-src="images/13/clt_n20_newsample.png" class="r-stretch"></section>
-<section id="general-hypothesis-test-logic-1" class="slide level2">
-<h2>General hypothesis test logic</h2>
-<div>
-<ul>
-<li class="fragment"><p>We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)</p>
-<ul>
-<li class="fragment">The Central Limit Theorem guarantees it</li>
-</ul></li>
-<li class="fragment"><p>The center of a normal distribution is captured by its mean, and its spread is captured by its standard deviation</p></li>
-</ul>
-</div>
-</section></section>
+<img data-src="images/13/clt_n20_newsample.png" class="r-stretch"></section></section>
 <section>
-<section id="more-on-the-normal-distribution" class="title-slide slide level1 center">
-<h1>More on the normal distribution</h1>
+<section id="understanding-distributions-with-the-normal-distribution-as-an-example" class="title-slide slide level1 center">
+<h1>Understanding distributions: with the normal distribution as an example</h1>
 
+</section>
+<section id="distributions" class="slide level2 smaller">
+<h2>Distributions</h2>
+<ul>
+<li><p>Null distributions take different shapes depending on what test statistic you calculate</p>
+<ul>
+<li>Which in turn depends on the combination of categorical and numeric variables you have—different tests (and so test statistics) are appropriate for different kinds of variables</li>
+</ul></li>
+<li><p>But one very common one is the normal distribution</p>
+<ul>
+<li>Bell-shaped; defined by a mean and a standard deviation</li>
+</ul></li>
+</ul>
 </section>
 <section id="z-scores" class="slide level2">
 <h2>Z scores</h2>
 <div>
 <ul>
 <li class="fragment"><p>Z scores are a measure of how far an observation is from the center of a normal distribution, in units of standard deviation (or standard error–more on the difference in a moment).</p></li>
+<li class="fragment"><p>Z scores are the test statistic for the normal distribution</p></li>
 <li class="fragment"><p>Why are standard units important? For comparing across distributions.</p>
 <ul>
 <li class="fragment">A Z score of -1 means the same thing in every normal distribution: the observation is one standard deviation below the mean.</li>
@@ -524,8 +517,8 @@ Aidan Combs
 <ul>
 <li class="fragment">Normal distributions can describe either individual samples or the distribution of sample statistics between samples—we’ll do both here.</li>
 <li class="fragment">The logic is exactly the same, but the name for the measure of distribution spread varies slightly.</li>
-<li class="fragment">Standard deviation: measures variation within a single sample</li>
-<li class="fragment">Standard error: measures variation in a sample statistic between multiple samples.</li>
+<li class="fragment"><strong>Standard deviation</strong>: measures variation within a single sample</li>
+<li class="fragment"><strong>Standard error</strong>: measures variation in a sample statistic between multiple samples.</li>
 </ul>
 </div>
 </section>
@@ -583,7 +576,7 @@ Aidan Combs
 </ul>
 
 <img data-src="images/13/nel_percentile.png" class="r-stretch"></section>
-<section id="percentiles-1" class="slide level2">
+<section id="percentiles-1" class="slide level2 smaller">
 <h2>Percentiles</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -698,7 +691,7 @@ Aidan Combs
 <h2>One-tailed vs two-tailed tests</h2>
 <div>
 <ul>
-<li class="fragment"><p>How we think about P values depends on if our hypothesis test is <em>one-tailed</em> or <em>two-tailed</em>.</p></li>
+<li class="fragment"><p>How we think about p values depends on if our hypothesis test is <em>one-tailed</em> or <em>two-tailed</em>.</p></li>
 <li class="fragment"><p>One-tailed: we reject the null hypothesis only if our alternative hypothesis is specific about the <em>direction</em> of difference.</p>
 <ul>
 <li class="fragment">New Yorkers sleep less than people in other cities.</li>
@@ -709,14 +702,15 @@ Aidan Combs
 <li class="fragment">New Yorkers sleep a different amount than people in other cities</li>
 <li class="fragment">The average number of friends for people who live in rural areas of the US has changed over the past 50 years.</li>
 </ul></li>
-<li class="fragment"><p>Most hypothesis tests in sociology are two-tailed, and most software defaults to two-tailed tests</p></li>
+<li class="fragment"><p>Most hypothesis tests involving normal distributions in sociology are two-tailed, and most software defaults to two-tailed tests.</p></li>
+<li class="fragment"><p>When using some other distributions, like Chi square distributions, tests are always one-tailed—more on that another day.</p></li>
 </ul>
 </div>
 </section>
 <section id="one-tailed-p-values" class="slide level2">
-<h2>One-tailed P values</h2>
+<h2>One-tailed p values</h2>
 <ul>
-<li><p>The P value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).</p></li>
+<li><p>The p value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).</p></li>
 <li><p>Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less? (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)</p></li>
 </ul>
 <div class="fragment">
@@ -727,8 +721,8 @@ Aidan Combs
 </div>
 </div>
 </section>
-<section id="one-tailed-p-values-1" class="slide level2">
-<h2>One-tailed P values</h2>
+<section id="one-tailed-p-values-1" class="slide level2 smaller">
+<h2>One-tailed p values</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -737,12 +731,12 @@ Aidan Combs
 </div>
 <div class="fragment">
 <ul>
-<li>In this case, P value and percentile are the same!</li>
+<li>In this case, p value and percentile are the same!</li>
 </ul>
 </div>
 </section>
 <section id="one-tailed-p-values-2" class="slide level2">
-<h2>One-tailed P values</h2>
+<h2>One-tailed p values</h2>
 <ul>
 <li><p>What is the probability of randomly selecting an American man who is 76.6 inches tall or taller? (use the same height distribution)</p></li>
 <li><p>First: Draw the distribution and shade the area we are interested in.</p></li>
@@ -756,22 +750,22 @@ Aidan Combs
 </div>
 </section>
 <section id="one-tailed-p-values-3" class="slide level2">
-<h2>One tailed P values</h2>
+<h2>One tailed p values</h2>
 
 <img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
-<li>What is the P value here?</li>
+<li>What is the p value here?</li>
 <li>Is it the same as the percentile?</li>
 </ul>
 </section>
 <section id="two-tailed-p-values" class="slide level2">
-<h2>Two-tailed P values</h2>
+<h2>Two-tailed p values</h2>
 <ul>
-<li>The P value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.</li>
+<li>The p value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.</li>
 <li>We count something as “more extreme” if it is larger in <em>absolute</em> Z score.</li>
 </ul>
 </section>
 <section id="two-tailed-p-values-1" class="slide level2">
-<h2>Two-tailed P values</h2>
+<h2>Two-tailed p values</h2>
 <ul>
 <li><p>Example: What is the probability of randomly selecting an American man whose height is two or more standard deviations from the mean?</p>
 <ul>
@@ -791,7 +785,7 @@ Aidan Combs
 <div>
 <ul>
 <li class="fragment"><p>Back to our question from earlier: how do I know if my sample is weird enough to warrant rejecting my null hypothesis?</p></li>
-<li class="fragment"><p>We define threshold p-values before we run tests</p></li>
+<li class="fragment"><p>We define threshold p values before we run tests</p></li>
 <li class="fragment"><p>If the p value we get is smaller than the threshold, we say the sample provides <em>statistically significant</em> evidence against the null hypothesis, and we reject it.</p></li>
 <li class="fragment"><p>Most common cutoff, by (arbitrary but common) convention: p = 0.05</p>
 <ul>
@@ -805,29 +799,17 @@ Aidan Combs
 <h1>Hypothesis tests for different variable types</h1>
 
 </section>
-<section id="hypothesis-test-process" class="slide level2">
-<h2>Hypothesis test process</h2>
-<ul>
-<li><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
-<li><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
-<ul>
-<li>Run a statistical test. The correct one depends on your variables.</li>
-<li>Interpret the P value it gives you.</li>
-</ul></li>
-<li><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
-<li><p>If not, we fail to reject the null hypothesis</p></li>
-</ul>
-</section>
 <section id="hypothesis-test-process-1" class="slide level2">
 <h2>Hypothesis test process</h2>
 <ul>
 <li><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
-<li><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
+<li><p>In the world where your null hypothesis is true, would your sample be super weird? Run a test to find out!</p>
 <ul>
-<li><strong>Run a statistical test. The correct one depends on your variables.</strong></li>
-<li>Interpret the P value it gives you.</li>
+<li>Figure out what statistical test you need to run. This depends on the types of your variables.</li>
+<li>Run the test</li>
+<li>Interpret the p value the test gives you. This tells you whether your sample falls far enough outside the expected distribution.</li>
 </ul></li>
-<li><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
+<li><p>If the sample is sufficiently different than we expected, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
 <li><p>If not, we fail to reject the null hypothesis</p></li>
 </ul>
 </section>
@@ -835,20 +817,66 @@ Aidan Combs
 <h2>Different types of tests</h2>
 <div>
 <ul>
-<li class="fragment"><p>Now that we’ve got the basics down, how do we run tests on data?</p></li>
+<li class="fragment"><p>Now that we know a little bit about distributions, how do we run tests on data?</p></li>
 <li class="fragment"><p>Step 1: Figure out what kind of test you need</p>
 <ul>
-<li class="fragment">This depends on whether your variables are categorical, binary, or numeric</li>
-<li class="fragment">Does this feel similar to plotting? Lots of things depend on what kind of variables you have!</li>
+<li class="fragment"><p>This depends on your variable types. Are they…</p>
+<ul>
+<li class="fragment">Categorical with two categories (including binary variables)?</li>
+<li class="fragment">Categorical with three or more categories?</li>
+<li class="fragment">Numeric?</li>
+<li class="fragment"><em>Wait, what about ordinal?</em> Ordinal variables are tricky. For our purposes, you can choose to treat them as either numeric or nominal categorical variables instead.</li>
+</ul></li>
+<li class="fragment"><p>It also depends on how many variables your question involves</p>
+<ul>
+<li class="fragment">Two? (one explanatory variable; one response variable)</li>
+<li class="fragment">Or more than two? (more than one explanatory variable; one response variable)</li>
+</ul></li>
+<li class="fragment"><p>Does this feel similar to plotting? Lots of things depend on what kind of variables you have!</p></li>
 </ul></li>
 </ul>
 </div>
 </section>
 <section id="different-types-of-tests-an-overview" class="slide level2">
 <h2>Different types of tests: An overview</h2>
-</section>
-<section id="todo-put-in-powerpoint-table" class="slide level2">
-<h2>TODO: put in powerpoint table</h2>
+<ul>
+<li>Which test to use is not as cut-and-dry as you might hope—there is overlap in use cases. This is my recommendation for this class.</li>
+<li>These terms won’t mean much to you right now. We’ll come back to the specifics.</li>
+</ul>
+
+<img data-src="images/14/test_table.png" class="r-stretch"></section>
+<section id="identifying-the-right-test-exercise-q4" class="slide level2">
+<h2>Identifying the right test: exercise Q4</h2>
+<ul>
+<li><p>For each of these research questions, identify the explanatory variable, the response variable, their types, and the correct statistical test. <em>Think about what the data would look like for each individual in these cases</em></p></li>
+<li><ol type="a">
+<li>How does whether a student attended a public or private school affect their chances of graduating high school?</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>How do outcomes of traffic stops (warnings, citations, or arrests) vary by the race of the driver?</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>How does the probability a doctor refers a patient to a specialist vary by the patient’s body mass index?</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>How is a country’s average life expectancy related to the amount of money per person it spends on health care?</li>
+</ol></li>
+</ul>
+
+<img data-src="images/14/test_table.png" class="r-stretch"></section>
+<section id="running-a-hypothesis-test-in-r-with-infer" class="slide level2">
+<h2>Running a hypothesis test in R with <code>infer</code></h2>
+<div>
+<ul>
+<li class="fragment"><p>The bad news: there are a lot of different tests.</p></li>
+<li class="fragment"><p>The good news: regardless of what specific test you run, the logic is similar, and your code will look about the same!</p></li>
+<li class="fragment"><p>We will be using <a href="https://infer.tidymodels.org/index.html">the <code>infer</code> package</a> to conduct hypothesis tests</p>
+<ul>
+<li class="fragment"><code>infer</code> is built to work on similar logic to the tidyverse—where <code>filter()</code>, <code>mutate()</code>, and <code>ggplot()</code> are from</li>
+<li class="fragment">Its documentation is excellent—check out the website (<a href="https://infer.tidymodels.org/index.html">link here</a>) if you ever get stuck</li>
+</ul></li>
+</ul>
+</div>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">

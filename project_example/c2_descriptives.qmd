@@ -21,8 +21,7 @@ sports <- readRDS("sports_teams.rds")
 
 -   Write down your hypothesis (from component 1)
 
-    I predict that for sports in which there is both a men's and a women's team, coaching levels will be equivalent.
-    I expect this because universities are required to adhere to Title IX, which would prohibit different levels of resources for equivalent sports.
+    I predict that for sports in which there is both a men's and a women's team, coaching levels will be equivalent. I expect this because universities are required to adhere to Title IX, which would prohibit different levels of resources for equivalent sports.
 
 -   Write down the name of your data set (from component 1)
 
@@ -40,15 +39,11 @@ sports <- readRDS("sports_teams.rds")
 
     -   What kind of variable it is (categorical or numeric and which subtype within these)
 
-**ncoaches**: This measures the number of coaches on each team.
-It is my response variable.
-It is a discrete numeric variable.
+**ncoaches**: This measures the number of coaches on each team. It is my response variable. It is a discrete numeric variable.
 
-**teamgender:** This records the gender of the players on the team.
-It is an explanatory variable and it is nominal categorical.
+**teamgender:** This records the gender of the players on the team. It is an explanatory variable and it is nominal categorical.
 
-**sport:** I will use this variable to limit my data frame to the sports that have both men's and women's teams.
-It is a nominal categorical variable.
+**sport:** I will use this variable to limit my data frame to the sports that have both men's and women's teams. It is a nominal categorical variable.
 
 ### Part 2: Univariate distributions
 
@@ -60,10 +55,7 @@ It is a nominal categorical variable.
 
 **ncoaches:**
 
-The minimum number of coaches per team is one, the median is four, and the maximum is 14.
-There are no missing values.
-The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right.
-In other words, there may be a small number of teams with a large number of coaches relative to the rest.
+The minimum number of coaches per team is one, the median is four, and the maximum is 14. There are no missing values. The fourth quartile is much wider than the other three (spanning from 4-14), and the mean (3.9) is larger than the median, suggesting that the data may be skewed to the right. In other words, there may be a small number of teams with a large number of coaches relative to the rest.
 
 The median and the cutoff point for the third quartile are the same (both equal 4), indicating that four is a really common number of coaches for teams to have.
 
@@ -73,10 +65,7 @@ summary(sports$ncoaches)
 
 **teamgender:**
 
-There are 418 men's teams and 461 women's teams in these data.
-There are no missing values.
-I am surprised that there are so many more women's teams than men's teams.
-I would have expected the numbers to be about the same.
+There are 418 men's teams and 461 women's teams in these data. There are no missing values. I am surprised that there are so many more women's teams than men's teams. I would have expected the numbers to be about the same.
 
 ```{r}
 table(sports$teamgender, useNA = "always")
@@ -84,10 +73,7 @@ table(sports$teamgender, useNA = "always")
 
 **sport:**
 
-There are 17 sports represented in my data (though it is likely that "All Track Combined" and "Track and Field X Country" are different words for the same thing, which would make it 16 sports).
-There are no missing values.
-Most sports have either 76 or 38 distinct teams in my data.
-It is possible that the sports with 38 teams are those that are available only to one gender, and the ones with 76 (38x2) teams have both men's and women's versions.
+There are 17 sports represented in my data (though it is likely that "All Track Combined" and "Track and Field X Country" are different words for the same thing, which would make it 16 sports). There are no missing values. Most sports have either 76 or 38 distinct teams in my data. It is possible that the sports with 38 teams are those that are available only to one gender, and the ones with 76 (38x2) teams have both men's and women's versions.
 
 ```{r}
 table(sports$sport, useNA = "always")
@@ -95,20 +81,13 @@ table(sports$sport, useNA = "always")
 
 ### Part 3: Preparing your data set
 
--   Will you analyze all the observations in your data set?
-    Explain why or why not.
-    If not, which will you include and which will you exclude?
+-   Will you analyze all the observations in your data set? Explain why or why not. If not, which will you include and which will you exclude?
 
-    I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison.
-    There is a different set of sports available for men than for women.
-    I am interested in comparing the number of coaches for comparable men's and women's teams, so I will exclude sports for which there are only men's teams or only women's teams (e.g., football, softball).
+    I will not analyze all of the observations in my data set because analyzing all of them would make for an unfair comparison. There is a different set of sports available for men than for women. I am interested in comparing the number of coaches for comparable men's and women's teams, so I will exclude sports for which there are only men's teams or only women's teams (e.g., football, softball).
 
--   Do you need to create any new variables?
-    Explain why or why not.
-    If so, what are they?
+-   Do you need to create any new variables? Explain why or why not. If so, what are they?
 
-    I do not need to create any new variables.
-    My explanatory variable is teamgender and my response variable is ncoaches, and they already fit my research question well in their current forms.
+    I do not need to create any new variables. My explanatory variable is teamgender and my response variable is ncoaches, and they already fit my research question well in their current forms.
 
 -   If necessary, use the code chunk below to make any needed changes (filtering observations and creating variables) to your data.
 
@@ -136,18 +115,11 @@ table(sports_filtered$sport, sports_filtered$teamgender)
 
 ### Part 4: Multivariate visualizations
 
--   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables.
-    Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc.
-    Include meaningful axis labels.
+-   Make a plot showing the relationship between your explanatory (independent) and response (dependent) variables. Depending on your variable types, this might be a scatter plot, box plot, bar chart, etc. Include meaningful axis labels.
 
--   Interpret your plot in a few sentences.
-    Does it appear these variables are associated with one another?
-    Does anything about the relationship surprise you?
-    Is it consistent or inconsistent with your hypothesis?
+-   Interpret your plot in a few sentences. Does it appear these variables are associated with one another? Does anything about the relationship surprise you? Is it consistent or inconsistent with your hypothesis?
 
-    As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right.
-    The distributions look nearly identical for men's and women's teams, so it appears that team gender and staffing levels are probably not associated with one another.
-    This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.
+    As suggested by the univariate summary statistics, the distribution of the number of coaches is skewed to the right. The distributions look nearly identical for men's and women's teams, so it appears that team gender and staffing levels are probably not associated with one another. This is consistent with my hypothesis and is not very surprising, though I was not expecting the distributions to be as extraordinarily similar as they appear here.
 
 ```{r}
 # I have one numeric and one categorical variable, so a boxplot (as in example code in the assignment template) would also be a good choice here--but for variety I will show the same information in histogram form
