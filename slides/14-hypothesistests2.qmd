@@ -31,43 +31,161 @@ library(openintro)
 ## Recap from last time: Hypothesis test process
 
 ::: incremental
--   Start with a null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
+-   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
 
 -   In the world where your null hypothesis is true, would your sample be super weird?
 
-    -   We have statistical tests for this
+    -   Run a statistical test. The correct one depends on your variables.
+    -   Interpret the P value it gives you.
 
 -   If so, we reject the null hypothesis in favor of the alternative hypothesis
 
 -   If not, we fail to reject the null hypothesis
 
-    -   "Fail" sounds harsh but this is normal and fine! We do analysis to find out if our predictions are true--sometimes they aren't and that's valuable to know.
+    -   "Fail" sounds harsh, but this is normal and fine! We do analysis to find out if our predictions are true--sometimes they aren't and that's valuable information.
 :::
 
-## How do I know if my sample is weird?
+## Conditions for hypothesis tests
 
--   Would it fall within the distribution of the samples you would get under the null hypothesis?
+-   Sampling distributions are normal (and so hypothesis tests "work") when two conditions are met:
+
+::: incremental
+-   *Independence:* The value of one observation in the sample does not depend on the values of any of the others.
+
+    -   Random sampling of individuals guarantees independence
+    -   So does random assignment to experimental conditions
+    -   Example that is *not* independent: I am interested in relationship satisfaction in monogamous relationships. I sample couples and ask both partners in each couple how satisfied they are.
+    -   One partner's satisfaction is surely related to the other's!
+:::
+
+::: incremental
+-   *Samples are large enough:* Big samples are more likely to generate normal sampling distributions.
+
+    -   How large is large enough depends on the specific test
+:::
+
+# How do I know if my sample is weird?
+
+## General hypothesis test logic
+
+-   Would the sample fall within the distribution of the samples you would get under the null hypothesis?
 
 ![](images/13/clt_n20_newsample.png)
 
-## How do I know if my sample is weird?
+## General hypothesis test logic
 
 ::: incremental
--   We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)--the Central Limit Theorem guarantees it.
--   There is math that describes the shape of normal distributions
--   Z scores tell us how many standard deviations away from the expected mean our sample is.
+-   We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)
+
+    -   The Central Limit Theorem guarantees it
+
+-   The center of a normal distribution is captured by its mean, and its spread is captured by its standard deviation
 :::
 
-## Z scores and percentiles
+# More on the normal distribution
 
--   Percentile: What percent of the data is below a particular observation
+## Z scores
+
+::: incremental
+-   Z scores are a measure of how far an observation is from the center of a normal distribution, in units of standard deviation (or standard error--more on the difference in a moment).
+
+-   Why are standard units important?
+    For comparing across distributions.
+
+    -   A Z score of -1 means the same thing in every normal distribution: the observation is one standard deviation below the mean.
+:::
+
+```{r, echo = FALSE}
+openintro::normTail(m = 0, s = 1)
+```
+
+## Standard deviation vs standard error {.smaller}
+
+::: incremental
+-   Normal distributions can describe either individual samples or the distribution of sample statistics between samples---we'll do both here.
+-   The logic is exactly the same, but the name for the measure of distribution spread varies slightly.
+-   Standard deviation: measures variation within a single sample
+-   Standard error: measures variation in a sample statistic between multiple samples.
+:::
+
+## Standard deviation vs standard error
+
+::: columns
+::: {.column width="30%"}
+-   Example: Scores on the (pre-2016) SAT were normally distributed with a mean of 1500 points and a standard deviation of 300 points.
+
+    -   That distribution describes the scores of individual students who take the SAT
+    -   So standard *deviation* is the term we use to describe its spread
+:::
+
+::: {.column width="70%"}
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(600, 2400)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 1500, sd = 300)) + 
+  scale_x_continuous(breaks = seq(600, 2400, 300)) +
+  theme_classic() + 
+  labs(x = "", y = "", title = "Distribution of scores within a sample (for individuals)") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+:::
+:::
+
+## Standard deviation vs standard error
+
+::: columns
+::: {.column width="30%"}
+::: incremental
+-   Now imagine that we randomly sampled students and asked them to provide their SAT scores.
+    We have many samples of 25 students each.
+
+-   The mean score in each 25-student sample is our sample statistic
+
+-   The term for the spread of this sampling distribution is the standard error.
+
+-   It is determined by formulas that vary depending on the specific situation.
+    You generally won't calculate it yourself; it will be provided in R output.
+
+-   Standard error is always smaller than standard deviation: there is more variation within samples from the same population than between them.
+:::
+:::
+
+::: {.column width="70%"}
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(600, 2400)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 1500, sd = 300/5)) + 
+  scale_x_continuous(breaks = seq(600, 2400, 300)) +
+  theme_classic() + 
+  labs(x = "", y = "", title = "Distribution of mean scores between 25-student samples") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+:::
+:::
+
+## Percentiles
+
+-   Percentile: What percent of the data is below a particular observation.
+
+-   From 0% to 100%, but generally reported as a proportion instead (0-1).
+
 -   Something that can be calculated with software (like R)
 
     -   The `pnorm()` function takes a Z score and gives you the corresponding percentile
 
 ![](images/13/nel_percentile.png)
 
-. . .
+## Percentiles
 
 ```{r}
 pnorm(q = 1) # q is the Z score (yes, it's confusing). 
@@ -75,18 +193,299 @@ pnorm(q = 1) # q is the Z score (yes, it's confusing).
 # deviation above the mean for all test-takers.
 ```
 
--   Conclusion: 84% of SAT-takers score below Nel.
+. . .
 
-## TODO: Z score and percentile exercise
+-   Conclusion: 84% of SAT-takers score below Nel.
 
 ## Z scores and percentiles
 
--   68% of observations are within 1 standard deviation of the mean
--   95% are within 2 sds
--   99.7% are within 3 sds
+-   68% of observations are within 1 standard error/standard deviation of the mean
+-   95% are within 2 standard errors/standard deviations
+-   99.7% are within 3 standard errors/standard deviations
 
 ![](images/13/percentiles.png)
 
+## Z scores, percentiles, and p values: example
+
+-   Heights of US adults who identify as men follow a normal distribution. Mean = 70 inches; standard deviation = 3.3 inches.
+
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(60.1, 79.9)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 70, sd = 3.3)) + 
+  scale_x_continuous(breaks = seq(60.1, 79.9, 3.3)) +
+  theme_classic() + 
+  labs(x = "", y = "") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+
+## Z scores: exercise Q1
+
+::: incremental
+-   What is the Z score of a man who is 70 inches tall?
+
+    -   Zero!
+    -   70 is the mean of this distribution. An observation whose value is exactly equal to the mean has a Z score of 0.
+:::
+
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(60.1, 79.9)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 70, sd = 3.3)) + 
+  scale_x_continuous(breaks = seq(60.1, 79.9, 3.3)) +
+  theme_classic() + 
+  labs(x = "", y = "") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+
+## Z scores: exercise Q2
+
+-   What is the Z score of a man who is 65 inches tall?
+
+    -   
+
+        a.  About 1.3
+
+    -   
+
+        b.  About -3
+
+    -   
+
+        c.  About -1.5
+
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(60.1, 79.9)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 70, sd = 3.3)) + 
+  scale_x_continuous(breaks = seq(60.1, 79.9, 3.3)) +
+  theme_classic() + 
+  labs(x = "", y = "") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+
+## Z scores: exercise Q2
+
+-   
+
+    c.  About -1.5
+
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(60.1, 79.9)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 70, sd = 3.3)) + 
+  geom_vline(xintercept = 65, color = "blue") + 
+  scale_x_continuous(breaks = seq(60.1, 79.9, 3.3)) +
+  theme_classic() + 
+  labs(x = "", y = "") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+
+## Percentiles: exercise Q3
+
+-   If someone is in the 30th percentile in terms of height, is their height most likely:
+
+    -   
+
+        a.  About 68 inches
+
+    -   
+
+        b.  About 72 inches
+
+    -   
+
+        c.  About 62 inches
+
+```{r, echo = FALSE}
+ggplot(data.frame(x = c(60.1, 79.9)), aes(x = x)) +
+  stat_function(fun = dnorm, 
+                args = c(mean = 70, sd = 3.3)) + 
+  scale_x_continuous(breaks = seq(60.1, 79.9, 3.3)) +
+  theme_classic() + 
+  labs(x = "", y = "") + 
+  theme(
+    axis.line.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_text(size = 22)
+  )
+```
+
+## Percentiles: exercise Q3
+
+-   
+
+    a.  About 68 inches
+
+```{r, echo = FALSE}
+openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = "blue")
+```
+
 ## P values
 
--   Usually
+::: incremental
+-   Percentiles/Z scores quantify how far our sample is from what we expected under the null hypothesis
+
+-   P value: closely related to percentile.
+    How much of the expected distribution under the null hypothesis has a value more extreme than what we find in our sample?
+
+    -   In other words: If the null hypothesis were true, what would the probability be of getting a sample as or more extreme than what was actually observed?
+:::
+
+## One-tailed vs two-tailed tests
+
+::: incremental
+-   How we think about P values depends on if our hypothesis test is *one-tailed* or *two-tailed*.
+
+-   One-tailed: we reject the null hypothesis only if our alternative hypothesis is specific about the *direction* of difference.
+
+    -   New Yorkers sleep less than people in other cities.
+    -   The average number of friends for people who live in rural areas of the US has increased over the past 50 years
+
+-   Two-tailed: we reject the null hypothesis if direction is not important: ie, if the sample statistic is either significantly bigger *or* significantly smaller than we expect.
+
+    -   New Yorkers sleep a different amount than people in other cities
+    -   The average number of friends for people who live in rural areas of the US has changed over the past 50 years.
+
+-   Most hypothesis tests in sociology are two-tailed, and most software defaults to two-tailed tests
+:::
+
+## One-tailed P values
+
+-   The P value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).
+
+-   Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less?
+    (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)
+
+. . .
+
+```{r, echo = FALSE}
+openintro::normTail(m = 70, s = 3.3, L = 63.4, col = "blue")
+```
+
+## One-tailed P values
+
+```{r}
+pnorm(q = -2)
+```
+
+. . .
+
+-   In this case, P value and percentile are the same!
+
+## One-tailed P values
+
+-   What is the probability of randomly selecting an American man who is 76.6 inches tall or taller?
+    (use the same height distribution)
+
+-   First: Draw the distribution and shade the area we are interested in.
+
+. . .
+
+```{r, echo = FALSE}
+openintro::normTail(m = 70, s = 3.3, U = 76.6, col = "blue")
+```
+
+## One tailed P values
+
+```{r, echo = FALSE}
+openintro::normTail(m = 70, s = 3.3, U = 76.6, col = "blue")
+```
+
+-   What is the P value here?
+-   Is it the same as the percentile?
+
+## Two-tailed P values
+
+-   The P value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.
+-   We count something as "more extreme" if it is larger in *absolute* Z score.
+
+## Two-tailed P values
+
+-   Example: What is the probability of randomly selecting an American man whose height is two or more standard deviations from the mean?
+
+    -   In other words: the probability of randomly selecting a man who is either 63.4 inches or shorter OR 76.6 inches or taller
+
+. . .
+
+```{r, echo = FALSE}
+openintro::normTail(m = 70, s = 3.3, L = 63.4, U = 76.6, col = "blue")
+```
+
+## P values and statistical significance
+
+::: incremental
+-   Back to our question from earlier: how do I know if my sample is weird enough to warrant rejecting my null hypothesis?
+
+-   We define threshold p-values before we run tests
+
+-   If the p value we get is smaller than the threshold, we say the sample provides *statistically significant* evidence against the null hypothesis, and we reject it.
+
+-   Most common cutoff, by (arbitrary but common) convention: p = 0.05
+
+    -   So, if we get a p value for our sample smaller than 0.05--meaning that there was a less than five percent chance that we would have obtained our result if the null was true--we reject the null.
+:::
+
+# Hypothesis tests for different variable types
+
+## Hypothesis test process
+
+-   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
+
+-   In the world where your null hypothesis is true, would your sample be super weird?
+
+    -   Run a statistical test. The correct one depends on your variables.
+    -   Interpret the P value it gives you.
+
+-   If so, we reject the null hypothesis in favor of the alternative hypothesis
+
+-   If not, we fail to reject the null hypothesis
+
+## Hypothesis test process
+
+-   Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)
+
+-   In the world where your null hypothesis is true, would your sample be super weird?
+
+    -   **Run a statistical test. The correct one depends on your variables.**
+    -   Interpret the P value it gives you.
+
+-   If so, we reject the null hypothesis in favor of the alternative hypothesis
+
+-   If not, we fail to reject the null hypothesis
+
+## Different types of tests
+
+::: incremental
+-   Now that we've got the basics down, how do we run tests on data?
+
+-   Step 1: Figure out what kind of test you need
+
+    -   This depends on whether your variables are categorical, binary, or numeric
+    -   Does this feel similar to plotting? Lots of things depend on what kind of variables you have!
+:::
+
+## Different types of tests: An overview
+
+## TODO: put in powerpoint table

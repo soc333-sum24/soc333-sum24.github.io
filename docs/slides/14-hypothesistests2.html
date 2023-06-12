@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.361">
+  <meta name="generator" content="quarto-1.3.333">
 
   <meta name="author" content="Aidan Combs">
   <meta name="dcterms.date" content="2023-06-12">
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -437,47 +437,154 @@ Aidan Combs
 <h2>Recap from last time: Hypothesis test process</h2>
 <div>
 <ul>
-<li class="fragment"><p>Start with a null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
+<li class="fragment"><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
 <li class="fragment"><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
 <ul>
-<li class="fragment">We have statistical tests for this</li>
+<li class="fragment">Run a statistical test. The correct one depends on your variables.</li>
+<li class="fragment">Interpret the P value it gives you.</li>
 </ul></li>
 <li class="fragment"><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
 <li class="fragment"><p>If not, we fail to reject the null hypothesis</p>
 <ul>
-<li class="fragment">“Fail” sounds harsh but this is normal and fine! We do analysis to find out if our predictions are true–sometimes they aren’t and that’s valuable to know.</li>
+<li class="fragment">“Fail” sounds harsh, but this is normal and fine! We do analysis to find out if our predictions are true–sometimes they aren’t and that’s valuable information.</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="how-do-i-know-if-my-sample-is-weird" class="slide level2">
-<h2>How do I know if my sample is weird?</h2>
+<section id="conditions-for-hypothesis-tests" class="slide level2">
+<h2>Conditions for hypothesis tests</h2>
 <ul>
-<li>Would it fall within the distribution of the samples you would get under the null hypothesis?</li>
+<li>Sampling distributions are normal (and so hypothesis tests “work”) when two conditions are met:</li>
 </ul>
-
-<img data-src="images/13/clt_n20_newsample.png" class="r-stretch"></section>
-<section id="how-do-i-know-if-my-sample-is-weird-1" class="slide level2">
-<h2>How do I know if my sample is weird?</h2>
 <div>
 <ul>
-<li class="fragment">We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)–the Central Limit Theorem guarantees it.</li>
-<li class="fragment">There is math that describes the shape of normal distributions</li>
-<li class="fragment">Z scores tell us how many standard deviations away from the expected mean our sample is.</li>
+<li class="fragment"><p><em>Independence:</em> The value of one observation in the sample does not depend on the values of any of the others.</p>
+<ul>
+<li class="fragment">Random sampling of individuals guarantees independence</li>
+<li class="fragment">So does random assignment to experimental conditions</li>
+<li class="fragment">Example that is <em>not</em> independent: I am interested in relationship satisfaction in monogamous relationships. I sample couples and ask both partners in each couple how satisfied they are.</li>
+<li class="fragment">One partner’s satisfaction is surely related to the other’s!</li>
+</ul></li>
+</ul>
+</div>
+<div>
+<ul>
+<li class="fragment"><p><em>Samples are large enough:</em> Big samples are more likely to generate normal sampling distributions.</p>
+<ul>
+<li class="fragment">How large is large enough depends on the specific test</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="z-scores-and-percentiles" class="slide level2">
-<h2>Z scores and percentiles</h2>
+<section>
+<section id="how-do-i-know-if-my-sample-is-weird" class="title-slide slide level1 center">
+<h1>How do I know if my sample is weird?</h1>
+
+</section>
+<section id="general-hypothesis-test-logic" class="slide level2">
+<h2>General hypothesis test logic</h2>
 <ul>
-<li><p>Percentile: What percent of the data is below a particular observation</p></li>
+<li>Would the sample fall within the distribution of the samples you would get under the null hypothesis?</li>
+</ul>
+
+<img data-src="images/13/clt_n20_newsample.png" class="r-stretch"></section>
+<section id="general-hypothesis-test-logic-1" class="slide level2">
+<h2>General hypothesis test logic</h2>
+<div>
+<ul>
+<li class="fragment"><p>We take advantage of the fact that the expected samples under the null hypothesis are (under most circumstances) normally distributed (bell-shaped)</p>
+<ul>
+<li class="fragment">The Central Limit Theorem guarantees it</li>
+</ul></li>
+<li class="fragment"><p>The center of a normal distribution is captured by its mean, and its spread is captured by its standard deviation</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="more-on-the-normal-distribution" class="title-slide slide level1 center">
+<h1>More on the normal distribution</h1>
+
+</section>
+<section id="z-scores" class="slide level2">
+<h2>Z scores</h2>
+<div>
+<ul>
+<li class="fragment"><p>Z scores are a measure of how far an observation is from the center of a normal distribution, in units of standard deviation (or standard error–more on the difference in a moment).</p></li>
+<li class="fragment"><p>Why are standard units important? For comparing across distributions.</p>
+<ul>
+<li class="fragment">A Z score of -1 means the same thing in every normal distribution: the observation is one standard deviation below the mean.</li>
+</ul></li>
+</ul>
+</div>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="standard-deviation-vs-standard-error" class="slide level2 smaller">
+<h2>Standard deviation vs standard error</h2>
+<div>
+<ul>
+<li class="fragment">Normal distributions can describe either individual samples or the distribution of sample statistics between samples—we’ll do both here.</li>
+<li class="fragment">The logic is exactly the same, but the name for the measure of distribution spread varies slightly.</li>
+<li class="fragment">Standard deviation: measures variation within a single sample</li>
+<li class="fragment">Standard error: measures variation in a sample statistic between multiple samples.</li>
+</ul>
+</div>
+</section>
+<section id="standard-deviation-vs-standard-error-1" class="slide level2">
+<h2>Standard deviation vs standard error</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>Example: Scores on the (pre-2016) SAT were normally distributed with a mean of 1500 points and a standard deviation of 300 points.</p>
+<ul>
+<li>That distribution describes the scores of individual students who take the SAT</li>
+<li>So standard <em>deviation</em> is the term we use to describe its spread</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="standard-deviation-vs-standard-error-2" class="slide level2">
+<h2>Standard deviation vs standard error</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div>
+<ul>
+<li class="fragment"><p>Now imagine that we randomly sampled students and asked them to provide their SAT scores. We have many samples of 25 students each.</p></li>
+<li class="fragment"><p>The mean score in each 25-student sample is our sample statistic</p></li>
+<li class="fragment"><p>The term for the spread of this sampling distribution is the standard error.</p></li>
+<li class="fragment"><p>It is determined by formulas that vary depending on the specific situation. You generally won’t calculate it yourself; it will be provided in R output.</p></li>
+<li class="fragment"><p>Standard error is always smaller than standard deviation: there is more variation within samples from the same population than between them.</p></li>
+</ul>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="percentiles" class="slide level2">
+<h2>Percentiles</h2>
+<ul>
+<li><p>Percentile: What percent of the data is below a particular observation.</p></li>
+<li><p>From 0% to 100%, but generally reported as a proportion instead (0-1).</p></li>
 <li><p>Something that can be calculated with software (like R)</p>
 <ul>
 <li>The <code>pnorm()</code> function takes a Z score and gives you the corresponding percentile</li>
 </ul></li>
 </ul>
 
-<img data-src="images/13/nel_percentile.png" class="r-stretch"><div class="fragment">
+<img data-src="images/13/nel_percentile.png" class="r-stretch"></section>
+<section id="percentiles-1" class="slide level2">
+<h2>Percentiles</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -486,34 +593,268 @@ Aidan Combs
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Nel's Z score is 1 because their SAT score is 1 standard </span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="co"># deviation above the mean for all test-takers.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <ul>
 <li>Conclusion: 84% of SAT-takers score below Nel.</li>
 </ul>
 </div>
 </section>
-<section id="todo-z-score-and-percentile-exercise" class="slide level2">
-<h2>TODO: Z score and percentile exercise</h2>
-</section>
-<section id="z-scores-and-percentiles-1" class="slide level2">
+<section id="z-scores-and-percentiles" class="slide level2">
 <h2>Z scores and percentiles</h2>
 <ul>
-<li>68% of observations are within 1 standard deviation of the mean</li>
-<li>95% are within 2 sds</li>
-<li>99.7% are within 3 sds</li>
+<li>68% of observations are within 1 standard error/standard deviation of the mean</li>
+<li>95% are within 2 standard errors/standard deviations</li>
+<li>99.7% are within 3 standard errors/standard deviations</li>
 </ul>
 
 <img data-src="images/13/percentiles.png" class="r-stretch"></section>
+<section id="z-scores-percentiles-and-p-values-example" class="slide level2">
+<h2>Z scores, percentiles, and p values: example</h2>
+<ul>
+<li>Heights of US adults who identify as men follow a normal distribution. Mean = 70 inches; standard deviation = 3.3 inches.</li>
+</ul>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="z-scores-exercise-q1" class="slide level2">
+<h2>Z scores: exercise Q1</h2>
+<div>
+<ul>
+<li class="fragment"><p>What is the Z score of a man who is 70 inches tall?</p>
+<ul>
+<li class="fragment">Zero!</li>
+<li class="fragment">70 is the mean of this distribution. An observation whose value is exactly equal to the mean has a Z score of 0.</li>
+</ul></li>
+</ul>
+</div>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="z-scores-exercise-q2" class="slide level2">
+<h2>Z scores: exercise Q2</h2>
+<ul>
+<li><p>What is the Z score of a man who is 65 inches tall?</p>
+<ul>
+<li><ol type="a">
+<li>About 1.3</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>About -3</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>About -1.5</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="z-scores-exercise-q2-1" class="slide level2">
+<h2>Z scores: exercise Q2</h2>
+<ul>
+<li><ol start="3" type="a">
+<li>About -1.5</li>
+</ol></li>
+</ul>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="percentiles-exercise-q3" class="slide level2">
+<h2>Percentiles: exercise Q3</h2>
+<ul>
+<li><p>If someone is in the 30th percentile in terms of height, is their height most likely:</p>
+<ul>
+<li><ol type="a">
+<li>About 68 inches</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>About 72 inches</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>About 62 inches</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="percentiles-exercise-q3-1" class="slide level2">
+<h2>Percentiles: exercise Q3</h2>
+<ul>
+<li><ol type="a">
+<li>About 68 inches</li>
+</ol></li>
+</ul>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="p-values" class="slide level2">
 <h2>P values</h2>
+<div>
 <ul>
-<li>Usually</li>
+<li class="fragment"><p>Percentiles/Z scores quantify how far our sample is from what we expected under the null hypothesis</p></li>
+<li class="fragment"><p>P value: closely related to percentile. How much of the expected distribution under the null hypothesis has a value more extreme than what we find in our sample?</p>
+<ul>
+<li class="fragment">In other words: If the null hypothesis were true, what would the probability be of getting a sample as or more extreme than what was actually observed?</li>
+</ul></li>
 </ul>
+</div>
+</section>
+<section id="one-tailed-vs-two-tailed-tests" class="slide level2">
+<h2>One-tailed vs two-tailed tests</h2>
+<div>
+<ul>
+<li class="fragment"><p>How we think about P values depends on if our hypothesis test is <em>one-tailed</em> or <em>two-tailed</em>.</p></li>
+<li class="fragment"><p>One-tailed: we reject the null hypothesis only if our alternative hypothesis is specific about the <em>direction</em> of difference.</p>
+<ul>
+<li class="fragment">New Yorkers sleep less than people in other cities.</li>
+<li class="fragment">The average number of friends for people who live in rural areas of the US has increased over the past 50 years</li>
+</ul></li>
+<li class="fragment"><p>Two-tailed: we reject the null hypothesis if direction is not important: ie, if the sample statistic is either significantly bigger <em>or</em> significantly smaller than we expect.</p>
+<ul>
+<li class="fragment">New Yorkers sleep a different amount than people in other cities</li>
+<li class="fragment">The average number of friends for people who live in rural areas of the US has changed over the past 50 years.</li>
+</ul></li>
+<li class="fragment"><p>Most hypothesis tests in sociology are two-tailed, and most software defaults to two-tailed tests</p></li>
+</ul>
+</div>
+</section>
+<section id="one-tailed-p-values" class="slide level2">
+<h2>One-tailed P values</h2>
+<ul>
+<li><p>The P value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).</p></li>
+<li><p>Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less? (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)</p></li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="one-tailed-p-values-1" class="slide level2">
+<h2>One-tailed P values</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02275013</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>In this case, P value and percentile are the same!</li>
+</ul>
+</div>
+</section>
+<section id="one-tailed-p-values-2" class="slide level2">
+<h2>One-tailed P values</h2>
+<ul>
+<li><p>What is the probability of randomly selecting an American man who is 76.6 inches tall or taller? (use the same height distribution)</p></li>
+<li><p>First: Draw the distribution and shade the area we are interested in.</p></li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="one-tailed-p-values-3" class="slide level2">
+<h2>One tailed P values</h2>
+
+<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
+<li>What is the P value here?</li>
+<li>Is it the same as the percentile?</li>
+</ul>
+</section>
+<section id="two-tailed-p-values" class="slide level2">
+<h2>Two-tailed P values</h2>
+<ul>
+<li>The P value for a two-tailed test is the probability that you would have drawn a sample equal to or more extreme than the one you have, in either direction.</li>
+<li>We count something as “more extreme” if it is larger in <em>absolute</em> Z score.</li>
+</ul>
+</section>
+<section id="two-tailed-p-values-1" class="slide level2">
+<h2>Two-tailed P values</h2>
+<ul>
+<li><p>Example: What is the probability of randomly selecting an American man whose height is two or more standard deviations from the mean?</p>
+<ul>
+<li>In other words: the probability of randomly selecting a man who is either 63.4 inches or shorter OR 76.6 inches or taller</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="p-values-and-statistical-significance" class="slide level2">
+<h2>P values and statistical significance</h2>
+<div>
+<ul>
+<li class="fragment"><p>Back to our question from earlier: how do I know if my sample is weird enough to warrant rejecting my null hypothesis?</p></li>
+<li class="fragment"><p>We define threshold p-values before we run tests</p></li>
+<li class="fragment"><p>If the p value we get is smaller than the threshold, we say the sample provides <em>statistically significant</em> evidence against the null hypothesis, and we reject it.</p></li>
+<li class="fragment"><p>Most common cutoff, by (arbitrary but common) convention: p = 0.05</p>
+<ul>
+<li class="fragment">So, if we get a p value for our sample smaller than 0.05–meaning that there was a less than five percent chance that we would have obtained our result if the null was true–we reject the null.</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="hypothesis-tests-for-different-variable-types" class="title-slide slide level1 center">
+<h1>Hypothesis tests for different variable types</h1>
+
+</section>
+<section id="hypothesis-test-process" class="slide level2">
+<h2>Hypothesis test process</h2>
+<ul>
+<li><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
+<li><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
+<ul>
+<li>Run a statistical test. The correct one depends on your variables.</li>
+<li>Interpret the P value it gives you.</li>
+</ul></li>
+<li><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
+<li><p>If not, we fail to reject the null hypothesis</p></li>
+</ul>
+</section>
+<section id="hypothesis-test-process-1" class="slide level2">
+<h2>Hypothesis test process</h2>
+<ul>
+<li><p>Define your null hypothesis (boring result; nothing is happening; no group differences) and an alternative hypothesis (the other possibility)</p></li>
+<li><p>In the world where your null hypothesis is true, would your sample be super weird?</p>
+<ul>
+<li><strong>Run a statistical test. The correct one depends on your variables.</strong></li>
+<li>Interpret the P value it gives you.</li>
+</ul></li>
+<li><p>If so, we reject the null hypothesis in favor of the alternative hypothesis</p></li>
+<li><p>If not, we fail to reject the null hypothesis</p></li>
+</ul>
+</section>
+<section id="different-types-of-tests" class="slide level2">
+<h2>Different types of tests</h2>
+<div>
+<ul>
+<li class="fragment"><p>Now that we’ve got the basics down, how do we run tests on data?</p></li>
+<li class="fragment"><p>Step 1: Figure out what kind of test you need</p>
+<ul>
+<li class="fragment">This depends on whether your variables are categorical, binary, or numeric</li>
+<li class="fragment">Does this feel similar to plotting? Lots of things depend on what kind of variables you have!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="different-types-of-tests-an-overview" class="slide level2">
+<h2>Different types of tests: An overview</h2>
+</section>
+<section id="todo-put-in-powerpoint-table" class="slide level2">
+<h2>TODO: put in powerpoint table</h2>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

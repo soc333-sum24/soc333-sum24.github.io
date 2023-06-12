@@ -64,8 +64,8 @@ website:
                 text: "Component 1: Proposal"
               - href: project-descriptives.qmd
                 text: "Component 2: Descriptive stats"
-              # - href: project-results.qmd
-              #   text: "Component 3: Results"
+              - href: project-results.qmd
+                text: "Component 3: Results"
               # - href: project-paper.qmd
               #   text: "Component 4: Paper"
               # - href: project-presentation.qmd
@@ -76,6 +76,8 @@ website:
                 text: "Component 1: Proposal"
               - href: project_example/c2_descriptives.qmd
                 text: "Component 2: Descriptive stats"
+              - href: project_example/c3_results.qmd
+                text: "Component 3: Inferential results"
       - section: "Exercise resources"
         contents:
           - href: ex-6-01-scaffolding.qmd
