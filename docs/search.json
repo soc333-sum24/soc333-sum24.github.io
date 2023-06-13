@@ -315,6 +315,41 @@
     "text": "Hint: this is measured in hours, so it seems like it should be a numeric variable–but is that how it’s treated in the data? Look back at the glimpse() output and/or find the response options of the variable to see.\n\nyrbss |&gt; \n  mutate(hours_tv_per_school_day = factor(hours_tv_per_school_day, \n                                          levels = c(\"do not watch\", \"&lt;1\", \"1\", \"2\", \"3\", \"4\", \"5+\"))) |&gt; \n  filter(!is.na(hours_tv_per_school_day)) |&gt; \n  ggplot(aes(x = hours_tv_per_school_day)) +\n  geom_bar() + \n  labs(x = \"Hours\",\n       y = \"\",\n       title = \"Distribution of amount of TV students watch on school nights\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: You’ll need to change the order of the variable levels in the data frame before you plot the data. Use the template code below–edit as necessary and paste it into the correct place in your own code.\nAdditionally: some of these values are numbers, but even so, the variable as a whole is treated as categorical–this means all values need quotation marks around them, even the numbers. You can tell this from the glimpse() output: the numbers for this variable are in quotes there, while they are not for the strictly numeric variables like height.\n\nmutate(yrbss, \n       hours_tv_per_school_day = factor(hours_tv_per_school_day, \n                                        levels = XXXX))"
   },
   {
+    "objectID": "exercise-solutions/ex-6-13-solutions.html",
+    "href": "exercise-solutions/ex-6-13-solutions.html",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "# the infer package is new, so we need to install it.\n# this one only needs to be run one time\ninstall.packages(\"infer\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata\n\n# we're adding the infer package to our lineup today\nlibrary(infer)\n\n\n\n\nFor each of these research questions, identify the explanatory variable, the response variable, their types, and the correct statistical test. Think about what the data would look like for each individual in these cases\n\nHow does the amount of money a country spends on healthcare (per person) affect its average life expectancy?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?\n\n\n\n\n\nSame thing, new questions. For each, identify the explanatory variable, the response variable, their types, and the correct statistical test.\n\nHow is a patient’s body mass index related to the probability a doctor refers them to a specialist?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?\n\nHow do outcomes of traffic stops (which can be warnings, citations, or arrests) vary by the driver’s race?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?\n\n\n\n\n\nWe will be returning to the acs12 data for this exercise. We will be using two variables: gender and married.\nBoth are categorical variables with two categories (male/female for gender, yes/no for married), so we’ll use a two-sample Z test, just like in the class example.\nResearch question: How is someone’s gender identity related to their probability of being married?\nHere’s a table to show the relationship between the two variables.\n\ntable(acs12$gender, acs12$married)\n\n        \n          no yes\n  male   584 447\n  female 583 386\n\n\n\n\nThen look at it in the data viewer. What is the Z score of this sample?\nThe Z score of this sample is about 1.6\n(You might notice that R gives you a warning message. This is fine in this case! It just means we shouldn’t read into the positive/negative sign on the Z score. But since we’re doing a two-tailed test here, that didn’t matter anyway.)\n\ntest_stat &lt;- acs12 |&gt; \n  specify(explanatory = gender,\n          response = married,\n          success = \"yes\") |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"z\")\n\nWarning: The statistic is based on a difference or ratio; by default, for\ndifference-based statistics, the explanatory variable is subtracted in the\norder \"male\" - \"female\", or divided in the order \"male\" / \"female\" for\nratio-based statistics. To specify this order yourself, supply `order =\nc(\"male\", \"female\")` to the calculate() function.\n\n\n\n\n\n\n# 1. copy your code from above\n# 2. change the name of the object from test_stat to null_dist\n# 3. add generate(reps = 1000) in the correct place, like in the class example\n\nnull_dist &lt;- acs12 |&gt; \n  specify(explanatory = gender,\n          response = married,\n          success = \"yes\") |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  generate(reps = 1000) |&gt; \n  calculate(stat = \"z\")\n\nSetting `type = \"permute\"` in `generate()`.\n\n\nWarning: The statistic is based on a difference or ratio; by default, for\ndifference-based statistics, the explanatory variable is subtracted in the\norder \"male\" - \"female\", or divided in the order \"male\" / \"female\" for\nratio-based statistics. To specify this order yourself, supply `order =\nc(\"male\", \"female\")` to the calculate() function.\n\n\n\n\n\nThen interpret it. At a threshold value of p = 0.05, do you reject or fail to reject the null hypothesis that about the same number of men are married as women?\nI fail to reject the null hypothesis that about the same number of men are married as women. My p value, 0.116, is above my cutoff value of 0.05.\n\nget_p_value(null_dist,\n            obs_stat = test_stat,\n            direction = \"two-sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.112\n\n\n\n\n\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat, direction = \"two-sided\")"
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-13-solutions.html#setup-run-these-two-chunks-first",
+    "href": "exercise-solutions/ex-6-13-solutions.html#setup-run-these-two-chunks-first",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "# the infer package is new, so we need to install it.\n# this one only needs to be run one time\ninstall.packages(\"infer\")\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata\n\n# we're adding the infer package to our lineup today\nlibrary(infer)"
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-13-solutions.html#q1-determining-the-correct-hypothesis-test-part-1.-see-slides-from-lecture-15-for-solutions",
+    "href": "exercise-solutions/ex-6-13-solutions.html#q1-determining-the-correct-hypothesis-test-part-1.-see-slides-from-lecture-15-for-solutions",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "For each of these research questions, identify the explanatory variable, the response variable, their types, and the correct statistical test. Think about what the data would look like for each individual in these cases\n\nHow does the amount of money a country spends on healthcare (per person) affect its average life expectancy?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?"
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-13-solutions.html#q2-determining-the-correct-hypothesis-test-part-2.-see-slides-from-lecture-15-for-solutions",
+    "href": "exercise-solutions/ex-6-13-solutions.html#q2-determining-the-correct-hypothesis-test-part-2.-see-slides-from-lecture-15-for-solutions",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "Same thing, new questions. For each, identify the explanatory variable, the response variable, their types, and the correct statistical test.\n\nHow is a patient’s body mass index related to the probability a doctor refers them to a specialist?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?\n\nHow do outcomes of traffic stops (which can be warnings, citations, or arrests) vary by the driver’s race?\n\nExplanatory variable(s) and type(s)?\nResponse variable and type?\nCorrect statistical test?"
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-13-solutions.html#q3-running-your-first-hypothesis-test",
+    "href": "exercise-solutions/ex-6-13-solutions.html#q3-running-your-first-hypothesis-test",
+    "title": "Hypothesis testing",
+    "section": "",
+    "text": "We will be returning to the acs12 data for this exercise. We will be using two variables: gender and married.\nBoth are categorical variables with two categories (male/female for gender, yes/no for married), so we’ll use a two-sample Z test, just like in the class example.\nResearch question: How is someone’s gender identity related to their probability of being married?\nHere’s a table to show the relationship between the two variables.\n\ntable(acs12$gender, acs12$married)\n\n        \n          no yes\n  male   584 447\n  female 583 386\n\n\n\n\nThen look at it in the data viewer. What is the Z score of this sample?\nThe Z score of this sample is about 1.6\n(You might notice that R gives you a warning message. This is fine in this case! It just means we shouldn’t read into the positive/negative sign on the Z score. But since we’re doing a two-tailed test here, that didn’t matter anyway.)\n\ntest_stat &lt;- acs12 |&gt; \n  specify(explanatory = gender,\n          response = married,\n          success = \"yes\") |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"z\")\n\nWarning: The statistic is based on a difference or ratio; by default, for\ndifference-based statistics, the explanatory variable is subtracted in the\norder \"male\" - \"female\", or divided in the order \"male\" / \"female\" for\nratio-based statistics. To specify this order yourself, supply `order =\nc(\"male\", \"female\")` to the calculate() function.\n\n\n\n\n\n\n# 1. copy your code from above\n# 2. change the name of the object from test_stat to null_dist\n# 3. add generate(reps = 1000) in the correct place, like in the class example\n\nnull_dist &lt;- acs12 |&gt; \n  specify(explanatory = gender,\n          response = married,\n          success = \"yes\") |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  generate(reps = 1000) |&gt; \n  calculate(stat = \"z\")\n\nSetting `type = \"permute\"` in `generate()`.\n\n\nWarning: The statistic is based on a difference or ratio; by default, for\ndifference-based statistics, the explanatory variable is subtracted in the\norder \"male\" - \"female\", or divided in the order \"male\" / \"female\" for\nratio-based statistics. To specify this order yourself, supply `order =\nc(\"male\", \"female\")` to the calculate() function.\n\n\n\n\n\nThen interpret it. At a threshold value of p = 0.05, do you reject or fail to reject the null hypothesis that about the same number of men are married as women?\nI fail to reject the null hypothesis that about the same number of men are married as women. My p value, 0.116, is above my cutoff value of 0.05.\n\nget_p_value(null_dist,\n            obs_stat = test_stat,\n            direction = \"two-sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.112\n\n\n\n\n\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat, direction = \"two-sided\")"
+  },
+  {
     "objectID": "exercise-solutions/ex-5-31-solutions.html",
     "href": "exercise-solutions/ex-5-31-solutions.html",
     "title": "5-31-23 exercise: filtering",
@@ -446,6 +481,202 @@
     "title": "Workshopping project proposals",
     "section": "Workshopping",
     "text": "Workshopping\n\nGroups of 3\n\nYou have access to each others’ github repos\n\nRead your group members’ submissions\nAnswer some questions about their work\n\nMake your feedback a GitHub issue: copy/paste template from project instructions; fill out\n10-15 min/person\nGoal is improvement–how can they make their work better?\n\nTalk through your thoughts on each group member’s proposal and their choice of question (5-10 minutes each)"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#logistics",
+    "href": "slides/15-hypothesistests3.html#logistics",
+    "title": "Hypothesis tests pt 3",
+    "section": "Logistics",
+    "text": "Logistics\n\nProject component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)\n\nDrafts should be complete–meaning you attempted all parts\nInstructions and example are posted"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#today",
+    "href": "slides/15-hypothesistests3.html#today",
+    "title": "Hypothesis tests pt 3",
+    "section": "Today",
+    "text": "Today\n\nSelecting the correct hypothesis test\nRunning hypothesis tests in infer"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#different-types-of-tests",
+    "href": "slides/15-hypothesistests3.html#different-types-of-tests",
+    "title": "Hypothesis tests pt 3",
+    "section": "Different types of tests",
+    "text": "Different types of tests\n\n\nTo figure out what test you need, you need to know some things about your variables:\n\nWhat is/are your explanatory variable(s)? What type of variable is it/are they (categorical with two levels, categorical with three levels, or numeric)? How many explanatory variables are there?\nWhat is your response variable? What type of variable is it?"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#a-recap-on-variables",
+    "href": "slides/15-hypothesistests3.html#a-recap-on-variables",
+    "title": "Hypothesis tests pt 3",
+    "section": "A recap on variables",
+    "text": "A recap on variables\n\nThey never go away! Identifying what kind of variables you have and what role they’re playing in your analysis is really central. Here’s a summary of the distinctions that are relevant here."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#a-recap-on-variables-types",
+    "href": "slides/15-hypothesistests3.html#a-recap-on-variables-types",
+    "title": "Hypothesis tests pt 3",
+    "section": "A recap on variables: types",
+    "text": "A recap on variables: types\n\n\nNumeric. The responses are numbers\n\nIncome, height, age\n\nCategorical with two categories: The response options are categories–represented with words, not (meaningful) numeric values. There are only two response options available. This includes binary variables.\n\nSex assigned at birth (male/female), married or not, hired or not\n\nCategorical with three or more categories: The response options are categories, like above, but there are more than two possibilities.\n\nRace, smoking status (never, current, former), music genre preference"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#a-recap-on-variables-roles-in-your-analysis",
+    "href": "slides/15-hypothesistests3.html#a-recap-on-variables-roles-in-your-analysis",
+    "title": "Hypothesis tests pt 3",
+    "section": "A recap on variables: roles in your analysis",
+    "text": "A recap on variables: roles in your analysis\n\n\nExplanatory/independent: The thing doing the explaining; the thing that comes first\nResponse/dependent: The outcome that is being predicted; the thing that comes second, possibly as a result of the explanatory variable."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#a-recap-on-variables-1",
+    "href": "slides/15-hypothesistests3.html#a-recap-on-variables-1",
+    "title": "Hypothesis tests pt 3",
+    "section": "A recap on variables",
+    "text": "A recap on variables\n\nExample: How does whether a student attends a public or private high school affect their probability of graduating?\n\n\n\nWhat are the explanatory and response variables? What are their types?\n\nExplanatory: Type of high school (public or private): categorical with two categories\nResponse: Graduated or not: categorical with two categories\n\nWhy not probability of graduating? Because we can’t observe that for any individual person. We observe whether each one graduated or not. Then we use that to calculate probabilities for the two groups in the sample: those at private high schools and those at public high schools."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q1",
+    "text": "Identifying the right test: exercise Q1\n\nThis one is in R—find the ex-6-13-yourusername repo on GitHub and clone it\nFor each research question, identify the explanatory variable, the response variable, their types, and the correct statistical test\n\nThink about what the data would look like for each individual!"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1-1",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1-1",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q1",
+    "text": "Identifying the right test: exercise Q1"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1-2",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q1-2",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q1",
+    "text": "Identifying the right test: exercise Q1\n\na. How does the amount of money a country spends on healthcare (per person) affect its average life expectancy?\n\n\n\nExplanatory variable(s) and type(s)?\n\nAmount of money per person a country spends on healthcare. Numeric.\n\nResponse variable and type?\n\nAverage life expectancy. Numeric.\n\nCorrect statistical test?\n\nLinear regression"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q2",
+    "text": "Identifying the right test: exercise Q2\n\nSame thing, new questions. For each one, identify the explanatory variable, the response variable, their types, and the correct statistical test"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2b",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2b",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q2b",
+    "text": "Identifying the right test: exercise Q2b\n\nHow is a patient’s body mass index related to the probability a doctor refers them to a specialist?\n\n\n\nExplanatory variable(s) and type(s)?\n\nBody mass index. Numeric.\n\nResponse variable and type?\n\nWhether or not they are referred to a specialist. Categorical with two categories (yes/no).\n\nCorrect statistical test?\n\nLogistic regression"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2c",
+    "href": "slides/15-hypothesistests3.html#identifying-the-right-test-exercise-q2c",
+    "title": "Hypothesis tests pt 3",
+    "section": "Identifying the right test: exercise Q2c",
+    "text": "Identifying the right test: exercise Q2c\n\nHow do outcomes of traffic stops (which can be warnings, citations, or arrests) vary by the driver’s race?\n\n\n\nExplanatory variable(s) and type(s)?\n\nDriver’s race. Categorical with three or more categories.\n\nResponse variable and type?\n\nOutcomes of traffic stops. Categorical with three or more categories.\n\nCorrect statistical test?\n\nChi-square test of independence"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#running-a-hypothesis-test-in-r-with-infer",
+    "href": "slides/15-hypothesistests3.html#running-a-hypothesis-test-in-r-with-infer",
+    "title": "Hypothesis tests pt 3",
+    "section": "Running a hypothesis test in R with infer",
+    "text": "Running a hypothesis test in R with infer\n\n\nThe bad news: there are a lot of different tests.\nThe good news: regardless of what specific test you run, the logic is similar, and your code will look about the same!\nWe will be using the infer package to conduct hypothesis tests\n\ninfer is built to work on similar logic to the tidyverse—where filter(), mutate(), and ggplot() are from\nIts documentation is excellent—check out the website (link here) if you ever get stuck. It has lots of examples of every kind of test it can run."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#steps-to-running-a-hypothesis-test-with-infer",
+    "href": "slides/15-hypothesistests3.html#steps-to-running-a-hypothesis-test-with-infer",
+    "title": "Hypothesis tests pt 3",
+    "section": "Steps to running a hypothesis test with infer",
+    "text": "Steps to running a hypothesis test with infer\n\n\nCalculate the test statistic of your sample\nSimulate the null distribution\nCalculate the p value of your sample\nVisualize the test statistic of your sample alongside the null distribution"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-1-calculate-the-test-statistic-of-your-sample",
+    "href": "slides/15-hypothesistests3.html#step-1-calculate-the-test-statistic-of-your-sample",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 1: Calculate the test statistic of your sample",
+    "text": "Step 1: Calculate the test statistic of your sample\n\n\nTest statistic: A number that quantifies how much your sample differs from the expected sampling distribution.\nFor example: Z scores\nDifferent tests use different test statistics\nRegardless of what it is specifically, step 1 is to calculate it."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-1-calculate-the-test-statistic-of-your-sample-1",
+    "href": "slides/15-hypothesistests3.html#step-1-calculate-the-test-statistic-of-your-sample-1",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 1: Calculate the test statistic of your sample",
+    "text": "Step 1: Calculate the test statistic of your sample\n\n\nWe’ll use the gss data (a nationally representative survey of American adults).\nOur question: How does the probability of obtaining a college degree vary by sex assigned at birth?\n\nExplanatory variable: sex assigned at birth (categorical w two categories)\nResponse variable: Whether or not someone obtained a college degree (categorical w two categories)\nSo we’ll use a two sample Z test\n\n\n\n\nglimpse(gss)\n\nRows: 500\nColumns: 11\n$ year    &lt;dbl&gt; 2014, 1994, 1998, 1996, 1994, 1996, 1990, 2016, 2000, 1998, 20…\n$ age     &lt;dbl&gt; 36, 34, 24, 42, 31, 32, 48, 36, 30, 33, 21, 30, 38, 49, 25, 56…\n$ sex     &lt;fct&gt; male, female, male, male, male, female, female, female, female…\n$ college &lt;fct&gt; degree, no degree, degree, no degree, degree, no degree, no de…\n$ partyid &lt;fct&gt; ind, rep, ind, ind, rep, rep, dem, ind, rep, dem, dem, ind, de…\n$ hompop  &lt;dbl&gt; 3, 4, 1, 4, 2, 4, 2, 1, 5, 2, 4, 3, 4, 4, 2, 2, 3, 2, 1, 2, 5,…\n$ hours   &lt;dbl&gt; 50, 31, 40, 40, 40, 53, 32, 20, 40, 40, 23, 52, 38, 72, 48, 40…\n$ income  &lt;ord&gt; $25000 or more, $20000 - 24999, $25000 or more, $25000 or more…\n$ class   &lt;fct&gt; middle class, working class, working class, working class, mid…\n$ finrela &lt;fct&gt; below average, below average, below average, above average, ab…\n$ weight  &lt;dbl&gt; 0.8960034, 1.0825000, 0.5501000, 1.0864000, 1.0825000, 1.08640…"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-1.1-specify-what-your-variables-are",
+    "href": "slides/15-hypothesistests3.html#step-1.1-specify-what-your-variables-are",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 1.1: specify what your variables are",
+    "text": "Step 1.1: specify what your variables are\n\nHow does the probability of obtaining a college degree vary by sex assigned at birth?\nFirst, we use specify() to tell R what variables we’re interested in\n\n\ntest_stat &lt;- gss |&gt;           # remember the pipe operator? It will be useful here!\n  specify(explanatory = sex,\n          response = college,\n          success = \"degree\") # this last \"success\" piece is used for two sample Z tests only.\n                              # it determines how the proportion is calculated (proportion of \n                              # people who have a degree, or proportion of people who don't)"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-1.2-hypothesize-to-tell-r-what-your-null-hypothesis-is",
+    "href": "slides/15-hypothesistests3.html#step-1.2-hypothesize-to-tell-r-what-your-null-hypothesis-is",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 1.2: hypothesize to tell R what your null hypothesis is",
+    "text": "Step 1.2: hypothesize to tell R what your null hypothesis is\n\nThen R needs to know what our null hypothesis is. Usually in this class, our null hypotheses will be that two variables are not related.\nWe tell R this by adding hypothesize(null = \"independence\") to our pipeline\n\n\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = sex,\n          response = college,\n          success = \"degree\") |&gt; \n  hypothesize(null = \"independence\")"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-1.3-calculate-the-test-statistic",
+    "href": "slides/15-hypothesistests3.html#step-1.3-calculate-the-test-statistic",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 1.3: calculate the test statistic",
+    "text": "Step 1.3: calculate the test statistic\n\nThen we tell R what test statistic we would like it to calculate for us (thanks R!)\nThis varies according to your test (and I’ll give you a list).\n\n\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = sex,\n          response = college,\n          success = \"degree\") |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"z\") # the statistic we want goes into the \"stat\" option"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#what-did-we-end-up-with",
+    "href": "slides/15-hypothesistests3.html#what-did-we-end-up-with",
+    "title": "Hypothesis tests pt 3",
+    "section": "What did we end up with?",
+    "text": "What did we end up with?\n\nA Z score for our sample!\n\n\ntest_stat$stat\n\n[1] -0.09852599\n\n\n\n\nInterpretation: Our sample has a Z score of -0.1, meaning that it is .1 standard deviations below the mean of the null distribution. 0.1 standard deviations is a very small difference, so it’s looking likely that we will fail to reject the null hypothesis that men and women obtain college degrees at the same rate!"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution",
+    "href": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 2: Simulate the null distribution",
+    "text": "Step 2: Simulate the null distribution\n\n\nNow we have a test statistic for our sample. But we need to know what our null distribution looks like in order to turn that into a p value.\nWhy? The p value is derived from the area in the tails of our null distribution, equal to or past the point where our sample is. So we need both the sample statistic (which we calculated in step 1) and the null distribution in order to find it."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution-with-generate",
+    "href": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution-with-generate",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 2: Simulate the null distribution with generate()",
+    "text": "Step 2: Simulate the null distribution with generate()\n\nThis code is actually the same as the code we used before to calculate the test statistic, with just one addition!\nThe line with generate() is the only new thing here.\nInstead of calculating a test statistic for our one sample, here generate() is doing some computational wizardry to create a null distribution.\n\nBasically, it’s simulating pulling a bunch of samples from the population we assume under the null hypothesis.\n\n\n\nnull_dist &lt;- gss |&gt; \n  specify(explanatory = sex,             # just like before, we specify variables\n          response = college,\n          success = \"degree\") |&gt; \n  hypothesize(null = \"independence\") |&gt;  # then tell R what our null hypothesis is\n  generate(reps = 1000) |&gt;               # this part is new! We draw samples from the null distribution\n  calculate(stat = \"z\")                  # and then we calculate the test statistics of our draws--just like before"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution-with-generate-1",
+    "href": "slides/15-hypothesistests3.html#step-2-simulate-the-null-distribution-with-generate-1",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 2: Simulate the null distribution with generate()",
+    "text": "Step 2: Simulate the null distribution with generate()\n\nConceptually: generate() is pulling all of those samples that create the null distribution!"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-3-calculate-the-p-value-of-the-sample",
+    "href": "slides/15-hypothesistests3.html#step-3-calculate-the-p-value-of-the-sample",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 3: Calculate the p value of the sample",
+    "text": "Step 3: Calculate the p value of the sample\n\nWe use get_p_value() for this\n\n\nget_p_value(null_dist,               # The first argument is our null distribution\n            obs_stat = test_stat,    # Then the test statistic we calculated\n            direction = \"two-sided\") # direction is related to whether the test is one or two tailed\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.992\n\n\n\n\nInterpretation: There is a 99.2% chance that under the null hypothesis we would have obtained a sample with at least as big a difference between men’s and women’s rates of obtaining college degrees as this one\nThis is way bigger than 5%! We fail to reject the null hypothesis. Men and women in this data set get college degrees at about the same rate."
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#step-4-visualize-where-your-sample-is-with-respect-to-your-null-distribution",
+    "href": "slides/15-hypothesistests3.html#step-4-visualize-where-your-sample-is-with-respect-to-your-null-distribution",
+    "title": "Hypothesis tests pt 3",
+    "section": "Step 4: Visualize where your sample is with respect to your null distribution",
+    "text": "Step 4: Visualize where your sample is with respect to your null distribution\n\nThis isn’t strictly necessary—we already have the p value and were able to make a decision about what to do with the null hypothesis—but it’s always clarifying to see the picture.\n\n\nvisualize(null_dist) +                    # this plots the null distribution\n  shade_p_value(obs_stat = test_stat,     # and this marks where our sample is\n                direction = \"two-sided\")  # everything more extreme in either direction is shaded red"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#steps-to-running-a-hypothesis-test-with-infer-1",
+    "href": "slides/15-hypothesistests3.html#steps-to-running-a-hypothesis-test-with-infer-1",
+    "title": "Hypothesis tests pt 3",
+    "section": "Steps to running a hypothesis test with infer",
+    "text": "Steps to running a hypothesis test with infer\n\n\nCalculate the test statistic of your sample\n\nwith specify() (telling R what your variables are),\nthen hypothesize() (telling R what kind of null hypothesis you have),\nthen calculate() (calculating your test statistic)\n\nSimulate the null distribution\n\nexactly the same code as step 1, but with an added generate() step\nhere you are simulating pulling a bunch of samples from your null population in order to figure out what the null distribution of sample statistics would look like\n\nCalculate the p value of your sample\n\nwith your null distribution, your test statistic, and get_p_value()\n\nVisualize the test statistic of your sample alongside the null distribution\n\nwith visualize() and shade_p_value()"
+  },
+  {
+    "objectID": "slides/15-hypothesistests3.html#exercise-q3-run-your-first-hypothesis-test",
+    "href": "slides/15-hypothesistests3.html#exercise-q3-run-your-first-hypothesis-test",
+    "title": "Hypothesis tests pt 3",
+    "section": "Exercise Q3: Run your first hypothesis test!",
+    "text": "Exercise Q3: Run your first hypothesis test!\n\nHow is someone’s gender identity related to their probability of being married?\n\nExplanatory variable: gender; categorical with two categories\nResponse variable: married; categorical with two categories\nCorrect test: A two-sample Z test, just like the example\n\nDon’t forget to run the setup chunks first: they will install and load infer for you\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/03-computing.html#learning-goals",
