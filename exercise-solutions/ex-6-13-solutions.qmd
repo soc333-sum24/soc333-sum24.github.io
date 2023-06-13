@@ -112,3 +112,59 @@ get_p_value(null_dist,
 visualize(null_dist) +
   shade_p_value(obs_stat = test_stat, direction = "two-sided")
 ```
+
+# Extra Credit
+
+## Q4: Run a hypothesis test to answer the research question below: 
+
+How is gender related to citizenship status among people who live in the US? 
+
+Use the `acs12` data. 
+
+## a: What are your null and alternative hypotheses? 
+
+Null: Gender is not related to citizenship status.
+Alternative: Gender is related to citizenship status.
+
+## b: What are the explanatory and response variables, and what types are they? What kind of test do you need to run?
+
+Explanatory: gender; categorical with two categories
+Response: citizen; categorical with two categories
+Test: 2 sample Z test
+
+```{r}
+# use this chunk to help you get a look at your data!
+glimpse(acs12)
+table(acs12$citizen)
+table(acs12$gender)
+```
+
+## c: Run your test!
+
+```{r}
+# first: calculate your test statistic
+test_stat <- acs12 |> 
+  specify(explanatory = gender, response = citizen, success = "yes") |> 
+  hypothesize(null = "independence") |> 
+  calculate(stat = "z")
+
+# then: simulate your null distribution
+null_dist <- acs12 |> 
+  specify(explanatory = gender, response = citizen, success = "yes") |> 
+  hypothesize(null = "independence") |> 
+  generate(reps = 1000) |> 
+  calculate(stat = "z")
+
+# next: calculate your p value 
+get_p_value(null_dist, obs_stat = test_stat, direction = "two-sided")
+
+# finally: visualize where you sample is with respect to your null distribution
+visualize(null_dist) +
+  shade_p_value(obs_stat = test_stat, direction = "two-sided")
+```
+
+## d: Interpret your results
+
+With a threshold value of p = .05, do you reject or fail to reject your null hypothesis? 
+
+I fail to reject the null hypothesis that gender is related to citizenship status. There is not sufficient evidence in these data to conclude that there is a relationship. Women who live in the US are about as likely to be citizens as men. 

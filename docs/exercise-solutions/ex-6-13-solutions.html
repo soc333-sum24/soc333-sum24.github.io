@@ -338,6 +338,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../slides/15-hypothesistests3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 15: Hypothesis tests pt 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../slides/14-hypothesistests2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 14: Hypothesis tests pt 2</span></a>
   </div>
@@ -444,6 +450,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-3-calculate-the-p-value-of-your-sample" id="toc-step-3-calculate-the-p-value-of-your-sample" class="nav-link" data-scroll-target="#step-3-calculate-the-p-value-of-your-sample">Step 3: Calculate the p value of your sample</a></li>
   <li><a href="#step-4-visualize-where-your-sample-is-with-respect-to-your-null-distribution" id="toc-step-4-visualize-where-your-sample-is-with-respect-to-your-null-distribution" class="nav-link" data-scroll-target="#step-4-visualize-where-your-sample-is-with-respect-to-your-null-distribution">Step 4: Visualize where your sample is with respect to your null distribution</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#extra-credit" id="toc-extra-credit" class="nav-link" data-scroll-target="#extra-credit">Extra Credit</a>
+  <ul class="collapse">
+  <li><a href="#q4-run-a-hypothesis-test-to-answer-the-research-question-below" id="toc-q4-run-a-hypothesis-test-to-answer-the-research-question-below" class="nav-link" data-scroll-target="#q4-run-a-hypothesis-test-to-answer-the-research-question-below">Q4: Run a hypothesis test to answer the research question below:</a></li>
+  <li><a href="#a-what-are-your-null-and-alternative-hypotheses" id="toc-a-what-are-your-null-and-alternative-hypotheses" class="nav-link" data-scroll-target="#a-what-are-your-null-and-alternative-hypotheses">a: What are your null and alternative hypotheses?</a></li>
+  <li><a href="#b-what-are-the-explanatory-and-response-variables-and-what-types-are-they-what-kind-of-test-do-you-need-to-run" id="toc-b-what-are-the-explanatory-and-response-variables-and-what-types-are-they-what-kind-of-test-do-you-need-to-run" class="nav-link" data-scroll-target="#b-what-are-the-explanatory-and-response-variables-and-what-types-are-they-what-kind-of-test-do-you-need-to-run">b: What are the explanatory and response variables, and what types are they? What kind of test do you need to run?</a></li>
+  <li><a href="#c-run-your-test" id="toc-c-run-your-test" class="nav-link" data-scroll-target="#c-run-your-test">c: Run your test!</a></li>
+  <li><a href="#d-interpret-your-results" id="toc-d-interpret-your-results" class="nav-link" data-scroll-target="#d-interpret-your-results">d: Interpret your results</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/exercise-solutions/ex-6-13-solutions.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -605,7 +619,7 @@ c("male", "female")` to the calculate() function.</code></pre>
 <pre><code># A tibble: 1 × 1
   p_value
     &lt;dbl&gt;
-1   0.112</code></pre>
+1   0.132</code></pre>
 </div>
 </div>
 </section>
@@ -618,9 +632,110 @@ c("male", "female")` to the calculate() function.</code></pre>
 <p><img src="ex-6-13-solutions_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-
-
 </section>
+</section>
+</section>
+<section id="extra-credit" class="level1">
+<h1>Extra Credit</h1>
+<section id="q4-run-a-hypothesis-test-to-answer-the-research-question-below" class="level2">
+<h2 class="anchored" data-anchor-id="q4-run-a-hypothesis-test-to-answer-the-research-question-below">Q4: Run a hypothesis test to answer the research question below:</h2>
+<p>How is gender related to citizenship status among people who live in the US?</p>
+<p>Use the <code>acs12</code> data.</p>
+</section>
+<section id="a-what-are-your-null-and-alternative-hypotheses" class="level2">
+<h2 class="anchored" data-anchor-id="a-what-are-your-null-and-alternative-hypotheses">a: What are your null and alternative hypotheses?</h2>
+<p>Null: Gender is not related to citizenship status. Alternative: Gender is related to citizenship status.</p>
+</section>
+<section id="b-what-are-the-explanatory-and-response-variables-and-what-types-are-they-what-kind-of-test-do-you-need-to-run" class="level2">
+<h2 class="anchored" data-anchor-id="b-what-are-the-explanatory-and-response-variables-and-what-types-are-they-what-kind-of-test-do-you-need-to-run">b: What are the explanatory and response variables, and what types are they? What kind of test do you need to run?</h2>
+<p>Explanatory: gender; categorical with two categories Response: citizen; categorical with two categories Test: 2 sample Z test</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use this chunk to help you get a look at your data!</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,000
+Columns: 13
+$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…
+$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …
+$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…
+$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…
+$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …
+$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…
+$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…
+$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…
+$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …
+$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…
+$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…
+$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …
+$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>citizen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  no  yes 
+ 118 1882 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  male female 
+  1031    969 </code></pre>
+</div>
+</div>
+</section>
+<section id="c-run-your-test" class="level2">
+<h2 class="anchored" data-anchor-id="c-run-your-test">c: Run your test!</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first: calculate your test statistic</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>test_stat <span class="ot">&lt;-</span> acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">explanatory =</span> gender, <span class="at">response =</span> citizen, <span class="at">success =</span> <span class="st">"yes"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"z"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The statistic is based on a difference or ratio; by default, for
+difference-based statistics, the explanatory variable is subtracted in the
+order "male" - "female", or divided in the order "male" / "female" for
+ratio-based statistics. To specify this order yourself, supply `order =
+c("male", "female")` to the calculate() function.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># then: simulate your null distribution</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>null_dist <span class="ot">&lt;-</span> acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">explanatory =</span> gender, <span class="at">response =</span> citizen, <span class="at">success =</span> <span class="st">"yes"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"z"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Setting `type = "permute"` in `generate()`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The statistic is based on a difference or ratio; by default, for
+difference-based statistics, the explanatory variable is subtracted in the
+order "male" - "female", or divided in the order "male" / "female" for
+ratio-based statistics. To specify this order yourself, supply `order =
+c("male", "female")` to the calculate() function.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># next: calculate your p value </span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">get_p_value</span>(null_dist, <span class="at">obs_stat =</span> test_stat, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  p_value
+    &lt;dbl&gt;
+1   0.066</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># finally: visualize where you sample is with respect to your null distribution</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">visualize</span>(null_dist) <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> test_stat, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="ex-6-13-solutions_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="d-interpret-your-results" class="level2">
+<h2 class="anchored" data-anchor-id="d-interpret-your-results">d: Interpret your results</h2>
+<p>With a threshold value of p = .05, do you reject or fail to reject your null hypothesis?</p>
+<p>I fail to reject the null hypothesis that gender is related to citizenship status. There is not sufficient evidence in these data to conclude that there is a relationship. Women who live in the US are about as likely to be citizens as men.</p>
+
+
 </section>
 </section>
 
