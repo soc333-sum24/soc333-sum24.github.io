@@ -82,9 +82,9 @@ set.seed(2)
 -   For each research question, identify the explanatory variable, the response variable, their types, and the correct statistical test
 
     -   Think about what the data would look like for each individual!
-    
-## Identifying the right test: exercise Q1    
-    
+
+## Identifying the right test: exercise Q1
+
 ![](images/14/test_table.png)
 
 ## Identifying the right test: exercise Q1
@@ -92,7 +92,7 @@ set.seed(2)
 -   a\. How does the amount of money a country spends on healthcare (per person) affect its average life expectancy?
 
 ::: incremental
--   Explanatory variable(s) and type(s)? 
+-   Explanatory variable(s) and type(s)?
 
     -   Amount of money per person a country spends on healthcare. Numeric.
 
@@ -102,7 +102,7 @@ set.seed(2)
 
 -   Correct statistical test?
 
-    -   Linear regression 
+    -   Linear regression
 :::
 
 ## Identifying the right test: exercise Q2
@@ -119,11 +119,11 @@ set.seed(2)
 -   Explanatory variable(s) and type(s)?
 
     -   Body mass index. Numeric.
-    
--   Response variable and type? 
+
+-   Response variable and type?
 
     -   Whether or not they are referred to a specialist. Categorical with two categories (yes/no).
-    
+
 -   Correct statistical test?
 
     -   Logistic regression
@@ -131,17 +131,17 @@ set.seed(2)
 
 ## Identifying the right test: exercise Q2c
 
--   How do outcomes of traffic stops (which can be warnings, citations, or arrests) vary by the driver's race? 
+-   How do outcomes of traffic stops (which can be warnings, citations, or arrests) vary by the driver's race?
 
 ::: incremental
 -   Explanatory variable(s) and type(s)?
 
     -   Driver's race. Categorical with three or more categories.
-    
--   Response variable and type? 
+
+-   Response variable and type?
 
     -   Outcomes of traffic stops. Categorical with three or more categories.
-    
+
 -   Correct statistical test?
 
     -   Chi-square test of independence
@@ -164,28 +164,29 @@ set.seed(2)
 
 ## Steps to running a hypothesis test with `infer`{.smaller}
 
-:::incremental
-1. Calculate the test statistic of your sample
-2. Simulate the null distribution
-3. Calculate the p value of your sample
-4. Visualize the test statistic of your sample alongside the null distribution
+::: incremental
+1.  Calculate the test statistic of your sample
+2.  Simulate the null distribution
+3.  Calculate the p value of your sample
+4.  Visualize the test statistic of your sample alongside the null distribution
 :::
 
-## Step 1: Calculate the test statistic of your sample{.smaller}
+## Step 1: Calculate the test statistic of your sample {.smaller}
 
-:::incremental
+::: incremental
 -   Test statistic: A number that quantifies how much your sample differs from the expected sampling distribution.
 -   For example: Z scores
 -   Different tests use different test statistics
--   Regardless of what it is specifically, step 1 is to calculate it. 
+-   Regardless of what it is specifically, step 1 is to calculate it.
 :::
 
 ## Step 1: Calculate the test statistic of your sample
 
 ::: incremental
 -   We'll use the `gss` data (a nationally representative survey of American adults).
+
 -   Our question: How does the probability of obtaining a college degree vary by sex assigned at birth?
-    
+
     -   Explanatory variable: sex assigned at birth (categorical w two categories)
     -   Response variable: Whether or not someone obtained a college degree (categorical w two categories)
     -   So we'll use a two sample Z test
@@ -211,7 +212,7 @@ test_stat <- gss |>           # remember the pipe operator? It will be useful he
 
 ## Step 1.2: `hypothesize` to tell R what your null hypothesis is
 
--   Then R needs to know what our null hypothesis is. Usually in this class, our null hypotheses will be that two variables are not related. 
+-   Then R needs to know what our null hypothesis is. Usually in this class, our null hypotheses will be that two variables are not related.
 -   We tell R this by adding `hypothesize(null = "independence")` to our pipeline
 
 ```{r, eval = FALSE}
@@ -222,10 +223,10 @@ test_stat <- gss |>
   hypothesize(null = "independence")
 ```
 
-## Step 1.3: `calculate` the test statistic{.smaller}
+## Step 1.3: `calculate` the test statistic {.smaller}
 
 -   Then we tell R what test statistic we would like it to calculate for us (thanks R!)
--   This varies according to your test (and I'll give you a list). 
+-   This varies according to your test (and I'll give you a list).
 
 ```{r, warning = FALSE, message = FALSE}
 test_stat <- gss |> 
@@ -236,7 +237,7 @@ test_stat <- gss |>
   calculate(stat = "z") # the statistic we want goes into the "stat" option
 ```
 
-## What did we end up with?{.smaller}
+## What did we end up with? {.smaller}
 
 -   A Z score for our sample!
 
@@ -248,18 +249,20 @@ test_stat$stat
 
 -   Interpretation: Our sample has a Z score of -0.1, meaning that it is .1 standard deviations below the mean of the null distribution. 0.1 standard deviations is a very small difference, so it's looking likely that we will fail to reject the null hypothesis that men and women obtain college degrees at the same rate!
 
-## Step 2: Simulate the null distribution{.smaller}
+## Step 2: Simulate the null distribution {.smaller}
 
 ::: incremental
--   Now we have a test statistic for our sample. But we need to know what our null distribution looks like in order to turn that into a p value. 
--   Why? The p value is derived from the area in the tails of our null distribution, equal to or past the point where our sample is. So we need both the sample statistic (which we calculated in step 1) and the null distribution in order to find it. 
+-   Now we have a test statistic for our sample. But we need to know what our null distribution looks like in order to turn that into a p value.
+-   Why? The p value is derived from the area in the tails of our null distribution, equal to or past the point where our sample is. So we need both the sample statistic (which we calculated in step 1) and the null distribution in order to find it.
 :::
 
 ## Step 2: Simulate the null distribution with `generate()`
 
 -   This code is actually the same as the code we used before to calculate the test statistic, with just one addition!
+
 -   The line with `generate()` is the only new thing here.
--   Instead of calculating a test statistic for our one sample, here `generate()` is doing some computational wizardry to create a null distribution. 
+
+-   Instead of calculating a test statistic for our one sample, here `generate()` is doing some computational wizardry to create a null distribution.
 
     -   Basically, it's simulating pulling a bunch of samples from the population we assume under the null hypothesis.
 
@@ -288,6 +291,7 @@ get_p_value(null_dist,               # The first argument is our null distributi
             obs_stat = test_stat,    # Then the test statistic we calculated
             direction = "two-sided") # direction is related to whether the test is one or two tailed
 ```
+
 . . .
 
 -   Interpretation: There is a 99.2% chance that under the null hypothesis we would have obtained a sample with at least as big a difference between men's and women's rates of obtaining college degrees as this one
@@ -306,22 +310,22 @@ visualize(null_dist) +                    # this plots the null distribution
 ## Steps to running a hypothesis test with `infer`
 
 ::: incremental
-1. Calculate the test statistic of your sample
+1.  Calculate the test statistic of your sample
 
     -   with `specify()` (telling R what your variables are),
-    -   then `hypothesize()` (telling R what kind of null hypothesis you have), 
+    -   then `hypothesize()` (telling R what kind of null hypothesis you have),
     -   then `calculate()` (calculating your test statistic)
-    
-2. Simulate the null distribution
+
+2.  Simulate the null distribution
 
     -   exactly the same code as step 1, but with an added `generate()` step
     -   here you are simulating pulling a bunch of samples from your null population in order to figure out what the null distribution of sample statistics would look like
-    
-3. Calculate the p value of your sample
+
+3.  Calculate the p value of your sample
 
     -   with your null distribution, your test statistic, and `get_p_value()`
-    
-4. Visualize the test statistic of your sample alongside the null distribution
+
+4.  Visualize the test statistic of your sample alongside the null distribution
 
     -   with `visualize()` and `shade_p_value()`
 :::
@@ -335,5 +339,3 @@ visualize(null_dist) +                    # this plots the null distribution
     -   Correct test: A two-sample Z test, just like the example
 
 -   Don't forget to run the setup chunks first: they will install and load `infer` for you
-
-

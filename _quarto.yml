@@ -78,20 +78,22 @@ website:
                 text: "Component 2: Descriptive stats"
               - href: project_example/c3_results.qmd
                 text: "Component 3: Inferential results"
-      - section: "Exercise resources"
+      - section: "Exercise solutions"
         contents:
-          - href: ex-6-01-scaffolding.qmd
-            text: "Ex. 6-01 hints"
-          - section: "Solutions"
-            contents:
-                - href: exercise-solutions/ex-5-31-solutions.qmd
-                  text: "5/31: Filtering"
-                - href: exercise-solutions/ex-6-01-solutions.qmd
-                  text: "6/01: Creating variables"
-                - href: exercise-solutions/ex-6-06-solutions.qmd
-                  text: "6/06: Single variable plots"
+          - href: exercise-solutions/ex-5-31-solutions.qmd
+            text: "5/31: Filtering"
+          - href: exercise-solutions/ex-6-01-solutions.qmd
+            text: "6/01: Creating variables"
+          - href: exercise-solutions/ex-6-06-solutions.qmd
+            text: "6/06: Single variable plots"
+          - href: exercise-solutions/ex-6-13-solutions.qmd
+            text: "6/13: Hypothesis tests 1"
+          # - href: exercise-solutions/ex-6-14-solutions.qmd
+          #   text: "6/14: Hypothesis tests 2"
       - section: "Slides"
         contents:
+          - href: slides/16-hypothesistests4.qmd
+            text: "Lecture 16: Hypothesis tests pt 4"
           - href: slides/15-hypothesistests3.qmd
             text: "Lecture 15: Hypothesis tests pt 3"
           - href: slides/14-hypothesistests2.qmd

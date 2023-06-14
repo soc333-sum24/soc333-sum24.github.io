@@ -1,0 +1,62 @@
+---
+title: "Hypothesis testing: pt 2"
+format: html
+editor: visual
+---
+
+# Exercise: Hypothesis testing 2
+
+## Setup: run this first!
+
+```{r setup}
+library(tidyverse)
+library(openintro)
+library(infer) 
+set.seed(2)
+```
+
+## Q1: Age and party identification
+
+We will be using the `gss` data for this exercise. We will be using two variables: `partyid` and `age`.
+
+Research question: How is someone's age related to the number of hours they work in a week?
+
+Explanatory variable: `age`; numeric
+Response variable: `hours`; numeric
+
+We will run a hypothesis to answer this question!
+
+### a: What are your null and alternative hypotheses?
+
+### b: What kind of test do you need to run?
+
+### c: Run your test!
+
+```{r}
+# first: calculate your test statistic
+test_stat <- gss |> 
+  specify(explanatory = age,
+          response = hours) |> 
+  calculate(stat = "slope")
+
+# then: simulate your null distribution
+null_dist <- gss |> 
+  specify(explanatory = age,
+          response = hours) |> 
+  hypothesize(null = "independence") |>
+  generate(reps = 1000) |> 
+  calculate(stat = "slope")
+
+# next: calculate your p value 
+get_p_value(null_dist, obs_stat = test_stat, direction = "two-sided")
+
+# finally: visualize where you sample is with respect to your null distribution
+visualize(null_dist) +
+  shade_p_value(obs_stat = test_stat, direction = "two-sided")
+```
+
+### d: Interpret your results
+
+With a threshold value of p = .05, do you reject or fail to reject your null hypothesis? What can you conclude about your research question?
+
+I fail to reject the null hypothesis. My p value is above the 0.05 threshold. I can conclude that there is not evidence to support the claim that age is related to hours worked. People work about the same number of hours per week as they get older. Notably, this could be because of the limited age range of the sample. We know, for instance, that children, teenagers, and retired people do not work the same number of hours as non-retired adults. It is likely that these groups were underrepresented in the sample, and so our results are only generalizable to a narrower age band. We would have to look at the distribution of age in these data to know for sure. 

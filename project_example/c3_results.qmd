@@ -52,7 +52,7 @@ How does the number of coaches assigned to US college sports teams vary by the g
 
 -   If necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 # Just like in component 2, in order to avoid confounding team gender with sport, I need to filter out sports that are only available for one gender.
 sports_filtered <- sports |> 
   filter(
@@ -71,7 +71,7 @@ sports_filtered <- sports |>
 
 -   Use the code chunk below to perform the analysis you described in part 1. Display your p value.
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 # starting with the data frame I modified, I calculate the test statistic for my T test. Because I am comparing the means of two groups, I use the "diff in means" option in "calculate."
 sports_teststat <- sports_filtered |> 
   specify(formula = ncoaches ~ teamgender) |> 
@@ -96,8 +96,8 @@ p_sports$p_value
 
 -   Plot your null distribution. Shade the part corresponding to your p value.
 
-```{r}
-# here, we take the null distribution and test statistic we calculated above, use the "visualize" function, and then mark the part of the distribution that is as or more extreme than what we observed (none, here, because our p value for this lizard data is quite extreme)
+```{r, message = FALSE, warning = FALSE}
+# here, we take the null distribution and test statistic we calculated above, use the "visualize" function, and then mark the part of the distribution that is as or more extreme than what we observed
 sports_nulldist |> 
   visualize() + 
   shade_p_value(obs_stat = sports_teststat, direction = "both")

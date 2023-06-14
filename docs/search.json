@@ -315,6 +315,27 @@
     "text": "Hint: this is measured in hours, so it seems like it should be a numeric variable–but is that how it’s treated in the data? Look back at the glimpse() output and/or find the response options of the variable to see.\n\nyrbss |&gt; \n  mutate(hours_tv_per_school_day = factor(hours_tv_per_school_day, \n                                          levels = c(\"do not watch\", \"&lt;1\", \"1\", \"2\", \"3\", \"4\", \"5+\"))) |&gt; \n  filter(!is.na(hours_tv_per_school_day)) |&gt; \n  ggplot(aes(x = hours_tv_per_school_day)) +\n  geom_bar() + \n  labs(x = \"Hours\",\n       y = \"\",\n       title = \"Distribution of amount of TV students watch on school nights\")\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: You’ll need to change the order of the variable levels in the data frame before you plot the data. Use the template code below–edit as necessary and paste it into the correct place in your own code.\nAdditionally: some of these values are numbers, but even so, the variable as a whole is treated as categorical–this means all values need quotation marks around them, even the numbers. You can tell this from the glimpse() output: the numbers for this variable are in quotes there, while they are not for the strictly numeric variables like height.\n\nmutate(yrbss, \n       hours_tv_per_school_day = factor(hours_tv_per_school_day, \n                                        levels = XXXX))"
   },
   {
+    "objectID": "exercise-solutions/ex-6-14-solutions.html",
+    "href": "exercise-solutions/ex-6-14-solutions.html",
+    "title": "Hypothesis testing: pt 2",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata\n\nlibrary(infer) \nset.seed(2)\n\n\n\n\nWe will be using the gss data for this exercise. We will be using two variables: partyid and age.\nResearch question: How is someone’s age related to the number of hours they work in a week?\nExplanatory variable: age; numeric Response variable: hours; numeric\nWe will run a hypothesis to answer this question!\n\n\n\n\n\n\n\n\n\n# first: calculate your test statistic\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = age,\n          response = hours) |&gt; \n  calculate(stat = \"slope\")\n\n# then: simulate your null distribution\nnull_dist &lt;- gss |&gt; \n  specify(explanatory = age,\n          response = hours) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"slope\")\n\nSetting `type = \"permute\"` in `generate()`.\n\n# next: calculate your p value \nget_p_value(null_dist, obs_stat = test_stat, direction = \"two-sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.814\n\n# finally: visualize where you sample is with respect to your null distribution\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat, direction = \"two-sided\")\n\n\n\n\n\n\n\nWith a threshold value of p = .05, do you reject or fail to reject your null hypothesis? What can you conclude about your research question?\nI fail to reject the null hypothesis. My p value is above the 0.05 threshold. I can conclude that there is not evidence to support the claim that age is related to hours worked. People work about the same number of hours per week as they get older. Notably, this could be because of the limited age range of the sample. We know, for instance, that children, teenagers, and retired people do not work the same number of hours as non-retired adults. It is likely that these groups were underrepresented in the sample, and so our results are only generalizable to a narrower age band. We would have to look at the distribution of age in these data to know for sure."
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-14-solutions.html#setup-run-this-first",
+    "href": "exercise-solutions/ex-6-14-solutions.html#setup-run-this-first",
+    "title": "Hypothesis testing: pt 2",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(openintro)\n\nLoading required package: airports\nLoading required package: cherryblossom\nLoading required package: usdata\n\nlibrary(infer) \nset.seed(2)"
+  },
+  {
+    "objectID": "exercise-solutions/ex-6-14-solutions.html#q1-age-and-party-identification",
+    "href": "exercise-solutions/ex-6-14-solutions.html#q1-age-and-party-identification",
+    "title": "Hypothesis testing: pt 2",
+    "section": "",
+    "text": "We will be using the gss data for this exercise. We will be using two variables: partyid and age.\nResearch question: How is someone’s age related to the number of hours they work in a week?\nExplanatory variable: age; numeric Response variable: hours; numeric\nWe will run a hypothesis to answer this question!\n\n\n\n\n\n\n\n\n\n# first: calculate your test statistic\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = age,\n          response = hours) |&gt; \n  calculate(stat = \"slope\")\n\n# then: simulate your null distribution\nnull_dist &lt;- gss |&gt; \n  specify(explanatory = age,\n          response = hours) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"slope\")\n\nSetting `type = \"permute\"` in `generate()`.\n\n# next: calculate your p value \nget_p_value(null_dist, obs_stat = test_stat, direction = \"two-sided\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.814\n\n# finally: visualize where you sample is with respect to your null distribution\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat, direction = \"two-sided\")\n\n\n\n\n\n\n\nWith a threshold value of p = .05, do you reject or fail to reject your null hypothesis? What can you conclude about your research question?\nI fail to reject the null hypothesis. My p value is above the 0.05 threshold. I can conclude that there is not evidence to support the claim that age is related to hours worked. People work about the same number of hours per week as they get older. Notably, this could be because of the limited age range of the sample. We know, for instance, that children, teenagers, and retired people do not work the same number of hours as non-retired adults. It is likely that these groups were underrepresented in the sample, and so our results are only generalizable to a narrower age band. We would have to look at the distribution of age in these data to know for sure."
+  },
+  {
     "objectID": "exercise-solutions/ex-6-13-solutions.html",
     "href": "exercise-solutions/ex-6-13-solutions.html",
     "title": "Hypothesis testing",
@@ -445,7 +466,7 @@
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\n\n    \nWed, Jun 14\nBest fit lines pt 1\n\nIMS ch 7\n\n\n\n\n    \nThu, Jun 15\nBest fit lines pt 2\n\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\nComponent 5: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\nPlotting one variable\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\nNull and alternative hypotheses\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\nZ scores\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\nHypothesis testing\n\n    \nWed, Jun 14\nHypothesis testing pt 4\n\n\n\n\nHypothesis testing 2\n\n    \nThu, Jun 15\nHypothesis testing pt 5\n\nIMS ch 7\n\nComponent 3 draft\n\n\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nCausality\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nInterpreting results\n\n\n\n\n\n    \nThu, Jun 22\nWrapup\n\n\nComponent 4 draft\n\nComponent 5: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations\n\n\n\nComponent 5: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
   },
   {
     "objectID": "slides/06-workshopping.html#today",
@@ -2884,6 +2905,202 @@
     "text": "Plots for your projects\n\n\nClarification on three variables:\n\nYou want to include three variables in one plot when those variables are all part of one question: ie, how does the relationship between X and Y vary by Z.\nAnother way you may have written three-variable questions:\n\nMultiple response variables: How does X affect Y, and also how does X affect Z\nMultiple explanatory variables: How does X affect Y, and also how does Z affect Y\n\nIn this case, you’re asking multiple two-variable questions: showing them together in one plot wouldn’t make much sense\nFor this assignment: One plot is required–pick your favorite sub-question\nBut making more plots is a snap once you have one–if you want to make plots for all sub-questions, go for it!\n\nOther questions?\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/16-hypothesistests4.html#logistics",
+    "href": "slides/16-hypothesistests4.html#logistics",
+    "title": "Hypothesis tests pt 4",
+    "section": "Logistics",
+    "text": "Logistics\n\n\nIntroducing George\n\n\n\n\nGrades are up to date\n\nFeedback in GitHub (issues on component 2 repo), grades on Sakai\nCheck your feedback—you’ll revise what you did and use it in the final paper\nExtra credit will be added up and factored in at the end\n\n\n\n\n\nProject component 3, results: draft by tomorrow (June 15), submit for grading by next Tuesday (June 20)\n\nInstructions and example are on the website\nDrafts should be complete–meaning you attempted all parts\nCommit your changes and push to GitHub!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#today",
+    "href": "slides/16-hypothesistests4.html#today",
+    "title": "Hypothesis tests pt 4",
+    "section": "Today",
+    "text": "Today\n\nA note on bar charts for proportions\nReview yesterday’s exercise\nSpecifics of particular hypothesis tests"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-variables",
+    "href": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-variables",
+    "title": "Hypothesis tests pt 4",
+    "section": "Bar charts for two categorical variables",
+    "text": "Bar charts for two categorical variables\n\nExample: How is the probability of obtaining a college degree related to self-identified income category?\n\n\ntable(gss$college, gss$finrela)\n\n           \n            far below average below average average above average\n  no degree                21            81     165            52\n  degree                    4            34      74            54\n           \n            far above average  DK\n  no degree                 2   5\n  degree                    8   0"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars",
+    "href": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars",
+    "title": "Hypothesis tests pt 4",
+    "section": "Bar charts for two categorical vars",
+    "text": "Bar charts for two categorical vars\n\n\n\n\nExample: How is the probability of obtaining a college degree related to self-identified income category?\nStacked bar chart: Good at showing the overall distribution. We can see that most people think their income is average.\n\n\n\n\nggplot(gss, \n       aes(x = finrela, fill = college)) + \n  geom_bar() + \n  labs(x = \"Relative family income\",\n       y = \"\")"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars-1",
+    "href": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars-1",
+    "title": "Hypothesis tests pt 4",
+    "section": "Bar charts for two categorical vars",
+    "text": "Bar charts for two categorical vars\n\n\n\nExample: How is the probability of obtaining a college degree related to self-identified income category?\n\n\n\nDodged bar chart: Good at showing the distributions of the two groups next to each other. Now we can see that there are fewer people with degrees.\n\n\n\n\nggplot(gss, \n       aes(x = finrela, fill = college)) + \n  # the \"position\" argument here \n  # is what is changing\n  geom_bar(position = \"dodge\") +\n  labs(x = \"Relative family income\",\n       y = \"\")"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars-2",
+    "href": "slides/16-hypothesistests4.html#bar-charts-for-two-categorical-vars-2",
+    "title": "Hypothesis tests pt 4",
+    "section": "Bar charts for two categorical vars",
+    "text": "Bar charts for two categorical vars\n\n\n\nExample: How is the probability of obtaining a college degree related to self-identified income category?\n\n\n\nProportion bar chart: Good at comparing the compositions of the bars. We lose information on the distribution as a whole, but we gain information on whether people from both groups are evenly distributed between income classes.\n\n\n\n\nggplot(gss, \n       aes(x = finrela, fill = college)) + \n  # the \"position\" argument here \n  # is what is changing\n  geom_bar(position = \"fill\") +\n  labs(x = \"Relative family income\",\n       y = \"\")"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#answers-for-exercise-q3",
+    "href": "slides/16-hypothesistests4.html#answers-for-exercise-q3",
+    "title": "Hypothesis tests pt 4",
+    "section": "Answers for exercise Q3",
+    "text": "Answers for exercise Q3\n\nHow is someone’s gender identity related to their probability of being married?"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#there-are-many-types-of-tests",
+    "href": "slides/16-hypothesistests4.html#there-are-many-types-of-tests",
+    "title": "Hypothesis tests pt 4",
+    "section": "There are many types of tests",
+    "text": "There are many types of tests"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#but-the-steps-to-run-them-are-the-same",
+    "href": "slides/16-hypothesistests4.html#but-the-steps-to-run-them-are-the-same",
+    "title": "Hypothesis tests pt 4",
+    "section": "But the steps to run them are the same",
+    "text": "But the steps to run them are the same\n\nCalculate the test statistic of your sample\n\nwith specify() (telling R what your variables are),\nthen hypothesize() (telling R what kind of null hypothesis you have),\nthen calculate() (calculating your test statistic)\n\nSimulate the null distribution\n\nexactly the same code as step 1, but with an added generate() step\nhere you are simulating pulling a bunch of samples from your null population in order to figure out what the null distribution of sample statistics would look like\n\nCalculate the p value of your sample\n\nwith your null distribution, your test statistic, and get_p_value()\n\nVisualize the test statistic of your sample alongside the null distribution\n\nwith visualize() and shade_p_value()"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#in-code-form",
+    "href": "slides/16-hypothesistests4.html#in-code-form",
+    "title": "Hypothesis tests pt 4",
+    "section": "In code form:",
+    "text": "In code form:\n\n# 1. Calculate test statistic\ntest_stat &lt;- XXXX |&gt; \n  specify(explanatory = XXXX,\n          response = XXXX) |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = XXXX)\n\n# 2. Simulate null distribution\nnull_dist &lt;- XXXX |&gt; \n  specify(explanatory = XXXX,\n          response = XXXX) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt;\n  calculate(stat = XXXX)\n\n# 3. Use both to get the p value\nget_p_value(null_dist,\n            obs_stat = test_stat,\n            direction = XXXX)\n\n# 4. Visualize it!\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat,\n                direction = XXXX)"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#different-tests-an-overview",
+    "href": "slides/16-hypothesistests4.html#different-tests-an-overview",
+    "title": "Hypothesis tests pt 4",
+    "section": "Different tests: an overview",
+    "text": "Different tests: an overview\n\nWe’ll be covering 5 specific hypothesis tests (all except logistic regression)\n\nTwo sample Z test\nTwo sample T test\nChi square test of independence\nAnalysis of Variance (ANOVA)\nLinear regression\n\n\n\n\nThere is a relationship between the descriptive plots you’ve been working with and the different test types!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#two-sample-z-test",
+    "href": "slides/16-hypothesistests4.html#two-sample-z-test",
+    "title": "Hypothesis tests pt 4",
+    "section": "Two sample Z test",
+    "text": "Two sample Z test\n\nExplanatory: categorical with two categories\nResponse: categorical with two categories\nTesting for: Difference in group proportions!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#two-sample-t-test",
+    "href": "slides/16-hypothesistests4.html#two-sample-t-test",
+    "title": "Hypothesis tests pt 4",
+    "section": "Two sample T test",
+    "text": "Two sample T test\n\nExplanatory: categorical with two categories\nResponse: numeric\nTesting for: Difference in group means!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-test-of-independence",
+    "href": "slides/16-hypothesistests4.html#chi-square-test-of-independence",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square test of independence",
+    "text": "Chi square test of independence\n\nExplanatory: categorical with any number of categories\nResponse: categorical with any number of categories\nTesting for: Patterns in how observations are distributed between groups!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-test-of-independence-1",
+    "href": "slides/16-hypothesistests4.html#chi-square-test-of-independence-1",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square test of independence",
+    "text": "Chi square test of independence\n\nExplanatory: categorical with any number of categories\nResponse: categorical with any number of categories\nTesting for: Patterns in how observations are distributed between groups!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#analysis-of-variance-anova",
+    "href": "slides/16-hypothesistests4.html#analysis-of-variance-anova",
+    "title": "Hypothesis tests pt 4",
+    "section": "Analysis of Variance (ANOVA)",
+    "text": "Analysis of Variance (ANOVA)\n\nExplanatory: categorical with three or more categories\nResponse: numeric\nTesting for: Differences in means between more groups!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#linear-regression",
+    "href": "slides/16-hypothesistests4.html#linear-regression",
+    "title": "Hypothesis tests pt 4",
+    "section": "Linear regression",
+    "text": "Linear regression\n\nExplanatory: numeric or multiple variables\nResponse: numeric\nTesting for: Non-zero slopes!"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#whats-the-math-difference-1",
+    "href": "slides/16-hypothesistests4.html#whats-the-math-difference-1",
+    "title": "Hypothesis tests pt 4",
+    "section": "What’s the math difference?",
+    "text": "What’s the math difference?\n\nMainly, the shape of the test statistic distribution.\nWe account for this in two places:\n\nthe stat argument in calculate()\nthe direction argument in get_p_value() and visualize()"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#normal-and-nearly-normal-distributions",
+    "href": "slides/16-hypothesistests4.html#normal-and-nearly-normal-distributions",
+    "title": "Hypothesis tests pt 4",
+    "section": "Normal and nearly normal distributions",
+    "text": "Normal and nearly normal distributions\n\nNormal: Two sample Z test, linear regression slope test\nNearly normal (t distribution): Two sample T test\nSymmetrical; centered at 0; bell-shaped\nEither one-tailed or two-tailed tests make sense"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#asymmetrical-distributions",
+    "href": "slides/16-hypothesistests4.html#asymmetrical-distributions",
+    "title": "Hypothesis tests pt 4",
+    "section": "Asymmetrical distributions",
+    "text": "Asymmetrical distributions\n\nChi-square test: chi square distribution\nAnalysis of Variance (ANOVA): F distribution\nThese values can be thought of as distances\nStrictly positive; asymmetrical and long-tailed\n“More extreme” means further away—ie, more positive. So all tests are one-tailed."
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#different-tests-summary",
+    "href": "slides/16-hypothesistests4.html#different-tests-summary",
+    "title": "Hypothesis tests pt 4",
+    "section": "Different tests: summary",
+    "text": "Different tests: summary\n\n\n\n\n\n\n\n\n\nTest\nstat = XXXX\ndirection = XXXX\nNotes\n\n\n\n\nTwo sample Z test\n\"z\"\nusually \"two-sided\"\nNeeds success = XXXX in specify(), where XXXX is one of the options of the response variable\n\n\nTwo sample T test\n\"t\"\nusually \"two-sided\"\n\n\n\nChi square test\n\"Chisq\"\n\"greater\"\n\n\n\nANOVA\n\"F\"\n\"greater\"\nhypothesize() optional for test statistic\n\n\nLinear regression\n\"slope\"\nusually \"two-sided\"\nhypothesize() optional for test statistic"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#example",
+    "href": "slides/16-hypothesistests4.html#example",
+    "title": "Hypothesis tests pt 4",
+    "section": "Example",
+    "text": "Example\n\nHow is self-perceived relative family income associated with probability of receiving a college degree?\n\n\n\nExplanatory: Self-perceived relative family income. Three or more category categorical.\nResponse: Whether or not someone received a college degree. Two-category categorical.\n\n\n\n\nNull hypothesis: There is no relationship between self-perceived relative family income and probability of receiving a college degree.\nAlternative hypothesis: There is no relationship between self-perceived relative family income and probability of receiving a college degree."
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#example-1",
+    "href": "slides/16-hypothesistests4.html#example-1",
+    "title": "Hypothesis tests pt 4",
+    "section": "Example",
+    "text": "Example\n\nggplot(gss, aes(x = finrela, fill = college)) + \n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-example",
+    "href": "slides/16-hypothesistests4.html#chi-square-example",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square example",
+    "text": "Chi square example\n\n\nCorrect test: Chi square"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-example-1",
+    "href": "slides/16-hypothesistests4.html#chi-square-example-1",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square example",
+    "text": "Chi square example\n\n# 1. Calculate test statistic\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = finrela,\n          response = college) |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"Chisq\")       # calculate the Chi square statistic"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-example-2",
+    "href": "slides/16-hypothesistests4.html#chi-square-example-2",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square example",
+    "text": "Chi square example\n\n# 1. Calculate test statistic\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = finrela,\n          response = college) |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"Chisq\")       # calculate the Chi square statistic\n\n# 2. Simulate null distribution\nnull_dist &lt;- gss |&gt; \n  specify(explanatory = finrela,\n          response = college) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt;\n  calculate(stat = \"Chisq\")"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-example-3",
+    "href": "slides/16-hypothesistests4.html#chi-square-example-3",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square example",
+    "text": "Chi square example\n\n# 1. Calculate test statistic\ntest_stat &lt;- gss |&gt; \n  specify(explanatory = finrela,\n          response = college) |&gt; \n  hypothesize(null = \"independence\") |&gt; \n  calculate(stat = \"Chisq\")       # calculate the Chi square statistic\n\n# 2. Simulate null distribution\nnull_dist &lt;- gss |&gt; \n  specify(explanatory = finrela,\n          response = college) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt;\n  calculate(stat = \"Chisq\")\n\n# 3. Use both to get the p value\nget_p_value(null_dist,\n            obs_stat = test_stat,\n            direction = \"greater\") # we want the probability of a statistic larger than what we calculated\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1       0"
+  },
+  {
+    "objectID": "slides/16-hypothesistests4.html#chi-square-example-4",
+    "href": "slides/16-hypothesistests4.html#chi-square-example-4",
+    "title": "Hypothesis tests pt 4",
+    "section": "Chi square example",
+    "text": "Chi square example\n\nDo we reject or fail to reject our null hypothesis?\nWhat can we conclude about our research question?\n\n\n# 4. Visualize it!\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat,\n                direction = \"greater\")\n\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "project-descriptives.html",
     "href": "project-descriptives.html",
     "title": "Project description",
@@ -3168,7 +3385,7 @@
     "href": "project_example/c3_results.html",
     "title": "Project description",
     "section": "",
-    "text": "In this component, you will perform an inferential statistical test that provides evidence regarding your research question. The results of inferential analyses allow you to draw some conclusions about the population that your data came from.\nYou are required to perform one test to provide evidence for one question.\nIf your research question involves multiple sub-questions (e.g., is of the form “how does X affect Y and also how does Z affect Y” or “how does X affect Y and also how does X affect Z”), you are welcome and encouraged to perform additional statistical tests to investigate the additional sub-questions. In this case, I will score your tests separately and count only the highest score towards your grade.\n\n\n\nState your research question (from earlier project components, updated as necessary).\n\nHow does the number of coaches assigned to US college sports teams vary by the gender of the team?\n\nProvide some information on your explanatory and response variables (from earlier project components, updated as necessary):\n\nWhat is/are your explanatory (independent) variable(s)? For each, say if it is a numeric variable, a categorical variable with two levels, or a categorical variable with three or more levels.\nMy explanatory variable is team gender, which is a categorical variable with two levels.\nWhat is/are your response (dependent) variable(s)? For each, say if it is a numeric variable, a categorical variable with two levels, or a categorical variable with three or more levels.\nMy response variable is the number of coaches assigned to the team, which is a numeric variable.\n\nHypotheses:\n\nState your null hypothesis.\nTeams will have the same number of coaches regardless of team gender.\nState your alternative hypothesis.\nMen’s and women’s teams will be assigned different numbers of coaches.\n\nWhat statistical test will you use? Explain why this test is the right choice.\nI will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable.\nIf necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.\n\n\n# Just like in component 2, in order to avoid confounding team gender with sport, I need to filter out sports that are only available for one gender.\nsports_filtered &lt;- sports |&gt; \n  filter(\n    sport != \"Baseball\",\n    sport != \"Field Hockey\",\n    sport != \"Football\",\n    sport != \"Gymnastics\",\n    sport != \"Rowing\",\n    sport != \"Softball\",\n    sport != \"Volleyball\",\n    sport != \"Wrestling\"\n  )\n\n\n\n\n\nUse the code chunk below to perform the analysis you described in part 1. Display your p value.\n\n\n# starting with the data frame I modified, I calculate the test statistic for my T test. Because I am comparing the means of two groups, I use the \"diff in means\" option in \"calculate.\"\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt; # I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.\n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\nMessage: The independence null hypothesis does not inform calculation of the observed statistic (a difference in means) and will be ignored.\n\n# then I use almost the same code to generate the null distribution\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\nSetting `type = \"permute\"` in `generate()`.\n\n# then I generate the p value. I am using a two-sided test, so direction is \"both\".\np_sports &lt;- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"both\")\n\n# and I display the p value\np_sports$p_value\n\n[1] 0.802\n\n\n\nPlot your null distribution. Shade the part corresponding to your p value.\n\n\n# here, we take the null distribution and test statistic we calculated above, use the \"visualize\" function, and then mark the part of the distribution that is as or more extreme than what we observed (none, here, because our p value for this lizard data is quite extreme)\nsports_nulldist |&gt; \n  visualize() + \n  shade_p_value(obs_stat = sports_teststat, direction = \"both\")\n\n\n\n\n\nInterpret the p value for your test. Using a threshold of p &lt; .05, do you reject or fail to reject your null hypothesis? (~2-3 sentences)\nThe p value for this test is 0.77, indicating that under the null distribution, there is a 77% chance I would get a sample with a result equal to or more extreme than the one I got. This is well above the cutoff value of p = .05. The difference between the number of coaches assigned to men’s and women’s teams is not statistically significant, and I fail to reject my null hypothesis.\nWhat conclusions can you draw about your research question? (~1-3 sentences)\nFor sports that are available to both men and women, the number of coaches assigned to men’s and women’s college sports teams are very similar.\nWhat don’t your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area? (~2-4 sentences)\nI deliberately filtered sports out of my sample that were only available to one gender so that I could see if there were differences in number of coaches between men’s and women’s teams for sports with both men’s and women’s versions. Now that I know that there are no differences in number of coaches for comparable sports, it would be useful to put the gender-specific sports back in my sample and compare number of coaches between team genders again. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women."
+    "text": "In this component, you will perform an inferential statistical test that provides evidence regarding your research question. The results of inferential analyses allow you to draw some conclusions about the population that your data came from.\nYou are required to perform one test to provide evidence for one question.\nIf your research question involves multiple sub-questions (e.g., is of the form “how does X affect Y and also how does Z affect Y” or “how does X affect Y and also how does X affect Z”), you are welcome and encouraged to perform additional statistical tests to investigate the additional sub-questions. In this case, I will score your tests separately and count only the highest score towards your grade.\n\n\n\nState your research question (from earlier project components, updated as necessary).\n\nHow does the number of coaches assigned to US college sports teams vary by the gender of the team?\n\nProvide some information on your explanatory and response variables (from earlier project components, updated as necessary):\n\nWhat is/are your explanatory (independent) variable(s)? For each, say if it is a numeric variable, a categorical variable with two levels, or a categorical variable with three or more levels.\nMy explanatory variable is team gender, which is a categorical variable with two levels.\nWhat is/are your response (dependent) variable(s)? For each, say if it is a numeric variable, a categorical variable with two levels, or a categorical variable with three or more levels.\nMy response variable is the number of coaches assigned to the team, which is a numeric variable.\n\nHypotheses:\n\nState your null hypothesis.\nTeams will have the same number of coaches regardless of team gender.\nState your alternative hypothesis.\nMen’s and women’s teams will be assigned different numbers of coaches.\n\nWhat statistical test will you use? Explain why this test is the right choice.\nI will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable.\nIf necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.\n\n\n# Just like in component 2, in order to avoid confounding team gender with sport, I need to filter out sports that are only available for one gender.\nsports_filtered &lt;- sports |&gt; \n  filter(\n    sport != \"Baseball\",\n    sport != \"Field Hockey\",\n    sport != \"Football\",\n    sport != \"Gymnastics\",\n    sport != \"Rowing\",\n    sport != \"Softball\",\n    sport != \"Volleyball\",\n    sport != \"Wrestling\"\n  )\n\n\n\n\n\nUse the code chunk below to perform the analysis you described in part 1. Display your p value.\n\n\n# starting with the data frame I modified, I calculate the test statistic for my T test. Because I am comparing the means of two groups, I use the \"diff in means\" option in \"calculate.\"\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt; # I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.\n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\n# then I use almost the same code to generate the null distribution\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\n# then I generate the p value. I am using a two-sided test, so direction is \"both\".\np_sports &lt;- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"both\")\n\n# and I display the p value\np_sports$p_value\n\n[1] 0.78\n\n\n\nPlot your null distribution. Shade the part corresponding to your p value.\n\n\n# here, we take the null distribution and test statistic we calculated above, use the \"visualize\" function, and then mark the part of the distribution that is as or more extreme than what we observed\nsports_nulldist |&gt; \n  visualize() + \n  shade_p_value(obs_stat = sports_teststat, direction = \"both\")\n\n\n\n\n\nInterpret the p value for your test. Using a threshold of p &lt; .05, do you reject or fail to reject your null hypothesis? (~2-3 sentences)\nThe p value for this test is 0.77, indicating that under the null distribution, there is a 77% chance I would get a sample with a result equal to or more extreme than the one I got. This is well above the cutoff value of p = .05. The difference between the number of coaches assigned to men’s and women’s teams is not statistically significant, and I fail to reject my null hypothesis.\nWhat conclusions can you draw about your research question? (~1-3 sentences)\nFor sports that are available to both men and women, the number of coaches assigned to men’s and women’s college sports teams are very similar.\nWhat don’t your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area? (~2-4 sentences)\nI deliberately filtered sports out of my sample that were only available to one gender so that I could see if there were differences in number of coaches between men’s and women’s teams for sports with both men’s and women’s versions. Now that I know that there are no differences in number of coaches for comparable sports, it would be useful to put the gender-specific sports back in my sample and compare number of coaches between team genders again. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women."
   },
   {
     "objectID": "project_example/c3_results.html#part-1-analysis-plan",
@@ -3182,7 +3399,7 @@
     "href": "project_example/c3_results.html#part-2-analysis-results",
     "title": "Project description",
     "section": "",
-    "text": "Use the code chunk below to perform the analysis you described in part 1. Display your p value.\n\n\n# starting with the data frame I modified, I calculate the test statistic for my T test. Because I am comparing the means of two groups, I use the \"diff in means\" option in \"calculate.\"\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt; # I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.\n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\nMessage: The independence null hypothesis does not inform calculation of the observed statistic (a difference in means) and will be ignored.\n\n# then I use almost the same code to generate the null distribution\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\nSetting `type = \"permute\"` in `generate()`.\n\n# then I generate the p value. I am using a two-sided test, so direction is \"both\".\np_sports &lt;- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"both\")\n\n# and I display the p value\np_sports$p_value\n\n[1] 0.802\n\n\n\nPlot your null distribution. Shade the part corresponding to your p value.\n\n\n# here, we take the null distribution and test statistic we calculated above, use the \"visualize\" function, and then mark the part of the distribution that is as or more extreme than what we observed (none, here, because our p value for this lizard data is quite extreme)\nsports_nulldist |&gt; \n  visualize() + \n  shade_p_value(obs_stat = sports_teststat, direction = \"both\")\n\n\n\n\n\nInterpret the p value for your test. Using a threshold of p &lt; .05, do you reject or fail to reject your null hypothesis? (~2-3 sentences)\nThe p value for this test is 0.77, indicating that under the null distribution, there is a 77% chance I would get a sample with a result equal to or more extreme than the one I got. This is well above the cutoff value of p = .05. The difference between the number of coaches assigned to men’s and women’s teams is not statistically significant, and I fail to reject my null hypothesis.\nWhat conclusions can you draw about your research question? (~1-3 sentences)\nFor sports that are available to both men and women, the number of coaches assigned to men’s and women’s college sports teams are very similar.\nWhat don’t your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area? (~2-4 sentences)\nI deliberately filtered sports out of my sample that were only available to one gender so that I could see if there were differences in number of coaches between men’s and women’s teams for sports with both men’s and women’s versions. Now that I know that there are no differences in number of coaches for comparable sports, it would be useful to put the gender-specific sports back in my sample and compare number of coaches between team genders again. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women."
+    "text": "Use the code chunk below to perform the analysis you described in part 1. Display your p value.\n\n\n# starting with the data frame I modified, I calculate the test statistic for my T test. Because I am comparing the means of two groups, I use the \"diff in means\" option in \"calculate.\"\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt; # I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.\n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\n# then I use almost the same code to generate the null distribution\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000) |&gt; \n  calculate(stat = \"diff in means\",\n            order = c(\"men\", \"women\"))\n\n# then I generate the p value. I am using a two-sided test, so direction is \"both\".\np_sports &lt;- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"both\")\n\n# and I display the p value\np_sports$p_value\n\n[1] 0.78\n\n\n\nPlot your null distribution. Shade the part corresponding to your p value.\n\n\n# here, we take the null distribution and test statistic we calculated above, use the \"visualize\" function, and then mark the part of the distribution that is as or more extreme than what we observed\nsports_nulldist |&gt; \n  visualize() + \n  shade_p_value(obs_stat = sports_teststat, direction = \"both\")\n\n\n\n\n\nInterpret the p value for your test. Using a threshold of p &lt; .05, do you reject or fail to reject your null hypothesis? (~2-3 sentences)\nThe p value for this test is 0.77, indicating that under the null distribution, there is a 77% chance I would get a sample with a result equal to or more extreme than the one I got. This is well above the cutoff value of p = .05. The difference between the number of coaches assigned to men’s and women’s teams is not statistically significant, and I fail to reject my null hypothesis.\nWhat conclusions can you draw about your research question? (~1-3 sentences)\nFor sports that are available to both men and women, the number of coaches assigned to men’s and women’s college sports teams are very similar.\nWhat don’t your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area? (~2-4 sentences)\nI deliberately filtered sports out of my sample that were only available to one gender so that I could see if there were differences in number of coaches between men’s and women’s teams for sports with both men’s and women’s versions. Now that I know that there are no differences in number of coaches for comparable sports, it would be useful to put the gender-specific sports back in my sample and compare number of coaches between team genders again. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women."
   },
   {
     "objectID": "project_example/c1_proposal.html",
