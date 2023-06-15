@@ -1,0 +1,121 @@
+---
+title: "Interpreting results"
+subtitle: "Lecture 17"
+date: "June 15, 2023"
+format: 
+  revealjs:
+    smaller: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+library(infer)
+library(patchwork)
+set.seed(2)
+```
+
+## Logistics
+
+-   Four classes left. No class Monday. We're almost there! :)
+
+. . .
+
+-   Finishing up the project:
+
+    -   Project component 3: submit for grading by next Tuesday (June 20)
+
+. . .
+
+```         
+-   Final paper 
+
+    -   use (revised!) elements of your proposal, descriptive stats, and results to turn your question into a (concise) paper.
+    -   More detailed instructions and example will be posted soon
+    -   Due Wednesday June 28 11:59pm
+```
+
+. . .
+
+```         
+-   Final presentation
+
+    -   Short! ~5-10 minutes
+    -   Briefly introduce your question, say a bit about why it's interesting, show your results, and talk about what you conclude from them. 
+    -   Most on Monday June 26 (last day of class)
+    
+```
+
+. . .
+
+```         
+    -   **Looking for a few volunteers to go on Thursday June 22 instead!**
+    
+        -   Benefits: 
+        -   More time afterwards to focus on your final paper (finish up the semester early?)
+        -   No stress while you watch day 2 
+        -   Everyone gets more flexibility on time
+        -   What's your favorite kind of donut? :)
+```
+
+## Today {.smaller}
+
+-   Interpreting results!
+
+## The (approximate) data analysis process {.smaller}
+
+::: columns
+::: {.column width="73%"}
+-   Determine topic ✓
+-   Find data; learn what observations and variables are available ✓
+-   Write research question ✓
+-   Describe distributions of relevant variables ✓
+-   Prepare data frame for analysis ✓
+-   Describe relationships between variables ✓
+-   Perform statistical tests ✓
+-   **Communicate results**
+:::
+
+::: {.column width="27%"}
+![](images/07/cycle.png)
+:::
+:::
+
+# So you have a p value...
+
+## What can you do with it?
+
+-   Rejecting/failing to reject hypotheses is useful
+-   But it's also statistics-speak, not effective communication
+
+## Problems with p values
+
+-   arbitrary cutoffs
+-   file drawer problem
+-   doesn't pay attention to whether the effect is important
+-   sometimes you reject when you shouldn't (5% of the time)
+
+## Solutions: best analysis practices
+
+-   descriptive statistics! pay attention to effect sizes.
+-   repeat things! use different data or different analysis techniques. If you get the same thing twice you're less likely to be wrong.
+
+## Objectivity: no one is objective
+-   mesearch is helpful sometimes
+
+## Statistics reflects biases
+
+-   It's not objective
+-   We make choices that have implications
+-   Treating all members of a group as the same
+-   Reference categories
+-   How we pick categories--what options are offered. Treating categories as fixed when maybe they shouldn't be.
+-   How to combat? Make good choices. If you can't fix it, you can point it out as a limitation
+
+## Media reports: use Joseph's material
+
+## Ethics? 
+
+## Reading for Tuesday
+
+-   There's an article linked on the course calendar. Mess around with the interactive element!

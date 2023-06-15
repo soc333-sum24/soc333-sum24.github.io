@@ -88,10 +88,12 @@ website:
             text: "6/06: Single variable plots"
           - href: exercise-solutions/ex-6-13-solutions.qmd
             text: "6/13: Hypothesis tests 1"
-          # - href: exercise-solutions/ex-6-14-solutions.qmd
-          #   text: "6/14: Hypothesis tests 2"
+          - href: exercise-solutions/ex-6-14-solutions.qmd
+            text: "6/14: Hypothesis tests 2"
       - section: "Slides"
         contents:
+          - href: slides/17-interpretingresults.qmd
+            text: "Lecture 17: Interpreting results"
           - href: slides/16-hypothesistests4.qmd
             text: "Lecture 16: Hypothesis tests pt 4"
           - href: slides/15-hypothesistests3.qmd

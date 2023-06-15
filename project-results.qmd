@@ -18,6 +18,32 @@ library(infer)
 library(openintro)
 ```
 
+## Workshop questions
+
+Read your partner's results section. Then create a new GitHub issue on their repository, copy and paste in these questions, and answer them.
+
+-   Part 1: Check your partner's answers for each of the following pieces. Are they correct? If not, what would you have written instead? (ask for more information on their variables or data if needed. Write "none" if not present.)
+
+    -   Explanatory variable and type
+    -   Response variable and type
+    -   Null hypothesis
+    -   Alternative hypothesis
+    -   Choice of statistical test
+    
+-   Part 2
+
+    -   If your group member doesn't have results yet: 
+    
+        -   look through their code. Can you help them find the mistake? 
+
+    -   If your group member does have results:
+    
+        -   do you agree with their choice to reject or fail to reject the null? 
+        -   are their conclusions about their research question valid?
+
+    -   Read over their stated limitations/next steps. Are they valid? What else can you think of here?
+
+
 ## Details
 
 Bring a full draft of this component to class for peer review on **Thursday June 15**.
@@ -42,20 +68,20 @@ The required elements of this component are as follows:
 
         -   State your alternative hypothesis.
 
-    -   What statistical test will you use? Explain why this test is the right choice. (~1-3 sentences)
+    -   What statistical test will you use? Explain why this test is the right choice. (\~1-3 sentences)
 
     -   If necessary, make any necessary changes to your data frame (filtering out observations or creating variables). This code can be copied from component 2 (updated as necessary).
-    
+
 -   Part 2: Analysis results
 
     -   Perform the analysis you described in part 1. Display your p value.
-    
+
     -   Plot your null distribution. Shade the part corresponding to your p value.
-    
+
     -   Interpret the p value for your test. Using a threshold of p \< .05, do you reject or fail to reject your null hypothesis? (\~2-3 sentences)
-    
+
     -   What conclusions can you draw about your research question? (\~1-3 sentences)
-    
+
     -   What *don't* your results tell you about your research question? In other words, what are some reasonable next steps for future research in this area? (\~2-4 sentences)
 
 ## Grading
