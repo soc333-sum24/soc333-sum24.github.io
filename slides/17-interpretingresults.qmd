@@ -13,6 +13,11 @@ library(openintro)
 library(infer)
 library(patchwork)
 set.seed(2)
+
+# cam, emma
+# staci, takayuki, wade
+# franchesca, terry
+# malik, damilola
 ```
 
 ## Logistics
