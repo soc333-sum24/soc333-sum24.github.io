@@ -13,11 +13,6 @@ library(openintro)
 library(infer)
 library(patchwork)
 set.seed(2)
-
-# cam, emma
-# staci, takayuki, wade
-# franchesca, terry
-# malik, damilola
 ```
 
 ## Logistics
@@ -191,7 +186,7 @@ get_p_value(null_dist,
 ::: incremental
 -   Plausibility: does it pass a gut check?
 
-    -   https://tylervigen.com/spurious-correlations
+    -   [https://tylervigen.com/spurious-correlations](https://tylervigen.com/spurious-correlations)
 
 -   Time order: did the cause happen before the effect?
 
@@ -225,4 +220,13 @@ Are these statements causal or associative?
 
 -   There's an article linked on the course calendar. Mess around with the interactive element!
 
+## Workshopping results
 
+-   Teams: 
+
+    -   Cam, Emma
+    -   Franchesca, Terry
+    -   Malik, Damilola
+    -   Staci, Takayuki, Wade
+    
+-   Same as last time: you have access to each other's repos on GitHub. Leave your feedback as an issue. Questions to address are at the top of the instructions page on the website ([link](https://soc333-sum23.github.io/project-results.html)).
