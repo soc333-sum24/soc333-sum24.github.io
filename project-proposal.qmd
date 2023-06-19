@@ -1,9 +1,11 @@
 ---
-title: "Component 1: Project proposal"
+title: "Project"
 callout-icon: false
 ---
 
-# How to complete and submit
+# Proposal
+
+## How to complete and submit
 
 To get some practice with our new computing workflow, you will write this assignment in a Quarto document.
 
@@ -11,11 +13,11 @@ First, you need to locate and clone the repository ([instructions](https://soc33
 
 Commit your changes regularly. When you are done, render the document and push your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
 
-# Workshop questions
+## Workshop questions
 
 Read your group members' proposed research questions. Then create a new GitHub issue on each of their repositories, copy and paste in these questions, and answer them.
 
-## Research question 1:
+### Research question 1:
 
 A. Is the question...
 
@@ -29,7 +31,7 @@ C. Will the variables your group member identified let them answer their researc
 
 D. What suggestions do you have about how to improve the research question or other aspects of the proposal?
 
-## Research question 2:
+### Research question 2:
 
 A. Is the question...
 
@@ -43,13 +45,13 @@ C. Will the variables your group member identified let them answer their researc
 
 D. What suggestions do you have about how to improve the research question or other aspects of the proposal?
 
-## Which research question would you choose? Why?
+### Which research question would you choose? Why?
 
-# Details
+## Details
 
 In this component, you will think through two possible research questions and data sets. Using the feedback provided by your classmates, you will choose one to pursue further.
 
-## Data
+### Data
 
 You will need to find two data sets: one for each of your research questions. You may write additional research questions on a single data set if you would like additional feedback, but in all cases, you must consider and present at least two data sets in total.
 
@@ -120,7 +122,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|--------------------------------------------------------------------------------------------------------------|-----|
+|------------------------------------------------------------|------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |

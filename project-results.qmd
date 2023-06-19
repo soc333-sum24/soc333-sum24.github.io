@@ -1,5 +1,5 @@
 ---
-title: "Project description"
+title: "Project"
 callout-icon: false
 editor: visual
 ---
@@ -31,20 +31,19 @@ Read your partner's results section. Then create a new GitHub issue on their rep
     -   Null hypothesis
     -   Alternative hypothesis
     -   Choice of statistical test
-    
+
 -   Part 2
 
-    -   If your group member doesn't have results yet: 
-    
-        -   look through their code. Can you help them find the mistake? 
+    -   If your group member doesn't have results yet:
+
+        -   look through their code. Can you help them find the mistake?
 
     -   If your group member does have results:
-    
-        -   do you agree with their choice to reject or fail to reject the null? 
+
+        -   do you agree with their choice to reject or fail to reject the null?
         -   are their conclusions about their research question valid?
 
     -   Read over their stated limitations/next steps. Are they valid? What else can you think of here?
-
 
 ## Details
 

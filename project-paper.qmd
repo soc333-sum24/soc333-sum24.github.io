@@ -1,98 +1,69 @@
 ---
-title: "Project description"
+title: "Project"
 callout-icon: false
 ---
 
 # Paper {#paper}
 
-The necessary components of the report are below.
-You are free to add additional sections as necessary.
-I intend that you are able to pull in much of this information from the previous three components of this project (the proposal, descriptive statistics, and results).
-However, you must edit to ensure that the report reads well as a cohesive whole, and you must also address any relevant feedback you received on those components.
-**You must not simply paste your three previous assignments together in one document; this will not score well.**
+The final assignment of the semester is to compile the analysis you've done into a single, cohesive report---something that you could send to a colleague or a supervisor who wanted to know your findings and how you obtained them.
 
-Be selective in what you include in your final write-up.
-The goal is to write a cohesive narrative that demonstrates a thorough and comprehensive analysis rather than explain every step of the analysis.
+The requirements for this paper are below. I intend that you are able to pull in some of this information from the previous three components of this project (the proposal, descriptive statistics, and results). However, you must edit to ensure that your report meets all requirements listed here, all your code runs, and everything reads well as a cohesive whole. You must also address any relevant feedback you received on previous components. **Do not just paste your three previous assignments together in one document; this will not meet requirements and will score poorly.**
 
 ## Timeline
 
-Bring a full draft to class on **Thursday June 22** for peer review.
-The final revised draft is due on **Wednesday June 28, 11:59pm**.
+Upload a full draft to GitHub by the start of class on **Monday June 26** for peer review. The final revised draft is due on **Wednesday June 28, 11:59pm**.
 
 ## Overall requirements
 
--   Your full paper must be completed in the `report.qmd` file and must be reproducible.
-    Before you finalize your write up, make sure the printing of code chunks is off with the option `echo: false` in the YAML.
+-   Your full paper must be completed in the `report.qmd` file.
 
--   The complete paper, including visualizations, should be no more than 10 pages long.
-    There is no minimum page requirement; however, you should comprehensively address all of the analysis in your report.
+-   The complete paper should be TODO MAXIMUM LENGTH WORD COUNT. There is no minimum requirement; however, you should comprehensively address all of the analysis in your report. The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. I will grade based on the content of your paper, not its length.
 
 ::: callout-note
-To check how many pages your report is, open it in your browser and go to File \> Print \> Save as PDF and review the number of pages.
+You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
 :::
-
--   You must include and interpret at least one figure that usefully displays your data. You may choose where it makes most sense to include this.
 
 ## Paper sections
 
-### Introduction
+### Introduction (~1-2 paragraphs)
 
-This section includes an introduction to the project motivation and research question.
+-   Introduce the reader to the research question and target population. 
+-   Provide some motivation. Why is it important that we know the answer to this question?
 
-#### Grading criteria
+### Data and methodology (~3-4 paragraphs)
 
-The research question and motivation are clearly stated in the introduction, including citations for the data source and any external research.
-The research question is well formulated and the data set fits the question.
-The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report.
+-   Describe the data and what you know about how it was collected. Was it an observational study or an experiment? Who was sampled? Why is this data a good fit for your research question?
+-   Describe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve.
+-   Note any changes you made to your data (filtering out observations or creating new variables).
+-   Explain your analysis strategy and why this strategy is appropriate for your question and variables.
 
-### Data and methodology
+### Results (~2-3 paragraphs)
 
-This section includes a brief description of your data and your analysis process.
-Describe the data and variables you will use in analysis.
-Be clear about what purpose your variables serve and how they are operationalized.
-Explain your analysis strategy and why this strategy is appropriate for your question and variables.
-Though you may show descriptive analysis, you should go beyond it--ie, you should use one or more of the hypothesis testing techniques we have discussed in class.
+-   Present results pertaining to the relationship between your explanatory and response variables (descriptive *and* inferential)
 
-#### Grading criteria
+    - Your descriptive results should be presented using at least one appropriate and interpretable figure
+    - Obtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it's not necessary for a reader).
 
-The analysis steps are appropriate for the data and research question.
+-   Interpret your results in the context of your research question. What do they tell us about the answer to that question?
 
-### Results
+### Discussion and conclusion (~3-4 paragraphs)
 
-This is where you will discuss your overall finding and describe the key results from your analysis.
-Present the results of your analysis using figures and/or tables, as appropriate.
-The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions.
-Focus on the variables that help you answer the research question and that provide relevant context for the reader.
+-   Summarize what we have learned about your research question from your analysis. 
+-   Discuss the limitations of your analysis and conclusions. Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
+-   Provide ideas for future work. Now that we have the answer to this research question, what's next?
 
-#### Grading criteria
+### Writing and organization
 
-The analysis results are clearly assessed and interesting findings from the analysis are described.
-Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.
+-   This is an assessment of the overall quality of the writing and organization of the report
+-   Writing should be clear, concise, and error-free
+-   Section headers should be clear and content should be included in the correct sections
+-   The paper should be under the maximum length
 
-### Discussion
+### Revision process
 
-In this section you'll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions.
-In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved.
-Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
-In short, describe what your results reveal about the research question, as well as what they *do not* say.
-Lastly, this section will include ideas for future work.
-
-#### Grading criteria
-
-Overall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question.
-There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.
-
-### Organization + formatting
-
-This is an assessment of the overall presentation and formatting of the written report.
-
-#### Grading criteria
-
-The report is neatly written and organized with clear section headers and appropriately sized figures with informative labels.
-Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted.
-All citations and links are properly formatted.
-All code, warnings, and messages are suppressed.
-The paper is no longer than 10 pages.
+-   A complete draft was pushed to GitHub before class on Monday June 26
+-   Feedback provided to group members was thoughtful and useful
+-   Feedback from previous components and from group members has been incorporated into the final draft
 
 ## Report grading
 
@@ -103,6 +74,6 @@ The final paper grade is broken down as follows.
 | Introduction                | 10% |
 | Data and methodology        | 20% |
 | Results                     | 30% |
-| Discussion                  | 20% |
-| Organization and formatting | 10% |
-| Peer review                 | 10% |
+| Discussion and conclusion   | 20% |
+| Writing and organization    | 10% |
+| Revision process            | 10% |
