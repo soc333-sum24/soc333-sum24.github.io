@@ -49,7 +49,7 @@ set.seed(2)
     -   Everyone gets more flexibility on time
     -   What's your favorite kind of donut? :)
 
-## Today{.smaller}
+## Today {.smaller}
 
 -   Interpreting results!
 
@@ -76,7 +76,7 @@ set.seed(2)
 -   Something about what the world is like!
 -   Translate back from hypothesis test language---zoom back out. If you were describing your results to a friend, what would you say you learned about the world?
 
-## What *can't* we say? 
+## What *can't* we say?
 
 ::: incremental
 -   Knowing the limitations of your conclusions is super important!
@@ -85,46 +85,48 @@ set.seed(2)
 
 ## Sampling and generalizability
 
-:::incremental
--   Who can your results speak to? 
--   Is your sample big enough? 
--   Was it selected randomly? 
+::: incremental
+-   Who can your results speak to?
+-   Is your sample big enough?
+-   Was it selected randomly?
 :::
 
 ## Accuracy
 
-:::incremental
+::: incremental
 -   Are people likely to give you accurate answers?
+
 -   Unintentional inaccuracies
 
     -   Desirability biases
     -   Memory problems
 
 -   Misrepresenting/lying
-    
+
     -   Is your data coming from something or someone who has a stake in it?
-    
+
 -   Saying vs doing
-    
+
     -   What people say is often different than what they do
     -   Stated ideals often don't match up with actions
     -   "I believe in equality but I oppose all the policies that would create it"
-    -   Did your data collect information on saying, or on doing? 
+    -   Did your data collect information on saying, or on doing?
     -   Avoid drawing conclusions about what people would do when the data you have is about what they say
 :::
 
 ## Operationalization
 
-:::incremental
--   Are the questions and categories what you would like them to be? 
--   Do we lose information through bad category choice or bad documentation? 
+::: incremental
+-   Are the questions and categories what you would like them to be?
+
+-   Do we lose information through bad category choice or bad documentation?
 
     -   For example: bad but common operationalizations
-        
+
         -   Race: white or nonwhite
         -   Gender: male or female
 :::
-        
+
 ## Causality
 
 -   Association vs causation: What's the difference?
@@ -186,7 +188,7 @@ get_p_value(null_dist,
 ::: incremental
 -   Plausibility: does it pass a gut check?
 
-    -   [https://tylervigen.com/spurious-correlations](https://tylervigen.com/spurious-correlations)
+    -   <https://tylervigen.com/spurious-correlations>
 
 -   Time order: did the cause happen before the effect?
 
@@ -210,7 +212,7 @@ Are these statements causal or associative?
 
 ## Turning limitations into next steps
 
-:::incremental
+::: incremental
 -   Limitations don't have to be bad. Imperfect data is often still useful.
 -   Your limitations are often where ideas for future research come from.
 -   Can you think of ways to address the limitations in a future study?
@@ -222,11 +224,6 @@ Are these statements causal or associative?
 
 ## Workshopping results
 
--   Teams: 
+-   Teams
 
-    -   Cam, Emma
-    -   Franchesca, Terry
-    -   Malik, Damilola
-    -   Staci, Takayuki, Wade
-    
 -   Same as last time: you have access to each other's repos on GitHub. Leave your feedback as an issue. Questions to address are at the top of the instructions page on the website ([link](https://soc333-sum23.github.io/project-results.html)).

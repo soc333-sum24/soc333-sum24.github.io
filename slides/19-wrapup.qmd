@@ -1,0 +1,194 @@
+---
+title: "Interpreting results"
+subtitle: "Lecture 17"
+date: "June 15, 2023"
+format: 
+  revealjs:
+    smaller: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+library(infer)
+library(patchwork)
+set.seed(2)
+```
+
+## Logistics
+
+:::incremental
+-   Finishing up the project:
+
+    -   Results (component 3): Due 11:59pm tonight. Push to GitHub.
+    -   Presentations and paper: instructions and paper example are up! 
+    
+        -   Presentations: Thursday June 22 and Monday June 26
+        -   Paper: Draft Monday June 26, final Wednesday June 28
+:::
+
+## Workshopping the project: your feedback
+
+:::incremental
+-   Why workshop? My theories:
+
+    -   You start your work sooner---less crunch right before the deadline; you have an opportunity to ask questions if you get stuck
+    -   Both giving and getting feedback are useful for learning this stuff
+    
+-   But maybe it doesn't work--that's okay too
+
+-   Tell me (anonymously): 
+
+    -   Do you think workshopping the proposal and results was a good use of class time? Why or why not?
+    -   What has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?
+    -   What has not been useful/what would you change about it for next time? 
+    -   Any other comments for me? 
+:::
+
+## Today {.smaller}
+
+-   Finishing up limitations and causality
+-   Directions for future research
+-   Problems with p values
+
+## Last time
+
+-   Limitations: Your work can't tell you everything!
+
+    -   Sampling and generalizability: are the people in your sample similar enough to the people in your target population?
+    -   Accuracy: is your data correct?
+    -   Operationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?
+    -   Causality: do your results tell you something about *why* something happens? Or just about what is happening?
+    
+## Association vs causation
+
+. . .
+
+-   Association: two things are related
+-   Causation: one thing drives another thing
+
+## Requirements for determining causation
+
+::: incremental
+-   Covariance: There has to be a relationship between two variables
+
+-   Plausibility and spuriousness: does it pass a gut check? do we know that there isn't a third variable driving both things?
+
+    -   Example: Ice cream sales are highly correlated with violent crime rates.
+    -   <https://tylervigen.com/spurious-correlations>
+    -   Experiments take care of this!
+
+-   Time order: did the cause happen before the effect?
+
+    -   Do we know that for sure, or is it ambiguous based on our data?
+    -   Consider *reverse causality*
+    -   Example: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs.
+:::
+
+## Exercise Q1
+
+Are these statements causal or associative?
+
+1.  Higher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.
+2.  Social pressure leads people to give answers they know are incorrect.
+3.  People who graduate from college get higher-paying jobs, on average, than people who do not graduate.
+
+## Exercise Q1 solutions
+
+Are these statements causal or associative?
+
+:::incremental
+1.  Higher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.
+
+    -   Associative
+    
+2.  Social pressure leads people to conform to ideas they know are incorrect.
+
+    -   Causal
+    
+3.  People who graduate from college get higher-paying jobs, on average, than people who do not graduate.
+
+    -   Associative
+:::
+
+## A brief tangent: The Asch Conformity Line Experiment
+
+:::incremental
+-   Which of the lines on the right (A, B, or C) is most like the target line?
+-   What if six people before you all said B?
+-   Result: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control condition.
+:::
+
+![](images/18/asch.png)
+
+## Exercise Q2: Identifying limitations
+
+-   Write down a limitation for each of the following:
+
+1.  Researchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.
+2.  In 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.
+3.  Using a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree.
+
+## Turning limitations into next steps
+
+::: incremental
+-   Limitations don't have to be bad. Imperfect data is often still useful.
+-   Your limitations are often where ideas for future research come from.
+-   Can you think of ways to address the limitations in a future study?
+:::
+
+## More on directions for future research
+
+-   Future research builds on current research
+-   Is there a new population to extend to? 
+-   Is there a logical next question to ask now that you know your results? 
+
+    -   Often that question is "why?"
+
+-   Are there practical consequences of the results, and do those require further research to understand or mitigate?
+
+## Exercise Q3: Brainstorming directions for future research
+
+-   Write down an idea for a follow up study for each of these: 
+
+1.  Researchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.
+2.  In 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.
+3.  Using a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree.
+
+# Revisiting p values
+
+## Exercise Q4: What's a p value? 
+
+A. A measurement of the effect size in a statistical analysis
+B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.
+C. The probability that the null hypothesis is true.
+D. The probability that the alternative hypothesis is true.
+
+## Problems with p values
+
+-   arbitrary cutoffs
+-   file drawer problem
+-   doesn't pay attention to whether the effect is important
+-   sometimes you reject when you shouldn't (5% of the time)
+-   sometimes you don't reject when you should
+
+## Solutions: best analysis practices
+
+-   descriptive statistics! pay attention to effect sizes.
+-   repeat things! use different data or different analysis techniques. If you get the same thing twice you're less likely to be wrong.
+
+## Objectivity: no one is objective
+-   mesearch is helpful sometimes
+
+## Statistics reflects biases
+
+-   It's not objective
+-   We make choices that have implications
+-   Treating all members of a group as the same
+-   Reference categories
+-   How we pick categories--what options are offered. Treating categories as fixed when maybe they shouldn't be.
+-   How to combat? Make good choices. If you can't fix it, you can point it out as a limitation
+
+## Media reports: use Joseph's material
+
+## Ethics? 

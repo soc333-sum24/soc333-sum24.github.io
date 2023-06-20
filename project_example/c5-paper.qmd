@@ -1,21 +1,19 @@
 ---
 title: "Final paper"
-author: "your name"
+author: "Aidan Combs"
 format: html
 ---
 
-```{r setup}
+```{r setup, message = FALSE, warning = FALSE, error = FALSE}
 library(openintro)
 library(tidyverse)
 library(infer)
 set.seed(1)
 ```
 
-*Total word count: about 1200*
-
 # Introduction
 
-Sports, particularly at high levels of competition, are often strictly gender-segregated. At the collegiate and professional levels in the United States, men and women (people of other genders must generally abide by one of those categories to participate) generally play on different teams and in different leagues. Rules are often slightly different between men's and women's versions of a sport, and the set of sports available to women is slightly different than that available to men. This separation makes it possible for levels of resources to vary greatly between men's and women's sports. At the professional level, women's leagues generally have lower viewership and attendance, less infrastructure, and lower athlete salaries than men's leagues (Cooky, Council, Mears, and Messner 2021).
+Sports, particularly at high levels of competition, are often strictly gender-segregated. At the college and professional levels in the United States, men and women (people of other genders must generally abide by one of those categories to participate) generally play on different teams and in different leagues. Rules are often slightly different between men's and women's versions of a sport, and the set of sports available to women is slightly different than that available to men. This separation makes it possible for levels of resources to vary greatly between men and women. At the professional level, women's leagues generally have lower viewership and attendance, less infrastructure, and lower athlete salaries than men's leagues (Cooky, Council, Mears, and Messner 2021).
 
 We would expect things to look different on the college level. Title IX, passed in 1972, was intended to prohibit such gender inequities in sports affiliated with most educational institutions. Was it effective? In this work, I address this by investigating the research question: *How does the number of coaches assigned to US college sports teams vary by the gender of the team?*
 
@@ -25,7 +23,7 @@ To answer this research question, I use publicly available data on college athle
 
 The subset of this data that I will use contains information on the athletics programs at Duke University and the University of North Carolina--Chapel Hill between 2003 and 2021. 879 unique teams are represented in this subset. In order to draw conclusions about differences in staffing between *comparable* men's and women's teams, I exclude all teams in sports that are only available for one gender, such as football and softball.
 
-```{r}
+```{r, message = FALSE}
 sports <- readRDS("sports_teams.rds")
 
 sports_filtered <- sports |> 
@@ -43,23 +41,23 @@ sports_filtered <- sports |>
 
 My response variable is the number of coaches assigned to a team. This includes coaches at all levels (assistant and head) and employee statuses (part time and full time). It is a discrete numeric variable ranging from 1 to 14 coaches, with a mean of 3.9 and a median of 3. It is right skewed: most teams have a small number of coaches and only a few have many coaches.
 
-```{r}
+```{r, message = FALSE}
 summary(sports_filtered$ncoaches)
 ```
 
 My explanatory variable is the gender of the team. This is a nominal categorical variable with two levels: "male" and "female." There are 304 teams of each gender in this data set.
 
-```{r}
-table(sports$teamgender)
+```{r, message = FALSE}
+table(sports_filtered$teamgender)
 ```
 
-In order to examine the relationship between these two variables, I will use a one-tailed, two-sample T test. A T test is the correct choice of hypothesis test for a question that employs a categorical variable with two levels as the explanatory variable and a numeric variable as the response variable. It will allow me to determine whether there is a statistically significant relationship between these two variables. I use a one-tailed test because my alternative hypothesis is directional---my alternative hypothesis is that women's teams are less well-staffed than comparable men's teams, while my null hypothesis is that staffing levels are the same regardless of team gender.
+In order to examine the relationship between these two variables, I will use a one-tailed T test. A T test is the correct choice of hypothesis test for a question that employs a categorical variable with two levels as the explanatory variable and a numeric variable as the response variable. It will allow me to determine whether there is a statistically significant relationship between these two variables. I use a one-tailed test because my alternative hypothesis is directional---my alternative hypothesis is that women's teams are less well-staffed than comparable men's teams, while my null hypothesis is that staffing levels are the same regardless of team gender.
 
 # Results
 
-Figure 1 compares the distribution of number of coaches for men's teams with that of women's teams. If women's teams are less well-staffed than men's teams, we would see that the distribution for women's teams would be centered lower than that for men's teams. However, there are no notable differences between genders detectable in this figure. The distributions for men and for women are both centered in the same place and have the same range and quartile divisions.
+Figure 1 compares the distribution of number of coaches for men's teams with that of women's teams. If women's teams are less well-staffed than men's teams, we would see that the distribution for women's teams would be positioned lower than that for men's teams. However, there are no notable differences between genders detectable in this figure. The distributions for men and for women are both centered in the same place and have the same range and quartile divisions. If differences exist, they are very small and perhaps not very meaningful. 
 
-```{r}
+```{r, message = FALSE}
 ggplot(data = sports_filtered, aes(x = ncoaches, y = teamgender)) + 
   geom_boxplot() + 
   labs(x = "Number of coaches",
@@ -69,9 +67,9 @@ ggplot(data = sports_filtered, aes(x = ncoaches, y = teamgender)) +
        fill = "Team gender")
 ```
 
-Results of a one-tailed, two-sample T test show that the relationship between team gender and number of coaches is statistically insignificant (p \> 0.05). I fail to reject the null hypothesis that there is no relationship between these two variables. In other words, these data do not provide evidence that there is any detectable difference between the number of coaches assigned to men's teams and the number of coaches assigned to women's teams.
+Results of a one-tailed T test show that the relationship between team gender and number of coaches is statistically insignificant (p \> 0.05). I fail to reject the null hypothesis that there is no relationship between these two variables. In other words, these data do not provide evidence that there is any detectable difference between the number of coaches assigned to men's teams and the number of coaches assigned to women's teams.
 
-```{r}
+```{r, message = FALSE}
 sports_teststat <- sports_filtered |> 
   specify(formula = ncoaches ~ teamgender) |> 
   calculate(stat = "t",
@@ -86,11 +84,11 @@ sports_nulldist <- sports_filtered |>
 get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = "greater")
 ```
 
-# Discussion and conclusions
+# Discussion and conclusion
 
 In sum, using data on staffing levels in the Duke and UNC athletics programs between 2003 and 2021, I found that the number of coaches assigned to comparable men's and women's teams is very similar. This supports the theory that Title IX has been effective at negating gender inequities in resources in college-level sports. This work has several limitations that affect the scope of its conclusions, however.
 
-First, only two schools are represented in this data set. Both are selective institutions with Division 1 athletics programs, and both are located in the same state. These results may not hold among Division 2 and 3 schools, which have smaller budgets and so may have different factors at play when selecting how to allocate funds. They may also not hold among schools in other parts of the country and other athletic conferences. Adding more schools, and a larger variety of schools, would strengthen the generalizability of these results.
+First, only two schools are represented in this data set. Both are selective institutions with Division 1 athletics programs, and both are located in the same state. These results may not hold among Division 2 and 3 schools, which have smaller budgets and so may have different factors at play when choosing how to allocate funds. They may also not hold among schools in other parts of the country and other athletic conferences. Adding more schools, and a larger variety of schools, would strengthen the generalizability of these results.
 
 Second, I did not differentiate between coaches at different levels, of different employee statuses, or with different levels of experience and skill. It is possible that the number of coaches assigned to comparable men's and women's teams is similar, but coaches for women's teams are more likely to be part-time employees and so spend less time with athletes. It is also possible that there are differences in the salaries or benefits offered to coaches on men's and women's teams, which could result in coaches for women's teams being less experienced or less skilled than coaches for men's teams. Using different response variables that more thoroughly capture the characteristics of coaches would strengthen these conclusions by exploring some of these possibilities.
 

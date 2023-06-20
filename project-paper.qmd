@@ -15,13 +15,14 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 
 ## Overall requirements
 
--   Your full paper must be completed in the `c5-paper.qmd` file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary---to do so, either copy/paste or go to `Code -> Insert Chunk.`
+-   Your full paper must be completed in the `c5-paper.qmd` file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary---to do so, either copy/paste or go to `Code -> Insert Chunk` (in the top menu bar).
 
--   There is no minimum length requirement. I will grade based on the content of your paper, not its length. Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise; you do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. 
+-   There is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length. 
 
-::: callout-note
-You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
-:::
+    -   Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). 
+    -   The suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. To give you a ballpark estimate for the paper as a whole: my example is about 1200 words long (the equivalent of 5 double spaced pages, in Word).
+
+-   You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
 
 ## Paper sections
 
@@ -57,7 +58,6 @@ You may cite reputable external sources if you wish. This is optional, but discu
 -   This is an assessment of the overall quality of the writing and organization of the report
 -   Writing should be clear, concise, and error-free
 -   Section headers should be clear and content should be included in the correct sections
--   The paper should be under the maximum length
 
 ### Revision process
 

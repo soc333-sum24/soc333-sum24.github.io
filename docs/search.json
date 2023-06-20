@@ -158,7 +158,7 @@
     "href": "project-paper.html",
     "title": "Project",
     "section": "",
-    "text": "The final assignment of the semester is to compile the analysis you’ve done into a single, cohesive report—something that you could send to a colleague or a supervisor who wanted to know your findings and how you obtained them.\nThe requirements for this paper are below. I intend that you are able to pull in some of this information from the previous three components of this project (the proposal, descriptive statistics, and results). However, you must edit to ensure that your report meets all requirements listed here, all your code runs, and everything reads well as a cohesive whole. You must also address any relevant feedback you received on previous components. Do not just paste your three previous assignments together in one document; this will not meet requirements and will score poorly.\n\n\nUpload a full draft to GitHub by the start of class on Monday June 26 for peer review. The final revised draft is due on Wednesday June 28, 11:59pm.\n\n\n\n\nYour full paper must be completed in the c5-paper.qmd file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary—to do so, either copy/paste or go to Code -&gt; Insert Chunk.\nThere is no minimum length requirement. I will grade based on the content of your paper, not its length. Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise; you do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section—but your mileage may vary; they are suggestions, not requirements.\n\n\n\n\n\n\n\nNote\n\n\n\nYou may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text—for example, “Previous work has found X (Cheng and Johnson 2020).” Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn’t need to look pretty; just ensure the necessary information is included.\n\n\n\n\n\n\n\n\nIntroduce the reader to the research question and target population.\nProvide any necessary background information and some motivation. Why is it important that we know the answer to this question?\n\n\n\n\n\nDescribe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?\nDescribe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).\nNote any changes you made to your data (filtering out observations or creating new variables).\nExplain your analysis strategy and why this strategy is appropriate for your question and variables.\n\n\n\n\n\nPresent results pertaining to the relationship between your explanatory and response variables (descriptive and inferential)\n\nYour descriptive results should be presented using at least one appropriate and interpretable figure\nObtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it’s not necessary for a reader).\n\nInterpret your results in the context of your research question. What do they tell us about the answer to that question?\n\n\n\n\n\nSummarize what we have learned about your research question from your analysis.\nDiscuss the limitations of your analysis and conclusions (include at least 2 limitations). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.\nProvide ideas for future work. Now that we have the answer to this research question, what’s next?\n\n\n\n\n\nThis is an assessment of the overall quality of the writing and organization of the report\nWriting should be clear, concise, and error-free\nSection headers should be clear and content should be included in the correct sections\nThe paper should be under the maximum length\n\n\n\n\n\nA complete draft was pushed to GitHub before class on Monday June 26\nFeedback provided to group members was thoughtful and useful\nFeedback from previous components and from group members has been incorporated into the final draft\n\n\n\n\n\nThe final paper grade is broken down as follows.\n\n\n\nIntroduction\n10%\n\n\nData and methodology\n20%\n\n\nResults\n30%\n\n\nDiscussion and conclusion\n20%\n\n\nWriting and organization\n10%\n\n\nRevision process\n10%"
+    "text": "The final assignment of the semester is to compile the analysis you’ve done into a single, cohesive report—something that you could send to a colleague or a supervisor who wanted to know your findings and how you obtained them.\nThe requirements for this paper are below. I intend that you are able to pull in some of this information from the previous three components of this project (the proposal, descriptive statistics, and results). However, you must edit to ensure that your report meets all requirements listed here, all your code runs, and everything reads well as a cohesive whole. You must also address any relevant feedback you received on previous components. Do not just paste your three previous assignments together in one document; this will not meet requirements and will score poorly.\n\n\nUpload a full draft to GitHub by the start of class on Monday June 26 for peer review. The final revised draft is due on Wednesday June 28, 11:59pm.\n\n\n\n\nYour full paper must be completed in the c5-paper.qmd file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary—to do so, either copy/paste or go to Code -&gt; Insert Chunk (in the top menu bar).\nThere is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length.\n\nYour paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments).\nThe suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section—but your mileage may vary; they are suggestions, not requirements. To give you a ballpark estimate for the paper as a whole: my example is about 1200 words long (the equivalent of 5 double spaced pages, in Word).\n\nYou may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text—for example, “Previous work has found X (Cheng and Johnson 2020).” Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn’t need to look pretty; just ensure the necessary information is included.\n\n\n\n\n\n\n\nIntroduce the reader to the research question and target population.\nProvide any necessary background information and some motivation. Why is it important that we know the answer to this question?\n\n\n\n\n\nDescribe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?\nDescribe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).\nNote any changes you made to your data (filtering out observations or creating new variables).\nExplain your analysis strategy and why this strategy is appropriate for your question and variables.\n\n\n\n\n\nPresent results pertaining to the relationship between your explanatory and response variables (descriptive and inferential)\n\nYour descriptive results should be presented using at least one appropriate and interpretable figure\nObtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it’s not necessary for a reader).\n\nInterpret your results in the context of your research question. What do they tell us about the answer to that question?\n\n\n\n\n\nSummarize what we have learned about your research question from your analysis.\nDiscuss the limitations of your analysis and conclusions (include at least 2 limitations). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.\nProvide ideas for future work. Now that we have the answer to this research question, what’s next?\n\n\n\n\n\nThis is an assessment of the overall quality of the writing and organization of the report\nWriting should be clear, concise, and error-free\nSection headers should be clear and content should be included in the correct sections\n\n\n\n\n\nA complete draft was pushed to GitHub before class on Monday June 26\nFeedback provided to group members was thoughtful and useful\nFeedback from previous components and from group members has been incorporated into the final draft\n\n\n\n\n\nThe final paper grade is broken down as follows.\n\n\n\nIntroduction\n10%\n\n\nData and methodology\n20%\n\n\nResults\n30%\n\n\nDiscussion and conclusion\n20%\n\n\nWriting and organization\n10%\n\n\nRevision process\n10%"
   },
   {
     "objectID": "project-paper.html#timeline",
@@ -172,14 +172,14 @@
     "href": "project-paper.html#overall-requirements",
     "title": "Project",
     "section": "",
-    "text": "Your full paper must be completed in the c5-paper.qmd file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary—to do so, either copy/paste or go to Code -&gt; Insert Chunk.\nThere is no minimum length requirement. I will grade based on the content of your paper, not its length. Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise; you do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section—but your mileage may vary; they are suggestions, not requirements.\n\n\n\n\n\n\n\nNote\n\n\n\nYou may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text—for example, “Previous work has found X (Cheng and Johnson 2020).” Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn’t need to look pretty; just ensure the necessary information is included."
+    "text": "Your full paper must be completed in the c5-paper.qmd file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary—to do so, either copy/paste or go to Code -&gt; Insert Chunk (in the top menu bar).\nThere is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length.\n\nYour paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments).\nThe suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section—but your mileage may vary; they are suggestions, not requirements. To give you a ballpark estimate for the paper as a whole: my example is about 1200 words long (the equivalent of 5 double spaced pages, in Word).\n\nYou may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text—for example, “Previous work has found X (Cheng and Johnson 2020).” Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn’t need to look pretty; just ensure the necessary information is included."
   },
   {
     "objectID": "project-paper.html#paper-sections",
     "href": "project-paper.html#paper-sections",
     "title": "Project",
     "section": "",
-    "text": "Introduce the reader to the research question and target population.\nProvide any necessary background information and some motivation. Why is it important that we know the answer to this question?\n\n\n\n\n\nDescribe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?\nDescribe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).\nNote any changes you made to your data (filtering out observations or creating new variables).\nExplain your analysis strategy and why this strategy is appropriate for your question and variables.\n\n\n\n\n\nPresent results pertaining to the relationship between your explanatory and response variables (descriptive and inferential)\n\nYour descriptive results should be presented using at least one appropriate and interpretable figure\nObtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it’s not necessary for a reader).\n\nInterpret your results in the context of your research question. What do they tell us about the answer to that question?\n\n\n\n\n\nSummarize what we have learned about your research question from your analysis.\nDiscuss the limitations of your analysis and conclusions (include at least 2 limitations). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.\nProvide ideas for future work. Now that we have the answer to this research question, what’s next?\n\n\n\n\n\nThis is an assessment of the overall quality of the writing and organization of the report\nWriting should be clear, concise, and error-free\nSection headers should be clear and content should be included in the correct sections\nThe paper should be under the maximum length\n\n\n\n\n\nA complete draft was pushed to GitHub before class on Monday June 26\nFeedback provided to group members was thoughtful and useful\nFeedback from previous components and from group members has been incorporated into the final draft"
+    "text": "Introduce the reader to the research question and target population.\nProvide any necessary background information and some motivation. Why is it important that we know the answer to this question?\n\n\n\n\n\nDescribe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?\nDescribe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).\nNote any changes you made to your data (filtering out observations or creating new variables).\nExplain your analysis strategy and why this strategy is appropriate for your question and variables.\n\n\n\n\n\nPresent results pertaining to the relationship between your explanatory and response variables (descriptive and inferential)\n\nYour descriptive results should be presented using at least one appropriate and interpretable figure\nObtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it’s not necessary for a reader).\n\nInterpret your results in the context of your research question. What do they tell us about the answer to that question?\n\n\n\n\n\nSummarize what we have learned about your research question from your analysis.\nDiscuss the limitations of your analysis and conclusions (include at least 2 limitations). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.\nProvide ideas for future work. Now that we have the answer to this research question, what’s next?\n\n\n\n\n\nThis is an assessment of the overall quality of the writing and organization of the report\nWriting should be clear, concise, and error-free\nSection headers should be clear and content should be included in the correct sections\n\n\n\n\n\nA complete draft was pushed to GitHub before class on Monday June 26\nFeedback provided to group members was thoughtful and useful\nFeedback from previous components and from group members has been incorporated into the final draft"
   },
   {
     "objectID": "project-paper.html#report-grading",
@@ -459,7 +459,7 @@
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\nPlotting one variable\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\nNull and alternative hypotheses\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\nZ scores\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\nHypothesis testing\n\n    \nWed, Jun 14\nHypothesis testing pt 4\n\n\n\n\nHypothesis testing 2\n\n    \nThu, Jun 15\nInterpreting results\n\n\nComponent 3 draft\n\n\nInterpreting results\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nThe pitfalls of p values\n\nScience Isn’t Broken\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nCausality\n\n\n\n\n\n    \nThu, Jun 22\nFinal project presentations\n\n\n\nComponent 5: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations; workshop final papers\n\n\nComponent 4 draft\n\nComponent 5: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 4: Final paper"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\nPlotting one variable\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\nNull and alternative hypotheses\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\nZ scores\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\nHypothesis testing\n\n    \nWed, Jun 14\nHypothesis testing pt 4\n\n\n\n\nHypothesis testing 2\n\n    \nThu, Jun 15\nInterpreting results\n\n\nComponent 3 draft\n\n\nInterpreting results\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nLimitations, future research, and problems with p values\n\nScience Isn’t Broken\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nBest practices\n\n\n\n\n\n    \nThu, Jun 22\nFinal project presentations\n\n\n\nComponent 4: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations; workshop final papers\n\n\nComponent 5 draft\n\nComponent 4: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 5: Final paper"
   },
   {
     "objectID": "slides/06-workshopping.html#today",
@@ -2258,7 +2258,7 @@
     "href": "slides/17-interpretingresults.html#workshopping-results",
     "title": "Interpreting results",
     "section": "Workshopping results",
-    "text": "Workshopping results\n\nTeams:\n\nCam, Emma\nFranchesca, Terry\nMalik, Damilola\nStaci, Takayuki, Wade\n\nSame as last time: you have access to each other’s repos on GitHub. Leave your feedback as an issue. Questions to address are at the top of the instructions page on the website (link).\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Workshopping results\n\nTeams\nSame as last time: you have access to each other’s repos on GitHub. Leave your feedback as an issue. Questions to address are at the top of the instructions page on the website (link).\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/05-studiessamples.html#today",
@@ -2821,6 +2821,188 @@
     "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/18-pvals.html#logistics",
+    "href": "slides/18-pvals.html#logistics",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Logistics",
+    "text": "Logistics\n\n\nFinishing up the project:\n\nResults (component 3): Due 11:59pm tonight. Push to GitHub.\n\nI will get your grades back ASAP, prioritizing folks who present Thursday\n\nPresentations and paper: instructions and paper example are up!\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28"
+  },
+  {
+    "objectID": "slides/18-pvals.html#workshopping-the-project-your-feedback",
+    "href": "slides/18-pvals.html#workshopping-the-project-your-feedback",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Workshopping the project: your feedback",
+    "text": "Workshopping the project: your feedback\n\n\nWhy workshop? My theories:\n\nYou start your work sooner—less crunch right before the deadline; you have an opportunity to ask questions if you get stuck\nBoth giving and getting feedback are useful for learning this stuff\n\nBut maybe it doesn’t work–that’s okay too\nTell me (anonymously):\n\nDo you think workshopping the proposal and results was a good use of class time? Why or why not?\nWhat has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?\nWhat has not been useful/what would you change about it for next time?\nAny other comments for me?"
+  },
+  {
+    "objectID": "slides/18-pvals.html#today",
+    "href": "slides/18-pvals.html#today",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Today",
+    "text": "Today\n\nFinishing up limitations and causality\nDirections for future research\nProblems with p values"
+  },
+  {
+    "objectID": "slides/18-pvals.html#last-time",
+    "href": "slides/18-pvals.html#last-time",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Last time",
+    "text": "Last time\n\n\nLimitations: Your work can’t tell you everything!\n\nSampling and generalizability: are the people in your sample similar enough to the people in your target population?\nAccuracy: is your data correct?\nOperationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?\nCausality: do your results tell you something about why something happens? Or just about what is happening?"
+  },
+  {
+    "objectID": "slides/18-pvals.html#association-vs-causation",
+    "href": "slides/18-pvals.html#association-vs-causation",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Association vs causation",
+    "text": "Association vs causation\n\n\nAssociation: two things are related\nCausation: one thing drives another thing"
+  },
+  {
+    "objectID": "slides/18-pvals.html#requirements-for-determining-causation",
+    "href": "slides/18-pvals.html#requirements-for-determining-causation",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Requirements for determining causation",
+    "text": "Requirements for determining causation\n\n\nCovariance: There has to be a relationship between two variables\nPlausibility and spuriousness: does it pass a gut check? do we know that there isn’t a third variable driving both things?\n\nExample: Ice cream sales are highly correlated with violent crime rates.\nhttps://tylervigen.com/spurious-correlations\nExperiments take care of this!\n\nTime order: did the cause happen before the effect?\n\nDo we know that for sure, or is it ambiguous based on our data?\nConsider reverse causality\nExample: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs."
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q1",
+    "href": "slides/18-pvals.html#exercise-q1",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q1",
+    "text": "Exercise Q1\nAre these statements causal or associative?\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\nSocial pressure leads people to give answers they know are incorrect.\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate."
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q1-solutions",
+    "href": "slides/18-pvals.html#exercise-q1-solutions",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q1 solutions",
+    "text": "Exercise Q1 solutions\nAre these statements causal or associative?\n\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\n\nAssociative\n\nSocial pressure leads people to conform to ideas they know are incorrect.\n\nCausal\n\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate.\n\nAssociative"
+  },
+  {
+    "objectID": "slides/18-pvals.html#a-brief-tangent-the-asch-conformity-line-experiment",
+    "href": "slides/18-pvals.html#a-brief-tangent-the-asch-conformity-line-experiment",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "A brief tangent: The Asch Conformity Line Experiment",
+    "text": "A brief tangent: The Asch Conformity Line Experiment\n\n\nWhich of the lines on the right (A, B, or C) is most like the target line?\nWhat if six people before you all said B?\nResult: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control (no social pressure) condition."
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q2-identifying-limitations",
+    "href": "slides/18-pvals.html#exercise-q2-identifying-limitations",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q2: Identifying limitations",
+    "text": "Exercise Q2: Identifying limitations\n\nWrite down a limitation for each of the following:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
+  },
+  {
+    "objectID": "slides/18-pvals.html#turning-limitations-into-next-steps",
+    "href": "slides/18-pvals.html#turning-limitations-into-next-steps",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Turning limitations into next steps",
+    "text": "Turning limitations into next steps\n\n\nLimitations don’t have to be bad. Imperfect data is often still useful.\nYour limitations are often where ideas for future research come from.\nCan you think of ways to address the limitations in a future study?"
+  },
+  {
+    "objectID": "slides/18-pvals.html#identifying-other-directions-for-future-work",
+    "href": "slides/18-pvals.html#identifying-other-directions-for-future-work",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Identifying other directions for future work",
+    "text": "Identifying other directions for future work\n\n\nFuture research builds on current research\nIs there a new population to extend to?\nIs there a logical next question to ask now that you know your results?\n\nOften that question is “why?”\n\nAre there practical consequences of the results, and do those require further research to understand or mitigate?"
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q3-brainstorming-directions-for-future-research",
+    "href": "slides/18-pvals.html#exercise-q3-brainstorming-directions-for-future-research",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q3: Brainstorming directions for future research",
+    "text": "Exercise Q3: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
+  },
+  {
+    "objectID": "slides/18-pvals.html#revisiting-p-values",
+    "href": "slides/18-pvals.html#revisiting-p-values",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Revisiting p values",
+    "text": "Revisiting p values"
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q4-whats-a-p-value",
+    "href": "slides/18-pvals.html#exercise-q4-whats-a-p-value",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q4: What’s a p value?",
+    "text": "Exercise Q4: What’s a p value?\n\nA. A measurement of the effect size in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
+  },
+  {
+    "objectID": "slides/18-pvals.html#exercise-q4-whats-a-p-value-1",
+    "href": "slides/18-pvals.html#exercise-q4-whats-a-p-value-1",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Exercise Q4: What’s a p value?",
+    "text": "Exercise Q4: What’s a p value?\n\nA. A measurement of the effect size in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
+  },
+  {
+    "objectID": "slides/18-pvals.html#cutoffs",
+    "href": "slides/18-pvals.html#cutoffs",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Cutoffs",
+    "text": "Cutoffs\n\n\nHypothesis tests (and other statistics): results are either statistically significant or insignificant\nCutoffs:\n\nMost common: p = 0.05 (1 in 20 chance)\nSometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)\nOften multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level"
+  },
+  {
+    "objectID": "slides/18-pvals.html#cutoffs-1",
+    "href": "slides/18-pvals.html#cutoffs-1",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Cutoffs",
+    "text": "Cutoffs\n\n\nWhy those cutoffs? Why not something else?\n\nAbsolutely no reason; they’re just nice round numbers (yikes…)"
+  },
+  {
+    "objectID": "slides/18-pvals.html#the-file-drawer-problem",
+    "href": "slides/18-pvals.html#the-file-drawer-problem",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "The “file drawer problem”",
+    "text": "The “file drawer problem”\n\n\nResults with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.\nBut are those really that different?"
+  },
+  {
+    "objectID": "slides/18-pvals.html#dependence-on-sample-size",
+    "href": "slides/18-pvals.html#dependence-on-sample-size",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Dependence on sample size",
+    "text": "Dependence on sample size\n\n\nWe survey 200 people—100 living in North Carolina and 100 living in South Carolina—and ask them how happy they are on a scale of 1 to 10. We find that NC residents are .1 points happier than SC residents (NC mean 8.1, SC mean 8, standard deviation 2 points).\n\np = .72—statistically insignificant; fail to reject the null\n\nWhat if we instead survey 10000 people and find exactly the same thing?\n\np = .012—statistically significant!"
+  },
+  {
+    "objectID": "slides/18-pvals.html#errors",
+    "href": "slides/18-pvals.html#errors",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Errors",
+    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times"
+  },
+  {
+    "objectID": "slides/18-pvals.html#effect-sizes-are-essential",
+    "href": "slides/18-pvals.html#effect-sizes-are-essential",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Effect sizes are essential",
+    "text": "Effect sizes are essential\n\n\nEffect size: how much of a difference is there?\n\nP values tell you nothing about how big an effect is\nThey are determined more by sample size than effect size\nBig samples have “significant” effects that are tiny and meaningless\nSmall samples have “insignificant” effects that are large and important\n\nBut what is “big enough” to be important? Hard to say…"
+  },
+  {
+    "objectID": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
+    "href": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Effect sizes in relationship satisfaction",
+    "text": "Effect sizes in relationship satisfaction\n\n\nStudy of 19000 people showed that people who met their spouses online were less likely to divorce (p &lt; .002) and more likely to have high marital satisfaction (p &lt; .001) than those who met their spouses offline.\nBut what about the effect sizes?\n\nDivorce rate: offline 7.67%; online 5.96%\nHappiness (7 point scale): offline 5.48; online 5.64\n\nIt’s significant, but is it important?\n\n\n\n\nSources: - Nuzzo, R. Scientific method: Statistical errors. Nature 506, 150–152 (2014). https://doi.org/10.1038/506150a - Cacioppo, J. T., Cacioppo, S., Gonzagab, G. C., Ogburn, E. L. & VanderWeele, T. J. Proc. Natl Acad. Sci. USA 110, 10135–10140 (2013)."
+  },
+  {
+    "objectID": "slides/18-pvals.html#different-methods-get-different-results",
+    "href": "slides/18-pvals.html#different-methods-get-different-results",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Different methods get different results",
+    "text": "Different methods get different results\n\nP hacking: making different decisions about who to include/exclude or what your variables should be can change results dramatically\n\n\n\nDifferent statistical methods can also give different results"
+  },
+  {
+    "objectID": "slides/18-pvals.html#different-methods-get-different-results-1",
+    "href": "slides/18-pvals.html#different-methods-get-different-results-1",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "Different methods get different results",
+    "text": "Different methods get different results\n\n\n\n\n\nSource: FiveThirtyEight. https://fivethirtyeight.com/features/science-isnt-broken/#part2"
+  },
+  {
+    "objectID": "slides/18-pvals.html#so-what-do-we-do",
+    "href": "slides/18-pvals.html#so-what-do-we-do",
+    "title": "Limitations, future research, and problems with p values",
+    "section": "So what do we do??",
+    "text": "So what do we do??\n\n\nDescriptive statistics! Pay attention to how big your effects are, not just if they’re significant. Are they big enough to be meaningful?\nBe humble. One study can’t prove anything.\nRepeat things. If you find the same result in two datasets, or if you find the same result using different methods, it’s more likely to be real.\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "slides/13-hypothesistests1.html#logistics",
     "href": "slides/13-hypothesistests1.html#logistics",
     "title": "Hypothesis tests pt 1",
@@ -3031,6 +3213,146 @@
     "text": "Plots for your projects\n\n\nClarification on three variables:\n\nYou want to include three variables in one plot when those variables are all part of one question: ie, how does the relationship between X and Y vary by Z.\nAnother way you may have written three-variable questions:\n\nMultiple response variables: How does X affect Y, and also how does X affect Z\nMultiple explanatory variables: How does X affect Y, and also how does Z affect Y\n\nIn this case, you’re asking multiple two-variable questions: showing them together in one plot wouldn’t make much sense\nFor this assignment: One plot is required–pick your favorite sub-question\nBut making more plots is a snap once you have one–if you want to make plots for all sub-questions, go for it!\n\nOther questions?\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
+    "objectID": "slides/19-wrapup.html#logistics",
+    "href": "slides/19-wrapup.html#logistics",
+    "title": "Interpreting results",
+    "section": "Logistics",
+    "text": "Logistics\n\n\nFinishing up the project:\n\nResults (component 3): Due 11:59pm tonight. Push to GitHub.\nPresentations and paper: instructions and paper example are up!\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#workshopping-the-project-your-feedback",
+    "href": "slides/19-wrapup.html#workshopping-the-project-your-feedback",
+    "title": "Interpreting results",
+    "section": "Workshopping the project: your feedback",
+    "text": "Workshopping the project: your feedback\n\n\nWhy workshop? My theories:\n\nYou start your work sooner—less crunch right before the deadline; you have an opportunity to ask questions if you get stuck\nBoth giving and getting feedback are useful for learning this stuff\n\nBut maybe it doesn’t work–that’s okay too\nTell me (anonymously):\n\nDo you think workshopping the proposal and results was a good use of class time? Why or why not?\nWhat has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?\nWhat has not been useful/what would you change about it for next time?\nAny other comments for me?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#today",
+    "href": "slides/19-wrapup.html#today",
+    "title": "Interpreting results",
+    "section": "Today",
+    "text": "Today\n\nFinishing up limitations and causality\nDirections for future research\nProblems with p values"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#last-time",
+    "href": "slides/19-wrapup.html#last-time",
+    "title": "Interpreting results",
+    "section": "Last time",
+    "text": "Last time\n\nLimitations: Your work can’t tell you everything!\n\nSampling and generalizability: are the people in your sample similar enough to the people in your target population?\nAccuracy: is your data correct?\nOperationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?\nCausality: do your results tell you something about why something happens? Or just about what is happening?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#association-vs-causation",
+    "href": "slides/19-wrapup.html#association-vs-causation",
+    "title": "Interpreting results",
+    "section": "Association vs causation",
+    "text": "Association vs causation\n\n\nAssociation: two things are related\nCausation: one thing drives another thing"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#requirements-for-determining-causation",
+    "href": "slides/19-wrapup.html#requirements-for-determining-causation",
+    "title": "Interpreting results",
+    "section": "Requirements for determining causation",
+    "text": "Requirements for determining causation\n\n\nCovariance: There has to be a relationship between two variables\nPlausibility and spuriousness: does it pass a gut check? do we know that there isn’t a third variable driving both things?\n\nExample: Ice cream sales are highly correlated with violent crime rates.\nhttps://tylervigen.com/spurious-correlations\nExperiments take care of this!\n\nTime order: did the cause happen before the effect?\n\nDo we know that for sure, or is it ambiguous based on our data?\nConsider reverse causality\nExample: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q1",
+    "href": "slides/19-wrapup.html#exercise-q1",
+    "title": "Interpreting results",
+    "section": "Exercise Q1",
+    "text": "Exercise Q1\nAre these statements causal or associative?\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\nSocial pressure leads people to give answers they know are incorrect.\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q1-solutions",
+    "href": "slides/19-wrapup.html#exercise-q1-solutions",
+    "title": "Interpreting results",
+    "section": "Exercise Q1 solutions",
+    "text": "Exercise Q1 solutions\nAre these statements causal or associative?\n\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\n\nAssociative\n\nSocial pressure leads people to conform to ideas they know are incorrect.\n\nCausal\n\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate.\n\nAssociative"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#a-brief-tangent-the-asch-conformity-line-experiment",
+    "href": "slides/19-wrapup.html#a-brief-tangent-the-asch-conformity-line-experiment",
+    "title": "Interpreting results",
+    "section": "A brief tangent: The Asch Conformity Line Experiment",
+    "text": "A brief tangent: The Asch Conformity Line Experiment\n\n\nWhich of the lines on the right (A, B, or C) is most like the target line?\nWhat if six people before you all said B?\nResult: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control condition."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q2-identifying-limitations",
+    "href": "slides/19-wrapup.html#exercise-q2-identifying-limitations",
+    "title": "Interpreting results",
+    "section": "Exercise Q2: Identifying limitations",
+    "text": "Exercise Q2: Identifying limitations\n\nWrite down a limitation for each of the following:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#turning-limitations-into-next-steps",
+    "href": "slides/19-wrapup.html#turning-limitations-into-next-steps",
+    "title": "Interpreting results",
+    "section": "Turning limitations into next steps",
+    "text": "Turning limitations into next steps\n\n\nLimitations don’t have to be bad. Imperfect data is often still useful.\nYour limitations are often where ideas for future research come from.\nCan you think of ways to address the limitations in a future study?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#more-on-directions-for-future-research",
+    "href": "slides/19-wrapup.html#more-on-directions-for-future-research",
+    "title": "Interpreting results",
+    "section": "More on directions for future research",
+    "text": "More on directions for future research\n\nFuture research builds on current research\nIs there a new population to extend to?\nIs there a logical next question to ask now that you know your results?\n\nOften that question is “why?”\n\nAre there practical consequences of the results, and do those require further research to understand or mitigate?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
+    "href": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
+    "title": "Interpreting results",
+    "section": "Exercise Q3: Brainstorming directions for future research",
+    "text": "Exercise Q3: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
+    "href": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
+    "title": "Interpreting results",
+    "section": "Exercise Q4: What’s a p value?",
+    "text": "Exercise Q4: What’s a p value?\nA. A measurement of the effect size in a statistical analysis B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true. C. The probability that the null hypothesis is true. D. The probability that the alternative hypothesis is true."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#problems-with-p-values",
+    "href": "slides/19-wrapup.html#problems-with-p-values",
+    "title": "Interpreting results",
+    "section": "Problems with p values",
+    "text": "Problems with p values\n\narbitrary cutoffs\nfile drawer problem\ndoesn’t pay attention to whether the effect is important\nsometimes you reject when you shouldn’t (5% of the time)\nsometimes you don’t reject when you should"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#solutions-best-analysis-practices",
+    "href": "slides/19-wrapup.html#solutions-best-analysis-practices",
+    "title": "Interpreting results",
+    "section": "Solutions: best analysis practices",
+    "text": "Solutions: best analysis practices\n\ndescriptive statistics! pay attention to effect sizes.\nrepeat things! use different data or different analysis techniques. If you get the same thing twice you’re less likely to be wrong."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#objectivity-no-one-is-objective",
+    "href": "slides/19-wrapup.html#objectivity-no-one-is-objective",
+    "title": "Interpreting results",
+    "section": "Objectivity: no one is objective",
+    "text": "Objectivity: no one is objective\n\nmesearch is helpful sometimes"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#statistics-reflects-biases",
+    "href": "slides/19-wrapup.html#statistics-reflects-biases",
+    "title": "Interpreting results",
+    "section": "Statistics reflects biases",
+    "text": "Statistics reflects biases\n\nIt’s not objective\nWe make choices that have implications\nTreating all members of a group as the same\nReference categories\nHow we pick categories–what options are offered. Treating categories as fixed when maybe they shouldn’t be.\nHow to combat? Make good choices. If you can’t fix it, you can point it out as a limitation"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#media-reports-use-josephs-material",
+    "href": "slides/19-wrapup.html#media-reports-use-josephs-material",
+    "title": "Interpreting results",
+    "section": "Media reports: use Joseph’s material",
+    "text": "Media reports: use Joseph’s material"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#ethics",
+    "href": "slides/19-wrapup.html#ethics",
+    "title": "Interpreting results",
+    "section": "Ethics?",
+    "text": "Ethics?\n\n\n\n🔗 https://soc333-sum23.github.io/"
+  },
+  {
     "objectID": "slides/16-hypothesistests4.html#logistics",
     "href": "slides/16-hypothesistests4.html#logistics",
     "title": "Hypothesis tests pt 4",
@@ -3225,83 +3547,6 @@
     "title": "Hypothesis tests pt 4",
     "section": "Chi square example",
     "text": "Chi square example\n\nDo we reject or fail to reject our null hypothesis?\nWhat can we conclude about our research question?\n\n\n# 4. Visualize it!\nvisualize(null_dist) +\n  shade_p_value(obs_stat = test_stat,\n                direction = \"greater\")\n\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#logistics",
-    "href": "slides/18-interpretingresults2.html#logistics",
-    "title": "Interpreting results",
-    "section": "Logistics",
-    "text": "Logistics\n\nFour classes left. No class Monday. We’re almost there! :)\n\n\n\nFinishing up the project:\n\nProject component 3: submit for grading by next Tuesday (June 20)\n\n\n\n\n-   Final paper \n\n    -   use (revised!) elements of your proposal, descriptive stats, and results to turn your question into a (concise) paper.\n    -   More detailed instructions and example will be posted soon\n    -   Due Wednesday June 28 11:59pm\n\n\n-   Final presentation\n\n    -   Short! ~5-10 minutes\n    -   Briefly introduce your question, say a bit about why it's interesting, show your results, and talk about what you conclude from them. \n    -   Most on Monday June 26 (last day of class)\n    \n\n\n    -   **Looking for a few volunteers to go on Thursday June 22 instead!**\n    \n        -   Benefits: \n        -   More time afterwards to focus on your final paper (finish up the semester early?)\n        -   No stress while you watch day 2 \n        -   Everyone gets more flexibility on time\n        -   What's your favorite kind of donut? :)"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#today",
-    "href": "slides/18-interpretingresults2.html#today",
-    "title": "Interpreting results",
-    "section": "Today",
-    "text": "Today\n\nInterpreting results!"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#the-approximate-data-analysis-process",
-    "href": "slides/18-interpretingresults2.html#the-approximate-data-analysis-process",
-    "title": "Interpreting results",
-    "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables ✓\nPrepare data frame for analysis ✓\nDescribe relationships between variables ✓\nPerform statistical tests ✓\nCommunicate results"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#what-can-you-do-with-it",
-    "href": "slides/18-interpretingresults2.html#what-can-you-do-with-it",
-    "title": "Interpreting results",
-    "section": "What can you do with it?",
-    "text": "What can you do with it?\n\nRejecting/failing to reject hypotheses is useful\nBut it’s also statistics-speak, not effective communication"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#problems-with-p-values",
-    "href": "slides/18-interpretingresults2.html#problems-with-p-values",
-    "title": "Interpreting results",
-    "section": "Problems with p values",
-    "text": "Problems with p values\n\narbitrary cutoffs\nfile drawer problem\ndoesn’t pay attention to whether the effect is important\nsometimes you reject when you shouldn’t (5% of the time)"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#solutions-best-analysis-practices",
-    "href": "slides/18-interpretingresults2.html#solutions-best-analysis-practices",
-    "title": "Interpreting results",
-    "section": "Solutions: best analysis practices",
-    "text": "Solutions: best analysis practices\n\ndescriptive statistics! pay attention to effect sizes.\nrepeat things! use different data or different analysis techniques. If you get the same thing twice you’re less likely to be wrong."
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#objectivity-no-one-is-objective",
-    "href": "slides/18-interpretingresults2.html#objectivity-no-one-is-objective",
-    "title": "Interpreting results",
-    "section": "Objectivity: no one is objective",
-    "text": "Objectivity: no one is objective\n\nmesearch is helpful sometimes"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#statistics-reflects-biases",
-    "href": "slides/18-interpretingresults2.html#statistics-reflects-biases",
-    "title": "Interpreting results",
-    "section": "Statistics reflects biases",
-    "text": "Statistics reflects biases\n\nIt’s not objective\nWe make choices that have implications\nTreating all members of a group as the same\nReference categories\nHow we pick categories–what options are offered. Treating categories as fixed when maybe they shouldn’t be.\nHow to combat? Make good choices. If you can’t fix it, you can point it out as a limitation"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#media-reports-use-josephs-material",
-    "href": "slides/18-interpretingresults2.html#media-reports-use-josephs-material",
-    "title": "Interpreting results",
-    "section": "Media reports: use Joseph’s material",
-    "text": "Media reports: use Joseph’s material"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#ethics",
-    "href": "slides/18-interpretingresults2.html#ethics",
-    "title": "Interpreting results",
-    "section": "Ethics?",
-    "text": "Ethics?"
-  },
-  {
-    "objectID": "slides/18-interpretingresults2.html#reading-for-tuesday",
-    "href": "slides/18-interpretingresults2.html#reading-for-tuesday",
-    "title": "Interpreting results",
-    "section": "Reading for Tuesday",
-    "text": "Reading for Tuesday\n\nThere’s an article linked on the course calendar. Mess around with the interactive element!\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "project-descriptives.html",
@@ -3616,7 +3861,7 @@
     "href": "project_example/c5-paper.html",
     "title": "Final paper",
     "section": "",
-    "text": "library(openintro)\n\nLoading required package: airports\n\n\nLoading required package: cherryblossom\n\n\nLoading required package: usdata\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(infer)\nset.seed(1)\n\nTotal word count: about 1200\n\nIntroduction\nSports, particularly at high levels of competition, are often strictly gender-segregated. At the collegiate and professional levels in the United States, men and women (people of other genders must generally abide by one of those categories to participate) generally play on different teams and in different leagues. Rules are often slightly different between men’s and women’s versions of a sport, and the set of sports available to women is slightly different than that available to men. This separation makes it possible for levels of resources to vary greatly between men’s and women’s sports. At the professional level, women’s leagues generally have lower viewership and attendance, less infrastructure, and lower athlete salaries than men’s leagues (Cooky, Council, Mears, and Messner 2021).\nWe would expect things to look different on the college level. Title IX, passed in 1972, was intended to prohibit such gender inequities in sports affiliated with most educational institutions. Was it effective? In this work, I address this by investigating the research question: How does the number of coaches assigned to US college sports teams vary by the gender of the team?\n\n\nData and methodology\nTo answer this research question, I use publicly available data on college athletics programs from the Office of Postsecondary Education in the U.S. Department of Education. This observational data is provided to the Department of Education by university athletic programs in order to comply with the Equity in Athletics Disclosure Act (EADA). It contains information on available sports, staffing levels, number of athletes, revenue, and spending, all broken down by team gender. This makes it an ideal data set for studying gender-based inequities in American university athletics programs.\nThe subset of this data that I will use contains information on the athletics programs at Duke University and the University of North Carolina–Chapel Hill between 2003 and 2021. 879 unique teams are represented in this subset. In order to draw conclusions about differences in staffing between comparable men’s and women’s teams, I exclude all teams in sports that are only available for one gender, such as football and softball.\n\nsports &lt;- readRDS(\"sports_teams.rds\")\n\nsports_filtered &lt;- sports |&gt; \n  filter(\n    sport != \"Baseball\",\n    sport != \"Field Hockey\",\n    sport != \"Football\",\n    sport != \"Gymnastics\",\n    sport != \"Rowing\",\n    sport != \"Softball\",\n    sport != \"Volleyball\",\n    sport != \"Wrestling\"\n  )\n\nMy response variable is the number of coaches assigned to a team. This includes coaches at all levels (assistant and head) and employee statuses (part time and full time). It is a discrete numeric variable ranging from 1 to 14 coaches, with a mean of 3.9 and a median of 3. It is right skewed: most teams have a small number of coaches and only a few have many coaches.\n\nsummary(sports_filtered$ncoaches)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.00    3.00    3.88    4.00   14.00 \n\n\nMy explanatory variable is the gender of the team. This is a nominal categorical variable with two levels: “male” and “female.” There are 304 teams of each gender in this data set.\n\ntable(sports$teamgender)\n\n\n  men women \n  418   461 \n\n\nIn order to examine the relationship between these two variables, I will use a one-tailed, two-sample T test. A T test is the correct choice of hypothesis test for a question that employs a categorical variable with two levels as the explanatory variable and a numeric variable as the response variable. It will allow me to determine whether there is a statistically significant relationship between these two variables. I use a one-tailed test because my alternative hypothesis is directional—my alternative hypothesis is that women’s teams are less well-staffed than comparable men’s teams, while my null hypothesis is that staffing levels are the same regardless of team gender.\n\n\nResults\nFigure 1 compares the distribution of number of coaches for men’s teams with that of women’s teams. If women’s teams are less well-staffed than men’s teams, we would see that the distribution for women’s teams would be centered lower than that for men’s teams. However, there are no notable differences between genders detectable in this figure. The distributions for men and for women are both centered in the same place and have the same range and quartile divisions.\n\nggplot(data = sports_filtered, aes(x = ncoaches, y = teamgender)) + \n  geom_boxplot() + \n  labs(x = \"Number of coaches\",\n       y = \"Team gender\",\n       title = \"Figure 1: Distribution of number of coaches by team gender\",\n       subtitle = \"Duke and UNC teams between 2003 and 2021\",\n       fill = \"Team gender\")\n\n\n\n\nResults of a one-tailed, two-sample T test show that the relationship between team gender and number of coaches is statistically insignificant (p &gt; 0.05). I fail to reject the null hypothesis that there is no relationship between these two variables. In other words, these data do not provide evidence that there is any detectable difference between the number of coaches assigned to men’s teams and the number of coaches assigned to women’s teams.\n\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  calculate(stat = \"t\",\n            order = c(\"men\", \"women\"))\n\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  generate(reps = 1000) |&gt; \n  calculate(stat = \"t\",\n            order = c(\"men\", \"women\"))\n\nSetting `type = \"bootstrap\"` in `generate()`.\n\nget_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"greater\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.505\n\n\n\n\nDiscussion and conclusions\nIn sum, using data on staffing levels in the Duke and UNC athletics programs between 2003 and 2021, I found that the number of coaches assigned to comparable men’s and women’s teams is very similar. This supports the theory that Title IX has been effective at negating gender inequities in resources in college-level sports. This work has several limitations that affect the scope of its conclusions, however.\nFirst, only two schools are represented in this data set. Both are selective institutions with Division 1 athletics programs, and both are located in the same state. These results may not hold among Division 2 and 3 schools, which have smaller budgets and so may have different factors at play when selecting how to allocate funds. They may also not hold among schools in other parts of the country and other athletic conferences. Adding more schools, and a larger variety of schools, would strengthen the generalizability of these results.\nSecond, I did not differentiate between coaches at different levels, of different employee statuses, or with different levels of experience and skill. It is possible that the number of coaches assigned to comparable men’s and women’s teams is similar, but coaches for women’s teams are more likely to be part-time employees and so spend less time with athletes. It is also possible that there are differences in the salaries or benefits offered to coaches on men’s and women’s teams, which could result in coaches for women’s teams being less experienced or less skilled than coaches for men’s teams. Using different response variables that more thoroughly capture the characteristics of coaches would strengthen these conclusions by exploring some of these possibilities.\nThese results suggest several other fruitful directions for future work. First, coaching is only one of a host of resources provided to college athletics teams. Future work could investigate gender equity on other measures, like infrastructure and aid offered to athletes. Additionally, future work could more conclusively determine whether Title IX is what prevents gender inequity in sports, which this work cannot definitively speak to. Researchers could do this by comparing data from before and after the implementation of the law, and perhaps by using qualitative methods like interviews to explore the memories and motivations of administrators involved in decisions about resource allocation. Finally, future work could examine resource differences between the full set of men’s and women’s sports, rather than just those available to both genders. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women. Now that we know that there are no detectable differences in comparable sports, investigating this alternate possibility is a logical next step.\n\n\nReferences\nCooky, C., Council, L. D., Mears, M. A., & Messner, M. A. (2021). One and Done: The Long Eclipse of Women’s Televised Sports, 1989–2019. Communication & Sport, 9(3), 347–371. https://doi.org/10.1177/21674795211003524"
+    "text": "library(openintro)\nlibrary(tidyverse)\nlibrary(infer)\nset.seed(1)\n\n\nIntroduction\nSports, particularly at high levels of competition, are often strictly gender-segregated. At the college and professional levels in the United States, men and women (people of other genders must generally abide by one of those categories to participate) generally play on different teams and in different leagues. Rules are often slightly different between men’s and women’s versions of a sport, and the set of sports available to women is slightly different than that available to men. This separation makes it possible for levels of resources to vary greatly between men and women. At the professional level, women’s leagues generally have lower viewership and attendance, less infrastructure, and lower athlete salaries than men’s leagues (Cooky, Council, Mears, and Messner 2021).\nWe would expect things to look different on the college level. Title IX, passed in 1972, was intended to prohibit such gender inequities in sports affiliated with most educational institutions. Was it effective? In this work, I address this by investigating the research question: How does the number of coaches assigned to US college sports teams vary by the gender of the team?\n\n\nData and methodology\nTo answer this research question, I use publicly available data on college athletics programs from the Office of Postsecondary Education in the U.S. Department of Education. This observational data is provided to the Department of Education by university athletic programs in order to comply with the Equity in Athletics Disclosure Act (EADA). It contains information on available sports, staffing levels, number of athletes, revenue, and spending, all broken down by team gender. This makes it an ideal data set for studying gender-based inequities in American university athletics programs.\nThe subset of this data that I will use contains information on the athletics programs at Duke University and the University of North Carolina–Chapel Hill between 2003 and 2021. 879 unique teams are represented in this subset. In order to draw conclusions about differences in staffing between comparable men’s and women’s teams, I exclude all teams in sports that are only available for one gender, such as football and softball.\n\nsports &lt;- readRDS(\"sports_teams.rds\")\n\nsports_filtered &lt;- sports |&gt; \n  filter(\n    sport != \"Baseball\",\n    sport != \"Field Hockey\",\n    sport != \"Football\",\n    sport != \"Gymnastics\",\n    sport != \"Rowing\",\n    sport != \"Softball\",\n    sport != \"Volleyball\",\n    sport != \"Wrestling\"\n  )\n\nMy response variable is the number of coaches assigned to a team. This includes coaches at all levels (assistant and head) and employee statuses (part time and full time). It is a discrete numeric variable ranging from 1 to 14 coaches, with a mean of 3.9 and a median of 3. It is right skewed: most teams have a small number of coaches and only a few have many coaches.\n\nsummary(sports_filtered$ncoaches)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   1.00    3.00    3.00    3.88    4.00   14.00 \n\n\nMy explanatory variable is the gender of the team. This is a nominal categorical variable with two levels: “male” and “female.” There are 304 teams of each gender in this data set.\n\ntable(sports_filtered$teamgender)\n\n\n  men women \n  304   304 \n\n\nIn order to examine the relationship between these two variables, I will use a one-tailed T test. A T test is the correct choice of hypothesis test for a question that employs a categorical variable with two levels as the explanatory variable and a numeric variable as the response variable. It will allow me to determine whether there is a statistically significant relationship between these two variables. I use a one-tailed test because my alternative hypothesis is directional—my alternative hypothesis is that women’s teams are less well-staffed than comparable men’s teams, while my null hypothesis is that staffing levels are the same regardless of team gender.\n\n\nResults\nFigure 1 compares the distribution of number of coaches for men’s teams with that of women’s teams. If women’s teams are less well-staffed than men’s teams, we would see that the distribution for women’s teams would be positioned lower than that for men’s teams. However, there are no notable differences between genders detectable in this figure. The distributions for men and for women are both centered in the same place and have the same range and quartile divisions. If differences exist, they are very small and perhaps not very meaningful.\n\nggplot(data = sports_filtered, aes(x = ncoaches, y = teamgender)) + \n  geom_boxplot() + \n  labs(x = \"Number of coaches\",\n       y = \"Team gender\",\n       title = \"Figure 1: Distribution of number of coaches by team gender\",\n       subtitle = \"Duke and UNC teams between 2003 and 2021\",\n       fill = \"Team gender\")\n\n\n\n\nResults of a one-tailed T test show that the relationship between team gender and number of coaches is statistically insignificant (p &gt; 0.05). I fail to reject the null hypothesis that there is no relationship between these two variables. In other words, these data do not provide evidence that there is any detectable difference between the number of coaches assigned to men’s teams and the number of coaches assigned to women’s teams.\n\nsports_teststat &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  calculate(stat = \"t\",\n            order = c(\"men\", \"women\"))\n\nsports_nulldist &lt;- sports_filtered |&gt; \n  specify(formula = ncoaches ~ teamgender) |&gt; \n  generate(reps = 1000) |&gt; \n  calculate(stat = \"t\",\n            order = c(\"men\", \"women\"))\n\nget_p_value(sports_nulldist, obs_stat = sports_teststat, direction = \"greater\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.505\n\n\n\n\nDiscussion and conclusion\nIn sum, using data on staffing levels in the Duke and UNC athletics programs between 2003 and 2021, I found that the number of coaches assigned to comparable men’s and women’s teams is very similar. This supports the theory that Title IX has been effective at negating gender inequities in resources in college-level sports. This work has several limitations that affect the scope of its conclusions, however.\nFirst, only two schools are represented in this data set. Both are selective institutions with Division 1 athletics programs, and both are located in the same state. These results may not hold among Division 2 and 3 schools, which have smaller budgets and so may have different factors at play when choosing how to allocate funds. They may also not hold among schools in other parts of the country and other athletic conferences. Adding more schools, and a larger variety of schools, would strengthen the generalizability of these results.\nSecond, I did not differentiate between coaches at different levels, of different employee statuses, or with different levels of experience and skill. It is possible that the number of coaches assigned to comparable men’s and women’s teams is similar, but coaches for women’s teams are more likely to be part-time employees and so spend less time with athletes. It is also possible that there are differences in the salaries or benefits offered to coaches on men’s and women’s teams, which could result in coaches for women’s teams being less experienced or less skilled than coaches for men’s teams. Using different response variables that more thoroughly capture the characteristics of coaches would strengthen these conclusions by exploring some of these possibilities.\nThese results suggest several other fruitful directions for future work. First, coaching is only one of a host of resources provided to college athletics teams. Future work could investigate gender equity on other measures, like infrastructure and aid offered to athletes. Additionally, future work could more conclusively determine whether Title IX is what prevents gender inequity in sports, which this work cannot definitively speak to. Researchers could do this by comparing data from before and after the implementation of the law, and perhaps by using qualitative methods like interviews to explore the memories and motivations of administrators involved in decisions about resource allocation. Finally, future work could examine resource differences between the full set of men’s and women’s sports, rather than just those available to both genders. It could be that there are overall differences in coaching levels that are driven not by differential assignment of coaches to similar teams, but rather by the fact that different sports with different coaching requirements are made available to men and women. Now that we know that there are no detectable differences in comparable sports, investigating this alternate possibility is a logical next step.\n\n\nReferences\nCooky, C., Council, L. D., Mears, M. A., & Messner, M. A. (2021). One and Done: The Long Eclipse of Women’s Televised Sports, 1989–2019. Communication & Sport, 9(3), 347–371. https://doi.org/10.1177/21674795211003524"
   },
   {
     "objectID": "project_example/c1_proposal.html",

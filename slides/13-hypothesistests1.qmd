@@ -116,9 +116,7 @@ mean(yrbss$strength_training_7d, na.rm = TRUE)
 ::: incremental
 -   Let's say I think that 50% of Duke students prefer classes with final exams over classes with final papers.
 
--   To check this, I poll a random sample of 100 students.
-    I find that 56 of them prefer final papers over final exams.
-    Does that disprove my hypothesis?
+-   To check this, I poll a random sample of 100 students. I find that 56 of them prefer final papers over final exams. Does that disprove my hypothesis?
 
     -   Probably not! I won't get a sample that exactly reflects the population every time, even if the sampling is random.
 
@@ -157,18 +155,14 @@ mean(yrbss$strength_training_7d, na.rm = TRUE)
 
 ## Hypotheses: exercise q2
 
--   New York is known as "the city that never sleeps." A random sample of 25 New Yorkers were asked how much sleep they get per night.
-    Do these data provide convincing evidence that New Yorkers on average sleep less than 8 hours a night?
+-   New York is known as "the city that never sleeps." A random sample of 25 New Yorkers were asked how much sleep they get per night. Do these data provide convincing evidence that New Yorkers on average sleep less than 8 hours a night?
 
     -   Null: New Yorkers sleep 8 hours per night.
     -   Alternative: New Yorkers sleep less than 8 hours per night.
 
 ## Hypotheses: exercise q2
 
--   Employers at a firm are worried about the effect of March Madness, a basketball championship held each spring in the US, on employee productivity.
-    They estimate that on a regular business day employees spend on average 15 minutes of company time checking personal email, making personal phone calls, etc.
-    They also collect data on how much company time employees spend on such non- business activities during March Madness.
-    They want to determine if these data provide convincing evidence that employee productivity decreases during March Madness.
+-   Employers at a firm are worried about the effect of March Madness, a basketball championship held each spring in the US, on employee productivity. They estimate that on a regular business day employees spend on average 15 minutes of company time checking personal email, making personal phone calls, etc. They also collect data on how much company time employees spend on such non- business activities during March Madness. They want to determine if these data provide convincing evidence that employee productivity decreases during March Madness.
 
     -   Null: Employees spend 15 minutes per day of company time on non-business activities during March Madness.
     -   Alternative: Employees spend more than 15 minutes per day of company time on non-business activities during March Madness

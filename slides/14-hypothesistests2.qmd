@@ -69,9 +69,9 @@ library(openintro)
 ## Distributions {.smaller}
 
 -   Null distributions take different shapes depending on what test statistic you calculate
-    
+
     -   Which in turn depends on the combination of categorical and numeric variables you have---different tests (and so test statistics) are appropriate for different kinds of variables
-    
+
 -   But one very common one is the normal distribution
 
     -   Bell-shaped; defined by a mean and a standard deviation
@@ -83,8 +83,7 @@ library(openintro)
 
 -   Z scores are the test statistic for the normal distribution
 
--   Why are standard units important?
-    For comparing across distributions.
+-   Why are standard units important? For comparing across distributions.
 
     -   A Z score of -1 means the same thing in every normal distribution: the observation is one standard deviation below the mean.
 :::
@@ -135,15 +134,13 @@ ggplot(data.frame(x = c(600, 2400)), aes(x = x)) +
 ::: columns
 ::: {.column width="30%"}
 ::: incremental
--   Now imagine that we randomly sampled students and asked them to provide their SAT scores.
-    We have many samples of 25 students each.
+-   Now imagine that we randomly sampled students and asked them to provide their SAT scores. We have many samples of 25 students each.
 
 -   The mean score in each 25-student sample is our sample statistic
 
 -   The term for the spread of this sampling distribution is the standard error.
 
--   It is determined by formulas that vary depending on the specific situation.
-    You generally won't calculate it yourself; it will be provided in R output.
+-   It is determined by formulas that vary depending on the specific situation. You generally won't calculate it yourself; it will be provided in R output.
 
 -   Standard error is always smaller than standard deviation: there is more variation within samples from the same population than between them.
 :::
@@ -341,8 +338,7 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
 ::: incremental
 -   Percentiles/Z scores quantify how far our sample is from what we expected under the null hypothesis
 
--   P value: closely related to percentile.
-    How much of the expected distribution under the null hypothesis has a value more extreme than what we find in our sample?
+-   P value: closely related to percentile. How much of the expected distribution under the null hypothesis has a value more extreme than what we find in our sample?
 
     -   In other words: If the null hypothesis were true, what would the probability be of getting a sample as or more extreme than what was actually observed?
 :::
@@ -363,6 +359,7 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
     -   The average number of friends for people who live in rural areas of the US has changed over the past 50 years.
 
 -   Most hypothesis tests involving normal distributions in sociology are two-tailed, and most software defaults to two-tailed tests.
+
 -   When using some other distributions, like Chi square distributions, tests are always one-tailed---more on that another day.
 :::
 
@@ -370,8 +367,7 @@ openintro::normTail(m = 70, s = 3.3, L = qnorm(.30, mean = 70, sd = 3.3), col = 
 
 -   The p value for a one-tailed test is the percent of the distribution that is either bigger or smaller than the observed value (depending on which direction the hypothesis takes).
 
--   Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less?
-    (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)
+-   Example: If you randomly select an American who identifies as a man, what is the probability his height will be 63.4 inches or less? (recall the height distribution: mean 70 inches, standard deviation 3.3 inches)
 
 . . .
 
@@ -391,8 +387,7 @@ pnorm(q = -2)
 
 ## One-tailed p values
 
--   What is the probability of randomly selecting an American man who is 76.6 inches tall or taller?
-    (use the same height distribution)
+-   What is the probability of randomly selecting an American man who is 76.6 inches tall or taller? (use the same height distribution)
 
 -   First: Draw the distribution and shade the area we are interested in.
 
@@ -466,17 +461,17 @@ openintro::normTail(m = 70, s = 3.3, L = 63.4, U = 76.6, col = "blue")
 -   Step 1: Figure out what kind of test you need
 
     -   This depends on your variable types. Are they...
-        
+
         -   Categorical with two categories (including binary variables)?
         -   Categorical with three or more categories?
         -   Numeric?
-        -   *Wait, what about ordinal?* Ordinal variables are tricky. For our purposes, you can choose to treat them as either numeric or nominal categorical variables instead. 
-    
+        -   *Wait, what about ordinal?* Ordinal variables are tricky. For our purposes, you can choose to treat them as either numeric or nominal categorical variables instead.
+
     -   It also depends on how many variables your question involves
-    
+
         -   Two? (one explanatory variable; one response variable)
         -   Or more than two? (more than one explanatory variable; one response variable)
-        
+
     -   Does this feel similar to plotting? Lots of things depend on what kind of variables you have!
 :::
 
@@ -491,23 +486,33 @@ openintro::normTail(m = 70, s = 3.3, L = 63.4, U = 76.6, col = "blue")
 
 -   For each of these research questions, identify the explanatory variable, the response variable, their types, and the correct statistical test. *Think about what the data would look like for each individual in these cases*
 
--   a. How does whether a student attended a public or private school affect their chances of graduating high school?
+-   
 
--   b. How do outcomes of traffic stops (warnings, citations, or arrests) vary by the race of the driver? 
+    a.  How does whether a student attended a public or private school affect their chances of graduating high school?
 
--   c. How does the probability a doctor refers a patient to a specialist vary by the patient's body mass index?
+-   
 
--   d. How is a country's average life expectancy related to the amount of money per person it spends on health care? 
+    b.  How do outcomes of traffic stops (warnings, citations, or arrests) vary by the race of the driver?
+
+-   
+
+    c.  How does the probability a doctor refers a patient to a specialist vary by the patient's body mass index?
+
+-   
+
+    d.  How is a country's average life expectancy related to the amount of money per person it spends on health care?
 
 ![](images/14/test_table.png)
 
 ## Running a hypothesis test in R with `infer`
 
-:::incremental
--   The bad news: there are a lot of different tests. 
+::: incremental
+-   The bad news: there are a lot of different tests.
+
 -   The good news: regardless of what specific test you run, the logic is similar, and your code will look about the same!
+
 -   We will be using [the `infer` package](https://infer.tidymodels.org/index.html) to conduct hypothesis tests
-    
+
     -   `infer` is built to work on similar logic to the tidyverse---where `filter()`, `mutate()`, and `ggplot()` are from
     -   Its documentation is excellent---check out the website ([link here](https://infer.tidymodels.org/index.html)) if you ever get stuck
 :::
