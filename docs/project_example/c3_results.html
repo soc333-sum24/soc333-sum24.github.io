@@ -63,7 +63,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../exercise-solutions/ex-5-31-solutions.html" rel="next">
+<link href="../project_example/c5-paper.html" rel="next">
 <link href="../project_example/c2_descriptives.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -251,6 +251,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Component 3: Results</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Component 4: Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Component 5: Paper</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -278,6 +290,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../project_example/c3_results.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Component 3: Inferential results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project_example/c5-paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Component 5: Paper</span></a>
   </div>
 </li>
       </ul>
@@ -500,10 +518,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>State your null hypothesis.</p>
 <p>Teams will have the same number of coaches regardless of team gender.</p></li>
 <li><p>State your alternative hypothesis.</p>
-<p>Men’s and women’s teams will be assigned different numbers of coaches.</p></li>
+<p>Men’s teams will be assigned more coaches, on average, than women’s teams.</p></li>
 </ul></li>
 <li><p>What statistical test will you use? Explain why this test is the right choice.</p>
-<p>I will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable.</p></li>
+<p>I will use a one-tailed T test. T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable. I will use a one-tailed test because my alternative hypothesis is directional: I have reason to expect that women’s teams will be assigned fewer coaches than men’s teams.</p></li>
 <li><p>If necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.</p></li>
 </ul>
 <div class="cell">
@@ -531,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sports_teststat <span class="ot">&lt;-</span> sports_filtered <span class="sc">|&gt;</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">formula =</span> ncoaches <span class="sc">~</span> teamgender) <span class="sc">|&gt;</span> </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span> <span class="co"># I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"t"</span>,</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"men"</span>, <span class="st">"women"</span>))</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># then I use almost the same code to generate the null distribution</span></span>
@@ -539,16 +557,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">formula =</span> ncoaches <span class="sc">~</span> teamgender) <span class="sc">|&gt;</span> </span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"t"</span>,</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"men"</span>, <span class="st">"women"</span>))</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># then I generate the p value. I am using a two-sided test, so direction is "both".</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>p_sports <span class="ot">&lt;-</span> <span class="fu">get_p_value</span>(sports_nulldist, <span class="at">obs_stat =</span> sports_teststat, <span class="at">direction =</span> <span class="st">"both"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>p_sports <span class="ot">&lt;-</span> <span class="fu">get_p_value</span>(sports_nulldist, <span class="at">obs_stat =</span> sports_teststat, <span class="at">direction =</span> <span class="st">"greater"</span>)</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># and I display the p value</span></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>p_sports<span class="sc">$</span>p_value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.78</code></pre>
+<pre><code>[1] 0.63</code></pre>
 </div>
 </div>
 <ul>
@@ -558,7 +576,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># here, we take the null distribution and test statistic we calculated above, use the "visualize" function, and then mark the part of the distribution that is as or more extreme than what we observed</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sports_nulldist <span class="sc">|&gt;</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> sports_teststat, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> sports_teststat, <span class="at">direction =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="c3_results_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -932,8 +950,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../exercise-solutions/ex-5-31-solutions.html" class="pagination-link">
-        <span class="nav-page-text">5/31: Filtering</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../project_example/c5-paper.html" class="pagination-link">
+        <span class="nav-page-text">Component 5: Paper</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

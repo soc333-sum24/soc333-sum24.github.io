@@ -15,9 +15,9 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 
 ## Overall requirements
 
--   Your full paper must be completed in the `report.qmd` file.
+-   Your full paper must be completed in the `c5-paper.qmd` file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary---to do so, either copy/paste or go to `Code -> Insert Chunk.`
 
--   The complete paper should be TODO MAXIMUM LENGTH WORD COUNT. There is no minimum requirement; however, you should comprehensively address all of the analysis in your report. The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. I will grade based on the content of your paper, not its length.
+-   There is no minimum length requirement. I will grade based on the content of your paper, not its length. Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise; you do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). The suggested length for individual sections is provided in the section headings. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. 
 
 ::: callout-note
 You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
@@ -25,19 +25,19 @@ You may cite reputable external sources if you wish. This is optional, but discu
 
 ## Paper sections
 
-### Introduction (~1-2 paragraphs)
+### Introduction (~1-3 paragraphs)
 
 -   Introduce the reader to the research question and target population. 
--   Provide some motivation. Why is it important that we know the answer to this question?
+-   Provide any necessary background information and some motivation. Why is it important that we know the answer to this question?
 
-### Data and methodology (~3-4 paragraphs)
+### Data and methodology (~3-5 paragraphs)
 
--   Describe the data and what you know about how it was collected. Was it an observational study or an experiment? Who was sampled? Why is this data a good fit for your research question?
--   Describe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve.
+-   Describe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?
+-   Describe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).
 -   Note any changes you made to your data (filtering out observations or creating new variables).
 -   Explain your analysis strategy and why this strategy is appropriate for your question and variables.
 
-### Results (~2-3 paragraphs)
+### Results (~1-3 paragraphs)
 
 -   Present results pertaining to the relationship between your explanatory and response variables (descriptive *and* inferential)
 
@@ -49,7 +49,7 @@ You may cite reputable external sources if you wish. This is optional, but discu
 ### Discussion and conclusion (~3-4 paragraphs)
 
 -   Summarize what we have learned about your research question from your analysis. 
--   Discuss the limitations of your analysis and conclusions. Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
+-   Discuss the limitations of your analysis and conclusions (**include at least 2 limitations**). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
 -   Provide ideas for future work. Now that we have the answer to this research question, what's next?
 
 ### Writing and organization

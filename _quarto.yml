@@ -67,9 +67,9 @@ website:
               - href: project-results.qmd
                 text: "Component 3: Results"
               - href: project-paper.qmd
-                text: "Component 4: Paper"
+                text: "Component 4: Presentation"
               - href: project-presentation.qmd
-                text: "Component 5: Presentation"
+                text: "Component 5: Paper"
           - section: "Examples"
             contents:
               - href: project_example/c1_proposal.qmd
@@ -78,6 +78,8 @@ website:
                 text: "Component 2: Descriptive stats"
               - href: project_example/c3_results.qmd
                 text: "Component 3: Inferential results"
+              - href: project_example/c5-paper.qmd
+                text: "Component 5: Paper"
       - section: "Exercise solutions"
         contents:
           - href: exercise-solutions/ex-5-31-solutions.qmd

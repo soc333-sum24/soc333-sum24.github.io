@@ -44,11 +44,11 @@ How does the number of coaches assigned to US college sports teams vary by the g
 
     -   State your alternative hypothesis.
 
-        Men's and women's teams will be assigned different numbers of coaches.
+        Men's teams will be assigned more coaches, on average, than women's teams.
 
 -   What statistical test will you use? Explain why this test is the right choice.
 
-    I will use a T test. This is the right choice because T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable.
+    I will use a one-tailed T test. T tests are appropriate for comparing means between two groups. My explanatory variable, team gender, is a categorical variable with two levels, and my response variable, number of coaches, is a numeric variable. I will use a one-tailed test because my alternative hypothesis is directional: I have reason to expect that women's teams will be assigned fewer coaches than men's teams.
 
 -   If necessary, make any necessary changes to your data frame (filtering out observations or creating variables) in the code chunk below. This code should be the same as you used in project component 2.
 
@@ -76,7 +76,7 @@ sports_filtered <- sports |>
 sports_teststat <- sports_filtered |> 
   specify(formula = ncoaches ~ teamgender) |> 
   hypothesize(null = "independence") |> # I don't actually need this line for a T test and I could delete it if I wanted. For consistency with other tests, I am leaving it be.
-  calculate(stat = "diff in means",
+  calculate(stat = "t",
             order = c("men", "women"))
 
 # then I use almost the same code to generate the null distribution
@@ -84,11 +84,11 @@ sports_nulldist <- sports_filtered |>
   specify(formula = ncoaches ~ teamgender) |> 
   hypothesize(null = "independence") |>
   generate(reps = 1000) |> 
-  calculate(stat = "diff in means",
+  calculate(stat = "t",
             order = c("men", "women"))
 
 # then I generate the p value. I am using a two-sided test, so direction is "both".
-p_sports <- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = "both")
+p_sports <- get_p_value(sports_nulldist, obs_stat = sports_teststat, direction = "greater")
 
 # and I display the p value
 p_sports$p_value
@@ -100,7 +100,7 @@ p_sports$p_value
 # here, we take the null distribution and test statistic we calculated above, use the "visualize" function, and then mark the part of the distribution that is as or more extreme than what we observed
 sports_nulldist |> 
   visualize() + 
-  shade_p_value(obs_stat = sports_teststat, direction = "both")
+  shade_p_value(obs_stat = sports_teststat, direction = "greater")
 ```
 
 -   Interpret the p value for your test. Using a threshold of p \< .05, do you reject or fail to reject your null hypothesis? (\~2-3 sentences)
