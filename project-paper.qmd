@@ -17,39 +17,39 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 
 -   Your full paper must be completed in the `c5-paper.qmd` file. The section headings are provided for you, as are some starter code chunks. Feel free to add more chunks if necessary---to do so, either copy/paste or go to `Code -> Insert Chunk` (in the top menu bar).
 
--   There is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length. 
+-   There is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length.
 
-    -   Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments). 
+    -   Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments).
     -   The suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. To give you a ballpark estimate for the paper as a whole: my example is about 1200 words long (the equivalent of 5 double spaced pages, in Word).
 
 -   You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
 
 ## Paper sections
 
-### Introduction (~1-3 paragraphs)
+### Introduction (\~1-3 paragraphs)
 
--   Introduce the reader to the research question and target population. 
+-   Introduce the reader to the research question and target population.
 -   Provide any necessary background information and some motivation. Why is it important that we know the answer to this question?
 
-### Data and methodology (~3-5 paragraphs)
+### Data and methodology (\~3-5 paragraphs)
 
 -   Describe the data and what you know about how it was collected. Was it an observational study or an experiment? Who or what do your observations represent? Why is this data a good fit for your research question?
 -   Describe the variables you will use in your analysis, including how they are operationalized in your data set. Present their univariate descriptive statistics and describe anything notable. Be clear about what purpose your variables serve (explanatory/response/something else).
 -   Note any changes you made to your data (filtering out observations or creating new variables).
 -   Explain your analysis strategy and why this strategy is appropriate for your question and variables.
 
-### Results (~1-3 paragraphs)
+### Results (\~1-3 paragraphs)
 
 -   Present results pertaining to the relationship between your explanatory and response variables (descriptive *and* inferential)
 
-    - Your descriptive results should be presented using at least one appropriate and interpretable figure
-    - Obtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it's not necessary for a reader).
+    -   Your descriptive results should be presented using at least one appropriate and interpretable figure
+    -   Obtain and interpret your p value(s) from your hypothesis testing. You do not need to include the visualization of the sampling distribution (this is generally a tool for the analyst; it's not necessary for a reader).
 
 -   Interpret your results in the context of your research question. What do they tell us about the answer to that question?
 
-### Discussion and conclusion (~3-4 paragraphs)
+### Discussion and conclusion (\~3-4 paragraphs)
 
--   Summarize what we have learned about your research question from your analysis. 
+-   Summarize what we have learned about your research question from your analysis.
 -   Discuss the limitations of your analysis and conclusions (**include at least 2 limitations**). Provide suggestions on how this work could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here.
 -   Provide ideas for future work. Now that we have the answer to this research question, what's next?
 
@@ -69,11 +69,11 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 
 The final paper grade is broken down as follows.
 
-|                             |     |
-|-----------------------------|-----|
-| Introduction                | 10% |
-| Data and methodology        | 20% |
-| Results                     | 30% |
-| Discussion and conclusion   | 20% |
-| Writing and organization    | 10% |
-| Revision process            | 10% |
+|                           |     |
+|---------------------------|-----|
+| Introduction              | 10% |
+| Data and methodology      | 20% |
+| Results                   | 30% |
+| Discussion and conclusion | 20% |
+| Writing and organization  | 10% |
+| Revision process          | 10% |

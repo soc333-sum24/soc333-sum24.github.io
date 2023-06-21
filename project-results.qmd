@@ -89,9 +89,9 @@ The required elements of this component are as follows:
 
 |                                                                                                              |     |
 |----------------------------------------------|--------------------------|
-| Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
-| Part 1                                                                                                       | 30% |
-| Part 2                                                                                                       | 30% |
+| Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 20% |
+| Part 1                                                                                                       | 35% |
+| Part 2                                                                                                       | 35% |
 | Workflow and formatting                                                                                      | 10% |
 
 ::: callout-tip
