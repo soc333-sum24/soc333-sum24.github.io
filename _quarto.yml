@@ -66,9 +66,9 @@ website:
                 text: "Component 2: Descriptive stats"
               - href: project-results.qmd
                 text: "Component 3: Results"
-              - href: project-paper.qmd
-                text: "Component 4: Presentation"
               - href: project-presentation.qmd
+                text: "Component 4: Presentation"
+              - href: project-paper.qmd
                 text: "Component 5: Paper"
           - section: "Examples"
             contents:

@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.3.333">
 
   <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-06-15">
-  <title>SOCIOL 333 - Interpreting results</title>
+  <meta name="dcterms.date" content="2023-06-21">
+  <title>SOCIOL 333 - Good statistical practice</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,8 +322,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="SOCIOL 333 - Interpreting results">
-<meta property="og:description" content="Lecture 17">
+<meta property="og:title" content="SOCIOL 333 - Good statistical practice">
+<meta property="og:description" content="Lecture 19">
 <meta property="og:site-name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
@@ -331,8 +331,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Interpreting results</h1>
-  <p class="subtitle">Lecture 17</p>
+  <h1 class="title">Good statistical practice</h1>
+  <p class="subtitle">Lecture 19</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -345,137 +345,20 @@ Aidan Combs
     </div>
 </div>
 
-  <p class="date">2023-06-15</p>
+  <p class="date">2023-06-21</p>
 </section>
 <section id="logistics" class="slide level2">
 <h2>Logistics</h2>
-<div>
 <ul>
-<li class="fragment"><p>Finishing up the project:</p>
-<ul>
-<li class="fragment"><p>Results (component 3): Due 11:59pm tonight. Push to GitHub.</p></li>
-<li class="fragment"><p>Presentations and paper: instructions and paper example are up!</p>
-<ul>
-<li class="fragment">Presentations: Thursday June 22 and Monday June 26</li>
-<li class="fragment">Paper: Draft Monday June 26, final Wednesday June 28</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="workshopping-the-project-your-feedback" class="slide level2">
-<h2>Workshopping the project: your feedback</h2>
-<div>
-<ul>
-<li class="fragment"><p>Why workshop? My theories:</p>
-<ul>
-<li class="fragment">You start your work sooner—less crunch right before the deadline; you have an opportunity to ask questions if you get stuck</li>
-<li class="fragment">Both giving and getting feedback are useful for learning this stuff</li>
-</ul></li>
-<li class="fragment"><p>But maybe it doesn’t work–that’s okay too</p></li>
-<li class="fragment"><p>Tell me (anonymously):</p>
-<ul>
-<li class="fragment">Do you think workshopping the proposal and results was a good use of class time? Why or why not?</li>
-<li class="fragment">What has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?</li>
-<li class="fragment">What has not been useful/what would you change about it for next time?</li>
-<li class="fragment">Any other comments for me?</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="today" class="slide level2 smaller">
-<h2>Today</h2>
-<ul>
-<li>Finishing up limitations and causality</li>
-<li>Directions for future research</li>
-<li>Problems with p values</li>
+<li><p>Presentations: Thursday June 22 and Monday June 26</p></li>
+<li><p>Paper: Draft Monday June 26, final Wednesday June 28</p></li>
+<li><p>Questions on instructions/requirements?</p></li>
 </ul>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time</h2>
+<section id="exercise-q1-brainstorming-directions-for-future-research" class="slide level2">
+<h2>Exercise Q1: Brainstorming directions for future research</h2>
 <ul>
-<li><p>Limitations: Your work can’t tell you everything!</p>
-<ul>
-<li>Sampling and generalizability: are the people in your sample similar enough to the people in your target population?</li>
-<li>Accuracy: is your data correct?</li>
-<li>Operationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?</li>
-<li>Causality: do your results tell you something about <em>why</em> something happens? Or just about what is happening?</li>
-</ul></li>
-</ul>
-</section>
-<section id="association-vs-causation" class="slide level2">
-<h2>Association vs causation</h2>
-<div class="fragment">
-<ul>
-<li>Association: two things are related</li>
-<li>Causation: one thing drives another thing</li>
-</ul>
-</div>
-</section>
-<section id="requirements-for-determining-causation" class="slide level2">
-<h2>Requirements for determining causation</h2>
-<div>
-<ul>
-<li class="fragment"><p>Covariance: There has to be a relationship between two variables</p></li>
-<li class="fragment"><p>Plausibility and spuriousness: does it pass a gut check? do we know that there isn’t a third variable driving both things?</p>
-<ul>
-<li class="fragment">Example: Ice cream sales are highly correlated with violent crime rates.</li>
-<li class="fragment"><a href="https://tylervigen.com/spurious-correlations" class="uri">https://tylervigen.com/spurious-correlations</a></li>
-<li class="fragment">Experiments take care of this!</li>
-</ul></li>
-<li class="fragment"><p>Time order: did the cause happen before the effect?</p>
-<ul>
-<li class="fragment">Do we know that for sure, or is it ambiguous based on our data?</li>
-<li class="fragment">Consider <em>reverse causality</em></li>
-<li class="fragment">Example: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="exercise-q1" class="slide level2">
-<h2>Exercise Q1</h2>
-<p>Are these statements causal or associative?</p>
-<ol type="1">
-<li>Higher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.</li>
-<li>Social pressure leads people to give answers they know are incorrect.</li>
-<li>People who graduate from college get higher-paying jobs, on average, than people who do not graduate.</li>
-</ol>
-</section>
-<section id="exercise-q1-solutions" class="slide level2">
-<h2>Exercise Q1 solutions</h2>
-<p>Are these statements causal or associative?</p>
-<div>
-<ol type="1">
-<li class="fragment"><p>Higher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.</p>
-<ul>
-<li class="fragment">Associative</li>
-</ul></li>
-<li class="fragment"><p>Social pressure leads people to conform to ideas they know are incorrect.</p>
-<ul>
-<li class="fragment">Causal</li>
-</ul></li>
-<li class="fragment"><p>People who graduate from college get higher-paying jobs, on average, than people who do not graduate.</p>
-<ul>
-<li class="fragment">Associative</li>
-</ul></li>
-</ol>
-</div>
-</section>
-<section id="a-brief-tangent-the-asch-conformity-line-experiment" class="slide level2">
-<h2>A brief tangent: The Asch Conformity Line Experiment</h2>
-<div>
-<ul>
-<li class="fragment">Which of the lines on the right (A, B, or C) is most like the target line?</li>
-<li class="fragment">What if six people before you all said B?</li>
-<li class="fragment">Result: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control condition.</li>
-</ul>
-</div>
-
-<img data-src="images/18/asch.png" class="r-stretch"></section>
-<section id="exercise-q2-identifying-limitations" class="slide level2">
-<h2>Exercise Q2: Identifying limitations</h2>
-<ul>
-<li>Write down a limitation for each of the following:</li>
+<li>Write down an idea for a follow up study for each of these:</li>
 </ul>
 <ol type="1">
 <li>Researchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.</li>
@@ -483,28 +366,84 @@ Aidan Combs
 <li>Using a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree.</li>
 </ol>
 </section>
-<section id="turning-limitations-into-next-steps" class="slide level2">
-<h2>Turning limitations into next steps</h2>
+<section id="revisiting-p-values" class="slide level2">
+<h2>Revisiting p values</h2>
+</section>
+<section id="exercise-q2-whats-a-p-value" class="slide level2">
+<h2>Exercise Q2: What’s a p value?</h2>
+<ul>
+<li>A. A measurement of the size of the effect in a statistical analysis</li>
+<li>B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.</li>
+<li>C. The probability that the null hypothesis is true.</li>
+<li>D. The probability that the alternative hypothesis is true.</li>
+</ul>
+</section>
+<section id="exercise-q2-whats-a-p-value-1" class="slide level2">
+<h2>Exercise Q2: What’s a p value?</h2>
+<ul>
+<li>A. A measurement of the size of the effect in a statistical analysis</li>
+<li><strong>B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.</strong></li>
+<li>C. The probability that the null hypothesis is true.</li>
+<li>D. The probability that the alternative hypothesis is true.</li>
+</ul>
+</section>
+<section id="cutoffs" class="slide level2">
+<h2>Cutoffs</h2>
 <div>
 <ul>
-<li class="fragment">Limitations don’t have to be bad. Imperfect data is often still useful.</li>
-<li class="fragment">Your limitations are often where ideas for future research come from.</li>
-<li class="fragment">Can you think of ways to address the limitations in a future study?</li>
+<li class="fragment"><p>Hypothesis tests (and other statistics): results are either statistically significant or insignificant</p></li>
+<li class="fragment"><p>Cutoffs:</p>
+<ul>
+<li class="fragment">Most common: p = 0.05 (1 in 20 chance)</li>
+<li class="fragment">Sometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)</li>
+<li class="fragment">Often multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="more-on-directions-for-future-research" class="slide level2">
-<h2>More on directions for future research</h2>
+<section id="cutoffs-1" class="slide level2">
+<h2>Cutoffs</h2>
+<div>
 <ul>
-<li><p>Future research builds on current research</p></li>
-<li><p>Is there a new population to extend to?</p></li>
-<li><p>Is there a logical next question to ask now that you know your results?</p>
+<li class="fragment"><p>Why those cutoffs? Why not something else?</p>
 <ul>
-<li>Often that question is “why?”</li>
+<li class="fragment">Absolutely no reason; they’re just nice round numbers (yikes…)</li>
 </ul></li>
-<li><p>Are there practical consequences of the results, and do those require further research to understand or mitigate?</p></li>
 </ul>
+</div>
 </section>
+<section id="the-file-drawer-problem" class="slide level2">
+<h2>The “file drawer problem”</h2>
+<div>
+<ul>
+<li class="fragment">Results with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.</li>
+<li class="fragment">But are those really that different?</li>
+</ul>
+</div>
+</section>
+<section id="dependence-on-sample-size" class="slide level2">
+<h2>Dependence on sample size</h2>
+<div>
+<ul>
+<li class="fragment"><p>We survey 200 people—100 living in North Carolina and 100 living in South Carolina—and ask them how happy they are on a scale of 1 to 10. We find that NC residents are .1 points happier than SC residents (NC mean 8.1, SC mean 8, standard deviation 2 points).</p>
+<ul>
+<li class="fragment">p = .72—statistically insignificant; fail to reject the null</li>
+</ul></li>
+<li class="fragment"><p>What if we instead survey 10000 people and find exactly the same thing?</p>
+<ul>
+<li class="fragment">p = .012—statistically significant!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="errors" class="slide level2">
+<h2>Errors</h2>
+<ul>
+<li>When there’s a cutoff, there’s the possibility of being wrong</li>
+<li>At p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times</li>
+</ul>
+
+<img data-src="images/18/errors.png" class="r-stretch"></section>
 <section id="exercise-q3-brainstorming-directions-for-future-research" class="slide level2">
 <h2>Exercise Q3: Brainstorming directions for future research</h2>
 <ul>
@@ -517,7 +456,7 @@ Aidan Combs
 </ol>
 </section>
 <section>
-<section id="revisiting-p-values" class="title-slide slide level1 center">
+<section id="revisiting-p-values-1" class="title-slide slide level1 center">
 <h1>Revisiting p values</h1>
 
 </section>

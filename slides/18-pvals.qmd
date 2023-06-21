@@ -1,5 +1,5 @@
 ---
-title: "Limitations, future research, and problems with p values"
+title: "Limitations and directions for future research"
 subtitle: "Lecture 18"
 date: "June 20, 2023"
 format: 

@@ -183,41 +183,6 @@ get_p_value(null_dist,
             direction = "two-sided")
 ```
 
-## Requirements for causation
-
-::: incremental
--   Plausibility: does it pass a gut check?
-
-    -   <https://tylervigen.com/spurious-correlations>
-
--   Time order: did the cause happen before the effect?
-
-    -   Do we know that for sure, or is it ambiguous based on our data?
-    -   Consider *reverse causality*
-    -   Example: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs.
-
--   Nonspuriousness: do we know that there isn't a third variable driving both things?
-
-    -   Example: Ice cream sales are highly correlated with violent crime rates.
-    -   Experiments take care of this!
-:::
-
-## Exercise Q2
-
-Are these statements causal or associative?
-
-1.  Increased social media use is correlated with higher rates of anxiety and depression among teenagers.
-2.  Stronger economic growth leads to increased carbon dioxide pollution.
-3.  People who graduate from college get higher-paying jobs, on average, than people who do not graduate.
-
-## Turning limitations into next steps
-
-::: incremental
--   Limitations don't have to be bad. Imperfect data is often still useful.
--   Your limitations are often where ideas for future research come from.
--   Can you think of ways to address the limitations in a future study?
-:::
-
 ## Reading for Tuesday
 
 -   There's an article linked on the course calendar. Mess around with the interactive element!

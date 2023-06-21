@@ -2226,27 +2226,6 @@
     "text": "Exercise Q1\n\nDoes this provide evidence that using the internet helps people live longer? Why or why not?\nWrite down a plausible explanation for this relationship."
   },
   {
-    "objectID": "slides/17-interpretingresults.html#requirements-for-causation",
-    "href": "slides/17-interpretingresults.html#requirements-for-causation",
-    "title": "Interpreting results",
-    "section": "Requirements for causation",
-    "text": "Requirements for causation\n\n\nPlausibility: does it pass a gut check?\n\nhttps://tylervigen.com/spurious-correlations\n\nTime order: did the cause happen before the effect?\n\nDo we know that for sure, or is it ambiguous based on our data?\nConsider reverse causality\nExample: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs.\n\nNonspuriousness: do we know that there isn’t a third variable driving both things?\n\nExample: Ice cream sales are highly correlated with violent crime rates.\nExperiments take care of this!"
-  },
-  {
-    "objectID": "slides/17-interpretingresults.html#exercise-q2",
-    "href": "slides/17-interpretingresults.html#exercise-q2",
-    "title": "Interpreting results",
-    "section": "Exercise Q2",
-    "text": "Exercise Q2\nAre these statements causal or associative?\n\nIncreased social media use is correlated with higher rates of anxiety and depression among teenagers.\nStronger economic growth leads to increased carbon dioxide pollution.\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate."
-  },
-  {
-    "objectID": "slides/17-interpretingresults.html#turning-limitations-into-next-steps",
-    "href": "slides/17-interpretingresults.html#turning-limitations-into-next-steps",
-    "title": "Interpreting results",
-    "section": "Turning limitations into next steps",
-    "text": "Turning limitations into next steps\n\n\nLimitations don’t have to be bad. Imperfect data is often still useful.\nYour limitations are often where ideas for future research come from.\nCan you think of ways to address the limitations in a future study?"
-  },
-  {
     "objectID": "slides/17-interpretingresults.html#reading-for-tuesday",
     "href": "slides/17-interpretingresults.html#reading-for-tuesday",
     "title": "Interpreting results",
@@ -2823,182 +2802,182 @@
   {
     "objectID": "slides/18-pvals.html#logistics",
     "href": "slides/18-pvals.html#logistics",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Logistics",
     "text": "Logistics\n\n\nFinishing up the project:\n\nResults (component 3): Due 11:59pm tonight. Push to GitHub.\n\nI will get your grades back ASAP, prioritizing folks who present Thursday\n\nPresentations and paper: instructions and paper example are up!\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28"
   },
   {
     "objectID": "slides/18-pvals.html#workshopping-the-project-your-feedback",
     "href": "slides/18-pvals.html#workshopping-the-project-your-feedback",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Workshopping the project: your feedback",
     "text": "Workshopping the project: your feedback\n\n\nWhy workshop? My theories:\n\nYou start your work sooner—less crunch right before the deadline; you have an opportunity to ask questions if you get stuck\nBoth giving and getting feedback are useful for learning this stuff\n\nBut maybe it doesn’t work–that’s okay too\nTell me (anonymously):\n\nDo you think workshopping the proposal and results was a good use of class time? Why or why not?\nWhat has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?\nWhat has not been useful/what would you change about it for next time?\nAny other comments for me?"
   },
   {
     "objectID": "slides/18-pvals.html#today",
     "href": "slides/18-pvals.html#today",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Today",
     "text": "Today\n\nFinishing up limitations and causality\nDirections for future research\nProblems with p values"
   },
   {
     "objectID": "slides/18-pvals.html#last-time",
     "href": "slides/18-pvals.html#last-time",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Last time",
     "text": "Last time\n\n\nLimitations: Your work can’t tell you everything!\n\nSampling and generalizability: are the people in your sample similar enough to the people in your target population?\nAccuracy: is your data correct?\nOperationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?\nCausality: do your results tell you something about why something happens? Or just about what is happening?"
   },
   {
     "objectID": "slides/18-pvals.html#association-vs-causation",
     "href": "slides/18-pvals.html#association-vs-causation",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Association vs causation",
     "text": "Association vs causation\n\n\nAssociation: two things are related\nCausation: one thing drives another thing"
   },
   {
     "objectID": "slides/18-pvals.html#requirements-for-determining-causation",
     "href": "slides/18-pvals.html#requirements-for-determining-causation",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Requirements for determining causation",
     "text": "Requirements for determining causation\n\n\nCovariance: There has to be a relationship between two variables\nPlausibility and spuriousness: does it pass a gut check? do we know that there isn’t a third variable driving both things?\n\nExample: Ice cream sales are highly correlated with violent crime rates.\nhttps://tylervigen.com/spurious-correlations\nExperiments take care of this!\n\nTime order: did the cause happen before the effect?\n\nDo we know that for sure, or is it ambiguous based on our data?\nConsider reverse causality\nExample: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs."
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q1",
     "href": "slides/18-pvals.html#exercise-q1",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q1",
     "text": "Exercise Q1\nAre these statements causal or associative?\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\nSocial pressure leads people to give answers they know are incorrect.\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate."
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q1-solutions",
     "href": "slides/18-pvals.html#exercise-q1-solutions",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q1 solutions",
     "text": "Exercise Q1 solutions\nAre these statements causal or associative?\n\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\n\nAssociative\n\nSocial pressure leads people to conform to ideas they know are incorrect.\n\nCausal\n\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate.\n\nAssociative"
   },
   {
     "objectID": "slides/18-pvals.html#a-brief-tangent-the-asch-conformity-line-experiment",
     "href": "slides/18-pvals.html#a-brief-tangent-the-asch-conformity-line-experiment",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "A brief tangent: The Asch Conformity Line Experiment",
     "text": "A brief tangent: The Asch Conformity Line Experiment\n\n\nWhich of the lines on the right (A, B, or C) is most like the target line?\nWhat if six people before you all said B?\nResult: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control (no social pressure) condition."
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q2-identifying-limitations",
     "href": "slides/18-pvals.html#exercise-q2-identifying-limitations",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q2: Identifying limitations",
     "text": "Exercise Q2: Identifying limitations\n\nWrite down a limitation for each of the following:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
   },
   {
     "objectID": "slides/18-pvals.html#turning-limitations-into-next-steps",
     "href": "slides/18-pvals.html#turning-limitations-into-next-steps",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Turning limitations into next steps",
     "text": "Turning limitations into next steps\n\n\nLimitations don’t have to be bad. Imperfect data is often still useful.\nYour limitations are often where ideas for future research come from.\nCan you think of ways to address the limitations in a future study?"
   },
   {
     "objectID": "slides/18-pvals.html#identifying-other-directions-for-future-work",
     "href": "slides/18-pvals.html#identifying-other-directions-for-future-work",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Identifying other directions for future work",
     "text": "Identifying other directions for future work\n\n\nFuture research builds on current research\nIs there a new population to extend to?\nIs there a logical next question to ask now that you know your results?\n\nOften that question is “why?”\n\nAre there practical consequences of the results, and do those require further research to understand or mitigate?"
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q3-brainstorming-directions-for-future-research",
     "href": "slides/18-pvals.html#exercise-q3-brainstorming-directions-for-future-research",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q3: Brainstorming directions for future research",
     "text": "Exercise Q3: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
   },
   {
     "objectID": "slides/18-pvals.html#revisiting-p-values",
     "href": "slides/18-pvals.html#revisiting-p-values",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Revisiting p values",
     "text": "Revisiting p values"
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q4-whats-a-p-value",
     "href": "slides/18-pvals.html#exercise-q4-whats-a-p-value",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q4: What’s a p value?",
     "text": "Exercise Q4: What’s a p value?\n\nA. A measurement of the effect size in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
     "objectID": "slides/18-pvals.html#exercise-q4-whats-a-p-value-1",
     "href": "slides/18-pvals.html#exercise-q4-whats-a-p-value-1",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Exercise Q4: What’s a p value?",
     "text": "Exercise Q4: What’s a p value?\n\nA. A measurement of the effect size in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
     "objectID": "slides/18-pvals.html#cutoffs",
     "href": "slides/18-pvals.html#cutoffs",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Cutoffs",
     "text": "Cutoffs\n\n\nHypothesis tests (and other statistics): results are either statistically significant or insignificant\nCutoffs:\n\nMost common: p = 0.05 (1 in 20 chance)\nSometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)\nOften multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level"
   },
   {
     "objectID": "slides/18-pvals.html#cutoffs-1",
     "href": "slides/18-pvals.html#cutoffs-1",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Cutoffs",
     "text": "Cutoffs\n\n\nWhy those cutoffs? Why not something else?\n\nAbsolutely no reason; they’re just nice round numbers (yikes…)"
   },
   {
     "objectID": "slides/18-pvals.html#the-file-drawer-problem",
     "href": "slides/18-pvals.html#the-file-drawer-problem",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "The “file drawer problem”",
     "text": "The “file drawer problem”\n\n\nResults with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.\nBut are those really that different?"
   },
   {
     "objectID": "slides/18-pvals.html#dependence-on-sample-size",
     "href": "slides/18-pvals.html#dependence-on-sample-size",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Dependence on sample size",
     "text": "Dependence on sample size\n\n\nWe survey 200 people—100 living in North Carolina and 100 living in South Carolina—and ask them how happy they are on a scale of 1 to 10. We find that NC residents are .1 points happier than SC residents (NC mean 8.1, SC mean 8, standard deviation 2 points).\n\np = .72—statistically insignificant; fail to reject the null\n\nWhat if we instead survey 10000 people and find exactly the same thing?\n\np = .012—statistically significant!"
   },
   {
     "objectID": "slides/18-pvals.html#errors",
     "href": "slides/18-pvals.html#errors",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Errors",
     "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times"
   },
   {
     "objectID": "slides/18-pvals.html#effect-sizes-are-essential",
     "href": "slides/18-pvals.html#effect-sizes-are-essential",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Effect sizes are essential",
     "text": "Effect sizes are essential\n\n\nEffect size: how much of a difference is there?\n\nP values tell you nothing about how big an effect is\nThey are determined more by sample size than effect size\nBig samples have “significant” effects that are tiny and meaningless\nSmall samples have “insignificant” effects that are large and important\n\nBut what is “big enough” to be important? Hard to say…"
   },
   {
     "objectID": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
     "href": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Effect sizes in relationship satisfaction",
     "text": "Effect sizes in relationship satisfaction\n\n\nStudy of 19000 people showed that people who met their spouses online were less likely to divorce (p &lt; .002) and more likely to have high marital satisfaction (p &lt; .001) than those who met their spouses offline.\nBut what about the effect sizes?\n\nDivorce rate: offline 7.67%; online 5.96%\nHappiness (7 point scale): offline 5.48; online 5.64\n\nIt’s significant, but is it important?\n\n\n\n\nSources: - Nuzzo, R. Scientific method: Statistical errors. Nature 506, 150–152 (2014). https://doi.org/10.1038/506150a - Cacioppo, J. T., Cacioppo, S., Gonzagab, G. C., Ogburn, E. L. & VanderWeele, T. J. Proc. Natl Acad. Sci. USA 110, 10135–10140 (2013)."
   },
   {
     "objectID": "slides/18-pvals.html#different-methods-get-different-results",
     "href": "slides/18-pvals.html#different-methods-get-different-results",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Different methods get different results",
     "text": "Different methods get different results\n\nP hacking: making different decisions about who to include/exclude or what your variables should be can change results dramatically\n\n\n\nDifferent statistical methods can also give different results"
   },
   {
     "objectID": "slides/18-pvals.html#different-methods-get-different-results-1",
     "href": "slides/18-pvals.html#different-methods-get-different-results-1",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "Different methods get different results",
     "text": "Different methods get different results\n\n\n\n\n\nSource: FiveThirtyEight. https://fivethirtyeight.com/features/science-isnt-broken/#part2"
   },
   {
     "objectID": "slides/18-pvals.html#so-what-do-we-do",
     "href": "slides/18-pvals.html#so-what-do-we-do",
-    "title": "Limitations, future research, and problems with p values",
+    "title": "Limitations and directions for future research",
     "section": "So what do we do??",
     "text": "So what do we do??\n\n\nDescriptive statistics! Pay attention to how big your effects are, not just if they’re significant. Are they big enough to be meaningful?\nBe humble. One study can’t prove anything.\nRepeat things. If you find the same result in two datasets, or if you find the same result using different methods, it’s more likely to be real.\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
@@ -3215,140 +3194,126 @@
   {
     "objectID": "slides/19-wrapup.html#logistics",
     "href": "slides/19-wrapup.html#logistics",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Logistics",
-    "text": "Logistics\n\n\nFinishing up the project:\n\nResults (component 3): Due 11:59pm tonight. Push to GitHub.\nPresentations and paper: instructions and paper example are up!\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28"
+    "text": "Logistics\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28\nQuestions on instructions/requirements?"
   },
   {
-    "objectID": "slides/19-wrapup.html#workshopping-the-project-your-feedback",
-    "href": "slides/19-wrapup.html#workshopping-the-project-your-feedback",
-    "title": "Interpreting results",
-    "section": "Workshopping the project: your feedback",
-    "text": "Workshopping the project: your feedback\n\n\nWhy workshop? My theories:\n\nYou start your work sooner—less crunch right before the deadline; you have an opportunity to ask questions if you get stuck\nBoth giving and getting feedback are useful for learning this stuff\n\nBut maybe it doesn’t work–that’s okay too\nTell me (anonymously):\n\nDo you think workshopping the proposal and results was a good use of class time? Why or why not?\nWhat has been useful about this structure for you (submitting drafts for grading first, workshopping, then later submitting for grading)?\nWhat has not been useful/what would you change about it for next time?\nAny other comments for me?"
+    "objectID": "slides/19-wrapup.html#exercise-q1-brainstorming-directions-for-future-research",
+    "href": "slides/19-wrapup.html#exercise-q1-brainstorming-directions-for-future-research",
+    "title": "Good statistical practice",
+    "section": "Exercise Q1: Brainstorming directions for future research",
+    "text": "Exercise Q1: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
   },
   {
-    "objectID": "slides/19-wrapup.html#today",
-    "href": "slides/19-wrapup.html#today",
-    "title": "Interpreting results",
-    "section": "Today",
-    "text": "Today\n\nFinishing up limitations and causality\nDirections for future research\nProblems with p values"
+    "objectID": "slides/19-wrapup.html#revisiting-p-values",
+    "href": "slides/19-wrapup.html#revisiting-p-values",
+    "title": "Good statistical practice",
+    "section": "Revisiting p values",
+    "text": "Revisiting p values"
   },
   {
-    "objectID": "slides/19-wrapup.html#last-time",
-    "href": "slides/19-wrapup.html#last-time",
-    "title": "Interpreting results",
-    "section": "Last time",
-    "text": "Last time\n\nLimitations: Your work can’t tell you everything!\n\nSampling and generalizability: are the people in your sample similar enough to the people in your target population?\nAccuracy: is your data correct?\nOperationalization: did the people who collected the data measure what you would have wanted them to measure in the way you would have wanted it to be measured?\nCausality: do your results tell you something about why something happens? Or just about what is happening?"
+    "objectID": "slides/19-wrapup.html#exercise-q2-whats-a-p-value",
+    "href": "slides/19-wrapup.html#exercise-q2-whats-a-p-value",
+    "title": "Good statistical practice",
+    "section": "Exercise Q2: What’s a p value?",
+    "text": "Exercise Q2: What’s a p value?\n\nA. A measurement of the size of the effect in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
-    "objectID": "slides/19-wrapup.html#association-vs-causation",
-    "href": "slides/19-wrapup.html#association-vs-causation",
-    "title": "Interpreting results",
-    "section": "Association vs causation",
-    "text": "Association vs causation\n\n\nAssociation: two things are related\nCausation: one thing drives another thing"
+    "objectID": "slides/19-wrapup.html#exercise-q2-whats-a-p-value-1",
+    "href": "slides/19-wrapup.html#exercise-q2-whats-a-p-value-1",
+    "title": "Good statistical practice",
+    "section": "Exercise Q2: What’s a p value?",
+    "text": "Exercise Q2: What’s a p value?\n\nA. A measurement of the size of the effect in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
-    "objectID": "slides/19-wrapup.html#requirements-for-determining-causation",
-    "href": "slides/19-wrapup.html#requirements-for-determining-causation",
-    "title": "Interpreting results",
-    "section": "Requirements for determining causation",
-    "text": "Requirements for determining causation\n\n\nCovariance: There has to be a relationship between two variables\nPlausibility and spuriousness: does it pass a gut check? do we know that there isn’t a third variable driving both things?\n\nExample: Ice cream sales are highly correlated with violent crime rates.\nhttps://tylervigen.com/spurious-correlations\nExperiments take care of this!\n\nTime order: did the cause happen before the effect?\n\nDo we know that for sure, or is it ambiguous based on our data?\nConsider reverse causality\nExample: We survey 1000 people and find that people who have desk jobs are less healthy than people who have active jobs."
+    "objectID": "slides/19-wrapup.html#cutoffs",
+    "href": "slides/19-wrapup.html#cutoffs",
+    "title": "Good statistical practice",
+    "section": "Cutoffs",
+    "text": "Cutoffs\n\n\nHypothesis tests (and other statistics): results are either statistically significant or insignificant\nCutoffs:\n\nMost common: p = 0.05 (1 in 20 chance)\nSometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)\nOften multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level"
   },
   {
-    "objectID": "slides/19-wrapup.html#exercise-q1",
-    "href": "slides/19-wrapup.html#exercise-q1",
-    "title": "Interpreting results",
-    "section": "Exercise Q1",
-    "text": "Exercise Q1\nAre these statements causal or associative?\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\nSocial pressure leads people to give answers they know are incorrect.\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate."
+    "objectID": "slides/19-wrapup.html#cutoffs-1",
+    "href": "slides/19-wrapup.html#cutoffs-1",
+    "title": "Good statistical practice",
+    "section": "Cutoffs",
+    "text": "Cutoffs\n\n\nWhy those cutoffs? Why not something else?\n\nAbsolutely no reason; they’re just nice round numbers (yikes…)"
   },
   {
-    "objectID": "slides/19-wrapup.html#exercise-q1-solutions",
-    "href": "slides/19-wrapup.html#exercise-q1-solutions",
-    "title": "Interpreting results",
-    "section": "Exercise Q1 solutions",
-    "text": "Exercise Q1 solutions\nAre these statements causal or associative?\n\n\nHigher rates of social media use are correlated with increased likelihood of anxiety and depression among teenagers.\n\nAssociative\n\nSocial pressure leads people to conform to ideas they know are incorrect.\n\nCausal\n\nPeople who graduate from college get higher-paying jobs, on average, than people who do not graduate.\n\nAssociative"
+    "objectID": "slides/19-wrapup.html#the-file-drawer-problem",
+    "href": "slides/19-wrapup.html#the-file-drawer-problem",
+    "title": "Good statistical practice",
+    "section": "The “file drawer problem”",
+    "text": "The “file drawer problem”\n\n\nResults with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.\nBut are those really that different?"
   },
   {
-    "objectID": "slides/19-wrapup.html#a-brief-tangent-the-asch-conformity-line-experiment",
-    "href": "slides/19-wrapup.html#a-brief-tangent-the-asch-conformity-line-experiment",
-    "title": "Interpreting results",
-    "section": "A brief tangent: The Asch Conformity Line Experiment",
-    "text": "A brief tangent: The Asch Conformity Line Experiment\n\n\nWhich of the lines on the right (A, B, or C) is most like the target line?\nWhat if six people before you all said B?\nResult: 75% of subjects (male-identifying undergraduate students at one university) gave at least one obviously wrong answer over the course of 12 trials. Less than 1% did in a control condition."
+    "objectID": "slides/19-wrapup.html#dependence-on-sample-size",
+    "href": "slides/19-wrapup.html#dependence-on-sample-size",
+    "title": "Good statistical practice",
+    "section": "Dependence on sample size",
+    "text": "Dependence on sample size\n\n\nWe survey 200 people—100 living in North Carolina and 100 living in South Carolina—and ask them how happy they are on a scale of 1 to 10. We find that NC residents are .1 points happier than SC residents (NC mean 8.1, SC mean 8, standard deviation 2 points).\n\np = .72—statistically insignificant; fail to reject the null\n\nWhat if we instead survey 10000 people and find exactly the same thing?\n\np = .012—statistically significant!"
   },
   {
-    "objectID": "slides/19-wrapup.html#exercise-q2-identifying-limitations",
-    "href": "slides/19-wrapup.html#exercise-q2-identifying-limitations",
-    "title": "Interpreting results",
-    "section": "Exercise Q2: Identifying limitations",
-    "text": "Exercise Q2: Identifying limitations\n\nWrite down a limitation for each of the following:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
-  },
-  {
-    "objectID": "slides/19-wrapup.html#turning-limitations-into-next-steps",
-    "href": "slides/19-wrapup.html#turning-limitations-into-next-steps",
-    "title": "Interpreting results",
-    "section": "Turning limitations into next steps",
-    "text": "Turning limitations into next steps\n\n\nLimitations don’t have to be bad. Imperfect data is often still useful.\nYour limitations are often where ideas for future research come from.\nCan you think of ways to address the limitations in a future study?"
-  },
-  {
-    "objectID": "slides/19-wrapup.html#more-on-directions-for-future-research",
-    "href": "slides/19-wrapup.html#more-on-directions-for-future-research",
-    "title": "Interpreting results",
-    "section": "More on directions for future research",
-    "text": "More on directions for future research\n\nFuture research builds on current research\nIs there a new population to extend to?\nIs there a logical next question to ask now that you know your results?\n\nOften that question is “why?”\n\nAre there practical consequences of the results, and do those require further research to understand or mitigate?"
+    "objectID": "slides/19-wrapup.html#errors",
+    "href": "slides/19-wrapup.html#errors",
+    "title": "Good statistical practice",
+    "section": "Errors",
+    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times"
   },
   {
     "objectID": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
     "href": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Exercise Q3: Brainstorming directions for future research",
     "text": "Exercise Q3: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
   },
   {
     "objectID": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
     "href": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Exercise Q4: What’s a p value?",
     "text": "Exercise Q4: What’s a p value?\nA. A measurement of the effect size in a statistical analysis B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true. C. The probability that the null hypothesis is true. D. The probability that the alternative hypothesis is true."
   },
   {
     "objectID": "slides/19-wrapup.html#problems-with-p-values",
     "href": "slides/19-wrapup.html#problems-with-p-values",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Problems with p values",
     "text": "Problems with p values\n\narbitrary cutoffs\nfile drawer problem\ndoesn’t pay attention to whether the effect is important\nsometimes you reject when you shouldn’t (5% of the time)\nsometimes you don’t reject when you should"
   },
   {
     "objectID": "slides/19-wrapup.html#solutions-best-analysis-practices",
     "href": "slides/19-wrapup.html#solutions-best-analysis-practices",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Solutions: best analysis practices",
     "text": "Solutions: best analysis practices\n\ndescriptive statistics! pay attention to effect sizes.\nrepeat things! use different data or different analysis techniques. If you get the same thing twice you’re less likely to be wrong."
   },
   {
     "objectID": "slides/19-wrapup.html#objectivity-no-one-is-objective",
     "href": "slides/19-wrapup.html#objectivity-no-one-is-objective",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Objectivity: no one is objective",
     "text": "Objectivity: no one is objective\n\nmesearch is helpful sometimes"
   },
   {
     "objectID": "slides/19-wrapup.html#statistics-reflects-biases",
     "href": "slides/19-wrapup.html#statistics-reflects-biases",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Statistics reflects biases",
     "text": "Statistics reflects biases\n\nIt’s not objective\nWe make choices that have implications\nTreating all members of a group as the same\nReference categories\nHow we pick categories–what options are offered. Treating categories as fixed when maybe they shouldn’t be.\nHow to combat? Make good choices. If you can’t fix it, you can point it out as a limitation"
   },
   {
     "objectID": "slides/19-wrapup.html#media-reports-use-josephs-material",
     "href": "slides/19-wrapup.html#media-reports-use-josephs-material",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Media reports: use Joseph’s material",
     "text": "Media reports: use Joseph’s material"
   },
   {
     "objectID": "slides/19-wrapup.html#ethics",
     "href": "slides/19-wrapup.html#ethics",
-    "title": "Interpreting results",
+    "title": "Good statistical practice",
     "section": "Ethics?",
     "text": "Ethics?\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
