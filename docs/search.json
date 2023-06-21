@@ -459,7 +459,7 @@
     "href": "index.html",
     "title": "SOCIOL 333: Quantitative Analaysis of Sociological Data",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\nPlotting one variable\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\nNull and alternative hypotheses\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\nZ scores\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\nHypothesis testing\n\n    \nWed, Jun 14\nHypothesis testing pt 4\n\n\n\n\nHypothesis testing 2\n\n    \nThu, Jun 15\nInterpreting results\n\n\nComponent 3 draft\n\n\nInterpreting results\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nLimitations, future research, and problems with p values\n\nScience Isn’t Broken\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nBest practices\n\n\n\n\n\n    \nThu, Jun 22\nFinal project presentations\n\n\n\nComponent 4: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations; workshop final papers\n\n\nComponent 5 draft\n\nComponent 4: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 5: Final paper"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n    \n      Week\n      Date\n      Topic\n      Read\n      Bring\n      Due\n      Exercise\n    \n  \n  \n    1\nWed, May 17\nWelcome! Course info\n\n\n\n\nGetting to know you survey\n\n    \nThu, May 18\nData and variables\n\nIMS ch 1\n\n\n\nVariable types\n\n    2\nMon, May 22\nIntro to the computing workflow\n\n\n\n\nComputing setup test\n\n    \nTue, May 23\nProject and research questions\n\n\n\n\nResearch questions\n\n    \nWed, May 24\nStudies and samples\n\nIMS ch 2\n\n\n\nStudies and samples\n\n    \nThu, May 25\nWorkshopping project proposals\n\n\nComponent 1 draft\n\n\n\n    3\nMon, May 29\nNo class. Happy Memorial Day!\n\n\n\n\n\n    \nTue, May 30\nSummary statistics\n\n\n\nComponent 1: proposal\n\nSummary statistics\n\n    \nWed, May 31\nFiltering data frames\n\nIMS ch 4\n\n\n\nSummary statistics; filtering\n\n    \nThu, Jun 1\nCreating new variables\n\nIMS ch 5\n\n\n\nCreating variables\n\n    4\nMon, Jun 5\nPipes\n\n\n\n\n\n    \nTue, Jun 6\nPlotting one variable\n\n\n\n\nPlotting one variable\n\n    \nWed, Jun 7\nPlotting relationships between variables\n\nIMS ch 6\n\n\n\n\n    \nThu, Jun 8\nHypothesis testing pt 1\n\nIMS ch 11 and ch 13\n\n\nComponent 2: Descriptive statistics\n\nNull and alternative hypotheses\n\n    5\nMon, Jun 12\nHypothesis testing pt 2\n\n\n\n\nZ scores\n\n    \nTue, Jun 13\nHypothesis testing pt 3\n\n\n\n\nHypothesis testing\n\n    \nWed, Jun 14\nHypothesis testing pt 4\n\n\n\n\nHypothesis testing 2\n\n    \nThu, Jun 15\nInterpreting results\n\n\nComponent 3 draft\n\n\nInterpreting results\n\n    6\nMon, Jun 19\nNo class. Happy Juneteenth!\n\n\n\n\n\n    \nTue, Jun 20\nLimitations and future research\n\n\n\nComponent 3: Results\n\n\n    \nWed, Jun 21\nBest practices\n\nScience Isn’t Broken\n\n\n\n\n    \nThu, Jun 22\nFinal project presentations\n\n\n\nComponent 4: Presentation (start)\n\n\n    7\nMon, Jun 26\nFinal project presentations; workshop final papers\n\n\nComponent 5 draft\n\nComponent 4: Presentation (finish)\n\n\n    \nWed, Jun 28\nNo class; final paper due\n\n\n\nComponent 5: Final paper"
   },
   {
     "objectID": "slides/06-workshopping.html#today",
@@ -2944,42 +2944,7 @@
     "href": "slides/18-pvals.html#errors",
     "title": "Limitations and directions for future research",
     "section": "Errors",
-    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times"
-  },
-  {
-    "objectID": "slides/18-pvals.html#effect-sizes-are-essential",
-    "href": "slides/18-pvals.html#effect-sizes-are-essential",
-    "title": "Limitations and directions for future research",
-    "section": "Effect sizes are essential",
-    "text": "Effect sizes are essential\n\n\nEffect size: how much of a difference is there?\n\nP values tell you nothing about how big an effect is\nThey are determined more by sample size than effect size\nBig samples have “significant” effects that are tiny and meaningless\nSmall samples have “insignificant” effects that are large and important\n\nBut what is “big enough” to be important? Hard to say…"
-  },
-  {
-    "objectID": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
-    "href": "slides/18-pvals.html#effect-sizes-in-relationship-satisfaction",
-    "title": "Limitations and directions for future research",
-    "section": "Effect sizes in relationship satisfaction",
-    "text": "Effect sizes in relationship satisfaction\n\n\nStudy of 19000 people showed that people who met their spouses online were less likely to divorce (p &lt; .002) and more likely to have high marital satisfaction (p &lt; .001) than those who met their spouses offline.\nBut what about the effect sizes?\n\nDivorce rate: offline 7.67%; online 5.96%\nHappiness (7 point scale): offline 5.48; online 5.64\n\nIt’s significant, but is it important?\n\n\n\n\nSources: - Nuzzo, R. Scientific method: Statistical errors. Nature 506, 150–152 (2014). https://doi.org/10.1038/506150a - Cacioppo, J. T., Cacioppo, S., Gonzagab, G. C., Ogburn, E. L. & VanderWeele, T. J. Proc. Natl Acad. Sci. USA 110, 10135–10140 (2013)."
-  },
-  {
-    "objectID": "slides/18-pvals.html#different-methods-get-different-results",
-    "href": "slides/18-pvals.html#different-methods-get-different-results",
-    "title": "Limitations and directions for future research",
-    "section": "Different methods get different results",
-    "text": "Different methods get different results\n\nP hacking: making different decisions about who to include/exclude or what your variables should be can change results dramatically\n\n\n\nDifferent statistical methods can also give different results"
-  },
-  {
-    "objectID": "slides/18-pvals.html#different-methods-get-different-results-1",
-    "href": "slides/18-pvals.html#different-methods-get-different-results-1",
-    "title": "Limitations and directions for future research",
-    "section": "Different methods get different results",
-    "text": "Different methods get different results\n\n\n\n\n\nSource: FiveThirtyEight. https://fivethirtyeight.com/features/science-isnt-broken/#part2"
-  },
-  {
-    "objectID": "slides/18-pvals.html#so-what-do-we-do",
-    "href": "slides/18-pvals.html#so-what-do-we-do",
-    "title": "Limitations and directions for future research",
-    "section": "So what do we do??",
-    "text": "So what do we do??\n\n\nDescriptive statistics! Pay attention to how big your effects are, not just if they’re significant. Are they big enough to be meaningful?\nBe humble. One study can’t prove anything.\nRepeat things. If you find the same result in two datasets, or if you find the same result using different methods, it’s more likely to be real.\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
   },
   {
     "objectID": "slides/13-hypothesistests1.html#logistics",
@@ -3194,128 +3159,226 @@
   {
     "objectID": "slides/19-wrapup.html#logistics",
     "href": "slides/19-wrapup.html#logistics",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Logistics",
-    "text": "Logistics\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28\nQuestions on instructions/requirements?"
+    "text": "Logistics\n\nPresentations: Thursday June 22 and Monday June 26\nPaper: Draft Monday June 26, final Wednesday June 28\nQuestions on instructions/requirements?\n\n\n\n\nsource: https://burnbrightgames.weebly.com/uploads/2/1/1/3/21139174/453547015.jpg"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#today",
+    "href": "slides/19-wrapup.html#today",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Today",
+    "text": "Today\n\nWrapping up directions for future work\nStatistics best practices: where the field is at now!"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#last-time-limitations-and-future-directions",
+    "href": "slides/19-wrapup.html#last-time-limitations-and-future-directions",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Last time: Limitations and future directions",
+    "text": "Last time: Limitations and future directions\n\n\nDirections for future work can come from limitations: how could you fix things for next time?\nThey can also be other kinds of extensions.\n\nFuture research builds on current research\nIs there a new population to extend to?\nIs there a logical next question to ask now that you know your results?\n\nOften that question is “why?”\n\nAre there practical consequences of the results, and do those require further research to understand or mitigate?"
   },
   {
     "objectID": "slides/19-wrapup.html#exercise-q1-brainstorming-directions-for-future-research",
     "href": "slides/19-wrapup.html#exercise-q1-brainstorming-directions-for-future-research",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Exercise Q1: Brainstorming directions for future research",
     "text": "Exercise Q1: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
   },
   {
     "objectID": "slides/19-wrapup.html#revisiting-p-values",
     "href": "slides/19-wrapup.html#revisiting-p-values",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Revisiting p values",
     "text": "Revisiting p values"
   },
   {
     "objectID": "slides/19-wrapup.html#exercise-q2-whats-a-p-value",
     "href": "slides/19-wrapup.html#exercise-q2-whats-a-p-value",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Exercise Q2: What’s a p value?",
     "text": "Exercise Q2: What’s a p value?\n\nA. A measurement of the size of the effect in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
     "objectID": "slides/19-wrapup.html#exercise-q2-whats-a-p-value-1",
     "href": "slides/19-wrapup.html#exercise-q2-whats-a-p-value-1",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Exercise Q2: What’s a p value?",
     "text": "Exercise Q2: What’s a p value?\n\nA. A measurement of the size of the effect in a statistical analysis\nB. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true.\nC. The probability that the null hypothesis is true.\nD. The probability that the alternative hypothesis is true."
   },
   {
-    "objectID": "slides/19-wrapup.html#cutoffs",
-    "href": "slides/19-wrapup.html#cutoffs",
-    "title": "Good statistical practice",
-    "section": "Cutoffs",
-    "text": "Cutoffs\n\n\nHypothesis tests (and other statistics): results are either statistically significant or insignificant\nCutoffs:\n\nMost common: p = 0.05 (1 in 20 chance)\nSometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)\nOften multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level"
+    "objectID": "slides/19-wrapup.html#p-values-are-the-current-standard-for-determining-whether-a-result-is-important",
+    "href": "slides/19-wrapup.html#p-values-are-the-current-standard-for-determining-whether-a-result-is-important",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "P values are the current standard for determining whether a result is important…",
+    "text": "P values are the current standard for determining whether a result is important…\nwhich is why we’ve spent time learning to calculate and interpret them\n\nbut they have some major problems! And things might (/should) change in future."
   },
   {
-    "objectID": "slides/19-wrapup.html#cutoffs-1",
-    "href": "slides/19-wrapup.html#cutoffs-1",
-    "title": "Good statistical practice",
-    "section": "Cutoffs",
-    "text": "Cutoffs\n\n\nWhy those cutoffs? Why not something else?\n\nAbsolutely no reason; they’re just nice round numbers (yikes…)"
+    "objectID": "slides/19-wrapup.html#problems-with-p-values-cutoffs",
+    "href": "slides/19-wrapup.html#problems-with-p-values-cutoffs",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Problems with p values: cutoffs",
+    "text": "Problems with p values: cutoffs\n\n\nHypothesis tests (and other statistics): results are either statistically significant or insignificant\nCutoffs:\n\nMost common: p = 0.05 (1 in 20 chance)\nSometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)\nOften multiple are reported: e.g., result is significant at the 0.05 level and 0.01 level but not at the 0.001 level"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#problems-with-p-values-cutoffs-1",
+    "href": "slides/19-wrapup.html#problems-with-p-values-cutoffs-1",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Problems with p values: cutoffs",
+    "text": "Problems with p values: cutoffs\n\n\nWhy those cutoffs? Why not something else?\n\nAbsolutely no reason; they’re just nice round numbers (yikes…)"
   },
   {
     "objectID": "slides/19-wrapup.html#the-file-drawer-problem",
     "href": "slides/19-wrapup.html#the-file-drawer-problem",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "The “file drawer problem”",
-    "text": "The “file drawer problem”\n\n\nResults with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.\nBut are those really that different?"
+    "text": "The “file drawer problem”\n\n\nResults with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.\nBut are those really that different?\nWe lose a lot of information when we never hear about the studies at p = .06!"
   },
   {
     "objectID": "slides/19-wrapup.html#dependence-on-sample-size",
     "href": "slides/19-wrapup.html#dependence-on-sample-size",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Dependence on sample size",
     "text": "Dependence on sample size\n\n\nWe survey 200 people—100 living in North Carolina and 100 living in South Carolina—and ask them how happy they are on a scale of 1 to 10. We find that NC residents are .1 points happier than SC residents (NC mean 8.1, SC mean 8, standard deviation 2 points).\n\np = .72—statistically insignificant; fail to reject the null\n\nWhat if we instead survey 10000 people and find exactly the same thing?\n\np = .012—statistically significant!"
   },
   {
     "objectID": "slides/19-wrapup.html#errors",
     "href": "slides/19-wrapup.html#errors",
-    "title": "Good statistical practice",
+    "title": "Good statistical practice: class wrapup!",
     "section": "Errors",
-    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times"
+    "text": "Errors\n\nWhen there’s a cutoff, there’s the possibility of being wrong\n\nIn either direction: you can reject a null hypothesis that’s true; you can fail to reject a null hypothesis that’s false\n\nAt p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times–by design!"
   },
   {
-    "objectID": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
-    "href": "slides/19-wrapup.html#exercise-q3-brainstorming-directions-for-future-research",
-    "title": "Good statistical practice",
-    "section": "Exercise Q3: Brainstorming directions for future research",
-    "text": "Exercise Q3: Brainstorming directions for future research\n\nWrite down an idea for a follow up study for each of these:\n\n\nResearchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.\nIn 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.\nUsing a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree."
+    "objectID": "slides/19-wrapup.html#effect-sizes-are-essential",
+    "href": "slides/19-wrapup.html#effect-sizes-are-essential",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Effect sizes are essential",
+    "text": "Effect sizes are essential\n\n\nEffect size: how much of a difference is there?\n\nP values tell you nothing about how big an effect is\nThey are determined more by sample size than effect size\nBig samples: you’re more likely to find significant effects\n\nBut those effects can be tiny and meaningless\n\nSmall samples: you’re less likely to find significant effects\n\nSo you can miss “insignificant” effects that are actually real and important"
   },
   {
-    "objectID": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
-    "href": "slides/19-wrapup.html#exercise-q4-whats-a-p-value",
-    "title": "Good statistical practice",
-    "section": "Exercise Q4: What’s a p value?",
-    "text": "Exercise Q4: What’s a p value?\nA. A measurement of the effect size in a statistical analysis B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true. C. The probability that the null hypothesis is true. D. The probability that the alternative hypothesis is true."
+    "objectID": "slides/19-wrapup.html#effect-sizes",
+    "href": "slides/19-wrapup.html#effect-sizes",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Effect sizes",
+    "text": "Effect sizes\n\n\nEffect sizes come from descriptive statistics!\nWhat is the difference in mean/proportion/rate between groups?\n\nEx: People who live in urban areas have an average of 0.3 more friends than people who live in rural areas.\n\nFor numeric explanatory variables: how much of a change in the response variable can we expect for a given amount of change in the explanatory variable?\n\nEx: An increase of one hour of social media use per day is associated with a 5% greater chance of being diagnosed with depression."
   },
   {
-    "objectID": "slides/19-wrapup.html#problems-with-p-values",
-    "href": "slides/19-wrapup.html#problems-with-p-values",
-    "title": "Good statistical practice",
-    "section": "Problems with p values",
-    "text": "Problems with p values\n\narbitrary cutoffs\nfile drawer problem\ndoesn’t pay attention to whether the effect is important\nsometimes you reject when you shouldn’t (5% of the time)\nsometimes you don’t reject when you should"
+    "objectID": "slides/19-wrapup.html#effect-sizes-1",
+    "href": "slides/19-wrapup.html#effect-sizes-1",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Effect sizes",
+    "text": "Effect sizes\n\nWhat is “big enough” to be important?\n\n\n\nIt’s SUPER dependent on context (don’t believe the internet when it tells you otherwise)"
   },
   {
-    "objectID": "slides/19-wrapup.html#solutions-best-analysis-practices",
-    "href": "slides/19-wrapup.html#solutions-best-analysis-practices",
-    "title": "Good statistical practice",
-    "section": "Solutions: best analysis practices",
-    "text": "Solutions: best analysis practices\n\ndescriptive statistics! pay attention to effect sizes.\nrepeat things! use different data or different analysis techniques. If you get the same thing twice you’re less likely to be wrong."
+    "objectID": "slides/19-wrapup.html#effect-sizes-in-relationship-satisfaction",
+    "href": "slides/19-wrapup.html#effect-sizes-in-relationship-satisfaction",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Effect sizes in relationship satisfaction",
+    "text": "Effect sizes in relationship satisfaction\n\n\nStudy of 19000 people showed that people who met their spouses online were less likely to divorce (p &lt; .002) and more likely to have high marital satisfaction (p &lt; .001) than those who met their spouses offline.\nBut what about the effect sizes?\n\nDivorce rate: offline 7.67%; online 5.96%\nHappiness (1-7 scale): offline 5.48; online 5.64\n\nIt’s statistically significant, but is it important?\n\n\n\n\nSources: 1. Nuzzo, R. Scientific method: Statistical errors. Nature 506, 150–152 (2014). https://doi.org/10.1038/506150a 2. Cacioppo, J. T., Cacioppo, S., Gonzagab, G. C., Ogburn, E. L. & VanderWeele, T. J. Proc. Natl Acad. Sci. USA 110, 10135–10140 (2013)."
   },
   {
-    "objectID": "slides/19-wrapup.html#objectivity-no-one-is-objective",
-    "href": "slides/19-wrapup.html#objectivity-no-one-is-objective",
-    "title": "Good statistical practice",
-    "section": "Objectivity: no one is objective",
-    "text": "Objectivity: no one is objective\n\nmesearch is helpful sometimes"
+    "objectID": "slides/19-wrapup.html#different-methods-different-results",
+    "href": "slides/19-wrapup.html#different-methods-different-results",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Different methods; different results",
+    "text": "Different methods; different results\n\nP hacking: making different decisions about who to include/exclude or what your variables should be can change results dramatically\n\n\n\nDifferent statistical methods can also give different results"
   },
   {
-    "objectID": "slides/19-wrapup.html#statistics-reflects-biases",
-    "href": "slides/19-wrapup.html#statistics-reflects-biases",
-    "title": "Good statistical practice",
-    "section": "Statistics reflects biases",
-    "text": "Statistics reflects biases\n\nIt’s not objective\nWe make choices that have implications\nTreating all members of a group as the same\nReference categories\nHow we pick categories–what options are offered. Treating categories as fixed when maybe they shouldn’t be.\nHow to combat? Make good choices. If you can’t fix it, you can point it out as a limitation"
+    "objectID": "slides/19-wrapup.html#different-methods-different-results-1",
+    "href": "slides/19-wrapup.html#different-methods-different-results-1",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Different methods; different results",
+    "text": "Different methods; different results\n\n\n\n\n\nSource: FiveThirtyEight. https://fivethirtyeight.com/features/science-isnt-broken/#part2"
   },
   {
-    "objectID": "slides/19-wrapup.html#media-reports-use-josephs-material",
-    "href": "slides/19-wrapup.html#media-reports-use-josephs-material",
-    "title": "Good statistical practice",
-    "section": "Media reports: use Joseph’s material",
-    "text": "Media reports: use Joseph’s material"
+    "objectID": "slides/19-wrapup.html#so-what-do-we-do",
+    "href": "slides/19-wrapup.html#so-what-do-we-do",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "So what do we do??",
+    "text": "So what do we do??\n\n\nDescriptive statistics! Pay attention to how big your effects are. Statistical significance alone doesn’t make something important. Are the effects big enough to be meaningful?\nBe humble and be patient. One study doesn’t prove something. But evidence accumulates over time.\nRepeat things. If you find the same result in two datasets, or if you find the same result using different methods, it’s more likely to be real and meaningful."
   },
   {
-    "objectID": "slides/19-wrapup.html#ethics",
-    "href": "slides/19-wrapup.html#ethics",
-    "title": "Good statistical practice",
-    "section": "Ethics?",
-    "text": "Ethics?\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "objectID": "slides/19-wrapup.html#evidence-accumulates",
+    "href": "slides/19-wrapup.html#evidence-accumulates",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Evidence accumulates",
+    "text": "Evidence accumulates"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#objectivity-in-statistics",
+    "href": "slides/19-wrapup.html#objectivity-in-statistics",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Objectivity in statistics",
+    "text": "Objectivity in statistics\n\n\nObjective analysis: 100% impartial, value-free, and unbiased\n\nSometimes people think that if something is supported by statistics—ie, if the work is quantitative—it’s automatically objective (and qualitiative work is automatically not objective)\n\nBut statistics has always reflected the values, beliefs, and experiences of those who practice it—just like qualitative methods, but more sneakily\nWait a minute—how do my values have anything to do with how I run a hypothesis test??"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#exercise-q3",
+    "href": "slides/19-wrapup.html#exercise-q3",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Exercise Q3",
+    "text": "Exercise Q3\n\nValues/beliefs/experiences come into it when analysts make decisions.\nBrainstorm: what are some decisions that people have to make in the course of an analysis?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#a-few-examples-of-statistical-decisions",
+    "href": "slides/19-wrapup.html#a-few-examples-of-statistical-decisions",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "A few examples of statistical decisions",
+    "text": "A few examples of statistical decisions\n\n\nWhat questions to ask\nWhat data to use or collect (and from who)\nWhat variables to use and how to measure them\nWhat statistical methodology to use\nWhich results to report\nHow to interpret them"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#statistics-are-not-bad",
+    "href": "slides/19-wrapup.html#statistics-are-not-bad",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Statistics are not bad!",
+    "text": "Statistics are not bad!\n\n\nNo method is 100% objective. But they can still be tremendously useful.\nStatistics can be rigorous and fair while also being guided by analysts’ experiences and worldviews\nAnalysts’ values/experiences can strengthen statistics rather than compromise it"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#good-statistical-practice",
+    "href": "slides/19-wrapup.html#good-statistical-practice",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Good statistical practice",
+    "text": "Good statistical practice\n\nA lot has been written about how to do statistics better—in particular, feminist and antiracist scholarship\nIs what you’re reading using good practices?\nIs your own work using good practices?"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#good-practices-the-highlights",
+    "href": "slides/19-wrapup.html#good-practices-the-highlights",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Good practices: the highlights",
+    "text": "Good practices: the highlights\n\nTransparency!\n\nAnalysts should talk about decisions, assumptions, and limitations\nIf work sounds super sensational, makes sweeping conclusions, or doesn’t come with a list of caveats, there’s probably a lack of transparency. Good science is slow and gradual!"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#good-practices-the-highlights-1",
+    "href": "slides/19-wrapup.html#good-practices-the-highlights-1",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Good practices: the highlights",
+    "text": "Good practices: the highlights\n\nP values are fine, but think about effect sizes too!\n\nAnalysis is most powerful when both are used together\nWe &lt;3 descriptive statistics!\nBe skeptical of work that claims a significant effect and tells you nothing about how big it is"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#good-practices-the-highlights-2",
+    "href": "slides/19-wrapup.html#good-practices-the-highlights-2",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "Good practices: the highlights",
+    "text": "Good practices: the highlights\n\nBe mindful of how people treat and talk about social categories\n\n\n\nCategories like sex and race don’t “cause” social effects\n\nSexism and racism that people in different categories experience differently cause social effects\n\n\n\n\n\nNot all people in a category will experience the same thing\n\nStatistical results are always approximations–there’s a lot of variation in individual experiences!\nDid the analyst consider the possibility of intersectional effects?\nDon’t believe sweeping claims about entire groups: “All Asian-Americans…”; “People without college degrees need to do X…”\n\n\n\n\n\nWhose experience is treated as the norm and why?\n\nOlder work tends to treat White people and men as a baseline, and compare other groups’ experiences against theirs… but there are more principled approaches"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#the-bottom-line",
+    "href": "slides/19-wrapup.html#the-bottom-line",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "The bottom line",
+    "text": "The bottom line\n\n\nStatistics is a useful and powerful tool!\nBut it’s not magic—it won’t automatically give good results.\nAnalysts have a lot of choices to make: what questions are answered, how they’re answered, how the results are interpreted\nHow those choices are made is important! And we’re figuring out all the time how to do it better."
+  },
+  {
+    "objectID": "slides/19-wrapup.html#were-all-done",
+    "href": "slides/19-wrapup.html#were-all-done",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "We’re all done!",
+    "text": "We’re all done!\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables ✓\nPrepare data frame for analysis ✓\nDescribe relationships between variables ✓\nPerform statistical tests/write models ✓\nCommunicate results ✓"
+  },
+  {
+    "objectID": "slides/19-wrapup.html#section",
+    "href": "slides/19-wrapup.html#section",
+    "title": "Good statistical practice: class wrapup!",
+    "section": "",
+    "text": "🔗 https://soc333-sum23.github.io/\n\n\nhttps://www.therandomvibez.com/wp-content/uploads/2017/07/thank-you-meme-puppy.jpg"
   },
   {
     "objectID": "slides/16-hypothesistests4.html#logistics",

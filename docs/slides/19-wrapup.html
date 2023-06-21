@@ -12,7 +12,7 @@
 
   <meta name="author" content="Aidan Combs">
   <meta name="dcterms.date" content="2023-06-21">
-  <title>SOCIOL 333 - Good statistical practice</title>
+  <title>SOCIOL 333 - Good statistical practice: class wrapup!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,7 +322,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="SOCIOL 333 - Good statistical practice">
+<meta property="og:title" content="SOCIOL 333 - Good statistical practice: class wrapup!">
 <meta property="og:description" content="Lecture 19">
 <meta property="og:site-name" content="SOCIOL 333">
 </head>
@@ -331,7 +331,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Good statistical practice</h1>
+  <h1 class="title">Good statistical practice: class wrapup!</h1>
   <p class="subtitle">Lecture 19</p>
 
 <div class="quarto-title-authors">
@@ -354,6 +354,35 @@ Aidan Combs
 <li><p>Paper: Draft Monday June 26, final Wednesday June 28</p></li>
 <li><p>Questions on instructions/requirements?</p></li>
 </ul>
+<p><img data-src="images/19/almostthere.jpg"></p>
+
+<aside><div>
+<p>source: https://burnbrightgames.weebly.com/uploads/2/1/1/3/21139174/453547015.jpg</p>
+</div></aside></section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<ul>
+<li>Wrapping up directions for future work</li>
+<li>Statistics best practices: where the field is at now!</li>
+</ul>
+</section>
+<section id="last-time-limitations-and-future-directions" class="slide level2">
+<h2>Last time: Limitations and future directions</h2>
+<div>
+<ul>
+<li class="fragment"><p>Directions for future work can come from limitations: how could you fix things for next time?</p></li>
+<li class="fragment"><p>They can also be other kinds of extensions.</p>
+<ul>
+<li class="fragment"><p>Future research builds on current research</p></li>
+<li class="fragment"><p>Is there a new population to extend to?</p></li>
+<li class="fragment"><p>Is there a logical next question to ask now that you know your results?</p>
+<ul>
+<li class="fragment">Often that question is “why?”</li>
+</ul></li>
+<li class="fragment"><p>Are there practical consequences of the results, and do those require further research to understand or mitigate?</p></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="exercise-q1-brainstorming-directions-for-future-research" class="slide level2">
 <h2>Exercise Q1: Brainstorming directions for future research</h2>
@@ -387,8 +416,15 @@ Aidan Combs
 <li>D. The probability that the alternative hypothesis is true.</li>
 </ul>
 </section>
-<section id="cutoffs" class="slide level2">
-<h2>Cutoffs</h2>
+<section id="p-values-are-the-current-standard-for-determining-whether-a-result-is-important" class="slide level2">
+<h2>P values are the current standard for determining whether a result is important…</h2>
+<p>which is why we’ve spent time learning to calculate and interpret them</p>
+<div class="fragment">
+<p>but they have some major problems! And things might (/should) change in future.</p>
+</div>
+</section>
+<section id="problems-with-p-values-cutoffs" class="slide level2">
+<h2>Problems with p values: cutoffs</h2>
 <div>
 <ul>
 <li class="fragment"><p>Hypothesis tests (and other statistics): results are either statistically significant or insignificant</p></li>
@@ -396,13 +432,13 @@ Aidan Combs
 <ul>
 <li class="fragment">Most common: p = 0.05 (1 in 20 chance)</li>
 <li class="fragment">Sometimes: p = 0.1 (1 in 10), p = 0.01 (1 in 100), p = 0.001 (1 in 1000)</li>
-<li class="fragment">Often multiple are reported: result is significant at the 0.05 level and 0.01 level but not at the 0.001 level</li>
+<li class="fragment">Often multiple are reported: e.g., result is significant at the 0.05 level and 0.01 level but not at the 0.001 level</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="cutoffs-1" class="slide level2">
-<h2>Cutoffs</h2>
+<section id="problems-with-p-values-cutoffs-1" class="slide level2">
+<h2>Problems with p values: cutoffs</h2>
 <div>
 <ul>
 <li class="fragment"><p>Why those cutoffs? Why not something else?</p>
@@ -418,6 +454,7 @@ Aidan Combs
 <ul>
 <li class="fragment">Results with a p value of 0.04 are much more likely to be published than results with a p value of 0.06.</li>
 <li class="fragment">But are those really that different?</li>
+<li class="fragment">We lose a lot of information when we never hear about the studies at p = .06!</li>
 </ul>
 </div>
 </section>
@@ -439,76 +476,254 @@ Aidan Combs
 <section id="errors" class="slide level2">
 <h2>Errors</h2>
 <ul>
-<li>When there’s a cutoff, there’s the possibility of being wrong</li>
-<li>At p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times</li>
+<li><p>When there’s a cutoff, there’s the possibility of being wrong</p>
+<ul>
+<li>In either direction: you can reject a null hypothesis that’s true; you can fail to reject a null hypothesis that’s false</li>
+</ul></li>
+<li><p>At p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times–by design!</p></li>
 </ul>
 
 <img data-src="images/18/errors.png" class="r-stretch"></section>
-<section id="exercise-q3-brainstorming-directions-for-future-research" class="slide level2">
-<h2>Exercise Q3: Brainstorming directions for future research</h2>
+<section id="effect-sizes-are-essential" class="slide level2">
+<h2>Effect sizes are essential</h2>
+<div>
 <ul>
-<li>Write down an idea for a follow up study for each of these:</li>
+<li class="fragment"><p>Effect size: how <em>much</em> of a difference is there?</p>
+<ul>
+<li class="fragment"><p>P values tell you nothing about how <em>big</em> an effect is</p></li>
+<li class="fragment"><p>They are determined more by sample size than effect size</p></li>
+<li class="fragment"><p>Big samples: you’re more likely to find significant effects</p>
+<ul>
+<li class="fragment">But those effects can be tiny and meaningless</li>
+</ul></li>
+<li class="fragment"><p>Small samples: you’re less likely to find significant effects</p>
+<ul>
+<li class="fragment">So you can miss “insignificant” effects that are actually real and important</li>
+</ul></li>
+</ul></li>
 </ul>
-<ol type="1">
-<li>Researchers surveyed 1000 British teenagers age 13-17 and found that higher rates of social media use are correlated with increased likelihood of anxiety and depression.</li>
-<li>In 1951, Asch showed that social pressure led undergraduate men to conform to incorrect suggestions.</li>
-<li>Using a longitudinal survey, researchers found that Americans who obtained a college degree between 1995 and 2000 got higher-paying jobs, on average, than people their age who did not obtain a college degree.</li>
-</ol>
+</div>
 </section>
-<section>
-<section id="revisiting-p-values-1" class="title-slide slide level1 center">
-<h1>Revisiting p values</h1>
+<section id="effect-sizes" class="slide level2">
+<h2>Effect sizes</h2>
+<div>
+<ul>
+<li class="fragment"><p>Effect sizes come from descriptive statistics!</p></li>
+<li class="fragment"><p>What is the difference in mean/proportion/rate between groups?</p>
+<ul>
+<li class="fragment">Ex: People who live in urban areas have an average of 0.3 more friends than people who live in rural areas.</li>
+</ul></li>
+<li class="fragment"><p>For numeric explanatory variables: how much of a change in the response variable can we expect for a given amount of change in the explanatory variable?</p>
+<ul>
+<li class="fragment">Ex: An increase of one hour of social media use per day is associated with a 5% greater chance of being diagnosed with depression.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="effect-sizes-1" class="slide level2">
+<h2>Effect sizes</h2>
+<ul>
+<li>What is “big enough” to be important?</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>It’s SUPER dependent on context (don’t believe the internet when it tells you otherwise)</li>
+</ul>
+</div>
+</section>
+<section id="effect-sizes-in-relationship-satisfaction" class="slide level2">
+<h2>Effect sizes in relationship satisfaction</h2>
+<div>
+<ul>
+<li class="fragment"><p>Study of 19000 people showed that people who met their spouses online were less likely to divorce (p &lt; .002) and more likely to have high marital satisfaction (p &lt; .001) than those who met their spouses offline.</p></li>
+<li class="fragment"><p>But what about the effect sizes?</p>
+<ul>
+<li class="fragment">Divorce rate: offline 7.67%; online 5.96%</li>
+<li class="fragment">Happiness (1-7 scale): offline 5.48; online 5.64</li>
+</ul></li>
+<li class="fragment"><p>It’s statistically significant, but is it important?</p></li>
+</ul>
+</div>
 
-</section>
-<section id="exercise-q4-whats-a-p-value" class="slide level2">
-<h2>Exercise Q4: What’s a p value?</h2>
-<p>A. A measurement of the effect size in a statistical analysis B. The probability of drawing a sample equal to or more extreme than the one you have, assuming the null hypothesis is true. C. The probability that the null hypothesis is true. D. The probability that the alternative hypothesis is true.</p>
-</section>
-<section id="problems-with-p-values" class="slide level2">
-<h2>Problems with p values</h2>
+<aside><div>
+<p>Sources: 1. Nuzzo, R. Scientific method: Statistical errors. Nature 506, 150–152 (2014). https://doi.org/10.1038/506150a 2. Cacioppo, J. T., Cacioppo, S., Gonzagab, G. C., Ogburn, E. L. &amp; VanderWeele, T. J. Proc. Natl Acad. Sci. USA 110, 10135–10140 (2013).</p>
+</div></aside></section>
+<section id="different-methods-different-results" class="slide level2">
+<h2>Different methods; different results</h2>
 <ul>
-<li>arbitrary cutoffs</li>
-<li>file drawer problem</li>
-<li>doesn’t pay attention to whether the effect is important</li>
-<li>sometimes you reject when you shouldn’t (5% of the time)</li>
-<li>sometimes you don’t reject when you should</li>
+<li>P hacking: making different decisions about who to include/exclude or what your variables should be can change results dramatically</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Different statistical methods can also give different results</li>
+</ul>
+</div>
+</section>
+<section id="different-methods-different-results-1" class="slide level2">
+<h2>Different methods; different results</h2>
+<ul>
+<li><img data-src="images/18/soccer.png"></li>
+</ul>
+
+<aside><div>
+<p>Source: FiveThirtyEight. https://fivethirtyeight.com/features/science-isnt-broken/#part2</p>
+</div></aside></section>
+<section id="so-what-do-we-do" class="slide level2">
+<h2>So what do we do??</h2>
+<div>
+<ul>
+<li class="fragment">Descriptive statistics! Pay attention to how big your effects are. Statistical significance alone doesn’t make something important. Are the effects big enough to be meaningful?</li>
+<li class="fragment">Be humble and be patient. One study doesn’t prove something. But evidence accumulates over time.</li>
+<li class="fragment">Repeat things. If you find the same result in two datasets, or if you find the same result using different methods, it’s more likely to be real and meaningful.</li>
+</ul>
+</div>
+</section>
+<section id="evidence-accumulates" class="slide level2">
+<h2>Evidence accumulates</h2>
+
+<img data-src="images/18/soccer.png" class="r-stretch"></section>
+<section id="objectivity-in-statistics" class="slide level2">
+<h2>Objectivity in statistics</h2>
+<div>
+<ul>
+<li class="fragment"><p>Objective analysis: 100% impartial, value-free, and unbiased</p>
+<ul>
+<li class="fragment">Sometimes people think that if something is supported by statistics—ie, if the work is quantitative—it’s automatically objective (and qualitiative work is automatically not objective)</li>
+</ul></li>
+<li class="fragment"><p>But statistics has always reflected the values, beliefs, and experiences of those who practice it—just like qualitative methods, but more sneakily</p></li>
+<li class="fragment"><p><em>Wait a minute—how do my values have anything to do with how I run a hypothesis test??</em></p></li>
+</ul>
+</div>
+</section>
+<section id="exercise-q3" class="slide level2">
+<h2>Exercise Q3</h2>
+<ul>
+<li>Values/beliefs/experiences come into it when analysts make decisions.</li>
+<li>Brainstorm: what are some decisions that people have to make in the course of an analysis?</li>
 </ul>
 </section>
-<section id="solutions-best-analysis-practices" class="slide level2">
-<h2>Solutions: best analysis practices</h2>
+<section id="a-few-examples-of-statistical-decisions" class="slide level2">
+<h2>A few examples of statistical decisions</h2>
+<div>
 <ul>
-<li>descriptive statistics! pay attention to effect sizes.</li>
-<li>repeat things! use different data or different analysis techniques. If you get the same thing twice you’re less likely to be wrong.</li>
+<li class="fragment">What questions to ask</li>
+<li class="fragment">What data to use or collect (and from who)</li>
+<li class="fragment">What variables to use and how to measure them</li>
+<li class="fragment">What statistical methodology to use</li>
+<li class="fragment">Which results to report</li>
+<li class="fragment">How to interpret them</li>
+</ul>
+</div>
+</section>
+<section id="statistics-are-not-bad" class="slide level2">
+<h2>Statistics are not bad!</h2>
+<div>
+<ul>
+<li class="fragment">No method is 100% objective. But they can still be tremendously useful.</li>
+<li class="fragment">Statistics can be rigorous and fair while also being guided by analysts’ experiences and worldviews</li>
+<li class="fragment">Analysts’ values/experiences can <em>strengthen</em> statistics rather than compromise it</li>
+</ul>
+</div>
+</section>
+<section id="good-statistical-practice" class="slide level2">
+<h2>Good statistical practice</h2>
+<ul>
+<li>A lot has been written about how to do statistics better—in particular, feminist and antiracist scholarship</li>
+<li>Is what you’re reading using good practices?</li>
+<li>Is your own work using good practices?</li>
 </ul>
 </section>
-<section id="objectivity-no-one-is-objective" class="slide level2">
-<h2>Objectivity: no one is objective</h2>
+<section id="good-practices-the-highlights" class="slide level2">
+<h2>Good practices: the highlights</h2>
 <ul>
-<li>mesearch is helpful sometimes</li>
+<li><p>Transparency!</p>
+<ul>
+<li>Analysts should talk about decisions, assumptions, and limitations</li>
+<li>If work sounds super sensational, makes sweeping conclusions, or doesn’t come with a list of caveats, there’s probably a lack of transparency. Good science is slow and gradual!</li>
+</ul></li>
 </ul>
 </section>
-<section id="statistics-reflects-biases" class="slide level2">
-<h2>Statistics reflects biases</h2>
+<section id="good-practices-the-highlights-1" class="slide level2">
+<h2>Good practices: the highlights</h2>
 <ul>
-<li>It’s not objective</li>
-<li>We make choices that have implications</li>
-<li>Treating all members of a group as the same</li>
-<li>Reference categories</li>
-<li>How we pick categories–what options are offered. Treating categories as fixed when maybe they shouldn’t be.</li>
-<li>How to combat? Make good choices. If you can’t fix it, you can point it out as a limitation</li>
+<li><p>P values are fine, but think about effect sizes too!</p>
+<ul>
+<li>Analysis is most powerful when both are used together</li>
+<li>We &lt;3 descriptive statistics!</li>
+<li>Be skeptical of work that claims a significant effect and tells you nothing about how big it is</li>
+</ul></li>
 </ul>
 </section>
-<section id="media-reports-use-josephs-material" class="slide level2">
-<h2>Media reports: use Joseph’s material</h2>
+<section id="good-practices-the-highlights-2" class="slide level2">
+<h2>Good practices: the highlights</h2>
+<ul>
+<li>Be mindful of how people treat and talk about social categories</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p>Categories like sex and race don’t “cause” social effects</p>
+<ul>
+<li>Sex<em>ism</em> and rac<em>ism</em> that people in different categories experience differently cause social effects</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Not all people in a category will experience the same thing</p>
+<ul>
+<li>Statistical results are always approximations–there’s a lot of variation in individual experiences!</li>
+<li>Did the analyst consider the possibility of intersectional effects?</li>
+<li>Don’t believe sweeping claims about entire groups: “All Asian-Americans…”; “People without college degrees need to do X…”</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Whose experience is treated as the norm and why?</p>
+<ul>
+<li>Older work tends to treat White people and men as a baseline, and compare other groups’ experiences against theirs… but there are more principled approaches</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="ethics" class="slide level2">
-<h2>Ethics?</h2>
+<section id="the-bottom-line" class="slide level2">
+<h2>The bottom line</h2>
+<div>
+<ul>
+<li class="fragment">Statistics is a useful and powerful tool!</li>
+<li class="fragment">But it’s not magic—it won’t <em>automatically</em> give good results.</li>
+<li class="fragment">Analysts have a lot of choices to make: what questions are answered, how they’re answered, how the results are interpreted</li>
+<li class="fragment">How those choices are made is important! And we’re figuring out all the time how to do it better.</li>
+</ul>
+</div>
+</section>
+<section id="were-all-done" class="slide level2">
+<h2>We’re all done!</h2>
+<ul>
+<li>Determine topic ✓</li>
+<li>Find data; learn what observations and variables are available ✓</li>
+<li>Write research question ✓</li>
+<li>Describe distributions of relevant variables ✓</li>
+<li>Prepare data frame for analysis ✓</li>
+<li>Describe relationships between variables ✓</li>
+<li>Perform statistical tests/write models ✓</li>
+<li>Communicate results ✓</li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="r-stack">
+<p><img data-src="images/19/thanks.png"></p>
+</div>
 
 
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><img src="images/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
 </div>
-</section></section>
+<aside><div>
+<p>https://www.therandomvibez.com/wp-content/uploads/2017/07/thank-you-meme-puppy.jpg</p>
+</div></aside></section>
     </div>
   </div>
 
