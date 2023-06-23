@@ -88,7 +88,7 @@ The required elements of this component are as follows:
 ## Grading
 
 |                                                                                                              |     |
-|----------------------------------------------|--------------------------|
+|--------------------------------------------------------------------------------------------------------------|-----|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 20% |
 | Part 1                                                                                                       | 35% |
 | Part 2                                                                                                       | 35% |
