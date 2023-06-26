@@ -9,6 +9,52 @@ The final assignment of the semester is to compile the analysis you've done into
 
 The requirements for this paper are below. I intend that you are able to pull in some of this information from the previous three components of this project (the proposal, descriptive statistics, and results). However, you must edit to ensure that your report meets all requirements listed here, all your code runs, and everything reads well as a cohesive whole. You must also address any relevant feedback you received on previous components. **Do not just paste your three previous assignments together in one document; this will not meet requirements and will score poorly.**
 
+## Workshop questions
+
+Read your group member's paper. Then create a new GitHub issue on their repository, copy and paste in these questions, and answer them.
+
+### Introduction
+
+-   Did the writer clearly state the research question and target population?
+-   Did the writer clearly and compellingly explain why we should care about the answer to the research question?
+-   How could this section be improved?
+
+### Data and methodology
+
+-   Did the writer adequately describe their data? Things that should be included: Observational study or an experiment? Who or what do the observations represent? Why is this data a good fit for the research question?
+-   Did the writer provide the variables they will use in their analysis?
+    -   And tell you how they are measured in the data--eg, whether they are numeric, categorical, etc, and what the response options are?
+    -   And provide and discuss appropriate univariate descriptive statistics (mean/median/quartiles or table)?
+    -   And tell you what purpose each variable serves in analysis: explanatory, response, or something else?
+-   Did the writer note what kind of hypothesis test they would use?
+-   How could this section be improved?
+
+### Results
+
+-   Did the writer include an appropriate figure showing the relationship between their explanatory and response variables?
+
+-   Did they include the p value from their hypothesis test? Did they correctly state whether they reject or fail to reject the null?
+
+-   Is their interpretation of their results clear and tied back to their research question? (ie, do they go beyond "I reject the null hypothesis"---what does the decision mean for the answer to the research question?)
+
+-   Do the writer's conclusions about the research question follow logically from the results presented?
+
+-   How could this section be improved?
+
+### Discussion and conclusion
+
+-   Are the writer's conclusions clear?
+-   Does the writer discuss at least two possible limitations of their results? Are these limitations reasonable?
+-   Does the writer provide ideas for future work?
+-   How could this section be improved?
+
+### Writing and organization
+
+-   Is the writing clear, concise, and error-free?
+-   Is content included in the right sections?
+-   Does the flow of the paper make sense?
+-   How could this element be improved?
+
 ## Timeline
 
 Upload a full draft to GitHub by the start of class on **Monday June 26** for peer review. The final revised draft is due on **Wednesday June 28, 11:59pm**.

@@ -122,7 +122,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|------------------------------------------------------------|------------|
+|--------------------------------------------------------------------------------------------------------------|-----|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |
