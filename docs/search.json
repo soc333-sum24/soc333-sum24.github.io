@@ -73,7 +73,7 @@
     "href": "computing-clonerepo.html",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
     "section": "",
-    "text": "You will begin most assignments and exercises in this class by “cloning” a git repository containing template documents hosted in our course organization on GitHub. “Cloning” simply means creating your own local copy of the files the repository contains. It is equivalent to downloading project instructions from Sakai. The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked. This makes it easy to incorporate your changes into the online version and vice versa.\n\n\n\nGo to the course organization (https://github.com/soc333-sum24). Click on the repo you want to work on.\n\n\n\n\n\n\n\nImportant\n\n\n\nFor each assignment, you will see a template repo and your individual repo. Your individual repo will have your name appended on the end. You should clone your individual repo. You will not be able to push changes to template repos.\n\n\n\nClick on the green CODE button. Select HTTPS (this might already be selected by default). Click on the clipboard icon to copy the repo URL.\n\n\n\n\n\n\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work.",
+    "text": "You will begin most assignments and exercises in this class by “cloning” a git repository containing template documents hosted in our course organization on GitHub. “Cloning” simply means creating your own local copy of the files the repository contains. It is equivalent to downloading project instructions from Sakai. The main difference is that on GitHub, the files on the internet and the copies on your computer stay linked. This makes it easy to incorporate your changes into the online version and vice versa.\n\n\n\nGo to the course organization (https://github.com/soc333-sum24). Click on the repo you want to work on.\n\n\n\n\n\n\n\nImportant\n\n\n\nFor each assignment, you will see a template repo and your individual repo. Your individual repo will have your name appended on the end. You should clone your individual repo. You will not be able to push changes to template repos.\n\n\n\nClick on the green CODE button. Select HTTPS (this might already be selected by default). Click on the clipboard icon to copy the repo URL.\n\n\n\n\n\n\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\n\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work.",
     "crumbs": [
       "Computing",
       "Cloning and committing"
@@ -95,7 +95,7 @@
     "href": "computing-clonerepo.html#step-2-use-rstudio-to-copy-the-contents-to-your-computer",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
     "section": "",
-    "text": "In RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work.",
+    "text": "In RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nPaste the URL you copied in Step 1 into the box Repository URL. Again, please make sure to have HTTPS highlighted under Clone when you copy the address.\nChange the default directory to something you’ll be able to find later on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!\n\n\n\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nOpen the template files (typically .qmd files) and make and save your changes.\nRead on to learn how to use commits and pushes to submit your work.",
     "crumbs": [
       "Computing",
       "Cloning and committing"
@@ -117,7 +117,7 @@
     "href": "computing-clonerepo.html#step-2-stage-and-commit-changes",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
     "section": "Step 2: Stage and commit changes",
-    "text": "Step 2: Stage and commit changes\nIn the upper right hand corner of RStudio, you should see a pane with several tabs. One of those tabs is labeled “Git.” Click this, and you should see a list of some or all the files in your project directory.\n\nTo commit changes, first you have to stage them. Changes to multiple files can be included in one commit. Check the boxes next to your .html and .qmd files—this tells Git that you want to include all changes you’ve made to the qmd file and add in the new html file.\nThen, click the “Commit” button. This brings up a window in which you can see the changes you’ve made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click “Commit” again to finish the commit. Once everything is finished, you can close the popup window.",
+    "text": "Step 2: Stage and commit changes\nIn the upper right hand corner of RStudio, you should see a pane with several tabs. One of those tabs is labeled “Git.” Click this, and you should see a list of some or all the files in your project directory.\nTo commit changes, first you have to stage them. Changes to multiple files can be included in one commit. Check the boxes next to your .html and .qmd files—this tells Git that you want to include all changes you’ve made to the qmd file and add in the new html file.\n\nThen, click the “Commit” button. This brings up a window in which you can see the changes you’ve made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click “Commit” again to finish the commit. Once everything is finished, you can close the popup window.",
     "crumbs": [
       "Computing",
       "Cloning and committing"
@@ -128,7 +128,7 @@
     "href": "computing-clonerepo.html#step-3.-push-your-changes-to-github",
     "title": "How to access and submit your assignments: cloning, committing, and pushing",
     "section": "Step 3. Push your changes to GitHub",
-    "text": "Step 3. Push your changes to GitHub\nNow you’ve successfully logged your changes with Git. But Git is just a program that lives on your computer. In order for your changes to show up on GitHub, where I can see and grade them, you need to “push” your local commits back up to the remote repository. Essentially, you’re uploading your changes to the online version of the project.\nIn the menu bar of the Git pane, you should see a green up arrow. This is the push button, and when you click it, all of the commits you have made will be uploaded to your repository on GitHub.\nClick the green arrow to push your commit.",
+    "text": "Step 3. Push your changes to GitHub\nNow you’ve successfully logged your changes with Git. But Git is just a program that lives on your computer. In order for your changes to show up on GitHub, where I can see and grade them, you need to “push” your local commits back up to the remote repository. Essentially, you’re uploading your changes to the online version of the project.\nIn the menu bar of the Git pane, you should see a green up arrow. This is the push button, and when you click it, all of the commits you have made will be uploaded to your repository on GitHub.\n\nClick the green arrow to push your commit.",
     "crumbs": [
       "Computing",
       "Cloning and committing"
@@ -1710,7 +1710,7 @@
     "href": "slides/04-researchquestions.html#for-next-time",
     "title": "Research questions",
     "section": "For next time",
-    "text": "For next time\n\nNext lecture: Studies and sampling (the rest of what you need to know for the proposal)\nRead IMS chapter 2\nLook over instructions for the proposal (Project -&gt; Component 1: Proposal); start looking at data sets and thinking about research questions (bring drafts for peer review)",
+    "text": "For next time\n\nNext lecture: Studies and sampling (the rest of what you need to know for the proposal)\nRead IMS chapter 2\nLook over instructions for the proposal (Project -&gt; Component 1: Proposal); start looking at data sets and thinking about research questions (bring drafts for peer review)\n\n\n\n\n🔗 https://soc333-sum24.github.io/",
     "crumbs": [
       "Slides",
       "Lecture 4: Project and research questions"
@@ -4219,8 +4219,8 @@
     "objectID": "slides/04-researchquestions.html#first-an-update",
     "href": "slides/04-researchquestions.html#first-an-update",
     "title": "Research questions",
-    "section": "",
-    "text": "New course website!",
+    "section": "First, an update",
+    "text": "First, an update\n\nNew course website!",
     "crumbs": [
       "Slides",
       "Lecture 4: Project and research questions"

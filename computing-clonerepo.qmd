@@ -16,7 +16,7 @@ You will begin most assignments and exercises in this class by "cloning" a git r
 
 -   Click on the green **CODE** button. Select **HTTPS** (this might already be selected by default). Click on the clipboard icon to copy the repo URL.
 
-    ![](images/computingimages/clone.png)
+![](images/computingimages/clone.png)
 
 ## Step 2: Use RStudio to copy the contents to your computer
 
@@ -26,11 +26,9 @@ You will begin most assignments and exercises in this class by "cloning" a git r
 
 -   Change the default directory to **something you'll be able to find later** on your computer---I recommend making a folder just for this class, and keeping all of your repos in it!
 
-    ![](images/computingimages/clonelocal.png)
+![](images/computingimages/clonelocal.png)
 
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
-
-    ![](images/computingimages/yourfiles.png)
 
 -   Open the template files (typically .qmd files) and make and save your changes.
 
@@ -54,13 +52,11 @@ Most files will be set to automatically render (run everything and create a nice
 
 In the upper right hand corner of RStudio, you should see a pane with several tabs. One of those tabs is labeled "Git." Click this, and you should see a list of some or all the files in your project directory.
 
-![](images/computingimages/git_pane.png)
-
 To commit changes, first you have to stage them. Changes to multiple files can be included in one commit. Check the boxes next to your .html and .qmd files---this tells Git that you want to include all changes you've made to the qmd file and add in the new html file.
 
-Then, click the "Commit" button. This brings up a window in which you can see the changes you've made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click "Commit" again to finish the commit. Once everything is finished, you can close the popup window.
-
 ![](images/computingimages/commit.png)
+
+Then, click the "Commit" button. This brings up a window in which you can see the changes you've made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click "Commit" again to finish the commit. Once everything is finished, you can close the popup window.
 
 ## Step 3. Push your changes to GitHub
 
@@ -68,14 +64,12 @@ Now you've successfully logged your changes with Git. But Git is just a program 
 
 In the menu bar of the Git pane, you should see a green up arrow. This is the push button, and when you click it, all of the commits you have made will be uploaded to your repository on GitHub.
 
-Click the green arrow to push your commit.
-
 ![](images/computingimages/push.png)
+
+Click the green arrow to push your commit.
 
 ## Did it work? Check GitHub!
 
 If all worked as it should have, you should be able to see the commit you made on GitHub.
 
 Find the repository you're working on in [our course github organization](https://github.com/soc333-sum24). You should see the list of files in the repository, and your commit message should show up at the top and next to the the files you edited. If you click on these files, you should see the changes you made.
-
-![](images/computingimages/successful_commit.png)

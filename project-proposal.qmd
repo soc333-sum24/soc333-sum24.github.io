@@ -9,9 +9,9 @@ callout-icon: false
 
 To get some practice with our new computing workflow, you will write this assignment in a Quarto document.
 
-First, you need to locate and clone the repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c1_proposal_yourusername**. Clone that repository. Open the document called *c1_proposal.qmd*. This is a template document where you will put your work.
+First, you need to locate and clone the repository ([instructions](https://soc333-sum24.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/orgs/soc333-sum24/repositories) and find the repository called **c1_proposal_yourusername**. Clone that repository. Open the document called *c1_proposal.qmd*. This is a template document where you will put your work.
 
-Commit your changes regularly. When you are done, render the document and push your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
+Commit your changes regularly. When you are done, render the document and push your work to github ([instructions](https://soc333-sum24.github.io/computing-clonerepo.html#how-to-commit-and-push-changes))
 
 ## Workshop questions
 
@@ -122,7 +122,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|------------------------------------------------------------|------------|
+|--------------------------------------------------------|----------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |

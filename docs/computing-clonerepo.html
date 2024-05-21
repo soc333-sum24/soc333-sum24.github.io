@@ -300,19 +300,20 @@ Important
 </div>
 </div></li>
 </ul></li>
-<li><p>Click on the green <strong>CODE</strong> button. Select <strong>HTTPS</strong> (this might already be selected by default). Click on the clipboard icon to copy the repo URL.</p>
-<p><img src="images/computingimages/clone.png" class="img-fluid"></p></li>
+<li><p>Click on the green <strong>CODE</strong> button. Select <strong>HTTPS</strong> (this might already be selected by default). Click on the clipboard icon to copy the repo URL.</p></li>
 </ul>
+<p><img src="images/computingimages/clone.png" class="img-fluid"></p>
 </section>
 <section id="step-2-use-rstudio-to-copy-the-contents-to-your-computer" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-use-rstudio-to-copy-the-contents-to-your-computer">Step 2: Use RStudio to copy the contents to your computer</h2>
 <ul>
 <li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
 <li><p>Paste the URL you copied in Step 1 into the box <em>Repository URL</em>. Again, please make sure to have HTTPS highlighted under <em>Clone</em> when you copy the address.</p></li>
-<li><p>Change the default directory to <strong>something you’ll be able to find later</strong> on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!</p>
-<p><img src="images/computingimages/clonelocal.png" class="img-fluid"></p></li>
-<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p>
-<p><img src="images/computingimages/yourfiles.png" class="img-fluid"></p></li>
+<li><p>Change the default directory to <strong>something you’ll be able to find later</strong> on your computer—I recommend making a folder just for this class, and keeping all of your repos in it!</p></li>
+</ul>
+<p><img src="images/computingimages/clonelocal.png" class="img-fluid"></p>
+<ul>
+<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
 <li><p>Open the template files (typically .qmd files) and make and save your changes.</p></li>
 <li><p>Read on to learn how to use commits and pushes to submit your work.</p></li>
 </ul>
@@ -331,23 +332,21 @@ Important
 <section id="step-2-stage-and-commit-changes" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-stage-and-commit-changes">Step 2: Stage and commit changes</h2>
 <p>In the upper right hand corner of RStudio, you should see a pane with several tabs. One of those tabs is labeled “Git.” Click this, and you should see a list of some or all the files in your project directory.</p>
-<p><img src="images/computingimages/git_pane.png" class="img-fluid"></p>
 <p>To commit changes, first you have to stage them. Changes to multiple files can be included in one commit. Check the boxes next to your .html and .qmd files—this tells Git that you want to include all changes you’ve made to the qmd file and add in the new html file.</p>
-<p>Then, click the “Commit” button. This brings up a window in which you can see the changes you’ve made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click “Commit” again to finish the commit. Once everything is finished, you can close the popup window.</p>
 <p><img src="images/computingimages/commit.png" class="img-fluid"></p>
+<p>Then, click the “Commit” button. This brings up a window in which you can see the changes you’ve made. Enter a short label or message describing your commit in the text box in the upper right hand corner, then click “Commit” again to finish the commit. Once everything is finished, you can close the popup window.</p>
 </section>
 <section id="step-3.-push-your-changes-to-github" class="level2">
 <h2 class="anchored" data-anchor-id="step-3.-push-your-changes-to-github">Step 3. Push your changes to GitHub</h2>
 <p>Now you’ve successfully logged your changes with Git. But Git is just a program that lives on your computer. In order for your changes to show up on Git<em>Hub</em>, where I can see and grade them, you need to “push” your local commits back up to the remote repository. Essentially, you’re uploading your changes to the online version of the project.</p>
 <p>In the menu bar of the Git pane, you should see a green up arrow. This is the push button, and when you click it, all of the commits you have made will be uploaded to your repository on GitHub.</p>
-<p>Click the green arrow to push your commit.</p>
 <p><img src="images/computingimages/push.png" class="img-fluid"></p>
+<p>Click the green arrow to push your commit.</p>
 </section>
 <section id="did-it-work-check-github" class="level2">
 <h2 class="anchored" data-anchor-id="did-it-work-check-github">Did it work? Check GitHub!</h2>
 <p>If all worked as it should have, you should be able to see the commit you made on GitHub.</p>
 <p>Find the repository you’re working on in <a href="https://github.com/soc333-sum24">our course github organization</a>. You should see the list of files in the repository, and your commit message should show up at the top and next to the the files you edited. If you click on these files, you should see the changes you made.</p>
-<p><img src="images/computingimages/successful_commit.png" class="img-fluid"></p>
 
 
 </section>
