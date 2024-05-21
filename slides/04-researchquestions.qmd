@@ -2,6 +2,7 @@
 title: "Research questions"
 subtitle: "Lecture 4"
 date: "May 21, 2024"
+<<<<<<< HEAD
 format: 
   revealjs:
     slide-number: true
@@ -37,6 +38,7 @@ format:
     3.  Results (June 13; June 17)
     4.  Paper (June 18; June 24)
     5.  Presentation (June 20)
+
 :::
 
 ## Why two dates?
