@@ -2,7 +2,6 @@
 title: "Research questions"
 subtitle: "Lecture 4"
 date: "May 21, 2024"
-<<<<<<< HEAD
 format: 
   revealjs:
     slide-number: true
