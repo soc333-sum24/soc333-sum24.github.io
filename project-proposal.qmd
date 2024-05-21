@@ -81,13 +81,13 @@ I recommend the below data sets, all of which are included in openintro. Click o
 -   [`voter_count`](https://www.openintro.org/data/index.php?data=voter_count)
 -   [`yrbss`](https://www.openintro.org/data/index.php?data=yrbss)
 
-### Version to bring to class for peer review (Thursday May 25)
+### Version to bring to class for peer review (Thursday, May 23)
 
 You are required to propose a minimum of 2 research questions, to be answered with 2 separate data sets, that you're interested in potentially using for the final project. If you would like to receive feedback on more than two research questions, you may optionally submit additional questions. You will review each others' proposals in groups of 2-3. After peer review, you will be responsible for updating your draft and submitting for grading according to the requirements below.
 
 For each research question, you should:
 
--   Clearly state the specific research question. Make sure it fulfills the following requirements ([see slides](https://soc333-sum23.github.io/slides/03-computing.html#/title-slide) for more detail):
+-   Clearly state the specific research question. Make sure it fulfills the following requirements:
 
     -   Must fulfill the requirements of a good research question: specific, feasible, sociological
     -   Must involve a relationship between at least two variables
@@ -110,7 +110,7 @@ For each research question, you should:
 
     -   Use the `glimpse()` function to provide a first look at the data set.
 
-### Version to submit for grading (Tuesday May 30, 11:59pm)
+### Version to submit for grading (Tuesday, May 28, 11:59pm)
 
 After peer review, incorporate your peers' feedback into your draft. You should revise your questions if they need it. In addition, add \~1 paragraph of thoughts about which question you should ultimately choose to move forward with. In that paragraph, answer the following questions:
 
@@ -122,7 +122,7 @@ Submit one Quarto document containing your revised research questions and this s
 # Grading
 
 |                                                                                                              |     |
-|--------------------------------------------------------------------------------------------------------------|-----|
+|------------------------------------------------------------|------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 30% |
 | Research questions                                                                                           | 20% |
 | Data set descriptions                                                                                        | 20% |
