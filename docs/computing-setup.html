@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.333">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -63,8 +63,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./computing-clonerepo.html" rel="next">
-<link href="./course-links.html" rel="prev">
+<link href="./project-description.html" rel="next">
+<link href="./course-syllabus.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -91,18 +97,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
 <meta property="og:title" content="SOCIOL 333 - Computing setup instructions">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://soc333-sum23.github.io/images/computingimages/rstudio.png">
-<meta property="og:site-name" content="SOCIOL 333">
-<meta property="og:image:height" content="640">
-<meta property="og:image:width" content="936">
+<meta property="og:description" content="Homepage for SOCIOL 333 - Quantitative Analysis of Sociological Data, Summer 2024">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 
 <body class="nav-sidebar docked">
@@ -111,13 +116,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-setup.html">Setup</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-setup.html">Setup</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -126,17 +131,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/soc333-sum23/soc333-sum23.github.io" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">SOCIOL 333</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/soc333-sum23/soc333-sum24.github.io" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://sakai.duke.edu/portal/directtool/3eb7ea22-0cb1-464a-b496-8f932e5315a0/" title="Sakai" class="quarto-navigation-tool px-1" aria-label="Sakai"><i class="bi bi-person-fill"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -166,18 +171,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Support</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Useful links</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -193,18 +186,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./computing-setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setup</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./computing-clonerepo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cloning and committing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cheatsheets</span></a>
   </div>
 </li>
       </ul>
@@ -224,230 +205,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">General information</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Instructions</span></a>
+ <span class="menu-text">Slides</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-proposal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 1: Proposal</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-descriptives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 2: Descriptive stats</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 3: Results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 4: Presentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 5: Paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">Examples</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c1_proposal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 1: Proposal</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c2_descriptives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 2: Descriptive stats</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c3_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 3: Inferential results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c5-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 5: Paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text">Exercise solutions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-5-31-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5/31: Filtering</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-01-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/01: Creating variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-06-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/06: Single variable plots</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-13-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/13: Hypothesis tests 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-14-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/14: Hypothesis tests 2</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/19-wrapup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 19: Best practices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/18-pvals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 18: Limitations and future work</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/17-interpretingresults.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 17: Interpreting results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/16-hypothesistests4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 16: Hypothesis tests pt 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/15-hypothesistests3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 15: Hypothesis tests pt 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/14-hypothesistests2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 14: Hypothesis tests pt 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/13-hypothesistests1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 13: Hypothesis tests pt 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/12-plots2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 12: Plotting multiple variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/11-plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 11: Plotting one variable</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/10-describingpt4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 10: Pipes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/09-describingpt3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 9: Creating new variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/08-describingpt2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 8: Filtering data frames</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/07-describingpt1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 7: Summary statistics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/06-workshopping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 6: Workshopping proposals</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/05-studiessamples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 5: Studies and samples</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/04-researchquestions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 4: Project and research questions</span></a>
-  </div>
-</li>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./slides/03-computing.html" class="sidebar-item-text sidebar-link">
@@ -471,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -500,19 +268,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-6-create-a-personal-access-token-on-github" id="toc-step-6-create-a-personal-access-token-on-github" class="nav-link" data-scroll-target="#step-6-create-a-personal-access-token-on-github">Step 6: Create a Personal Access Token on GitHub</a></li>
   <li><a href="#step-7-store-the-personal-access-token-to-connect-rrstudio-and-github" id="toc-step-7-store-the-personal-access-token-to-connect-rrstudio-and-github" class="nav-link" data-scroll-target="#step-7-store-the-personal-access-token-to-connect-rrstudio-and-github">Step 7: Store the personal access token to connect R/RStudio and GitHub</a></li>
   </ul></li>
-  <li><a href="#part-d-testing-your-new-setup" id="toc-part-d-testing-your-new-setup" class="nav-link" data-scroll-target="#part-d-testing-your-new-setup">Part D: Testing your new setup!</a>
-  <ul class="collapse">
-  <li><a href="#step-8-clone-the-test-repo-start-a-new-rstudio-project" id="toc-step-8-clone-the-test-repo-start-a-new-rstudio-project" class="nav-link" data-scroll-target="#step-8-clone-the-test-repo-start-a-new-rstudio-project">Step 8: Clone the test repo &amp; start a new RStudio project</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#this-isnt-working" id="toc-this-isnt-working" class="nav-link" data-scroll-target="#this-isnt-working">This isn’t working…</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/computing-setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/edit/main/computing-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="./computing-setup.html">Setup</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Computing setup instructions</h1>
 </div>
@@ -527,13 +290,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <section id="computing-in-sociol-333" class="level1">
 <h1>Computing in Sociol 333</h1>
 <p>This page will introduce you to the course computing workflow. We will set up everything you need in order to start using R, RStudio, Git, and GitHub–four powerful programs that you will be learning to use to analyze data in this class.</p>
 <p>R is a programming language, like Python, C++, Java, and many others. That means it can be used to do all kinds of things. Its primary strength, however, is data analysis, and it is used by many social scientists, statisticians, data scientists, and others to clean, model, transform, and visualize all kinds of data.</p>
-<p>RStudio is an interface for using R--basically, a nice text editor with bells and whistles that are specific to writing code. There are other ways to write programs in R, but most people use RStudio because it is both powerful and free.</p>
+<p>RStudio is an interface for using R–basically, a nice text editor with bells and whistles that are specific to writing code. There are other ways to write programs in R, but most people use RStudio because it is both powerful and free.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -566,7 +331,7 @@ Tip
 <p><strong>The bad news:</strong> It’s a tedious and nonintuitive process. If you find it frustrating and/or confusing, it’s not just you. Stick with it, and ask when you get stuck–we will take as much time as necessary to make sure it works for everyone.</p>
 <section id="goals" class="level2">
 <h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<p>By time you go through the steps on this page and in the <a href="https://github.com/soc333-sum23/tech-setup">tech setup repo</a> that it pairs with, you will…</p>
+<p>By time you go through the steps on this page and in the repo cloning page that it pairs with, you will…</p>
 <ul>
 <li>Have a functioning R, RStudio, Git, and GitHub setup</li>
 <li>Have an introduction to our course workflow using R, RStudio, Git, and GitHub</li>
@@ -664,30 +429,10 @@ Note
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Enter the personal access token you copied in Step 6 when prompted.</p>
-</section>
-</section>
-<section id="part-d-testing-your-new-setup" class="level2">
-<h2 class="anchored" data-anchor-id="part-d-testing-your-new-setup">Part D: Testing your new setup!</h2>
-<section id="step-8-clone-the-test-repo-start-a-new-rstudio-project" class="level3">
-<h3 class="anchored" data-anchor-id="step-8-clone-the-test-repo-start-a-new-rstudio-project">Step 8: Clone the test repo &amp; start a new RStudio project</h3>
-<p>Everything should now be set up! Now, we’ll test whether it is working correctly.</p>
-<ul>
-<li><p>Go to the course organization at <a href="https://github.com/soc333-sum23" class="uri">https://github.com/soc333-sum23</a>. Click on the repo called <strong>tech-setup-yourname</strong>. You will copy these files to your computer (known as “cloning”), make a change, and upload your changes back to GitHub (known as “pushing”) to confirm that everything is working correctly.</p></li>
-<li><p>Follow the “How to clone a git repo” section of <a href="https://soc333-sum23.github.io/computing-clonerepo.html">these instructions</a> to clone the repo so that you can open its files in RStudio.</p></li>
-<li><p>In RStudio, click <em>tech-setup-test.qmd</em> in the files pane (bottom right) to open the template Quarto file.</p></li>
-<li><p>Follow the instructions in the file to make a change and commit it.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="this-isnt-working" class="level1">
-<h1>This isn’t working…</h1>
-<ul>
-<li>If you get stuck, come talk to me.</li>
-<li>Depending on your setup, it may be simpler to access RStudio through containers. Containers allow you to code through a browser, meaning you can skip all the downloading steps (though you still must connect RStudio and GitHub). See <a href="https://sta199-f22-1.github.io/labs/lab-0.html">these instructions</a> for how to set this up.</li>
-</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -732,6 +477,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -800,13 +572,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -885,10 +659,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -898,8 +689,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -911,7 +711,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -955,6 +878,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -980,6 +904,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1041,26 +991,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./course-links.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Useful links</span>
+      <a href="./course-syllabus.html" class="pagination-link" aria-label="Syllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./computing-clonerepo.html" class="pagination-link">
-        <span class="nav-page-text">Cloning and committing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./project-description.html" class="pagination-link" aria-label="General information">
+        <span class="nav-page-text">General information</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2023, Aidan Combs. Credit to <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a> and her <a href="https://sta199-f22-1.github.io/">STA199 course</a>, on which the materials and website for SOCIOL333 are based</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2024, Suzanne Schenewerk. Credit to <a href="https://aidancombs.netlify.app/">Aidan Combs</a>, whose <a href="https://soc333-sum23.github.io/">SOCIOL 333</a> formed the basis for this course and website, and to <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a> and her <a href="https://sta199-f22-1.github.io/">STA199 course</a>, on which the previous version of SOCIOL333 was based.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/edit/main/computing-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 

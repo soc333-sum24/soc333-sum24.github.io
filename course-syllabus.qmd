@@ -1,104 +1,85 @@
 ---
 title: "SOCIOL333: Quantitative Analysis of Sociological Data Syllabus"
-subtitle: "Instructor: Aidan Combs, Reuben-Cooke 141 \n\n Summer Term 1, 2023"
+subtitle: "Instructor: Suzanne Schenewerk, Reuben-Cooke 135 \n\n Summer Term 1, 2024"
 ---
 
 ::: {.content-visible when-format="html"}
-[**Click here**](soc333-sum23-syllabus.pdf) **to download a PDF copy of the syllabus.**
+[**Click here**](soc333-sum24-syllabus.pdf) **to download a PDF copy of the syllabus.**
 :::
 
-## Class times
+## Introduction
 
-We will meet from 11:15-12:30 Monday through Thursday (except Memorial Day and Juneteenth) in 329 Reuben-Cooke. See the [schedule](index.html) for more information.
+Social science researchers use a variety of methods to investigate questions about the social world. The purpose of this course is to introduce you to quantitative research methods. On a basic level, this means teaching you how to perform statistical analysis of data, which we will do using the programming language R. But ‘research’ is more than plugging numbers into formulae: it involves developing research questions, finding (or collecting) and evaluating datasets, and using well-informed statistical methods to analyze that data. In this course, we will discuss and practice each step of that process, in order to develop your skills as social scientists.
 
-## Office hours
-
-I will be available for 30 minutes before and after each class period. If these times do not work for you, let me know and we can set up an appointment.
-
-## Textbooks
-
-Our textbook is [**freely available online**](https://openintro-ims.netlify.app/). It is also possible to order a hard copy if you prefer.
-
-|                                                                         |                          |                                   |                                                                                                                                  |
-|------------------|------------------|------------------|--------------------|
-| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
+Additionally, good scientific research is well-documented and reproducible–that is, another researcher who comes after you would be able to both understand your methods and to replicate your results. As you develop your analytical computing skills over the summer, you will also be introduced to methods and best practices for ensuring this is the case–both so that you can understand what you’ve done, after the fact, and so that other social scientists can build on your work in the future.
 
 ## Course learning objectives
 
-By the end of the semester, you will...
+By the end of the semester, students will...
 
 -   learn to use statistics to shed light on questions about the social world
--   learn to make statistical choices and interpret results in ways consistent with feminist and antiracist scholarship
--   learn to load, manipulate, and visualize data in R
--   learn to effectively communicate results through written assignments and project presentations
--   learn to critically analyze the use of statistics in the world, and know what statistics can and can't tell you about a problem.
 
-## Attendance
+-   learn to critically analyze the use of statistics in the world, and understand what statistics can and cannot answer
 
-You are expected to attend every lecture. Attending class every day will make it much easier for you to complete our in-class exercises. In addition, you will have to attend class on workshop days in order to receive full points on the project components.
+-   learn to compose a clear and testable research question
 
-### What to bring to class
+-   learn to build models and interpret results using sound statistical reasoning and best principles of scholarship, and to justify those choices
 
-Please bring a laptop to every class. You will need it to complete in-class exercises.
+-   learn principles of reproducible research, and develop a well-structured computing workflow
 
-## Course community
+-   use the R programming language in the RStudio IDE to load, manipulate, analyze, and visualize data
 
-### Duke Community Standard
+-   use Git and GitHub to facilitate collaborative and reproducible research
 
-As a student in this course, you have agreed to uphold the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) as well as the practices specific to this course.
+-   form and test their own sociological research question, and present their results to their peers with illustrative visualizations
 
-```{=html}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-```
-### Inclusive community
+## Course policies
 
-It is my intent that students from all backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with [Duke's Commitment to Diversity and Inclusion](https://provost.duke.edu/initiatives/commitment-to-diversity-and-inclusion). Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
+### Class times
 
-Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:
+We will meet from 11:00-12:15 Monday through Thursday (except Memorial Day and Juneteenth) in Reuben-Cooke 129. See the [schedule](index.html) for more information.
 
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me know.
+Fridays will be available as work days, time to meet with me, or make-up days, in the event that we need to change or catch up with the course schedule.
 
-### Pronouns
+### Office hours
 
-Pronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive. Please update your gender pronouns in Duke Hub. You can learn more at the [Center for Sexual and Gender Diversity's website](https://students.duke.edu/belonging/icr/csgd/pronouns/).
+I will be available for 30 minutes before each class period, and by appointment.
 
-### Accessibility
+### Communication with me
 
-If there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.
+I am available to answer questions both during office hours and via email. I will respond to emails within 24 hours Monday through Friday, but be aware, I don't regularly check my email before 9 am or after 7 pm, and I can't guarantee I will be reachable over the weekend.
 
-The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with the Student Disability Access Office to [request or update accommodations](https://access.duke.edu/requests) under these circumstances.
+### Required materials
 
-### Communication
+Our textbook is [**freely available online**](https://openintro-ims.netlify.app/). You are not required to purchase a physical copy.
 
-All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [soc333-sum23.github.io/](https://soc333-sum23.github.io/).
+|                                                                         |                          |                                   |                                                                                                                                  |
+|------------------|------------------|------------------|-------------------|
+| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
 
-Announcements will be emailed through Sakai Announcements periodically. Please check your email regularly to ensure you have the latest announcements for the course.
+You will also need regular access to a laptop computer, which you must bring to every class meeting. If you do not have access to a laptop, let me know as soon as possible so we can get access to one for you to use in this course.
 
-### Where to get help
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [schenewerk.github.io/soc333-sum24](https://schenewerk.github.io/soc333-sum24/).
 
-If you have a question during class, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone. I will also be available before and after each class session as well as by email.
+### Attendance
 
-Check out the [course support](https://soc333-sum23.github.io/course-support.html) tab for more resources.
+You are expected to attend every lecture. In addition to ensuring that you have in-class instruction time to cover material and ask questions, daily attendance will provide time for you to work on (and get help with) the daily exercises. You will need to bring a laptop to every class for this purpose.
 
-### Email
+If you have to miss class, let me know as soon as possible. You will still be expected to complete that day's in-class exercises, but you will have to do so on your own.
 
-If you have a question you do not want to bring up in class, you are welcome to email me directly. Barring extenuating circumstances, I will respond to emails within 48 hours Monday - Friday. I will respond more slowly to emails sent Friday evening - Sunday.
+-   **Please do not come to class if you are ill,** especially if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested.
+-   **Inclement weather:** In the event of inclement weather or other events that prohibit class attendance, I will notify you how we will make up missed course content and work. This may include asynchronous catch-up methods, changes to the course calendar, and/or meeting on a Friday.
+-   **Religious accommodations:** Students are permitted by university policy to be absent from class to observe a religious holiday. The Trinity College of Arts & Sciences has established procedures for students to notify their instructors of an absence for religious observance. Please submit requests for religious accommodations at the beginning of the semester. You can find the policy and relevant notification form [here](https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays).
 
-## Assessments
+### Grading
 
-The assessments in this course are designed to help you successfully achieve the course learning objectives.
+Daily exercises are due two hours before the next class meeting where they are assigned, and are graded for completion. Because this course is about practicing problem-solving, you will receive full credit for the daily exercises as long as you’ve made an honest attempt to answer each question. It is always to your benefit to try! If you submit at least 80% of the daily exercises on time, you will receive full credit for the “in-class exercises” portion of your grade.
 
-### In-class exercises
+I will do my best to grade assignments accurately and consistently. I will only change a grade later if I have made a clear error. To ask a question about your grade to request a regret, email me.
 
-We will spend a significant portion of our class time learning to apply concepts from lectures by doing in-class exercises. You will be expected to turn in the exercises from lecture before the next class period. For example, you will be expected to submit the Tuesday exercises before class starts on Wednesday. These will be graded for completion--i.e., you will get full points if you show that you made a good-faith attempt to answer all parts. You will receive full points for the in-class exercise portion of the final grade if you submit at least 80% of the exercises on time.
+### Late work
 
-### Project
-
-The purpose of the [project](https://soc333-sum23.github.io/project-description.html) is to apply what you've learned throughout the semester to analyze a sociological research question of your choice. You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester. You will bring a draft of most components to class to workshop with your classmates before submitting them for grading. Your grade will be determined by both the quality of your submitted work and your participation in the peer feedback process. More information about the project will be provided during the semester.
-
-## Grading
+Project components and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.
 
 The final course grade will be calculated as follows:
 
@@ -128,41 +109,54 @@ Your final letter grade will be determined based on the following thresholds:
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
 
-### Regrade requests
+### Extenuating circumstances
 
-I do everything in my power to grade assignments consistently, accurately, and fairly the first time. I will only change a grade later if I made a clear and undeniable error--doing otherwise compromises the fairness and consistency I strive for.
+If there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know.
 
-To ask a question about your grade or request a regrade, please email me.
+### Academic integrity
 
-## Course policies
+The process of research is iterative and collaborative. However, you are required to be the principal author of your own work. This includes your code. The purpose of this course is to teach you a skill, not how to find a specific answer.
 
-### Academic honesty
+-   You may collaborate and consult with other students; however, you may not directly share or copy code with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
+-   Unless stated otherwise, you may (and should!) make use of online resources such as StackOverflow when completing assignments. If you make use of code directly from an outside source, you must state where you found the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
+-   The use of “AI” resources like ChatGPT is not necessary for this course, and is strongly discouraged.
 
 **TL;DR: Don't cheat!**
 
-Please abide by the following as you work on assignments in this course:
-
--   **Collaboration:** You may discuss assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
--   **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
-
 Any violations in academic honesty standards as outlined in the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) and those specific to this course will automatically result in a 0 for the assignment and will be reported to the [Office of Student Conduct](https://studentaffairs.duke.edu/conduct) for further action.
 
-### Late work
+## Assessments
 
--   Project components and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.
+The assessments in this course are designed to help you successfully achieve the course learning objectives.
 
-### Extenuating circumstances
+### In-class exercises
 
-Things happen that make it impossible to submit every assignment on time. The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.
+Much of our class time will be devoted to practical, in-class exercises, where you will practice applying the concepts from the lecture. You will be expected to turn in the exercises from the previous lecture an hour before our next class meeting.
 
-In the case that you must miss class, please let me know. My slides will be made accessible to all students. You will still be expected to complete that day's in-class exercises, but you will have to do so on your own.
+These exercises will be graded for completion–i.e., if you have made a good-faith attempt to answer all parts of the exercise, you will receive full credit. You will receive full points for the in-class exercise portion of the final grade if you submit at least 80% of the exercises on time
 
-If there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know, as they can be a resource.
+### Project
 
-*Note: If you've read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!*
+During this course, you will be developing a research project to analyze a sociological research question of your choice. The purpose of the [project](https://soc333-sum24.github.io/project-description.html) is to apply what you've learned throughout the semester to a question which interests you.
 
-### Attendance policy
+You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester. You will bring a draft of most components to class to workshop with your classmates before submitting them for grading, and your grade for each component will be determined by both the quality of your final, submitted work and your participation in the peer feedback process. More information about the project will be provided during the semester.
 
--   **COVID Symptoms, Exposure, or Infection:** Student health, safety, and well-being are the university's top priorities. To help ensure your well-being and the well-being of those around you, **please do not come to class** **if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested.** If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, [contact student health](https://coronavirus.duke.edu/testing/#symptomatic-testing) ([dshcheckin\@duke.edu](mailto:dshcheckin@duke.edu), 919-681-9355). Learn more about current university policy related to COVID-19 at [https://coronavirus.duke.edu](https://coronavirus.duke.edu/). To keep the university community's safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.
--   **Inclement weather:** In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.  Asynchronous catch-up methods may apply.
--   **Religious accommodations:** Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: <https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays>.
+## Course community
+
+### Duke Community Standard
+
+As a student in this course, you have agreed to uphold the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) as well as the practices specific to this course.
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+```
+### Accessibility and inclusion
+
+I intend for my classroom to be an inclusive space for students with a diversity of perspectives and experiences. I intend to present material and activities that align with [Duke's Commitment to Diversity and Inclusion](https://provost.duke.edu/initiatives/commitment-to-diversity-and-inclusion). Your suggestions are encouraged and appreciated.
+
+I expect you to engage respectfully with your peers, as fellow members of the Duke community and as human beings.
+
+Further, this course is intended to be a resource for you! I am not teaching to hear myself talk–my goal is to help you learn. To that end, if you require academic accommodations in order to engage fully with the class material, contact the [Student Disability Access Office (SDAO)](https://access.duke.edu/students) for assistance with course accommodations.
+
+If you need additional academic support beyond what I can provide in class and in my office hours, consider contacting the [Academic Resource Center (ARC)](https://arc.duke.edu/). The ARC offers free support services to Duke undergraduates, including academic skill development, learning consultations, peer tutoring, and ADHD/LD support.

@@ -7,23 +7,23 @@ project:
 website:
   page-navigation: true
   title: "SOCIOL 333"
-  description: "Homepage for SOCIOL 333 - Quantitative Analysis of Sociological Data, Summer 2023 Term 1"
-  site-url: "https://soc333-sum23.github.io/"
+  description: "Homepage for SOCIOL 333 - Quantitative Analysis of Sociological Data, Summer 2024"
+  site-url: "https://soc333-sum24.github.io/"
 
-  repo-url: https://github.com/soc333-sum23/soc333-sum23.github.io
+  repo-url: https://github.com/soc333-sum24/soc333-sum24.github.io
   repo-actions: [edit, issue]
 
   open-graph: true
 
   sidebar:
-    background: "#32174d" # Russian Violet
+    background: "#040480" # new blue
     foreground: "#f8f8f8"
-    logo: "images/logo.png"
+#    logo: "images/logo.png"
     pinned: true
     align: "center"
     tools:
       - icon: github
-        href: https://github.com/soc333-sum23/soc333-sum23.github.io
+        href: https://github.com/soc333-sum23/soc333-sum24.github.io
         text: "GitHub organization"
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers
@@ -42,90 +42,90 @@ website:
             text: Schedule
           - href: course-syllabus.qmd
             text: Syllabus
-          - href: course-support.qmd
-            text: Support
-          - href: course-links.qmd
-            text: Useful links
+#          - href: course-support.qmd
+#            text: Support
+#          - href: course-links.qmd
+#            text: Useful links
       - section: "Computing"
         contents:
           - href: computing-setup.qmd
             text: Setup
-          - href: computing-clonerepo.qmd
-            text: Cloning and committing
-          - href: computing-cheatsheets.qmd
-            text: Cheatsheets
+#          - href: computing-clonerepo.qmd
+#            text: Cloning and committing
+#          - href: computing-cheatsheets.qmd
+#            text: Cheatsheets
       - section: "Project"
         contents:
           - href: project-description.qmd
             text: "General information"
-          - section: "Instructions"
-            contents:
-              - href: project-proposal.qmd
-                text: "Component 1: Proposal"
-              - href: project-descriptives.qmd
-                text: "Component 2: Descriptive stats"
-              - href: project-results.qmd
-                text: "Component 3: Results"
-              - href: project-presentation.qmd
-                text: "Component 4: Presentation"
-              - href: project-paper.qmd
-                text: "Component 5: Paper"
-          - section: "Examples"
-            contents:
-              - href: project_example/c1_proposal.qmd
-                text: "Component 1: Proposal"
-              - href: project_example/c2_descriptives.qmd
-                text: "Component 2: Descriptive stats"
-              - href: project_example/c3_results.qmd
-                text: "Component 3: Inferential results"
-              - href: project_example/c5-paper.qmd
-                text: "Component 5: Paper"
-      - section: "Exercise solutions"
-        contents:
-          - href: exercise-solutions/ex-5-31-solutions.qmd
-            text: "5/31: Filtering"
-          - href: exercise-solutions/ex-6-01-solutions.qmd
-            text: "6/01: Creating variables"
-          - href: exercise-solutions/ex-6-06-solutions.qmd
-            text: "6/06: Single variable plots"
-          - href: exercise-solutions/ex-6-13-solutions.qmd
-            text: "6/13: Hypothesis tests 1"
-          - href: exercise-solutions/ex-6-14-solutions.qmd
-            text: "6/14: Hypothesis tests 2"
+#          - section: "Instructions"
+#            contents:
+#              - href: project-proposal.qmd
+#                text: "Component 1: Proposal"
+#              - href: project-descriptives.qmd
+#                text: "Component 2: Descriptive stats"
+#              - href: project-results.qmd
+#                text: "Component 3: Results"
+#              - href: project-presentation.qmd
+#                text: "Component 4: Presentation"
+#              - href: project-paper.qmd
+#                text: "Component 5: Paper"
+#          - section: "Examples"
+#            contents:
+#              - href: project_example/c1_proposal.qmd
+#                text: "Component 1: Proposal"
+#              - href: project_example/c2_descriptives.qmd
+#                text: "Component 2: Descriptive stats"
+#              - href: project_example/c3_results.qmd
+#                text: "Component 3: Inferential results"
+#              - href: project_example/c5-paper.qmd
+#                text: "Component 5: Paper"
+#      - section: "Exercise solutions"
+#        contents:
+#          - href: exercise-solutions/ex-5-31-solutions.qmd
+#            text: "5/31: Filtering"
+#          - href: exercise-solutions/ex-6-01-solutions.qmd
+#            text: "6/01: Creating variables"
+#          - href: exercise-solutions/ex-6-06-solutions.qmd
+#            text: "6/06: Single variable plots"
+#          - href: exercise-solutions/ex-6-13-solutions.qmd
+#            text: "6/13: Hypothesis tests 1"
+#          - href: exercise-solutions/ex-6-14-solutions.qmd
+#            text: "6/14: Hypothesis tests 2"
       - section: "Slides"
         contents:
-          - href: slides/19-wrapup.qmd
-            text: "Lecture 19: Best practices"
-          - href: slides/18-pvals.qmd
-            text: "Lecture 18: Limitations and future work"
-          - href: slides/17-interpretingresults.qmd
-            text: "Lecture 17: Interpreting results"
-          - href: slides/16-hypothesistests4.qmd
-            text: "Lecture 16: Hypothesis tests pt 4"
-          - href: slides/15-hypothesistests3.qmd
-            text: "Lecture 15: Hypothesis tests pt 3"
-          - href: slides/14-hypothesistests2.qmd
-            text: "Lecture 14: Hypothesis tests pt 2"
-          - href: slides/13-hypothesistests1.qmd
-            text: "Lecture 13: Hypothesis tests pt 1"
-          - href: slides/12-plots2.qmd
-            text: "Lecture 12: Plotting multiple variables"
-          - href: slides/11-plots.qmd
-            text: "Lecture 11: Plotting one variable"
-          - href: slides/10-describingpt4.qmd
-            text: "Lecture 10: Pipes"
-          - href: slides/09-describingpt3.qmd
-            text: "Lecture 9: Creating new variables"
-          - href: slides/08-describingpt2.qmd
-            text: "Lecture 8: Filtering data frames"
-          - href: slides/07-describingpt1.qmd
-            text: "Lecture 7: Summary statistics"
-          - href: slides/06-workshopping.qmd
-            text: "Lecture 6: Workshopping proposals"
-          - href: slides/05-studiessamples.qmd
-            text: "Lecture 5: Studies and samples"
-          - href: slides/04-researchquestions.qmd
-            text: "Lecture 4: Project and research questions"
+ #         - href: slides/19-wrapup.qmd
+#            text: "Lecture 19: Best practices"
+#          - href: slides/18-pvals.qmd
+#            text: "Lecture 18: Limitations and future work"
+#          - href: slides/17-interpretingresults.qmd
+#            text: "Lecture 17: Interpreting results"
+#          - href: slides/16-hypothesistests4.qmd
+#            text: "Lecture 16: Hypothesis tests pt 4"
+#          - href: slides/15-hypothesistests3.qmd
+#            text: "Lecture 15: Hypothesis tests pt 3"
+#          - href: slides/14-hypothesistests2.qmd
+#            text: "Lecture 14: Hypothesis tests pt 2"
+#          - href: slides/13-hypothesistests1.qmd
+#            text: "Lecture 13: Hypothesis tests pt 1"
+#          - href: slides/12-plots2.qmd
+#            text: "Lecture 12: Plotting multiple variables"
+#          - href: slides/11-plots.qmd
+#            text: "Lecture 11: Plotting one variable"
+#          - href: slides/10-describingpt4.qmd
+#            text: "Lecture 10: Pipes"
+#          - href: slides/09-describingpt3.qmd
+#            text: "Lecture 9: Creating new variables"
+#          - href: slides/08-describingpt2.qmd
+#            text: "Lecture 8: Filtering data frames"
+#          - href: slides/07-describingpt1.qmd
+#            text: "Lecture 7: Summary statistics"
+#          - href: slides/06-workshopping.qmd
+#            text: "Lecture 6: Workshopping proposals"
+#          - href: slides/05-studiessamples.qmd
+#            text: "Lecture 5: Studies and samples"
+#          - href: slides/04-researchquestions.qmd
+#            text: "Lecture 4: Project and research questions"
           - href: slides/03-computing.qmd
             text: "Lecture 3: Meet the toolkit"
           - href: slides/02-datavariables.qmd
@@ -134,9 +134,9 @@ website:
             text: "Lecture 1: Welcome"
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)"
-    left: "&copy; Copyright 2023, Aidan Combs. Credit to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the materials and website for SOCIOL333 are based"
-    background: "#32174d" # Russian Violet
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2024, Suzanne Schenewerk. Credit to [Aidan Combs](https://aidancombs.netlify.app/), whose [SOCIOL 333](https://soc333-sum23.github.io/) formed the basis for this course and website, and to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the previous version of SOCIOL333 was based."
+    background: "#040480" # new blue
     foreground: "#f8f8f8"
 
 format:
@@ -144,7 +144,7 @@ format:
     theme:
       light: [cosmo, style/sta199.scss]
       dark: [cosmo, style/sta199.scss, style/dark.scss]
-    linkcolor: "#32174d" # Russian Violet
+    linkcolor: "#040480" # new blue
     toc: true
     code-copy: true
     code-overflow: wrap

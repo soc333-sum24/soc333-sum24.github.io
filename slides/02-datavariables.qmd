@@ -1,7 +1,7 @@
 ---
 title: "Data and Variables"
 subtitle: "Lecture 2"
-date: "May 18, 2023"
+date: "May 16, 2024"
 format: 
   revealjs:
     slide-number: true
@@ -12,135 +12,17 @@ format:
 library(tidyverse)
 ```
 
-## Your advice for each other
-
--   Keep on the ball...
-
-    -   Always finish \| don't get behind \| always stay on your work
-
--   ...but don't sacrifice your mental health
-
-    -   Take breaks when needed, don't overwork yourself \| Stress is a fact of life, but should never be a way of life!
-
-    -   Have a positive outlook, don't be so pessimistic that it brings the entire mood of the group down
-
-    -   stay happy stay positive stay sane
-
-    -   
-
-# Wrapping up course logistics
+# Some logistics
 
 ## Reminders
 
 -   Drop/add ends tomorrow
 -   Class does not meet Fridays--next meeting is Monday
+-   The [course syllabus](https://schenewerk.github.io/soc333-sum24/course-syllabus.html) is online. 
 
 ## Slides
 
--   Available [on the website](https://soc333-sum23.github.io/).
-    Use your arrow keys to navigate.
-
--   I will post a version before class so you can follow along if you want to.
-    If we don't make it through everything I will cut the extra slides afterwards.
-
--   Editable versions will be posted on GitHub if useful to you--the file format is the same as what we will use for assignments (more on that next week!)
-
-## Cadence
-
-::: incremental
--   **Class:** Monday-Thursday (except Memorial Day and Juneteenth)
--   **In-class exercises:** Most days; usually due before the next class period
--   **Project:** Completed in pieces throughout the semester. Bring drafts of components for workshopping on Thursdays. Components are due for grading the following Monday (or Tuesday, when Monday is a holiday).
--   **Homework:** Due on Mondays when there isn't a project component due.
-:::
-
-## Grading {.smaller}
-
-| Category           | Percentage                                     |
-|--------------------|------------------------------------------------|
-| Homework           | 20% (10% x 2)                                  |
-| In-class exercises | 30%                                            |
-| Project            | 50% (22.5% components; 27.5% final paper+pres) |
-
-See [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#grading) for how the final letter grade will be determined.
-
-## [Support](https://soc333-sum23.github.io/course-support.html)
-
--   Attend office hours! 30 min before/after class (in RC 329 usually; after class Wednesday in my office downstairs)
--   Ask questions in class
--   Email for individual matters. aidan.combs\@duke.edu
--   Lots of [resources available through the university](https://soc333-sum23.github.io/course-support.html#academic-support)--use them!
-
-## Announcements
-
--   Posted on Sakai (Announcements tool) and sent via email, be sure to check both regularly
--   I'll assume that you've read an announcement by the next "business" day
--   I'll (try my best to) send a weekly update announcement each Thursday or Friday, outlining the plan for the following week and reminding you what you need to do.
-
-## Diversity + inclusion {.smaller}
-
-My goal is that everyone is well-served by this course.
-Diverse experiences and perspectives that you bring to this class are a resource, strength and benefit!
-
-::: incremental
--   Please list your pronouns on your name tent if you feel comfortable doing so.
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you.
-    -   If you prefer to speak with someone outside of the course, your advisors and deans are excellent resources.
--   I, along with many others, am still learning (and unlearning), and sometimes make mistakes. If something that happens here doesn't sit right with you, please talk to me about it.
-:::
-
-## Accessibility
-
--   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
-
--   I am committed to making all course materials accessible and I'm always learning how to do this better.
-    If any course component is not accessible to you in any way, please don't hesitate to let me know.
-
-# Course policies
-
-## COVID policies
-
--   Masks are optional
-
--   If you're sick, please stay home
-
--   Read and follow university guidance
-
-## Late work and regrades
-
--   We have policies!
--   Read about them on the [course syllabus](https://soc333-sum23.github.io/course-syllabus.html#course-policies) and refer back to them when you need it
-
-## Collaboration policy
-
--   Everything you submit for grading in this course should be completed and submitted individually.
-    You can talk to each other, but please don't copy/paste.
-
--   However, you will be working together frequently to provide feedback on each others' final projects.
-
-## Sharing / reusing code policy {.smaller}
-
--   Programmers use online resources to help them accomplish tasks all the time--these sources can be extremely helpful for learning *when used well.*
-
-    -   Use them to learn. Don't blindly copy/paste; it won't work. We'll talk more about this soon.
-
--   You may use online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration.
-
--   Un-cited recycled/copied code = plagiarism :(
-
-## Academic integrity
-
-> To uphold the Duke Community Standard:
->
-> -   I will not lie, cheat, or steal in my academic endeavors;
->
-> -   I will conduct myself honorably in all my endeavors; and
->
-> -   I will act if the Standard is compromised.
-
-## Most importantly!
-
-Ask if you're not sure if something violates a policy!
+-   Will be available [on the website](https://schenewerk.github.io/soc333-sum24). Use your arrow keys to navigate.
 
 # Data and Variables
 
@@ -163,8 +45,7 @@ Ask if you're not sure if something violates a policy!
 ## Sociological data: Quantitative (this class)
 
 ::: incremental
--   Measured quantities.
-    Counts, closed-ended surveys, proportions, outcomes.
+-   Measured quantities. Counts, closed-ended surveys, proportions, outcomes.
 
 -   Uses:
 
@@ -179,8 +60,8 @@ Ask if you're not sure if something violates a policy!
 
 ::: columns
 ::: {.column width="40%"}
--   [Equity in Athletics Data Analytics](https://ope.ed.gov/athletics/#/)
--   Participation, staffing, revenues, and expenditures for mens and womens college sports teams
+-   [Equity in Athletics Data Analysis](https://ope.ed.gov/athletics/#/)
+-   Participation, staffing, revenues, and expenditures for men's and women's college sports teams
 :::
 
 ::: {.column width="60%"}
@@ -263,5 +144,4 @@ Ask if you're not sure if something violates a policy!
 ## For next time:
 
 -   Read the syllabus, if you haven't already
-
--   Watch your email for an invite to [our course GitHub organization](https://github.com/soc333-sum23)--later today
+-   Email me your exercise answers

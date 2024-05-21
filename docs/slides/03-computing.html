@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-05-22">
+  <meta name="author" content="Suzanne Schenewerk">
+  <meta name="dcterms.date" content="2024-05-20">
   <title>SOCIOL 333 - Meet the toolkit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -224,7 +224,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -389,7 +390,7 @@
   </style>
 <meta property="og:title" content="SOCIOL 333 - Meet the toolkit">
 <meta property="og:description" content="Lecture 3">
-<meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -402,16 +403,86 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Aidan Combs 
+Suzanne Schenewerk 
 </div>
         <p class="quarto-title-affiliation">
-            Duke University <br> SOCIOL 333 - Summer Term 1 2023
+            Duke University <br> SOCIOL 333 - Summer 2024
           </p>
     </div>
 </div>
 
-  <p class="date">2023-05-22</p>
+  <p class="date">2024-05-20</p>
 </section>
+<section>
+<section id="about-the-syllabus" class="title-slide slide level1 center">
+<h1>About the syllabus</h1>
+
+</section>
+<section id="the-basics" class="slide level2">
+<h2>The basics</h2>
+<ul>
+<li>Class meets Monday through Thursday</li>
+<li>In-class exercises most days</li>
+<li>A course project completed in pieces throughout the term. We’ll workshop these pieces in class before they’re due.</li>
+</ul>
+</section>
+<section id="grading" class="slide level2">
+<h2>Grading</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>In-class exercises</td>
+<td>35%</td>
+</tr>
+<tr class="even">
+<td>Project component 1: proposal</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>Project component 2: descriptive statistics</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Project component 3: results</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>Project component 4: presentation</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Project component 5: final paper</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="late-work-and-regrades" class="slide level2">
+<h2>Late work and regrades</h2>
+<ul>
+<li>Project components and in-class exercises may be submitted up to 3 days late</li>
+<li>If you submit at least 80% of the daily exercises on time, you will receive full credit for the “in-class exercises” portion of your grade!</li>
+<li>I’ll only change a grade if I’ve made a clear error</li>
+</ul>
+</section>
+<section id="academic-honesty" class="slide level2">
+<h2>Academic honesty</h2>
+<p>You must be the principal author of your own work!</p>
+</section>
+<section id="basically" class="slide level2">
+<h2>Basically:</h2>
+<ul>
+<li>You can collaborate with other students, but don’t copy their code directly</li>
+<li>You can use online resources (like StackOverflow, but if you use code from these sources, make that clear)</li>
+<li>Don’t let AI write your code</li>
+</ul>
+</section></section>
 <section>
 <section id="toolkit-computing" class="title-slide slide level1 center">
 <h1>Toolkit: Computing</h1>
@@ -479,7 +550,7 @@ Aidan Combs
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/03/r-logo.png" alt="R logo"></p>
+<p><img data-src="images/03/r-logo.png" class="quarto-figure quarto-figure-center" alt="R logo"></p>
 </figure>
 </div>
 <ul>
@@ -500,7 +571,7 @@ Aidan Combs
 <h2>R vs.&nbsp;RStudio</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://moderndive.com/1-getting-started.html"><img data-src="images/03/r_vs_rstudio.png" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
+<p><a href="https://moderndive.com/1-getting-started.html"><img data-src="images/03/r_vs_rstudio.png" class="quarto-figure quarto-figure-center" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
 </figure>
 </div>
 
@@ -513,16 +584,16 @@ Aidan Combs
 <li>Functions are (most often) verbs, followed by what they will be applied to in parentheses:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">do_this</span>(to_this)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">do_that</span>(to_this, to_that, with_these)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">do_this</span>(to_this)</span>
+<span id="cb1-2"><a></a><span class="fu">do_that</span>(to_this, to_that, with_these)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <ul>
 <li>Packages are installed with the <code>install.packages()</code> function and loaded with the <code>library</code> function, once per session:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(package_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(package_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -532,14 +603,14 @@ Aidan Combs
 <li>Columns (variables) in data frames are accessed with <code>$</code>:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>dataframe<span class="sc">$</span>var_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>dataframe<span class="sc">$</span>var_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <ul>
 <li>Object documentation can be accessed with <code>?</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>?mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>?mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -564,7 +635,7 @@ Aidan Combs
 <section id="tour-quarto" class="slide level2">
 <h2>Tour: Quarto</h2>
 
-<img data-src="images/03/tour-quarto.png" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." class="r-stretch quarto-figure-center"></section>
+<img data-src="images/03/tour-quarto.png" class="quarto-figure quarto-figure-center r-stretch" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk."></section>
 <section id="how-will-we-use-quarto" class="slide level2">
 <h2>How will we use Quarto?</h2>
 <ul>
@@ -588,7 +659,7 @@ Aidan Combs
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/03/git-logo.png" alt="Git logo" width="200"></p>
+<p><img data-src="images/03/git-logo.png" class="quarto-figure quarto-figure-center" alt="Git logo" width="200"></p>
 </figure>
 </div>
 <ul>
@@ -598,7 +669,7 @@ Aidan Combs
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/03/github-logo.png" alt="GitHub logo" width="200"></p>
+<p><img data-src="images/03/github-logo.png" class="quarto-figure quarto-figure-center" alt="GitHub logo" width="200"></p>
 </figure>
 </div>
 <ul>
@@ -633,14 +704,14 @@ Aidan Combs
 <h2>Install time!</h2>
 <ul>
 <li>Setting up is the hardest part…</li>
-<li>Check your email; accept the invite to the course GitHub organization</li>
-<li>Then go to our course webpage (soc333-sum23.github.io), click on “Computing” in the side bar, and then click on “Setup”.</li>
+<li>Then go to our course webpage , click on “Computing” in the side bar, and then click on “Setup”.</li>
 <li>Today’s exercise: Work through these installation steps with a partner on the same operating system</li>
 </ul>
 
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://soc333-sum24.github.io/">🔗 https://soc333-sum24.github.io/</a></p>
+</div>
 </div>
 </section></section>
     </div>
@@ -670,7 +741,6 @@ Aidan Combs
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -857,42 +927,80 @@ Aidan Combs
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -970,10 +1078,27 @@ Aidan Combs
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -983,8 +1108,17 @@ Aidan Combs
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -998,7 +1132,11 @@ Aidan Combs
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

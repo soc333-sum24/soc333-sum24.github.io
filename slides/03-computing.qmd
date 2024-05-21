@@ -1,9 +1,44 @@
 ---
 title: "Meet the toolkit"
 subtitle: "Lecture 3"
-date: "May 22, 2023"
+date: "May 20, 2024"
 format: revealjs
 ---
+
+# About the syllabus
+
+## The basics
+
+-   Class meets Monday through Thursday
+-   In-class exercises most days
+-   A course project completed in pieces throughout the term. We'll workshop these pieces in class before they're due.
+
+## Grading
+
+| Category                                    | Percentage |
+|---------------------------------------------|------------|
+| In-class exercises                          | 35%        |
+| Project component 1: proposal               | 10%        |
+| Project component 2: descriptive statistics | 10%        |
+| Project component 3: results                | 10%        |
+| Project component 4: presentation           | 10%        |
+| Project component 5: final paper            | 25%        |
+
+## Late work and regrades
+
+-   Project components and in-class exercises may be submitted up to 3 days late
+-   If you submit at least 80% of the daily exercises on time, you will receive full credit for the “in-class exercises” portion of your grade!
+-   I'll only change a grade if I've made a clear error
+
+## Academic honesty
+
+You must be the principal author of your own work! 
+
+## Basically:
+
+-   You can collaborate with other students, but don't copy their code directly
+-   You can use online resources (like StackOverflow, but if you use code from these sources, make that clear)
+-   Don't let AI write your code
 
 # Toolkit: Computing
 
@@ -186,6 +221,5 @@ dataframe$var_name
 ## Install time!
 
 -   Setting up is the hardest part...
--   Check your email; accept the invite to the course GitHub organization
--   Then go to our course webpage (soc333-sum23.github.io), click on "Computing" in the side bar, and then click on "Setup".
+-   Then go to our course webpage , click on "Computing" in the side bar, and then click on "Setup".
 -   Today's exercise: Work through these installation steps with a partner on the same operating system

@@ -1,7 +1,7 @@
 ---
 title: "Welcome to SOCIOL 333"
 subtitle: "Lecture 1"
-date: "May 17, 2023"
+date: "May 15, 2024"
 format: 
   revealjs:
     slide-number: true
@@ -16,31 +16,55 @@ library(tidyverse)
 
 ## Meet the instructor
 
-Aidan Combs
+Suzanne Schenewerk
 
-She/her
+She/they
 
 Ph.D. candidate in sociology
 
-Reuben-Cooke 141
+Reuben-Cooke 135
 
-## Meet each other!
+## Meet the instructor's cats
+
+Gideon and Harrowhark
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/01/gideonsleeping.jpg)
+:::
+
+::: {.column width="50%"}
+![](images/01/harrowsleeping.jpg)
+:::
+
+::::
+
+## (They're different cats)
+
+![](images/01/bothcats.jpg)
+
+## Introduce yourselves!
 
 -   Name and pronouns, if you wish
 
--   Major and what's next for you (if you've thought about it!)
+-   Major(s) and year
 
--   What are you looking forward to in Durham this summer (other than this class, of course)?
+-   What's next for you (if you've thought about it!)
+
+-   What are you looking forward to in Durham this summer?
 
 ## Meet this course
 
 -   Quantitative Analysis of Sociological Data
 
-    -   aka, statistics/data science for sociologists
+. . .
+
+    -   basically, statistics/data science for sociologists
 
 . . .
 
--   Course learning objectives in a nutshell
+-   Our objectives, summed up
 
     -   To give you a set of tools to use to analyze data and communicate what's happening in the social world
 
@@ -54,7 +78,7 @@ Reuben-Cooke 141
 
 ## My goals
 
--   That this course be useful to you
+-   That this course is useful
 
     -   We will build skills you can use later
 
@@ -62,7 +86,7 @@ Reuben-Cooke 141
 
 . . .
 
--   That the classroom environment be supportive
+-   That this class is supportive
 
     -   We will cover everything you need to know
 
@@ -70,13 +94,17 @@ Reuben-Cooke 141
 
 ## What I need from you
 
--   Bring a laptop to class every day--something that connects to wifi and that you can download software onto
-
-    -   ...but please don't let it distract you (I can tell...)
+-   Come to class!
 
 . . .
 
--   Be engaged. Participate in class--the work will be easier.
+-   Bring your laptop every day
+
+    -   ...but please don't let it distract you (I can tell, seriously)
+
+. . .
+
+-   Be engaged and participate
 
 # What we'll do
 
@@ -313,17 +341,17 @@ ggplot(genderdist_sig, aes(y = totalcoaches, x = coachgender, fill = coachgender
 
 ## Time check!
 
-keep me on schedule, please--let me know when it's 12:15 :)
+-   Please keep me on schedule!
 
 ## Reminders about summer term
 
 -   Drop/add ends on **Friday** (yes, that is very soon)
--   No class on Memorial Day (May 29) or Juneteenth (June 19)
+-   No class on Memorial Day (May 27) or Juneteenth (June 19)
 -   Something up with your enrollment? Talk to me after class.
 
 ## Homepage
 
-<https://soc333-sum23.github.io/>
+<https://schenewerk.github.io/soc333-sum24/>
 
 -   All course materials
 -   Links to Sakai, GitHub, etc.
@@ -332,10 +360,10 @@ keep me on schedule, please--let me know when it's 12:15 :)
 ## Activities {.smaller}
 
 ::: incremental
--   **Readings:** All available free online. Best if completed before class.
--   **Class:** You are expected to attend every day. Your assignments will be much easier if you take advantage of in-class opportunities to complete them.
+-   **Readings:** All available free online, to be completed before class.
+-   **Class:** Attend every day! Your assignments will be much easier if you take advantage of in-class opportunities to complete them.
 -   **In-class exercises:** Complete (at least mostly) during class each day. Turn them in before the next class period. Graded for completion. You'll have to do these on your own if you miss class.
--   **Homework:** Two additional out-of-class assignments.
+-   **Homework:** One or two additional out-of-class assignments.
 -   **Project:** Final project, developed in pieces through the course of the semester. Paper and presentation due at the end.
 :::
 
@@ -343,12 +371,11 @@ keep me on schedule, please--let me know when it's 12:15 :)
 
 -   nope :)
 
-    ![](images/01/baby-celebrate.jpg)
+![](images/01/harrowsleeping2.jpg)
 
 ## This week's tasks
 
--   Before 11:59pm tonight: Complete the Getting to Know You survey (link in email).
-    This asks you to create a GitHub account if you don't already have one.
+-   Before 11:59pm tonight: Complete the Getting to Know You survey (link in email). This asks you to create a GitHub account if you don't already have one.
 
 -   Before tomorrow's class: read IMS ch 1
 

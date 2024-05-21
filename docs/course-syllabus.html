@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.333">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./course-support.html" rel="next">
+<link href="./computing-setup.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,17 +63,19 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
 <meta property="og:title" content="SOCIOL 333 - SOCIOL333: Quantitative Analysis of Sociological Data Syllabus">
-<meta property="og:description" content="Instructor: Aidan Combs, Reuben-Cooke 141 
+<meta property="og:description" content="Instructor: Suzanne Schenewerk, Reuben-Cooke 135 
 
- Summer Term 1, 2023">
-<meta property="og:site-name" content="SOCIOL 333">
+ Summer Term 1, 2024">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 
 <body class="nav-sidebar docked">
@@ -76,13 +84,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Course information</a></li><li class="breadcrumb-item"><a href="./course-syllabus.html">Syllabus</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Course information</a></li><li class="breadcrumb-item"><a href="./course-syllabus.html">Syllabus</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -91,17 +99,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/soc333-sum23/soc333-sum23.github.io" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">SOCIOL 333</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/soc333-sum23/soc333-sum24.github.io" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="quarto-navigation-tool px-1" aria-label="RStudio Containers"><i class="bi bi-code-square"></i></a>
     <a href="https://sakai.duke.edu/portal/directtool/3eb7ea22-0cb1-464a-b496-8f932e5315a0/" title="Sakai" class="quarto-navigation-tool px-1" aria-label="Sakai"><i class="bi bi-person-fill"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -131,18 +139,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Support</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Useful links</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -158,18 +154,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./computing-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./computing-clonerepo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cloning and committing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./computing-cheatsheets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cheatsheets</span></a>
   </div>
 </li>
       </ul>
@@ -189,230 +173,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">General information</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Instructions</span></a>
+ <span class="menu-text">Slides</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-proposal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 1: Proposal</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-descriptives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 2: Descriptive stats</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 3: Results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-presentation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 4: Presentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 5: Paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">Examples</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c1_proposal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 1: Proposal</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c2_descriptives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 2: Descriptive stats</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c3_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 3: Inferential results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_example/c5-paper.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Component 5: Paper</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text">Exercise solutions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-5-31-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">5/31: Filtering</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-01-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/01: Creating variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-06-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/06: Single variable plots</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-13-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/13: Hypothesis tests 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./exercise-solutions/ex-6-14-solutions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">6/14: Hypothesis tests 2</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/19-wrapup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 19: Best practices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/18-pvals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 18: Limitations and future work</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/17-interpretingresults.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 17: Interpreting results</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/16-hypothesistests4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 16: Hypothesis tests pt 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/15-hypothesistests3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 15: Hypothesis tests pt 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/14-hypothesistests2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 14: Hypothesis tests pt 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/13-hypothesistests1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 13: Hypothesis tests pt 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/12-plots2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 12: Plotting multiple variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/11-plots.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 11: Plotting one variable</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/10-describingpt4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 10: Pipes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/09-describingpt3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 9: Creating new variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/08-describingpt2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 8: Filtering data frames</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/07-describingpt1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 7: Summary statistics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/06-workshopping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 6: Workshopping proposals</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/05-studiessamples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 5: Studies and samples</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides/04-researchquestions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 4: Project and research questions</span></a>
-  </div>
-</li>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./slides/03-computing.html" class="sidebar-item-text sidebar-link">
@@ -436,58 +207,48 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#class-times" id="toc-class-times" class="nav-link active" data-scroll-target="#class-times">Class times</a></li>
-  <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office hours</a></li>
-  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#course-learning-objectives" id="toc-course-learning-objectives" class="nav-link" data-scroll-target="#course-learning-objectives">Course learning objectives</a></li>
-  <li><a href="#attendance" id="toc-attendance" class="nav-link" data-scroll-target="#attendance">Attendance</a>
+  <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course policies</a>
   <ul class="collapse">
-  <li><a href="#what-to-bring-to-class" id="toc-what-to-bring-to-class" class="nav-link" data-scroll-target="#what-to-bring-to-class">What to bring to class</a></li>
-  </ul></li>
-  <li><a href="#course-community" id="toc-course-community" class="nav-link" data-scroll-target="#course-community">Course community</a>
-  <ul class="collapse">
-  <li><a href="#duke-community-standard" id="toc-duke-community-standard" class="nav-link" data-scroll-target="#duke-community-standard">Duke Community Standard</a></li>
-  <li><a href="#inclusive-community" id="toc-inclusive-community" class="nav-link" data-scroll-target="#inclusive-community">Inclusive community</a></li>
-  <li><a href="#pronouns" id="toc-pronouns" class="nav-link" data-scroll-target="#pronouns">Pronouns</a></li>
-  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility">Accessibility</a></li>
-  <li><a href="#communication" id="toc-communication" class="nav-link" data-scroll-target="#communication">Communication</a></li>
-  <li><a href="#where-to-get-help" id="toc-where-to-get-help" class="nav-link" data-scroll-target="#where-to-get-help">Where to get help</a></li>
-  <li><a href="#email" id="toc-email" class="nav-link" data-scroll-target="#email">Email</a></li>
+  <li><a href="#class-times" id="toc-class-times" class="nav-link" data-scroll-target="#class-times">Class times</a></li>
+  <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office hours</a></li>
+  <li><a href="#communication-with-me" id="toc-communication-with-me" class="nav-link" data-scroll-target="#communication-with-me">Communication with me</a></li>
+  <li><a href="#required-materials" id="toc-required-materials" class="nav-link" data-scroll-target="#required-materials">Required materials</a></li>
+  <li><a href="#attendance" id="toc-attendance" class="nav-link" data-scroll-target="#attendance">Attendance</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#late-work" id="toc-late-work" class="nav-link" data-scroll-target="#late-work">Late work</a></li>
+  <li><a href="#extenuating-circumstances" id="toc-extenuating-circumstances" class="nav-link" data-scroll-target="#extenuating-circumstances">Extenuating circumstances</a></li>
+  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic integrity</a></li>
   </ul></li>
   <li><a href="#assessments" id="toc-assessments" class="nav-link" data-scroll-target="#assessments">Assessments</a>
   <ul class="collapse">
   <li><a href="#in-class-exercises" id="toc-in-class-exercises" class="nav-link" data-scroll-target="#in-class-exercises">In-class exercises</a></li>
   <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a></li>
   </ul></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a>
+  <li><a href="#course-community" id="toc-course-community" class="nav-link" data-scroll-target="#course-community">Course community</a>
   <ul class="collapse">
-  <li><a href="#regrade-requests" id="toc-regrade-requests" class="nav-link" data-scroll-target="#regrade-requests">Regrade requests</a></li>
-  </ul></li>
-  <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course policies</a>
-  <ul class="collapse">
-  <li><a href="#academic-honesty" id="toc-academic-honesty" class="nav-link" data-scroll-target="#academic-honesty">Academic honesty</a></li>
-  <li><a href="#late-work" id="toc-late-work" class="nav-link" data-scroll-target="#late-work">Late work</a></li>
-  <li><a href="#extenuating-circumstances" id="toc-extenuating-circumstances" class="nav-link" data-scroll-target="#extenuating-circumstances">Extenuating circumstances</a></li>
-  <li><a href="#attendance-policy" id="toc-attendance-policy" class="nav-link" data-scroll-target="#attendance-policy">Attendance policy</a></li>
+  <li><a href="#duke-community-standard" id="toc-duke-community-standard" class="nav-link" data-scroll-target="#duke-community-standard">Duke Community Standard</a></li>
+  <li><a href="#accessibility-and-inclusion" id="toc-accessibility-and-inclusion" class="nav-link" data-scroll-target="#accessibility-and-inclusion">Accessibility and inclusion</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/edit/main/course-syllabus.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/soc333-sum23/soc333-sum23.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/edit/main/course-syllabus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Course information</a></li><li class="breadcrumb-item"><a href="./course-syllabus.html">Syllabus</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">SOCIOL333: Quantitative Analysis of Sociological Data Syllabus</h1>
-<p class="subtitle lead">Instructor: Aidan Combs, Reuben-Cooke 141<br>
-Summer Term 1, 2023</p>
+<p class="subtitle lead">Instructor: Suzanne Schenewerk, Reuben-Cooke 135<br>
+Summer Term 1, 2024</p>
 </div>
 
 
@@ -500,20 +261,48 @@ Summer Term 1, 2023</p>
   </div>
   
 
+
 </header>
 
-<p><a href="soc333-sum23-syllabus.pdf"><strong>Click here</strong></a> <strong>to download a PDF copy of the syllabus.</strong></p>
-<section id="class-times" class="level2">
-<h2 class="anchored" data-anchor-id="class-times">Class times</h2>
-<p>We will meet from 11:15-12:30 Monday through Thursday (except Memorial Day and Juneteenth) in 329 Reuben-Cooke. See the <a href="index.html">schedule</a> for more information.</p>
+
+<p><a href="soc333-sum24-syllabus.pdf"><strong>Click here</strong></a> <strong>to download a PDF copy of the syllabus.</strong></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Social science researchers use a variety of methods to investigate questions about the social world. The purpose of this course is to introduce you to quantitative research methods. On a basic level, this means teaching you how to perform statistical analysis of data, which we will do using the programming language R. But ‘research’ is more than plugging numbers into formulae: it involves developing research questions, finding (or collecting) and evaluating datasets, and using well-informed statistical methods to analyze that data. In this course, we will discuss and practice each step of that process, in order to develop your skills as social scientists.</p>
+<p>Additionally, good scientific research is well-documented and reproducible–that is, another researcher who comes after you would be able to both understand your methods and to replicate your results. As you develop your analytical computing skills over the summer, you will also be introduced to methods and best practices for ensuring this is the case–both so that you can understand what you’ve done, after the fact, and so that other social scientists can build on your work in the future.</p>
 </section>
-<section id="office-hours" class="level2">
-<h2 class="anchored" data-anchor-id="office-hours">Office hours</h2>
-<p>I will be available for 30 minutes before and after each class period. If these times do not work for you, let me know and we can set up an appointment.</p>
+<section id="course-learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="course-learning-objectives">Course learning objectives</h2>
+<p>By the end of the semester, students will…</p>
+<ul>
+<li><p>learn to use statistics to shed light on questions about the social world</p></li>
+<li><p>learn to critically analyze the use of statistics in the world, and understand what statistics can and cannot answer</p></li>
+<li><p>learn to compose a clear and testable research question</p></li>
+<li><p>learn to build models and interpret results using sound statistical reasoning and best principles of scholarship, and to justify those choices</p></li>
+<li><p>learn principles of reproducible research, and develop a well-structured computing workflow</p></li>
+<li><p>use the R programming language in the RStudio IDE to load, manipulate, analyze, and visualize data</p></li>
+<li><p>use Git and GitHub to facilitate collaborative and reproducible research</p></li>
+<li><p>form and test their own sociological research question, and present their results to their peers with illustrative visualizations</p></li>
+</ul>
 </section>
-<section id="textbooks" class="level2">
-<h2 class="anchored" data-anchor-id="textbooks">Textbooks</h2>
-<p>Our textbook is <a href="https://openintro-ims.netlify.app/"><strong>freely available online</strong></a>. It is also possible to order a hard copy if you prefer.</p>
+<section id="course-policies" class="level2">
+<h2 class="anchored" data-anchor-id="course-policies">Course policies</h2>
+<section id="class-times" class="level3">
+<h3 class="anchored" data-anchor-id="class-times">Class times</h3>
+<p>We will meet from 11:00-12:15 Monday through Thursday (except Memorial Day and Juneteenth) in Reuben-Cooke 129. See the <a href="index.html">schedule</a> for more information.</p>
+<p>Fridays will be available as work days, time to meet with me, or make-up days, in the event that we need to change or catch up with the course schedule.</p>
+</section>
+<section id="office-hours" class="level3">
+<h3 class="anchored" data-anchor-id="office-hours">Office hours</h3>
+<p>I will be available for 30 minutes before each class period, and by appointment.</p>
+</section>
+<section id="communication-with-me" class="level3">
+<h3 class="anchored" data-anchor-id="communication-with-me">Communication with me</h3>
+<p>I am available to answer questions both during office hours and via email. I will respond to emails within 24 hours Monday through Friday, but be aware, I don’t regularly check my email before 9 am or after 7 pm, and I can’t guarantee I will be reachable over the weekend.</p>
+</section>
+<section id="required-materials" class="level3">
+<h3 class="anchored" data-anchor-id="required-materials">Required materials</h3>
+<p>Our textbook is <a href="https://openintro-ims.netlify.app/"><strong>freely available online</strong></a>. You are not required to purchase a physical copy.</p>
 <table class="table">
 <tbody>
 <tr class="odd">
@@ -524,81 +313,27 @@ Summer Term 1, 2023</p>
 </tr>
 </tbody>
 </table>
+<p>You will also need regular access to a laptop computer, which you must bring to every class meeting. If you do not have access to a laptop, let me know as soon as possible so we can get access to one for you to use in this course.</p>
+<p>All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: <a href="https://schenewerk.github.io/soc333-sum24/">schenewerk.github.io/soc333-sum24</a>.</p>
 </section>
-<section id="course-learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="course-learning-objectives">Course learning objectives</h2>
-<p>By the end of the semester, you will…</p>
+<section id="attendance" class="level3">
+<h3 class="anchored" data-anchor-id="attendance">Attendance</h3>
+<p>You are expected to attend every lecture. In addition to ensuring that you have in-class instruction time to cover material and ask questions, daily attendance will provide time for you to work on (and get help with) the daily exercises. You will need to bring a laptop to every class for this purpose.</p>
+<p>If you have to miss class, let me know as soon as possible. You will still be expected to complete that day’s in-class exercises, but you will have to do so on your own.</p>
 <ul>
-<li>learn to use statistics to shed light on questions about the social world</li>
-<li>learn to make statistical choices and interpret results in ways consistent with feminist and antiracist scholarship</li>
-<li>learn to load, manipulate, and visualize data in R</li>
-<li>learn to effectively communicate results through written assignments and project presentations</li>
-<li>learn to critically analyze the use of statistics in the world, and know what statistics can and can’t tell you about a problem.</li>
+<li><strong>Please do not come to class if you are ill,</strong> especially if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested.</li>
+<li><strong>Inclement weather:</strong> In the event of inclement weather or other events that prohibit class attendance, I will notify you how we will make up missed course content and work. This may include asynchronous catch-up methods, changes to the course calendar, and/or meeting on a Friday.</li>
+<li><strong>Religious accommodations:</strong> Students are permitted by university policy to be absent from class to observe a religious holiday. The Trinity College of Arts &amp; Sciences has established procedures for students to notify their instructors of an absence for religious observance. Please submit requests for religious accommodations at the beginning of the semester. You can find the policy and relevant notification form <a href="https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays">here</a>.</li>
 </ul>
 </section>
-<section id="attendance" class="level2">
-<h2 class="anchored" data-anchor-id="attendance">Attendance</h2>
-<p>You are expected to attend every lecture. Attending class every day will make it much easier for you to complete our in-class exercises. In addition, you will have to attend class on workshop days in order to receive full points on the project components.</p>
-<section id="what-to-bring-to-class" class="level3">
-<h3 class="anchored" data-anchor-id="what-to-bring-to-class">What to bring to class</h3>
-<p>Please bring a laptop to every class. You will need it to complete in-class exercises.</p>
+<section id="grading" class="level3">
+<h3 class="anchored" data-anchor-id="grading">Grading</h3>
+<p>Daily exercises are due two hours before the next class meeting where they are assigned, and are graded for completion. Because this course is about practicing problem-solving, you will receive full credit for the daily exercises as long as you’ve made an honest attempt to answer each question. It is always to your benefit to try! If you submit at least 80% of the daily exercises on time, you will receive full credit for the “in-class exercises” portion of your grade.</p>
+<p>I will do my best to grade assignments accurately and consistently. I will only change a grade later if I have made a clear error. To ask a question about your grade to request a regret, email me.</p>
 </section>
-</section>
-<section id="course-community" class="level2">
-<h2 class="anchored" data-anchor-id="course-community">Course community</h2>
-<section id="duke-community-standard" class="level3">
-<h3 class="anchored" data-anchor-id="duke-community-standard">Duke Community Standard</h3>
-<p>As a student in this course, you have agreed to uphold the <a href="https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard">Duke Community Standard</a> as well as the practices specific to this course.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</section>
-<section id="inclusive-community" class="level3">
-<h3 class="anchored" data-anchor-id="inclusive-community">Inclusive community</h3>
-<p>It is my intent that students from all backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with <a href="https://provost.duke.edu/initiatives/commitment-to-diversity-and-inclusion">Duke’s Commitment to Diversity and Inclusion</a>. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.</p>
-<p>Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:</p>
-<ul>
-<li>If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.</li>
-<li>I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me know.</li>
-</ul>
-</section>
-<section id="pronouns" class="level3">
-<h3 class="anchored" data-anchor-id="pronouns">Pronouns</h3>
-<p>Pronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive. Please update your gender pronouns in Duke Hub. You can learn more at the <a href="https://students.duke.edu/belonging/icr/csgd/pronouns/">Center for Sexual and Gender Diversity’s website</a>.</p>
-</section>
-<section id="accessibility" class="level3">
-<h3 class="anchored" data-anchor-id="accessibility">Accessibility</h3>
-<p>If there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.</p>
-<p>The <a href="https://access.duke.edu/students">Student Disability Access Office (SDAO)</a> is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with the Student Disability Access Office to <a href="https://access.duke.edu/requests">request or update accommodations</a> under these circumstances.</p>
-</section>
-<section id="communication" class="level3">
-<h3 class="anchored" data-anchor-id="communication">Communication</h3>
-<p>All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: <a href="https://soc333-sum23.github.io/">soc333-sum23.github.io/</a>.</p>
-<p>Announcements will be emailed through Sakai Announcements periodically. Please check your email regularly to ensure you have the latest announcements for the course.</p>
-</section>
-<section id="where-to-get-help" class="level3">
-<h3 class="anchored" data-anchor-id="where-to-get-help">Where to get help</h3>
-<p>If you have a question during class, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone. I will also be available before and after each class session as well as by email.</p>
-<p>Check out the <a href="https://soc333-sum23.github.io/course-support.html">course support</a> tab for more resources.</p>
-</section>
-<section id="email" class="level3">
-<h3 class="anchored" data-anchor-id="email">Email</h3>
-<p>If you have a question you do not want to bring up in class, you are welcome to email me directly. Barring extenuating circumstances, I will respond to emails within 48 hours Monday - Friday. I will respond more slowly to emails sent Friday evening - Sunday.</p>
-</section>
-</section>
-<section id="assessments" class="level2">
-<h2 class="anchored" data-anchor-id="assessments">Assessments</h2>
-<p>The assessments in this course are designed to help you successfully achieve the course learning objectives.</p>
-<section id="in-class-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="in-class-exercises">In-class exercises</h3>
-<p>We will spend a significant portion of our class time learning to apply concepts from lectures by doing in-class exercises. You will be expected to turn in the exercises from lecture before the next class period. For example, you will be expected to submit the Tuesday exercises before class starts on Wednesday. These will be graded for completion–i.e., you will get full points if you show that you made a good-faith attempt to answer all parts. You will receive full points for the in-class exercise portion of the final grade if you submit at least 80% of the exercises on time.</p>
-</section>
-<section id="project" class="level3">
-<h3 class="anchored" data-anchor-id="project">Project</h3>
-<p>The purpose of the <a href="https://soc333-sum23.github.io/project-description.html">project</a> is to apply what you’ve learned throughout the semester to analyze a sociological research question of your choice. You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester. You will bring a draft of most components to class to workshop with your classmates before submitting them for grading. Your grade will be determined by both the quality of your submitted work and your participation in the peer feedback process. More information about the project will be provided during the semester.</p>
-</section>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<section id="late-work" class="level3">
+<h3 class="anchored" data-anchor-id="late-work">Late work</h3>
+<p>Project components and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.</p>
 <p>The final course grade will be calculated as follows:</p>
 <table class="table">
 <thead>
@@ -693,44 +428,51 @@ Summer Term 1, 2023</p>
 </tr>
 </tbody>
 </table>
-<section id="regrade-requests" class="level3">
-<h3 class="anchored" data-anchor-id="regrade-requests">Regrade requests</h3>
-<p>I do everything in my power to grade assignments consistently, accurately, and fairly the first time. I will only change a grade later if I made a clear and undeniable error–doing otherwise compromises the fairness and consistency I strive for.</p>
-<p>To ask a question about your grade or request a regrade, please email me.</p>
-</section>
-</section>
-<section id="course-policies" class="level2">
-<h2 class="anchored" data-anchor-id="course-policies">Course policies</h2>
-<section id="academic-honesty" class="level3">
-<h3 class="anchored" data-anchor-id="academic-honesty">Academic honesty</h3>
-<p><strong>TL;DR: Don’t cheat!</strong></p>
-<p>Please abide by the following as you work on assignments in this course:</p>
-<ul>
-<li><strong>Collaboration:</strong> You may discuss assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.</li>
-<li><strong>Reusing code</strong>: Unless explicitly stated otherwise, you may make use of online resources (e.g.&nbsp;StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.</li>
-</ul>
-<p>Any violations in academic honesty standards as outlined in the <a href="https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard">Duke Community Standard</a> and those specific to this course will automatically result in a 0 for the assignment and will be reported to the <a href="https://studentaffairs.duke.edu/conduct">Office of Student Conduct</a> for further action.</p>
-</section>
-<section id="late-work" class="level3">
-<h3 class="anchored" data-anchor-id="late-work">Late work</h3>
-<ul>
-<li>Project components and in-class exercises may be submitted up to 3 days late. Details on the associated penalties will be provided with the assignment information.</li>
-</ul>
 </section>
 <section id="extenuating-circumstances" class="level3">
 <h3 class="anchored" data-anchor-id="extenuating-circumstances">Extenuating circumstances</h3>
-<p>Things happen that make it impossible to submit every assignment on time. The grading schemes for each assignment build in some flexibility to ensure you are not penalized for occasional missed classes or deadlines.</p>
-<p>In the case that you must miss class, please let me know. My slides will be made accessible to all students. You will still be expected to complete that day’s in-class exercises, but you will have to do so on your own.</p>
-<p>If there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know, as they can be a resource.</p>
-<p><em>Note: If you’ve read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!</em></p>
+<p>If there are circumstances that are having a longer-term impact on your academic performance, please talk to me and/or let your academic dean know.</p>
 </section>
-<section id="attendance-policy" class="level3">
-<h3 class="anchored" data-anchor-id="attendance-policy">Attendance policy</h3>
+<section id="academic-integrity" class="level3">
+<h3 class="anchored" data-anchor-id="academic-integrity">Academic integrity</h3>
+<p>The process of research is iterative and collaborative. However, you are required to be the principal author of your own work. This includes your code. The purpose of this course is to teach you a skill, not how to find a specific answer.</p>
 <ul>
-<li><strong>COVID Symptoms, Exposure, or Infection:</strong> Student health, safety, and well-being are the university’s top priorities. To help ensure your well-being and the well-being of those around you, <strong>please do not come to class</strong> <strong>if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested.</strong> If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, <a href="https://coronavirus.duke.edu/testing/#symptomatic-testing">contact student health</a> (<a href="mailto:dshcheckin@duke.edu">dshcheckin@duke.edu</a>, 919-681-9355). Learn more about current university policy related to COVID-19 at <a href="https://coronavirus.duke.edu/">https://coronavirus.duke.edu</a>. To keep the university community’s safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.</li>
-<li><strong>Inclement weather:</strong> In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.&nbsp; Asynchronous catch-up methods may apply.</li>
-<li><strong>Religious accommodations:</strong> Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts &amp; Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: <a href="https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays" class="uri">https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays</a>.</li>
+<li>You may collaborate and consult with other students; however, you may not directly share or copy code with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.</li>
+<li>Unless stated otherwise, you may (and should!) make use of online resources such as StackOverflow when completing assignments. If you make use of code directly from an outside source, you must state where you found the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.</li>
+<li>The use of “AI” resources like ChatGPT is not necessary for this course, and is strongly discouraged.</li>
 </ul>
+<p><strong>TL;DR: Don’t cheat!</strong></p>
+<p>Any violations in academic honesty standards as outlined in the <a href="https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard">Duke Community Standard</a> and those specific to this course will automatically result in a 0 for the assignment and will be reported to the <a href="https://studentaffairs.duke.edu/conduct">Office of Student Conduct</a> for further action.</p>
+</section>
+</section>
+<section id="assessments" class="level2">
+<h2 class="anchored" data-anchor-id="assessments">Assessments</h2>
+<p>The assessments in this course are designed to help you successfully achieve the course learning objectives.</p>
+<section id="in-class-exercises" class="level3">
+<h3 class="anchored" data-anchor-id="in-class-exercises">In-class exercises</h3>
+<p>Much of our class time will be devoted to practical, in-class exercises, where you will practice applying the concepts from the lecture. You will be expected to turn in the exercises from the previous lecture an hour before our next class meeting.</p>
+<p>These exercises will be graded for completion–i.e., if you have made a good-faith attempt to answer all parts of the exercise, you will receive full credit. You will receive full points for the in-class exercise portion of the final grade if you submit at least 80% of the exercises on time</p>
+</section>
+<section id="project" class="level3">
+<h3 class="anchored" data-anchor-id="project">Project</h3>
+<p>During this course, you will be developing a research project to analyze a sociological research question of your choice. The purpose of the <a href="https://soc333-sum24.github.io/project-description.html">project</a> is to apply what you’ve learned throughout the semester to a question which interests you.</p>
+<p>You will complete the project in several component parts that will be graded individually, and will assemble the parts into a complete paper and presentation at the end of the semester. You will bring a draft of most components to class to workshop with your classmates before submitting them for grading, and your grade for each component will be determined by both the quality of your final, submitted work and your participation in the peer feedback process. More information about the project will be provided during the semester.</p>
+</section>
+</section>
+<section id="course-community" class="level2">
+<h2 class="anchored" data-anchor-id="course-community">Course community</h2>
+<section id="duke-community-standard" class="level3">
+<h3 class="anchored" data-anchor-id="duke-community-standard">Duke Community Standard</h3>
+<p>As a student in this course, you have agreed to uphold the <a href="https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard">Duke Community Standard</a> as well as the practices specific to this course.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="accessibility-and-inclusion" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility-and-inclusion">Accessibility and inclusion</h3>
+<p>I intend for my classroom to be an inclusive space for students with a diversity of perspectives and experiences. I intend to present material and activities that align with <a href="https://provost.duke.edu/initiatives/commitment-to-diversity-and-inclusion">Duke’s Commitment to Diversity and Inclusion</a>. Your suggestions are encouraged and appreciated.</p>
+<p>I expect you to engage respectfully with your peers, as fellow members of the Duke community and as human beings.</p>
+<p>Further, this course is intended to be a resource for you! I am not teaching to hear myself talk–my goal is to help you learn. To that end, if you require academic accommodations in order to engage fully with the class material, contact the <a href="https://access.duke.edu/students">Student Disability Access Office (SDAO)</a> for assistance with course accommodations.</p>
+<p>If you need additional academic support beyond what I can provide in class and in my office hours, consider contacting the <a href="https://arc.duke.edu/">Academic Resource Center (ARC)</a>. The ARC offers free support services to Duke undergraduates, including academic skill development, learning consultations, peer tutoring, and ADHD/LD support.</p>
 
 
 </section>
@@ -778,6 +520,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -846,13 +615,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -931,10 +702,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -944,8 +732,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -957,7 +754,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1001,6 +921,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1026,6 +947,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1087,26 +1034,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+      <a href="./index.html" class="pagination-link" aria-label="Schedule">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Schedule</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./course-support.html" class="pagination-link">
-        <span class="nav-page-text">Support</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./computing-setup.html" class="pagination-link" aria-label="Setup">
+        <span class="nav-page-text">Setup</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2023, Aidan Combs. Credit to <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a> and her <a href="https://sta199-f22-1.github.io/">STA199 course</a>, on which the materials and website for SOCIOL333 are based</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2024, Suzanne Schenewerk. Credit to <a href="https://aidancombs.netlify.app/">Aidan Combs</a>, whose <a href="https://soc333-sum23.github.io/">SOCIOL 333</a> formed the basis for this course and website, and to <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a> and her <a href="https://sta199-f22-1.github.io/">STA199 course</a>, on which the previous version of SOCIOL333 was based.</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/edit/main/course-syllabus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/soc333-sum24/soc333-sum24.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 
