@@ -1508,105 +1508,165 @@
     "href": "slides/04-researchquestions.html#today",
     "title": "Research questions",
     "section": "Today",
-    "text": "Today\n\n\nIntroduce the project\nResearch questions\nFinish installing"
+    "text": "Today\n\n\nIntroduce the project\nResearch questions\nFinish installing",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#big-idea",
     "href": "slides/04-researchquestions.html#big-idea",
     "title": "Research questions",
     "section": "Big idea",
-    "text": "Big idea\n\nIn a nutshell: Ask a sociological question; answer it with statistical analysis\nInstructions: under “Project” on the course website"
+    "text": "Big idea\n\nIn a nutshell: Ask a sociological question; answer it with statistical analysis\nInstructions: under “Project” on the course website",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#structure",
     "href": "slides/04-researchquestions.html#structure",
     "title": "Research questions",
     "section": "Structure",
-    "text": "Structure\n\n\n5 components; ~1/week:\n\nProposal (May 25; May 30)\nDescriptive statistics (June 5)\nResults (June 15; June 20)\nPaper (June 21; June 28)\nPresentation (June 22 or 26)"
+    "text": "Structure\n\n\n5 components; ~1/week:\n\nProposal (May 23; May 28)\nDescriptive statistics (June 6)\nResults (June 13; June 17)\nPaper (June 18; June 24)\nPresentation (June 20)",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#why-two-dates",
     "href": "slides/04-researchquestions.html#why-two-dates",
     "title": "Research questions",
     "section": "Why two dates?",
-    "text": "Why two dates?\n\nProposal, results, and paper\nDate 1: when we will do in-class peer review. Push your work to GitHub before class that day. This is a chance to get feedback; it is also part of your project grade.\nDate 2: when you will submit your work for grading. Incorporate your peers’ comments and anything else requested. Deadline is 11:59pm."
+    "text": "Why two dates?\n\nProposal, results, and paper\nDate 1: when we will do in-class peer review. Push your work to GitHub before class that day. This is a chance to get feedback; it is also part of your project grade.\nDate 2: when you will submit your work for grading. Incorporate your peers’ comments and anything else requested. Deadline is 11:59pm.",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#component-1-proposal",
     "href": "slides/04-researchquestions.html#component-1-proposal",
     "title": "Research questions",
     "section": "Component 1: Proposal",
-    "text": "Component 1: Proposal\n\nDevelop two plausible sociological research questions you could answer with data\nThe goal: To choose and refine one question to move forward with\nInstructions: course website -&gt; Project -&gt; Component 1: Proposal"
+    "text": "Component 1: Proposal\n\nDevelop two plausible sociological research questions you could answer with data\nThe goal: To choose and refine one question to move forward with\nInstructions: course website -&gt; Project -&gt; Component 1: Proposal",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#what-makes-a-good-sociology-research-question",
     "href": "slides/04-researchquestions.html#what-makes-a-good-sociology-research-question",
     "title": "Research questions",
     "section": "What makes a good sociology research question?",
-    "text": "What makes a good sociology research question?\n\n\nSpecific\nFeasible\nSociological\nIn this class: Is quantitative; involves a relationship between at least 2 variables"
+    "text": "What makes a good sociology research question?\n\n\nSpecific\nFeasible\nSociological\nIn this class: Is quantitative; involves a relationship between at least 2 variables",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#specific",
     "href": "slides/04-researchquestions.html#specific",
     "title": "Research questions",
     "section": "Specific",
-    "text": "Specific\n\nA question, not a topic\n\n\n\nToo broad: College student binge drinking\nBetter: How are college students’ binge drinking behaviors affected by the binge drinking behaviors of their friends?\nBetter: How are college students’ opinions on binge drinking affected by the binge drinking behaviors of their friends?"
+    "text": "Specific\n\nA question, not a topic\n\n\n\nToo broad: College student binge drinking\nBetter: How are college students’ binge drinking behaviors affected by the binge drinking behaviors of their friends?\nBetter: How are college students’ opinions on binge drinking affected by the binge drinking behaviors of their friends?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#specific-1",
     "href": "slides/04-researchquestions.html#specific-1",
     "title": "Research questions",
     "section": "Specific",
-    "text": "Specific\n\nImplicates specific variables\n\n\n\nToo broad: What drives racial disparities in health outcomes?\nBetter: How do primary care doctors’ rates of referrals to specialists vary by patient race?\nBetter: How do rates of health insurance coverage vary by race?"
+    "text": "Specific\n\nImplicates specific variables\n\n\n\nToo broad: What drives racial disparities in health outcomes?\nBetter: How do primary care doctors’ rates of referrals to specialists vary by patient race?\nBetter: How do rates of health insurance coverage vary by race?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#feasible",
     "href": "slides/04-researchquestions.html#feasible",
     "title": "Research questions",
     "section": "Feasible",
-    "text": "Feasible\n\nDo you have data with the variables you need?\n\nStart with the data—find an interesting dataset; structure your question based on the variables it has.\n\nIs it simple enough to answer with basic statistics in the next 5 weeks?"
+    "text": "Feasible\n\nDo you have data with the variables you need?\n\nStart with the data—find an interesting dataset; structure your question based on the variables it has.\n\nIs it simple enough to answer with basic statistics in the next 5 weeks?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#sociological",
     "href": "slides/04-researchquestions.html#sociological",
     "title": "Research questions",
     "section": "Sociological",
-    "text": "Sociological\n\n\nHas to do with people…\n\nObservations should be people, companies, countries, etc—no plants, animals, cars…\n\n…living in social systems\n\nQuestion should have a social element\nNot social: How do stents affect heart attack survival rates?\nBetter: How does the likelihood of stent placement vary by gender identity?"
+    "text": "Sociological\n\n\nHas to do with people…\n\nObservations should be people, companies, countries, etc—no plants, animals, cars…\n\n…living in social systems\n\nQuestion should have a social element\nNot social: How do stents affect heart attack survival rates?\nBetter: How does the likelihood of stent placement vary by gender identity?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#for-this-class",
     "href": "slides/04-researchquestions.html#for-this-class",
     "title": "Research questions",
     "section": "For this class",
-    "text": "For this class\n\n\nQuantitative, not qualitative\n\nNot quantitative: How do peoples’ recollections of ads for luxury products vary by socioeconomic status?\nBetter: How do peoples’ ratings of ads for luxury products vary by socioeconomic status?"
+    "text": "For this class\n\n\nQuantitative, not qualitative\n\nNot quantitative: How do peoples’ recollections of ads for luxury products vary by socioeconomic status?\nBetter: How do peoples’ ratings of ads for luxury products vary by socioeconomic status?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#for-this-class-1",
     "href": "slides/04-researchquestions.html#for-this-class-1",
     "title": "Research questions",
     "section": "For this class",
-    "text": "For this class\n\n\nAt least two variables\n\nHow does X affect Y?\nHow does Y vary by X?\nHow does the relationship between X and Y vary by Z?\nNot enough variables: What proportion of American voters approve of President Biden’s job performance?\nBetter: How does President Biden’s approval rating vary by age among American voters?"
+    "text": "For this class\n\n\nAt least two variables\n\nHow does X affect Y?\nHow does Y vary by X?\nHow does the relationship between X and Y vary by Z?\nNot enough variables: What proportion of American voters approve of President Biden’s job performance?\nBetter: How does President Biden’s approval rating vary by age among American voters?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#exercise",
     "href": "slides/04-researchquestions.html#exercise",
     "title": "Research questions",
     "section": "Exercise",
-    "text": "Exercise\nWhat are the problems with these research questions? Revise them to improve them.\n\nWhat factors drive gender differences in choice of major?\nHow does susceptibility to migraine headaches vary by age?"
+    "text": "Exercise\nWhat are the problems with these research questions? Revise them to improve them.\n\nWhat factors drive gender differences in choice of major?\nHow does susceptibility to migraine headaches vary by age?",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#wrapping-up-computing-workflow-installation",
     "href": "slides/04-researchquestions.html#wrapping-up-computing-workflow-installation",
     "title": "Research questions",
     "section": "Wrapping up computing workflow installation",
-    "text": "Wrapping up computing workflow installation\n\nInstallation instructions on course webpage at Computing -&gt; Setup\nFor step 8 (testing it out): instructions for cloning a repo at Computing -&gt; Cloning and committing"
+    "text": "Wrapping up computing workflow installation\n\nInstallation instructions on course webpage at Computing -&gt; Setup\nFor the last step (testing it out): instructions for cloning a repo at Computing -&gt; Cloning and committing",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#for-next-time",
     "href": "slides/04-researchquestions.html#for-next-time",
     "title": "Research questions",
     "section": "For next time",
-    "text": "For next time\n\nNext lecture: Studies and sampling (the rest of what you need to know for the proposal)\nRead IMS chapter 2\nLook over instructions for the proposal (Project -&gt; Component 1: Proposal); start looking at data sets and thinking about research questions (bring drafts for peer review Thursday)\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "For next time\n\nNext lecture: Studies and sampling (the rest of what you need to know for the proposal)\nRead IMS chapter 2\nLook over instructions for the proposal (Project -&gt; Component 1: Proposal); start looking at data sets and thinking about research questions (bring drafts for peer review)\n\n\n\n\n🔗 https://soc333-sum24.github.io/",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
+    ]
   },
   {
     "objectID": "slides/09-describingpt3.html#logistics",
@@ -4097,6 +4157,17 @@
     "crumbs": [
       "Slides",
       "Lecture 3: Meet the toolkit"
+    ]
+  },
+  {
+    "objectID": "slides/04-researchquestions.html#first-an-update",
+    "href": "slides/04-researchquestions.html#first-an-update",
+    "title": "Research questions",
+    "section": "First, an update",
+    "text": "First, an update\n\nNew course website!",
+    "crumbs": [
+      "Slides",
+      "Lecture 4: Project and research questions"
     ]
   }
 ]

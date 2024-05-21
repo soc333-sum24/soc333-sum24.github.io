@@ -7,11 +7,11 @@ callout-icon: false
 
 "Bring to class" deadlines mean you must have your work submitted before class starts on the given day. "Due" deadlines are 11:59pm.
 
-Proposal: bring to class Wednesday, May 22; due Thursday, May 23.
+Proposal: bring to class Thursday, May 23; due Tuesday, May 28.
 
-Descriptive statistics: due Wednesday, June 5.
+Descriptive statistics: due Thursday, June 6.
 
-Results: bring to class Wednesday, June 12; due Thursday, June 13.
+Results: bring to class Thursday, June 13; due Monday, June 17..
 
 Presentation + slides: due before your in-class presentation on Thursday, June 20.
 
@@ -19,4 +19,51 @@ Paper: bring to class Tuesday, June 18; due Monday, June 24.
 
 # Overview
 
-This section will be updated with a project overview soon. 
+**TL;DR**: *Ask a question you're curious about and answer it with a data set of your choice. This is your project in a nutshell.*
+
+Throughout the course of the summer term, you will be performing a statistical analysis to answer a sociological research question of your choosing. You will provide the results of your analysis in two ways: through a research presentation to the class and through a final paper. You will complete the project individually, but throughout the semester you will be helping each other develop your ideas by giving peer feedback at various stages.
+
+::: callout-tip
+## Why?
+
+Statistics is a tool for answering questions we have about how the world is and how it works. When people --- researchers, sports analysts, marketing professionals, etc --- use statistics outside of statistics classes, it is because they have a question that can be answered by looking at quantitative data. This project is meant to introduce you to the process of doing quantitative analysis and presenting your results in a way that resembles how you will use statistics after you leave this class.
+:::
+
+# Project Assignment Structure
+
+You will have to turn in five components for this project. This may sound daunting, but it is not meant to be. The first three components (the proposal, descriptive statistics, and results) are meant to build on each other and help you construct the last two (the paper and presentation).
+
+Three of the five components (the proposal, results, and paper) have two due dates. You will first bring your assignment to class for peer feedback. Then, you will have an opportunity to edit the assignment before turning it in to me for feedback and grading. You will be expected to incorporate feedback given by both your peers and by me to make future revisions better --- this will be a component of your grade.
+
+## Submission Format
+
+Everything with the exception of the presentation should be written as a Quarto document, using templates I will provide you. All data cleaning, analysis, and visualizations should be done in that single file, so that your entire document is 100% reproducible (i.e., someone else should be able to take your file, click "render" or "run", and recreate your results and visualizations).
+
+::: callout-tip
+## Why?
+
+*Why peer feedback?* Very few people work in isolation. We constantly get feedback from colleagues, and learning how to give and receive such feedback in a way that makes projects better is essential for coursework as well as for most jobs.
+
+*Why Quarto?* While there is, of course, a learning curve associated with writing analyses in a new way (ie, in Quarto instead of text editors you are more used to, like Word and Google Docs), it is a skill worth learning for statistical analysis in particular. Why? Quarto allows you to easily make your work entirely reproducible. You will be able to give a collaborator one single document that shows all steps in the analysis process as well as all necessary background information and explanation. This makes your work easy for others to understand, check, and modify. Using Quarto also encourages you to learn good coding practices, right from the beginning. You will be explaining what you do as you go along, and the way files are compiled will encourage you to write code that runs correctly in order--which may not sound like much, but it's actually quite easy to get disorganized when coding in other ways. We will go over Quarto in class so that you have all the information and support you need to learn it.
+:::
+
+# Overall project grading
+
+The overall project grade breakdown is as follows:
+
+|                            |     |
+|----------------------------|-----|
+| **Proposal**               | 15% |
+| **Descriptive statistics** | 15% |
+| **Results**                | 15% |
+| **Final paper**            | 40% |
+| **Slides + presentation**  | 15% |
+
+## Grading summary
+
+Grading of the project will take into account the following:
+
+-   Content - What is the quality of research and/or policy question and relevancy of data to those questions?
+-   Correctness - Are statistical procedures carried out and explained correctly?
+-   Writing and Presentation - What is the quality of the statistical presentation, writing, and explanations?
+-   Creativity and Critical Thought - Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?

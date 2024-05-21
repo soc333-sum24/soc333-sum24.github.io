@@ -50,18 +50,18 @@ website:
         contents:
           - href: computing-setup.qmd
             text: Setup
-#          - href: computing-clonerepo.qmd
-#            text: Cloning and committing
+          - href: computing-clonerepo.qmd
+            text: Cloning and committing
 #          - href: computing-cheatsheets.qmd
 #            text: Cheatsheets
       - section: "Project"
         contents:
           - href: project-description.qmd
             text: "General information"
-#          - section: "Instructions"
-#            contents:
-#              - href: project-proposal.qmd
-#                text: "Component 1: Proposal"
+          - section: "Instructions"
+            contents:
+              - href: project-proposal.qmd
+                text: "Component 1: Proposal"
 #              - href: project-descriptives.qmd
 #                text: "Component 2: Descriptive stats"
 #              - href: project-results.qmd
@@ -124,8 +124,8 @@ website:
 #            text: "Lecture 6: Workshopping proposals"
 #          - href: slides/05-studiessamples.qmd
 #            text: "Lecture 5: Studies and samples"
-#          - href: slides/04-researchquestions.qmd
-#            text: "Lecture 4: Project and research questions"
+          - href: slides/04-researchquestions.qmd
+            text: "Lecture 4: Project and research questions"
           - href: slides/03-computing.qmd
             text: "Lecture 3: Meet the toolkit"
           - href: slides/02-datavariables.qmd

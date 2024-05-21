@@ -1,0 +1,143 @@
+---
+title: "Research questions"
+subtitle: "Lecture 4"
+date: "May 21, 2024"
+format: 
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+---
+
+## First, an update
+
+-   [New course website!](https://soc333-sum24.github.io/)
+
+## Today
+
+::: incremental
+-   Introduce the project
+-   Research questions
+-   Finish installing
+:::
+
+# Project
+
+## Big idea
+
+-   In a nutshell: Ask a sociological question; answer it with statistical analysis
+-   Instructions: [under "Project" on the course website](https://soc333-sum24.github.io/project-description.html)
+
+## Structure
+
+::: incremental
+-   5 components; \~1/week:
+
+    1.  Proposal (May 23; May 28)
+    2.  Descriptive statistics (June 6)
+    3.  Results (June 13; June 17)
+    4.  Paper (June 18; June 24)
+    5.  Presentation (June 20)
+:::
+
+## Why two dates?
+
+-   Proposal, results, and paper
+-   Date 1: when we will do in-class peer review. Push your work to GitHub before class that day. This is a chance to get feedback; it is also part of your project grade.
+-   Date 2: when you will submit your work for grading. Incorporate your peers' comments and anything else requested. Deadline is 11:59pm.
+
+## Component 1: Proposal
+
+-   Develop two plausible sociological research questions you could answer with data
+-   The goal: To choose and refine one question to move forward with
+-   Instructions: [course website -\> Project -\> Component 1: Proposal](https://soc333-sum24.github.io/project-proposal.html)
+
+# Research questions
+
+## What makes a good sociology research question?
+
+::: incremental
+-   Specific
+-   Feasible
+-   Sociological
+-   In this class: Is quantitative; involves a relationship between at least 2 variables
+:::
+
+## Specific
+
+-   A question, not a topic
+
+::: incremental
+-   Too broad: College student binge drinking
+-   Better: How are college students' binge drinking behaviors affected by the binge drinking behaviors of their friends?
+-   Better: How are college students' opinions on binge drinking affected by the binge drinking behaviors of their friends?
+:::
+
+## Specific
+
+-   Implicates specific variables
+
+::: incremental
+-   Too broad: What drives racial disparities in health outcomes?
+-   Better: How do primary care doctors' rates of referrals to specialists vary by patient race?
+-   Better: How do rates of health insurance coverage vary by race?
+:::
+
+## Feasible
+
+-   Do you have data with the variables you need?
+
+    -   Start with the data---find an interesting dataset; structure your question based on the variables it has.
+
+-   Is it simple enough to answer with basic statistics in the next 5 weeks?
+
+## Sociological
+
+::: incremental
+-   Has to do with *people*...
+
+    -   Observations should be people, companies, countries, etc---no plants, animals, cars...
+
+-   ...living in *social systems*
+
+    -   Question should have a social element
+    -   Not social: How do stents affect heart attack survival rates?
+    -   Better: How does the likelihood of stent placement vary by gender identity?
+:::
+
+## For this class
+
+::: incremental
+-   Quantitative, not qualitative
+
+    -   Not quantitative: How do peoples' recollections of ads for luxury products vary by socioeconomic status?
+    -   Better: How do peoples' ratings of ads for luxury products vary by socioeconomic status?
+:::
+
+## For this class
+
+::: incremental
+-   At least two variables
+    -   How does X affect Y?
+    -   How does Y vary by X?
+    -   How does the relationship between X and Y vary by Z?
+    -   Not enough variables: What proportion of American voters approve of President Biden's job performance?
+    -   Better: How does President Biden's approval rating vary by age among American voters?
+:::
+
+## Exercise
+
+What are the problems with these research questions? Revise them to improve them.
+
+1.  What factors drive gender differences in choice of major?
+2.  How does susceptibility to migraine headaches vary by age?
+
+## Wrapping up computing workflow installation
+
+-   Installation instructions on course webpage at [Computing -\> Setup](https://soc333-sum24.github.io/computing-setup.html)
+-   For the last step (testing it out): instructions for cloning a repo at [Computing -\> Cloning and committing](https://soc333-sum24.github.io/computing-clonerepo.html)
+
+## For next time
+
+-   Next lecture: Studies and sampling (the rest of what you need to know for the proposal)
+-   Read IMS chapter 2
+-   Look over instructions for the proposal ([Project -\> Component 1: Proposal](https://soc333-sum24.github.io/project-proposal.html)); start looking at data sets and thinking about research questions (bring drafts for peer review)
