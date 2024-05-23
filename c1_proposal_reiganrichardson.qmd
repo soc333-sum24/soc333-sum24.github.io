@@ -1,0 +1,36 @@
+---
+title: "Project component 1: Research question proposal"
+author: "Reigan Richardson"
+---
+
+### Research question 1:
+
+A. How does the amount of hours of sleep per night affect the GPA of female Duke students?
+
+B. Female Duke University students is the target population 
+
+C. I hypothesize that female Duke students that get between 7 and 9 hours of sleep per night will have higher GPAs. I expect this because students that sleep their recommended hours will study more effectively and energy levels will be higher
+
+D. I plan to use the gpa data set from the openintro package to answer this question. It is an observational study surveying 55 Duke University students on GPA, studying, and more
+
+E. I plan to use the gpa data set from the openintro package to answer this question. It is an observational study surveying 55 Duke University students on GPA, studying, and more
+
+F. The strengths of this data set is that it includes relevant variables such as GPA, hours slept per night, and gender, which are directly pertinent to your research question. The research question is also specific and clearly defined, focusing on a particular demographic, female Duke students and a specific variable, hours of sleep per night, in relation to GPA. This specificity can lead to more precise and actionable insights. This data set has a main weakness dealing with the sample size. The data set consists of only 55 students which is a small sample size that may not provide a view of the entire female student population at Duke University. This could potentially limit the generalization of the findings
+
+glimpse(gpa)
+
+### Research question 2:
+
+A. How does the type of police force used by Minneapolis police vary by the race of male subjects?
+
+B. All individuals involved in police use-of-force incidents in Minneapolis is the target population
+
+C. I believe that the type of police force used by Minneapolis police officers is more likely to be severe against African Americans males compared to those who are White. I expect this because ongoing reports of racial profiling and discrimination within law enforcement practices, highlighted by media coverage and community reports, frequently indicate that police use disproportionate force against minority individuals. 
+
+D. I plan to use the mn_police_use_of_force data set from the openintro package to answer this question. It is an observational using Minneapolis police use of force data from 2016 through August 2021.
+
+E. To answer this question, I would use the variables "force_type"and “race”
+
+F. The strength of this data set is in the coverage of multiple years and its specificity to Minneapolis, allowing for a detailed examination of local police practices. Additionally, the observational nature of the data captures real-world scenarios, providing a broad view of police interactions. On the other hand, the sampling strategy, being observational and encompassing a significant time frame, is a good fit for understanding trends and disparities, but it may not account for all contextual factors influencing police behavior
+
+glimpse(mn_police_use_of_force)
