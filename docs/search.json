@@ -608,7 +608,7 @@
     "href": "slides/06-workshopping.html#workshopping",
     "title": "Workshopping project proposals",
     "section": "Workshopping",
-    "text": "Workshopping\n\nGroups of 3\n\nYou have access to each others’ github repos\n\nRead your group members’ submissions\nAnswer some questions about their work\n\nMake your feedback a GitHub issue: copy/paste template from project instructions; fill out\n10-15 min/person\nGoal is improvement–how can they make their work better?\n\nTalk through your thoughts on each group member’s proposal and their choice of question (5-10 minutes each)"
+    "text": "Workshopping\n\nRead your group members’ submissions\nAnswer some questions about their work\n\nReturn feedback in github: copy/paste template from project instructions; fill out\n10-15 min/person\nGoal is improvement–how can they make their work better?\n\nTalk through your thoughts on each group member’s proposal and their choice of question (5-10 minutes each)"
   },
   {
     "objectID": "slides/15-hypothesistests3.html#logistics",
@@ -2435,7 +2435,7 @@
     "href": "slides/05-studiessamples.html#today",
     "title": "Studies and samples",
     "section": "Today",
-    "text": "Today\n\nRelationships between variables\nStudies and samples\nQuestions on the project\n\n\n\nToday’s slides are based in part on materials written by Dr. Joseph Roso—thank you!"
+    "text": "Today\n\nPractice with GitHub\nRelationships between variables\nStudies and samples\nQuestions on the project"
   },
   {
     "objectID": "slides/05-studiessamples.html#association",
@@ -2589,7 +2589,7 @@
     "href": "slides/05-studiessamples.html#project-proposal",
     "title": "Studies and samples",
     "section": "Project proposal",
-    "text": "Project proposal\n\nExample is posted\nInstructions are shortened; bad data sets removed\nBy class tomorrow: a first draft (for feedback; graded for completion only)\nQuestions?\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Project proposal\n\nBy class tomorrow: a first draft (for feedback; graded for completion only)\nQuestions?\n\n\n\n\n🔗 https://soc333-sum24.github.io/"
   },
   {
     "objectID": "slides/02-datavariables.html#your-advice-for-each-other",
@@ -4236,5 +4236,19 @@
       "Slides",
       "Lecture 4: Project and research questions"
     ]
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#spurious-association",
+    "href": "slides/05-studiessamples.html#spurious-association",
+    "title": "Studies and samples",
+    "section": "Spurious association",
+    "text": "Spurious association"
+  },
+  {
+    "objectID": "slides/05-studiessamples.html#first",
+    "href": "slides/05-studiessamples.html#first",
+    "title": "Studies and samples",
+    "section": "First…",
+    "text": "First…\n\nCheck your email\nJoin our class GitHub organization"
   }
 ]

@@ -1,0 +1,74 @@
+---
+title: "Workshopping project proposals"
+subtitle: "Lecture 6"
+date: "May 25, 2023"
+format: revealjs
+---
+
+## Today
+
+-   Fit between research questions and data
+-   Workshop your research questions
+
+## Fit between research questions and data
+
+::: incremental
+-   Is the sample generalizable to the target population?
+-   Does it contain the necessary variables to answer the research question?
+:::
+
+## Research questions and variables {.smaller}
+
+-   EADA data
+
+```{r, include = FALSE}
+library(tidyverse)
+sports <- readRDS("../exampleprep/sports_npeople.rds") |> 
+  select(-player_coach_ratio)
+```
+
+```{r}
+glimpse(sports)
+```
+
+## Would these research questions work? What variables would they use? {.smaller}
+
+-   How does the number of assistant coaches assigned to teams vary by university?
+
+```{r}
+glimpse(sports)
+```
+
+## Would these research questions work? What variables would they use? {.smaller}
+
+-   How does the number of coaches assigned to basketball teams vary by gender of the team?
+
+```{r}
+glimpse(sports)
+```
+
+## Would these research questions work? What variables would they use? {.smaller}
+
+-   How is the number of games a team wins related to the number of coaches it has?
+
+```{r}
+glimpse(sports)
+```
+
+## Workshopping {.smaller}
+
+-   Read your group members' submissions
+
+-   Answer some questions about their work
+
+    -   Return feedback in github: copy/paste template from project instructions; fill out
+    -   10-15 min/person
+    -   Goal is improvement--how can they make their work better?
+
+-   Talk through your thoughts on each group member's proposal and their choice of question (5-10 minutes each)
+
+------------------------------------------------------------------------
+
+-   Was this helpful?
+-   Do you feel like you're on a good path with your project?
+-   Questions you'd like me to address?

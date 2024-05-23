@@ -8,9 +8,9 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Aidan Combs">
+  <meta name="author" content="Suzanne Schenewerk">
   <meta name="dcterms.date" content="2023-05-25">
   <title>SOCIOL 333 - Workshopping project proposals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -224,7 +224,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -389,7 +390,7 @@
   </style>
 <meta property="og:title" content="SOCIOL 333 - Workshopping project proposals">
 <meta property="og:description" content="Lecture 6">
-<meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -402,10 +403,10 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Aidan Combs 
+Suzanne Schenewerk 
 </div>
         <p class="quarto-title-affiliation">
-            Duke University <br> SOCIOL 333 - Summer Term 1 2023
+            Duke University <br> SOCIOL 333 - Summer 2024
           </p>
     </div>
 </div>
@@ -428,25 +429,13 @@ Aidan Combs
 </ul>
 </div>
 </section>
-<section id="this-is-a-problem-if-you-want-to-estimate-mental-health-in-the-population" class="slide level2">
-<h2>This is a problem if you want to estimate mental health in the population</h2>
-
-<img data-src="images/05/confounder.png" class="r-stretch"></section>
-<section id="but-not-if-youre-interested-in-the-social-mediamental-health-relationship" class="slide level2">
-<h2>But not if you’re interested in the social media/mental health relationship</h2>
-
-<img data-src="images/05/confounder.png" class="r-stretch"></section>
-<section id="interactions-are-a-problem-for-studying-relationships" class="slide level2">
-<h2>Interactions are a problem for studying relationships</h2>
-
-<img data-src="images/05/interaction.png" class="r-stretch"></section>
 <section id="research-questions-and-variables" class="slide level2 smaller">
 <h2>Research questions and variables</h2>
 <ul>
 <li>EADA data</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,311
 Columns: 10
@@ -469,7 +458,7 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 <li>How does the number of assistant coaches assigned to teams vary by university?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,311
 Columns: 10
@@ -492,7 +481,7 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 <li>How does the number of coaches assigned to basketball teams vary by gender of the team?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,311
 Columns: 10
@@ -515,7 +504,7 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 <li>How is the number of games a team wins related to the number of coaches it has?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,311
 Columns: 10
@@ -535,14 +524,10 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 <section id="workshopping" class="slide level2 smaller">
 <h2>Workshopping</h2>
 <ul>
-<li><p>Groups of 3</p>
-<ul>
-<li>You have access to each others’ github repos</li>
-</ul></li>
 <li><p>Read your group members’ submissions</p></li>
 <li><p>Answer some questions about their work</p>
 <ul>
-<li>Make your feedback a GitHub issue: copy/paste template from project instructions; fill out</li>
+<li>Return feedback in github: copy/paste template from project instructions; fill out</li>
 <li>10-15 min/person</li>
 <li>Goal is improvement–how can they make their work better?</li>
 </ul></li>
@@ -554,13 +539,13 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
 <ul>
 <li>Was this helpful?</li>
 <li>Do you feel like you’re on a good path with your project?</li>
-<li>How is learning our computing workflow going?</li>
-<li>Suggestions for me for next time? Questions you’d like me to address?</li>
+<li>Questions you’d like me to address?</li>
 </ul>
 
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://soc333-sum24.github.io/">🔗 https://soc333-sum24.github.io/</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -590,7 +575,6 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -777,42 +761,80 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -890,10 +912,27 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -903,8 +942,17 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -918,7 +966,11 @@ $ nplayers     &lt;dbl&gt; 33, 15, 81, 12, 45, 23, 32, 11, 50, 50, 35, 35, 35, 3
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

@@ -120,10 +120,10 @@ website:
 #            text: "Lecture 8: Filtering data frames"
 #          - href: slides/07-describingpt1.qmd
 #            text: "Lecture 7: Summary statistics"
-#          - href: slides/06-workshopping.qmd
-#            text: "Lecture 6: Workshopping proposals"
-#          - href: slides/05-studiessamples.qmd
-#            text: "Lecture 5: Studies and samples"
+          - href: slides/06-workshopping.qmd
+            text: "Lecture 6: Workshopping proposals"
+          - href: slides/05-studiessamples.qmd
+            text: "Lecture 5: Studies and samples"
           - href: slides/04-researchquestions.qmd
             text: "Lecture 4: Project and research questions"
           - href: slides/03-computing.qmd
