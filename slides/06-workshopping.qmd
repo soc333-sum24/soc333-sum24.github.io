@@ -1,7 +1,7 @@
 ---
 title: "Workshopping project proposals"
 subtitle: "Lecture 6"
-date: "May 25, 2023"
+date: "May 23, 2023"
 format: revealjs
 ---
 
