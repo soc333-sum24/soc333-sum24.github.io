@@ -2841,182 +2841,286 @@
     "href": "slides/07-describingpt1.html#logistics",
     "title": "Describing data: part 1",
     "section": "Logistics",
-    "text": "Logistics\n\nFinal project proposals due tonight\n\nUpdate your first draft: incorporate useful peer feedback\nDon’t forget to add the last paragraph about what question you think you should go with\nAny last questions?\n\n\n\n\nLate work policy\n\nYou have 3 no-questions-asked late days to use through the semester\nApplies to project components and assignments (except final paper and presentation–I can’t extend those)"
+    "text": "Logistics\n\nFinal project proposals due tonight\n\nUpdate your first draft: incorporate useful peer feedback\nDon’t forget to add the last paragraph about what question you think you should go with\nAny last questions?\n\n\n\n\nLate work policy\n\nYou have 3 no-questions-asked late days to use through the semester\nApplies to project components and assignments (except final paper and presentation–I can’t extend those)",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#today",
     "href": "slides/07-describingpt1.html#today",
     "title": "Describing data: part 1",
     "section": "Today",
-    "text": "Today\n\nData analysis process\nUnivariate summaries: what do my variables look like?"
+    "text": "Today\n\nData analysis process\nUnivariate summaries: what do my variables look like?",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process",
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic\nFind data; learn what observations and variables are available\nWrite research question\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic\nFind data; learn what observations and variables are available\nWrite research question\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#project-component-2-descriptive-statistics",
     "href": "slides/07-describingpt1.html#project-component-2-descriptive-statistics",
     "title": "Describing data: part 1",
     "section": "Project component 2: Descriptive statistics",
-    "text": "Project component 2: Descriptive statistics\nGoals:\n\n\nUnderstand how your variables are distributed in your data\nMake any necessary modifications to your data frame\n\nRemove irrelevant observations\nModify or create variables as necessary\n\nDescribe the relationships between your variables"
+    "text": "Project component 2: Descriptive statistics\nGoals:\n\n\nUnderstand how your variables are distributed in your data\nMake any necessary modifications to your data frame\n\nRemove irrelevant observations\nModify or create variables as necessary\n\nDescribe the relationships between your variables",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#today-with-numbers-later-with-plots",
     "href": "slides/07-describingpt1.html#today-with-numbers-later-with-plots",
     "title": "Describing data: part 1",
     "section": "Today: With numbers (later: with plots)",
-    "text": "Today: With numbers (later: with plots)\n\nSummary statistics\nWhat makes sense depends on variable type"
+    "text": "Today: With numbers (later: with plots)\n\nSummary statistics\nWhat makes sense depends on variable type",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#r-syntax-for-today",
     "href": "slides/07-describingpt1.html#r-syntax-for-today",
     "title": "Describing data: part 1",
     "section": "R syntax for today",
-    "text": "R syntax for today\n\nTo access specific variables: dataframe$variable\nFunctions do things with variables/other inputs: do_this(with_this)\nWe can save results as objects to use later with &lt;-: an_object_name &lt;- some_function(some_input)\n\neg: meanvalue &lt;- mean(dataframe$variable)"
+    "text": "R syntax for today\n\nTo access specific variables: dataframe$variable\nFunctions do things with variables/other inputs: do_this(with_this)\nWe can save results as objects to use later with &lt;-: an_object_name &lt;- some_function(some_input)\n\neg: meanvalue &lt;- mean(dataframe$variable)",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#data-set-1-for-today-eada-data-on-sports-teams",
     "href": "slides/07-describingpt1.html#data-set-1-for-today-eada-data-on-sports-teams",
     "title": "Describing data: part 1",
     "section": "Data set 1 for today: EADA data on sports teams",
-    "text": "Data set 1 for today: EADA data on sports teams\n\nglimpse(sports)\n\nRows: 879\nColumns: 8\n$ school             &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Du…\n$ year               &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division           &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Div…\n$ teamgender         &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"m…\n$ sport              &lt;chr&gt; \"Baseball\", \"Basketball\", \"Fencing\", \"Football\", \"G…\n$ ncoaches           &lt;dbl&gt; 3, 4, 1, 10, 2, 3, 3, 2, 2, 3, 3, 4, 4, 8, 6, 13, 2…\n$ nplayers           &lt;dbl&gt; 33, 15, 19, 81, 12, 45, 23, 32, 11, 50, 35, 35, 30,…\n$ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000000,…"
+    "text": "Data set 1 for today: EADA data on sports teams\n\nglimpse(sports)\n\nRows: 879\nColumns: 8\n$ school             &lt;chr&gt; \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Duke\", \"Du…\n$ year               &lt;dbl&gt; 2003, 2003, 2003, 2003, 2003, 2003, 2003, 2003, 200…\n$ division           &lt;chr&gt; \"NCAA Division I-A\", \"NCAA Division I-A\", \"NCAA Div…\n$ teamgender         &lt;chr&gt; \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"men\", \"m…\n$ sport              &lt;chr&gt; \"Baseball\", \"Basketball\", \"Fencing\", \"Football\", \"G…\n$ ncoaches           &lt;dbl&gt; 3, 4, 1, 10, 2, 3, 3, 2, 2, 3, 3, 4, 4, 8, 6, 13, 2…\n$ nplayers           &lt;dbl&gt; 33, 15, 19, 81, 12, 45, 23, 32, 11, 50, 35, 35, 30,…\n$ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000000,…",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#before-we-dive-in-an-intro-to-missing-data",
     "href": "slides/07-describingpt1.html#before-we-dive-in-an-intro-to-missing-data",
     "title": "Describing data: part 1",
     "section": "Before we dive in: an intro to missing data",
-    "text": "Before we dive in: an intro to missing data\n\n\nSometimes not everyone answers every question or data is not available for a specific observation\nCreates NA values in your data frame\nCheck for them–they can create unexpected results otherwise"
+    "text": "Before we dive in: an intro to missing data\n\n\nSometimes not everyone answers every question or data is not available for a specific observation\nCreates NA values in your data frame\nCheck for them–they can create unexpected results otherwise",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#categorical-what-are-the-options",
     "href": "slides/07-describingpt1.html#categorical-what-are-the-options",
     "title": "Describing data: part 1",
     "section": "Categorical: What are the options?",
-    "text": "Categorical: What are the options?\n\nunique()\n\n\n\nunique(sports$school)\n\n[1] \"Duke\" \"UNC\" \n\n\n\n\n\nunique(sports$sport)\n\n [1] \"Baseball\"                  \"Basketball\"               \n [3] \"Fencing\"                   \"Football\"                 \n [5] \"Golf\"                      \"Lacrosse\"                 \n [7] \"Soccer\"                    \"Swimming and Diving\"      \n [9] \"Tennis\"                    \"Track and Field X Country\"\n[11] \"Wrestling\"                 \"All Track Combined\"       \n[13] \"Field Hockey\"              \"Rowing\"                   \n[15] \"Volleyball\"                \"Gymnastics\"               \n[17] \"Softball\""
+    "text": "Categorical: What are the options?\n\nunique()\n\n\n\nunique(sports$school)\n\n[1] \"Duke\" \"UNC\" \n\n\n\n\n\nunique(sports$sport)\n\n [1] \"Baseball\"                  \"Basketball\"               \n [3] \"Fencing\"                   \"Football\"                 \n [5] \"Golf\"                      \"Lacrosse\"                 \n [7] \"Soccer\"                    \"Swimming and Diving\"      \n [9] \"Tennis\"                    \"Track and Field X Country\"\n[11] \"Wrestling\"                 \"All Track Combined\"       \n[13] \"Field Hockey\"              \"Rowing\"                   \n[15] \"Volleyball\"                \"Gymnastics\"               \n[17] \"Softball\"",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#categorical-counts-for-one-variable",
     "href": "slides/07-describingpt1.html#categorical-counts-for-one-variable",
     "title": "Describing data: part 1",
     "section": "Categorical: counts for one variable",
-    "text": "Categorical: counts for one variable\n\nCounts: table()\n\nuseNA = \"always\" tells R to let you know if there is any missing data on your variables\n\n\n\ntable(sports$school, useNA = \"always\")\n\n\nDuke  UNC &lt;NA&gt; \n 423  456    0"
+    "text": "Categorical: counts for one variable\n\nCounts: table()\n\nuseNA = \"always\" tells R to let you know if there is any missing data on your variables\n\n\n\ntable(sports$school, useNA = \"always\")\n\n\nDuke  UNC &lt;NA&gt; \n 423  456    0",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#categorical-counts-for-two-variables",
     "href": "slides/07-describingpt1.html#categorical-counts-for-two-variables",
     "title": "Describing data: part 1",
     "section": "Categorical: counts for two variables",
-    "text": "Categorical: counts for two variables\n\nStill table(), but use two variables as arguments\n\n\ntable(sports$teamgender, sports$school, useNA = \"always\")\n\n       \n        Duke UNC &lt;NA&gt;\n  men    209 209    0\n  women  214 247    0\n  &lt;NA&gt;     0   0    0"
+    "text": "Categorical: counts for two variables\n\nStill table(), but use two variables as arguments\n\n\ntable(sports$teamgender, sports$school, useNA = \"always\")\n\n       \n        Duke UNC &lt;NA&gt;\n  men    209 209    0\n  women  214 247    0\n  &lt;NA&gt;     0   0    0",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#exercise",
     "href": "slides/07-describingpt1.html#exercise",
     "title": "Describing data: part 1",
     "section": "Exercise",
-    "text": "Exercise\n\nToday’s exercise: in R! Clone and open the project repo now (ex-5-28-yourusername)\n\nInstructions: Computing -&gt; Cloning and committing\n\nData: American Community Survey 2012\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…"
+    "text": "Exercise\n\nToday’s exercise: in R! Clone and open the project repo now (ex-5-28-yourusername)\n\nInstructions: Computing -&gt; Cloning and committing\n\nData: American Community Survey 2012\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#question-1-solutions",
     "href": "slides/07-describingpt1.html#question-1-solutions",
     "title": "Describing data: part 1",
     "section": "Question 1 solutions",
-    "text": "Question 1 solutions\nResponse options for the employment variable\n\n\nunique(acs12$employment)\n\n[1] not in labor force &lt;NA&gt;               employed           unemployed        \nLevels: not in labor force unemployed employed"
+    "text": "Question 1 solutions\nResponse options for the employment variable\n\n\nunique(acs12$employment)\n\n[1] not in labor force &lt;NA&gt;               employed           unemployed        \nLevels: not in labor force unemployed employed",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#question-1-solutions-1",
     "href": "slides/07-describingpt1.html#question-1-solutions-1",
     "title": "Describing data: part 1",
     "section": "Question 1 solutions",
-    "text": "Question 1 solutions\nHow many people are in each category? How many missing values are there?\n\n\ntable(acs12$employment, useNA = \"always\")\n\n\nnot in labor force         unemployed           employed               &lt;NA&gt; \n               656                106                843                395"
+    "text": "Question 1 solutions\nHow many people are in each category? How many missing values are there?\n\n\ntable(acs12$employment, useNA = \"always\")\n\n\nnot in labor force         unemployed           employed               &lt;NA&gt; \n               656                106                843                395",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#question-1-solutions-2",
     "href": "slides/07-describingpt1.html#question-1-solutions-2",
     "title": "Describing data: part 1",
     "section": "Question 1 solutions",
-    "text": "Question 1 solutions\nCreate a table that shows the number of people of each gender in each employment category.\n\n\ntable(acs12$gender, acs12$employment, useNA = \"always\")\n\n        \n         not in labor force unemployed employed &lt;NA&gt;\n  male                  283         59      470  219\n  female                373         47      373  176\n  &lt;NA&gt;                    0          0        0    0\n\n\n\n\nDoes it look like gender and employment status are related?"
+    "text": "Question 1 solutions\nCreate a table that shows the number of people of each gender in each employment category.\n\n\ntable(acs12$gender, acs12$employment, useNA = \"always\")\n\n        \n         not in labor force unemployed employed &lt;NA&gt;\n  male                  283         59      470  219\n  female                373         47      373  176\n  &lt;NA&gt;                    0          0        0    0\n\n\n\n\nDoes it look like gender and employment status are related?",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#numeric-all-about-distributions",
     "href": "slides/07-describingpt1.html#numeric-all-about-distributions",
     "title": "Describing data: part 1",
     "section": "Numeric: All about distributions!",
-    "text": "Numeric: All about distributions!"
+    "text": "Numeric: All about distributions!",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#summarizing-a-distribution",
     "href": "slides/07-describingpt1.html#summarizing-a-distribution",
     "title": "Describing data: part 1",
     "section": "Summarizing a distribution",
-    "text": "Summarizing a distribution\n\n\n\n\nCenter\nSpread\nShape"
+    "text": "Summarizing a distribution\n\n\n\n\nCenter\nSpread\nShape",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#center-mean",
     "href": "slides/07-describingpt1.html#center-mean",
     "title": "Describing data: part 1",
     "section": "Center: Mean",
-    "text": "Center: Mean\nSay we measure heights of 7 people (in inches):\n\nheights &lt;- c(67, 70, 80, 61, 70, 71, 62)\n\n\n\naka the average\nAdd everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7\nmean()\n\n\n\n\nmean(heights)\n\n[1] 68.71429"
+    "text": "Center: Mean\nSay we measure heights of 7 people (in inches):\n\nheights &lt;- c(67, 70, 80, 61, 70, 71, 62)\n\n\n\naka the average\nAdd everything together and divide by the number of values: (66 + 70 + 80 + 62 + 68 + 71 + 62)/7 = 68.7\nmean()\n\n\n\n\nmean(heights)\n\n[1] 68.71429",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#center-median",
     "href": "slides/07-describingpt1.html#center-median",
     "title": "Describing data: part 1",
     "section": "Center: Median",
-    "text": "Center: Median\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\n\n\n\nThe middle value\nOrder the values least to greatest, select the one in the middle\n61, 62, 67, 70, 70, 71, 80\nmedian()\n\n\n\n\nmedian(heights)\n\n[1] 70"
+    "text": "Center: Median\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\n\n\n\nThe middle value\nOrder the values least to greatest, select the one in the middle\n61, 62, 67, 70, 70, 71, 80\nmedian()\n\n\n\n\nmedian(heights)\n\n[1] 70",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#spread-minimum-and-maximum",
     "href": "slides/07-describingpt1.html#spread-minimum-and-maximum",
     "title": "Describing data: part 1",
     "section": "Spread: minimum and maximum",
-    "text": "Spread: minimum and maximum\n\nmin(heights)\n\n[1] 61\n\n\n\nmax(heights)\n\n[1] 80"
+    "text": "Spread: minimum and maximum\n\nmin(heights)\n\n[1] 61\n\n\n\nmax(heights)\n\n[1] 80",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#spread-quartiles",
     "href": "slides/07-describingpt1.html#spread-quartiles",
     "title": "Describing data: part 1",
     "section": "Spread: quartiles",
-    "text": "Spread: quartiles\n\npercentiles\nlowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc\nCalculated similarly to the median\nquantile()\n\n\nquantile(heights)\n\n  0%  25%  50%  75% 100% \n61.0 64.5 70.0 70.5 80.0"
+    "text": "Spread: quartiles\n\npercentiles\nlowest 1/4 of your data is below the 25th percentile, lowest 1/2 below 50%, etc\nCalculated similarly to the median\nquantile()\n\n\nquantile(heights)\n\n  0%  25%  50%  75% 100% \n61.0 64.5 70.0 70.5 80.0",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#spread-standard-deviation",
     "href": "slides/07-describingpt1.html#spread-standard-deviation",
     "title": "Describing data: part 1",
     "section": "Spread: standard deviation",
-    "text": "Spread: standard deviation\n\nMeasure of degree of variation in data: bigger standard deviation = more variation\nUsed to establish statistical significance–we’ll come back to this later\nsd()\n\n\nheights_moresimilar &lt;- c(60, 63, 62, 60, 61, 61, 64)\n\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\nheights_moresimilar\n\n[1] 60 63 62 60 61 61 64\n\n\n\nsd(heights)\n\n[1] 6.369571\n\n\n\nsd(heights_moresimilar)\n\n[1] 1.511858"
+    "text": "Spread: standard deviation\n\nMeasure of degree of variation in data: bigger standard deviation = more variation\nUsed to establish statistical significance–we’ll come back to this later\nsd()\n\n\nheights_moresimilar &lt;- c(60, 63, 62, 60, 61, 61, 64)\n\n\nheights\n\n[1] 67 70 80 61 70 71 62\n\nheights_moresimilar\n\n[1] 60 63 62 60 61 61 64\n\n\n\nsd(heights)\n\n[1] 6.369571\n\n\n\nsd(heights_moresimilar)\n\n[1] 1.511858",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#summary-almost-everything-all-at-once",
     "href": "slides/07-describingpt1.html#summary-almost-everything-all-at-once",
     "title": "Describing data: part 1",
     "section": "summary(): (almost) everything all at once",
-    "text": "summary(): (almost) everything all at once\n\nsummary(sports$nplayers)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   5.00   15.00   28.00   35.63   40.00  148.00"
+    "text": "summary(): (almost) everything all at once\n\nsummary(sports$nplayers)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   5.00   15.00   28.00   35.63   40.00  148.00",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/07-describingpt1.html#summary-statistics-functions-and-missing-values",
     "href": "slides/07-describingpt1.html#summary-statistics-functions-and-missing-values",
     "title": "Describing data: part 1",
     "section": "Summary statistics functions and missing values",
-    "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98\n\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/"
+    "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98\n\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/",
+    "crumbs": [
+      "Slides",
+      "Lecture 7: Summary statistics"
+    ]
   },
   {
     "objectID": "slides/18-pvals.html#logistics",
