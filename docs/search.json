@@ -2855,21 +2855,21 @@
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\n\n\n\nDetermine topic\nFind data; learn what observations and variables are available\nWrite research question\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic\nFind data; learn what observations and variables are available\nWrite research question\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
   },
   {
     "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-1",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
   },
   {
     "objectID": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
     "href": "slides/07-describingpt1.html#the-approximate-data-analysis-process-2",
     "title": "Describing data: part 1",
     "section": "The (approximate) data analysis process",
-    "text": "The (approximate) data analysis process\n\n\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
+    "text": "The (approximate) data analysis process\n\nDetermine topic ✓\nFind data; learn what observations and variables are available ✓\nWrite research question ✓\nDescribe distributions of relevant variables\nPrepare data frame for analysis\nDescribe relationships between variables\nPerform statistical tests/write models\nCommunicate results"
   },
   {
     "objectID": "slides/07-describingpt1.html#project-component-2-descriptive-statistics",
@@ -2932,7 +2932,7 @@
     "href": "slides/07-describingpt1.html#exercise",
     "title": "Describing data: part 1",
     "section": "Exercise",
-    "text": "Exercise\n\nToday’s exercise: in R! Clone and open the project repo now (ex-5-30-yourusername)\n\nInstructions: Computing -&gt; Cloning and committing\n\nData: American Community Survey 2012\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…"
+    "text": "Exercise\n\nToday’s exercise: in R! Clone and open the project repo now (ex-5-28-yourusername)\n\nInstructions: Computing -&gt; Cloning and committing\n\nData: American Community Survey 2012\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…"
   },
   {
     "objectID": "slides/07-describingpt1.html#question-1-solutions",
@@ -3016,7 +3016,7 @@
     "href": "slides/07-describingpt1.html#summary-statistics-functions-and-missing-values",
     "title": "Describing data: part 1",
     "section": "Summary statistics functions and missing values",
-    "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98\n\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Summary statistics functions and missing values\n\nmean(acs12$income)\n\n[1] NA\n\n\n\nNA! What!\n\n\n\nSummary statistics functions will return NA if any of the observations are missing information for the variable\nAlways check for missing data!\nUse the na.rm = TRUE option to tell the function to ignore the NA values.\n\n\n\n\nsummary(acs12$income)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      0       0    3000   23600   33700  450000     377 \n\n\n\n\n\nmean(acs12$income, na.rm = TRUE)\n\n[1] 23599.98\n\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/"
   },
   {
     "objectID": "slides/18-pvals.html#logistics",

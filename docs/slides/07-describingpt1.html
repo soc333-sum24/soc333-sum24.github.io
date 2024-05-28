@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-05-30">
+  <meta name="author" content="Suzanne Schenewerk">
+  <meta name="dcterms.date" content="2024-05-28">
   <title>SOCIOL 333 - Describing data: part 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -224,7 +224,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -389,7 +390,7 @@
   </style>
 <meta property="og:title" content="SOCIOL 333 - Describing data: part 1">
 <meta property="og:description" content="Lecture 7">
-<meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -402,15 +403,15 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Aidan Combs 
+Suzanne Schenewerk 
 </div>
         <p class="quarto-title-affiliation">
-            Duke University <br> SOCIOL 333 - Summer Term 1 2023
+            Duke University <br> SOCIOL 333 - Summer 2024
           </p>
     </div>
 </div>
 
-  <p class="date">2023-05-30</p>
+  <p class="date">2024-05-28</p>
 </section>
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
@@ -442,7 +443,6 @@ Aidan Combs
 <section id="the-approximate-data-analysis-process" class="slide level2 smaller">
 <h2>The (approximate) data analysis process</h2>
 <div class="columns">
-<div class="column" style="width:73%;">
 <div>
 <ul>
 <li class="fragment">Determine topic</li>
@@ -455,17 +455,10 @@ Aidan Combs
 <li class="fragment">Communicate results</li>
 </ul>
 </div>
-</div><div class="column" style="width:27%;">
-<div class="fragment">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
 </div>
 </section>
 <section id="the-approximate-data-analysis-process-1" class="slide level2 smaller">
 <h2>The (approximate) data analysis process</h2>
-<div class="columns">
-<div class="column" style="width:73%;">
 <ul>
 <li>Determine topic ✓</li>
 <li>Find data; learn what observations and variables are available ✓</li>
@@ -476,15 +469,9 @@ Aidan Combs
 <li>Perform statistical tests/write models</li>
 <li>Communicate results</li>
 </ul>
-</div><div class="column" style="width:27%;">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
 </section>
 <section id="the-approximate-data-analysis-process-2" class="slide level2 smaller">
 <h2>The (approximate) data analysis process</h2>
-<div class="columns">
-<div class="column" style="width:73%;">
 <ul>
 <li>Determine topic ✓</li>
 <li>Find data; learn what observations and variables are available ✓</li>
@@ -495,10 +482,6 @@ Aidan Combs
 <li>Perform statistical tests/write models</li>
 <li>Communicate results</li>
 </ul>
-</div><div class="column" style="width:27%;">
-<p><img data-src="images/07/cycle.png"></p>
-</div>
-</div>
 </section>
 <section id="project-component-2-descriptive-statistics" class="slide level2">
 <h2>Project component 2: Descriptive statistics</h2>
@@ -541,7 +524,7 @@ Aidan Combs
 <section id="data-set-1-for-today-eada-data-on-sports-teams" class="slide level2 smaller">
 <h2>Data set 1 for today: EADA data on sports teams</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">glimpse</span>(sports)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 879
 Columns: 8
@@ -578,7 +561,7 @@ $ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000
 </ul>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">unique</span>(sports<span class="sc">$</span>school)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">unique</span>(sports<span class="sc">$</span>school)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Duke" "UNC" </code></pre>
 </div>
@@ -586,7 +569,7 @@ $ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">unique</span>(sports<span class="sc">$</span>sport)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">unique</span>(sports<span class="sc">$</span>sport)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Baseball"                  "Basketball"               
  [3] "Fencing"                   "Football"                 
@@ -610,7 +593,7 @@ $ player_coach_ratio &lt;dbl&gt; 11.000000, 3.750000, 19.000000, 8.100000, 6.000
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">table</span>(sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Duke  UNC &lt;NA&gt; 
@@ -624,7 +607,7 @@ Duke  UNC &lt;NA&gt;
 <li>Still <code>table()</code>, but use two variables as arguments</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">table</span>(sports<span class="sc">$</span>teamgender, sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">table</span>(sports<span class="sc">$</span>teamgender, sports<span class="sc">$</span>school, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       
         Duke UNC &lt;NA&gt;
@@ -637,14 +620,14 @@ Duke  UNC &lt;NA&gt;
 <section id="exercise" class="slide level2 smaller">
 <h2>Exercise</h2>
 <ul>
-<li><p>Today’s exercise: in R! Clone and open the project repo now (<strong>ex-5-30-yourusername</strong>)</p>
+<li><p>Today’s exercise: in R! Clone and open the project repo now (<strong>ex-5-28-yourusername</strong>)</p>
 <ul>
-<li><a href="https://soc333-sum23.github.io/computing-clonerepo.html">Instructions: Computing -&gt; Cloning and committing</a></li>
+<li><a href="https://soc333-sum24.github.io/computing-clonerepo.html">Instructions: Computing -&gt; Cloning and committing</a></li>
 </ul></li>
 <li><p>Data: American Community Survey 2012</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">glimpse</span>(acs12)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,000
 Columns: 13
@@ -669,7 +652,7 @@ $ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru de
 <p>Response options for the employment variable</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">unique</span>(acs12<span class="sc">$</span>employment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">unique</span>(acs12<span class="sc">$</span>employment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] not in labor force &lt;NA&gt;               employed           unemployed        
 Levels: not in labor force unemployed employed</code></pre>
@@ -682,7 +665,7 @@ Levels: not in labor force unemployed employed</code></pre>
 <p>How many people are in each category? How many missing values are there?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">table</span>(acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 not in labor force         unemployed           employed               &lt;NA&gt; 
@@ -696,7 +679,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <p>Create a table that shows the number of people of each gender in each employment category.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">table</span>(acs12<span class="sc">$</span>gender, acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">table</span>(acs12<span class="sc">$</span>gender, acs12<span class="sc">$</span>employment, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        
          not in labor force unemployed employed &lt;NA&gt;
@@ -721,13 +704,21 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-11-1.png" width="480"></p>
+</figure>
+</div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-12-1.png" width="480"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -747,7 +738,11 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="07-describingpt1_files/figure-revealjs/unnamed-chunk-13-1.png" width="480"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -757,7 +752,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <h2>Center: Mean</h2>
 <p>Say we measure heights of 7 people (in inches):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>heights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">61</span>, <span class="dv">70</span>, <span class="dv">71</span>, <span class="dv">62</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>heights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">67</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">61</span>, <span class="dv">70</span>, <span class="dv">71</span>, <span class="dv">62</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div>
 <ul>
@@ -768,7 +763,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">mean</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">mean</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 68.71429</code></pre>
 </div>
@@ -778,7 +773,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <section id="center-median" class="slide level2">
 <h2>Center: Median</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 67 70 80 61 70 71 62</code></pre>
 </div>
@@ -793,7 +788,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">median</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">median</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 70</code></pre>
 </div>
@@ -803,13 +798,13 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <section id="spread-minimum-and-maximum" class="slide level2">
 <h2>Spread: minimum and maximum</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">min</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">min</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 61</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">max</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">max</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 80</code></pre>
 </div>
@@ -824,7 +819,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <li><code>quantile()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">quantile</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">quantile</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  0%  25%  50%  75% 100% 
 61.0 64.5 70.0 70.5 80.0 </code></pre>
@@ -839,26 +834,26 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <li><code>sd()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>heights_moresimilar <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">60</span>, <span class="dv">63</span>, <span class="dv">62</span>, <span class="dv">60</span>, <span class="dv">61</span>, <span class="dv">61</span>, <span class="dv">64</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>heights_moresimilar <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">60</span>, <span class="dv">63</span>, <span class="dv">62</span>, <span class="dv">60</span>, <span class="dv">61</span>, <span class="dv">61</span>, <span class="dv">64</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>heights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 67 70 80 61 70 71 62</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>heights_moresimilar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>heights_moresimilar</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 60 63 62 60 61 61 64</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">sd</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">sd</span>(heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6.369571</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">sd</span>(heights_moresimilar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">sd</span>(heights_moresimilar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.511858</code></pre>
 </div>
@@ -867,7 +862,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <section id="summary-almost-everything-all-at-once" class="slide level2">
 <h2>summary(): (almost) everything all at once</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">summary</span>(sports<span class="sc">$</span>nplayers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">summary</span>(sports<span class="sc">$</span>nplayers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    5.00   15.00   28.00   35.63   40.00  148.00 </code></pre>
@@ -877,7 +872,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 <section id="summary-statistics-functions-and-missing-values" class="slide level2 smaller">
 <h2>Summary statistics functions and missing values</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
@@ -894,7 +889,7 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">summary</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">summary</span>(acs12<span class="sc">$</span>income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
       0       0    3000   23600   33700  450000     377 </code></pre>
@@ -903,16 +898,17 @@ not in labor force         unemployed           employed               &lt;NA&gt
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">mean</span>(acs12<span class="sc">$</span>income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 23599.98</code></pre>
 </div>
 </div>
 </div>
 
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://soc333-sum24.github.io/">🔗 https://soc333-sum24.github.io/</a></p>
+</div>
 </div>
 </section></section>
     </div>
@@ -942,7 +938,6 @@ not in labor force         unemployed           employed               &lt;NA&gt
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1129,42 +1124,80 @@ not in labor force         unemployed           employed               &lt;NA&gt
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1242,10 +1275,27 @@ not in labor force         unemployed           employed               &lt;NA&gt
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1255,8 +1305,17 @@ not in labor force         unemployed           employed               &lt;NA&gt
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1270,7 +1329,11 @@ not in labor force         unemployed           employed               &lt;NA&gt
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
