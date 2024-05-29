@@ -1388,11 +1388,15 @@
     "href": "slides/08-describingpt2.html#logistics",
     "title": "Describing data: part 2",
     "section": "Logistics",
+<<<<<<< HEAD
     "text": "Logistics\n\nProject proposals\n\nI will get my feedback to you soon–will be posted as a github issue\n\n\n\n\nProject descriptive statistics\n\nDue Thursday June 6. Instructions are up; template and example to come this afternoon.",
     "crumbs": [
       "Slides",
       "Lecture 8: Filtering data frames"
     ]
+=======
+    "text": "Logistics\n\nProject proposals\n\nI will get my feedback to you soon–will be posted as a github issue\n\n\n\n\nProject descriptive statistics\n\nDue Thursday June 6. Instructions are up; template and example to come this afternoon."
+>>>>>>> db862ba1f539b8c4457e2ff8f4a087ecd99eda17
   },
   {
     "objectID": "slides/08-describingpt2.html#today",
@@ -1498,11 +1502,15 @@
     "href": "slides/08-describingpt2.html#skew",
     "title": "Describing data: part 2",
     "section": "Skew",
+<<<<<<< HEAD
     "text": "Skew\n\n\n\n\n\n\n\n\n\n\n\nRight-skewed data\n\n\n\n\n\n\n\n\n\n\nLeft-skewed data",
     "crumbs": [
       "Slides",
       "Lecture 8: Filtering data frames"
     ]
+=======
+    "text": "Skew\n\n\n\n\n\n\n\n\n\n\n\nRight-skewed data\n\n\n\n\n\n\n\n\n\n\nLeft-skewed data"
+>>>>>>> db862ba1f539b8c4457e2ff8f4a087ecd99eda17
   },
   {
     "objectID": "slides/08-describingpt2.html#skew-1",
@@ -1685,11 +1693,15 @@
     "href": "slides/08-describingpt2.html#exercise-filtering",
     "title": "Describing data: part 2",
     "section": "Exercise: Filtering",
+<<<<<<< HEAD
     "text": "Exercise: Filtering\n\nClone and open the project repo now (ex-5-29-yourusername)\nThen open the .qmd file and try out some filtering\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/",
     "crumbs": [
       "Slides",
       "Lecture 8: Filtering data frames"
     ]
+=======
+    "text": "Exercise: Filtering\n\nClone and open the project repo now (ex-5-31-yourusername)\nThen open the .qmd file and try out some filtering\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/"
+>>>>>>> db862ba1f539b8c4457e2ff8f4a087ecd99eda17
   },
   {
     "objectID": "slides/04-researchquestions.html#today",

@@ -365,7 +365,6 @@ table(acs12_employedonly$employment, useNA = "always")
 filter(acs12, employment = "employed")
 ```
 
-
 ## Common mistakes and error messages {.smaller}
 
 ```{r, error = TRUE}
@@ -395,3 +394,4 @@ filter(acs12, employment == "Employed")
 ## For next time
 
 -   Read IMS chapters 4 and 5, if you haven't already!
+
