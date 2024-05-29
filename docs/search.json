@@ -1388,196 +1388,308 @@
     "href": "slides/08-describingpt2.html#logistics",
     "title": "Describing data: part 2",
     "section": "Logistics",
-    "text": "Logistics\n\nProject proposals\n\nI will get my feedback to you soon–will be posted as a github issue (grades will be in Sakai)\n\n\n\n\nProject descriptive statistics\n\nDue Tuesday June 6. Instructions are up; template and example to come this afternoon.\n\n\n\n\n\nHomework 1\n\nCancelled as a mandatory assignment; time is short\nBUT practice is the only way to learn this stuff!\nSo, extra credit opportunities will be worked into exercises–I highly recommend doing as much as you can!"
+    "text": "Logistics\n\nProject proposals\n\nI will get my feedback to you soon–will be posted as a github issue\n\n\n\n\nProject descriptive statistics\n\nDue Thursday June 6. Instructions are up; template and example to come this afternoon.",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#today",
     "href": "slides/08-describingpt2.html#today",
     "title": "Describing data: part 2",
     "section": "Today",
-    "text": "Today\n\nFinish univariate summaries\nPreparing data frames"
+    "text": "Today\n\nFinish univariate summaries\nPreparing data frames",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#summarizing-a-distribution",
     "href": "slides/08-describingpt2.html#summarizing-a-distribution",
     "title": "Describing data: part 2",
     "section": "Summarizing a distribution",
-    "text": "Summarizing a distribution\n\n\n\n\nCenter\n\nmedian(dataset$var, na.rm = TRUE)\nmean(dataset$var, na.rm = TRUE)\n\nSpread\n\nquantile(dataset$var, na.rm = TRUE)\nsd(dataset$var, na.rm = TRUE)\n\n(Almost) everything\n\nsummary(dataset$var)"
+    "text": "Summarizing a distribution\n\n\n\n\nCenter\n\nmedian(dataset$var, na.rm = TRUE)\nmean(dataset$var, na.rm = TRUE)\n\nSpread\n\nquantile(dataset$var, na.rm = TRUE)\nsd(dataset$var, na.rm = TRUE)\n\n(Almost) everything\n\nsummary(dataset$var)",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#exercise-question-2",
     "href": "slides/08-describingpt2.html#exercise-question-2",
     "title": "Describing data: part 2",
     "section": "Exercise question 2",
-    "text": "Exercise question 2\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…"
+    "text": "Exercise question 2\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#question-2-solutions",
     "href": "slides/08-describingpt2.html#question-2-solutions",
     "title": "Describing data: part 2",
     "section": "Question 2 solutions",
-    "text": "Question 2 solutions\nWhat is the mean of hrs_work? What is the median? (there are two ways to get this info)\n\nApproach 1:\n\nmean(acs12$hrs_work, na.rm = TRUE)\n\n[1] 37.97706\n\nmedian(acs12$hrs_work, na.rm = TRUE)\n\n[1] 40\n\n\n\n\nApproach 2:\n\nsummary(acs12$hrs_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   1.00   32.00   40.00   37.98   40.00   99.00    1041"
+    "text": "Question 2 solutions\nWhat is the mean of hrs_work? What is the median? (there are two ways to get this info)\n\nApproach 1:\n\nmean(acs12$hrs_work, na.rm = TRUE)\n\n[1] 37.97706\n\nmedian(acs12$hrs_work, na.rm = TRUE)\n\n[1] 40\n\n\n\n\nApproach 2:\n\nsummary(acs12$hrs_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   1.00   32.00   40.00   37.98   40.00   99.00    1041",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#question-2-solutions-1",
     "href": "slides/08-describingpt2.html#question-2-solutions-1",
     "title": "Describing data: part 2",
     "section": "Question 2 solutions",
-    "text": "Question 2 solutions\nWhat is the standard deviation of hrs_work?\n\n\nsd(acs12$hrs_work, na.rm = TRUE)\n\n[1] 13.49768"
+    "text": "Question 2 solutions\nWhat is the standard deviation of hrs_work?\n\n\nsd(acs12$hrs_work, na.rm = TRUE)\n\n[1] 13.49768",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#question-2-solutions-2",
     "href": "slides/08-describingpt2.html#question-2-solutions-2",
     "title": "Describing data: part 2",
     "section": "Question 2 solutions",
-    "text": "Question 2 solutions\nWhat proportion of people in the data set are missing information (have NAs) for this variable? (there are many ways to do this)\n\n\n# Find the number of NA values\nsummary(acs12$hrs_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   1.00   32.00   40.00   37.98   40.00   99.00    1041 \n\n\n\n# Find the total number of observations\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…"
+    "text": "Question 2 solutions\nWhat proportion of people in the data set are missing information (have NAs) for this variable? (there are many ways to do this)\n\n\n# Find the number of NA values\nsummary(acs12$hrs_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   1.00   32.00   40.00   37.98   40.00   99.00    1041 \n\n\n\n# Find the total number of observations\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#question-2-solutions-3",
     "href": "slides/08-describingpt2.html#question-2-solutions-3",
     "title": "Describing data: part 2",
     "section": "Question 2 solutions",
-    "text": "Question 2 solutions\n\nNow that we have those values, we can use R to do the math\n\n# Divide!\n1041/2000\n\n[1] 0.5205"
+    "text": "Question 2 solutions\n\nNow that we have those values, we can use R to do the math\n\n# Divide!\n1041/2000\n\n[1] 0.5205",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#shape",
     "href": "slides/08-describingpt2.html#shape",
     "title": "Describing data: part 2",
     "section": "Shape",
-    "text": "Shape"
+    "text": "Shape",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#shape-1",
     "href": "slides/08-describingpt2.html#shape-1",
     "title": "Describing data: part 2",
     "section": "Shape",
-    "text": "Shape\n\nWe’ll go over how to make plots later\nBut summary statistics tell you things about shape too"
+    "text": "Shape\n\nWe’ll go over how to make plots later\nBut summary statistics tell you things about shape too",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#skew",
     "href": "slides/08-describingpt2.html#skew",
     "title": "Describing data: part 2",
     "section": "Skew",
-    "text": "Skew\n\n\n\n\n\n\n\nRight-skewed data\n\n\n\n\n\n\nLeft-skewed data"
+    "text": "Skew\n\n\n\n\n\n\n\n\n\n\n\nRight-skewed data\n\n\n\n\n\n\n\n\n\n\nLeft-skewed data",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#skew-1",
     "href": "slides/08-describingpt2.html#skew-1",
     "title": "Describing data: part 2",
     "section": "Skew",
-    "text": "Skew\n\nExtreme values influence the mean more than the median\nWhen mean is higher than median: data might be skewed right (and vice versa)"
+    "text": "Skew\n\nExtreme values influence the mean more than the median\nWhen mean is higher than median: data might be skewed right (and vice versa)",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#example-american-community-survey-commute-time",
     "href": "slides/08-describingpt2.html#example-american-community-survey-commute-time",
     "title": "Describing data: part 2",
     "section": "Example: American Community Survey commute time",
-    "text": "Example: American Community Survey commute time\ntime_to_work: Travel time to work, in minutes.\n\nmean_commute &lt;- mean(acs12$time_to_work, na.rm = TRUE)\nmedian_commute &lt;- median(acs12$time_to_work, na.rm = TRUE)\n\n\n\nmean_commute\n\n[1] 25.99745\n\n\n\n\n\nmedian_commute\n\n[1] 20"
+    "text": "Example: American Community Survey commute time\ntime_to_work: Travel time to work, in minutes.\n\nmean_commute &lt;- mean(acs12$time_to_work, na.rm = TRUE)\nmedian_commute &lt;- median(acs12$time_to_work, na.rm = TRUE)\n\n\n\nmean_commute\n\n[1] 25.99745\n\n\n\n\n\nmedian_commute\n\n[1] 20",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#example-american-community-survey-commute-time-1",
     "href": "slides/08-describingpt2.html#example-american-community-survey-commute-time-1",
     "title": "Describing data: part 2",
     "section": "Example: American Community Survey commute time",
-    "text": "Example: American Community Survey commute time"
+    "text": "Example: American Community Survey commute time",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#shape-quartiles",
     "href": "slides/08-describingpt2.html#shape-quartiles",
     "title": "Describing data: part 2",
     "section": "Shape: Quartiles",
-    "text": "Shape: Quartiles\n\nLocation of quartiles also tells you something about shape\n\n\nsummary(acs12$time_to_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      1      10      20      26      30     163    1217"
+    "text": "Shape: Quartiles\n\nLocation of quartiles also tells you something about shape\n\n\nsummary(acs12$time_to_work)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n      1      10      20      26      30     163    1217",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#review",
     "href": "slides/08-describingpt2.html#review",
     "title": "Describing data: part 2",
     "section": "Review",
-    "text": "Review\n\nCategorical data: look at the available categories and how many observations are in each category\n\nunique(dataframe$variable)\ntable(dataframe$variable, useNA = \"always\")\ntable(dataframe$variable1, dataframe$variable2, useNA = \"always\")"
+    "text": "Review\n\nCategorical data: look at the available categories and how many observations are in each category\n\nunique(dataframe$variable)\ntable(dataframe$variable, useNA = \"always\")\ntable(dataframe$variable1, dataframe$variable2, useNA = \"always\")",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#review-1",
     "href": "slides/08-describingpt2.html#review-1",
     "title": "Describing data: part 2",
     "section": "Review",
-    "text": "Review\n\nNumeric data: Look at summary statistics that tell you something about the distribution\n\nsummary(dataframe$variable)\nsd(dataframe$variable, na.rm = TRUE)"
+    "text": "Review\n\nNumeric data: Look at summary statistics that tell you something about the distribution\n\nsummary(dataframe$variable)\nsd(dataframe$variable, na.rm = TRUE)",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#removing-observations",
     "href": "slides/08-describingpt2.html#removing-observations",
     "title": "Describing data: part 2",
     "section": "Removing observations",
-    "text": "Removing observations\n\n\nYou may not be interested in all observations\nExample:\n\nRQ: How is commute time related to hours worked?"
+    "text": "Removing observations\n\n\nYou may not be interested in all observations\nExample:\n\nRQ: How is commute time related to hours worked?",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#removing-observations-1",
     "href": "slides/08-describingpt2.html#removing-observations-1",
     "title": "Describing data: part 2",
     "section": "Removing observations",
-    "text": "Removing observations\n\nHow is commute time related to hours worked?\nData: ACS 2012\n\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…\n\n\n\n\n-   Need to remove people who are unemployed/not in labor force (and don't have a job or a commute!)"
+    "text": "Removing observations\n\nHow is commute time related to hours worked?\nData: ACS 2012\n\n\n\nglimpse(acs12)\n\nRows: 2,000\nColumns: 13\n$ income       &lt;int&gt; 60000, 0, NA, 0, 0, 1700, NA, NA, NA, 45000, NA, 8600, 0,…\n$ employment   &lt;fct&gt; not in labor force, not in labor force, NA, not in labor …\n$ hrs_work     &lt;int&gt; 40, NA, NA, NA, NA, 40, NA, NA, NA, 84, NA, 23, NA, NA, N…\n$ race         &lt;fct&gt; white, white, white, white, white, other, white, other, a…\n$ age          &lt;int&gt; 68, 88, 12, 17, 77, 35, 11, 7, 6, 27, 8, 69, 69, 17, 10, …\n$ gender       &lt;fct&gt; female, male, female, male, female, female, male, male, m…\n$ citizen      &lt;fct&gt; yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, ye…\n$ time_to_work &lt;int&gt; NA, NA, NA, NA, NA, 15, NA, NA, NA, 40, NA, 5, NA, NA, NA…\n$ lang         &lt;fct&gt; english, english, english, other, other, other, english, …\n$ married      &lt;fct&gt; no, no, no, no, no, yes, no, no, no, yes, no, no, yes, no…\n$ edu          &lt;fct&gt; college, hs or lower, hs or lower, hs or lower, hs or low…\n$ disability   &lt;fct&gt; no, yes, no, no, yes, yes, no, yes, no, no, no, no, yes, …\n$ birth_qrtr   &lt;fct&gt; jul thru sep, jan thru mar, oct thru dec, oct thru dec, j…\n\n\n\n\n-   Need to remove people who are unemployed/not in labor force (and don't have a job or a commute!)",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#removing-observations-2",
     "href": "slides/08-describingpt2.html#removing-observations-2",
     "title": "Describing data: part 2",
     "section": "Removing observations",
-    "text": "Removing observations\n\n\nHow? With filter()\nfilter(dataframe, condition)\n\n\n\n\nacs12_employedonly &lt;- filter(acs12, employment == \"employed\")\n\n\n\n\nDid it work? Check with table()\n\n\ntable(acs12_employedonly$employment, useNA = \"always\")\n\n\nnot in labor force         unemployed           employed               &lt;NA&gt; \n                 0                  0                843                  0"
+    "text": "Removing observations\n\n\nHow? With filter()\nfilter(dataframe, condition)\n\n\n\n\nacs12_employedonly &lt;- filter(acs12, employment == \"employed\")\n\n\n\n\nDid it work? Check with table()\n\n\ntable(acs12_employedonly$employment, useNA = \"always\")\n\n\nnot in labor force         unemployed           employed               &lt;NA&gt; \n                 0                  0                843                  0",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#conditions",
     "href": "slides/08-describingpt2.html#conditions",
     "title": "Describing data: part 2",
     "section": "Conditions",
-    "text": "Conditions\n\n\nfilter(acs12, employment == \"employed\")\ncondition: employment == \"employed\"\nThis specifies which observations you want to keep\n\n\n\n\nCommon comparison operators:\n\n== : equal to (note there are two equals signs!)\n!= : not equal to\n&gt;, &gt;= : greater than, greater than or equal to\n&lt;, &lt;= : less than, less than or equal to\n\n\n\n\n\nValues:\n\nCan be numbers, letters/words, or TRUE/FALSE–should match the response options of your variable\nPut letters/words in quotation marks"
+    "text": "Conditions\n\n\nfilter(acs12, employment == \"employed\")\ncondition: employment == \"employed\"\nThis specifies which observations you want to keep\n\n\n\n\nCommon comparison operators:\n\n== : equal to (note there are two equals signs!)\n!= : not equal to\n&gt;, &gt;= : greater than, greater than or equal to\n&lt;, &lt;= : less than, less than or equal to\n\n\n\n\n\nValues:\n\nCan be numbers, letters/words, or TRUE/FALSE–should match the response options of your variable\nPut letters/words in quotation marks",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#condition-examples",
     "href": "slides/08-describingpt2.html#condition-examples",
     "title": "Describing data: part 2",
     "section": "Condition examples",
-    "text": "Condition examples\n\n\nfilter(acs12, citizen == \"no\")\nfilter(acs12, income &lt;= 12000)\nfilter(acs12, birth_qrtr != \"jan thru mar\")\nfilter(acs12, hrs_work &gt; 20)"
+    "text": "Condition examples\n\n\nfilter(acs12, citizen == \"no\")\nfilter(acs12, income &lt;= 12000)\nfilter(acs12, birth_qrtr != \"jan thru mar\")\nfilter(acs12, hrs_work &gt; 20)",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#other-useful-condition-operators",
     "href": "slides/08-describingpt2.html#other-useful-condition-operators",
     "title": "Describing data: part 2",
     "section": "Other useful condition operators",
-    "text": "Other useful condition operators\n\n\nTwo or more requirements\n\n& : and\n| : or\nfilter(acs12, citizen == \"no\" & lang == \"english\")\nfilter(acs12, race == \"black\" | race == \"asian\")\n\nMissing values\n\nis.na()\n!is.na()\n\nis not missing – good for removing rows with missing values\n\nfilter(acs12, !is.na(income))\n\nMore: Click here for R for Data Science"
+    "text": "Other useful condition operators\n\n\nTwo or more requirements\n\n& : and\n| : or\nfilter(acs12, citizen == \"no\" & lang == \"english\")\nfilter(acs12, race == \"black\" | race == \"asian\")\n\nMissing values\n\nis.na()\n!is.na()\n\nis not missing – good for removing rows with missing values\n\nfilter(acs12, !is.na(income))\n\nMore: Click here for R for Data Science",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#common-mistakes-and-error-messages",
     "href": "slides/08-describingpt2.html#common-mistakes-and-error-messages",
     "title": "Describing data: part 2",
     "section": "Common mistakes and error messages",
-    "text": "Common mistakes and error messages\n\nfilter(acs12, employment = \"employed\")\n\nError in `filter()`:\n! We detected a named input.\nℹ This usually means that you've used `=` instead of `==`.\nℹ Did you mean `employment == \"employed\"`?"
+    "text": "Common mistakes and error messages\n\nfilter(acs12, employment = \"employed\")\n\nError in `filter()`:\n! We detected a named input.\nℹ This usually means that you've used `=` instead of `==`.\nℹ Did you mean `employment == \"employed\"`?",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#common-mistakes-and-error-messages-1",
     "href": "slides/08-describingpt2.html#common-mistakes-and-error-messages-1",
     "title": "Describing data: part 2",
     "section": "Common mistakes and error messages",
-    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == employed)\n\nError in `filter()`:\nℹ In argument: `employment == employed`.\nCaused by error:\n! object 'employed' not found"
+    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == employed)\n\nError in `filter()`:\nℹ In argument: `employment == employed`.\nCaused by error:\n! object 'employed' not found",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#common-mistakes-and-error-messages-2",
     "href": "slides/08-describingpt2.html#common-mistakes-and-error-messages-2",
     "title": "Describing data: part 2",
     "section": "Common mistakes and error messages",
-    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == \"employd\")\n\n# A tibble: 0 × 13\n# ℹ 13 variables: income &lt;int&gt;, employment &lt;fct&gt;, hrs_work &lt;int&gt;, race &lt;fct&gt;,\n#   age &lt;int&gt;, gender &lt;fct&gt;, citizen &lt;fct&gt;, time_to_work &lt;int&gt;, lang &lt;fct&gt;,\n#   married &lt;fct&gt;, edu &lt;fct&gt;, disability &lt;fct&gt;, birth_qrtr &lt;fct&gt;"
+    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == \"employd\")\n\n# A tibble: 0 × 13\n# ℹ 13 variables: income &lt;int&gt;, employment &lt;fct&gt;, hrs_work &lt;int&gt;, race &lt;fct&gt;,\n#   age &lt;int&gt;, gender &lt;fct&gt;, citizen &lt;fct&gt;, time_to_work &lt;int&gt;, lang &lt;fct&gt;,\n#   married &lt;fct&gt;, edu &lt;fct&gt;, disability &lt;fct&gt;, birth_qrtr &lt;fct&gt;",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#common-mistakes-and-error-messages-3",
     "href": "slides/08-describingpt2.html#common-mistakes-and-error-messages-3",
     "title": "Describing data: part 2",
     "section": "Common mistakes and error messages",
-    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == \"Employed\")\n\n# A tibble: 0 × 13\n# ℹ 13 variables: income &lt;int&gt;, employment &lt;fct&gt;, hrs_work &lt;int&gt;, race &lt;fct&gt;,\n#   age &lt;int&gt;, gender &lt;fct&gt;, citizen &lt;fct&gt;, time_to_work &lt;int&gt;, lang &lt;fct&gt;,\n#   married &lt;fct&gt;, edu &lt;fct&gt;, disability &lt;fct&gt;, birth_qrtr &lt;fct&gt;"
+    "text": "Common mistakes and error messages\n\nfilter(acs12, employment == \"Employed\")\n\n# A tibble: 0 × 13\n# ℹ 13 variables: income &lt;int&gt;, employment &lt;fct&gt;, hrs_work &lt;int&gt;, race &lt;fct&gt;,\n#   age &lt;int&gt;, gender &lt;fct&gt;, citizen &lt;fct&gt;, time_to_work &lt;int&gt;, lang &lt;fct&gt;,\n#   married &lt;fct&gt;, edu &lt;fct&gt;, disability &lt;fct&gt;, birth_qrtr &lt;fct&gt;",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/08-describingpt2.html#exercise-filtering",
     "href": "slides/08-describingpt2.html#exercise-filtering",
     "title": "Describing data: part 2",
     "section": "Exercise: Filtering",
-    "text": "Exercise: Filtering\n\nClone and open the project repo now (ex-5-31-yourusername)\nThen open the .qmd file and try out some filtering\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum23.github.io/"
+    "text": "Exercise: Filtering\n\nClone and open the project repo now (ex-5-29-yourusername)\nThen open the .qmd file and try out some filtering\n\nInstructions: Computing -&gt; Cloning and committing\n\n\n\n\n\n🔗 https://soc333-sum24.github.io/",
+    "crumbs": [
+      "Slides",
+      "Lecture 8: Filtering data frames"
+    ]
   },
   {
     "objectID": "slides/04-researchquestions.html#today",

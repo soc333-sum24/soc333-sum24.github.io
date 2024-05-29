@@ -1,0 +1,397 @@
+---
+title: "Describing data: part 2"
+subtitle: "Lecture 8"
+date: "May 29, 2024"
+format: revealjs
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(openintro)
+sports <- readRDS("data/sports_teams.rds")
+```
+
+## Logistics {.smaller}
+
+-   Project proposals
+
+    -   I will get my feedback to you soon--will be posted as a github issue
+
+. . .
+
+-   Project descriptive statistics
+
+    -   Due **Thursday June 6**. Instructions are up; template and example to come this afternoon.
+
+## Today
+
+-   Finish univariate summaries
+-   Preparing data frames
+
+# Where we left off: summarizing numeric variables
+
+## Summarizing a distribution {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   Center
+
+    -   median(dataset\$var, na.rm = TRUE)
+    -   mean(dataset\$var, na.rm = TRUE)
+
+-   Spread
+
+    -   quantile(dataset\$var, na.rm = TRUE)
+    -   sd(dataset\$var, na.rm = TRUE)
+
+-   (Almost) everything
+
+    -   summary(dataset\$var)
+:::
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+normdata <- tibble(d = rnorm(1000, mean = 5, sd = 1))
+ggplot(normdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+:::
+
+## Exercise question 2 {.smaller}
+
+```{r}
+glimpse(acs12)
+```
+
+## Question 2 solutions {.smaller}
+
+What is the mean of `hrs_work`? What is the median? (there are two ways to get this info)
+
+::: fragment
+Approach 1:
+
+```{r}
+mean(acs12$hrs_work, na.rm = TRUE)
+median(acs12$hrs_work, na.rm = TRUE)
+```
+:::
+
+::: fragment
+Approach 2:
+
+```{r}
+summary(acs12$hrs_work)
+```
+:::
+
+## Question 2 solutions {.smaller}
+
+What is the standard deviation of `hrs_work`?
+
+::: fragment
+```{r}
+sd(acs12$hrs_work, na.rm = TRUE)
+```
+:::
+
+## Question 2 solutions {.smaller}
+
+What proportion of people in the data set are missing information (have NAs) for this variable? (there are many ways to do this)
+
+::: fragment
+```{r}
+# Find the number of NA values
+summary(acs12$hrs_work)
+```
+
+```{r}
+# Find the total number of observations
+glimpse(acs12)
+```
+:::
+
+## Question 2 solutions
+
+::: fragment
+Now that we have those values, we can use R to do the math
+
+```{r}
+# Divide!
+1041/2000
+```
+:::
+
+## Shape
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+normdata <- tibble(d = rnorm(1000, mean = 5, sd = 1))
+ggplot(normdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+unifdata <- tibble(d = runif(1000, min = 1.5, max = 8.5))
+ggplot(unifdata, aes(x = d)) + 
+  geom_histogram(binwidth = .25) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank())
+```
+:::
+:::
+
+## Shape
+
+-   We'll go over how to make plots later
+-   But summary statistics tell you things about shape too
+
+## Skew
+
+::: columns
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+rightdata <- tibble(d = rbeta(1000, 1, 10))
+ggplot(rightdata, aes(x = d)) + 
+  geom_histogram(bins = 30) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank(),
+        axis.text.x = element_blank())
+```
+
+Right-skewed data
+:::
+
+::: {.column width="50%"}
+```{r, echo = FALSE, fig.height=4, fig.width=5}
+leftdata <- tibble(d = rbeta(1000, 10, 1))
+ggplot(leftdata, aes(x = d)) + 
+  geom_histogram(bins = 30) + 
+  theme_minimal() + 
+  labs(x = "", y = "") + 
+  theme(axis.text.y = element_blank(),
+        axis.text.x = element_blank())
+```
+
+Left-skewed data
+:::
+:::
+
+## Skew
+
+-   Extreme values influence the mean more than the median
+-   When mean is higher than median: data might be skewed right (and vice versa)
+
+## Example: American Community Survey commute time
+
+time_to_work: Travel time to work, in minutes.
+
+```{r}
+mean_commute <- mean(acs12$time_to_work, na.rm = TRUE)
+median_commute <- median(acs12$time_to_work, na.rm = TRUE)
+```
+
+::: fragment
+```{r}
+mean_commute
+```
+:::
+
+::: fragment
+```{r}
+median_commute
+```
+:::
+
+## Example: American Community Survey commute time
+
+```{r, echo = FALSE, warning = FALSE}
+ggplot(acs12, aes(x = time_to_work)) + 
+  geom_histogram(bins = 20) + 
+  geom_vline(xintercept = mean_commute, color = "blue") +
+  geom_text(color = "blue", aes(x = mean_commute + 8, y = 242, label = "mean")) + 
+  geom_vline(xintercept = median_commute, color = "red") + 
+  geom_text(color = "red", aes(x = median_commute - 8, y = 242, label = "median")) + 
+  theme_minimal() +
+  labs(x = "Commute time (minutes)", y = "Number of observations")
+```
+
+## Shape: Quartiles
+
+-   Location of quartiles also tells you something about shape
+
+```{r}
+summary(acs12$time_to_work)
+```
+
+## Review {.smaller}
+
+-   Categorical data: look at the available categories and how many observations are in each category
+
+    -   `unique(dataframe$variable)`
+    -   `table(dataframe$variable, useNA = "always")`
+    -   `table(dataframe$variable1, dataframe$variable2, useNA = "always")`
+
+## Review {.smaller}
+
+-   Numeric data: Look at summary statistics that tell you something about the distribution
+    -   `summary(dataframe$variable)`
+    -   `sd(dataframe$variable, na.rm = TRUE)`
+
+# Modifying data frames
+
+## Removing observations
+
+::: incremental
+-   You may not be interested in all observations
+
+-   Example:
+
+    -   RQ: How is commute time related to hours worked?
+:::
+
+## Removing observations {.smaller}
+
+-   How is commute time related to hours worked?
+-   Data: ACS 2012
+
+::: fragment
+```{r}
+glimpse(acs12)
+```
+:::
+
+::: fragment
+```         
+-   Need to remove people who are unemployed/not in labor force (and don't have a job or a commute!)
+```
+:::
+
+## Removing observations {.smaller}
+
+::: incremental
+-   How? With `filter()`
+-   `filter(dataframe, condition)`
+:::
+
+::: fragment
+```{r}
+acs12_employedonly <- filter(acs12, employment == "employed")
+```
+:::
+
+::: fragment
+-   Did it work? Check with `table()`
+
+```{r}
+table(acs12_employedonly$employment, useNA = "always")
+```
+:::
+
+## Conditions {.smaller}
+
+::: incremental
+-   `filter(acs12, employment == "employed")`
+-   condition: `employment == "employed"`
+-   This specifies which observations you want to *keep*
+:::
+
+::: fragment
+-   Common comparison operators:
+    -   `==` : equal to (note there are two equals signs!)
+    -   `!=` : not equal to
+    -   `>`, `>=` : greater than, greater than or equal to
+    -   `<`, `<=` : less than, less than or equal to
+:::
+
+::: fragment
+-   Values:
+
+    -   Can be numbers, letters/words, or TRUE/FALSE--should match the response options of your variable
+    -   Put letters/words in quotation marks
+:::
+
+## Condition examples {.smaller}
+
+::: incremental
+-   `filter(acs12, citizen == "no")`
+-   `filter(acs12, income <= 12000)`
+-   `filter(acs12, birth_qrtr != "jan thru mar")`
+-   `filter(acs12, hrs_work > 20)`
+:::
+
+## Other useful condition operators {.smaller}
+
+::: incremental
+-   Two or more requirements
+
+    -   `&` : and
+
+    -   `|` : or
+
+    -   `filter(acs12, citizen == "no" & lang == "english")`
+
+    -   `filter(acs12, race == "black" | race == "asian")`
+
+-   Missing values
+
+    -   `is.na()`
+
+    -   `!is.na()`
+
+        -   is *not* missing -- good for removing rows with missing values
+
+    -   `filter(acs12, !is.na(income))`
+
+-   More: [Click here for R for Data Science](https://r4ds.had.co.nz/transform.html#filter-rows-with-filter)
+:::
+
+## Common mistakes and error messages {.smaller}
+
+```{r, error = TRUE}
+filter(acs12, employment = "employed")
+```
+
+
+## Common mistakes and error messages {.smaller}
+
+```{r, error = TRUE}
+filter(acs12, employment == employed)
+```
+
+## Common mistakes and error messages {.smaller}
+
+```{r, error = TRUE}
+filter(acs12, employment == "employd")
+```
+
+## Common mistakes and error messages {.smaller}
+
+```{r, error = TRUE}
+filter(acs12, employment == "Employed")
+```
+
+## Exercise: Filtering
+
+-   Clone and open the project repo now (**ex-5-29-yourusername**)
+
+-   Then open the .qmd file and try out some filtering
+
+    -   [Instructions: Computing -\> Cloning and committing](https://soc333-sum24.github.io/computing-clonerepo.html)
+    
+## For next time
+
+-   Read IMS chapters 4 and 5, if you haven't already!
