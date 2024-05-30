@@ -28,8 +28,7 @@ Reuben-Cooke 135
 
 Gideon and Harrowhark
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ![](images/01/gideonsleeping.jpg)
 :::
@@ -37,8 +36,7 @@ Gideon and Harrowhark
 ::: {.column width="50%"}
 ![](images/01/harrowsleeping.jpg)
 :::
-
-::::
+:::
 
 ## (They're different cats)
 
@@ -60,7 +58,9 @@ Gideon and Harrowhark
 
 . . .
 
-    -   basically, statistics/data science for sociologists
+```         
+-   basically, statistics/data science for sociologists
+```
 
 . . .
 

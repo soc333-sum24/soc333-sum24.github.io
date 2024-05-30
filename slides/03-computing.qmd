@@ -32,7 +32,7 @@ format: revealjs
 
 ## Academic honesty
 
-You must be the principal author of your own work! 
+You must be the principal author of your own work!
 
 ## Basically:
 

@@ -18,7 +18,7 @@ library(tidyverse)
 
 -   Drop/add ends tomorrow
 -   Class does not meet Fridays--next meeting is Monday
--   The [course syllabus](https://schenewerk.github.io/soc333-sum24/course-syllabus.html) is online. 
+-   The [course syllabus](https://schenewerk.github.io/soc333-sum24/course-syllabus.html) is online.
 
 ## Slides
 

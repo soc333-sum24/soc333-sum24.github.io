@@ -390,8 +390,7 @@ filter(acs12, employment == "Employed")
 -   Then open the .qmd file and try out some filtering
 
     -   [Instructions: Computing -\> Cloning and committing](https://soc333-sum24.github.io/computing-clonerepo.html)
-    
+
 ## For next time
 
 -   Read IMS chapters 4 and 5, if you haven't already!
-

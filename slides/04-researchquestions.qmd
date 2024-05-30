@@ -37,7 +37,6 @@ format:
     3.  Results (June 13; June 17)
     4.  Paper (June 18; June 24)
     5.  Presentation (June 20)
-
 :::
 
 ## Why two dates?
