@@ -22,8 +22,9 @@ sports <- readRDS("data/sports_teams.rds")
 
 ## A tip for learning:
 
-    -   Try taking notes in a quarto document!
-    -   You can create a new code chunk by typing "ctrl" + "alt" + "I" (on Windows) or "command" + "option" + "I" (on Mac)
+        
+-   Try taking notes in a quarto document!
+-   You can create a new code chunk by typing "ctrl" + "alt" + "I" (on Windows) or "command" + "option" + "I" (on Mac)
 
 ## Today
 
