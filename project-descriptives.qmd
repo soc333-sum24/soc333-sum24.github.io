@@ -7,11 +7,11 @@ callout-icon: false
 
 In this component of your project, you will explore the variables you will use in your analysis.
 
-## How to complete and submit (due Thursday, June 8, 11:59pm)
+## How to complete and submit (due Thursday, June 6, 11:59pm)
 
-First, locate and clone the component 2 repository ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/orgs/soc333-sum23/repositories) and find the repository called **c2_descriptives_yourusername**. Clone that repository. Open the document called *c2_descriptives.qmd*. This is a template document where you will put your work.
+First, locate and clone the component 2 repository ([instructions](https://soc333-sum24.github.io/computing-clonerepo.html)). Go to our [course github organization](https://github.com/orgs/soc333-sum24/repositories) and find the repository called **c2_descriptives_yourusername**. Clone that repository. Open the document called *c2_descriptives.qmd*. This is a template document where you will put your work.
 
-Commit your changes regularly. When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum23.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)).
+Commit your changes regularly. When you are done, render the document and submit by pushing your work to github ([instructions](https://soc333-sum24.github.io/computing-clonerepo.html#how-to-commit-and-push-changes)).
 
 ## Details
 
@@ -22,7 +22,7 @@ This should be completed in the template Quarto document (these instructions are
 -   Write down your research question (from component 1)
 -   Write down your hypothesis (from component 1)
 -   Write down the name of your data set (from component 1)
--   Write down the names of the variables you will need to do your analysis (i.e., what you need to type to access them in R)\--this includes your explanatory and response variables and any other variables needed to filter your dataset or create new variables.
+-   Write down the names of the variables you will need to do your analysis (i.e., what you need to type to access them in R)--this includes your explanatory and response variables and any other variables needed to filter your dataset or create new variables.
 -   For each variable, write:
     -   Whether it is an explanatory (independent) variable, a response (dependent) variable, or something else (explain what)
     -   What kind of variable it is (categorical or numeric and which subtype within these)

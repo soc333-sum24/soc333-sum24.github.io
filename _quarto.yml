@@ -62,8 +62,8 @@ website:
             contents:
               - href: project-proposal.qmd
                 text: "Component 1: Proposal"
-#              - href: project-descriptives.qmd
-#                text: "Component 2: Descriptive stats"
+              - href: project-descriptives.qmd
+                text: "Component 2: Descriptive stats"
 #              - href: project-results.qmd
 #                text: "Component 3: Results"
 #              - href: project-presentation.qmd
@@ -135,7 +135,7 @@ website:
 
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2024, Suzanne Schenewerk. Credit to [Aidan Combs](https://aidancombs.netlify.app/), whose [SOCIOL 333](https://soc333-sum23.github.io/) formed the basis for this course and website, and to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the previous version of SOCIOL333 was based."
+    left: "2024, Suzanne Schenewerk. Credit to [Aidan Combs](https://aidancombs.netlify.app/), whose [SOCIOL 333](https://soc333-sum23.github.io/) formed the basis for this course and website, and to [Mine Çetinkaya-Rundel](https://mine-cr.com/) and her [STA199 course](https://sta199-f22-1.github.io/), on which the previous version of SOCIOL333 was based."
     background: "#040480" # new blue
     foreground: "#f8f8f8"
 
