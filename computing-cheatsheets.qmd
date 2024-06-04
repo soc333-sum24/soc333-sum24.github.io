@@ -6,11 +6,9 @@ There are many freely available online resources for learning R that you may fin
 
 I highly recommend the online textbook [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund, which does an excellent job introducing the skills you need in order to explore data in R.
 
-[StackOverflow](https://stackoverflow.com/) can be a great resource when you are asking "how do I do X specific thing?" or "why am I getting this error message?".
-Just remember to cite any code that you copy from here.
+[StackOverflow](https://stackoverflow.com/) can be a great resource when you are asking "how do I do X specific thing?" or "why am I getting this error message?". Just remember to cite any code that you copy from here.
 
-The following cheatsheets come from <https://www.rstudio.com/resources/cheatsheets>.
-We haven't covered every function and functionality listed on them, but you might still find them useful as references.
+The following cheatsheets come from <https://www.rstudio.com/resources/cheatsheets>. We haven't covered every function and functionality listed on them, but you might still find them useful as references.
 
 ::: columns
 ::: {.column width="50%"}

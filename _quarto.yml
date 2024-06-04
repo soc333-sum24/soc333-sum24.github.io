@@ -52,8 +52,8 @@ website:
             text: Setup
           - href: computing-clonerepo.qmd
             text: Cloning and committing
-#          - href: computing-cheatsheets.qmd
-#            text: Cheatsheets
+          - href: computing-cheatsheets.qmd
+            text: Cheatsheets
       - section: "Project"
         contents:
           - href: project-description.qmd
@@ -110,10 +110,10 @@ website:
 #            text: "Lecture 13: Hypothesis tests pt 1"
 #          - href: slides/12-plots2.qmd
 #            text: "Lecture 12: Plotting multiple variables"
-#          - href: slides/11-plots.qmd
-#            text: "Lecture 11: Plotting one variable"
-#          - href: slides/10-describingpt4.qmd
-#            text: "Lecture 10: Pipes"
+          - href: slides/11-plots.qmd
+            text: "Lecture 11: Plotting one variable"
+          - href: slides/10-describingpt4.qmd
+            text: "Lecture 10: Pipes"
           - href: slides/09-describingpt3.qmd
             text: "Lecture 9: Creating new variables"
           - href: slides/08-describingpt2.qmd

@@ -8,10 +8,9 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-06-05">
+  <meta name="dcterms.date" content="2024-06-03">
   <title>SOCIOL 333 - Describing data: part 4</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -96,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -224,7 +223,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -389,7 +389,7 @@
   </style>
 <meta property="og:title" content="SOCIOL 333 - Describing data: part 4">
 <meta property="og:description" content="Lecture 10">
-<meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -400,17 +400,9 @@
   <p class="subtitle">Lecture 10</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Aidan Combs 
-</div>
-        <p class="quarto-title-affiliation">
-            Duke University <br> SOCIOL 333 - Summer Term 1 2023
-          </p>
-    </div>
 </div>
 
-  <p class="date">2023-06-05</p>
+  <p class="date">2024-06-03</p>
 </section>
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
@@ -418,10 +410,9 @@ Aidan Combs
 <li><p>Project component 2: descriptive statistics</p>
 <ul>
 <li>All materials are posted (instructions, example, github repos)</li>
-<li>Due <strong>Wednesday June 7</strong> 11:59pm</li>
-<li>I have returned feedback (GitHub issue on your repo) and grades (Sakai) for your proposals</li>
+<li>Due <strong>Thursday June 6</strong> 11:59pm</li>
 <li>We have covered everything for parts 1-3. Part 4 is today and tomorrow.</li>
-<li>I’m around before/after class for questions (after generally better), or set up an appointment</li>
+<li>Grades/feedback coming this afternoon!</li>
 </ul></li>
 </ul>
 </section>
@@ -431,12 +422,10 @@ Aidan Combs
 <li>Answers to filtering</li>
 <li>Pipes</li>
 <li>Working on creating variables</li>
-<li>Answers to creating variables</li>
-<li>Plots</li>
 </ul>
 </section>
-<section id="filtering-exercise-ex-5-31-answers" class="slide level2 smaller">
-<h2>Filtering exercise (ex-5-31): answers!</h2>
+<section id="filtering-exercise-ex-5-29-answers" class="slide level2 smaller">
+<h2>Filtering exercise (ex-5-29): answers!</h2>
 <ul>
 <li>Find this on your computer (no need to clone it again)</li>
 </ul>
@@ -457,17 +446,17 @@ Aidan Combs
 <p>We can do this with the tools we have.</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># first we make the new variable</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>acs12_newagevar <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                                                    age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                                                    age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>                                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># then we filter to remove children</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>acs12_nokids <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12_newagevar, agecat <span class="sc">!=</span> <span class="st">"child"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># did it work?</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># first we make the new variable</span></span>
+<span id="cb1-2"><a></a>acs12_newagevar <span class="ot">&lt;-</span> <span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb1-3"><a></a>                                                    age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb1-4"><a></a>                                                    age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb1-5"><a></a>                                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="co"># then we filter to remove children</span></span>
+<span id="cb1-8"><a></a>acs12_nokids <span class="ot">&lt;-</span> <span class="fu">filter</span>(acs12_newagevar, agecat <span class="sc">!=</span> <span class="st">"child"</span>)</span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="co"># did it work?</span></span>
+<span id="cb1-11"><a></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   adult retired    teen    &lt;NA&gt; 
@@ -493,14 +482,14 @@ Aidan Combs
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>acs12_nokids <span class="ot">&lt;-</span> acs12 <span class="sc">|&gt;</span> <span class="co"># start with acs12</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>, <span class="co">#then add a new variable to it</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">filter</span>(agecat <span class="sc">!=</span> <span class="st">"child"</span>) <span class="co"># then filter out the kids</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>acs12_nokids <span class="ot">&lt;-</span> acs12 <span class="sc">|&gt;</span> <span class="co"># start with acs12</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>, <span class="co">#then add a new variable to it</span></span>
+<span id="cb3-3"><a></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb3-4"><a></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb3-5"><a></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-6"><a></a>  <span class="fu">filter</span>(agecat <span class="sc">!=</span> <span class="st">"child"</span>) <span class="co"># then filter out the kids</span></span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a><span class="fu">table</span>(acs12_nokids<span class="sc">$</span>agecat, <span class="at">useNA =</span> <span class="st">"always"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   adult retired    teen    &lt;NA&gt; 
@@ -515,20 +504,20 @@ Aidan Combs
 <li>This:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
-<span id="cb5-2"><a href="#cb5-2"></a>                                 age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>                                 age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">mutate</span>(acs12, <span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb5-2"><a></a>                                 age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb5-3"><a></a>                                 age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb5-4"><a></a>                                 <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Is the same as this:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>acs12 <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
-<span id="cb6-3"><a href="#cb6-3"></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
-<span id="cb6-4"><a href="#cb6-4"></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5"></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>acs12 <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">agecat =</span> <span class="fu">case_when</span>(age <span class="sc">&lt;</span> <span class="dv">14</span> <span class="sc">~</span> <span class="st">"child"</span>,</span>
+<span id="cb6-3"><a></a>                            age <span class="sc">&lt;</span> <span class="dv">18</span> <span class="sc">~</span> <span class="st">"teen"</span>,</span>
+<span id="cb6-4"><a></a>                            age <span class="sc">&lt;</span> <span class="dv">67</span> <span class="sc">~</span> <span class="st">"adult"</span>,</span>
+<span id="cb6-5"><a></a>                            <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"retired"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="more-on" class="slide level2">
@@ -549,20 +538,17 @@ Aidan Combs
 <section id="continuing-on-creating-new-variables" class="slide level2 smaller">
 <h2>Continuing on creating new variables</h2>
 <ul>
-<li><p>Find your exercise from last Thursday (ex-6-01)</p>
+<li><p>Find your exercise from last Thursday (ex-5-30)</p>
 <ul>
 <li>No need to clone it again; find where it’s saved on your computer</li>
 </ul></li>
-<li><p>There are hints on the website–use them if you get stuck</p></li>
 <li><p>10-15 minutes to work</p></li>
 </ul>
-</section>
-<section id="creating-new-variables-answers" class="title-slide slide level1 center">
-<h1>Creating new variables: answers!</h1>
 
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://soc333-sum24.github.io/">🔗 https://soc333-sum24.github.io/</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -592,7 +578,6 @@ Aidan Combs
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -779,42 +764,80 @@ Aidan Combs
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -892,10 +915,27 @@ Aidan Combs
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -905,8 +945,17 @@ Aidan Combs
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -920,7 +969,11 @@ Aidan Combs
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
