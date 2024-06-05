@@ -153,7 +153,7 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 -   One numeric and one categorical variable
 
     -   Boxplots, `geom_boxplot()`
-    
+
 -   Two categorical variables
 
     -   Bar chart with color or facets
@@ -175,27 +175,30 @@ ggplot(data = yrbss_reordered, aes(x = helmet_12m)) +
 
     -   Can you add color (along a gradient)?
     -   Can you add size?
-    
+
 ## Adding variables in ggplot
 
 -   `aes()` (aesthetics) is where we tell R what variables we want represented by what plot elements
 
--   For example: 
+-   For example:
 
     -   `ggplot(acs12, aes(x = income))`
+
     -   `ggplot(acs12, aes(x = income, y = married))`
+
     -   `ggplot(acs12, aes(x = income, y = married, color = gender))`
-    
+
     -   `ggplot(acs12, aes(x = time_to_work, y = lang, size = income))`
+
     -   `ggplot(acs12, aes(x = time_to_work, y = lang, color = income))`
 
-    
 ## Bar charts for two categorical variables
 
 -   RQ: How do reported rates of texting while driving vary by gender? (in `yrbss`)
+
 -   We can use color!
 
-    - `color` (for lines and points) and `fill` (for filling in areas like bars) are the arguments we use inside `aes()` to add color.
+    -   `color` (for lines and points) and `fill` (for filling in areas like bars) are the arguments we use inside `aes()` to add color.
 
 ::: columns
 ::: {.column width="60%"}
@@ -360,29 +363,31 @@ acs12 |> # we start with the acs
     -   [Soc 232: Visualizing Social Data](https://visualizingsociety.com/), taught by Dr. Kieran Healy
 
         -   or, Dr. Healy's book, [Data Visualization: A Practical Introduction](https://socviz.co/)
-    
+
     -   [Stat 313: Advanced Data Visualization](https://mine-cr.com/teaching/sta313/), taught by Dr. Mine Çetinkaya-Rundel
-    
+
     -   Soc 223: Data Analytics and Visualization for Business, taught by Dr. Stephen Vaisey
-    
+
 ## Steps to make a plot for your project
 
 -   Step 1: Identify the variables you want to plot and figure out if they're numeric or categorical
 
     -   Watch out for variables that are *theoretically* numeric but treated in R as categorical (like the texting while driving variable above)
-    
+
 -   Step 2: Choose a plot type that fits your variables and question
 
     -   Sketch it out! Figure out what it should look like in your head before you jump into R.
     -   What should each axis represent? Do you need color or something else in order to include all your variables?
 
--   Step 3: Look for resources. Find the relevant code in the slides and read the [R Graph Gallery's](https://r-graph-gallery.com/index.html) information about your plot type. 
+-   Step 3: Look for resources. Find the relevant code in the slides and read the [R Graph Gallery's](https://r-graph-gallery.com/index.html) information about your plot type.
+
 -   Step 4: Make the super simple version
+
 -   Step 5: Refine it to make it more interpretable
-    
+
     -   My expectation: add labels and drop NA values if necessary
 
 ## For tomorrow {.smaller}
 
 -   No exercise on multivariate plots
--   Try out part 4 of your project instead! Come tomorrow with questions. 
+-   Try out part 4 of your project instead! Come tomorrow with questions.
