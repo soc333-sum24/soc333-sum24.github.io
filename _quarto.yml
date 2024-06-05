@@ -108,8 +108,8 @@ website:
 #            text: "Lecture 14: Hypothesis tests pt 2"
 #          - href: slides/13-hypothesistests1.qmd
 #            text: "Lecture 13: Hypothesis tests pt 1"
-#          - href: slides/12-plots2.qmd
-#            text: "Lecture 12: Plotting multiple variables"
+          - href: slides/12-plots2.qmd
+            text: "Lecture 12: Plotting multiple variables"
           - href: slides/11-plots.qmd
             text: "Lecture 11: Plotting one variable"
           - href: slides/10-describingpt4.qmd
