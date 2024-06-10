@@ -64,8 +64,8 @@ website:
                 text: "Component 1: Proposal"
               - href: project-descriptives.qmd
                 text: "Component 2: Descriptive stats"
-#              - href: project-results.qmd
-#                text: "Component 3: Results"
+              - href: project-results.qmd
+                text: "Component 3: Results"
 #              - href: project-presentation.qmd
 #                text: "Component 4: Presentation"
 #              - href: project-paper.qmd
@@ -104,10 +104,10 @@ website:
 #            text: "Lecture 16: Hypothesis tests pt 4"
 #          - href: slides/15-hypothesistests3.qmd
 #            text: "Lecture 15: Hypothesis tests pt 3"
-#          - href: slides/14-hypothesistests2.qmd
-#            text: "Lecture 14: Hypothesis tests pt 2"
-#          - href: slides/13-hypothesistests1.qmd
-#            text: "Lecture 13: Hypothesis tests pt 1"
+          - href: slides/14-hypothesistests2.qmd
+            text: "Lecture 14: Hypothesis tests pt 2"
+          - href: slides/13-hypothesistests1.qmd
+            text: "Lecture 13: Hypothesis tests pt 1"
           - href: slides/12-plots2.qmd
             text: "Lecture 12: Plotting multiple variables"
           - href: slides/11-plots.qmd

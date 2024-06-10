@@ -47,9 +47,9 @@ Read your partner's results section. Then create a new GitHub issue on their rep
 
 ## Details
 
-Bring a full draft of this component to class for peer review on **Thursday June 15**.
+Bring a full draft of this component to class for peer review on **Thursday June 13**.
 
-Incorporate your peer feedback and turn in a version for grading by **Tuesday June 20, 11:59pm**.
+Incorporate your peer feedback and turn in a version for grading by **Monday June 17, 11:59pm**.
 
 The required elements of this component are as follows:
 
@@ -88,7 +88,7 @@ The required elements of this component are as follows:
 ## Grading
 
 |                                                                                                              |     |
-|--------------------------------------------------------------------------------------------------------------|-----|
+|------------------------------------------------------------|------------|
 | Peer feedback: draft completion; quality of feedback given; peer feedback incorporated into final submission | 20% |
 | Part 1                                                                                                       | 35% |
 | Part 2                                                                                                       | 35% |

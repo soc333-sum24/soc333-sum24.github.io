@@ -8,10 +8,9 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+  <meta name="generator" content="quarto-1.4.553">
 
-  <meta name="author" content="Aidan Combs">
-  <meta name="dcterms.date" content="2023-06-12">
+  <meta name="dcterms.date" content="2024-06-10">
   <title>SOCIOL 333 - Hypothesis tests pt 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -96,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -224,7 +223,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -389,7 +389,7 @@
   </style>
 <meta property="og:title" content="SOCIOL 333 - Hypothesis tests pt 2">
 <meta property="og:description" content="Lecture 14">
-<meta property="og:site-name" content="SOCIOL 333">
+<meta property="og:site_name" content="SOCIOL 333">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -400,22 +400,14 @@
   <p class="subtitle">Lecture 14</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Aidan Combs 
-</div>
-        <p class="quarto-title-affiliation">
-            Duke University <br> SOCIOL 333 - Summer Term 1 2023
-          </p>
-    </div>
 </div>
 
-  <p class="date">2023-06-12</p>
+  <p class="date">2024-06-10</p>
 </section>
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
 <ul>
-<li><p>Project component 3, results: draft by Thursday (June 15), submit for grading next Tuesday (June 20)</p>
+<li><p>Project component 3, results: draft by Thursday (June 13), submit for grading next Monday (June 17)</p>
 <ul>
 <li>Drafts should be complete–meaning you attempted all parts</li>
 </ul></li>
@@ -510,7 +502,7 @@ Aidan Combs
 </ul>
 </div>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section>
 <section id="standard-deviation-vs-standard-error" class="slide level2 smaller">
 <h2>Standard deviation vs standard error</h2>
 <div>
@@ -525,7 +517,7 @@ Aidan Combs
 <section id="standard-deviation-vs-standard-error-1" class="slide level2">
 <h2>Standard deviation vs standard error</h2>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:50%;">
 <ul>
 <li><p>Example: Scores on the (pre-2016) SAT were normally distributed with a mean of 1500 points and a standard deviation of 300 points.</p>
 <ul>
@@ -533,10 +525,14 @@ Aidan Combs
 <li>So standard <em>deviation</em> is the term we use to describe its spread</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:70%;">
+</div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-3-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -545,20 +541,24 @@ Aidan Combs
 <section id="standard-deviation-vs-standard-error-2" class="slide level2">
 <h2>Standard deviation vs standard error</h2>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:60%;">
 <div>
 <ul>
 <li class="fragment"><p>Now imagine that we randomly sampled students and asked them to provide their SAT scores. We have many samples of 25 students each.</p></li>
-<li class="fragment"><p>The mean score in each 25-student sample is our sample statistic</p></li>
+<li class="fragment"><p>The mean score in each 25-student sample is our sample statistic.</p></li>
 <li class="fragment"><p>The term for the spread of this sampling distribution is the standard error.</p></li>
 <li class="fragment"><p>It is determined by formulas that vary depending on the specific situation. You generally won’t calculate it yourself; it will be provided in R output.</p></li>
 <li class="fragment"><p>Standard error is always smaller than standard deviation: there is more variation within samples from the same population than between them.</p></li>
 </ul>
 </div>
-</div><div class="column" style="width:70%;">
+</div><div class="column" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-4-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -579,12 +579,12 @@ Aidan Combs
 <section id="percentiles-1" class="slide level2 smaller">
 <h2>Percentiles</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="dv">1</span>) <span class="co"># q is the Z score (yes, it's confusing). </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8413447</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Nel's Z score is 1 because their SAT score is 1 standard </span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># deviation above the mean for all test-takers.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Nel's Z score is 1 because their SAT score is 1 standard </span></span>
+<span id="cb3-2"><a></a><span class="co"># deviation above the mean for all test-takers.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <ul>
@@ -607,7 +607,7 @@ Aidan Combs
 <li>Heights of US adults who identify as men follow a normal distribution. Mean = 70 inches; standard deviation = 3.3 inches.</li>
 </ul>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-6-1.png" width="672" class="r-stretch"></section>
 <section id="z-scores-exercise-q1" class="slide level2">
 <h2>Z scores: exercise Q1</h2>
 <div>
@@ -620,7 +620,7 @@ Aidan Combs
 </ul>
 </div>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-7-1.png" width="672" class="r-stretch"></section>
 <section id="z-scores-exercise-q2" class="slide level2">
 <h2>Z scores: exercise Q2</h2>
 <ul>
@@ -638,7 +638,7 @@ Aidan Combs
 </ul></li>
 </ul>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section>
 <section id="z-scores-exercise-q2-1" class="slide level2">
 <h2>Z scores: exercise Q2</h2>
 <ul>
@@ -647,7 +647,7 @@ Aidan Combs
 </ol></li>
 </ul>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-9-1.png" width="672" class="r-stretch"></section>
 <section id="percentiles-exercise-q3" class="slide level2">
 <h2>Percentiles: exercise Q3</h2>
 <ul>
@@ -665,7 +665,7 @@ Aidan Combs
 </ul></li>
 </ul>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-10-1.png" width="672" class="r-stretch"></section>
 <section id="percentiles-exercise-q3-1" class="slide level2">
 <h2>Percentiles: exercise Q3</h2>
 <ul>
@@ -674,7 +674,7 @@ Aidan Combs
 </ol></li>
 </ul>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-11-1.png" width="672" class="r-stretch"></section>
 <section id="p-values" class="slide level2">
 <h2>P values</h2>
 <div>
@@ -716,7 +716,11 @@ Aidan Combs
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-12-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -724,7 +728,7 @@ Aidan Combs
 <section id="one-tailed-p-values-1" class="slide level2 smaller">
 <h2>One-tailed p values</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">pnorm</span>(<span class="at">q =</span> <span class="sc">-</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.02275013</code></pre>
 </div>
@@ -744,7 +748,11 @@ Aidan Combs
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-14-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -752,7 +760,7 @@ Aidan Combs
 <section id="one-tailed-p-values-3" class="slide level2">
 <h2>One tailed p values</h2>
 
-<img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
+<img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-15-1.png" width="672" class="r-stretch"><ul>
 <li>What is the p value here?</li>
 <li>Is it the same as the percentile?</li>
 </ul>
@@ -775,7 +783,11 @@ Aidan Combs
 <div class="fragment">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="14-hypothesistests2_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="14-hypothesistests2_files/figure-html/unnamed-chunk-16-1.png" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -878,9 +890,10 @@ Aidan Combs
 </ul>
 </div>
 
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://soc333-sum23.github.io/">🔗 https://soc333-sum23.github.io/</a></p>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p><a href="https://soc333-sum24.github.io/">🔗 https://soc333-sum24.github.io/</a></p>
+</div>
 </div>
 </section></section>
     </div>
@@ -910,7 +923,6 @@ Aidan Combs
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1096,44 +1108,6 @@ Aidan Combs
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1210,10 +1184,27 @@ Aidan Combs
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/soc333-sum24\.github\.io\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1223,8 +1214,17 @@ Aidan Combs
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1238,7 +1238,11 @@ Aidan Combs
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
