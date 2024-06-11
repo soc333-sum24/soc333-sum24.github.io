@@ -102,8 +102,8 @@ website:
 #            text: "Lecture 17: Interpreting results"
 #          - href: slides/16-hypothesistests4.qmd
 #            text: "Lecture 16: Hypothesis tests pt 4"
-#          - href: slides/15-hypothesistests3.qmd
-#            text: "Lecture 15: Hypothesis tests pt 3"
+          - href: slides/15-hypothesistests3.qmd
+            text: "Lecture 15: Hypothesis tests pt 3"
           - href: slides/14-hypothesistests2.qmd
             text: "Lecture 14: Hypothesis tests pt 2"
           - href: slides/13-hypothesistests1.qmd
