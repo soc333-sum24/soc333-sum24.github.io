@@ -15,10 +15,10 @@ set.seed(2)
 
 ## Logistics {.smaller}
 
--   Project component 3, results: draft by Thursday (June 11), submit for grading next Monday (June 17)
+-   Project component 3, results: draft by Thursday (June 13), submit for grading next Monday (June 17)
 
     -   Drafts should be complete--meaning you attempted all parts
-    -   Instructions and example are posted
+    -   Instructions are posted
 
 ## Today {.smaller}
 
@@ -77,7 +77,7 @@ set.seed(2)
 
 ## Identifying the right test: exercise Q1
 
--   This one is in R---find the **ex-6-13-yourusername** repo on GitHub and clone it
+-   This one is in R---find the **ex-6-11-yourusername** repo on GitHub and clone it
 
 -   For each research question, identify the explanatory variable, the response variable, their types, and the correct statistical test
 
