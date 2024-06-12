@@ -318,7 +318,7 @@ chisqplot + fplot &
 ## Different tests: summary
 
 | **Test**          | **stat = XXXX** | **direction = XXXX**  | **Notes**                                                                                        |
-|--------------|--------------|--------------|-------------------------------|
+|-------------------|-----------------|-----------------------|--------------------------------------------------------------------------------------------------|
 | Two sample Z test | `"z"`           | usually `"two-sided"` | Needs `success = XXXX` in `specify()`, where XXXX is one of the options of the response variable |
 | Two sample T test | `"t"`           | usually `"two-sided"` |                                                                                                  |
 | Chi square test   | `"Chisq"`       | `"greater"`           |                                                                                                  |
