@@ -17,7 +17,7 @@ set.seed(2)
 
 ## Logistics
 
--   Three classes left! We're almost there! :)
+-   Three classes left! We're almost there... :)
 
 ## Wrapping up the project
 
