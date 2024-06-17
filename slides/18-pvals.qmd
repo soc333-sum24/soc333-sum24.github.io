@@ -219,8 +219,8 @@ Are these statements causal or associative?
 
 -   When there's a cutoff, there's the possibility of being wrong
 -   At p = 0.05, you will incorrectly reject the null (Type 1 error) 1 out of every 20 times
--   If a type 1 error is dangerous/costly, we should choose a smaller signifiance level (maybe p = 0.01)
--   If a type 2 error is more dangerous/costly, we should choose a higher signifiance level (maybe p = 0.10)
+-   If a type 1 error is dangerous/costly, we should choose a smaller signifance level (maybe p = 0.01)
+-   If a type 2 error is more dangerous/costly, we should choose a higher signifance level (maybe p = 0.10)
 
 ![](images/18/errors.png)
 
