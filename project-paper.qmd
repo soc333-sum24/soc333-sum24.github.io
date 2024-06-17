@@ -57,7 +57,7 @@ Read your group member's paper. Then create a new GitHub issue on their reposito
 
 ## Timeline
 
-Upload a full draft to GitHub by the start of class on **Monday June 26** for peer review. The final revised draft is due on **Wednesday June 28, 11:59pm**.
+Upload a full draft to GitHub by the start of class on **Thursday, June 2** for peer review. The final revised draft is due on **Monday, June 24, 11:59pm**.
 
 ## Overall requirements
 
@@ -66,7 +66,7 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 -   There is no specific minimum or maximum length requirement. I will grade based on the content of your paper, not its length.
 
     -   Your paper should be long enough to allow you to comprehensively address all of the points in these instructions in your report. Be concise, however. You do not need to provide information that is not related to what is requested here (that means you will leave out some things from the previous assignments).
-    -   The suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements. To give you a ballpark estimate for the paper as a whole: my example is about 1200 words long (the equivalent of 5 double spaced pages, in Word).
+    -   The suggested length for individual sections is provided in the section headings on this page. These are what I expect to be the average length for a concise but complete section---but your mileage may vary; they are suggestions, not requirements.
 
 -   You may cite reputable external sources if you wish. This is optional, but discussing what others have done and found may help you motivate your question and discuss the significance of the conclusions. If you do, use the format (lastnames year) in the text---for example, "Previous work has found X (Cheng and Johnson 2020)." Additionally, include a References section at the end of the document with full citation information (any format). I recommend using Zotero or another reference manager to put this together. It doesn't need to look pretty; just ensure the necessary information is included.
 
@@ -107,7 +107,7 @@ Upload a full draft to GitHub by the start of class on **Monday June 26** for pe
 
 ### Revision process
 
--   A complete draft was pushed to GitHub before class on Monday June 26
+-   A complete draft was pushed to GitHub before class on Thursday, Jun 20
 -   Feedback provided to group members was thoughtful and useful
 -   Feedback from previous components and from group members has been incorporated into the final draft
 

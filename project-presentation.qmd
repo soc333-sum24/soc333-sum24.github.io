@@ -27,7 +27,7 @@ The slide deck should have about 5-6 content slides + 1 title slide. Here is a *
 
 ## Presentation {#presentation}
 
-Presentations will take place in class during the last two classes of the semester (**Thursday June 22** and **Monday June 26**). The presentation should be between 6 and 10 minutes. There will be time for a few questions after each presentation.
+Presentations will take place in class on the lasst class day of the semester (**Thursday June 20**). The presentation should be between 6 and 10 minutes. There will be time for a few questions after each presentation.
 
 ## Grading criteria
 
