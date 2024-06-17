@@ -1,7 +1,7 @@
 ---
 title: "Limitations and directions for future research"
 subtitle: "Lecture 18"
-date: "June 20, 2023"
+date: "June 17, 2024"
 format: 
   revealjs:
     smaller: true
